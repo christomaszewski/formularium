@@ -33,7 +33,7 @@ dependencies = ["formularium"]
 formularium = { git = "https://github.com/christomaszewski/formularium", rev = "<commit>" }
 ```
 
-The repository is private, so a machine that installs it needs read access to it.
+The repository is public (decision D23, 2026-10-07), so any machine can install it.
 
 ```python
 from formularium import stemma
@@ -43,6 +43,11 @@ stemma.kin("fedele2025.dose", among=["rossi2008.primary", "rule-3-10"])
 stemma.hold_out(truth=["rossi2008.primary"], engine=["caffi2013.sporulation", "rule-3-10"])
 required_wet_hours(temperatures, cardinal=(4.0, 21.0, 30.2), w_min=2.0)
 ```
+
+## Licence
+
+MIT ([LICENSE](LICENSE)). The equations and parameter values are published science; each
+record cites its source.
 
 ## Commands
 
