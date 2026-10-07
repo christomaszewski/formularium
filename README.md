@@ -3,7 +3,7 @@
 Published crop and disease model formulations, shared by
 [Agrarium](https://github.com/christomaszewski/agrarium) (the farm disease simulator) and
 [Cooptera](https://github.com/christomaszewski/cooptera) (the engine it tests). Decided by
-Chris on 2026-10-07: Agrarium's PLAN section 15, decisions D20 to D22.
+Chris on 2026-10-07: Agrarium's PLAN section 15, decisions D22 to D24.
 
 ## What is here
 
@@ -21,6 +21,13 @@ Each tool keeps what it chooses:
 - the ranges it draws parameters from;
 - how it uses the equations (Agrarium per vine, Cooptera per station).
 
+**Where it stands (2026-10-07).** Both tools compute `equations` and `people` from here.
+The catalogue still holds the ids and records of Agrarium's old hand-kept list. The
+engine's models are meanwhile listed by Cooptera itself (`xema engine models --json`),
+under its own ids and with authors read in the PDFs it holds. The plan, not yet confirmed:
+the catalogue takes Cooptera's ids and records, and `stemma` takes Agrarium's kinship code,
+so both tools compute the hold-out with one rule.
+
 ## Using it
 
 Both tools pin a commit:
@@ -33,7 +40,7 @@ dependencies = ["formularium"]
 formularium = { git = "https://github.com/christomaszewski/formularium", rev = "<commit>" }
 ```
 
-The repository is public (decision D23, 2026-10-07), so any machine can install it.
+The repository is public (decision D25, 2026-10-07), so any machine can install it.
 
 ```python
 from formularium import stemma

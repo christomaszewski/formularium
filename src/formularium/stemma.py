@@ -13,7 +13,7 @@ Two formulations are **kin** when any of these holds (Agrarium decision D19):
 **Shared structure** is a separate test (records.STRUCTURES): two formulations of the same
 form are alike whoever wrote them.
 
-**The hold-out** (Agrarium decision D20): when a run's truth uses some formulations, the
+**The hold-out** (Agrarium decision D22): when a run's truth uses some formulations, the
 engine runs without every one of its formulations that is kin to one of them or shares its
 structure. The tools ask this module, so both get the same answer from the same records.
 
