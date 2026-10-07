@@ -350,9 +350,9 @@ FORMULATIONS: dict[str, Formulation] = {
         " analytical form (solar_azimuth_analytical, source read)",
         equations="solar",
         flags=(
-            "NOAA's document says to use 366 days in a leap year. This module, and both tools'"
-            " copies before it, use 365; kept, so no tool's numbers change. A test bounds the"
-            " difference.",
+            "NOAA's document divides by 366 in a leap year. Both tools' copies before this"
+            " module used 365, up to 0.30 degrees of elevation wrong in 2028; fixed here"
+            " 2026-10-07, common years unchanged.",
             "NOAA's azimuth formula as printed, cos(180 - θ) = -(sin lat cos φ - sin decl) /"
             " (cos lat sin φ), puts the noon sun in the north if taken literally. The module"
             " uses pvlib's form, tested against the sun's direction as a vector.",

@@ -8,18 +8,20 @@ from day, scaling sunshine, and asking whether the sun has cleared a horizon.
 **How it was checked.**
 - NOAA's document (General Solar Position Calculations, gml.noaa.gov/grad/solcalc/
   solareqns.PDF) was read on 2026-10-07. Its coefficients are the ones below.
-- **Two departures from it,** both kept so that neither tool's numbers change:
-  - The document says to divide by 366 in a leap year. This module, and Agrarium's and
-    Cooptera's copies before it, always divide by 365. A test bounds the difference.
-  - The document's azimuth, cos(180 - θ) = -(sin lat cos φ - sin decl) / (cos lat sin φ),
-    puts the noon sun in the north if taken literally. The azimuth here is pvlib's
-    analytical form (`solar_azimuth_analytical`, source read): its cosine from the zenith,
-    latitude and declination, signed by the hour angle.
+- **Leap years** divide by 366, as the document says (fixed 2026-10-07; Chris's decision).
+  Agrarium's and Cooptera's copies before it always divided by 365, which put the sun up
+  to 0.30 degrees of elevation wrong at 41.42° N in 2028. Common years are unchanged, bit
+  for bit.
+- **One departure from it:** the document's azimuth,
+  cos(180 - θ) = -(sin lat cos φ - sin decl) / (cos lat sin φ), puts the noon sun in the
+  north if taken literally. The azimuth here is pvlib's analytical form
+  (`solar_azimuth_analytical`, source read): its cosine from the zenith, latitude and
+  declination, signed by the hour angle.
 - The tests check the solstices' noon elevations, sunrise, noon and sunset azimuths at an
-  equinox, the azimuth against the sun's direction worked out as a vector, and Cooptera's
-  scalar copy (`models/sun.py`) to 1e-9 degrees.
+  equinox, the azimuth against the sun's direction worked out as a vector, the document
+  transcribed again, and Cooptera's scalar copy (`models/sun.py`) in a common year.
 
-The arithmetic is Agrarium's `world/sun.py`, moved unchanged, so its numbers do not change.
+The arithmetic is otherwise Agrarium's `world/sun.py`, moved unchanged.
 Vectorised over an array of UTC times given as seconds since the Unix epoch.
 """
 
@@ -43,13 +45,17 @@ def declination_and_hour_angle(
     """The sun's declination and hour angle, in radians, at each UTC instant."""
     t = np.asarray(epoch_seconds, dtype=np.float64)
     days = t / _DAY
-    # Day of year (1-based) and hour, in UTC; 1970-01-01 is day 1 of its year.
+    # Day of year (1-based), the year's length, and the hour, in UTC; 1970-01-01 is day 1.
     whole = np.floor(days)
     hours = (days - whole) * 24.0
     dt = whole.astype("datetime64[D]")
-    year_start = dt.astype("datetime64[Y]").astype("datetime64[D]")
+    year = dt.astype("datetime64[Y]")
+    year_start = year.astype("datetime64[D]")
+    year_days = ((year + np.timedelta64(1, "Y")).astype("datetime64[D]") - year_start).astype(
+        np.float64
+    )
     doy = (dt - year_start).astype(np.int64) + 1
-    g = 2.0 * np.pi / 365.0 * (doy - 1 + (hours - 12.0) / 24.0)
+    g = 2.0 * np.pi / year_days * (doy - 1 + (hours - 12.0) / 24.0)
     equation_of_time = 229.18 * (
         0.000075
         + 0.001868 * np.cos(g)
