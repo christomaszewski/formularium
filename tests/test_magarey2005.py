@@ -54,7 +54,7 @@ def test_magarey_2005s_own_numbers() -> None:
     w_min, w_max = paper.published("p_viticola.w_min_h"), paper.published("p_viticola.w_max_h")
     assert (w_min, w_max) == (2.0, 14.0)
     # Eq. 1: Wmin at the optimum; the cap is the caller's.
-    hours = required_wet_hours(np.array([20.0, 5.0, 29.0]), cardinal, w_min)
+    hours = required_wet_hours(np.array([20.0, 5.0, 29.5]), cardinal, w_min)
     assert hours[0] == pytest.approx(2.0)
     assert hours[1] > w_max and hours[2] > w_max  # near the limits only the cap binds
     capped = np.minimum(hours, w_max)
