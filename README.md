@@ -45,7 +45,8 @@ The repository is public (decision D25, 2026-10-07), so any machine can install 
 from formularium import stemma
 from formularium.equations.magarey2005 import required_wet_hours
 
-stemma.kin("fedele2025.dose", among=["rossi2008.primary", "rule_3_10"])
+stemma.kin("rossi2008.incubation", among=["goidanich.incubation", "rule_3_10"])  # depends
+stemma.flags("fedele2025.dose", among=["rossi2008.primary"])  # a shared author: a flag
 stemma.hold_out(truth=["rossi2008.primary"], engine=["caffi2013.sporulation", "rule_3_10"])
 required_wet_hours(temperatures, cardinal=(4.0, 21.0, 30.2), w_min=2.0)
 ```
