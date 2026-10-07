@@ -1,8 +1,8 @@
 # Formularium
 
 Published crop and disease model formulations, their kinship graph and their tests,
-shared by Agrarium and Cooptera. Created 2026-10-07 (Agrarium PLAN 15, decisions D20 to
-D22). `main` is the default branch; work reaches it by pull request, merged with a merge
+shared by Agrarium and Cooptera. Created 2026-10-07 (Agrarium PLAN 15, decisions D22 to
+D24). `main` is the default branch; work reaches it by pull request, merged with a merge
 commit, never a squash or rebase: both tools pin commits by id.
 
 ## What belongs here, and what does not
@@ -18,7 +18,7 @@ commit, never a squash or rebase: both tools pin commits by id.
     its parameter registry.
   - How a tool uses an equation: Agrarium's per-vine population process, Cooptera's
     episodes and policy.
-- **The repository is public** (D23, 2026-10-07; MIT licence). Nothing goes in that could not
+- **The repository is public** (D25, 2026-10-07; MIT licence). Nothing goes in that could not
   be shown to anyone.
 - **Never here:**
   - **PDFs.** They are copyrighted. A record says where a paper is held.
@@ -27,9 +27,10 @@ commit, never a squash or rebase: both tools pin commits by id.
 
 ## Rules
 
-- **Ids never change once used.**
-  - A new published formulation is `<first author's surname><year>.<what it computes>`,
-    ASCII, lower case: `lalancette1988.infection`.
+- **Ids never change once used.** They are Cooptera's where Cooptera runs the
+  formulation.
+  - A new published formulation is `<first author's surname><year>.<what, snake_case>`,
+    ASCII, lower case: `lalancette1988.sporulation_bounds`.
   - One made by a tool is `<tool>.<what>`.
   - Older ids that predate the scheme stay as they are.
 - **Equations take parameters as arguments, never defaults.** Each tool passes its own.
@@ -47,9 +48,15 @@ commit, never a squash or rebase: both tools pin commits by id.
   - When a check contradicts a record, fix the record.
 - **Kinship leans to linking** (people.py). Wrongly linking only holds out too much;
   wrongly separating lets a lineage be scored against itself.
+- **One source for the engine's models.** Cooptera lists them itself, with their authors
+  (`xema engine models --json`). Agrarium keeps that list as a snapshot naming its commit,
+  and its tests fail when a record here differs from it. So when Cooptera adds or changes
+  a model, take its record here from the new list, and judge its structure tags.
 - **Adding a formulation:**
   1. Write its record in `catalogue.py`, with the source, the authors and how they were
-     checked.
+     checked. Judge its structure tags and its role (records.ROLES, Agrarium decision
+     D26): a process, an observation piece, or a reference piece. When unsure, a process:
+     the strictest.
   2. If it has equations, add `equations/<module>.py` naming it in `FORMULATION`.
   3. Test the equations against numbers the source prints. If the source is not yet
      read, mark that test `xfail(strict=True)` with what is missing, so filling it in
