@@ -192,6 +192,97 @@ FORMULATIONS: dict[str, Formulation] = {
         structures=("magarey-wetness-response",),
         doi="10.1094/PHYTO-95-0092",
         equations="magarey2005",
+        # Read 2026-10-07 in the copy Cooptera holds: Table 2's grape rows, and the rule for
+        # an unknown Wmax (p. 93). Table 2's columns: Tmin, Tmax, Topt (°C), Wmin, Wmax (h).
+        parameters=(
+            Published(
+                "p_viticola.t_min_c", 1.0, "°C", "Table 2, Plasmopara viticola, grape", "read"
+            ),
+            Published(
+                "p_viticola.t_max_c", 30.0, "°C", "Table 2, Plasmopara viticola, grape", "read"
+            ),
+            Published(
+                "p_viticola.t_opt_c", 20.0, "°C", "Table 2, Plasmopara viticola, grape", "read"
+            ),
+            Published(
+                "p_viticola.w_min_h", 2.0, "h", "Table 2, Plasmopara viticola, grape", "read"
+            ),
+            Published(
+                "p_viticola.w_max_h", 14.0, "h", "Table 2, Plasmopara viticola, grape", "read"
+            ),
+            Published(
+                "b_cinerea_berry.t_min_c", 10.0, "°C", "Table 2, Botrytis cinerea, grape", "read"
+            ),
+            Published(
+                "b_cinerea_berry.t_max_c", 35.0, "°C", "Table 2, Botrytis cinerea, grape", "read"
+            ),
+            Published(
+                "b_cinerea_berry.t_opt_c", 20.0, "°C", "Table 2, Botrytis cinerea, grape", "read"
+            ),
+            Published(
+                "b_cinerea_berry.w_min_h", 4.0, "h", "Table 2, Botrytis cinerea, grape", "read"
+            ),
+            Published(
+                "b_cinerea_berry.w_max_h", 10.0, "h", "Table 2, Botrytis cinerea, grape", "read"
+            ),
+            Published(
+                "b_cinerea_flower.t_min_c",
+                1.0,
+                "°C",
+                "Table 2, Botrytis cinerea, grape flower",
+                "read",
+            ),
+            Published(
+                "b_cinerea_flower.t_max_c",
+                34.0,
+                "°C",
+                "Table 2, Botrytis cinerea, grape flower",
+                "read",
+            ),
+            Published(
+                "b_cinerea_flower.t_opt_c",
+                25.0,
+                "°C",
+                "Table 2, Botrytis cinerea, grape flower",
+                "read",
+            ),
+            Published(
+                "b_cinerea_flower.w_min_h",
+                1.0,
+                "h",
+                "Table 2, Botrytis cinerea, grape flower",
+                "read",
+            ),
+            Published(
+                "b_cinerea_flower.w_max_h",
+                12.0,
+                "h",
+                "Table 2, Botrytis cinerea, grape flower",
+                "read",
+            ),
+            Published(
+                "w_max.intercept_h",
+                3.8,
+                "h",
+                "p. 93: Wmax = 3.8 + 3.0 Wmin, for an unknown Wmax",
+                "read",
+            ),
+            Published(
+                "w_max.slope",
+                3.0,
+                "h/h",
+                "p. 93: Wmax = 3.8 + 3.0 Wmin, for an unknown Wmax",
+                "read",
+            ),
+        ),
+        flags=(
+            "Shared data, which kinship cannot see (it compares authors and borrowed"
+            " equations). Table 2's P. viticola row was fitted to Lalancette, Ellis & Madden"
+            " 1988 (its ref. 43, 5-28 °C, 2-24 h wet, 20% incidence), the Ohio infection data;"
+            " its grape Botrytis rows to Nair & Allen 1993 (ref. 56: berries 12-30 °C, flowers"
+            " 5-30 °C, 20% incidence). Its Botrytis Tmax of 35 °C is the paper's default where"
+            " none was measured.",
+        ),
     ),
     "magarey2010.rules": Formulation(
         "Downy mildew rules of thumb: 10:10:24, sporulation, infection",

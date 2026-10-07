@@ -44,3 +44,21 @@ def test_cooptera_s_copy_agrees() -> None:
     t = np.array(list(cooptera))
     ours = required_wet_hours(t, CARDINAL, W_MIN)
     assert np.allclose(ours, list(cooptera.values()), rtol=1e-12, atol=0)
+
+
+def test_magarey_2005s_own_numbers() -> None:
+    # Table 2, read 2026-10-07: P. viticola on grape, fitted to Lalancette, Ellis & Madden 1988.
+    paper = FORMULATIONS["magarey2005.generic"]
+    cardinal = tuple(paper.published(f"p_viticola.{n}") for n in ("t_min_c", "t_opt_c", "t_max_c"))
+    assert cardinal == (1.0, 20.0, 30.0)
+    w_min, w_max = paper.published("p_viticola.w_min_h"), paper.published("p_viticola.w_max_h")
+    assert (w_min, w_max) == (2.0, 14.0)
+    # Eq. 1: Wmin at the optimum; the cap is the caller's.
+    hours = required_wet_hours(np.array([20.0, 5.0, 29.0]), cardinal, w_min)
+    assert hours[0] == pytest.approx(2.0)
+    assert hours[1] > w_max and hours[2] > w_max  # near the limits only the cap binds
+    capped = np.minimum(hours, w_max)
+    assert capped[1] == capped[2] == 14.0
+    # p. 93: an unknown Wmax is 3.8 + 3.0 Wmin; Table 2's grape Wmax was observed instead.
+    rule = paper.published("w_max.intercept_h") + paper.published("w_max.slope") * w_min
+    assert rule == pytest.approx(9.8)
