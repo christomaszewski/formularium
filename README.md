@@ -21,12 +21,11 @@ Each tool keeps what it chooses:
 - the ranges it draws parameters from;
 - how it uses the equations (Agrarium per vine, Cooptera per station).
 
-**Where it stands (2026-10-07).** Both tools compute `equations` and `people` from here.
-The catalogue still holds the ids and records of Agrarium's old hand-kept list. The
-engine's models are meanwhile listed by Cooptera itself (`xema engine models --json`),
-under its own ids and with authors read in the PDFs it holds. The plan, not yet confirmed:
-the catalogue takes Cooptera's ids and records, and `stemma` takes Agrarium's kinship code,
-so both tools compute the hold-out with one rule.
+**Where the records come from.** The engine's models are Cooptera's own list
+(`xema engine models --json`), under its ids and with authors read in the PDFs it holds;
+Agrarium keeps a snapshot of that list and tests that the records here match it. Their
+structure tags and a few added authors are Agrarium's judgement, each with its status.
+The truth's formulations that the engine does not list are Agrarium's.
 
 ## Using it
 
@@ -46,8 +45,8 @@ The repository is public (decision D25, 2026-10-07), so any machine can install 
 from formularium import stemma
 from formularium.equations.magarey2005 import required_wet_hours
 
-stemma.kin("fedele2025.dose", among=["rossi2008.primary", "rule-3-10"])
-stemma.hold_out(truth=["rossi2008.primary"], engine=["caffi2013.sporulation", "rule-3-10"])
+stemma.kin("fedele2025.dose", among=["rossi2008.primary", "rule_3_10"])
+stemma.hold_out(truth=["rossi2008.primary"], engine=["caffi2013.sporulation", "rule_3_10"])
 required_wet_hours(temperatures, cardinal=(4.0, 21.0, 30.2), w_min=2.0)
 ```
 

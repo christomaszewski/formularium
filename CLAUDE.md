@@ -27,9 +27,10 @@ commit, never a squash or rebase: both tools pin commits by id.
 
 ## Rules
 
-- **Ids never change once used.**
-  - A new published formulation is `<first author's surname><year>.<what it computes>`,
-    ASCII, lower case: `lalancette1988.infection`.
+- **Ids never change once used.** They are Cooptera's where Cooptera runs the
+  formulation.
+  - A new published formulation is `<first author's surname><year>.<what, snake_case>`,
+    ASCII, lower case: `lalancette1988.sporulation_bounds`.
   - One made by a tool is `<tool>.<what>`.
   - Older ids that predate the scheme stay as they are.
 - **Equations take parameters as arguments, never defaults.** Each tool passes its own.
@@ -47,6 +48,10 @@ commit, never a squash or rebase: both tools pin commits by id.
   - When a check contradicts a record, fix the record.
 - **Kinship leans to linking** (people.py). Wrongly linking only holds out too much;
   wrongly separating lets a lineage be scored against itself.
+- **One source for the engine's models.** Cooptera lists them itself, with their authors
+  (`xema engine models --json`). Agrarium keeps that list as a snapshot naming its commit,
+  and its tests fail when a record here differs from it. So when Cooptera adds or changes
+  a model, take its record here from the new list, and judge its structure tags.
 - **Adding a formulation:**
   1. Write its record in `catalogue.py`, with the source, the authors and how they were
      checked.
