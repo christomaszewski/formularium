@@ -90,22 +90,44 @@ def _noaa_as_printed(t: np.ndarray) -> np.ndarray:
     return 90 - np.degrees(np.arccos(np.clip(cos_zenith, -1, 1)))
 
 
-def test_noaas_document_except_for_leap_years() -> None:
-    common = _year(2027)
-    assert np.abs(solar.elevation_deg(common, LAT, LON) - _noaa_as_printed(common)).max() < 1e-9
-    # Dividing by 365 in a leap year, as both tools always have, costs up to 0.30 degrees of
-    # elevation at the Penedès in 2028 (0.298 measured 2026-10-07).
-    leap = _year(2028)
-    assert np.abs(solar.elevation_deg(leap, LAT, LON) - _noaa_as_printed(leap)).max() < 0.31
+def test_noaas_document_in_common_and_leap_years() -> None:
+    # Until 2026-10-07 both tools divided by 365 in leap years too: up to 0.30 degrees of
+    # elevation wrong at the Penedès in 2028.
+    for year in (2027, 2028, 2100):  # 2100 is a common year
+        t = _year(year)
+        gap = np.abs(solar.elevation_deg(t, LAT, LON) - _noaa_as_printed(t)).max()
+        assert gap < 1e-9, year
 
 
-def test_cooptera_s_copy_agrees() -> None:
+def test_common_years_are_unchanged_bit_for_bit() -> None:
+    # The fix divides by the year's length, 365.0 in a common year: the same arithmetic.
+    t = _year(2027)
+    declination, _ = solar.declination_and_hour_angle(t, LON)
+    days = t / 86400.0
+    whole = np.floor(days)
+    hours = (days - whole) * 24.0
+    date = whole.astype("datetime64[D]")
+    doy = (date - date.astype("datetime64[Y]").astype("datetime64[D]")).astype(np.int64) + 1
+    g = 2.0 * np.pi / 365.0 * (doy - 1 + (hours - 12.0) / 24.0)
+    before = (
+        0.006918
+        - 0.399912 * np.cos(g)
+        + 0.070257 * np.sin(g)
+        - 0.006758 * np.cos(2 * g)
+        + 0.000907 * np.sin(2 * g)
+        - 0.002697 * np.cos(3 * g)
+        + 0.00148 * np.sin(3 * g)
+    )
+    assert np.array_equal(declination, before)
+
+
+def test_cooptera_s_copy_agrees_in_common_years() -> None:
     # `solar_elevation` in Cooptera's models/sun.py at cooptera@e8e3963, run from its source on
-    # 2026-10-07 at 41.42 N, 1.80 E: scalar math, a second copy of the same formulas.
+    # 2026-10-07 at 41.42 N, 1.80 E: scalar math, a second copy of the same formulas. It
+    # divides by 365 in leap years too, so only common years are compared.
     cooptera = {
         1813578720: 72.02650526166029,  # 2027-06-21 11:52 UTC
         1829389800: 25.160016995598426,  # 2027-12-21 11:50 UTC
-        1837148400: 10.957920812426067,  # 2028-03-20 07:00 UTC
         1791387000: 19.99192566304076,  # 2026-10-07 15:30 UTC
     }
     t = np.array(list(cooptera), dtype=np.float64)
