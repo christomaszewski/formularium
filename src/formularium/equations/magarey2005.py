@@ -6,15 +6,27 @@ The temperature response is a beta function of three cardinal temperatures,
     a = (t_opt - t_min) / (t_max - t_opt),
 
 which is 1 at t_opt and 0 at t_min and t_max. An infection needs w_min / f(T) hours of
-wetness at a mean temperature T, and none is possible outside (t_min, t_max). The 2005
-paper also caps the requirement at a w_max; Brischetto et al. 2021 give none for
-*Plasmopara viticola*, so these functions apply no cap. A caller with a w_max applies it.
+wetness at a mean temperature T.
 
-**How it was checked.** The 2005 paper was not read: APS refused the fetch on 2026-10-07.
-The form is the one Cooptera transcribed (`standalone/brischetto.py`) and Agrarium wrote
-(`world/downy_mildew.py`); the tests hold this module to Cooptera's values to 1e-12. The
-parameters Brischetto et al. 2021 give for *P. viticola* (2 h; 4, 21 and 30.2 °C) were
-read in their Figure 2's caption and are in the catalogue.
+**How it was checked.** The paper was read on 2026-10-07, in the copy Cooptera holds
+(Phytopathology 95:92-100; the Cooptera session read it, and the Agrarium session checked
+the same lines):
+- **Eq. 1** prints W(T) = Wmin / f(T) ≤ Wmax. "The parameter Wmax provides an upper boundary
+  on the value of W(T) because wetness is not always a rate-limiting factor." Where Wmax
+  is unknown, the paper gives Wmax = 3.8 + 3.0 Wmin (r = 0.71, RMS = 6.0 h, 64 studies).
+- **Eq. 2** prints f(T) as above, "if Tmin ≤ T ≤ Tmax and 0 otherwise": Yin et al.'s
+  temperature response. This module computes it operation for operation.
+- **Table 2** gives each pathogen's parameters; the catalogue holds the grape rows.
+
+**Two readings this module makes,** which the paper leaves open:
+- **No cap.** These functions return Wmin / f(T) uncapped, and a caller with a Wmax applies
+  it. Brischetto et al. 2021 give no Wmax for *P. viticola* (their Figure 2's 2 h and 4, 21
+  and 30.2 °C are in the catalogue).
+- **None outside the cardinal range.** The paper does not say how the cap meets f(T) = 0.
+  Read literally, W could be held at Wmax even below Tmin or above Tmax. Here no infection
+  is possible outside (t_min, t_max): the requirement is infinite.
+
+The tests also hold this module to Cooptera's own transcription to 1e-12.
 
 The arithmetic is Agrarium's, operation for operation, so its numbers do not change.
 Parameters are arguments, never defaults: each tool passes its own.
