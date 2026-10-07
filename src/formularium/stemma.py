@@ -1,41 +1,48 @@
-"""The kinship graph: which formulations share a lineage, and what to hold out for a truth.
+"""The kinship graph: which formulations depend on each other, and what to hold out.
 
 A stemma, in textual criticism, is the family tree of a text's manuscripts, drawn to tell
 which copies are independent witnesses. Here the copies are formulations, and the question
 is the same: may one be scored against another as if they were independent?
 
-Two formulations are **kin** when they are **one model,** or pieces of one (`part_of`).
-Two **process** formulations (records.ROLES) are kin, too, when they share a lineage
-(Agrarium decision D19):
+Two formulations **depend** on each other when they are **one model,** or pieces of one
+(`part_of`). Two **process** formulations (records.ROLES) depend on each other, too, when
+the records show a substantive dependency (Agrarium decision D27):
 - **a borrowed equation:** one computes the other's equation, or both compute a third's
   (`borrows`). A piece of a model counts its model's borrowings too: running the model
-  means computing them. A name test cannot see this;
-- **a shared person** (people.py): two authors are taken to be one person unless the
-  evidence separates them. Added authors (records.Added) count.
+  means computing them;
+- **a shared implementation:** both are computed by the same code (`equations`, directly
+  or through what they borrow);
+- **shared calibration data:** both were fitted to the same observations
+  (`calibrated_on`, datasets.py).
 
-**Lineage counts only between process models** (Agrarium decision D26). Kinship stands for
-correlated error, and errors correlate only between models of the same thing: a
-sampling statistic and an infection curve by one author do not err together. So an
-observation or reference piece is kin only to itself, and borrowing a piece that is not a
-process (the sun's position, the Magnus formula) makes nobody kin.
+**Shared assumptions of form** are the structure tags (records.STRUCTURES): two
+formulations of one form are alike whoever wrote them. The hold-out counts them too.
 
-**Shared structure** is a separate test (records.STRUCTURES): two formulations of the same
-form are alike whoever wrote them.
+**Shared authorship alone is a flag, not a dependency** (D27, revising D19). People who
+write together often share data, code and habits, so a shared author says to look for
+those, and the records should name what is found. But it does not by itself make two
+mechanically different predictors one. Masson & Knutti 2011 (read 2026-10-07) measured
+dependence by the similarity of models' output: models from one institution, or sharing a
+component, behaved alike; they drew no author rule, and asked that conclusions be tested
+for their sensitivity to which models are included. So `hold_out(..., by_authors=True)`
+adds author-only links, as a sensitivity experiment reported beside the main one.
 
-**The hold-out** (Agrarium decisions D22 and D26): when a run's truth uses some
-formulations, the engine runs without
-- every **process** model kin to a truth formulation, or sharing a structure with one;
+**Lineage counts only between process models** (D26). An observation or reference piece
+depends only on itself, and borrowing a piece that is not a process (the sun's position,
+the Magnus formula) creates no dependence.
+
+**The hold-out** (D22, D26, D27): when a run's truth uses some formulations, the engine
+runs without
+- every **process** model that depends on a truth formulation, or shares a structure with
+  one;
 - every **observation** piece the truth's own observation uses, or shares a structure
   with: a matched observation model is the inverse crime's second half;
 - never a **reference** piece.
 
 The tools ask this module, so both get the same answer from the same records.
 
-The rule leans to linking. Wrongly linking two formulations only holds out one too many;
-wrongly separating them would let a lineage be scored against itself.
-
-This is Agrarium's rule as it stood at `agrarium@44a4842` (`world/formulations.py`), moved
-here on 2026-10-07 with the records it reads.
+This began as Agrarium's rule at `agrarium@44a4842` (`world/formulations.py`), moved here
+on 2026-10-07 with the records it reads, and was revised by D26 and D27 the same day.
 """
 
 from __future__ import annotations
@@ -60,24 +67,29 @@ class Link:
 
 @dataclass(frozen=True)
 class _Entry:
-    """What kinship compares about a formulation."""
+    """What dependence compares about a formulation."""
 
     authors: tuple[str, ...]
     year: int | None
     borrows: frozenset[str]
     models: frozenset[str]  # the models it is, or is a piece of
+    code: frozenset[str]  # the equations modules that compute it or what it borrows
+    data: frozenset[str]  # the datasets it, or the model it is a piece of, was fitted to
 
 
 def _entry(name: str, catalogue: Mapping[str, Formulation]) -> _Entry:
     f = catalogue[name]
     models = frozenset(f.part_of) or frozenset({name})
-    borrows = set(f.borrows)
-    for m in f.part_of:
-        if m != name and m in catalogue:
-            borrows |= set(catalogue[m].borrows)
-    # Borrowing a piece that is not a process makes nobody kin (D26).
+    wholes = [catalogue[m] for m in f.part_of if m != name and m in catalogue]
+    borrows = set(f.borrows).union(*(set(w.borrows) for w in wholes))
+    # Borrowing a piece that is not a process creates no dependence (D26).
     borrows = {b for b in borrows if b not in catalogue or catalogue[b].role == "process"}
-    return _Entry(f.everyone(), f.year, frozenset(borrows), models)
+    code = {f.equations, *(w.equations for w in wholes)}
+    code |= {catalogue[b].equations for b in borrows if b in catalogue}
+    data = set(f.calibrated_on).union(*(set(w.calibrated_on) for w in wholes))
+    return _Entry(
+        f.everyone(), f.year, frozenset(borrows), models, frozenset(code - {""}), frozenset(data)
+    )
 
 
 def _shared_author(a: _Entry, b: _Entry) -> str | None:
@@ -90,7 +102,11 @@ def _shared_author(a: _Entry, b: _Entry) -> str | None:
 
 
 def link(a: str, b: str, catalogue: Mapping[str, Formulation] = FORMULATIONS) -> str | None:
-    """Why formulations a and b are kin, or None. A formulation is its own kin."""
+    """Why formulations a and b depend on each other, or None. A formulation is its own.
+
+    Only substantive dependencies count (D27): one model, a borrowed equation, a shared
+    implementation, shared calibration data. Structure is `hold_out`'s separate test, and a
+    shared author is `possible_dependence`'s flag."""
     ea, eb = _entry(a, catalogue), _entry(b, catalogue)
     if a == b or ea.models & eb.models:
         return SAME
@@ -104,13 +120,28 @@ def link(a: str, b: str, catalogue: Mapping[str, Formulation] = FORMULATIONS) ->
         or ea.borrows & eb.borrows
     ):
         return "a borrowed equation"
-    return _shared_author(ea, eb)
+    if shared := sorted(ea.code & eb.code):
+        return f"a shared implementation, formularium.equations.{', '.join(shared)}"
+    if shared := sorted(ea.data & eb.data):
+        return f"shared calibration data, {', '.join(shared)}"
+    return None
+
+
+def possible_dependence(
+    a: str, b: str, catalogue: Mapping[str, Formulation] = FORMULATIONS
+) -> str | None:
+    """A shared author between a and b, as a flag to look into; None if there is none.
+
+    Never a reference piece's, which no one depends on through its authors."""
+    if "reference" in (catalogue[a].role, catalogue[b].role):
+        return None
+    return _shared_author(_entry(a, catalogue), _entry(b, catalogue))
 
 
 def links(
     name: str, among: Iterable[str], catalogue: Mapping[str, Formulation] = FORMULATIONS
 ) -> list[Link]:
-    """Each formulation in `among` that `name` is kin to, with the reason, in `among`'s order."""
+    """Each formulation in `among` that `name` depends on, with the reason, in order."""
     found = []
     for other in among:
         why = link(name, other, catalogue)
@@ -122,8 +153,21 @@ def links(
 def kin(
     name: str, among: Iterable[str], catalogue: Mapping[str, Formulation] = FORMULATIONS
 ) -> list[str]:
-    """The formulations in `among` that `name` is kin to."""
+    """The formulations in `among` that `name` depends on."""
     return [found.other for found in links(name, among, catalogue)]
+
+
+def flags(
+    name: str, among: Iterable[str], catalogue: Mapping[str, Formulation] = FORMULATIONS
+) -> list[Link]:
+    """Formulations in `among` that share only an author with `name`: possible dependence."""
+    found = []
+    for other in among:
+        if link(name, other, catalogue) is None:
+            why = possible_dependence(name, other, catalogue)
+            if why is not None:
+                found.append(Link(other, why))
+    return found
 
 
 def structures(
@@ -137,13 +181,18 @@ def hold_out(
     truth: Iterable[str],
     engine: Iterable[str],
     catalogue: Mapping[str, Formulation] = FORMULATIONS,
+    *,
+    by_authors: bool = False,
 ) -> dict[str, list[str]]:
     """The engine's formulations to hold out for a truth, each with every reason.
 
     `truth` is what the run's truth uses, its observation included; `engine` is what the
-    engine would run. A process model is held out when it is kin to a truth formulation or
-    shares a structure with one; an observation piece when the truth's observation uses it
-    or shares its structure; a reference piece never (D26). Those left out may run.
+    engine would run. A process model is held out when it depends on a truth formulation
+    or shares a structure with one; an observation piece when the truth's observation uses
+    it or shares its structure; a reference piece never (D26). Those left out may run.
+
+    `by_authors=True` also holds out process models that share only an author with a truth
+    process formulation: the author-only sensitivity experiment (D27), reported apart.
     """
     truth = list(dict.fromkeys(truth))
     out: dict[str, list[str]] = {}
@@ -158,6 +207,14 @@ def hold_out(
             if t != e
             for tag in sorted(tags & set(catalogue[t].structures))
         ]
+        if by_authors and catalogue[e].role == "process":
+            reasons += [
+                f"{t}: possible dependence, {why}"
+                for t in truth
+                if catalogue[t].role == "process"
+                and link(e, t, catalogue) is None
+                and (why := possible_dependence(e, t, catalogue)) is not None
+            ]
         if reasons:
             out[e] = reasons
     return out
