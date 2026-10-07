@@ -54,7 +54,9 @@ commit, never a squash or rebase: both tools pin commits by id.
   a model, take its record here from the new list, and judge its structure tags.
 - **Adding a formulation:**
   1. Write its record in `catalogue.py`, with the source, the authors and how they were
-     checked.
+     checked. Judge its structure tags and its role (records.ROLES, Agrarium decision
+     D26): a process, an observation piece, or a reference piece. When unsure, a process:
+     the strictest.
   2. If it has equations, add `equations/<module>.py` naming it in `FORMULATION`.
   3. Test the equations against numbers the source prints. If the source is not yet
      read, mark that test `xfail(strict=True)` with what is missing, so filling it in

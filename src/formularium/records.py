@@ -14,6 +14,8 @@ publication, never a tool's choices:
   `structures_note` says more;
 - **added authors:** names a tool recorded that the source's own list lacks, kept because
   kinship leans to linking, each group with how it was found;
+- **its role** (`ROLES`): process, observation or reference, which decides how kinship
+  treats it (Agrarium decision D26). `process` is the default, and the strictest;
 - **published parameter values,** each with its unit, where in the source it is printed,
   and how it was checked;
 - **flags:** what a person should weigh, never blocking;
@@ -46,6 +48,16 @@ SETTLED = ("read", "trail")
 
 MAKERS = ("", "cooptera", "agrarium")
 # Who made an unpublished formulation; "" for a published one.
+
+# What a formulation models, which decides how kinship treats it (Agrarium decision D26).
+# Agrarium's judgement, assumed from each model's title and module, like its structure tags.
+ROLES = {
+    "process": "an uncertain model of what the truth simulates and the engine predicts: the"
+    " disease, the host, and the weather at the leaf",
+    "observation": "how the outbreak becomes data: detection, sampling, a sensor's error",
+    "reference": "known far better than anything scored (astronomy, psychrometrics, a"
+    " definition), or the yardstick itself",
+}
 
 # The tags for a formulation's form. Agrarium's vocabulary (decision D19), extended as it
 # classified Cooptera's list (decision D21).
@@ -122,6 +134,7 @@ class Formulation:
     borrows: tuple[str, ...] = ()  # formulations whose equations this one computes
     structures: tuple[str, ...] = ()  # keys of STRUCTURES
     structures_note: str = ""  # more on how the tags were judged
+    role: str = "process"  # a key of ROLES; the strictest is the default
     added_authors: tuple[Added, ...] = ()
     parameters: tuple[Published, ...] = ()
     flags: tuple[str, ...] = ()  # what a person should weigh; never blocking

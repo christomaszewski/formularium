@@ -7,6 +7,8 @@
   list (`world/engine_models.json`), and a test there fails if a record here drifts from it.
 - **Their structure tags** are Agrarium's judgement (its `ENGINE_STRUCTURES`, moved here):
   assumed from each model's title and module, unless `structures_note` says more.
+- **Roles** (process, observation, reference; Agrarium decision D26) are Agrarium's
+  judgement too. Every record not marked otherwise is a `process`.
 - **Added authors** are names Agrarium's earlier records held that Cooptera's list lacks
   (its `EXTRA_AUTHORS`, moved here), each group with how it was found.
 - **The truth's formulations** that the engine does not list come from Agrarium's
@@ -243,6 +245,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="1999-madden-10-1094-phyto-1999-89-11-1088.pdf",
         structures=("sampling-detection-bound",),
+        role="observation",
     ),
     "cannon2001.sensitivity": Formulation(
         "A scout's imperfect detection (at 1.0 in the policy: no effect yet)",
@@ -253,6 +256,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2001-cannon-10-1016-s0167-5877-01-00184-2.pdf",
         structures=("detection-sensitivity",),
+        role="observation",
     ),
     "hughes2017.scoring": Formulation(
         "Scores of probabilistic warnings",
@@ -263,6 +267,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2017-hughes-10-1094-phyto-01-17-0023-fi.pdf",
         structures=("warning-scores",),
+        role="reference",
     ),
     "cortazar2009.budburst": Formulation(
         "Budburst by degree-days above 5 °C from 1 January",
@@ -365,6 +370,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="trail",
         checked="Molitor et al. 2014's reference list (held)",
         structures=("degree-day-climate-index",),
+        role="reference",
     ),
     "ferguson2014.cold_hardiness": Formulation(
         "Bud cold hardiness and budbreak, 23 cultivars",
@@ -508,6 +514,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="trail",
         checked="Daly et al. 2015's reference list (held)",
         structures=("magnus-humidity",),
+        role="reference",
     ),
     "noaa.solar_position": Formulation(
         "The sun's elevation (night hours for sporulation)",
@@ -522,12 +529,14 @@ FORMULATIONS: dict[str, Formulation] = {
             "NOAA's azimuth formula as printed puts the noon sun in the north if taken"
             " literally. The equations module uses pvlib's analytical form.",
         ),
+        role="reference",
     ),
     "fao56.eq47": Formulation(
         "Wind speed at 2 m from another height",
         "FAO-56, equation 47; no author is named",
         checked="wetness_model.py, SOURCES.md",
         structures=("log-wind-profile",),
+        role="reference",
     ),
     # -- Agrarium's truth: formulations the engine does not list ------------------------------
     "rossi2008.oospores": Formulation(

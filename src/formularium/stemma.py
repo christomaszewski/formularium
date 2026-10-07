@@ -4,21 +4,32 @@ A stemma, in textual criticism, is the family tree of a text's manuscripts, draw
 which copies are independent witnesses. Here the copies are formulations, and the question
 is the same: may one be scored against another as if they were independent?
 
-Two formulations are **kin** when any of these holds (Agrarium decision D19):
-- **they are one model,** or pieces of one (`part_of`);
+Two formulations are **kin** when they are **one model,** or pieces of one (`part_of`).
+Two **process** formulations (records.ROLES) are kin, too, when they share a lineage
+(Agrarium decision D19):
 - **a borrowed equation:** one computes the other's equation, or both compute a third's
   (`borrows`). A piece of a model counts its model's borrowings too: running the model
   means computing them. A name test cannot see this;
 - **a shared person** (people.py): two authors are taken to be one person unless the
   evidence separates them. Added authors (records.Added) count.
 
+**Lineage counts only between process models** (Agrarium decision D26). Kinship stands for
+correlated error, and errors correlate only between models of the same thing: a
+sampling statistic and an infection curve by one author do not err together. So an
+observation or reference piece is kin only to itself, and borrowing a piece that is not a
+process (the sun's position, the Magnus formula) makes nobody kin.
+
 **Shared structure** is a separate test (records.STRUCTURES): two formulations of the same
 form are alike whoever wrote them.
 
-**The hold-out** (Agrarium decision D22): when a run's truth uses some formulations, the
-engine runs without every one of its formulations that is kin to one of them or shares a
-structure with it. The tools ask this module, so both get the same answer from the same
-records.
+**The hold-out** (Agrarium decisions D22 and D26): when a run's truth uses some
+formulations, the engine runs without
+- every **process** model kin to a truth formulation, or sharing a structure with one;
+- every **observation** piece the truth's own observation uses, or shares a structure
+  with: a matched observation model is the inverse crime's second half;
+- never a **reference** piece.
+
+The tools ask this module, so both get the same answer from the same records.
 
 The rule leans to linking. Wrongly linking two formulations only holds out one too many;
 wrongly separating them would let a lineage be scored against itself.
@@ -64,6 +75,8 @@ def _entry(name: str, catalogue: Mapping[str, Formulation]) -> _Entry:
     for m in f.part_of:
         if m != name and m in catalogue:
             borrows |= set(catalogue[m].borrows)
+    # Borrowing a piece that is not a process makes nobody kin (D26).
+    borrows = {b for b in borrows if b not in catalogue or catalogue[b].role == "process"}
     return _Entry(f.everyone(), f.year, frozenset(borrows), models)
 
 
@@ -81,6 +94,8 @@ def link(a: str, b: str, catalogue: Mapping[str, Formulation] = FORMULATIONS) ->
     ea, eb = _entry(a, catalogue), _entry(b, catalogue)
     if a == b or ea.models & eb.models:
         return SAME
+    if catalogue[a].role != "process" or catalogue[b].role != "process":
+        return None  # lineage counts only between process models (D26)
     if (
         b in ea.borrows
         or a in eb.borrows
@@ -125,13 +140,16 @@ def hold_out(
 ) -> dict[str, list[str]]:
     """The engine's formulations to hold out for a truth, each with every reason.
 
-    `truth` is what the run's truth uses; `engine` is what the engine would run. An engine
-    formulation is held out when it is kin to a truth formulation or shares a structure
-    with one. Those left out of the result may run.
+    `truth` is what the run's truth uses, its observation included; `engine` is what the
+    engine would run. A process model is held out when it is kin to a truth formulation or
+    shares a structure with one; an observation piece when the truth's observation uses it
+    or shares its structure; a reference piece never (D26). Those left out may run.
     """
     truth = list(dict.fromkeys(truth))
     out: dict[str, list[str]] = {}
     for e in dict.fromkeys(engine):
+        if catalogue[e].role == "reference":
+            continue
         reasons = [f"{t}: {why}" for t in truth if (why := link(e, t, catalogue)) is not None]
         tags = set(catalogue[e].structures)
         reasons += [

@@ -6,7 +6,7 @@ import importlib
 import re
 
 from formularium.catalogue import FORMULATIONS
-from formularium.records import AUTHOR_SOURCES, MAKERS, STRUCTURES
+from formularium.records import AUTHOR_SOURCES, MAKERS, ROLES, STRUCTURES
 
 # Published by an agency or a standard, with no personal authors.
 INSTITUTIONAL = {"noaa.solar_position", "fao56.eq47"}
@@ -17,6 +17,7 @@ def test_every_record_uses_known_tags_and_sources() -> None:
         assert f.structures and set(f.structures) <= set(STRUCTURES), name
         assert (f.authors_from in AUTHOR_SOURCES) == bool(f.authors), name
         assert f.made_by in MAKERS, name
+        assert f.role in ROLES, name
         for other in f.borrows + f.part_of:
             assert other in FORMULATIONS and other != name, (name, other)
         for added in f.added_authors:
@@ -29,6 +30,20 @@ def test_every_published_record_has_authors_or_says_why_not() -> None:
     for name, f in FORMULATIONS.items():
         if not f.made_by and not f.authors:
             assert name in INSTITUTIONAL, name
+
+
+def test_the_roles_judged_so_far() -> None:
+    """Agrarium decision D26: every record not listed here is a process."""
+    judged = {name: f.role for name, f in FORMULATIONS.items() if f.role != "process"}
+    assert judged == {
+        "madden1999.detection_bound": "observation",
+        "cannon2001.sensitivity": "observation",
+        "noaa.solar_position": "reference",
+        "alduchov1996.magnus": "reference",
+        "fao56.eq47": "reference",
+        "amerine1944.winkler_index": "reference",
+        "hughes2017.scoring": "reference",
+    }
 
 
 def test_ids_are_lower_case_ascii() -> None:

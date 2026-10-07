@@ -24,6 +24,10 @@ ENGINE = (
     "sentelhas2008.wetness",
     "cooptera.rh90_wetness",
     "vitimeteo.oospores",
+    "cannon2001.sensitivity",
+    "noaa.solar_position",
+    "alduchov1996.magnus",
+    "hughes2017.scoring",
 )
 
 
@@ -93,14 +97,59 @@ def test_a_piece_counts_its_models_borrowings() -> None:
     assert found["goidanich.incubation"] == "a borrowed equation"
 
 
-def test_the_ohio_lineage_is_kin_through_madden_and_a_borrowed_bound() -> None:
+def test_the_ohio_lineage_is_kin_through_the_bound_the_engine_computes() -> None:
     cat = _with(
         ohio=_candidate(authors=("Lalancette, N.", "Ellis, M. A.", "Madden, L. V."), year=1988)
     )
     found = {f.other: f.reason for f in stemma.links("ohio", ENGINE, cat)}
-    assert "Madden" in found["madden1999.detection_bound"]
-    assert "lalancette1988.sporulation_bounds" in found
+    assert "Lalancette" in found["lalancette1988.sporulation_bounds"]
     assert "brischetto2021.secondary" not in found  # borrowing it is the engine model's own
+    # Madden & Hughes's sampling bound is an observation piece: Madden alone links nothing.
+    assert "madden1999.detection_bound" not in found
+
+
+# -- Roles (D26) -----------------------------------------------------------------------------
+
+
+def test_lineage_counts_only_between_process_models() -> None:
+    cat = _with(
+        statistician=_candidate(authors=("Hughes, Gareth",), year=2015),
+        modeller=_candidate(authors=("Hughes, Gareth",), year=2015, role="observation"),
+    )
+    assert (
+        stemma.kin("statistician", ["hughes2017.scoring", "madden1999.detection_bound"], cat) == []
+    )
+    assert stemma.link("modeller", "hughes2017.scoring", cat) is None
+    assert stemma.link("hughes2017.scoring", "hughes2017.scoring", cat) == stemma.SAME
+
+
+def test_borrowing_a_reference_piece_makes_nobody_kin() -> None:
+    # Magarey's fact sheet borrows the sun's position; Sentelhas 2008 borrows Magnus.
+    cat = _with(
+        dew=_candidate(authors=("Nobody, Z.",), borrows=("alduchov1996.magnus",)),
+        sunny=_candidate(authors=("Nobody, Z.",), borrows=("noaa.solar_position",)),
+    )
+    assert "sentelhas2008.wetness" not in stemma.kin("dew", ENGINE, cat)
+    assert "magarey2010.rules" not in stemma.kin("sunny", ENGINE, cat)
+
+
+def test_the_hold_out_by_role() -> None:
+    # A truth whose own scouts compute the engine's detection sensitivity, and whose
+    # microclimate uses the sun and Magnus: the matched observation piece goes; the
+    # reference pieces stay, though the truth uses them.
+    truth = ["cannon2001.sensitivity", "noaa.solar_position", "alduchov1996.magnus"]
+    held = stemma.hold_out(truth, ENGINE)
+    assert set(held) == {"cannon2001.sensitivity"}
+    # An observation of the same structure, the truth's own, holds it out too.
+    cat = _with(scout=_candidate(role="observation", structures=("detection-sensitivity",)))
+    assert set(stemma.hold_out(["scout"], ENGINE, cat)) == {"cannon2001.sensitivity"}
+    # Madden's sampling bound stays for an Ohio truth; Lalancette's bound goes.
+    cat = _with(
+        ohio=_candidate(authors=("Lalancette, N.", "Ellis, M. A.", "Madden, L. V."), year=1988)
+    )
+    held = stemma.hold_out(["ohio"], ENGINE, cat)
+    assert "lalancette1988.sporulation_bounds" in held
+    assert "madden1999.detection_bound" not in held
 
 
 def test_an_unrelated_group_is_not_kin() -> None:
