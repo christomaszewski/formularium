@@ -1,8 +1,8 @@
 # Formularium
 
 Published crop and disease model formulations, their kinship graph and their tests,
-shared by Agrarium and Cooptera. Created 2026-10-07 (Agrarium PLAN 15, decisions D20 to
-D22). `main` is the default branch; work reaches it by pull request, merged with a merge
+shared by Agrarium and Cooptera. Created 2026-10-07 (Agrarium PLAN 15, decisions D22 to
+D24). `main` is the default branch; work reaches it by pull request, merged with a merge
 commit, never a squash or rebase: both tools pin commits by id.
 
 ## What belongs here, and what does not
@@ -18,7 +18,7 @@ commit, never a squash or rebase: both tools pin commits by id.
     its parameter registry.
   - How a tool uses an equation: Agrarium's per-vine population process, Cooptera's
     episodes and policy.
-- **The repository is public** (D23, 2026-10-07; MIT licence). Nothing goes in that could not
+- **The repository is public** (D25, 2026-10-07; MIT licence). Nothing goes in that could not
   be shown to anyone.
 - **Never here:**
   - **PDFs.** They are copyrighted. A record says where a paper is held.

@@ -7,5 +7,5 @@
 - `equations`: the formulations' equations as pure functions.
 
 What was published lives here; what each tool chooses (which formulations it runs, the
-ranges it draws parameters from) stays in the tool. Agrarium's PLAN, decisions D20-D22.
+ranges it draws parameters from) stays in the tool. Agrarium's PLAN, decisions D22 to D24.
 """

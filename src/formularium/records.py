@@ -20,7 +20,7 @@ publication, never a tool's choices:
 - **the equations module** that computes it, if this package has one.
 
 Which formulations a tool runs, and the ranges a tool draws a parameter from, belong to
-the tool (decision D22 in Agrarium's PLAN section 15).
+the tool (decision D24 in Agrarium's PLAN section 15).
 
 A formulation nobody published, made by one of the tools, says so in `made_by`. It may
 still list the authors whose ideas it uses: kinship goes through them.
