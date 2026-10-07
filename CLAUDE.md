@@ -18,6 +18,8 @@ commit, never a squash or rebase: both tools pin commits by id.
     its parameter registry.
   - How a tool uses an equation: Agrarium's per-vine population process, Cooptera's
     episodes and policy.
+- **The repository is public** (D23, 2026-10-07; MIT licence). Nothing goes in that could not
+  be shown to anyone.
 - **Never here:**
   - **PDFs.** They are copyrighted. A record says where a paper is held.
   - **Weather data**, Meteocat's above all: tests use the source's own numbers.
