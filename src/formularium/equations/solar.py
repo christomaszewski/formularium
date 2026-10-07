@@ -29,7 +29,7 @@ from __future__ import annotations
 
 import numpy as np
 
-FORMULATION = "noaa.solar-position"
+FORMULATION = "noaa.solar_position"
 
 _DAY = 86400.0
 

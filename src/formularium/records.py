@@ -6,8 +6,14 @@ publication, never a tool's choices:
 - **the source** and, where known, its DOI;
 - **the authors**, with whether the list is complete and how it was obtained
   (`AUTHOR_SOURCES`);
+- **what it is part of:** the published models this formulation is, or is a piece of
+  (`part_of`; empty when it is a whole model of its own);
 - **borrowed equations:** formulations whose equations this one computes;
-- **its structure,** a tag for its form (`STRUCTURES`), whoever wrote it;
+- **its structure,** one tag or more for its form (`STRUCTURES`), whoever wrote it. The
+  tags are Agrarium's judgement, assumed from each model's title and module unless
+  `structures_note` says more;
+- **added authors:** names a tool recorded that the source's own list lacks, kept because
+  kinship leans to linking, each group with how it was found;
 - **published parameter values,** each with its unit, where in the source it is printed,
   and how it was checked;
 - **flags:** what a person should weigh, never blocking;
@@ -19,11 +25,13 @@ the tool (decision D22 in Agrarium's PLAN section 15).
 A formulation nobody published, made by one of the tools, says so in `made_by`. It may
 still list the authors whose ideas it uses: kinship goes through them.
 
-**Ids never change once used.** A new published formulation takes the id
-`<first author's surname><year>.<what it computes>`, folded to ASCII and lower case,
-such as `lalancette1988.infection`. One made by a tool takes `<tool>.<what>`. Older ids
-that predate the scheme (`rule-3-10`, `goidanich.incubation`) are kept as they are,
-because reports and run records cite them.
+**Ids never change once used.** They are Cooptera's where Cooptera runs the formulation
+(`xema engine models --json`): `<first author's surname><year>.<what, in snake_case>`, ASCII
+and lower case, such as `lalancette1988.sporulation_bounds`; one made by a tool is
+`<tool>.<what>`. Ids that predate the scheme (`rule_3_10`, `goidanich.incubation`, and
+Agrarium's `bucket.canopy-water`) stay as they are, because reports and run records cite
+them. The catalogue's first ids (2026-10-07, a copy of Agrarium's old hand list) were used
+nowhere and gave way to Cooptera's the same day.
 """
 
 from __future__ import annotations
@@ -39,6 +47,8 @@ SETTLED = ("read", "trail")
 MAKERS = ("", "cooptera", "agrarium")
 # Who made an unpublished formulation; "" for a published one.
 
+# The tags for a formulation's form. Agrarium's vocabulary (decision D19), extended as it
+# classified Cooptera's list (decision D21).
 STRUCTURES = {
     "rain-temperature-trigger": "infection declared when rain and temperature pass thresholds",
     "daily-incubation-table": "incubation as daily fractions from a temperature table",
@@ -64,6 +74,15 @@ STRUCTURES = {
     "drawn-stage-dates": "stage dates drawn around an average",
     "clearness-index-partition": "direct and diffuse light from the clearness index",
     "upwind-slope-shelter": "wind slowed by terrain rising upwind",
+    "sporulation-temperature-bounds": "sporulation only within a band of temperature",
+    "bunch-susceptibility-window": "bunches susceptible for a set time after flowering",
+    "sampling-detection-bound": "what a clean sample rules out, from a sampling model",
+    "detection-sensitivity": "a scout's imperfect detection",
+    "warning-scores": "scores of probabilistic warnings against outcomes",
+    "magnus-humidity": "dew point and humidity by the Magnus formula",
+    "solar-position": "the sun's position from date, time and place",
+    "log-wind-profile": "wind speed at another height from a logarithmic profile",
+    "chilling-dormancy": "dormancy broken by accumulated chilling",
 }
 
 
@@ -79,6 +98,15 @@ class Published:
 
 
 @dataclass(frozen=True)
+class Added:
+    """Authors a tool recorded that the source's own list lacks, and how they were found."""
+
+    names: tuple[str, ...]
+    found: str  # one of AUTHOR_SOURCES
+    why: str
+
+
+@dataclass(frozen=True)
 class Formulation:
     computes: str  # what it computes, in a few words
     source: str  # the citation, as read
@@ -87,13 +115,21 @@ class Formulation:
     authors: tuple[str, ...] = ()
     authors_complete: bool = False  # True when `authors` is the source's full list
     authors_from: str = ""  # one of AUTHOR_SOURCES; empty when there are no authors
+    checked: str = ""  # where the author list was read or traced: a held PDF, a reference list
     made_by: str = ""  # one of MAKERS
     doi: str = ""
+    part_of: tuple[str, ...] = ()  # the published models this one is, or is a piece of
     borrows: tuple[str, ...] = ()  # formulations whose equations this one computes
-    structure: str = ""  # a key of STRUCTURES
+    structures: tuple[str, ...] = ()  # keys of STRUCTURES
+    structures_note: str = ""  # more on how the tags were judged
+    added_authors: tuple[Added, ...] = ()
     parameters: tuple[Published, ...] = ()
     flags: tuple[str, ...] = ()  # what a person should weigh; never blocking
     equations: str = ""  # the module of formularium.equations that computes it
+
+    def everyone(self) -> tuple[str, ...]:
+        """The authors kinship compares: the source's, then any a tool added."""
+        return self.authors + tuple(n for a in self.added_authors for n in a.names)
 
     def published(self, name: str) -> float:
         """A published parameter's value, by name."""
