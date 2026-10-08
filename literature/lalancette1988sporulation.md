@@ -9,7 +9,7 @@ regions: [Ohio]
 processes: [sporulation]
 records: [lalancette1988.sporulation_bounds]
 datasets: []
-files: [Phyto78n10_1316.PDF]
+files: [Phyto78n10_1316.pdf]
 ---
 
 # Lalancette, Madden & Ellis 1988: sporulation by temperature and humid hours

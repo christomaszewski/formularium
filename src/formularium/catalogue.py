@@ -933,7 +933,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors=("Lalancette, N.", "Ellis, M. A.", "Madden, L. V."),
         authors_complete=True,
         authors_from="read",
-        checked="Phyto78n06_794.PDF (Chris's drop), read 2026-10-08",
+        checked="Phyto78n06_794.pdf (Chris's drop), read 2026-10-08",
         calibrated_on=("lalancette1988a",),
         calibration_note=(
             "its own chamber data, read 2026-10-08 (literature/lalancette1988infection)"

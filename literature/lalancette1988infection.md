@@ -7,9 +7,9 @@ diseases: [downy mildew]
 crops: [grapevine, Vitis labrusca]
 regions: [Ohio]
 processes: [infection]
-records: []
+records: [lalancette1988.infection]
 datasets: [lalancette1988a]
-files: [Phyto78n06_794.PDF]
+files: [Phyto78n06_794.pdf]
 ---
 
 # Lalancette, Ellis & Madden 1988: infection efficiency by temperature and wetness
