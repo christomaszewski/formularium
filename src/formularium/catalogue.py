@@ -173,6 +173,16 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="2020-brischetto-10-3389-fpls-2020-01187.pdf",
         borrows=("blaeser1979.survival",),
         structures=("vpd-survival",),
+        flags=(
+            "Eq. 2 as printed (c2 = 0.02) never gives a detached sporangium less than 2.9"
+            " days (at x = 11.75), and the hourly rate is capped at 1/24. Applied as"
+            " Agrarium's truth applies it, it leaves 97 % alive after 8 h of Kennelly et al."
+            " 2007's hot, dry day (36.5 °C, 15 % RH), where nearly all died in the canopy, and"
+            " 72 % after 24 h at 20 °C and 30 % RH, where Blaeser & Weltzien 1978, cited by"
+            " Brischetto, found death within 24 h (Agrarium"
+            " scripts/diagnostics/sporangia_survival.py, 2026-10-08). With Rossi et al."
+            " 2008's c2 = 0.01 the cap still leaves 71 % after 8 h.",
+        ),
     ),
     "brischetto2021.secondary": Formulation(
         "Secondary infection weather (partial: no severity)",
@@ -756,6 +766,38 @@ FORMULATIONS: dict[str, Formulation] = {
             "Magarey et al. 1991's incubation cubic was fitted partly to these data. Cooptera's"
             " magarey2010.rules computes no incubation curve, only the fact sheet's 5-day lower"
             " bound (Cooptera, 2026-10-08); where the sheet's 5-17 days came from is unknown.",
+        ),
+    ),
+    "rouzet2003.cold_days": Formulation(
+        "Start of oospore maturation after 60 cold days (7 °C <= Tmax <= 15 °C)",
+        (
+            "Rouzet & Jacquin 2003, Development of overwintering oospores of Plasmopara"
+            " viticola and severity of primary foci in relation to climate, EPPO Bulletin"
+            " 33(3):437-442, as Franche 2012 states the rule (§2-1-1, Tableau 1); the paper"
+            " is not held"
+        ),
+        year=2003,
+        authors=("Rouzet, J.", "Jacquin, D."),
+        authors_complete=True,
+        authors_from="trail",
+        doi="10.1111/j.1365-2338.2003.00670.x",
+        structures=("cold-day-oospore-start",),
+        structures_note="a count of days in a band of daily maximum; replaces Rossi's 1 January",
+        parameters=(
+            Published("cold_days", 60.0, "d", "Franche 2012, §2-1-1", "trail"),
+            Published("tmax_low_c", 7.0, "°C", "Franche 2012, §2-1-1", "trail"),
+            Published("tmax_high_c", 15.0, "°C", "Franche 2012, §2-1-1", "trail"),
+        ),
+        flags=(
+            "Only Franche's statement is held: when the count starts, and whether the days"
+            " must be consecutive, are not given. Franche's dates for Aquitaine (21 January"
+            " 2002, 24 January 2003, 31 December 2004) are his model's, not observations."
+            " Franche cites the paper as IOBC/WPRS Bull. 33; Crossref gives EPPO Bulletin.",
+            "The paper's abstract (Crossref, read 2026-10-08) states no such rule: maturation"
+            " 'is affected by low autumn and warm spring temperatures', long dry periods can"
+            " block it, and 'there is little prospect that oospore maturation can be modelled"
+            " in the near future'. Thirty years of the French Plant Protection Service's"
+            " observations lie behind it. Read the paper before a tool runs this.",
         ),
     ),
     # -- Agrarium's truth: formulations the engine does not list ------------------------------

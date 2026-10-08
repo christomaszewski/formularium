@@ -26,8 +26,12 @@ A symposium summary of Kennelly's Phytopathology papers (95:1445-1452, 2005;
   September.
 - **Lesions:** sporulate abundantly 1-3 times, then yield falls sharply; age alone does not
   reduce yield over three weeks; lesions kept dry keep their potential.
-- **Sporangia in the canopy:** on warm, dry days nearly all died within 8 h; on a cloudy
-  day (27.8 °C, 72 % RH) about all were viable after more than 24 h.
+- **Sporangia in the canopy** (from Kennelly et al. 2007, *Phytopathology* 97:512, and a
+  2004 abstract; potted sporulating vines placed in the canopy): "During warm, dry days
+  (maximum temperature approximately 30°C), nearly all sporangia died within 8 h"; on
+  cloudier, more humid days viability stayed near 100 % after more than 24 h. Fig. 4's two
+  days: hot and dry (high 36.5 °C, RH 15 %) and cooler and cloudy (high 27.8 °C, RH 72 %).
+  Checked in the text by the main session, 2026-10-08.
 - **Fruit:** Geneva NY, 2002-03, Chardonnay, Riesling, Concord, Niagara: resistance begins
   about 1 week after bloom (100 degree-days, base 10 °C); berries and pedicels resistant
   by 2-3 weeks (200-300 degree-days).
@@ -47,3 +51,8 @@ A symposium summary of Kennelly's Phytopathology papers (95:1445-1452, 2005;
   Brischetto was fitted to these data (not shown).
 - Oospore infections continuing all season agree with Gobbin's genotyping
   ([rossi2013](rossi2013.md)).
+- **The check, run (2026-10-08):** Brischetto 2020's eq. 2, as Agrarium's truth (F1) runs
+  it, leaves 97 % of deposited sporangia alive after 8 h of Fig. 4's hot, dry day, and its
+  1/24 cap on the hourly rate leaves at least 71 % whatever its coefficients. It fails this
+  observation (Agrarium `scripts/diagnostics/sporangia_survival.py`; the flag on
+  `brischetto2020.survival`).

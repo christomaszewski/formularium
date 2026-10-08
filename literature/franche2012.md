@@ -7,7 +7,7 @@ diseases: [downy mildew]
 crops: [grapevine]
 regions: [France]
 processes: [oospores, primary infection, splash, interception, sporulation, infection, incubation, host]
-records: []
+records: [rouzet2003.cold_days]
 datasets: []
 files: [BUS_M_2012_FRANCHE_JEAN-CHARLES.pdf]
 ---
@@ -45,3 +45,9 @@ Système, EPI, MILVIT) described but not used.
   formulation.
 - Its primary chain is Rossi's, and its infection and sporulation share the Lalancette data
   the engine reaches through Magarey and Brischetto.
+- **Rouzet & Jacquin's rule, followed up (2026-10-08, main session):** recorded as
+  `rouzet2003.cold_days` from Franche's statement (§2-1-1, checked in the text). Franche
+  cites "IOBC/WPRS Bull. 33"; Crossref gives *EPPO Bulletin* 33(3):437-442,
+  doi:10.1111/j.1365-2338.2003.00670.x, closed access. Its abstract states no cold-day rule
+  and doubts that maturation can yet be modelled, so the rule may be Franche's or ITK's
+  reading. Not for a tool until the paper is read.
