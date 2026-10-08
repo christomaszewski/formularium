@@ -46,8 +46,13 @@ commit, never a squash or rebase: both tools pin commits by id.
   - An author list read in a citing paper's references is `read`, and the source says
     where.
   - When a check contradicts a record, fix the record.
-- **Kinship leans to linking** (people.py). Wrongly linking only holds out too much;
-  wrongly separating lets a lineage be scored against itself.
+- **Dependence is substantive** (Agrarium decision D27): one model, a borrowed equation,
+  a shared implementation, shared calibration data, or a shared structure (assumptions of
+  form). A shared author is a flag to look into, not a dependency. Record what a source
+  says it borrows, computes and was fitted to (`borrows`, `equations`, `calibrated_on`,
+  datasets.py), since only recorded dependencies count; an empty field means not recorded.
+- **Matching people leans to linking** (people.py), for the flags and for the author-only
+  sensitivity arm (`hold_out(..., by_authors=True)`).
 - **One source for the engine's models.** Cooptera lists them itself, with their authors
   (`xema engine models --json`). Agrarium keeps that list as a snapshot naming its commit,
   and its tests fail when a record here differs from it. So when Cooptera adds or changes
@@ -56,7 +61,8 @@ commit, never a squash or rebase: both tools pin commits by id.
   1. Write its record in `catalogue.py`, with the source, the authors and how they were
      checked. Judge its structure tags and its role (records.ROLES, Agrarium decision
      D26): a process, an observation piece, or a reference piece. When unsure, a process:
-     the strictest.
+     the strictest. Record the equations it borrows and the data it was fitted to, as
+     the source states them.
   2. If it has equations, add `equations/<module>.py` naming it in `FORMULATION`.
   3. Test the equations against numbers the source prints. If the source is not yet
      read, mark that test `xfail(strict=True)` with what is missing, so filling it in

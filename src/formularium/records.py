@@ -9,6 +9,8 @@ publication, never a tool's choices:
 - **what it is part of:** the published models this formulation is, or is a piece of
   (`part_of`; empty when it is a whole model of its own);
 - **borrowed equations:** formulations whose equations this one computes;
+- **calibration data:** the datasets its parameters were fitted to (`calibrated_on`, ids
+  of datasets.DATASETS), only where a source says so; empty means not recorded;
 - **its structure,** one tag or more for its form (`STRUCTURES`), whoever wrote it. The
   tags are Agrarium's judgement, assumed from each model's title and module unless
   `structures_note` says more;
@@ -132,6 +134,7 @@ class Formulation:
     doi: str = ""
     part_of: tuple[str, ...] = ()  # the published models this one is, or is a piece of
     borrows: tuple[str, ...] = ()  # formulations whose equations this one computes
+    calibrated_on: tuple[str, ...] = ()  # datasets.DATASETS ids; empty: not recorded
     structures: tuple[str, ...] = ()  # keys of STRUCTURES
     structures_note: str = ""  # more on how the tags were judged
     role: str = "process"  # a key of ROLES; the strictest is the default

@@ -180,6 +180,8 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("t_opt_c", 21.0, "°C", "Figure 2 caption (D)", "read"),
             Published("t_max_c", 30.2, "°C", "Figure 2 caption (D)", "read"),
         ),
+        # Figure 2 caption (D), read 2026-10-07.
+        calibrated_on=("blaeser1979", "caffi2016"),
     ),
     "magarey2005.generic": Formulation(
         "Generic infection response to temperature and wetness",
@@ -283,6 +285,9 @@ FORMULATIONS: dict[str, Formulation] = {
             " 5-30 °C, 20% incidence). Its Botrytis Tmax of 35 °C is the paper's default where"
             " none was measured.",
         ),
+        # As the engine runs it, with Brischetto 2021's parameters (its title says so). Table
+        # 2's own rows were fitted to other data: see the flag and datasets.py.
+        calibrated_on=("blaeser1979", "caffi2016"),
     ),
     "magarey2010.rules": Formulation(
         "Downy mildew rules of thumb: 10:10:24, sporulation, infection",
