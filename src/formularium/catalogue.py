@@ -2,9 +2,10 @@
 
 **Where the records come from** (rebuilt 2026-10-07, Agrarium decision D24):
 - **The engine's models** are Cooptera's own list (`xema engine models --json`) at
-  `cooptera@6d8d2d4`, under Cooptera's ids, with its sources, authors and how it checked
-  them (`checked` names the PDF it holds, or the trail). Agrarium keeps a snapshot of that
-  list (`world/engine_models.json`), and a test there fails if a record here drifts from it.
+  `cooptera@6d8d2d4`, relisted at `7b102e0`, under Cooptera's ids, with its sources,
+  authors and how it checked them (`checked` names the PDF it holds, or the trail).
+  Agrarium keeps a snapshot of that list (`world/engine_models.json`), and a test there
+  fails if a record here drifts from it.
 - **Their structure tags** are Agrarium's judgement (its `ENGINE_STRUCTURES`, moved here):
   assumed from each model's title and module, unless `structures_note` says more.
 - **Roles** (process, observation, reference; Agrarium decision D26) are Agrarium's
@@ -26,7 +27,7 @@ from __future__ import annotations
 from .records import Added, Formulation, Published
 
 FORMULATIONS: dict[str, Formulation] = {
-    # -- The engine's models, from Cooptera's list at cooptera@6d8d2d4 --------------------
+    # -- The engine's models, from Cooptera's list at cooptera@7b102e0 --------------------
     "kennelly2007.trigger": Formulation(
         "Primary infection trigger: 2.5 mm in a day at a mean of 11 °C",
         (
@@ -92,7 +93,8 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_complete=True,
         authors_from="read",
         checked="2008-rossi-10-1016-j-ecolmodel-2007-10-046.pdf",
-        borrows=("rossi2008pp.dormancy", "blaeser1979.survival", "goidanich.incubation"),
+        # Not goidanich.incubation since cooptera@7b102e0: eqs 8-9 cite it, not compute it.
+        borrows=("rossi2008pp.dormancy", "blaeser1979.survival"),
         structures=(
             "hydro-thermal-oospore-cohorts",
             "wet-degree-hours-infection",

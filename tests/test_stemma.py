@@ -8,7 +8,7 @@ from formularium import stemma
 from formularium.catalogue import FORMULATIONS
 from formularium.records import Added, Formulation
 
-# Cooptera's models as its list gives them (cooptera@6d8d2d4), enough for these tests.
+# Cooptera's models as its list gives them (cooptera@7b102e0), enough for these tests.
 ENGINE = (
     "kennelly2007.trigger",
     "goidanich.incubation",
@@ -82,9 +82,9 @@ def test_a_model_used_in_calibration_is_a_dependency() -> None:
 def test_rossi_s_incubation_and_goidanich_share_calibration_data_inferred() -> None:
     """Rossi 2008's eqs 8-9 regress incubation on temperature at two humidity levels, after
     Goidanich et al. 1957 (inferred, trail). The dependency holds without the borrow."""
-    record = FORMULATIONS["rossi2008.primary"]
-    cat = _with(**{"rossi2008.primary": dataclasses.replace(record, borrows=())})
-    assert stemma.link("rossi2008.incubation", "goidanich.incubation", cat) == (
+    # Since cooptera@7b102e0 Rossi 2008 no longer borrows the table: the data link alone holds.
+    assert "goidanich.incubation" not in FORMULATIONS["rossi2008.primary"].borrows
+    assert stemma.link("rossi2008.incubation", "goidanich.incubation") == (
         "shared calibration data, goidanich1957"
     )
     assert "inferred" in FORMULATIONS["rossi2008.primary"].calibration_note.lower()
@@ -119,9 +119,9 @@ def test_a_borrowed_equation_is_kinship_without_a_shared_author() -> None:
 
 
 def test_a_piece_counts_its_models_borrowings() -> None:
-    # Rossi 2008's model borrows Goidanich's incubation; its incubation piece does too.
-    found = {f.other: f.reason for f in stemma.links("rossi2008.incubation", ENGINE)}
-    assert found["goidanich.incubation"] == "a borrowed equation"
+    # Rossi 2008's model computes Blaeser & Weltzien's survival equation (cooptera@7b102e0,
+    # primary_infection.py); so does its incubation piece, as a piece of that model.
+    assert stemma.link("rossi2008.incubation", "blaeser1979.survival") == "a borrowed equation"
 
 
 def test_the_ohio_lineage_depends_only_where_it_computes_the_engines_bound() -> None:
