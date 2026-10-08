@@ -173,6 +173,16 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="2020-brischetto-10-3389-fpls-2020-01187.pdf",
         borrows=("blaeser1979.survival",),
         structures=("vpd-survival",),
+        flags=(
+            "Eq. 2 as printed (c2 = 0.02) never gives a detached sporangium less than 2.9"
+            " days (at x = 11.75), and the hourly rate is capped at 1/24. Applied as"
+            " Agrarium's truth applies it, it leaves 97 % alive after 8 h of Kennelly et al."
+            " 2007's hot, dry day (36.5 °C, 15 % RH), where nearly all died in the canopy, and"
+            " 72 % after 24 h at 20 °C and 30 % RH, where Blaeser & Weltzien 1978, cited by"
+            " Brischetto, found death within 24 h (Agrarium"
+            " scripts/diagnostics/sporangia_survival.py, 2026-10-08). With Rossi et al."
+            " 2008's c2 = 0.01 the cap still leaves 71 % after 8 h.",
+        ),
     ),
     "brischetto2021.secondary": Formulation(
         "Secondary infection weather (partial: no severity)",

@@ -104,6 +104,17 @@ DATASETS: dict[str, Dataset] = {
         " calibrated on these data",
         "read",
     ),
+    "gobbin2006.europe": Dataset(
+        "Gobbin et al. 2005 and 2006: P. viticola genotyped with four microsatellites in 39"
+        " vineyards (Germany 4, France 4, Italy 12, Greece 10, Switzerland 9), 2000-2002 and"
+        " 2004; 155 samplings, about 10,000 oil spots, each vineyard sampled from its first"
+        " lesions until the mosaic stage",
+        "Rossi, Caffi & Gobbin 2013, Eur. J. Plant Pathol. 135:641-654, pp. 645-647 (read"
+        " 2026-10-08), a review Gobbin co-wrote; Gobbin's papers not held. No formulation is"
+        " recorded as fitted to these data. Agrarium plans to history-match its truth's"
+        " epidemic structure against them (its TRUTH-METHOD part 2)",
+        "trail",
+    ),
     "phenoclim": Dataset(
         "INRA's PHENOCLIM database (Chuine & Seguin 2008): grapevine budburst dates, 1970-2002,"
         " ten cultivars in five French regions, with their stations' temperatures",
