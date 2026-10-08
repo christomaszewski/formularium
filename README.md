@@ -14,6 +14,9 @@ Chris on 2026-10-07: Agrarium's PLAN section 15, decisions D22 to D24.
 | `people` | Whether two authors are the same person |
 | `stemma` | The kinship graph, and what to hold out of the engine for a given truth |
 | `equations` | The formulations' equations as pure numpy functions |
+| `datasets` | The data formulations were fitted to |
+| `literature/` | One note per paper read: what it holds, its dependence, what was concluded; `INGESTING.md` says how |
+| `scripts/` | `extract_paper.py`, `crossref_lookup.py`, `new_note.py`: helpers for ingesting a paper |
 
 **The line through it:** the package records what was published and how it was checked.
 Each tool keeps what it chooses:
