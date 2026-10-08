@@ -96,3 +96,44 @@ def test_a_scaffolded_note_has_every_key(tmp_path: Path) -> None:
     header = _header(path)
     assert set(REQUIRED) | set(LISTS) <= set(header)
     assert header["id"] == "someone2020"
+
+
+def test_a_note_filled_from_a_triage_record_puts_surnames_first(tmp_path: Path) -> None:
+    new_note = _script("new_note")
+    record = {
+        "title": "A model",
+        "authors": [
+            "L. V. Madden",
+            "Mélanie Rouxel",
+            "Maddalena G.",
+            "Carolina Pañitrur-De la Fuente",
+        ],
+        "year": "2020",
+        "journal": "Plant Disease",
+        "volume": "84",
+        "pages": "1-9",
+        "doi": "https://doi.org/10.1/abcdefgh",
+        "region": "Ohio (Wooster)",
+    }
+    fill = new_note.header_from(record, ["a b.pdf"], "2026-10-08, abstract")
+    path = new_note.scaffold("madden2020", tmp_path, "2026-10-08", fill)
+    header = _header(path)
+    assert header["citation"] == (
+        "Madden, L. V., Rouxel, Mélanie, Maddalena, G. & Pañitrur-De la Fuente, Carolina."
+        " 2020. A model. Plant Disease 84:1-9"
+    )
+    assert header["doi"] == "10.1/abcdefgh"
+    assert header["files"] == ["a b.pdf"]
+    assert header["regions"] == ["Ohio"]
+
+
+def test_quotes_are_found_at_their_line_or_reported(tmp_path: Path) -> None:
+    verify = _script("verify_quotes")
+    lines = ["Results", "the optimum was 17.5", "°C after 15", "hr of wetness", "", "end"]
+    assert verify.find(lines, "17.5 °C after 15 hr", 2, 1) == ("ok", 2)  # across a line break
+    assert verify.find(lines, "optimum was 17.5", 6, 1) == ("moved", 2)
+    assert verify.find(lines, "optimum was 18", 2, 3) == ("MISSING", None)
+    assert verify.find([f"x {chr(0x2212)} 0.24 W"], "x - 0.24 w", 1, 0) == (
+        "ok",
+        1,
+    )  # a Unicode minus

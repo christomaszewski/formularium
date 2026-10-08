@@ -80,7 +80,9 @@ def main() -> int:
         _run("pdftotext", "-layout", str(pdf), str(txt))
     title = re.search(r"^Title:\s+(.*)$", info, re.M)
     text = txt.read_text(encoding="utf-8", errors="replace")
-    lines = text.splitlines()
+    # newlines only: splitlines() also breaks at the form feeds pdftotext puts between pages,
+    # and the map's line numbers must match grep -n and a reader's line count
+    lines = text.split("\n")
     per_page = len(text) / max(pages, 1)
 
     print(f"text:   {txt}")
