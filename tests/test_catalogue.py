@@ -87,4 +87,6 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "molitor2014.shoots": ("molitor2014.mt60",),
         "ferguson2014.cold_hardiness": ("ferguson2014.prosser",),
         "leoni2026.oospores": ("leoni2026.changins",),
+        "zachos1959.incubation": ("zachos1959",),
+        "rafaila1968.incubation": ("rafaila1968",),
     }

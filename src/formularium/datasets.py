@@ -34,8 +34,28 @@ DATASETS: dict[str, Dataset] = {
         " temperature to the length of incubation, at two extreme levels of relative"
         " humidity'. That those regressions, Rossi 2008's eqs 8-9, were fitted to Goidanich's"
         " data is inferred, not stated; Rossi et al. 2002, where the fit is described, is not"
-        " held. The engine's Goidanich table is these data, as Porras Soriano 2006 prints them",
+        " held. The engine's Goidanich table is these data, as Porras Soriano 2006 prints them."
+        " Zachos 1959 (read 2026-10-08, p. 250) describes Casarini 1957's own curves for"
+        " Emilia, at high and at low humidity, from artificial and natural inoculations;"
+        " Casarini co-wrote the table, so its data are probably his (inferred, not stated)",
         "trail",
+    ),
+    "zachos1959": Dataset(
+        "Artificial inoculations every ten days, April to October, for two years, in vineyards"
+        " at Vello (Coconi) and Patras, Greece, on Corinth, Sultanina, Rhazaki, Rhoditis,"
+        " Phraoula and Sideritis, leaves 4-6 from the shoot tip, with temperature and humidity"
+        " from a thermohygrograph beside the vines; after years of natural infections",
+        "Zachos 1959, Ann. Inst. Phytopathol. Benaki N.S. 2(4):193-355, chapter II (read"
+        " 2026-10-08 in the Internet Archive scan Chris supplied). The curves are his own: he"
+        " compares them with Ravaz, Müller and Sleumer, Baldacci and Casarini, adopting none",
+        "read",
+    ),
+    "rafaila1968": Dataset(
+        "Detached leaves in a polythermostat at 5-30 °C and 100% humidity, Bucharest"
+        " 1963-1965; and incubation by leaf age in the Minis and Blaj vineyards",
+        "Rafaila, Sevcenco & David 1968, Phytopathol. Z. 63:328-336, Tables 3 and 4 (read"
+        " 2026-10-08 in the copy Chris supplied). They cite neither Müller nor Goidanich",
+        "read",
     ),
     "blaeser1979": Dataset(
         "Blaeser & Weltzien 1979 (P. viticola infection data)",

@@ -256,3 +256,13 @@ def test_shared_calibration_data_links_an_observation_piece() -> None:
     cat = _with(madden=_candidate(authors=("Madden, L. V.",), year=1995))
     assert stemma.link("madden", "madden1999.detection_bound", cat) is None
     assert "madden1999.detection_bound" not in stemma.hold_out(["madden"], ENGINE, cat)
+
+
+def test_zachos_and_rafaila_stay_beside_a_rossi_truth() -> None:
+    """Their incubation data are their own (Greece 1950s; Bucharest 1963-65), unlike Rossi's
+    and Goidanich's (Goidanich 1957, inferred), and their form is a table, not Rossi's window."""
+    engine = ["goidanich.incubation", "zachos1959.incubation", "rafaila1968.incubation"]
+    held = stemma.hold_out(["rossi2008.incubation"], engine)
+    assert set(held) == {"goidanich.incubation"}
+    assert stemma.flags("zachos1959.incubation", ENGINE) == []
+    assert stemma.flags("rafaila1968.incubation", ENGINE) == []
