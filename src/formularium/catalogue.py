@@ -69,6 +69,8 @@ FORMULATIONS: dict[str, Formulation] = {
                 ),
             ),
         ),
+        calibrated_on=("goidanich1957",),
+        calibration_note="the table is Goidanich et al. 1957's data (datasets.py)",
     ),
     "rule_3_10": Formulation(
         "The 3-10 rule: 10 °C, shoots of 10 cm, 10 mm of rain",
@@ -95,6 +97,13 @@ FORMULATIONS: dict[str, Formulation] = {
             "hydro-thermal-oospore-cohorts",
             "wet-degree-hours-infection",
             "incubation-window",
+        ),
+        # Its incubation (eqs 8-9): two regressions on temperature at two humidity levels.
+        calibrated_on=("goidanich1957",),
+        calibration_note=(
+            "Inferred, trail (2026-10-08): eqs 8-9 are Rossi et al. 2002's regressions, which"
+            " Rossi et al. 2005 describe as relating temperature to incubation at two humidity"
+            " levels after Goidanich et al. 1957. Rossi et al. 2002 is not held"
         ),
     ),
     "rossi2008pp.dormancy": Formulation(
@@ -675,7 +684,15 @@ FORMULATIONS: dict[str, Formulation] = {
             "Caffi, Tito",
         ),
         authors_complete=True,
-        authors_from="snippet",
+        authors_from="read",
+        doi="10.3389/fpls.2025.1524959",
+        # Section 2.5: leaves were observed until the end of the primary inoculum season,
+        # "estimated using the epidemiological weather-driven model previously proposed by
+        # Rossi et al. (2008b)"; section 3.4's dose regression fits those counts.
+        calibrated_with=("rossi2008.primary",),
+        calibration_note=(
+            "read 2026-10-08 in the paper (Frontiers, open access), sections 2.5 and 3.4"
+        ),
         structures=("oospore-dose-response",),
     ),
     "kernel.mixture": Formulation(

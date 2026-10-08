@@ -57,13 +57,37 @@ def test_a_formulation_and_the_pieces_of_one_model_are_the_same() -> None:
 
 
 def test_a_shared_author_alone_is_a_flag_not_a_dependency() -> None:
-    """D27: Fedele 2025 is Rossi's and Caffi's too, but shares no equation, code or data."""
-    assert stemma.kin("fedele2025.dose", ENGINE) == []
+    """D27: Rossi and Caffi wrote Fedele 2025 and Caffi 2013, which share nothing else."""
+    assert "caffi2013.sporulation" not in stemma.kin("fedele2025.dose", ENGINE)
     flagged = {f.other for f in stemma.flags("fedele2025.dose", ENGINE)}
-    assert {"rossi2008.primary", "caffi2013.sporulation"} <= flagged
+    assert "caffi2013.sporulation" in flagged
     # Kennelly 2007 and Magarey's fact sheet: Magarey, P. A. in both, and nothing else.
     assert stemma.link("kennelly2007.trigger", "magarey2010.rules") is None
     assert "Magarey" in stemma.possible_dependence("kennelly2007.trigger", "magarey2010.rules")
+
+
+def test_a_model_used_in_calibration_is_a_dependency() -> None:
+    """Fedele 2025 fitted its dose curve to counts whose window Rossi 2008's model set."""
+    found = {f.other: f.reason for f in stemma.links("fedele2025.dose", ENGINE)}
+    assert found == {"rossi2008.primary": "calibrated with rossi2008.primary"}
+    held = stemma.hold_out(["fedele2025.dose"], ENGINE)
+    assert "rossi2008.primary" in held
+    # Two formulations fitted with the same model's help depend on each other too.
+    cat = _with(other=_candidate(calibrated_with=("rossi2008.primary",)))
+    assert stemma.link("other", "fedele2025.dose", cat) == (
+        "calibrated with a shared model, rossi2008.primary"
+    )
+
+
+def test_rossi_s_incubation_and_goidanich_share_calibration_data_inferred() -> None:
+    """Rossi 2008's eqs 8-9 regress incubation on temperature at two humidity levels, after
+    Goidanich et al. 1957 (inferred, trail). The dependency holds without the borrow."""
+    record = FORMULATIONS["rossi2008.primary"]
+    cat = _with(**{"rossi2008.primary": dataclasses.replace(record, borrows=())})
+    assert stemma.link("rossi2008.incubation", "goidanich.incubation", cat) == (
+        "shared calibration data, goidanich1957"
+    )
+    assert "inferred" in FORMULATIONS["rossi2008.primary"].calibration_note.lower()
 
 
 def test_added_authors_count_toward_flags() -> None:

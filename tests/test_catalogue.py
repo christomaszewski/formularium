@@ -19,7 +19,7 @@ def test_every_record_uses_known_tags_and_sources() -> None:
         assert (f.authors_from in AUTHOR_SOURCES) == bool(f.authors), name
         assert f.made_by in MAKERS, name
         assert f.role in ROLES, name
-        for other in f.borrows + f.part_of:
+        for other in f.borrows + f.part_of + f.calibrated_with:
             assert other in FORMULATIONS and other != name, (name, other)
         for data in f.calibrated_on:
             assert data in DATASETS, (name, data)

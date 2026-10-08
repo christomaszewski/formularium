@@ -23,6 +23,20 @@ class Dataset:
 
 
 DATASETS: dict[str, Dataset] = {
+    "goidanich1957": Dataset(
+        "Goidanich, Casarini & Foschi 1957, Lotta antiparassitaria e calendario dei trattamenti"
+        " in viticoltura, Giornale di Agricoltura (13 January): 11-14: incubation of"
+        " P. viticola by temperature and humidity (reference line read in Rossi et al. 2005;"
+        " the paper itself not read)",
+        "Rossi et al. 2005 (Riv. Ital. Agrometeorol. 3:7-13; read 2026-10-08 by the paper"
+        " search session): incubation is 'a function of temperature and relative humidity"
+        " (Goidanich et al., 1957)', and the model 'uses two regression equations relating"
+        " temperature to the length of incubation, at two extreme levels of relative"
+        " humidity'. That those regressions, Rossi 2008's eqs 8-9, were fitted to Goidanich's"
+        " data is inferred, not stated; Rossi et al. 2002, where the fit is described, is not"
+        " held. The engine's Goidanich table is these data, as Porras Soriano 2006 prints them",
+        "trail",
+    ),
     "blaeser1979": Dataset(
         "Blaeser & Weltzien 1979 (P. viticola infection data)",
         "Brischetto et al. 2021, Figure 2 caption (D): the Magarey response's parameters were"

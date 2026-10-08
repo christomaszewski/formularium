@@ -13,7 +13,10 @@ the records show a substantive dependency (Agrarium decision D27):
 - **a shared implementation:** both are computed by the same code (`equations`, directly
   or through what they borrow);
 - **shared calibration data:** both were fitted to the same observations
-  (`calibrated_on`, datasets.py).
+  (`calibrated_on`, datasets.py);
+- **calibrated with the other:** one was fitted to data a model of the other shaped, such
+  as a model that decided when observations stopped (`calibrated_with`), or both were
+  fitted with the same model's help.
 
 **Shared assumptions of form** are the structure tags (records.STRUCTURES): two
 formulations of one form are alike whoever wrote them. The hold-out counts them too.
@@ -75,6 +78,7 @@ class _Entry:
     models: frozenset[str]  # the models it is, or is a piece of
     code: frozenset[str]  # the equations modules that compute it or what it borrows
     data: frozenset[str]  # the datasets it, or the model it is a piece of, was fitted to
+    shaped_by: frozenset[str]  # models used in fitting it, or the model it is a piece of
 
 
 def _entry(name: str, catalogue: Mapping[str, Formulation]) -> _Entry:
@@ -87,8 +91,15 @@ def _entry(name: str, catalogue: Mapping[str, Formulation]) -> _Entry:
     code = {f.equations, *(w.equations for w in wholes)}
     code |= {catalogue[b].equations for b in borrows if b in catalogue}
     data = set(f.calibrated_on).union(*(set(w.calibrated_on) for w in wholes))
+    shaped_by = set(f.calibrated_with).union(*(set(w.calibrated_with) for w in wholes))
     return _Entry(
-        f.everyone(), f.year, frozenset(borrows), models, frozenset(code - {""}), frozenset(data)
+        f.everyone(),
+        f.year,
+        frozenset(borrows),
+        models,
+        frozenset(code - {""}),
+        frozenset(data),
+        frozenset(shaped_by),
     )
 
 
@@ -105,8 +116,8 @@ def link(a: str, b: str, catalogue: Mapping[str, Formulation] = FORMULATIONS) ->
     """Why formulations a and b depend on each other, or None. A formulation is its own.
 
     Only substantive dependencies count (D27): one model, a borrowed equation, a shared
-    implementation, shared calibration data. Structure is `hold_out`'s separate test, and a
-    shared author is `possible_dependence`'s flag."""
+    implementation, shared calibration data, calibration with the other's model. Structure
+    is `hold_out`'s separate test, and a shared author is `possible_dependence`'s flag."""
     ea, eb = _entry(a, catalogue), _entry(b, catalogue)
     if a == b or ea.models & eb.models:
         return SAME
@@ -124,6 +135,10 @@ def link(a: str, b: str, catalogue: Mapping[str, Formulation] = FORMULATIONS) ->
         return f"a shared implementation, formularium.equations.{', '.join(shared)}"
     if shared := sorted(ea.data & eb.data):
         return f"shared calibration data, {', '.join(shared)}"
+    if used := sorted(ea.shaped_by & eb.models) or sorted(eb.shaped_by & ea.models):
+        return f"calibrated with {', '.join(used)}"
+    if used := sorted(ea.shaped_by & eb.shaped_by):
+        return f"calibrated with a shared model, {', '.join(used)}"
     return None
 
 

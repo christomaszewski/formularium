@@ -47,10 +47,12 @@ commit, never a squash or rebase: both tools pin commits by id.
     where.
   - When a check contradicts a record, fix the record.
 - **Dependence is substantive** (Agrarium decision D27): one model, a borrowed equation,
-  a shared implementation, shared calibration data, or a shared structure (assumptions of
-  form). A shared author is a flag to look into, not a dependency. Record what a source
+  a shared implementation, shared calibration data, calibration with another's model
+  (`calibrated_with`: a model that shaped the data it was fitted to), or a shared
+  structure (assumptions of form). A shared author is a flag to look into, not a dependency. Record what a source
   says it borrows, computes and was fitted to (`borrows`, `equations`, `calibrated_on`,
-  datasets.py), since only recorded dependencies count; an empty field means not recorded.
+  `calibrated_with`, datasets.py), since only recorded dependencies count; an empty field
+  means not recorded. An inferred link says so in `calibration_note`, with its status.
 - **Matching people leans to linking** (people.py), for the flags and for the author-only
   sensitivity arm (`hold_out(..., by_authors=True)`).
 - **One source for the engine's models.** Cooptera lists them itself, with their authors
