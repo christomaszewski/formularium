@@ -89,4 +89,6 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "leoni2026.oospores": ("leoni2026.changins",),
         "zachos1959.incubation": ("zachos1959",),
         "rafaila1968.incubation": ("rafaila1968",),
+        "lalancette1988.infection": ("lalancette1988a",),
+        "tranmanhsung1990.pom": ("tranmanhsung1990.bordeaux",),
     }
