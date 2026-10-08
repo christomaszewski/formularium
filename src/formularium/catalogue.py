@@ -2,9 +2,10 @@
 
 **Where the records come from** (rebuilt 2026-10-07, Agrarium decision D24):
 - **The engine's models** are Cooptera's own list (`xema engine models --json`) at
-  `cooptera@6d8d2d4`, under Cooptera's ids, with its sources, authors and how it checked
-  them (`checked` names the PDF it holds, or the trail). Agrarium keeps a snapshot of that
-  list (`world/engine_models.json`), and a test there fails if a record here drifts from it.
+  `cooptera@6d8d2d4`, relisted at `7b102e0`, under Cooptera's ids, with its sources,
+  authors and how it checked them (`checked` names the PDF it holds, or the trail).
+  Agrarium keeps a snapshot of that list (`world/engine_models.json`), and a test there
+  fails if a record here drifts from it.
 - **Their structure tags** are Agrarium's judgement (its `ENGINE_STRUCTURES`, moved here):
   assumed from each model's title and module, unless `structures_note` says more.
 - **Roles** (process, observation, reference; Agrarium decision D26) are Agrarium's
@@ -26,7 +27,7 @@ from __future__ import annotations
 from .records import Added, Formulation, Published
 
 FORMULATIONS: dict[str, Formulation] = {
-    # -- The engine's models, from Cooptera's list at cooptera@6d8d2d4 --------------------
+    # -- The engine's models, from Cooptera's list at cooptera@7b102e0 --------------------
     "kennelly2007.trigger": Formulation(
         "Primary infection trigger: 2.5 mm in a day at a mean of 11 °C",
         (
@@ -45,6 +46,11 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2007-kennelly-10-1094-phyto-97-4-0512.pdf",
         structures=("rain-temperature-trigger",),
+        calibration_note=(
+            "Not recorded. Kennelly et al. 2007 say the criterion 'was developed (7,8)' by"
+            " Gadoury et al. 1998 and 2000 'using the reported data', naming none, and evaluated"
+            " it in four Finger Lakes Chancellor vineyards, 2001-2003 (read 2026-10-08)"
+        ),
     ),
     "goidanich.incubation": Formulation(
         "Incubation of downy mildew by Goidanich's table",
@@ -69,6 +75,8 @@ FORMULATIONS: dict[str, Formulation] = {
                 ),
             ),
         ),
+        calibrated_on=("goidanich1957",),
+        calibration_note="the table is Goidanich et al. 1957's data (datasets.py)",
     ),
     "rule_3_10": Formulation(
         "The 3-10 rule: 10 °C, shoots of 10 cm, 10 mm of rain",
@@ -90,11 +98,19 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_complete=True,
         authors_from="read",
         checked="2008-rossi-10-1016-j-ecolmodel-2007-10-046.pdf",
-        borrows=("rossi2008pp.dormancy", "blaeser1979.survival", "goidanich.incubation"),
+        # Not goidanich.incubation since cooptera@7b102e0: eqs 8-9 cite it, not compute it.
+        borrows=("rossi2008pp.dormancy", "blaeser1979.survival"),
         structures=(
             "hydro-thermal-oospore-cohorts",
             "wet-degree-hours-infection",
             "incubation-window",
+        ),
+        # Its incubation (eqs 8-9): two regressions on temperature at two humidity levels.
+        calibrated_on=("goidanich1957",),
+        calibration_note=(
+            "Inferred, trail (2026-10-08): eqs 8-9 are Rossi et al. 2002's regressions, which"
+            " Rossi et al. 2005 describe as relating temperature to incubation at two humidity"
+            " levels after Goidanich et al. 1957. Rossi et al. 2002 is not held"
         ),
     ),
     "rossi2008pp.dormancy": Formulation(
@@ -106,6 +122,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2008-rossi-10-1111-j-1365-3059-2007-01738-x.pdf",
         structures=("hydro-thermal-oospore-cohorts",),
+        calibrated_on=("rossi2008pp.discs",),
     ),
     "blaeser1979.survival": Formulation(
         "Survival of sporangia, and 60 °C·h of wetness to infect",
@@ -342,6 +359,7 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="1999-madden-10-1094-phyto-1999-89-11-1088.pdf",
         structures=("sampling-detection-bound",),
         role="observation",
+        calibrated_on=("madden1995",),
     ),
     "cannon2001.sensitivity": Formulation(
         "A scout's imperfect detection (at 1.0 in the policy: no effect yet)",
@@ -380,6 +398,7 @@ FORMULATIONS: dict[str, Formulation] = {
             "2009-cortazar-atauri-10-1007-s00484-009-0217-4.pdf"
         ),
         structures=("degree-day-phenology",),
+        calibrated_on=("phenoclim",),
     ),
     "cortazar2009.brin": Formulation(
         "Budburst after chilling: Bidabe's cold actions, then forcing hours",
@@ -394,6 +413,7 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="2009-cortazar-atauri-10-1007-s00484-009-0217-4.pdf",
         borrows=("bidabe1965.cold_action", "richardson1974.forcing_hours"),
         structures=("chilling-dormancy", "degree-day-phenology"),
+        calibrated_on=("phenoclim",),
     ),
     "bidabe1965.cold_action": Formulation(
         "A day's cold action, Q10^(-Tx/10) + Q10^(-Tn/10)",
@@ -435,6 +455,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2017-ramos-10-1016-j-agrformet-2017-07-022.pdf",
         structures=("degree-day-phenology",),
+        calibrated_on=("ramos2017.penedes",),
     ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
@@ -451,6 +472,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2014-molitor-10-5344-ajev-2013-13066.pdf",
         structures=("degree-day-phenology",),
+        calibrated_on=("molitor2014.mt60",),
     ),
     "cooptera.shoots_derived": Formulation(
         "Shoots at 10 cm as 100 degree-days above 10 °C (derived here; the policy's until v0.8)",
@@ -484,6 +506,7 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="2014-ferguson-10-5344-ajev-2013-13098.pdf",
         borrows=("ferguson2011.hardiness",),
         structures=("cold-hardiness",),
+        calibrated_on=("ferguson2014.prosser",),
     ),
     "ferguson2011.hardiness": Formulation(
         "The hardiness model's equations 1-6",
@@ -516,6 +539,11 @@ FORMULATIONS: dict[str, Formulation] = {
                 "VitiMeteo's project members, as a search summary lists them",
             ),
         ),
+        calibration_note=(
+            "Not recorded. Cooptera's origins.py places the rule's fit at Changins; Siegfried"
+            " et al. 2004 is not held, and Leoni et al. 2026 do not say where the 140 °C-day"
+            " threshold was fitted (read 2026-10-08)"
+        ),
     ),
     "leoni2026.oospores": Formulation(
         "Oospore maturity by a germination model (GLM)",
@@ -533,6 +561,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2026-leoni-10-20870-oeno-one-2026-60-3-9963.pdf",
         structures=("oospore-glm",),
+        calibrated_on=("leoni2026.changins",),
     ),
     "broome1995.botrytis": Formulation(
         "Botrytis infection index per wet period",
@@ -675,7 +704,15 @@ FORMULATIONS: dict[str, Formulation] = {
             "Caffi, Tito",
         ),
         authors_complete=True,
-        authors_from="snippet",
+        authors_from="read",
+        doi="10.3389/fpls.2025.1524959",
+        # Section 2.5: leaves were observed until the end of the primary inoculum season,
+        # "estimated using the epidemiological weather-driven model previously proposed by
+        # Rossi et al. (2008b)"; section 3.4's dose regression fits those counts.
+        calibrated_with=("rossi2008.primary",),
+        calibration_note=(
+            "read 2026-10-08 in the paper (Frontiers, open access), sections 2.5 and 3.4"
+        ),
         structures=("oospore-dose-response",),
     ),
     "kernel.mixture": Formulation(

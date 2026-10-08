@@ -8,7 +8,7 @@ from formularium import stemma
 from formularium.catalogue import FORMULATIONS
 from formularium.records import Added, Formulation
 
-# Cooptera's models as its list gives them (cooptera@6d8d2d4), enough for these tests.
+# Cooptera's models as its list gives them (cooptera@7b102e0), enough for these tests.
 ENGINE = (
     "kennelly2007.trigger",
     "goidanich.incubation",
@@ -57,13 +57,37 @@ def test_a_formulation_and_the_pieces_of_one_model_are_the_same() -> None:
 
 
 def test_a_shared_author_alone_is_a_flag_not_a_dependency() -> None:
-    """D27: Fedele 2025 is Rossi's and Caffi's too, but shares no equation, code or data."""
-    assert stemma.kin("fedele2025.dose", ENGINE) == []
+    """D27: Rossi and Caffi wrote Fedele 2025 and Caffi 2013, which share nothing else."""
+    assert "caffi2013.sporulation" not in stemma.kin("fedele2025.dose", ENGINE)
     flagged = {f.other for f in stemma.flags("fedele2025.dose", ENGINE)}
-    assert {"rossi2008.primary", "caffi2013.sporulation"} <= flagged
+    assert "caffi2013.sporulation" in flagged
     # Kennelly 2007 and Magarey's fact sheet: Magarey, P. A. in both, and nothing else.
     assert stemma.link("kennelly2007.trigger", "magarey2010.rules") is None
     assert "Magarey" in stemma.possible_dependence("kennelly2007.trigger", "magarey2010.rules")
+
+
+def test_a_model_used_in_calibration_is_a_dependency() -> None:
+    """Fedele 2025 fitted its dose curve to counts whose window Rossi 2008's model set."""
+    found = {f.other: f.reason for f in stemma.links("fedele2025.dose", ENGINE)}
+    assert found == {"rossi2008.primary": "calibrated with rossi2008.primary"}
+    held = stemma.hold_out(["fedele2025.dose"], ENGINE)
+    assert "rossi2008.primary" in held
+    # Two formulations fitted with the same model's help depend on each other too.
+    cat = _with(other=_candidate(calibrated_with=("rossi2008.primary",)))
+    assert stemma.link("other", "fedele2025.dose", cat) == (
+        "calibrated with a shared model, rossi2008.primary"
+    )
+
+
+def test_rossi_s_incubation_and_goidanich_share_calibration_data_inferred() -> None:
+    """Rossi 2008's eqs 8-9 regress incubation on temperature at two humidity levels, after
+    Goidanich et al. 1957 (inferred, trail). The dependency holds without the borrow."""
+    # Since cooptera@7b102e0 Rossi 2008 no longer borrows the table: the data link alone holds.
+    assert "goidanich.incubation" not in FORMULATIONS["rossi2008.primary"].borrows
+    assert stemma.link("rossi2008.incubation", "goidanich.incubation") == (
+        "shared calibration data, goidanich1957"
+    )
+    assert "inferred" in FORMULATIONS["rossi2008.primary"].calibration_note.lower()
 
 
 def test_added_authors_count_toward_flags() -> None:
@@ -95,9 +119,9 @@ def test_a_borrowed_equation_is_kinship_without_a_shared_author() -> None:
 
 
 def test_a_piece_counts_its_models_borrowings() -> None:
-    # Rossi 2008's model borrows Goidanich's incubation; its incubation piece does too.
-    found = {f.other: f.reason for f in stemma.links("rossi2008.incubation", ENGINE)}
-    assert found["goidanich.incubation"] == "a borrowed equation"
+    # Rossi 2008's model computes Blaeser & Weltzien's survival equation (cooptera@7b102e0,
+    # primary_infection.py); so does its incubation piece, as a piece of that model.
+    assert stemma.link("rossi2008.incubation", "blaeser1979.survival") == "a borrowed equation"
 
 
 def test_the_ohio_lineage_depends_only_where_it_computes_the_engines_bound() -> None:
@@ -219,3 +243,16 @@ def test_authorship_alone_is_held_out_only_in_the_sensitivity_arm() -> None:
 def test_an_unrelated_truth_holds_out_nothing() -> None:
     cat = _with(elsewhere=_candidate(authors=("Somebody, A.", "Else, B.")))
     assert stemma.hold_out(["elsewhere", "kernel.mixture"], ENGINE, cat) == {}
+
+
+def test_shared_calibration_data_links_an_observation_piece() -> None:
+    """D29: a truth matched to Madden, Hughes & Ellis 1995's Ohio data holds out the engine's
+    sampling bound, which was fitted to the same data. Authors alone still do not."""
+    cat = _with(spread=_candidate(calibrated_on=("madden1995",)))
+    assert stemma.link("spread", "madden1999.detection_bound", cat) == (
+        "shared calibration data, madden1995"
+    )
+    assert "madden1999.detection_bound" in stemma.hold_out(["spread"], ENGINE, cat)
+    cat = _with(madden=_candidate(authors=("Madden, L. V.",), year=1995))
+    assert stemma.link("madden", "madden1999.detection_bound", cat) is None
+    assert "madden1999.detection_bound" not in stemma.hold_out(["madden"], ENGINE, cat)

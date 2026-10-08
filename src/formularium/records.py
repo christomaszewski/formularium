@@ -11,6 +11,9 @@ publication, never a tool's choices:
 - **borrowed equations:** formulations whose equations this one computes;
 - **calibration data:** the datasets its parameters were fitted to (`calibrated_on`, ids
   of datasets.DATASETS), only where a source says so; empty means not recorded;
+- **models used in its calibration** (`calibrated_with`): formulations whose output shaped
+  the data it was fitted to, such as a model that decided when observations stopped;
+- **how the calibration links were found** (`calibration_note`), with their status;
 - **its structure,** one tag or more for its form (`STRUCTURES`), whoever wrote it. The
   tags are Agrarium's judgement, assumed from each model's title and module unless
   `structures_note` says more;
@@ -135,6 +138,8 @@ class Formulation:
     part_of: tuple[str, ...] = ()  # the published models this one is, or is a piece of
     borrows: tuple[str, ...] = ()  # formulations whose equations this one computes
     calibrated_on: tuple[str, ...] = ()  # datasets.DATASETS ids; empty: not recorded
+    calibrated_with: tuple[str, ...] = ()  # formulations used in fitting it
+    calibration_note: str = ""  # where the calibration links were read, and their status
     structures: tuple[str, ...] = ()  # keys of STRUCTURES
     structures_note: str = ""  # more on how the tags were judged
     role: str = "process"  # a key of ROLES; the strictest is the default
