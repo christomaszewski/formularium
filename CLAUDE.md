@@ -59,6 +59,9 @@ commit, never a squash or rebase: both tools pin commits by id.
   (`xema engine models --json`). Agrarium keeps that list as a snapshot naming its commit,
   and its tests fail when a record here differs from it. So when Cooptera adds or changes
   a model, take its record here from the new list, and judge its structure tags.
+- **Ingesting a paper:** follow `literature/INGESTING.md`. Every paper read gets a note in
+  `literature/`, whether or not it changes the catalogue. The reading itself can go to a
+  Haiku agent; verifying and judging stay with the main session.
 - **Adding a formulation:**
   1. Write its record in `catalogue.py`, with the source, the authors and how they were
      checked. Judge its structure tags and its role (records.ROLES, Agrarium decision
