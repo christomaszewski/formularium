@@ -243,3 +243,16 @@ def test_authorship_alone_is_held_out_only_in_the_sensitivity_arm() -> None:
 def test_an_unrelated_truth_holds_out_nothing() -> None:
     cat = _with(elsewhere=_candidate(authors=("Somebody, A.", "Else, B.")))
     assert stemma.hold_out(["elsewhere", "kernel.mixture"], ENGINE, cat) == {}
+
+
+def test_shared_calibration_data_links_an_observation_piece() -> None:
+    """D29: a truth matched to Madden, Hughes & Ellis 1995's Ohio data holds out the engine's
+    sampling bound, which was fitted to the same data. Authors alone still do not."""
+    cat = _with(spread=_candidate(calibrated_on=("madden1995",)))
+    assert stemma.link("spread", "madden1999.detection_bound", cat) == (
+        "shared calibration data, madden1995"
+    )
+    assert "madden1999.detection_bound" in stemma.hold_out(["spread"], ENGINE, cat)
+    cat = _with(madden=_candidate(authors=("Madden, L. V.",), year=1995))
+    assert stemma.link("madden", "madden1999.detection_bound", cat) is None
+    assert "madden1999.detection_bound" not in stemma.hold_out(["madden"], ENGINE, cat)

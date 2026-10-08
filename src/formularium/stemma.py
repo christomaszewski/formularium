@@ -30,16 +30,20 @@ component, behaved alike; they drew no author rule, and asked that conclusions b
 for their sensitivity to which models are included. So `hold_out(..., by_authors=True)`
 adds author-only links, as a sensitivity experiment reported beside the main one.
 
-**Lineage counts only between process models** (D26). An observation or reference piece
-depends only on itself, and borrowing a piece that is not a process (the sun's position,
-the Magnus formula) creates no dependence.
+**Lineage counts only between process models** (D26), with one exception (D29): a process
+model and an observation piece fitted to the same data depend on each other, since the
+observation would then read the truth's evidence too well (the engine's sampling bound and
+an Ohio-matched truth share Madden, Hughes & Ellis 1995). A reference piece depends only on
+itself, and borrowing a piece that is not a process (the sun's position, the Magnus
+formula) creates no dependence.
 
 **The hold-out** (D22, D26, D27): when a run's truth uses some formulations, the engine
 runs without
 - every **process** model that depends on a truth formulation, or shares a structure with
   one;
 - every **observation** piece the truth's own observation uses, or shares a structure
-  with: a matched observation model is the inverse crime's second half;
+  with, or shares calibration data with a truth formulation (D29): a matched observation
+  model is the inverse crime's second half;
 - never a **reference** piece.
 
 The tools ask this module, so both get the same answer from the same records.
@@ -121,8 +125,15 @@ def link(a: str, b: str, catalogue: Mapping[str, Formulation] = FORMULATIONS) ->
     ea, eb = _entry(a, catalogue), _entry(b, catalogue)
     if a == b or ea.models & eb.models:
         return SAME
-    if catalogue[a].role != "process" or catalogue[b].role != "process":
-        return None  # lineage counts only between process models (D26)
+    roles = {catalogue[a].role, catalogue[b].role}
+    if "reference" in roles:
+        return None  # a reference piece depends only on itself (D26)
+    if roles != {"process"}:
+        # A process model and an observation piece fitted to the same data depend on each
+        # other (D29): the observation would read the truth's evidence too well.
+        if shared := sorted(ea.data & eb.data):
+            return f"shared calibration data, {', '.join(shared)}"
+        return None  # other lineage counts only between process models (D26)
     if (
         b in ea.borrows
         or a in eb.borrows
