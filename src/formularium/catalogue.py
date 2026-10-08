@@ -696,8 +696,9 @@ FORMULATIONS: dict[str, Formulation] = {
             "Shortest durations, on the 4th leaf, in spring and summer; in autumn they are"
             " longer at equal temperature (Table XII), and Corinth adds 1-2 days. Conidiophores"
             " follow the oil spots by at least 2 days. A degree-day sum was tried and rejected.",
-            "Magarey et al. 1991's incubation cubic was fitted partly to these data; whether"
-            " Magarey's 2010 fact sheet (magarey2010.rules) descends from it is not checked.",
+            "Magarey et al. 1991's incubation cubic was fitted partly to these data. Cooptera's"
+            " magarey2010.rules computes no incubation curve, only the fact sheet's 5-day lower"
+            " bound (Cooptera, 2026-10-08); where the sheet's 5-17 days came from is unknown.",
         ),
     ),
     "rafaila1968.incubation": Formulation(
@@ -748,8 +749,9 @@ FORMULATIONS: dict[str, Formulation] = {
             "None at 30 °C. Below 10 °C no spores appeared, but infections stayed latent:"
             " leaves moved to 22 °C sporulated within 2-4 days. Older leaves incubate 1-4 days"
             " longer (Table 3).",
-            "Magarey et al. 1991's incubation cubic was fitted partly to these data; whether"
-            " Magarey's 2010 fact sheet (magarey2010.rules) descends from it is not checked.",
+            "Magarey et al. 1991's incubation cubic was fitted partly to these data. Cooptera's"
+            " magarey2010.rules computes no incubation curve, only the fact sheet's 5-day lower"
+            " bound (Cooptera, 2026-10-08); where the sheet's 5-17 days came from is unknown.",
         ),
     ),
     # -- Agrarium's truth: formulations the engine does not list ------------------------------
