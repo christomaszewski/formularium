@@ -1,6 +1,6 @@
 ---
 id: maddalena2020
-Maddalena, Giuliana, Delmotte, François, Bianco, Piero Attilio, De Lorenzis, Gabriella & Toffolatti, Silvia Laura. 2020 (the accepted manuscript prints no year or journal; accepted 15 December 2019; Annals of Applied Biology by its DOI). Genetic structure of Italian population of the grapevine downy mildew agent, Plasmopara viticola
+citation: Maddalena, Giuliana, Delmotte, François, Bianco, Piero Attilio, De Lorenzis, Gabriella & Toffolatti, Silvia Laura. 2020 (the accepted manuscript prints no year or journal; accepted 15 December 2019; Annals of Applied Biology by its DOI). Genetic structure of Italian population of the grapevine downy mildew agent, Plasmopara viticola
 doi: 10.1111/aab.12567
 read: 2026-10-08, the first pages and abstract, by a triage agent (claude-sonnet-5-5); header checked by the main session
 status: read
