@@ -663,6 +663,97 @@ FORMULATIONS: dict[str, Formulation] = {
         structures=("log-wind-profile",),
         role="reference",
     ),
+    # -- Candidates: published, independent of the incubation lineage, run by neither tool ----
+    "zachos1959.incubation": Formulation(
+        "Shortest incubation, infection to oil spots, by mean temperature: Vello and Patras",
+        (
+            "Zachos 1959, Recherches sur la biologie et l'épidémiologie du mildiou de la vigne"
+            " en Grèce. Bases de prévisions et d'avertissements, Ann. Inst. Phytopathol. Benaki"
+            " N.S. 2(4):193-355, chapter II, Figs 3-4 and Table XIII"
+        ),
+        year=1959,
+        authors=("Zachos, D. G.",),
+        authors_complete=True,
+        authors_from="read",
+        calibrated_on=("zachos1959",),
+        structures=("daily-incubation-table",),
+        structures_note="days by mean temperature, used as daily fractions: Goidanich's form",
+        parameters=(
+            Published("vello.days_at_14c", 8.0, "d", "ch. II text and Fig. 3 (Vello)", "read"),
+            Published("vello.days_16c_to_20c", 3.0, "d", "ch. II text and Fig. 3 (Vello)", "read"),
+            Published(
+                "vello.days_above_20c_to_25c", 2.5, "d", "ch. II text and Fig. 3 (Vello)", "read"
+            ),
+            Published("vello.days_at_28c", 6.0, "d", "ch. II text and Fig. 3 (Vello)", "read"),
+            Published("patras.days_at_14c", 9.0, "d", "ch. II text and Fig. 4 (Patras)", "read"),
+            Published("patras.days_at_17c", 4.0, "d", "ch. II text and Fig. 4 (Patras)", "read"),
+            Published(
+                "patras.days_21c_to_24c", 2.5, "d", "ch. II text and Fig. 4 (Patras)", "read"
+            ),
+            Published("patras.days_at_27c", 5.0, "d", "ch. II text and Fig. 4 (Patras)", "read"),
+        ),
+        flags=(
+            "Shortest durations, on the 4th leaf, in spring and summer; in autumn they are"
+            " longer at equal temperature (Table XII), and Corinth adds 1-2 days. Conidiophores"
+            " follow the oil spots by at least 2 days. A degree-day sum was tried and rejected.",
+            "Magarey et al. 1991's incubation cubic was fitted partly to these data. Cooptera's"
+            " magarey2010.rules computes no incubation curve, only the fact sheet's 5-day lower"
+            " bound (Cooptera, 2026-10-08); where the sheet's 5-17 days came from is unknown.",
+        ),
+    ),
+    "rafaila1968.incubation": Formulation(
+        "Incubation, infection to fructification, by temperature, detached leaves at 100% RH",
+        (
+            "Rafaila, Sevcenco & David 1968, Contributions to the biology of Plasmopara"
+            " viticola, Phytopathol. Z. 63:328-336, Table 4"
+        ),
+        year=1968,
+        authors=("Rafaila, C.", "Sevcenco, Victoria", "David, Zita"),
+        authors_complete=True,
+        authors_from="read",
+        doi="10.1111/j.1439-0434.1968.tb02397.x",
+        calibrated_on=("rafaila1968",),
+        structures=("daily-incubation-table",),
+        structures_note="days by temperature, used as daily fractions: Goidanich's form",
+        parameters=(
+            Published("days_at_10c", 18.0, "d", "Table 4 and text", "read"),
+            Published("days_at_11c", 14.0, "d", "Table 4 and text", "read"),
+            Published("days_at_12c", 12.0, "d", "Table 4 and text", "read"),
+            Published(
+                "days_at_14c",
+                8.0,
+                "d",
+                "Table 4, columns matched in order (the text omits it)",
+                "read",
+            ),
+            Published(
+                "days_at_16c",
+                7.0,
+                "d",
+                "Table 4, columns matched in order (the text omits it)",
+                "read",
+            ),
+            Published(
+                "days_at_17c",
+                5.0,
+                "d",
+                "Table 4, columns matched in order (the text omits it)",
+                "read",
+            ),
+            Published("days_19c_to_26c", 4.0, "d", "Table 4 and text", "read"),
+            Published("days_at_27c", 5.0, "d", "Table 4 and text", "read"),
+            Published("days_at_28c", 6.0, "d", "Table 4 and text", "read"),
+            Published("days_at_29c", 7.0, "d", "Table 4 and text", "read"),
+        ),
+        flags=(
+            "None at 30 °C. Below 10 °C no spores appeared, but infections stayed latent:"
+            " leaves moved to 22 °C sporulated within 2-4 days. Older leaves incubate 1-4 days"
+            " longer (Table 3).",
+            "Magarey et al. 1991's incubation cubic was fitted partly to these data. Cooptera's"
+            " magarey2010.rules computes no incubation curve, only the fact sheet's 5-day lower"
+            " bound (Cooptera, 2026-10-08); where the sheet's 5-17 days came from is unknown.",
+        ),
+    ),
     # -- Agrarium's truth: formulations the engine does not list ------------------------------
     "rossi2008.oospores": Formulation(
         "oospore dormancy and germination",
