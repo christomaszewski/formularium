@@ -100,6 +100,7 @@ STRUCTURES = {
     "solar-position": "the sun's position from date, time and place",
     "log-wind-profile": "wind speed at another height from a logarithmic profile",
     "chilling-dormancy": "dormancy broken by accumulated chilling",
+    "cold-day-oospore-start": "oospore maturation started by a count of cold days",
 }
 
 

@@ -764,6 +764,38 @@ FORMULATIONS: dict[str, Formulation] = {
             " bound (Cooptera, 2026-10-08); where the sheet's 5-17 days came from is unknown.",
         ),
     ),
+    "rouzet2003.cold_days": Formulation(
+        "Start of oospore maturation after 60 cold days (7 °C <= Tmax <= 15 °C)",
+        (
+            "Rouzet & Jacquin 2003, Development of overwintering oospores of Plasmopara"
+            " viticola and severity of primary foci in relation to climate, EPPO Bulletin"
+            " 33(3):437-442, as Franche 2012 states the rule (§2-1-1, Tableau 1); the paper"
+            " is not held"
+        ),
+        year=2003,
+        authors=("Rouzet, J.", "Jacquin, D."),
+        authors_complete=True,
+        authors_from="trail",
+        doi="10.1111/j.1365-2338.2003.00670.x",
+        structures=("cold-day-oospore-start",),
+        structures_note="a count of days in a band of daily maximum; replaces Rossi's 1 January",
+        parameters=(
+            Published("cold_days", 60.0, "d", "Franche 2012, §2-1-1", "trail"),
+            Published("tmax_low_c", 7.0, "°C", "Franche 2012, §2-1-1", "trail"),
+            Published("tmax_high_c", 15.0, "°C", "Franche 2012, §2-1-1", "trail"),
+        ),
+        flags=(
+            "Only Franche's statement is held: when the count starts, and whether the days"
+            " must be consecutive, are not given. Franche's dates for Aquitaine (21 January"
+            " 2002, 24 January 2003, 31 December 2004) are his model's, not observations."
+            " Franche cites the paper as IOBC/WPRS Bull. 33; Crossref gives EPPO Bulletin.",
+            "The paper's abstract (Crossref, read 2026-10-08) states no such rule: maturation"
+            " 'is affected by low autumn and warm spring temperatures', long dry periods can"
+            " block it, and 'there is little prospect that oospore maturation can be modelled"
+            " in the near future'. Thirty years of the French Plant Protection Service's"
+            " observations lie behind it. Read the paper before a tool runs this.",
+        ),
+    ),
     # -- Agrarium's truth: formulations the engine does not list ------------------------------
     "rossi2008.oospores": Formulation(
         "oospore dormancy and germination",
