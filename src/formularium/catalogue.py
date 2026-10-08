@@ -665,16 +665,16 @@ FORMULATIONS: dict[str, Formulation] = {
     ),
     # -- Candidates: published, independent of the incubation lineage, run by neither tool ----
     "zachos1959.incubation": Formulation(
-        "Shortest incubation, infection to oil spots, by mean temperature: Vello and Patras",
+        "Incubation by Zachos's shortest durations to the oil spot",
         (
-            "Zachos 1959, Recherches sur la biologie et l'épidémiologie du mildiou de la vigne"
-            " en Grèce. Bases de prévisions et d'avertissements, Ann. Inst. Phytopathol. Benaki"
-            " N.S. 2(4):193-355, chapter II, Figs 3-4 and Table XIII"
+            "Zachos 1959, Ann. Inst. Phytopathol. Benaki N.S. 2(4): 193-355, chapter II, Figs"
+            " 3-4 (Vello and Patras); the policy's second incubation since decision 21"
         ),
         year=1959,
         authors=("Zachos, D. G.",),
         authors_complete=True,
         authors_from="read",
+        checked="1959-zachos-url-zachos-1959-benaki.pdf",
         calibrated_on=("zachos1959",),
         structures=("daily-incubation-table",),
         structures_note="days by mean temperature, used as daily fractions: Goidanich's form",
@@ -696,6 +696,10 @@ FORMULATIONS: dict[str, Formulation] = {
             "Shortest durations, on the 4th leaf, in spring and summer; in autumn they are"
             " longer at equal temperature (Table XII), and Corinth adds 1-2 days. Conidiophores"
             " follow the oil spots by at least 2 days. A degree-day sum was tried and rejected.",
+            "In Cooptera's policy since its decision 21 (cooptera@df14b71, 2026-10-08): points"
+            " read from Figs 3-4, the shorter curve at each temperature, joined by straight"
+            " lines, a day adding 1/days from the day after the rain. Its Vello point at 28 °C"
+            " is 6.1 d from the figure; the summary (p. 347) says 6.",
             "Magarey et al. 1991's incubation cubic was fitted partly to these data. Cooptera's"
             " magarey2010.rules computes no incubation curve, only the fact sheet's 5-day lower"
             " bound (Cooptera, 2026-10-08); where the sheet's 5-17 days came from is unknown.",
