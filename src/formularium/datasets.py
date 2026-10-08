@@ -188,7 +188,8 @@ DATASETS: dict[str, Dataset] = {
         "Maddalena et al. 2022, BIO Web Conf. 50:04002 (read 2026-10-08, lines 166-177): 'the"
         " length of incubation period was calculated (Goidanich et al., 1957), to ... ascertain"
         " the most probable date of disease infection'. A formulation fitted or scored on those"
-        " dates is calibrated with goidanich.incubation",
+        " dates is calibrated with goidanich.incubation (the paper names the method, not each"
+        " date's source; infections are not observed in the field)",
         "read",
     ),
 }
