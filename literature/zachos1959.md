@@ -9,6 +9,7 @@ regions: [Greece]
 processes: [incubation, conidia germination, oospores, forecasting]
 records: [zachos1959.incubation]
 datasets: [zachos1959]
+files: [hellenic-plant-protection-journal_1959_2_4.pdf]
 ---
 
 # Zachos 1959: downy mildew biology and forecasting in Greece

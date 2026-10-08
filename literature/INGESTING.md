@@ -19,8 +19,9 @@ first fifteen papers ingested, for sessions that arrive without that history.
 
 ## Where papers come from
 
-- **Chris drops them:** `drop/inbound_papers/<date>/` in Agrarium's checkout, never
-  committed.
+- **Chris drops them:** `drop/inbound_papers/<date>/` in Agrarium's main checkout (a
+  worktree has no `drop/`), never committed. `python scripts/coverage.py DIR` lists which
+  of them have notes, by the names they were dropped under (`files`) or their DOIs.
 - **Cooptera keeps its own:** a model the engine runs needs its paper in Cooptera's
   `drop/papers/`, added with Cooptera's `scripts/papers/fetch_oa.py --add`, so that its
   transcription is checked there. Tell the Cooptera session; don't file papers in its repo.
@@ -33,7 +34,7 @@ first fifteen papers ingested, for sessions that arrive without that history.
 
 | Step | What | Who |
 |---|---|---|
-| 1. Extract | `python scripts/extract_paper.py PAPER.pdf --out DIR`: text, pages, DOIs, a map of headings, tables and figures. Under about 500 characters a page means a scan: OCR first | a script |
+| 1. Extract | `python scripts/extract_paper.py PAPER.pdf --out DIR`: text, pages, DOIs, a map of headings, tables and figures. Under about 500 characters a page means a scan: rerun with `--ocr fra+eng` (the paper's languages), about 5 s a page | a script |
 | 2. Identify | Title, authors as printed, year, journal, volume, pages, DOI. `python scripts/crossref_lookup.py "..."` corrects volumes and finds DOIs, but the author list is `read` only from the paper | Haiku, checked |
 | 3. Map | What the paper holds, section by section, with line ranges: data, formulations, tables, which results are its own and which are cited | Haiku |
 | 4. Extract the facts | For the processes of interest: every number with its unit, verbatim, with its line number and whether it is the paper's own or cited | Haiku |
@@ -45,9 +46,15 @@ first fifteen papers ingested, for sessions that arrive without that history.
 ## What to delegate, and to which model
 
 Steps 2 to 4 are reading and copying, and a small model does them well and cheaply. Use
-the Agent tool with `model: "haiku"` (the current Haiku model; on 2026-10-08, Haiku 4.5).
-The main session keeps steps 5 to 8, because they need judgement and the project's
-history.
+the Agent tool with `model: "haiku"`. The main session keeps steps 5 to 8, because they
+need judgement and the project's history.
+
+- **Which Haiku the alias runs:** Haiku 5.5 came out on 2026-10-07. On 2026-10-08 Claude
+  Code 2.1.292 still ran Haiku 4.5 (`claude-haiku-4-5-20251001`) for `model: "haiku"`,
+  and did not list Haiku 5.5, though the API served `claude-haiku-5-5`. Until Claude Code
+  is updated, start the session with `ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-5-5` to
+  point the alias at it. Before a batch, ask one Haiku agent to state its model ID, and
+  record which model read each paper in the note's `read` field.
 
 - **For scale:** on 2026-10-08, four reading agents on the default model read seven papers
   (a 278-page thesis among them) for about 630,000 tokens. Their reports were good, and
@@ -81,6 +88,26 @@ Report, citing line numbers and quoting numbers exactly as printed:
 5. Anything garbled by extraction: say so; do not guess.
 Under <N> words.
 ```
+
+## Re-ingesting what was read before
+
+The notes began on 2026-10-08. Papers read before then were judged under older rules: until
+decision D27 (2026-10-07) the kinship rule linked formulations by shared authors, so some
+were called kin, or ruled out, for their authors alone. When the rules change, re-ingest:
+
+- **Every paper in the drop gets a note,** including those that turned out off-topic (a
+  short note saying so keeps the next session from reading it again).
+- **Re-judge each recorded dependence by the current rule.** A judgement that rests only on
+  shared authors becomes a flag (D27); one that rests on a shared equation, code, data or
+  form stands, with that reason written down.
+- **Promote, never assume:** an author list or value marked `snippet` or `memory` becomes
+  `read` only when it is read in the paper, and a value that differs is corrected.
+- **Find what the old judgements touched:** catalogue records (`borrows`, `calibrated_on`,
+  `calibrated_with`, `structures`, `flags`), and in the tools, the documents that cite
+  lineage: in Agrarium, its survey of models outside the engine's lineage (`reports/`,
+  `research_notes/`), TRUTH-METHOD part 1, STATUS's next steps and SOURCES.
+- **Decisions stay Chris's.** Where the current rule would reopen a decided question, say so
+  and recommend; don't change the decision.
 
 ## Judging dependence
 

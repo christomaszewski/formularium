@@ -10,6 +10,7 @@ regions: [Romania]
 processes: [incubation, sporulation, morphology]
 records: [rafaila1968.incubation]
 datasets: [rafaila1968]
+files: []
 ---
 
 # Rafaila, Sevcenco & David 1968: incubation and morphology in Romania

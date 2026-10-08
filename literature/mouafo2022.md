@@ -10,6 +10,7 @@ regions: [Quebec]
 processes: [competition between strains, sporulation, latency]
 records: []
 datasets: []
+files: [PDIS-11-21-2465-RE.pdf]
 ---
 
 # Mouafo-Tchinda et al. 2022: two clades competing

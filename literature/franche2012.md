@@ -9,6 +9,7 @@ regions: [France]
 processes: [oospores, primary infection, splash, interception, sporulation, infection, incubation, host]
 records: []
 datasets: []
+files: [BUS_M_2012_FRANCHE_JEAN-CHARLES.pdf]
 ---
 
 # Franche 2012: the downy mildew cycle in ITK's decision tool

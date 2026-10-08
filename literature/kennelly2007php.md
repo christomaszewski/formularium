@@ -10,6 +10,7 @@ regions: [New York, South Australia]
 processes: [primary infection, oospores, sporulation, survival, fruit susceptibility]
 records: [kennelly2007.trigger, kennelly2005.bunch_window]
 datasets: []
+files: [PHP-2007-0726-03-RV.pdf]
 ---
 
 # Kennelly et al. 2007 (PHP): gaps in downy mildew knowledge

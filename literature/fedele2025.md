@@ -10,6 +10,7 @@ regions: [Italy]
 processes: [oospores, oospore dose, primary infection]
 records: [fedele2025.dose]
 datasets: []
+files: [fpls-16-1524959.pdf]
 ---
 
 # Fedele et al. 2025: oospore dose and primary infections

@@ -6,7 +6,8 @@ that prompted them, so they are written for a reader working on another disease,
 region.
 
 The repository is public. A note holds facts, numbers and short quotes, never the paper.
-It says where a copy is held only as "held by Chris" or "open access", never a path.
+It says where a copy is held only as "held by Chris" or "open access", never a path;
+`files` records only the names a copy was dropped under.
 
 ## A note's header
 
@@ -23,6 +24,7 @@ are written `[a, b]`. `tests/test_literature.py` checks it.
 | `diseases`, `crops`, `regions`, `processes` | lists, for finding notes later |
 | `records` | catalogue ids the paper supports (`catalogue.py`); each must exist |
 | `datasets` | dataset ids it describes (`datasets.py`); each must exist |
+| `files` | the names the paper was dropped under, so `scripts/coverage.py` can tell which papers in a drop have notes; never a path |
 
 ## A note's body
 

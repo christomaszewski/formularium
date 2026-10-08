@@ -10,6 +10,7 @@ regions: [Germany, France, Italy, Greece, Switzerland]
 processes: [epidemic structure, dispersal, oospores, primary infection]
 records: []
 datasets: []
+files: [s10658-012-0114-2.pdf]
 ---
 
 # Rossi, Caffi & Gobbin 2013: what genotyping changed in downy mildew models

@@ -10,6 +10,7 @@ regions: [Italy]
 processes: [sporulation, survival, dispersal, secondary infection]
 records: [brischetto2021.secondary]
 datasets: [blaeser1979, caffi2016]
+files: []
 ---
 
 # Brischetto et al. 2021: secondary infections by sporangia

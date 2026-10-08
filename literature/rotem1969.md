@@ -10,6 +10,7 @@ regions: [Israel]
 processes: [leaf wetness, irrigation, host growth]
 records: []
 datasets: []
+files: [annurev.py.07.090169.001411.pdf]
 ---
 
 # Rotem & Palti 1969: irrigation and plant diseases

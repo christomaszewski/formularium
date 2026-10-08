@@ -10,6 +10,7 @@ regions: [Italy]
 processes: [oospores, primary infection, incubation]
 records: [rossi2008.primary, rossi2008.incubation, rossi2008.oospores]
 datasets: [goidanich1957]
+files: []
 ---
 
 # Rossi et al. 2008: the primary-infection model

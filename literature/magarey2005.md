@@ -10,6 +10,7 @@ regions: [general]
 processes: [infection]
 records: [magarey2005.generic]
 datasets: [lalancette1988a, nair1993]
+files: []
 ---
 
 # Magarey, Sutton & Thayer 2005: a generic infection model
