@@ -9,7 +9,7 @@ crops: [grapevine]
 regions: [Germany, France, Italy, Greece, Switzerland]
 processes: [epidemic structure, dispersal, oospores, primary infection]
 records: []
-datasets: []
+datasets: [gobbin2006.europe]
 files: [s10658-012-0114-2.pdf]
 ---
 
@@ -51,3 +51,8 @@ Pathol.* 7:519-531).
   season, a few clones carrying the secondary spread, spread mostly under 20 m a cycle,
   two-peaked Greek seasons. TRUTH-METHOD part 2 already names Gobbin 2005; these are its
   numbers.
+- **Not comparable with the truth as built (2026-10-08, main session):** Agrarium's truth
+  keeps each vine's first focus, not each lesion's origin, so these checks need lesion
+  counts by origin and an operator that samples oil spots as Gobbin did (from the first
+  lesions to the mosaic stage, 2-22 samplings a vineyard-year). The numbers above were
+  checked in the text that day.
