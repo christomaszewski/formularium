@@ -87,6 +87,23 @@ DATASETS: dict[str, Dataset] = {
         " the copy Cooptera holds)",
         "read",
     ),
+    "chen2019.ifv": Dataset(
+        "IFV's untreated rows (témoins non traités) in Bordeaux vineyards, 2010-2018: weekly"
+        " incidence on vines and bunches, and end-of-season incidence and severity on leaves"
+        " and bunches, in a central untreated row (mean 53.1 vines) between two untreated"
+        " guard rows inside treated vineyards. Onset is the first week with over 1 % of vines"
+        " symptomatic. 156 plot-years are public (github.com/MathildeChen/"
+        "PhD-Supplementary-Data, Supp_Data_Chap_7.xlsx, no licence stated): onset week,"
+        " monthly March-June weather from SAFRAN, and each end-of-season measure as above or"
+        " below its median",
+        "Chen 2019, PhD thesis (read 2026-10-08): ch. 4 fitted survival models (Turnbull,"
+        " Cox, log-normal, log-logistic) to 266 site-years of 2010-2017; ch. 7 fitted"
+        " classifiers to the 156, whose 97 censored onsets were imputed with a survival model"
+        " that has March-June rainfall as covariate. Agrarium plans to history-match its"
+        " truth against the patterns (its TRUTH-METHOD part 2), which would make the truth"
+        " calibrated on these data",
+        "read",
+    ),
     "phenoclim": Dataset(
         "INRA's PHENOCLIM database (Chuine & Seguin 2008): grapevine budburst dates, 1970-2002,"
         " ten cultivars in five French regions, with their stations' temperatures",
