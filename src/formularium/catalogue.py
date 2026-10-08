@@ -46,6 +46,11 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2007-kennelly-10-1094-phyto-97-4-0512.pdf",
         structures=("rain-temperature-trigger",),
+        calibration_note=(
+            "Not recorded. Kennelly et al. 2007 say the criterion 'was developed (7,8)' by"
+            " Gadoury et al. 1998 and 2000 'using the reported data', naming none, and evaluated"
+            " it in four Finger Lakes Chancellor vineyards, 2001-2003 (read 2026-10-08)"
+        ),
     ),
     "goidanich.incubation": Formulation(
         "Incubation of downy mildew by Goidanich's table",
@@ -117,6 +122,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2008-rossi-10-1111-j-1365-3059-2007-01738-x.pdf",
         structures=("hydro-thermal-oospore-cohorts",),
+        calibrated_on=("rossi2008pp.discs",),
     ),
     "blaeser1979.survival": Formulation(
         "Survival of sporangia, and 60 °C·h of wetness to infect",
@@ -353,6 +359,7 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="1999-madden-10-1094-phyto-1999-89-11-1088.pdf",
         structures=("sampling-detection-bound",),
         role="observation",
+        calibrated_on=("madden1995",),
     ),
     "cannon2001.sensitivity": Formulation(
         "A scout's imperfect detection (at 1.0 in the policy: no effect yet)",
@@ -391,6 +398,7 @@ FORMULATIONS: dict[str, Formulation] = {
             "2009-cortazar-atauri-10-1007-s00484-009-0217-4.pdf"
         ),
         structures=("degree-day-phenology",),
+        calibrated_on=("phenoclim",),
     ),
     "cortazar2009.brin": Formulation(
         "Budburst after chilling: Bidabe's cold actions, then forcing hours",
@@ -405,6 +413,7 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="2009-cortazar-atauri-10-1007-s00484-009-0217-4.pdf",
         borrows=("bidabe1965.cold_action", "richardson1974.forcing_hours"),
         structures=("chilling-dormancy", "degree-day-phenology"),
+        calibrated_on=("phenoclim",),
     ),
     "bidabe1965.cold_action": Formulation(
         "A day's cold action, Q10^(-Tx/10) + Q10^(-Tn/10)",
@@ -446,6 +455,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2017-ramos-10-1016-j-agrformet-2017-07-022.pdf",
         structures=("degree-day-phenology",),
+        calibrated_on=("ramos2017.penedes",),
     ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
@@ -462,6 +472,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2014-molitor-10-5344-ajev-2013-13066.pdf",
         structures=("degree-day-phenology",),
+        calibrated_on=("molitor2014.mt60",),
     ),
     "cooptera.shoots_derived": Formulation(
         "Shoots at 10 cm as 100 degree-days above 10 °C (derived here; the policy's until v0.8)",
@@ -495,6 +506,7 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="2014-ferguson-10-5344-ajev-2013-13098.pdf",
         borrows=("ferguson2011.hardiness",),
         structures=("cold-hardiness",),
+        calibrated_on=("ferguson2014.prosser",),
     ),
     "ferguson2011.hardiness": Formulation(
         "The hardiness model's equations 1-6",
@@ -527,6 +539,11 @@ FORMULATIONS: dict[str, Formulation] = {
                 "VitiMeteo's project members, as a search summary lists them",
             ),
         ),
+        calibration_note=(
+            "Not recorded. Cooptera's origins.py places the rule's fit at Changins; Siegfried"
+            " et al. 2004 is not held, and Leoni et al. 2026 do not say where the 140 °C-day"
+            " threshold was fitted (read 2026-10-08)"
+        ),
     ),
     "leoni2026.oospores": Formulation(
         "Oospore maturity by a germination model (GLM)",
@@ -544,6 +561,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2026-leoni-10-20870-oeno-one-2026-60-3-9963.pdf",
         structures=("oospore-glm",),
+        calibrated_on=("leoni2026.changins",),
     ),
     "broome1995.botrytis": Formulation(
         "Botrytis infection index per wet period",

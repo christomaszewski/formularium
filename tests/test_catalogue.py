@@ -69,3 +69,22 @@ def test_a_dois_shape() -> None:
 def test_every_dataset_says_where_its_use_was_read() -> None:
     for name, d in DATASETS.items():
         assert d.citation and d.where and d.checked in AUTHOR_SOURCES, name
+
+
+def test_the_calibration_data_recorded_so_far() -> None:
+    """Each link read in its paper (2026-10-07 and 08); Rossi's Goidanich link is inferred."""
+    recorded = {name: f.calibrated_on for name, f in FORMULATIONS.items() if f.calibrated_on}
+    assert recorded == {
+        "goidanich.incubation": ("goidanich1957",),
+        "rossi2008.primary": ("goidanich1957",),
+        "rossi2008pp.dormancy": ("rossi2008pp.discs",),
+        "brischetto2021.secondary": ("blaeser1979", "caffi2016"),
+        "magarey2005.generic": ("blaeser1979", "caffi2016"),
+        "madden1999.detection_bound": ("madden1995",),
+        "cortazar2009.budburst": ("phenoclim",),
+        "cortazar2009.brin": ("phenoclim",),
+        "ramos2017.budburst": ("ramos2017.penedes",),
+        "molitor2014.shoots": ("molitor2014.mt60",),
+        "ferguson2014.cold_hardiness": ("ferguson2014.prosser",),
+        "leoni2026.oospores": ("leoni2026.changins",),
+    }
