@@ -77,6 +77,8 @@ STRUCTURES = {
     "dark-moist-hours-sporulation": "sporulation on enough dark, moist hours",
     "vpd-survival": "sporangia survival as a function of vapour pressure deficit",
     "magarey-wetness-response": "infection from Magarey's temperature-wetness response",
+    "richards-wetness-infection": "infection efficiency as a Richards curve in wetness duration,"
+    " its asymptote and rate quadratic in temperature",
     "rh-threshold-wetness": "leaf wetness from humidity or dew-point thresholds",
     "fitted-logistic-wetness": "leaf wetness from a logistic model fitted on station sensors",
     "degree-day-phenology": "growth stages from degree-day sums",

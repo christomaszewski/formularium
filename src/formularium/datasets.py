@@ -131,4 +131,36 @@ DATASETS: dict[str, Dataset] = {
         " 2026-10-08 in the copy Cooptera holds)",
         "read",
     ),
+    "tranmanhsung1990.bordeaux": Dataset(
+        "Oospore maturity dates from the authors' burial assay at an INRA Bordeaux vineyard"
+        " (about 24 March 1985, 2 May 1986, 24 March 1988), and regional downy mildew"
+        " severity on a 1-4 scale, 1977-1988, rated by the authors from the Plant Protection"
+        " Service's bulletins (about 100,000 ha)",
+        "Tran Manh Sung, Strizyk & Clerjeau 1990, Plant Dis. 74:120-124, Materials and"
+        " methods and Results (read 2026-10-08): POM's A and B were fitted to the three dates,"
+        " its severity regression and classes to the twelve years. Whether the bulletins"
+        " leaned on EPI is not stated",
+        "read",
+    ),
+    "caffi2007.siniscola": Dataset(
+        "First downy mildew onsets on cv. Cannonau at Siniscola, Sardinia, 1996-2004, an"
+        " unsprayed plot inspected weekly; and probable infection dates inferred from them",
+        "Caffi, Rossi, Cossu & Fronteddu 2007, EPPO Bull. 37:261-271 (read 2026-10-08): the"
+        " infection dates were found 'going backward through the incubation period starting"
+        " from the observed onset of symptoms, as shown in Rossi et al. (2002)', and predicted"
+        " onsets were dated with the UCSC model's incubation (Tables 3-4). A formulation"
+        " fitted or scored on the infection dates is calibrated with rossi2008.primary; the"
+        " observed onsets alone are not",
+        "read",
+    ),
+    "maddalena2022.franciacorta": Dataset(
+        "Ten Franciacorta vineyards (mostly Chardonnay), 2020-2021: oospore germination"
+        " assays (minimum days to germinate) and downy mildew onsets in untreated plots, with"
+        " probable infection dates",
+        "Maddalena et al. 2022, BIO Web Conf. 50:04002 (read 2026-10-08, lines 166-177): 'the"
+        " length of incubation period was calculated (Goidanich et al., 1957), to ... ascertain"
+        " the most probable date of disease infection'. A formulation fitted or scored on those"
+        " dates is calibrated with goidanich.incubation",
+        "read",
+    ),
 }

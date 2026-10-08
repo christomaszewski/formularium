@@ -162,6 +162,11 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="1988-lalancette-10-1094-phyto-78-1316.pdf",
         structures=("sporulation-temperature-bounds",),
+        flags=(
+            "The authors call 10 and 30 °C 'arbitrarily chosen temperature extremes' and say"
+            " true limits of 11 and 28 °C would give narrower, taller curves (read 2026-10-08,"
+            " literature/lalancette1988sporulation).",
+        ),
     ),
     "brischetto2020.survival": Formulation(
         "Survival of detached sporangia (written and tested; no run calls it yet)",
@@ -295,12 +300,13 @@ FORMULATIONS: dict[str, Formulation] = {
             ),
         ),
         flags=(
-            "Shared data, which kinship cannot see (it compares authors and borrowed"
-            " equations). Table 2's P. viticola row was fitted to Lalancette, Ellis & Madden"
-            " 1988 (its ref. 43, 5-28 °C, 2-24 h wet, 20% incidence), the Ohio infection data;"
-            " its grape Botrytis rows to Nair & Allen 1993 (ref. 56: berries 12-30 °C, flowers"
-            " 5-30 °C, 20% incidence). Its Botrytis Tmax of 35 °C is the paper's default where"
-            " none was measured.",
+            "Table 2's own rows were fitted to other data than the parameters the engine runs"
+            " (calibrated_on records the engine's): its P. viticola row to Lalancette, Ellis &"
+            " Madden 1988 (its ref. 43, 5-28 °C, 2-24 h wet, 20% incidence; datasets.py"
+            " lalancette1988a), its grape Botrytis rows to Nair & Allen 1993 (ref. 56: berries"
+            " 12-30 °C, flowers 5-30 °C, 20% incidence; nair1993). A formulation that runs"
+            " Table 2's rows shares those data (Bregaglio et al. 2013 does). Its Botrytis Tmax"
+            " of 35 °C is the paper's default where none was measured.",
         ),
         # As the engine runs it, with Brischetto 2021's parameters (its title says so). Table
         # 2's own rows were fitted to other data: see the flag and datasets.py.
@@ -345,6 +351,14 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2005-kennelly-10-1094-phyto-95-1445.pdf",
         structures=("bunch-susceptibility-window",),
+        flags=(
+            "The paper gives no fixed window for berries (read 2026-10-08, literature/"
+            "kennelly2005): at Geneva berries stopped sporulating when inoculated later than 1"
+            " to 2 weeks after bloom, pedicels stayed susceptible to 4 weeks, and relative"
+            " severity fell with degree-days after bloom (Y = 1.008 - 0.379 log(X+1)). At"
+            " Loxton, South Australia, berries stayed susceptible much longer. 'Four weeks"
+            " after flowering' matches the pedicels.",
+        ),
     ),
     "madden1999.detection_bound": Formulation(
         "What a clean sample of leaves rules out",
@@ -542,7 +556,10 @@ FORMULATIONS: dict[str, Formulation] = {
         calibration_note=(
             "Not recorded. Cooptera's origins.py places the rule's fit at Changins; Siegfried"
             " et al. 2004 is not held, and Leoni et al. 2026 do not say where the 140 °C-day"
-            " threshold was fitted (read 2026-10-08)"
+            " threshold was fitted (read 2026-10-08). Dubuis et al. 2019 (read 2026-10-08):"
+            " VitiMeteo's parameters 'were adjusted according to' observations in an external"
+            " laboratory and in fields, oospore maturation being the example, with no place or"
+            " years named. Bleyer et al. 2008 (read 2026-10-08) prints no oospore rule"
         ),
     ),
     "leoni2026.oospores": Formulation(
@@ -814,7 +831,10 @@ FORMULATIONS: dict[str, Formulation] = {
     ),
     "bucket.canopy-water": Formulation(
         "leaf wetness as water on the canopy (rain, dew, evaporation)",
-        "assumed (SWEB, the energy balance it once pointed to, is kin through Magarey)",
+        (
+            "assumed (SWEB, the energy balance it once pointed to, shares an author with"
+            " magarey2005.generic: a flag since D27, not kinship)"
+        ),
         made_by="agrarium",
         structures=("canopy-water-balance",),
     ),
@@ -854,5 +874,146 @@ FORMULATIONS: dict[str, Formulation] = {
         made_by="agrarium",
         borrows=("winstral.shelter",),
         structures=("upwind-slope-shelter",),
+    ),
+    # -- Candidates read in the re-ingestion of 2026-10-08 (literature/), run by neither tool --
+    "lalancette1988.infection": Formulation(
+        "Infection efficiency of P. viticola by temperature and wetness duration",
+        (
+            "Lalancette, Ellis & Madden 1988, Development of an infection efficiency model for"
+            " Plasmopara viticola on American grape based on temperature and duration of leaf"
+            " wetness, Phytopathology 78:794-800, eq. 5"
+        ),
+        year=1988,
+        authors=("Lalancette, N.", "Ellis, M. A.", "Madden, L. V."),
+        authors_complete=True,
+        authors_from="read",
+        checked="Phyto78n06_794.PDF (Chris's drop), read 2026-10-08",
+        calibrated_on=("lalancette1988a",),
+        calibration_note=(
+            "its own chamber data, read 2026-10-08 (literature/lalancette1988infection)"
+        ),
+        structures=("richards-wetness-infection",),
+        structures_note=(
+            "a tag of its own (2026-10-08): not Magarey's cardinal-temperature response, nor"
+            " the generalized Analytis form"
+        ),
+        parameters=(
+            Published("k.b0", -0.071, "lesions/zoospore", "eq. 5", "read"),
+            Published("k.b1", 0.018, "lesions/zoospore/°C", "eq. 5", "read"),
+            Published("k.b2", -0.0005, "lesions/zoospore/°C²", "eq. 5", "read"),
+            Published("k.offset", 0.01, "lesions/zoospore", "eq. 5", "read"),
+            Published("rho.b1", -0.24, "1/h", "eq. 5; W is wet hours minus 1", "read"),
+            Published("rho.b2", 0.070, "1/(h·°C)", "eq. 5", "read"),
+            Published("rho.b3", -0.0021, "1/(h·°C²)", "eq. 5", "read"),
+            Published("m", 1.2, "dimensionless", "eq. 5 and text", "read"),
+        ),
+        flags=(
+            "Fitted on V. labrusca 'Catawba' in growth chambers at 5-30 °C; the authors warn"
+            " against use outside that range.",
+            "Magarey et al. 2005's P. viticola row was fitted to the same data (lalancette1988a);"
+            " the engine runs Magarey's model with other parameters, so this shares no data with"
+            " the engine. Ellis and Madden are authors of the engine's Lalancette bound: a flag.",
+        ),
+    ),
+    "tranmanhsung1990.pom": Formulation(
+        "POM: the date oospores mature, from a rain index since 21 September",
+        (
+            "Tran Manh Sung, Strizyk & Clerjeau 1990, Simulation of the date of maturity of"
+            " Plasmopara viticola oospores to predict the severity of primary infections in"
+            " grapevine, Plant Disease 74:120-124"
+        ),
+        year=1990,
+        authors=("Tran Manh Sung, C.", "Strizyk, S.", "Clerjeau, M."),
+        authors_complete=True,
+        authors_from="read",
+        checked="PlantDisease74n02_120.PDF (Chris's drop), read 2026-10-08",
+        calibrated_on=("tranmanhsung1990.bordeaux",),
+        calibration_note="read 2026-10-08 (literature/tranmanhsung1990)",
+        structures=("oospore-glm",),
+        structures_note=(
+            "a regression of the maturity date on a rain index is 'a fitted statistical model"
+            " of weather' as the vocabulary reads; Agrarium recommends a tag of its own (its"
+            " PLAN 15), which would clear it of Leoni 2026's"
+        ),
+        parameters=(
+            Published("a", -0.21, "d per index unit", "Results, T = A*IJ + B", "read"),
+            Published("b", 117.9, "d from 1 January", "Results, T = A*IJ + B", "read"),
+            Published("severity.intercept", 1.7, "class", "Results, S = 1.7 + 0.012 IJ", "read"),
+            Published("severity.slope", 0.012, "class per index unit", "Results", "read"),
+        ),
+        flags=(
+            "Fitted to three maturity dates; validated on the twelve years it was fitted to"
+            " (a posteriori, as the paper says). It gives one date, not a cohort curve.",
+            "DMCast (Park et al. 1997) computes POM's index (read in Caffi et al. 2007).",
+        ),
+    ),
+    "sentelhas2004.penman_monteith": Formulation(
+        "Leaf wetness of a sensor by Penman-Monteith latent heat, with a water store",
+        (
+            "Sentelhas 2004, Duração do período de molhamento foliar..., livre-docência thesis,"
+            " ESALQ/USP, Piracicaba, chapter 7 (after Rao et al. 1998 and Pedro & Gillespie"
+            " 1982)"
+        ),
+        year=2004,
+        authors=("Sentelhas, Paulo Cesar",),
+        authors_complete=True,
+        authors_from="read",
+        checked="related-sentelhas-2004-thesis.pdf (Chris's drop), read 2026-10-08",
+        structures=("canopy-water-balance",),
+        structures_note=(
+            "a store filled by dew and rain and emptied by latent heat: the bucket's form"
+        ),
+        calibration_note=(
+            "none: its parameters are taken from the literature, not fitted (read 2026-10-08,"
+            " literature/sentelhas2004)"
+        ),
+        parameters=(
+            Published("gamma_star.dew", 0.64, "kPa/°C", "ch. 7, eq. 3", "read"),
+            Published("gamma_star.rain", 1.28, "kPa/°C", "ch. 7, eq. 3", "read"),
+            Published("store.dew_mm", 0.8, "mm", "ch. 7", "read"),
+            Published("store.rain_max_mm", 0.6, "mm", "ch. 7", "read"),
+            Published("sensor_size_m", 0.07, "m", "ch. 7, eq. 4", "read"),
+        ),
+        flags=(
+            "Its author wrote the engine's sentelhas2008.wetness, a humidity threshold of"
+            " another form: a flag (D27). Mean absolute error 1.05-1.50 h a day across turf,"
+            " three sites and crop tops including grape.",
+        ),
+    ),
+    "kim2007.bacchus": Formulation(
+        "Botrytis infection risk (Bacchus): an hourly rate by temperature, summed over wet hours",
+        (
+            "Kim, Beresford & Henshall 2007, N. Z. Plant Prot. 60:128-132, in the corrected form"
+            " Hill, Beresford & Evans 2019 print (Phytopathology 109:84-95, eq. 1 and Fig. 3)"
+        ),
+        year=2007,
+        authors=("Kim, K. S.", "Beresford, R. M.", "Henshall, W. R."),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "Hill et al. 2019's reference list and eq. 1 (10-1094-phyto-10-17-0357-r.pdf, read"
+            " 2026-10-08); Kim et al. 2007 itself is not held"
+        ),
+        structures=("wetness-temperature-infection-index",),
+        structures_note=(
+            "Broome's tag as the vocabulary reads today; Agrarium's PLAN 15 (D34) recommends a"
+            " tag of its own, an hourly rate summed over wet hours"
+        ),
+        calibration_note=(
+            "not recorded: Kim et al. 2007 is not held, and Hill et al. 2019 do not refit it"
+            " (read 2026-10-08)"
+        ),
+        parameters=(
+            Published("a", 84.37, "h", "Hill et al. 2019, eq. 1 and Fig. 3 caption", "read"),
+            Published("b", 7.238, "h/°C", "Hill et al. 2019, eq. 1 and Fig. 3 caption", "read"),
+            Published("c", 0.156, "h/°C²", "Hill et al. 2019, eq. 1 and Fig. 3 caption", "read"),
+        ),
+        flags=(
+            "Per wet hour (sensor response above 50%), x = 1/(a - b·T + c·T²): about 2.42 at its"
+            " peak near 23.2 °C (derived). Hill et al. call it a correction to Kim et al. 2007"
+            " without saying what changed; Beresford is an author of both.",
+            "In 101 site-years it predicted bunch rot no better than simple humidity hours"
+            " (AUC 0.647 against 0.729; Hill et al. 2019).",
+        ),
     ),
 }
