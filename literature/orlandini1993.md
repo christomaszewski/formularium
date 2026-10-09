@@ -67,5 +67,17 @@ The publisher's PDF carries a download stamp on every page; it is not copied her
 - Agrarium asked whether a PLASMO truth family would be independent of the engine. Process
   by process it is not: data or form link every piece. Recommended to the Agrarium session
   as development only. Agrarium recorded it (2026-10-09, branch `free-papers`).
-- Franche 2012's form (2.616, with RHmax) is not in this paper; it comes from a later
-  version, not held.
+- Franche 2012's form (2.616, with RHmax) is not in this paper, nor in Rosa 1995 or
+  Orlandini 2008 (both read 2026-10-09). Where it comes from is not known.
+- Found 2026-10-09 through scite.ai: Rosa, Gozzini, Orlandini & Seghi 1995 is
+  doi:10.1016/0168-1699(95)00007-q, and the later PLASMO is Orlandini, Massetti & Dalla
+  Marta 2008, An agrometeorological approach for the simulation of Plasmopara viticola,
+  Comput. Electron. Agric. 64:149-161, doi:10.1016/j.compag.2008.04.004. Brischetto et al.
+  2021 counted latent infections with its incubation equation when scoring their model
+  (read in their paper).
+- **Both read 2026-10-09** (copies Chris supplied; notes `rosa1995` and `orlandini2008`):
+  - Orlandini 2008 prints forms and bounds but no coefficients. Incubation is bounded at
+    10-34 °C and 30-100 % RH; its fm is not printed. Its survival is credited to Blaeser &
+    Weltzien 1978, with no parameters, as Brischetto 2020 say.
+  - Rosa 1995's incubation is m = 0.082 on √(RH - 30).
+  - Franche's 2.616 is in neither.
