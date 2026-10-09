@@ -68,9 +68,32 @@ need judgement and the project's history.
   tables, cited results reported as the paper's own, a file that is not the paper its name
   says (it happened: a 2007 EPPO paper filed as the 2006 GCB paper), and signs lost in
   extraction.
-- **One paper or a few per agent,** each with the brief below. Run three or four at a
+- **One paper or a few per agent,** each with the brief below. Run two or three at a
   time, not a whole batch: on 2026-10-07 parallel readers on the default model kept
-  hitting the account's usage limit.
+  hitting the account's usage limit, and on 2026-10-08 four Sonnet agents at a time did
+  too, twice, each time killing the agents mid-reading (their finished files survived;
+  relaunch only what is missing).
+
+**The 2026-10-08 re-ingestion, for scale** (176 papers; Haiku ran 4.5, so Sonnet 5.5,
+`claude-sonnet-5-5`, read instead):
+- **Triage:** 11 agents of 13 to 21 papers, about 1.64 million tokens, 9,300 a paper. It
+  classed 86 papers A; about 30 needed a full reading.
+- **Full reading** (20 to 90 facts each): about 81,000 tokens a paper (11 papers counted;
+  three more were cut off by the usage limit before reporting).
+- **Light reading** (10 to 30 facts, four or five papers an agent): about 61,000 a paper
+  (65 papers).
+- **In all,** about 6.5 million Sonnet tokens for 176 papers, some 37,000 a paper, besides
+  the main session's own.
+- **Quotes:** all 2,849 that `verify_quotes.py` checked, from 79 readings, were printed at
+  their lines once lines were counted as `grep -n` counts them; agents' claims about what the
+  quotes show still needed the main session.
+- **What the agents got right that a skim would miss:** model-dated data (Maddalena 2022
+  and Goidanich's incubation; Shin 2020's stations chosen by an RH rule), tuned constants
+  tested on their own data (Anderson 2001), and printed inconsistencies.
+- **What went wrong:** a text copy that held only a publisher's watermarks (check
+  `coverage.py`'s characters per page, and point the agent at the OCR text you made); an
+  agent writing helper scripts outside its output directory; file names whose case
+  differs from the drop's (`.PDF`), which `coverage.py` then cannot match.
 
 ### A brief for a reading agent
 
@@ -152,6 +175,17 @@ were called kin, or ruled out, for their authors alone. When the rules change, r
   `research_notes/`), TRUTH-METHOD part 1, STATUS's next steps and SOURCES.
 - **Decisions stay Chris's.** Where the current rule would reopen a decided question, say so
   and recommend; don't change the decision.
+- **What re-checking the 2026-10-07 readings found** (2026-10-08): of about 540 values and
+  claims given to reading agents as leads, about 420 were found as stated, 29 differed and
+  27 were not in the paper. The misses were of three kinds: numbers read off a figure the
+  text does not hold (Liu 2026's correlations), a best case reported as a worst (Kanaley
+  2024's F1 of 0.28), and an inferred step written as printed (Rossi 2010's DD/100). The
+  dependencies that mattered most were missed altogether: infection dates placed with an
+  engine model's incubation (Caffi 2007, Maddalena 2022), stations chosen by an engine
+  model (Shin 2020). Ask for them by name in the brief.
+- **Make it a batch per group, a PR per group:** triage the whole drop, then read and
+  record one topic at a time, so each PR is reviewable and the next session can stop
+  between them.
 
 ## Judging dependence
 
