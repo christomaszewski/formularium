@@ -40,6 +40,16 @@ DATASETS: dict[str, Dataset] = {
         " Casarini co-wrote the table, so its data are probably his (inferred, not stated)",
         "trail",
     ),
+    "sarejanni1951.greece": Dataset(
+        "Greek downy mildew seasons: the mildew years in currant production, 1885-1939 (1900,"
+        " 1916, 1920 and 1931 marked), and twenty years of observations in Attica, Euboea, the"
+        " Peloponnese and Macedonia, with the Benaki Institute's yearly reports for 1949-1953",
+        "Sarejanni 1951, Ann. Inst. Phytopathol. Benaki 5(2):53-65, and the Institute's"
+        " reports in vols 4-8 (read 2026-10-09 in the Internet Archive's OCR). No formulation"
+        " is recorded as fitted to them. Agrarium plans to history-match its truth's"
+        " season-level behaviour against them (its TRUTH-METHOD part 2)",
+        "read",
+    ),
     "zachos1959": Dataset(
         "Artificial inoculations every ten days, April to October, for two years, in vineyards"
         " at Vello (Coconi) and Patras, Greece, on Corinth, Sultanina, Rhazaki, Rhoditis,"
