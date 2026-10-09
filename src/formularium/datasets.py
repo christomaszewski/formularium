@@ -37,7 +37,14 @@ DATASETS: dict[str, Dataset] = {
         " held. The engine's Goidanich table is these data, as Porras Soriano 2006 prints them."
         " Zachos 1959 (read 2026-10-08, p. 250) describes Casarini 1957's own curves for"
         " Emilia, at high and at low humidity, from artificial and natural inoculations;"
-        " Casarini co-wrote the table, so its data are probably his (inferred, not stated)",
+        " Casarini co-wrote the table, so its data are probably his (inferred, not stated)."
+        " Sanna 2017 (PhD thesis, Univ. Torino, pp. 75-76; read 2026-10-09) states it of the"
+        " regressions: 'two regression equations accounting for both low and high level of"
+        " relative humidity, adapted to the evaluation table of the incubation period of"
+        " Goidànich (1957)', citing Giosuè et al. 2002 (Atti II Giornate di studio, Pisa,"
+        " 1:229-237, not held): a third party's statement, not the authors'. Rosa et al. 1993"
+        " (p. 208, read 2026-10-09) fitted PLASMO's incubation to 'the Goidanich table"
+        " (Goidanich et al., 1958)', the authors' book I nemici della vite",
         "trail",
     ),
     "zachos1959": Dataset(
@@ -67,9 +74,24 @@ DATASETS: dict[str, Dataset] = {
         "read",
     ),
     "blaeser1979": Dataset(
-        "Blaeser & Weltzien 1979 (P. viticola infection data)",
+        "Blaeser & Weltzien 1979, Z. PflKrankh. PflSchutz 86:489-498, Tab. 1: the least wetness"
+        " that infected at least half the inoculated leaves (potted Müller-Thurgau, sporangial"
+        " suspension) at constant 6-25 °C, 2 to 9 h; Bonn",
         "Brischetto et al. 2021, Figure 2 caption (D): the Magarey response's parameters were"
-        " estimated from Blaeser & Weltzien 1979 and Caffi et al. 2016",
+        " estimated from Blaeser & Weltzien 1979 and Caffi et al. 2016. Orlandini et al. 1993"
+        " (p. 620) fitted PLASMO's n/T to 'data from Blaeser & Weltzien (1979)' by least"
+        " squares. The table itself read 2026-10-09 (literature/blaeser1979)",
+        "read",
+    ),
+    "blaeser1978.survival": Dataset(
+        "Blaeser & Weltzien 1978, Z. PflKrankh. PflSchutz 85:155-161, Abb. 2-3: the maximum"
+        " lifetime of sporangia on the leaf and detached (on aluminium foil), at 10-30 °C and"
+        " 30-100 % RH, germination scored after 23 h, each test three times; sporangia from"
+        " potted Müller-Thurgau, Bonn",
+        "Blaeser & Weltzien 1979, p. 493 (read 2026-10-09): the survival polynomials were"
+        " computed 'aus den vorliegenden Daten' of the tests at those temperatures and"
+        " humidities, cited to the 1978 paper; that they are the 1978 data is inferred. PLASMO's"
+        " survival (Orlandini et al. 1993) is credited to the 1979 paper",
         "read",
     ),
     "caffi2016": Dataset(
@@ -200,5 +222,34 @@ DATASETS: dict[str, Dataset] = {
         " dates is calibrated with goidanich.incubation (the paper names the method, not each"
         " date's source; infections are not observed in the field)",
         "read",
+    ),
+    "orlandini1993.emergences": Dataset(
+        "Observed dates of P. viticola sporangial emergence in Tuscan vineyards (cv."
+        " Sangiovese); validation at Mondeggi-Lappeggi, Firenze (Paretaio 1990, Pulizzano"
+        " 1990-1992), weekly observations in 1500 m2 untreated plots",
+        "Orlandini et al. 1993, EPPO Bull. 23:619-626, p. 621 (read 2026-10-09): m and n 'were"
+        " chosen when the difference in time between observed and calculated sporangia"
+        " emergences reached a minimum'. Which observations is not stated; these validation"
+        " data are the likely ones (inferred)",
+        "read",
+    ),
+    "rouzet2003.balma": Dataset(
+        "Dates from which oospores stored 2 cm under sand at Balma (Midi-Pyrénées) germinated"
+        " within 24 h at 20-22 °C, 1969-1998 (Table 2); leaves collected at the end of October;"
+        " French Plant Protection Service ('code mildiou')",
+        "Rouzet & Jacquin 2003, EPPO Bull. 33:437-442, Tables 2 and 7 (read 2026-10-09)",
+        "read",
+    ),
+    "laviola1986": Dataset(
+        "Germination of P. viticola oospores at constant 4-30 °C (percentages and minimum, mean"
+        " and maximum days to germinate), 1980, 1981 and 1983, from Catarratto leaves collected"
+        " in November in Palermo province and overwintered there; Laviola, Burruano &"
+        " Strazzeri 1986, Phytopathol. Mediterr. 25:80-84",
+        "Rossi et al. 2008 (Ecol. Model. 212:480-491, p. 482): germination duration is"
+        " 'regulated by temperature (Laviola et al., 1986)'; Rossi et al. 2005 likewise. That"
+        " eq. 5 (1330.1 - 116.19T + 2.6256T² hours) was fitted to these data is inferred, not"
+        " stated: it gives 18 d at 10 °C against Laviola's minimum of 17 d (1983), and 1.9 d"
+        " at 22 °C against 3 d (read 2026-10-09)",
+        "trail",
     ),
 }

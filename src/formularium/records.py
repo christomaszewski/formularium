@@ -105,6 +105,8 @@ STRUCTURES = {
     "log-wind-profile": "wind speed at another height from a logarithmic profile",
     "chilling-dormancy": "dormancy broken by accumulated chilling",
     "cold-day-oospore-start": "oospore maturation started by a count of cold days",
+    "survival-hours-temperature-humidity": "sporangia survival in hours from temperature and"
+    " relative humidity, not a vapour pressure deficit",
 }
 
 
