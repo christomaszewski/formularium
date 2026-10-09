@@ -85,6 +85,37 @@ def test_coverage_matches_a_paper_by_its_file_name_or_doi() -> None:
     assert coverage.match("x.pdf", ["10.1/AB12"], notes) == ["short2000"]
 
 
+def test_cited_by_finds_a_paper_however_its_name_is_written(tmp_path: Path) -> None:
+    cited_by = _script("cited_by")
+    (tmp_path / "literature").mkdir()
+    (tmp_path / "src" / "formularium").mkdir(parents=True)
+    (tmp_path / "literature" / "a.md").write_text(
+        "- Blaeser & Weltzien 1978 measured survival.\n"
+        "- Bläser (1978) is the dissertation.\n"
+        "- Blaser et al. found it in 1999, much later.\n"
+        "- Giosue, Girometta, Rossi & Bugiani 2002b mapped it.\n",
+        encoding="utf-8",
+    )
+    (tmp_path / "literature" / "giosue2002.md").write_text("Giosuè 2002 itself\n")
+    (tmp_path / "src" / "formularium" / "catalogue.py").write_text('"giosue2002.maps": 1\n')
+    found = cited_by.search(tmp_path, "Bläser", "1978")
+    assert [n for _, n, _ in found] == [1, 2]  # 1999 is not 1978
+    found = cited_by.search(tmp_path, "Giosuè", "2002", "giosue2002")
+    assert [(p.name, n) for p, n, _ in found] == [("a.md", 4), ("catalogue.py", 1)]
+
+
+def test_kin_report_reads_an_engine_list_and_gives_reasons(tmp_path: Path) -> None:
+    kin_report = _script("kin_report")
+    listed = tmp_path / "engine_models.json"
+    listed.write_text('{"formulations": [{"id": "goidanich.incubation"}, "rule_3_10"]}')
+    assert kin_report.load_engine(listed) == ["goidanich.incubation", "rule_3_10"]
+    lines = kin_report.report(["rosa1993.incubation"], ["goidanich.incubation", "rule_3_10"])
+    assert lines[0] == "rosa1993.incubation"
+    assert "  linked: goidanich.incubation: shared calibration data, goidanich1957" in lines
+    assert "  same form: goidanich.incubation: daily-incubation-table" in lines
+    assert kin_report.report(["rule_3_10"], ["goidanich.incubation"])[1].startswith("  nothing")
+
+
 def test_every_note_names_its_files_without_a_path() -> None:
     for path in _notes():
         for name in _header(path).get("files", []):

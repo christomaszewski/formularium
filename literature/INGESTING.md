@@ -2,7 +2,8 @@
 
 How a session turns a paper into what this repository records: a literature note always,
 and sometimes datasets, parameter values or a formulation. Written 2026-10-08 from the
-first fifteen papers ingested, for sessions that arrive without that history.
+first fifteen papers ingested, for sessions that arrive without that history; revised
+2026-10-09 from the sought papers of the 10-9 drop.
 
 ## The rules that never bend
 
@@ -35,8 +36,24 @@ first fifteen papers ingested, for sessions that arrive without that history.
 - **Cooptera keeps its own:** a model the engine runs needs its paper in Cooptera's
   `drop/papers/`, added with Cooptera's `scripts/papers/fetch_oa.py --add`, so that its
   transcription is checked there. Tell the Cooptera session; don't file papers in its repo.
-- **Open access:** fetch it yourself. Some publishers refuse scripted downloads; a
-  headless browser (`chromium --headless=new --dump-dom URL`) sometimes gets the page.
+- **Fetch it yourself** where it is online. When a site refuses scripted downloads:
+  - **A real browser, home page first.** Open the site's home page in a headless browser
+    (Playwright), then go to the download link and keep the download event. That got
+    Rossi et al. 2002 from the Giornate Fitopatologiche archive on 2026-10-09, behind a
+    CloudFront block that two other searches had reported as a dead end.
+  - **The Wayback Machine's raw captures:** `https://web.archive.org/web/<date>id_/<url>`.
+    Its CDX API lists the captures there are.
+- **Grey literature is not in the indexes.** Scite and Crossref hold journal articles with
+  DOIs. Proceedings, theses and reports are found elsewhere:
+  - German dissertations: the German National Library's contents scans
+    (`d-nb.info/<id>/04`);
+  - conference archives: Giornate Fitopatologiche, GRIMPP for the Pisa meetings;
+  - weather-service reports: METLIS for the DWD;
+  - holdings: CiNii and WorldCat.
+- **Before delegating a search,** check that the agent can write files and reach the hosts.
+  On 2026-10-09 Codex's sandbox could do neither: it found the URL but could not fetch it.
+- **Partial finds get a note too:** an abstract or a contents page, with `read` saying
+  which. A contents page turns a request for a dissertation into a request for its pages.
 - **Not found:** say so, and say where you looked. Old journals are often on the Internet
   Archive.
 
@@ -44,14 +61,16 @@ first fifteen papers ingested, for sessions that arrive without that history.
 
 | Step | What | Who |
 |---|---|---|
+| 0. Look up | `python scripts/cited_by.py SURNAME YEAR [--id ID]`: what Formularium already says of the paper, which records use its data, and what other notes credit to it. Read those lines before writing anything | a script, then the main session |
 | 1. Extract | `python scripts/extract_paper.py PAPER.pdf --out DIR`: text, pages, DOIs, a map of headings, tables and figures. Under about 500 characters a page means a scan: rerun with `--ocr fra+eng` (the paper's languages), about 5 s a page | a script |
 | 2. Identify | Title, authors as printed, year, journal, volume, pages, DOI. `python scripts/crossref_lookup.py "..."` corrects volumes and finds DOIs, but the author list is `read` only from the paper | Haiku, checked |
 | 3. Map | What the paper holds, section by section, with line ranges: data, formulations, tables, which results are its own and which are cited | Haiku |
 | 4. Extract the facts | For the processes of interest: every number with its unit, verbatim, with its line number and whether it is the paper's own or cited | Haiku |
-| 5. Verify | `python -I scripts/verify_quotes.py paper.txt facts.json` checks every quote at its cited line; check by hand what it cannot find, and re-read the paragraph around anything surprising. Correct the extraction, not the paper | a script, then the main session |
-| 6. Judge | Dependence on other models (below); which catalogue records, datasets or published values it supports; what it means for each tool | main session |
+| 5. Verify | `python -I scripts/verify_quotes.py paper.txt facts.json` checks every quote at its cited line; check by hand what it cannot find, and re-read the paragraph around anything surprising. Correct the extraction, not the paper. **Every equation, coefficient and table value that becomes a record is read in the page image** (`pdftoppm -r 150 -f N -l N -png`), never the text layer alone. **Evaluate each printed formula at one point,** its optimum, and compare the result with the paper's own figures and stated ranges | a script, then the main session |
+| 6. Judge | Dependence on other models (below); which catalogue records, datasets or published values it supports; what it means for each tool. Write down the verdicts you expect, then run `uv run python scripts/kin_report.py ID ... --engine LIST` against each tool's list: a verdict you did not expect is a mistake in the record or in the rule | main session |
 | 7. Record | `python scripts/new_note.py <id>` (with `--triage FILE --key KEY` the header comes from the triage record), fill it in, add it to the index in `README.md`; datasets in `datasets.py`; values and formulations in `catalogue.py` | main session |
-| 8. Test and tell | `uv run pytest`; a branch and a PR (Formularium before any tool that pins it); tell the sessions whose work it touches | main session |
+| 8. Close the trails | Run `cited_by.py` again. Every claim another note credits to this paper can now be checked at its source: confirm it and promote it from `trail` to `read`, or correct the note that made it | main session |
+| 9. Test and tell | `uv run pytest`; a branch and a PR (Formularium before any tool that pins it); tell the sessions whose work it touches | main session |
 
 ## What to delegate, and to which model
 
@@ -76,10 +95,19 @@ need judgement and the project's history.
   in a language you would otherwise read slowly, pulling a reference list.
 - **Keep for the main session:** whether a formulation depends on another; whether a result
   is the paper's own; anything that becomes a recorded number or status.
-- **What small models get wrong**, so the main session checks it: numbers from garbled
-  tables, cited results reported as the paper's own, a file that is not the paper its name
-  says (it happened: a 2007 EPPO paper filed as the 2006 GCB paper), and signs lost in
-  extraction.
+- **Sought papers are the main session's.** One to five papers read because a decision turns
+  on them are faster and safer read directly. Their equations need the page images, and
+  their claims need the project's history (2026-10-09: Rossi 2002, Rosa 1995, Orlandini
+  2008, Blaeser & Weltzien 1979).
+- **What small models get wrong**, so the main session checks it:
+  - numbers from garbled tables, and signs lost in extraction;
+  - cited results reported as the paper's own;
+  - a file that is not the paper its name says (it happened: a 2007 EPPO paper filed as
+    the 2006 GCB paper).
+- **Text layers lie, the publisher's included.** Rosa et al. 1995's turned "n = 75 ... a =
+  1.7" into "rr = 75 ... n = 1.7" and 8.37 into 8.31, and Orlandini et al. 2008's equations
+  came out as a jumble. Agents read text, so their equations are leads until checked in the
+  page image.
 - **One paper or a few per agent,** each with the brief below. Run two or three at a
   time, not a whole batch: on 2026-10-07 parallel readers on the default model kept
   hitting the account's usage limit, and on 2026-10-08 four Sonnet agents at a time did
@@ -122,7 +150,12 @@ they were fitted to the same observations, or one was fitted to data another mod
 (infection dates back-calculated with someone's incubation, observations stopped when a
 model said so), or they share a form. A shared author is only a flag. So for every
 formulation say which equations it computes, which data it was fitted to, and whether any
-model produced or dated those data, and quote the sentences that say so.
+model produced or dated those data, and quote the sentences that say so. For every
+dataset, say which values were observed and which a model computed, and which model:
+an infection date counted back from symptoms is a model's, the symptom date is not. Say
+plainly what is not printed (coefficients, units, time step, the data behind a fit). A
+result the paper credits to another paper is a lead about that paper, not a fact: give
+its citation.
 
 For each paper write <OUTPUT DIR>/<key>.json with: "key"; "citation" (title, every author
 as printed, affiliations, year, journal, volume, pages, doi); "read" (what you read);
@@ -213,8 +246,21 @@ From Agrarium's decisions D27 to D29 (its PLAN section 15, and `src/formularium/
   Lineage links process models; shared calibration data also links process and
   observation; reference pieces link to nothing.
 - **Look for the data behind a curve.** A curve's provenance is often two papers back: Rossi
-  2008's incubation cites Rossi 2002, which (per Rossi 2005) regressed Goidanich's table,
-  which (per Zachos 1959) is probably Casarini's Emilia data.
+  2008's incubation cites Rossi 2002, which regressed Goidanich's table (read there,
+  2026-10-09; inferred from Rossi 2005 until then), which (per Zachos 1959) is probably
+  Casarini's Emilia data.
+- **The strict reading's conventions,** applied since 2026-10-08 and written here so that
+  every session applies them alike. They decide verdicts (PLASMO's, Rosa 1995's). Revisiting
+  one is a decision for Agrarium's PLAN section 15, not for a session.
+  - Values taken from a manual or review, such as cardinal temperatures, count as
+    calibration on the data it summarises (`calibrated_on`, inferred). Example: PLASMO's
+    10 and 34 °C, from Goidanich 1959 and Zachos 1959.
+  - An hourly or daily rate summed to 100 % is the incubation table's form
+    (`daily-incubation-table`), whatever its curve.
+  - A function credited to a source that prints no coefficients is taken as fitted to that
+    source's data, inferred (`orlandini2008.survival` and Blaeser & Weltzien 1978).
+  - Fitting with a piece of a model is fitting with that model (`calibrated_with`).
+    `stemma` resolves pieces to their models since 2026-10-09.
 
 ## Recording
 
@@ -227,3 +273,24 @@ From Agrarium's decisions D27 to D29 (its PLAN section 15, and `src/formularium/
 - **A formulation** (`catalogue.py`) when a tool might run it: its authors as read, how
   checked, structure tags, role, and its data. Equations only when a tool runs it.
 - **Inferences say so:** in `calibration_note`, a dataset's `where`, or the note.
+- **Credited is not read.** A claim one paper credits to another stays `trail` until it is
+  read in that other paper. When two citing papers disagree (a title, a coefficient),
+  record both. On 2026-10-09 these credited claims or citations proved wrong or
+  unfindable at their sources:
+  - Brischetto et al. 2020's c2 = 0.02 on T(1 - RH/100): Blaeser & Weltzien print 0.01 on
+    the saturation deficit.
+  - Leoni et al. 2026's "below 5 mm over three weeks", credited to Rossi et al. 2002, which
+    prints no such rule.
+  - Franche 2012's PLASMO coefficient 2.616, in no PLASMO paper.
+  - Orlandini et al. 2008 citing their 2003 EPPO paper as 2002.
+  - Orlandini et al. 2003a,b, cited to a journal that ended in 2000.
+  - Goidanich et al. 1957, cited under two titles.
+  - Sanna 2017's statement credited to Giosuè et al. 2002: not in its abstract, and the
+    paper is not held.
+- **Observed or computed:** a dataset's description says which values were observed and
+  which a model computed. Rossi et al. 2002's infection dates were counted back with the
+  incubation Rossi 2008 runs; its oil-spot dates are observations. A pattern for a truth
+  uses the observations.
+- **Say whether it can run:** a formulation whose coefficients are not printed says so in
+  its first flag (`orlandini2008.plasmo`). Units, time steps and the data behind a fit
+  that are not printed are written "not stated", not guessed.
