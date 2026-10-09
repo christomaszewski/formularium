@@ -236,6 +236,11 @@ FORMULATIONS: dict[str, Formulation] = {
             " Brischetto, found death within 24 h (Agrarium"
             " scripts/diagnostics/sporangia_survival.py, 2026-10-08). With Rossi et al."
             " 2008's c2 = 0.01 the cap still leaves 71 % after 8 h.",
+            "Kennelly's sporangia were attached, on lesions (Kennelly et al. 2007, read"
+            " 2026-10-09), so eq. 1 is the like-for-like comparison: its lifetime never falls"
+            " below about 34 h (x = 14), against none viable after 6-8 h of clear, dry days."
+            " Kennelly found DMCast's survival model, from the same Blaeser & Weltzien study,"
+            " overpredicted viability in the field.",
             "Read at the source 2026-10-09 (literature/blaeser1979): Blaeser & Weltzien 1979"
             " print c2 = 0.01 for detached sporangia (Abb. 3, curve II), so eq. 2's 0.02 is a"
             " transcription error and Rossi et al. 2008's 0.01 is right. Their index is the"
@@ -853,6 +858,36 @@ FORMULATIONS: dict[str, Formulation] = {
             " saturated air at 25 °C (2 d) and ambient air at 23-25 °C (1 d) do not, since the"
             " eq. 2 index T (1 - RH/100) is 0 in saturated air at any temperature; and eq. 2"
             " has no sun.",
+        ),
+    ),
+    "kennelly2007.lesion_decline": Formulation(
+        "Sporangia per lesion falling with each successive sporulation event",
+        "Kennelly et al. 2007, Phytopathology 97:512-522, equation 1 and Figs 3-4",
+        year=2007,
+        authors=(
+            "Kennelly, Megan M.",
+            "Gadoury, David M.",
+            "Wilcox, Wayne F.",
+            "Magarey, Peter A.",
+            "Seem, Robert C.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        doi="10.1094/PHYTO-97-4-0512",
+        calibrated_on=("kennelly2007.loxton",),
+        structures=("sporulation-decline-by-event",),
+        structures_note="log relative sporulation linear in the event's number",
+        parameters=(
+            Published("intercept", 4.757, "ln(% + 1)", "eq. 1", "read"),
+            Published("slope_per_event", -0.496, "ln(% + 1) per event", "eq. 1", "read"),
+        ),
+        flags=(
+            "Y = ln(relative sporulation % + 1), X = the event's number; R² 0.77. Relative"
+            " to each lesion's own maximum, so it says nothing of absolute yield. Lesion age"
+            " alone did not reduce yield; an eighth sporulation gave under a fifth of a"
+            " first's sporangia per mm² (Fig. 4A). Loxton, South Australia, 2003.",
+            "It shares its paper and authors with the engine's kennelly2007.trigger, a flag:"
+            " the trigger rests on Gadoury's historical Geneva data, this on Loxton lesions.",
         ),
     ),
     "rafaila1968.incubation": Formulation(

@@ -47,6 +47,16 @@ DATASETS: dict[str, Dataset] = {
         " (Goidanich et al., 1958)', the authors' book I nemici della vite",
         "trail",
     ),
+    "sarejanni1951.greece": Dataset(
+        "Greek downy mildew seasons: the mildew years in currant production, 1885-1939 (1900,"
+        " 1916, 1920 and 1931 marked), and twenty years of observations in Attica, Euboea, the"
+        " Peloponnese and Macedonia, with the Benaki Institute's yearly reports for 1949-1953",
+        "Sarejanni 1951, Ann. Inst. Phytopathol. Benaki 5(2):53-65, and the Institute's"
+        " reports in vols 4-8 (read 2026-10-09 in the Internet Archive's OCR). No formulation"
+        " is recorded as fitted to them. Agrarium plans to history-match its truth's"
+        " season-level behaviour against them (its TRUTH-METHOD part 2)",
+        "read",
+    ),
     "zachos1959": Dataset(
         "Artificial inoculations every ten days, April to October, for two years, in vineyards"
         " at Vello (Coconi) and Patras, Greece, on Corinth, Sultanina, Rhazaki, Rhoditis,"
@@ -64,6 +74,34 @@ DATASETS: dict[str, Dataset] = {
         "Zachos 1959, Ann. Inst. Phytopathol. Benaki N.S. 2(4):193-355, chapter III, pp."
         " 254-261, Tables XVI-XVIII (read 2026-10-09 in an OCR of the scan, checked against"
         " the text). His own experiments; separate from his incubation inoculations",
+        "read",
+    ),
+    "poeydebat2025.villenave": Dataset(
+        "P. viticola oospore DNA by ddPCR in 318 soil samples (198 on a 2.85 x 3.2 m grid,"
+        " 0-15 cm) of a 0.22 ha organic Merlot vineyard at Villenave d'Ornon, Bordeaux, March"
+        " 2022, with depth profiles and a leaf-disc bioassay",
+        "Poeydebat et al. 2025, Appl. Environ. Microbiol. 91(12):e0166725 (read 2026-10-09"
+        " in Europe PMC's full text). No formulation is recorded as fitted to them; Agrarium"
+        " plans to check its oospore field's spatial structure against them",
+        "read",
+    ),
+    "kennelly2007.loxton": Dataset(
+        "Chardonnay shoots and potted vines in a vineyard at Loxton, South Australia, October"
+        " to December 2003: lesion cohorts induced to sporulate repeatedly, sporangia counted"
+        " per mm², and sporangia sampled at 1-4 h intervals after sunrise and scored for"
+        " germination within 4 h, with canopy temperature, RH and wetness every 10 min",
+        "Kennelly et al. 2007, Phytopathology 97:512-522, Materials and methods and Figs 3-7"
+        " (read 2026-10-09 in an Internet Archive capture of the publisher's PDF)",
+        "read",
+    ),
+    "rumbou2004.aghialos": Dataset(
+        "Every oil spot in an untreated 100-vine Roditis plot at N. Aghialos, Thessaly, 0.5 km"
+        " from the sea, 2001 (five samplings, 327 lesions) and 2002 (four, 426), genotyped"
+        " with four microsatellites and mapped to the vine, with the season's rain, mean"
+        " temperature and RH",
+        "Rumbou & Gessler 2004, Eur. J. Plant Pathol. 110:379-392, Tables 1 and 4 (read"
+        " 2026-10-09). No formulation is recorded as fitted to them; Agrarium plans to"
+        " history-match its truth's epidemic structure against them",
         "read",
     ),
     "rafaila1968": Dataset(

@@ -51,6 +51,9 @@ A symposium summary of Kennelly's Phytopathology papers (95:1445-1452, 2005;
   Brischetto was fitted to these data (not shown).
 - Oospore infections continuing all season agree with Gobbin's genotyping
   ([rossi2013](rossi2013.md)).
+- **Corrected 2026-10-09 from the full paper ([kennelly2007](kennelly2007.md)):** the
+  survival runs were at Loxton, South Australia, on attached sporangia. Five clear days
+  averaged a 30.6 °C high and 24 % RH; none were viable after 6-8 h.
 - **The check, run (2026-10-08):** Brischetto 2020's eq. 2, as Agrarium's truth (F1) runs
   it, leaves 97 % of deposited sporangia alive after 8 h of Fig. 4's hot, dry day, and its
   1/24 cap on the hourly rate leaves at least 71 % whatever its coefficients. It fails this
