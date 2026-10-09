@@ -8,8 +8,10 @@ Two formulations **depend** on each other when they are **one model,** or pieces
 (`part_of`). Two **process** formulations (records.ROLES) depend on each other, too, when
 the records show a substantive dependency (Agrarium decision D27):
 - **a borrowed equation:** one computes the other's equation, or both compute a third's
-  (`borrows`). A piece of a model counts its model's borrowings too: running the model
-  means computing them;
+  (`borrows`). Borrowings are followed to the end: borrowing Brischetto 2021's model
+  computes the Caffi and Lalancette equations it borrows. A piece of a model counts its
+  model's borrowings too: running the model means computing them. A borrower carries what
+  it borrows: its implementation and the data it was fitted to (below);
 - **a shared implementation:** both are computed by the same code (`equations`, directly
   or through what they borrow);
 - **shared calibration data:** both were fitted to the same observations
@@ -85,17 +87,37 @@ class _Entry:
     shaped_by: frozenset[str]  # models used in fitting it, or the model it is a piece of
 
 
+def _borrowed(start: Iterable[str], catalogue: Mapping[str, Formulation]) -> set[str]:
+    """Everything computed by computing `start`: borrowings followed to the end.
+
+    A model that borrows Brischetto 2021's computes the Caffi and Lalancette equations
+    Brischetto's borrows, so it depends on them too. Only process models are followed and
+    kept: borrowing a piece that is not a process creates no dependence (D26). Cycles end."""
+    found: set[str] = set()
+    todo = list(start)
+    while todo:
+        b = todo.pop()
+        if b in found or (b in catalogue and catalogue[b].role != "process"):
+            continue
+        found.add(b)
+        if b in catalogue:
+            todo.extend(catalogue[b].borrows)
+    return found
+
+
 def _entry(name: str, catalogue: Mapping[str, Formulation]) -> _Entry:
     f = catalogue[name]
     models = frozenset(f.part_of) or frozenset({name})
     wholes = [catalogue[m] for m in f.part_of if m != name and m in catalogue]
-    borrows = set(f.borrows).union(*(set(w.borrows) for w in wholes))
-    # Borrowing a piece that is not a process creates no dependence (D26).
-    borrows = {b for b in borrows if b not in catalogue or catalogue[b].role == "process"}
-    code = {f.equations, *(w.equations for w in wholes)}
-    code |= {catalogue[b].equations for b in borrows if b in catalogue}
-    data = set(f.calibrated_on).union(*(set(w.calibrated_on) for w in wholes))
-    shaped_by = set(f.calibrated_with).union(*(set(w.calibrated_with) for w in wholes))
+    direct = set(f.borrows).union(*(set(w.borrows) for w in wholes))
+    borrows = _borrowed(direct, catalogue) - models - {name}
+    # Computing a borrowed equation computes its implementation and its fitted values, so
+    # the borrower carries the lender's code and calibration (and its model's, for a piece).
+    lent = [catalogue[b] for b in borrows if b in catalogue]
+    lent += [catalogue[m] for g in lent for m in g.part_of if m in catalogue]
+    code = {f.equations, *(w.equations for w in wholes), *(g.equations for g in lent)}
+    data = set(f.calibrated_on).union(*(set(w.calibrated_on) for w in [*wholes, *lent]))
+    shaped_by = set(f.calibrated_with).union(*(set(w.calibrated_with) for w in [*wholes, *lent]))
     return _Entry(
         f.everyone(),
         f.year,

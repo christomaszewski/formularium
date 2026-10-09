@@ -49,12 +49,14 @@ Steps 2 to 4 are reading and copying, and a small model does them well and cheap
 the Agent tool with `model: "haiku"`. The main session keeps steps 5 to 8, because they
 need judgement and the project's history.
 
-- **Which Haiku the alias runs:** Haiku 5.5 came out on 2026-10-07. On 2026-10-08 Claude
-  Code 2.1.292 still ran Haiku 4.5 (`claude-haiku-4-5-20251001`) for `model: "haiku"`,
-  and did not list Haiku 5.5, though the API served `claude-haiku-5-5`. Until Claude Code
-  is updated, start the session with `ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-5-5` to
-  point the alias at it. Before a batch, ask one Haiku agent to state its model ID, and
-  record which model read each paper in the note's `read` field.
+- **Which Haiku the alias runs:** Haiku 5.5 came out on 2026-10-07.
+  - Claude Code 2.1.292 still ran Haiku 4.5 (`claude-haiku-4-5-20251001`) for
+    `model: "haiku"`. So the 2026-10-08 re-ingestion read with Sonnet 5.5 (below).
+  - From 2.1.295, on `agents` on 2026-10-08 (EDT), the alias runs `claude-haiku-5-5`, with
+    or without `ANTHROPIC_DEFAULT_HAIKU_MODEL` (checked with `claude -p --model haiku`).
+  - A session started before the update keeps the old alias.
+  - Before a batch, ask one Haiku agent to state its model ID, and record which model read
+    each paper in the note's `read` field.
 
 - **For scale:** on 2026-10-08, four reading agents on the default model read seven papers
   (a 278-page thesis among them) for about 630,000 tokens. Their reports were good, and
