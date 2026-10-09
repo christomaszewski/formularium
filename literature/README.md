@@ -239,6 +239,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [masson2011](masson2011.md) | none (climate models) | model dependence | global | why dependence is judged by components and behaviour |
 | [mecikalski2004alexi](mecikalski2004alexi.md) | none | evapotranspiration | United States | Methods in words |
 | [meggio2008](meggio2008.md) | none | remote sensing | Ribera del Duero | Viewing geometry alters vineyard reflectance |
+| [metos2026](metos2026.md) | downy mildew, powdery mildew, black rot, grey mould | sporulation, risk index | general | iMETOS/FieldClimate rules: no data behind them; a comparator, not a truth |
 | [mezei2022](mezei2022.md) | downy mildew | warning system, incubation | Serbia | 3-10 trigger; incubation fitted to Miller's table |
 | [miles2018](miles2018.md) | downy mildews | detection | USA | Detection methods review |
 | [miller1952](miller1952.md) | downy mildew, others | forecasting history | global | History of incubation calendars and rules |
