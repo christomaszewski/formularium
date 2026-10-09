@@ -78,6 +78,13 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "goidanich.incubation": ("goidanich1957",),
         "rossi2008.primary": ("goidanich1957", "laviola1986"),
         "rossi2002.onset": ("rossi2002.emilia",),
+        "rosa1995.incubation": ("goidanich1957", "zachos1959", "orlandini1993.emergences"),
+        "orlandini2008.plasmo": (
+            "orlandini2008.mondeggi",
+            "blaeser1978.survival",
+            "lalancette1988a",
+            "goidanich1957",
+        ),
         "rossi2008pp.dormancy": ("rossi2008pp.discs",),
         "brischetto2021.secondary": ("blaeser1979", "caffi2016"),
         "magarey2005.generic": ("blaeser1979", "caffi2016"),

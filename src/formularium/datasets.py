@@ -285,6 +285,16 @@ DATASETS: dict[str, Dataset] = {
         " data are the likely ones (inferred)",
         "read",
     ),
+    "orlandini2008.mondeggi": Dataset(
+        "Downy mildew severity every 10 days, budbreak to harvest, on 800 leaves and 400"
+        " clusters of 200 Sangiovese vines in three untreated plots (about 1000 m² each) of the"
+        " Paretaio vineyard, Mondeggi-Lappeggi (Chianti, 43°47' N, 180 m), 1995-2003, with"
+        " hourly temperature, RH, rain and leaf wetness beside it; leaf area 1995-1996",
+        "Orlandini, Massetti & Dalla Marta 2008, Comput. Electron. Agric. 64:149-161, pp. 158-"
+        "160 (read 2026-10-09): PLASMO's C and D were tuned on 1995-1996 (C22 D18) and"
+        " validated on 1998-2003 (Tables 2-4)",
+        "read",
+    ),
     "rouzet2003.balma": Dataset(
         "Dates from which oospores stored 2 cm under sand at Balma (Midi-Pyrénées) germinated"
         " within 24 h at 20-22 °C, 1969-1998 (Table 2); leaves collected at the end of October;"

@@ -118,6 +118,8 @@ def _entry(name: str, catalogue: Mapping[str, Formulation]) -> _Entry:
     code = {f.equations, *(w.equations for w in wholes), *(g.equations for g in lent)}
     data = set(f.calibrated_on).union(*(set(w.calibrated_on) for w in [*wholes, *lent]))
     shaped_by = set(f.calibrated_with).union(*(set(w.calibrated_with) for w in [*wholes, *lent]))
+    # Fitting with a piece of a model is fitting with that model.
+    shaped_by |= {m for s in shaped_by if s in catalogue for m in catalogue[s].part_of}
     return _Entry(
         f.everyone(),
         f.year,
