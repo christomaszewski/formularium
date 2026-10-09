@@ -33,7 +33,9 @@ files: [9963_Leoni_article_.pdf]
   placed primary infection right in 95 % of years against 80 %; median absolute error from 8
   to 4.5 days.
 - Cites Rossi et al. 2002 (maturation stops with less than 5 mm of rain in three weeks) from
-  the conference paper not held here.
+  the conference paper. Read 2026-10-09 ([rossi2002](rossi2002.md)): that paper prints no such
+  rule. It correlates the first infections with March rain days and April's longest dry
+  spell, and says nothing of maturation stopping. Leoni's citation is a misattribution.
 
 ## Dependence
 

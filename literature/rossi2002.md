@@ -77,6 +77,9 @@ The paper Rossi 2008 credits for its incubation (eqs 8-9). Eight pages, in Itali
 - Goidanich's reference here reads "Lotta antiperonosporica e calendario d'incubazione",
   Giornale di Agricoltura, 13 January 1957, 11-14. Rossi et al. 2005 titles it otherwise.
 - Shares authors with Rossi 2008 (Rossi, Giosuè, Bugiani): a flag only.
+- Leoni et al. 2026 cite this paper for oospore maturation stopping "when total rainfall
+  remained below 5 mm over three weeks". It prints no such rule (checked in the OCR and
+  page images): a misattribution.
 
 ## Bearing (2026-10-09)
 
