@@ -290,7 +290,11 @@ FORMULATIONS: dict[str, Formulation] = {
             " days with latent infections were counted with 'the equation of Orlandini et al."
             " (2008)' for incubation, as a function of temperature and RH (Orlandini, Massetti &"
             " Dalla Marta 2008, Comput. Electron. Agric. 64:149-161, the later PLASMO; not held)."
-            " The evaluation, not the fitted parameters, used PLASMO's incubation.",
+            " The evaluation, not the fitted parameters, used PLASMO's incubation, so the latent-"
+            "infection days it was scored on depend on it: a truth using a PLASMO incubation"
+            " would flatter this model in a comparison like theirs. If a later reading shows the"
+            " parameters were tuned after that evaluation, make it calibrated_with (Agrarium,"
+            " 2026-10-09).",
         ),
     ),
     "magarey2005.generic": Formulation(
