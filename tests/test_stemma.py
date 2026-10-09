@@ -118,6 +118,47 @@ def test_a_borrowed_equation_is_kinship_without_a_shared_author() -> None:
     assert found["brischetto2021.secondary"] == "a borrowed equation"  # both compute it
 
 
+def test_borrowings_are_followed_to_the_end() -> None:
+    """Borrowing Brischetto 2021's model computes what it borrows: Magarey's response,
+    Caffi's sporulation rule and Lalancette's bounds (Codex review, 2026-10-08)."""
+    cat = _with(composite=_candidate(borrows=("brischetto2021.secondary",)))
+    found = {f.other: f.reason for f in stemma.links("composite", ENGINE, cat)}
+    for model in (
+        "brischetto2021.secondary",
+        "magarey2005.generic",
+        "caffi2013.sporulation",
+        "lalancette1988.sporulation_bounds",
+    ):
+        assert found[model] == "a borrowed equation", model
+    held = stemma.hold_out(["composite"], ENGINE, cat)
+    assert {"caffi2013.sporulation", "lalancette1988.sporulation_bounds"} <= set(held)
+
+
+def test_a_cycle_of_borrowings_ends() -> None:
+    cat = _with(
+        one=_candidate(borrows=("two",)),
+        two=_candidate(borrows=("one", "caffi2013.sporulation")),
+    )
+    assert stemma.link("one", "caffi2013.sporulation", cat) == "a borrowed equation"
+    assert stemma.link("one", "two", cat) == "a borrowed equation"
+
+
+def test_a_borrower_carries_the_lenders_calibration() -> None:
+    # A borrowed equation comes with its fitted values, and so with the data behind them.
+    cat = _with(
+        lender=_candidate(calibrated_on=("caffi2016",)),
+        borrower=_candidate(borrows=("lender",)),
+        fitted_with=_candidate(calibrated_with=("rossi2008.primary",)),
+        borrows_that=_candidate(borrows=("fitted_with",)),
+    )
+    assert stemma.link("borrower", "magarey2005.generic", cat) == (
+        "shared calibration data, caffi2016"
+    )
+    assert stemma.link("borrows_that", "rossi2008.primary", cat) == (
+        "calibrated with rossi2008.primary"
+    )
+
+
 def test_a_piece_counts_its_models_borrowings() -> None:
     # Rossi 2008's model computes Blaeser & Weltzien's survival equation (cooptera@7b102e0,
     # primary_infection.py); so does its incubation piece, as a piece of that model.
