@@ -72,7 +72,7 @@ def test_every_dataset_says_where_its_use_was_read() -> None:
 
 
 def test_the_calibration_data_recorded_so_far() -> None:
-    """Each link read in its paper (2026-10-07 and 08); Rossi's Goidanich link is inferred."""
+    """Each link read in its paper (2026-10-07 to 09); Rossi's Goidanich link is inferred."""
     recorded = {name: f.calibrated_on for name, f in FORMULATIONS.items() if f.calibrated_on}
     assert recorded == {
         "goidanich.incubation": ("goidanich1957",),
@@ -88,6 +88,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "ferguson2014.cold_hardiness": ("ferguson2014.prosser",),
         "leoni2026.oospores": ("leoni2026.changins",),
         "zachos1959.incubation": ("zachos1959",),
+        "zachos1959.sporangia_survival": ("zachos1959.conidia",),
         "rafaila1968.incubation": ("rafaila1968",),
         "lalancette1988.infection": ("lalancette1988a",),
         "tranmanhsung1990.pom": ("tranmanhsung1990.bordeaux",),
