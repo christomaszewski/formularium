@@ -598,6 +598,13 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="trail",
         checked="UC IPM's page; González-Domínguez et al. 2015's reference list (held)",
         structures=("wetness-temperature-infection-index",),
+        flags=(
+            "The paper is held in Chris's drop and read since 2026-10-08 (literature/"
+            "broome1995): its byline is J. C. Broome, J. T. English, J. J. Marois, B. A."
+            " Latorre and J. C. Aviles. The combined fit's b2 is garbled in the text copy, so"
+            " 0.061601 needs the page image. Cooptera's list, which this record must match,"
+            " still gives the trail.",
+        ),
     ),
     "gubler1999.powdery_index": Formulation(
         "Powdery mildew risk index (UC Davis)",
@@ -627,6 +634,13 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="trail",
         checked="models/powdery_mildew.py",
         structures=("ascospore-release-rule",),
+        flags=(
+            "The paper is held in Chris's drop and read since 2026-10-08 (literature/"
+            "thiessen2018): L. D. Thiessen, T. M. Neill and W. F. Mahaffee. Its Oregon rule:"
+            " release when, within 24 h, wetness lasts over 6 h above 4 °C, rain exceeds"
+            " 2.5 mm and RH exceeds 80% (66% accurate in its test). Cooptera's list, which"
+            " this record must match, still gives the trail.",
+        ),
     ),
     "sentelhas2008.wetness": Formulation(
         "Leaf wetness from humidity or dew-point depression thresholds",
