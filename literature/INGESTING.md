@@ -22,6 +22,16 @@ first fifteen papers ingested, for sessions that arrive without that history.
 - **Chris drops them:** `drop/inbound_papers/<date>/` in Agrarium's main checkout (a
   worktree has no `drop/`), never committed. `python scripts/coverage.py DIR` lists which
   of them have notes, by the names they were dropped under (`files`) or their DOIs.
+- **The library keeps them** (since 2026-10-09): one folder outside git, named by
+  `$FORMULARIUM_LIBRARY` on the machines that hold papers.
+  - **Layout:** every paper a note names, renamed to the note's id (`<id>.pdf`, its text
+    copy `<id>.txt`); papers without a note in `inbound/` under their own names; and
+    `manifest.tsv`, which maps each file to the name in the note's `files`.
+  - **Read from there.** Once a note is merged, file its paper with
+    `python scripts/library.py file <id> <paper>`. `python scripts/library.py check` finds
+    notes whose papers are missing and copies that changed.
+  - **New drops:** run `coverage.py` on `$FORMULARIUM_LIBRARY/inbound` and on the drop.
+  - Notes keep the names papers were dropped under, never the library's names or paths.
 - **Cooptera keeps its own:** a model the engine runs needs its paper in Cooptera's
   `drop/papers/`, added with Cooptera's `scripts/papers/fetch_oa.py --add`, so that its
   transcription is checked there. Tell the Cooptera session; don't file papers in its repo.

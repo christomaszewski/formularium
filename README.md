@@ -16,7 +16,7 @@ Chris on 2026-10-07: Agrarium's PLAN section 15, decisions D22 to D24.
 | `equations` | The formulations' equations as pure numpy functions |
 | `datasets` | The data formulations were fitted to |
 | `literature/` | One note per paper read: what it holds, its dependence, what was concluded; `INGESTING.md` says how |
-| `scripts/` | `extract_paper.py` (text, or OCR for a scan), `crossref_lookup.py`, `new_note.py`, `coverage.py` (which dropped papers have notes): helpers for ingesting a paper |
+| `scripts/` | `extract_paper.py` (text, or OCR for a scan), `crossref_lookup.py`, `new_note.py`, `coverage.py` (which dropped papers have notes), `verify_quotes.py` (a reading's quotes at their lines), `library.py` (the paper library outside git, under note ids): helpers for ingesting a paper |
 
 **The line through it:** the package records what was published and how it was checked.
 Each tool keeps what it chooses:
