@@ -69,3 +69,11 @@ The publisher's PDF carries a download stamp on every page; it is not copied her
   as development only. Agrarium recorded it (2026-10-09, branch `free-papers`).
 - Franche 2012's form (2.616, with RHmax) is not in this paper; it comes from a later
   version, not held.
+- Found 2026-10-09 through scite.ai: Rosa, Gozzini, Orlandini & Seghi 1995 is
+  doi:10.1016/0168-1699(95)00007-q, and the later PLASMO is Orlandini, Massetti & Dalla
+  Marta 2008, An agrometeorological approach for the simulation of Plasmopara viticola,
+  Comput. Electron. Agric. 64:149-161, doi:10.1016/j.compag.2008.04.004. Both are closed
+  access and not held; the 2008 paper is the likeliest source of Franche's 2.616 form and of
+  the survival equation Brischetto et al. 2020 say has no printed parameters (snippet: its
+  citing papers). Brischetto et al. 2021 counted latent infections with its incubation
+  equation when scoring their model (read in their paper).

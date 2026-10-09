@@ -285,6 +285,13 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         # Figure 2 caption (D), read 2026-10-07.
         calibrated_on=("blaeser1979", "caffi2016"),
+        flags=(
+            "Read 2026-10-09 (Materials and methods, Table 2 footnote 3): to score the model, the"
+            " days with latent infections were counted with 'the equation of Orlandini et al."
+            " (2008)' for incubation, as a function of temperature and RH (Orlandini, Massetti &"
+            " Dalla Marta 2008, Comput. Electron. Agric. 64:149-161, the later PLASMO; not held)."
+            " The evaluation, not the fitted parameters, used PLASMO's incubation.",
+        ),
     ),
     "magarey2005.generic": Formulation(
         "Generic infection response to temperature and wetness",
