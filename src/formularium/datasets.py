@@ -291,15 +291,16 @@ DATASETS: dict[str, Dataset] = {
         "trail",
     ),
     "kennelly2006.chancellor": Dataset(
-        "Fifteen years of historical records of downy mildew's first outbreak on the highly"
-        " susceptible cultivar Chancellor at one New York site, with three more sites for two"
-        " of three years",
-        "Kennelly, Gadoury, Seem, Wilcox & Magarey 2006, Proceedings of the 5th International"
-        " Workshop on Grapevine Downy and Powdery Mildew, San Michele all'Adige (read"
-        " 2026-10-09): the rain > 2.5 mm, > 11 °C, past E-L 12 threshold 'was consistent"
-        " across 15 years of historical data on the highly susceptible cultivar Chancellor at"
-        " one site, and successfully predicted the initial outbreak ... for 2 of 3 years at"
-        " three additional sites'. That the threshold was set on those data is inferred",
+        "Historical records of downy mildew's first outbreak on the highly susceptible"
+        " cultivar Chancellor in a vineyard at Geneva, New York: fifteen years, by Kennelly et"
+        " al. 2006",
+        "Kennelly et al. 2007, Phytopathology 97:512-522, p. 513 (read 2026-10-09): 'Using the"
+        " reported data, a set of criteria was developed (7,8)', and the criteria were evaluated"
+        " 'in addition to the Chancellor vineyard in Geneva where the original data used to"
+        " develop the criteria were collected'. Kennelly, Gadoury, Seem, Wilcox & Magarey 2006"
+        " (5th Int. Workshop on Grapevine Downy and Powdery Mildew, read 2026-10-09): the"
+        " threshold 'was consistent across 15 years of historical data on the highly"
+        " susceptible cultivar Chancellor at one site'",
         "read",
     ),
 }

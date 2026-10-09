@@ -39,6 +39,6 @@ files: [PDMildew_Proceedings_ALL.pdf]
 ## Bearing (2026-10-09)
 
 - Names the data behind the engine's trigger (`kennelly2007.trigger`): recorded as
-  `kennelly2006.chancellor`, inferred to be its calibration data. The berry curve is the
-  data behind `kennelly2005.bunch_window`'s source (Gadoury's model; gadoury2006). Survival
-  observations as in kennelly2007php.
+  `kennelly2006.chancellor`, its development data (Kennelly et al. 2007, p. 513, read). The
+  berry curve is the data behind `kennelly2005.bunch_window`'s source (Gadoury's model;
+  gadoury2006). Survival observations as in kennelly2007php.

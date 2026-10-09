@@ -48,12 +48,11 @@ FORMULATIONS: dict[str, Formulation] = {
         structures=("rain-temperature-trigger",),
         calibrated_on=("kennelly2006.chancellor",),
         calibration_note=(
-            "Kennelly et al. 2007 say the criterion 'was developed (7,8)' by Gadoury et al."
-            " 1998 and 2000 'using the reported data', naming none, and evaluated it in four"
-            " Finger Lakes Chancellor vineyards, 2001-2003 (read 2026-10-08). Kennelly et al."
-            " 2006 (workshop proceedings, read 2026-10-09) say it was 'consistent across 15"
-            " years of historical data' on Chancellor at one site: inferred to be the data it"
-            " was developed on"
+            "Read 2026-10-09: Kennelly et al. 2007 (p. 513) say 'Using the reported data, a set"
+            " of criteria was developed (7,8)' (Gadoury et al. 1998 and 2000) and evaluated it"
+            " 'in addition to the Chancellor vineyard in Geneva where the original data used to"
+            " develop the criteria were collected'; Kennelly et al. 2006 give fifteen years of"
+            " those data. Evaluated in four Finger Lakes Chancellor vineyards, 2001-2003"
         ),
     ),
     "goidanich.incubation": Formulation(
