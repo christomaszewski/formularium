@@ -111,11 +111,10 @@ FORMULATIONS: dict[str, Formulation] = {
         # Its incubation (eqs 8-9): two regressions on temperature at two humidity levels.
         calibrated_on=("goidanich1957", "laviola1986"),
         calibration_note=(
-            "Inferred, trail (2026-10-08): eqs 8-9 are Rossi et al. 2002's regressions, which"
-            " Rossi et al. 2005 describe as relating temperature to incubation at two humidity"
-            " levels after Goidanich et al. 1957. Rossi et al. 2002 is not held. Sanna 2017"
-            " (thesis, pp. 75-76; read 2026-10-09) says the regressions were 'adapted to the"
-            " evaluation table of the incubation period of Goidànich (1957)'. Inferred, trail"
+            "Read 2026-10-09: eqs 8-9 are Rossi et al. 2002's regressions (Atti Giornate"
+            " Fitopatologiche 2002, 2:263-270, Fig. 2, p. 265, the same coefficients), 'adattate"
+            " ai dati di Goidanich et al. (1957)' for that table's high and low humidity."
+            " Sanna 2017 (thesis, pp. 75-76) says the same. Inferred, trail"
             " (2026-10-09): eq. 5's germination time, credited to Laviola et al. 1986 (p. 482),"
             " was fitted to their data (datasets.laviola1986); the fit is not stated"
         ),
@@ -1283,6 +1282,49 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="trail",
         part_of=("rossi2008.primary",),
         structures=("incubation-window",),
+    ),
+    "rossi2002.onset": Formulation(
+        (
+            "The period of probable primary infection, in pentads from 1 January, from March's"
+            " rain days and April's longest dry spell"
+        ),
+        (
+            "Rossi, Giosuè, Girometta & Bugiani 2002, Influenza delle condizioni meteorologiche"
+            " sulle infezioni primarie di Plasmopara viticola in Emilia-Romagna, Atti Giornate"
+            " Fitopatologiche 2002, 2:263-270, eq. 1 and Tab. 3, p. 268"
+        ),
+        year=2002,
+        authors=("Rossi, V.", "Giosuè, S.", "Girometta, B.", "Bugiani, R."),
+        authors_complete=True,
+        authors_from="read",
+        checked="rossi2002.pdf (the conference archive's scan), first page",
+        calibrated_on=("rossi2002.emilia",),
+        # Its targets were back-calculated from the oil-spot dates with eqs 8-9's regressions.
+        calibrated_with=("rossi2008.incubation",),
+        calibration_note=(
+            "read 2026-10-09: a stepwise regression (F = 4 to enter and leave) fitted to the"
+            " probable infection periods of the plain's three zones, 1993-2000, found by"
+            " counting the incubation regressions back from each zone's mean oil-spot date"
+            " (pp. 264-265, Fig. 2). The regressions are Rossi 2008's eqs 8-9"
+        ),
+        structures=("oospore-glm",),
+        structures_note=(
+            "a regression on monthly weather for the season's first infection date: tagged"
+            " strictly as oospore-glm, since its target is the date maturity allows the first"
+            " infection, not maturity itself"
+        ),
+        parameters=(
+            Published("intercept_pentads", 28.34, "pentad", "Tab. 3", "read"),
+            Published("rain_days_march", -0.77, "pentad/d", "Tab. 3", "read"),
+            Published("dry_spell_april", 0.33, "pentad/d", "Tab. 3", "read"),
+        ),
+        flags=(
+            "R² 0.77 (adjusted 0.75), standard error 1.37 pentads, largest error 2.3 pentads,"
+            " on the plain's zones only (Tab. 3, p. 268). The authors say it explains the data"
+            " that generated it and must be checked in other years and places (pp. 269-270).",
+            "Not run by any tool. Recorded because it was fitted with the engine's incubation"
+            " regressions, and as a pattern of first-infection timing in Emilia-Romagna.",
+        ),
     ),
     "fedele2025.dose": Formulation(
         "primary lesions from oospore dose",
