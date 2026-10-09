@@ -69,6 +69,34 @@ DATASETS: dict[str, Dataset] = {
         " the text). His own experiments; separate from his incubation inoculations",
         "read",
     ),
+    "poeydebat2025.villenave": Dataset(
+        "P. viticola oospore DNA by ddPCR in 318 soil samples (198 on a 2.85 x 3.2 m grid,"
+        " 0-15 cm) of a 0.22 ha organic Merlot vineyard at Villenave d'Ornon, Bordeaux, March"
+        " 2022, with depth profiles and a leaf-disc bioassay",
+        "Poeydebat et al. 2025, Appl. Environ. Microbiol. 91(12):e0166725 (read 2026-10-09"
+        " in Europe PMC's full text). No formulation is recorded as fitted to them; Agrarium"
+        " plans to check its oospore field's spatial structure against them",
+        "read",
+    ),
+    "kennelly2007.loxton": Dataset(
+        "Chardonnay shoots and potted vines in a vineyard at Loxton, South Australia, October"
+        " to December 2003: lesion cohorts induced to sporulate repeatedly, sporangia counted"
+        " per mm², and sporangia sampled at 1-4 h intervals after sunrise and scored for"
+        " germination within 4 h, with canopy temperature, RH and wetness every 10 min",
+        "Kennelly et al. 2007, Phytopathology 97:512-522, Materials and methods and Figs 3-7"
+        " (read 2026-10-09 in an Internet Archive capture of the publisher's PDF)",
+        "read",
+    ),
+    "rumbou2004.aghialos": Dataset(
+        "Every oil spot in an untreated 100-vine Roditis plot at N. Aghialos, Thessaly, 0.5 km"
+        " from the sea, 2001 (five samplings, 327 lesions) and 2002 (four, 426), genotyped"
+        " with four microsatellites and mapped to the vine, with the season's rain, mean"
+        " temperature and RH",
+        "Rumbou & Gessler 2004, Eur. J. Plant Pathol. 110:379-392, Tables 1 and 4 (read"
+        " 2026-10-09). No formulation is recorded as fitted to them; Agrarium plans to"
+        " history-match its truth's epidemic structure against them",
+        "read",
+    ),
     "rafaila1968": Dataset(
         "Detached leaves in a polythermostat at 5-30 °C and 100% humidity, Bucharest"
         " 1963-1965; and incubation by leaf age in the Minis and Blaj vineyards",
