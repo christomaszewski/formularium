@@ -197,6 +197,8 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [salazargutierrez2016](salazargutierrez2016.md) | none | phenology, dormancy | Washington | Held out by structure |
 | [salinari2007](salinari2007.md) | downy mildew | season onset | Italy | a statistical onset model at one site |
 | [sanzablanedo2018](sanzablanedo2018.md) | none | photogrammetry | León (Spain) | Off-topic |
+| [sarejanni1950reports](sarejanni1950reports.md) | downy mildew | season severity, oospores | Greece | 1952: abundant oospores, late-winter drought, no mildew |
+| [sarejanni1951](sarejanni1951.md) | downy mildew | season severity, oospores, overwintering | Greece | Capus's winter-by-spring rain rule; preparatory years; Greek mildew years |
 | [sekulic2020](sekulic2020.md) | none | interpolation error | Synthetic fields | Interpolation accuracy for daily precipitation in Catalonia and temperature in Croatia |
 | [sentelhas2004](sentelhas2004.md) | none | leaf wetness, sensors | Ontario, Sao Paulo | The wetness candidate D27 frees |
 | [shin2020](shin2020.md) | none | leaf wetness, remote sensing | South Korea | Kin by calibration (Agrarium's candidates) |
