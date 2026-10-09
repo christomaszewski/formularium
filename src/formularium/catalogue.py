@@ -111,11 +111,10 @@ FORMULATIONS: dict[str, Formulation] = {
         # Its incubation (eqs 8-9): two regressions on temperature at two humidity levels.
         calibrated_on=("goidanich1957", "laviola1986"),
         calibration_note=(
-            "Inferred, trail (2026-10-08): eqs 8-9 are Rossi et al. 2002's regressions, which"
-            " Rossi et al. 2005 describe as relating temperature to incubation at two humidity"
-            " levels after Goidanich et al. 1957. Rossi et al. 2002 is not held. Sanna 2017"
-            " (thesis, pp. 75-76; read 2026-10-09) says the regressions were 'adapted to the"
-            " evaluation table of the incubation period of Goidànich (1957)'. Inferred, trail"
+            "Read 2026-10-09: eqs 8-9 are Rossi et al. 2002's regressions (Atti Giornate"
+            " Fitopatologiche 2002, 2:263-270, Fig. 2, p. 265, the same coefficients), 'adattate"
+            " ai dati di Goidanich et al. (1957)' for that table's high and low humidity."
+            " Sanna 2017 (thesis, pp. 75-76) says the same. Inferred, trail"
             " (2026-10-09): eq. 5's germination time, credited to Laviola et al. 1986 (p. 482),"
             " was fitted to their data (datasets.laviola1986); the fit is not stated"
         ),
@@ -1083,9 +1082,10 @@ FORMULATIONS: dict[str, Formulation] = {
             " paper states: m or its unit is misprinted, or d is not % an hour. No RHmax is"
             " printed.",
             "Franche 2012 prints incubRate = 2.616·(T - Tmin)(Tmax - T)·(RH - RHmin)/(RHmax -"
-            " RHmin)/(Tmax - Tmin)², 0.65 at the optimum. Neither 2.616 nor RHmax is in Rosa"
-            " 1993, Orlandini 1993 or Orlandini 2003; it probably comes from Rosa et al. 1995"
-            " (Comput. Electron. Agric. 12:311-322) or Orlandini et al. 2003a,b, not held.",
+            " RHmin)/(Tmax - Tmin)², 0.65 at the optimum. 2.616 is in none of Rosa 1993,"
+            " Orlandini 1993, Orlandini 2003, Rosa 1995 (m = 0.082 on √(RH - 30)) or Orlandini"
+            " 2008 (fm not printed; read 2026-10-09). Orlandini 2008 gives the bounds: 10-34 °C,"
+            " 30-100 % RH. Orlandini et al. 2003a,b remain unfound.",
         ),
     ),
     "orlandini1993.infection": Formulation(
@@ -1174,8 +1174,8 @@ FORMULATIONS: dict[str, Formulation] = {
             " 100/hours % an hour. The 15-30 °C piece rises to 477.6 h at 30 °C and then drops to"
             " 12: probably a misprinted sign, since 15.52(30 - T) + 12 meets both neighbours"
             " (244.8 h at 15 °C, 12 h at 30 °C). Not corrected here.",
-            "Brischetto et al. 2020 say the survival equation Orlandini et al. 2008 added to"
-            " PLASMO prints no parameters; that is a later paper, not this one.",
+            "Orlandini et al. 2008 replaced it with orlandini2008.survival (read 2026-10-09),"
+            " which prints no parameters, as Brischetto et al. 2020 say.",
         ),
     ),
     "orlandini1993.trigger": Formulation(
@@ -1206,6 +1206,159 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("rain_mm", 8.0, "mm", "p. 620 ('>= 8 mm within any 24-h period')", "read"),
             Published("t_min_c", 10.0, "°C", "p. 620", "read"),
             Published("shoot_mm", 100.0, "mm", "p. 620", "read"),
+        ),
+    ),
+    "rosa1995.incubation": Formulation(
+        "Incubation progress per hour: a parabola in temperature times a square root of humidity",
+        (
+            "Rosa, Gozzini, Orlandini & Seghi 1995, A computer program to improve the control of"
+            " grapevine downy mildew, Comput. Electron. Agric. 12:311-322, p. 313"
+        ),
+        year=1995,
+        authors=("Rosa, M.", "Gozzini, B.", "Orlandini, S.", "Seghi, L."),
+        authors_complete=True,
+        authors_from="read",
+        checked="04_Rosa_Gozzini_Orlandini_Seghi_1995.pdf (supplied by Chris), page images",
+        doi="10.1016/0168-1699(95)00007-Q",
+        part_of=("orlandini1993.plasmo",),
+        calibrated_on=("goidanich1957", "zachos1959", "orlandini1993.emergences"),
+        calibration_note=(
+            "read 2026-10-09: Tmin and Tmax 'are identifiable from literature (Tmin = 10°C; Tmax"
+            " = 34°C) (Goidanich, 1959; Zachos, 1959; Magarey et al., 1991)'; m 'has been"
+            " derived by comparing several infections and durations of incubation periods, with"
+            " the results of simulations' (p. 313), from 'various field trials ... when the"
+            " difference in time between observed and calculated sporangia emergencies reached a"
+            " minimum value' (p. 317). Goidanich's manual and Zachos's monograph are taken as"
+            " their incubation data, and the trials as Orlandini et al. 1993's: the strict"
+            " reading, inferred"
+        ),
+        structures=("daily-incubation-table",),
+        structures_note="an hourly rate summed to 100 %: the table's rate-summation form, strictly",
+        parameters=(
+            Published("t_min_c", 10.0, "°C", "p. 313", "read"),
+            Published("t_max_c", 34.0, "°C", "p. 313", "read"),
+            Published("rh_min_pct", 30.0, "%", "p. 313, RH in [30, 100]", "read"),
+            Published("m", 0.082, "%/h per %^0.5", "p. 313, 'its mean value'", "read"),
+        ),
+        flags=(
+            "As printed (p. 313): f1(t+1) = f1(t) + d(T, RH); d = d1(T)·d2(RH); d1 = 4(T -"
+            " Tmin)(Tmax - T)/(Tmax - Tmin)²; d2 = m·(RH - 30)^(1/2); hourly, T in [Tmin, Tmax],"
+            " RH in [30, 100]. At 22 °C and 100 % RH, d = 0.082·√70 = 0.69 % an hour, about 6 days"
+            " to 100 %: unlike the 1993 version's m(RH - 30), the rate is plausible. 'New"
+            " equations ... because of deficiencies shown by the previous model' (p. 313).",
+            "Not Franche 2012's 2.616·(RH - RHmin)/(RHmax - RHmin): that form is linear in RH."
+            " PLASMO 2.11, tested in 1992-1993 at Paretaio, Pulizzano and Sassuolo (Chianti).",
+        ),
+    ),
+    "orlandini2008.plasmo": Formulation(
+        (
+            "PLASMO as an epidemic: leaf area, lesion and sporangia survival, sporulation,"
+            " inoculation and incubation, tuned on two seasons' severity"
+        ),
+        (
+            "Orlandini, Massetti & Dalla Marta 2008, An agrometeorological approach for the"
+            " simulation of Plasmopara viticola, Comput. Electron. Agric. 64:149-161, eqs 1-6"
+        ),
+        year=2008,
+        authors=("Orlandini, S.", "Massetti, L.", "Dalla Marta, A."),
+        authors_complete=True,
+        authors_from="read",
+        checked="03_Orlandini_Massetti_DallaMarta_2008.pdf (supplied by Chris), page images",
+        doi="10.1016/j.compag.2008.04.004",
+        # The 'three ten' rule is one of two ways to start the epidemic (p. 154).
+        borrows=("rule_3_10",),
+        calibrated_on=(
+            "orlandini2008.mondeggi",
+            "blaeser1978.survival",
+            "lalancette1988a",
+            "goidanich1957",
+        ),
+        calibration_note=(
+            "read 2026-10-09: C (sporangia per cm²) and D (sporangia survival, days) were tuned"
+            " from 2 to 40 on the 1995-1996 severity at Mondeggi-Lappeggi, C22 D18 chosen (pp."
+            " 158-160). Inferred: each function is credited to a source and its coefficients are"
+            " not printed; the fits are taken to be to those sources' data. Survival (eqs 2, 4)"
+            " to Blaeser & Weltzien 1978; sporulation (eq. 3) to Lalancette et al. 1988a, the"
+            " sporulation paper (78:1316); inoculation (eq. 5) to Lalancette et al. 1988b, the"
+            " infection paper (78:794, datasets.lalancette1988a); incubation (eq. 6) to Goidanich"
+            " et al. 1958 and Magarey et al. 1991"
+        ),
+        structures=(
+            "rain-temperature-trigger",
+            "survival-hours-temperature-humidity",
+            "dark-moist-hours-sporulation",
+            "sporulation-temperature-bounds",
+            "wetness-temperature-infection-index",
+            "daily-incubation-table",
+        ),
+        structures_note=(
+            "the union of its pieces, strictly: sporulation needs 7-12 night hours at RH >= 90 %"
+            " within 10-30 °C; inoculation is a cubic in temperature times a term in 2-9 wet"
+            " hours; incubation an hourly rate summed to 100 %"
+        ),
+        parameters=(
+            Published("c_tuned", 22.0, "1", "p. 160, C22 D18", "read"),
+            Published("d_tuned", 18.0, "d", "p. 160, C22 D18", "read"),
+            Published("incubation_t_min_c", 10.0, "°C", "eq. 6, p. 159", "read"),
+            Published("incubation_t_max_c", 34.0, "°C", "eq. 6, p. 159", "read"),
+            Published("incubation_rh_min_pct", 30.0, "%", "eq. 6, p. 159", "read"),
+            Published("incubation_rh_max_pct", 100.0, "%", "eq. 6, p. 159", "read"),
+        ),
+        flags=(
+            "Prints the forms and bounds but none of the coefficients (a0-a2, b0-b3, c0-c2,"
+            " cs,max, d0-d3, e0-e3, fm, B, F): it cannot be run from the paper.",
+            "Sporulation (eq. 3) as printed: (c2T² + c1T + c0)/cs,max·(e^-((H-7)/2) - e^-((H-6)/2))"
+            " for H = 7-12 consecutive night hours at RH >= 90 % and T = 10-30 °C. Inoculation"
+            " (eq. 5): (e3T³ + e2T² + e1T + e0)·(e^-((H-2)/2) - e^-((H-1)/2)) for H = 2-9 wet"
+            " hours (wetness or rain) and T = 5-30 °C. Summed hour by hour, the H terms"
+            " telescope to 1 - e^-((H-6)/2) and 1 - e^-((H-1)/2) (arithmetic, not stated).",
+            "Incubation (eq. 6) as typeset: fm·(T - Tmin)(Tmax - T)/[(Tmax - Tmin)²·√(RH - RHmin"
+            "/RHmax - RHmin)], humidity under the root in the denominator, yet Fig. 7 rises with"
+            " humidity: probably a typesetting error. Fig. 7 peaks near 8.5 % at 22 °C and 99 %;"
+            " its time unit is not stated.",
+            "Validation 1998-2003: risk class right in 4 of 6 years, 'Low' simulated as 'No"
+            " risk' in the other two (Table 4); RMSE 0.74-5.55 (Table 3).",
+        ),
+    ),
+    "orlandini2008.survival": Formulation(
+        (
+            "Survival of sporulating lesions and of sporangia: a Gaussian in humidity times the"
+            " distance below 30 °C, with a 1/6 floor"
+        ),
+        (
+            "Orlandini, Massetti & Dalla Marta 2008, Comput. Electron. Agric. 64:149-161, eqs 2"
+            " and 4, Figs 3 and 5, pp. 154-157"
+        ),
+        year=2008,
+        authors=("Orlandini, S.", "Massetti, L.", "Dalla Marta, A."),
+        authors_complete=True,
+        authors_from="read",
+        checked="03_Orlandini_Massetti_DallaMarta_2008.pdf (supplied by Chris), page images",
+        doi="10.1016/j.compag.2008.04.004",
+        part_of=("orlandini2008.plasmo",),
+        calibration_note=(
+            "credited '(Blaeser and Weltzien, 1978)' for both (pp. 154, 156); b0-b3 and d0-d3 are"
+            " not printed, nor is a fit described: the link to blaeser1978.survival is inferred"
+        ),
+        structures=("survival-hours-temperature-humidity",),
+        structures_note=(
+            "temperature and relative humidity, not a vapour pressure deficit, and not"
+            " Blaeser & Weltzien's polynomial"
+        ),
+        parameters=(
+            Published("t_max_c", 30.0, "°C", "eqs 2 and 4", "read"),
+            Published("rh_min_pct", 30.0, "%", "eqs 2 and 4", "read"),
+            Published("floor", 6.0, "1", "eqs 2 and 4, '+ 6', unit not stated", "read"),
+        ),
+        flags=(
+            "As printed: O(t+1) = O(t)·(1 - B·f1), f1 = 1/6 for T > 30 °C, else 1/[(b0 + b1·e^-"
+            "((RH - b2)/b3)²)·(T - 30) + 6] for RH 30-100 %; sporangia the same with D and"
+            " d0-d3 (eq. 4). Figs 3 and 5 (days) reach about 13-14 at 5 °C near saturation, about"
+            " 3-4 at 5 °C in dry air, and near 0 at 30 °C, falling linearly with temperature;"
+            " that fits a floor of 6 hours, not days (inferred).",
+            "Confirms Brischetto et al. 2020 and 2021: PLASMO's survival takes temperature and"
+            " humidity after Blaeser & Weltzien 1978 and prints no parameters. It is not their"
+            " equation.",
         ),
     ),
     "rouzet2003.cold_days": Formulation(
@@ -1283,6 +1436,49 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="trail",
         part_of=("rossi2008.primary",),
         structures=("incubation-window",),
+    ),
+    "rossi2002.onset": Formulation(
+        (
+            "The period of probable primary infection, in pentads from 1 January, from March's"
+            " rain days and April's longest dry spell"
+        ),
+        (
+            "Rossi, Giosuè, Girometta & Bugiani 2002, Influenza delle condizioni meteorologiche"
+            " sulle infezioni primarie di Plasmopara viticola in Emilia-Romagna, Atti Giornate"
+            " Fitopatologiche 2002, 2:263-270, eq. 1 and Tab. 3, p. 268"
+        ),
+        year=2002,
+        authors=("Rossi, V.", "Giosuè, S.", "Girometta, B.", "Bugiani, R."),
+        authors_complete=True,
+        authors_from="read",
+        checked="rossi2002.pdf (the conference archive's scan), first page",
+        calibrated_on=("rossi2002.emilia",),
+        # Its targets were back-calculated from the oil-spot dates with eqs 8-9's regressions.
+        calibrated_with=("rossi2008.incubation",),
+        calibration_note=(
+            "read 2026-10-09: a stepwise regression (F = 4 to enter and leave) fitted to the"
+            " probable infection periods of the plain's three zones, 1993-2000, found by"
+            " counting the incubation regressions back from each zone's mean oil-spot date"
+            " (pp. 264-265, Fig. 2). The regressions are Rossi 2008's eqs 8-9"
+        ),
+        structures=("oospore-glm",),
+        structures_note=(
+            "a regression on monthly weather for the season's first infection date: tagged"
+            " strictly as oospore-glm, since its target is the date maturity allows the first"
+            " infection, not maturity itself"
+        ),
+        parameters=(
+            Published("intercept_pentads", 28.34, "pentad", "Tab. 3", "read"),
+            Published("rain_days_march", -0.77, "pentad/d", "Tab. 3", "read"),
+            Published("dry_spell_april", 0.33, "pentad/d", "Tab. 3", "read"),
+        ),
+        flags=(
+            "R² 0.77 (adjusted 0.75), standard error 1.37 pentads, largest error 2.3 pentads,"
+            " on the plain's zones only (Tab. 3, p. 268). The authors say it explains the data"
+            " that generated it and must be checked in other years and places (pp. 269-270).",
+            "Not run by any tool. Recorded because it was fitted with the engine's incubation"
+            " regressions, and as a pattern of first-infection timing in Emilia-Romagna.",
+        ),
     ),
     "fedele2025.dose": Formulation(
         "primary lesions from oospore dose",

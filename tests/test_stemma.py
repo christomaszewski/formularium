@@ -79,15 +79,24 @@ def test_a_model_used_in_calibration_is_a_dependency() -> None:
     )
 
 
-def test_rossi_s_incubation_and_goidanich_share_calibration_data_inferred() -> None:
-    """Rossi 2008's eqs 8-9 regress incubation on temperature at two humidity levels, after
-    Goidanich et al. 1957 (inferred, trail). The dependency holds without the borrow."""
+def test_rossi_s_incubation_and_goidanich_share_calibration_data() -> None:
+    """Rossi 2008's eqs 8-9 are regressions 'adattate ai dati di Goidanich et al. (1957)'
+    (Rossi et al. 2002, p. 265; read 2026-10-09). The dependency holds without the borrow."""
     # Since cooptera@7b102e0 Rossi 2008 no longer borrows the table: the data link alone holds.
     assert "goidanich.incubation" not in FORMULATIONS["rossi2008.primary"].borrows
     assert stemma.link("rossi2008.incubation", "goidanich.incubation") == (
         "shared calibration data, goidanich1957"
     )
-    assert "inferred" in FORMULATIONS["rossi2008.primary"].calibration_note.lower()
+    assert "rossi et al. 2002" in FORMULATIONS["rossi2008.primary"].calibration_note.lower()
+
+
+def test_calibration_with_a_piece_is_calibration_with_its_model() -> None:
+    """Rossi et al. 2002's onset regression was fitted to dates counted back with the
+    incubation regressions, a piece of the model the engine runs whole."""
+    assert FORMULATIONS["rossi2002.onset"].calibrated_with == ("rossi2008.incubation",)
+    assert stemma.link("rossi2002.onset", "rossi2008.primary") == (
+        "calibrated with rossi2008.primary"
+    )
 
 
 def test_added_authors_count_toward_flags() -> None:

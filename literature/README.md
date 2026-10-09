@@ -63,6 +63,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [biggs2016](biggs2016.md) | none | evapotranspiration | global | Clear, and of indirect use |
 | [biomebgc2010](biomebgc2010.md) | none | evapotranspiration, interception | Generic global biomes | No hourly wetness |
 | [blaeser1978](blaeser1978.md) | downy mildew | sporulation, sporangia survival, dispersal | Germany | The laboratory survival data behind the 1979 curves; sporulation needs 98 % RH and 4 h dark |
+| [blaeser1978diss](blaeser1978diss.md) | downy mildew | sporangia survival, infection, leaf wetness | Germany | Contents only: survival data on pp. 47-60, the wetness rule on pp. 24-28 |
 | [blaeser1979](blaeser1979.md) | downy mildew | infection, sporangia survival | Ahr, Germany | c2 is 0.01 for detached sporangia, and the index is E·(1 - RH/100), not T·(1 - RH/100) |
 | [bleyer2008](bleyer2008.md) | downy mildew | primary infection, sporulation | Baden-Württemberg, Switzerland | The engine's 140 °C·day oospore rule is still sourced only through Leoni et al |
 | [bleyer2020](bleyer2020.md) | downy mildew | spray timing, fungicide efficacy | Baden-Württemberg | States VitiMeteo's rule that one spray protects until 300-400 cm2 of new leaf has grown |
@@ -139,6 +140,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [garciagutierrez2023](garciagutierrez2023.md) | none | phenology | Chile | Held out by structure, as recorded |
 | [gashu2020](gashu2020.md) | none | phenology, berry composition | Israel | Clear and observational |
 | [gautam2013](gautam2013.md) | various | climate change | India, global | Context only |
+| [gehmann1987](gehmann1987.md) | downy mildew | oospores, primary infection | Baden | Contents only: behind the 160 °C·day oospore rule (Gessler 2011); pp. 57-77 |
 | [gent2007cones](gent2007cones.md) | powdery mildew | sampling, observation | Oregon, Washington | Held out by structure as Part I |
 | [gent2007leaves](gent2007leaves.md) | powdery mildew | sampling, observation | Oregon, Washington | Held out by structure if the truth's scouts sampled this way (D26) |
 | [gent2008](gent2008.md) | powdery mildew | risk index, management | Pacific Northwest | Context for the Gubler-Thomas index's hop use (gent2025 note) |
@@ -146,6 +148,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [gent2025](gent2025.md) | powdery mildew | risk index, spray timing | Washington | Kin, by a borrowed equation and form (Agrarium's candidates) |
 | [gessler2011](gessler2011.md) | downy mildew | review: oospores, incubation, warning models | Europe | Gehmann's 160 °C·days; Merjanian's 61/T incubation; the 3-10 as Goidanich |
 | [ghiani2025](ghiani2025.md) | downy mildew, powdery mildew | detection, observation | Sardinia | Clear |
+| [giosue2002](giosue2002.md) | downy mildew | primary infection, spatial analysis | Emilia-Romagna | Abstract only: onset zones keep their order from year to year |
 | [gisi2002](gisi2002.md) | downy mildews | fungicides, warning models | Europe | Which country ran which model, 2002 |
 | [gleason1994](gleason1994.md) | none | leaf wetness, dew | Iowa, Kansas | Held out by structure, not by its author (Agrarium's candidates) |
 | [gobbin2005](gobbin2005.md) | downy mildew | epidemic structure, dispersal | central Europe | 70 % of genotypes once, 14 % twice; under 20 m per cycle; colonization 1-2 m² a day |
@@ -236,6 +239,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [masson2011](masson2011.md) | none (climate models) | model dependence | global | why dependence is judged by components and behaviour |
 | [mecikalski2004alexi](mecikalski2004alexi.md) | none | evapotranspiration | United States | Methods in words |
 | [meggio2008](meggio2008.md) | none | remote sensing | Ribera del Duero | Viewing geometry alters vineyard reflectance |
+| [metos2026](metos2026.md) | downy mildew, powdery mildew, black rot, grey mould | sporulation, risk index | general | iMETOS/FieldClimate rules: no data behind them; a comparator, not a truth |
 | [mezei2022](mezei2022.md) | downy mildew | warning system, incubation | Serbia | 3-10 trigger; incubation fitted to Miller's table |
 | [miles2018](miles2018.md) | downy mildews | detection | USA | Detection methods review |
 | [miller1952](miller1952.md) | downy mildew, others | forecasting history | global | History of incubation calendars and rules |
@@ -254,6 +258,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [onofre2020](onofre2020.md) | none | wetness sensing | Florida | The usual faults of wetness sensors (height, angle, orientation, coating) |
 | [orlandini1993](orlandini1993.md) | downy mildew | infection, incubation, survival, validation | Tuscany | PLASMO with fitted n and m; every piece kin to the engine by data or form |
 | [orlandini2003](orlandini2003.md) | downy mildew | disease severity, model evaluation | Tuscany | A fuzzy-logic PLASMO; prints no equations |
+| [orlandini2008](orlandini2008.md) | downy mildew | survival, sporulation, infection, incubation | Tuscany | PLASMO's later form: bounds printed, coefficients not; kin in every process |
 | [orth1937](orth1937.md) | potato late blight | sporangia survival | Germany | Another oomycete; humidity and sporangia |
 | [padro2019](padro2019.md) | none | remote sensing | Catalonia | Positional error of UAV images by method (raw GNSS about 1 m |
 | [pak2008cable](pak2008cable.md) | none | land surface model | Australia | Slides only (OCR) |
@@ -272,10 +277,12 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [reis2020](reis2020.md) | none | phenology | Portugal | Held out by structure, read strictly (Agrarium's candidates) |
 | [roberts2017](roberts2017.md) | none | statistics | general | Block cross-validation for structured data |
 | [rosa1993](rosa1993.md) | downy mildew | infection, incubation, survival | Tuscany | PLASMO's first equations; incubation fitted to Goidanich's table, so kin |
+| [rosa1995](rosa1995.md) | downy mildew | incubation, spray timing | Tuscany | PLASMO 2.11's incubation, fully printed (m = 0.082); kin by Goidanich and Zachos |
 | [rose2016](rose2016.md) | none | decision support | England and Wales | Why farmers use or ignore decision tools |
+| [rossi2002](rossi2002.md) | downy mildew | incubation, primary infection | Emilia-Romagna | Rossi 2008's incubation regressions, fitted to Goidanich's data as stated |
 | [rossi2005](rossi2005.md) | downy mildew | primary infection, incubation | northern Italy | Does not say what the incubation regressions were fitted to |
 | [rossi2006](rossi2006.md) | downy mildew | primary infection model | Italy | No equations; does not settle the incubation's data |
-| [rossi2008](rossi2008.md) | downy mildew | primary infection, incubation | Italy | incubation eqs 8-9 from Rossi et al. 2002, after Goidanich |
+| [rossi2008](rossi2008.md) | downy mildew | primary infection, incubation | Italy | incubation eqs 8-9 from Rossi et al. 2002, fitted to Goidanich's data |
 | [rossi2010](rossi2010.md) | powdery mildew | ascospore maturation, ascospore release | Piacenza | A flag, not kin |
 | [rossi2012](rossi2012.md) | downy mildew | splash dispersal, primary infection | Emilia-Romagna | Its splash data (4.4 drops/cm² at 40 cm, 0.03 at 80 cm, 0.003 at 140 cm |
 | [rossi2013](rossi2013.md) | downy mildew | epidemic structure | Europe | Gobbin's genotype patterns, for history matching |

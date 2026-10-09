@@ -25,7 +25,8 @@ uses. Only the incubation is noted here.
   oil spots appear. Credited "(Rossi et al., 2002)"; the paragraph cites Goidanich et al.
   1957 for incubation length that "depends mainly on T".
 - **The source:** Rossi, Giosuè, Girometta & Bugiani 2002, Atti Giornate Fitopatologiche
-  2002:263-270 (eds Brunelli & Canova, CLUEB, Bologna). Held by no one on 2026-10-08.
+  2002, 2:263-270 ([rossi2002](rossi2002.md), read 2026-10-09). Its Fig. 2 prints the same
+  coefficients as days to oil spots, "adattate ai dati di Goidanich et al. (1957)".
 - Rossi et al. 2005 (Riv. Ital. Agrometeorol. 3:7-13, read by a paper-search session)
   describes the model's incubation as "two regression equations relating temperature to
   the length of incubation, at two extreme levels of relative humidity", after Goidanich.
@@ -34,8 +35,8 @@ uses. Only the incubation is noted here.
 
 ## Dependence
 
-- Eqs 8-9 are not Goidanich's table, but very probably regressions on Goidanich's (that
-  is, Casarini's Emilia) data: recorded as `calibrated_on: goidanich1957`, inferred.
+- Eqs 8-9 are not Goidanich's table but regressions on its data, as Rossi et al. 2002
+  state (p. 265): `calibrated_on: goidanich1957`, read since 2026-10-09.
 - Computes Blaeser & Weltzien's survival equation.
 
 ## Bearing (2026-10-08)

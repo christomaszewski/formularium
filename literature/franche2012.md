@@ -30,7 +30,7 @@ Charente, Aquitaine), 2002-2004, with infection dates inferred by experts.
 | Conidia survival | elements of Vinemild (T, RH); no equation printed | Vinemild | independent, but unusable as printed |
 | Infection efficiency | a Richards-type curve in wet hours and temperature | Lalancette, Ellis & Madden 1988 | shares data with Magarey 2005's P. viticola row |
 | Leaf susceptibility | Calonnec et al. 2008's leaf-age relation for powdery mildew, used as is | Calonnec 2008 (Bordeaux) | independent of the engine; a transfer between diseases |
-| Incubation | incubRate = 2.616·(T − Tmin)(Tmax − T)·(RH − RHmin)/(RHmax − RHmin) / (Tmax − Tmin)² (eq. 15); the four bounds not printed | PLASMO (Orlandini et al. 2008) | no Goidanich; PLASMO's data source not stated; Orlandini a flag through Sentelhas 2008 |
+| Incubation | incubRate = 2.616·(T − Tmin)(Tmax − T)·(RH − RHmin)/(RHmax − RHmin) / (Tmax − Tmin)² (eq. 15); the four bounds not printed | PLASMO (Orlandini et al. 2008) | no Goidanich here, but Orlandini 2008 credits Goidanich et al. 1958 (see below); Orlandini a flag through Sentelhas 2008 |
 
 Also: hourly temperature from daily data by Sall 1979; Bordeaux models (POM, Potentiel
 Système, EPI, MILVIT) described but not used.
@@ -43,6 +43,11 @@ Système, EPI, MILVIT) described but not used.
 - **PLASMO's incubation form** is printed here for the first time we have seen, but without
   its parameters: a lead to PLASMO's own papers (Orlandini, Rosa et al. 1993), not a usable
   formulation.
+- **PLASMO's incubation, followed up (2026-10-09):** Orlandini et al. 2008 (eq. 6) print
+  the bounds, 10-34 °C and 30-100 % RH, credit Goidanich et al. 1958 and Magarey et al.
+  1991, and put a square root on the humidity term; fm is not printed. Rosa et al. 1995
+  print m = 0.082 on √(RH - 30). Neither has 2.616 ([orlandini2008](orlandini2008.md),
+  [rosa1995](rosa1995.md)).
 - Its primary chain is Rossi's, and its infection and sporulation share the Lalancette data
   the engine reaches through Magarey and Brischetto.
 - **Rouzet & Jacquin's rule, followed up (2026-10-08, main session):** recorded as

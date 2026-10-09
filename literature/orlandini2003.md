@@ -51,5 +51,10 @@ Presented at the EPPO conference on computer aids for plant protection, York, Oc
 - Prints none of PLASMO's equations, so it neither gives Franche 2012's bounds nor the
   survival parameters. Rosa et al. 1995 (Comput. Electron. Agric. 12:311-322) and Orlandini
   et al. 2003a,b (Vitic. Enol. Sci.) are the papers to seek for the later version.
+- **Followed up (2026-10-09):** Rosa 1995 ([rosa1995](rosa1995.md)) and Orlandini et al.
+  2008 ([orlandini2008](orlandini2008.md)) read. Orlandini 2008 prints the bounds but no
+  survival parameters. Orlandini et al. 2003a,b are cited to *Vitic. Enol. Sci.*, which ended
+  with vol. 55 in 2000 by the German National Library's record (as a search reported it,
+  not checked here): probably miscited, and unfound.
 - Seven seasons of severity in untreated Sangiovese plots near Florence are a pattern a
   truth could be compared with, if the data could be had.

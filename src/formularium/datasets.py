@@ -27,14 +27,17 @@ DATASETS: dict[str, Dataset] = {
         "Goidanich, Casarini & Foschi 1957, Lotta antiparassitaria e calendario dei trattamenti"
         " in viticoltura, Giornale di Agricoltura (13 January): 11-14: incubation of"
         " P. viticola by temperature and humidity (reference line read in Rossi et al. 2005;"
+        " Rossi et al. 2002 titles it 'Lotta antiperonosporica e calendario d'incubazione';"
         " the paper itself not read)",
-        "Rossi et al. 2005 (Riv. Ital. Agrometeorol. 3:7-13; read 2026-10-08 by the paper"
-        " search session): incubation is 'a function of temperature and relative humidity"
-        " (Goidanich et al., 1957)', and the model 'uses two regression equations relating"
-        " temperature to the length of incubation, at two extreme levels of relative"
-        " humidity'. That those regressions, Rossi 2008's eqs 8-9, were fitted to Goidanich's"
-        " data is inferred, not stated; Rossi et al. 2002, where the fit is described, is not"
-        " held. The engine's Goidanich table is these data, as Porras Soriano 2006 prints them."
+        "Rossi, Giosuè, Girometta & Bugiani 2002 (Atti Giornate Fitopatologiche 2002, 2:263-"
+        "270, p. 265; read 2026-10-09 in the conference archive's scan): incubation 'è stata"
+        " calcolata in funzione della temperatura dell'aria, mediante due equazioni di"
+        " regressione adattate ai dati di Goidanich et al. (1957)', for the periods those"
+        " authors called of high and low humidity; Fig. 2 prints them, 45.1 - 3.45T + 0.073T²"
+        " and 59.9 - 4.55T + 0.095T² days, Rossi 2008's eqs 8-9. Rossi et al. 2005 (Riv. Ital."
+        " Agrometeorol. 3:7-13; read 2026-10-08 by the paper search session) says the same"
+        " less exactly. The engine's Goidanich table is these data, as Porras Soriano 2006"
+        " prints them."
         " Zachos 1959 (read 2026-10-08, p. 250) describes Casarini 1957's own curves for"
         " Emilia, at high and at low humidity, from artificial and natural inoculations;"
         " Casarini co-wrote the table, so its data are probably his (inferred, not stated)."
@@ -45,7 +48,18 @@ DATASETS: dict[str, Dataset] = {
         " 1:229-237, not held): a third party's statement, not the authors'. Rosa et al. 1993"
         " (p. 208, read 2026-10-09) fitted PLASMO's incubation to 'the Goidanich table"
         " (Goidanich et al., 1958)', the authors' book I nemici della vite",
-        "trail",
+        "read",
+    ),
+    "rossi2002.emilia": Dataset(
+        "The date of the first oil spots in unsprayed plots of 127 vineyards in Emilia-Romagna"
+        " (80 on the plain, 47 in the hills), 1993-2000, leaves inspected every 5-7 days; mean"
+        " dates for the western, central and eastern plain by year (Tab. 1), with daily rain"
+        " and temperature at Piacenza, Bologna and Ravenna",
+        "Rossi, Giosuè, Girometta & Bugiani 2002, Atti Giornate Fitopatologiche 2002, 2:263-270,"
+        " pp. 264-266 and Tab. 1 (read 2026-10-09 in the conference archive's scan): the onset"
+        " regression (eq. 1) was fitted to the plain's probable infection periods, which were"
+        " back-calculated from these dates with the incubation regressions",
+        "read",
     ),
     "sarejanni1951.greece": Dataset(
         "Greek downy mildew seasons: the mildew years in currant production, 1885-1939 (1900,"
@@ -269,6 +283,16 @@ DATASETS: dict[str, Dataset] = {
         " chosen when the difference in time between observed and calculated sporangia"
         " emergences reached a minimum'. Which observations is not stated; these validation"
         " data are the likely ones (inferred)",
+        "read",
+    ),
+    "orlandini2008.mondeggi": Dataset(
+        "Downy mildew severity every 10 days, budbreak to harvest, on 800 leaves and 400"
+        " clusters of 200 Sangiovese vines in three untreated plots (about 1000 m² each) of the"
+        " Paretaio vineyard, Mondeggi-Lappeggi (Chianti, 43°47' N, 180 m), 1995-2003, with"
+        " hourly temperature, RH, rain and leaf wetness beside it; leaf area 1995-1996",
+        "Orlandini, Massetti & Dalla Marta 2008, Comput. Electron. Agric. 64:149-161, pp. 158-"
+        "160 (read 2026-10-09): PLASMO's C and D were tuned on 1995-1996 (C22 D18) and"
+        " validated on 1998-2003 (Tables 2-4)",
         "read",
     ),
     "rouzet2003.balma": Dataset(
