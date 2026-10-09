@@ -76,6 +76,8 @@ STRUCTURES = {
     "incubation-window": "incubation as a window of temperature sums",
     "dark-moist-hours-sporulation": "sporulation on enough dark, moist hours",
     "vpd-survival": "sporangia survival as a function of vapour pressure deficit",
+    "survival-days-table": "sporangia viable for days set by temperature and humidity, and"
+    " killed within the hour by direct sun",
     "magarey-wetness-response": "infection from Magarey's temperature-wetness response",
     "richards-wetness-infection": "infection efficiency as a Richards curve in wetness duration,"
     " its asymptote and rate quadratic in temperature",

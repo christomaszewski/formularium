@@ -50,6 +50,15 @@ DATASETS: dict[str, Dataset] = {
         " compares them with Ravaz, Müller and Sleumer, Baldacci and Casarini, adopting none",
         "read",
     ),
+    "zachos1959.conidia": Dataset(
+        "Conidia taken 5-7 h old from oil spots, detached onto glass slides and held in the"
+        " sun, in a weather screen (open, or saturated under a bell jar) or at a constant 23 or"
+        " 25 °C, then wetted and scored for germination at 2 h and 24 h; Greece, May-June",
+        "Zachos 1959, Ann. Inst. Phytopathol. Benaki N.S. 2(4):193-355, chapter III, pp."
+        " 254-261, Tables XVI-XVIII (read 2026-10-09 in an OCR of the scan, checked against"
+        " the text). His own experiments; separate from his incubation inoculations",
+        "read",
+    ),
     "rafaila1968": Dataset(
         "Detached leaves in a polythermostat at 5-30 °C and 100% humidity, Bucharest"
         " 1963-1965; and incubation by leaf age in the Minis and Blaj vineyards",

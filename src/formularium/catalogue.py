@@ -746,6 +746,47 @@ FORMULATIONS: dict[str, Formulation] = {
             " bound (Cooptera, 2026-10-08); where the sheet's 5-17 days came from is unknown.",
         ),
     ),
+    "zachos1959.sporangia_survival": Formulation(
+        "Survival of detached conidia (sporangia): days of rapid germination, by temperature,"
+        " humidity and sun",
+        (
+            "Zachos 1959, Ann. Inst. Phytopathol. Benaki N.S. 2(4):193-355, chapter III,"
+            " pp. 254-261, Tables XVI-XVIII and the conclusions (p. 260)"
+        ),
+        year=1959,
+        authors=("Zachos, D. G.",),
+        authors_complete=True,
+        authors_from="read",
+        calibrated_on=("zachos1959.conidia",),
+        structures=("survival-days-table",),
+        structures_note="days of viability read from experiments, no fitted curve",
+        parameters=(
+            Published("shade.saturated_23c_days", 8.0, "d", "Table XVIII, p. 259", "read"),
+            Published("shade.ambient_23c_68rh_days", 1.0, "d", "Table XVIII, p. 259", "read"),
+            Published("shade.saturated_25c_days", 2.0, "d", "Table XVIII, p. 260", "read"),
+            Published("shade.ambient_25c_65rh_days", 1.0, "d", "Table XVIII, p. 259", "read"),
+            Published("screen.ambient_mild_days", 4.0, "d", "Table XVII, 20 May, p. 257", "read"),
+            Published("screen.saturated_mild_days", 6.0, "d", "Table XVII, 20 May, p. 257", "read"),
+            Published("screen.hot_days", 1.0, "d", "Table XVII, 28 May, p. 257", "read"),
+            Published("sun.most_lost_min", 15.0, "min", "Table XVI, p. 255", "read"),
+            Published("sun.lethal_h", 1.0, "h", "Table XVI and p. 256", "read"),
+        ),
+        flags=(
+            "The endpoint is rapid germination, within 2 h of wetting; germination after 24 h"
+            " lasts longer (Tables XVII-XVIII). Durations are whole days. 'Mild': means"
+            " 17.5-22.3 °C, RH 63-88 %, extremes 15-26 °C; 'hot': means 25-28.5 °C, maxima"
+            " 31-33 °C. His conclusions (p. 260): about 4 days in shade if the mean is under"
+            " 22 °C and the maximum at most 26 °C; 1-2 days at means of 22-25 °C; 6-8 days"
+            " only in saturated air at means up to 23 °C, otherwise at most 2 days.",
+            "Brischetto et al. 2020 cite this as sporangia 'on sporulating lesions' viable 4-8"
+            " days below a 22 °C maximum: the experiments were on detached conidia on slides,"
+            " and 6-8 days needed saturated air. Against Brischetto's eq. 2 (Agrarium"
+            " scripts/diagnostics/sporangia_survival.py, 2026-10-09): mild shade agrees;"
+            " saturated air at 25 °C (2 d) and ambient air at 23-25 °C (1 d) do not, since the"
+            " eq. 2 index T (1 - RH/100) is 0 in saturated air at any temperature; and eq. 2"
+            " has no sun.",
+        ),
+    ),
     "rafaila1968.incubation": Formulation(
         "Incubation, infection to fructification, by temperature, detached leaves at 100% RH",
         (
