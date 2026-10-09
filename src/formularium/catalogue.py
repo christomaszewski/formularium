@@ -189,7 +189,7 @@ FORMULATIONS: dict[str, Formulation] = {
             " 30° C liegt sie bei maximal 6 Std.'), and the 1979 calendars mark days with more"
             " than 6 h above 30 °C in the canopy.",
             "Infection: the least wetness that infected at least half the inoculated leaves at"
-            " constant 6-25 °C; T × hours has mean 49.7 (s² = 23.55), and hours = -0.67 +"
+            " constant 6-25 °C; T·hours has mean 49.7 (s² = 23.55), and hours = -0.67 +"
             " 60.0/T (r = 0.993). The summary states 'mindestens 50 Gradstunden'.",
         ),
     ),
