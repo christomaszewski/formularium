@@ -46,10 +46,13 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2007-kennelly-10-1094-phyto-97-4-0512.pdf",
         structures=("rain-temperature-trigger",),
+        calibrated_on=("kennelly2006.chancellor",),
         calibration_note=(
-            "Not recorded. Kennelly et al. 2007 say the criterion 'was developed (7,8)' by"
-            " Gadoury et al. 1998 and 2000 'using the reported data', naming none, and evaluated"
-            " it in four Finger Lakes Chancellor vineyards, 2001-2003 (read 2026-10-08)"
+            "Read 2026-10-09: Kennelly et al. 2007 (p. 513) say 'Using the reported data, a set"
+            " of criteria was developed (7,8)' (Gadoury et al. 1998 and 2000) and evaluated it"
+            " 'in addition to the Chancellor vineyard in Geneva where the original data used to"
+            " develop the criteria were collected'; Kennelly et al. 2006 give fifteen years of"
+            " those data. Evaluated in four Finger Lakes Chancellor vineyards, 2001-2003"
         ),
     ),
     "goidanich.incubation": Formulation(
@@ -106,11 +109,15 @@ FORMULATIONS: dict[str, Formulation] = {
             "incubation-window",
         ),
         # Its incubation (eqs 8-9): two regressions on temperature at two humidity levels.
-        calibrated_on=("goidanich1957",),
+        calibrated_on=("goidanich1957", "laviola1986"),
         calibration_note=(
             "Inferred, trail (2026-10-08): eqs 8-9 are Rossi et al. 2002's regressions, which"
             " Rossi et al. 2005 describe as relating temperature to incubation at two humidity"
-            " levels after Goidanich et al. 1957. Rossi et al. 2002 is not held"
+            " levels after Goidanich et al. 1957. Rossi et al. 2002 is not held. Sanna 2017"
+            " (thesis, pp. 75-76; read 2026-10-09) says the regressions were 'adapted to the"
+            " evaluation table of the incubation period of Goidànich (1957)'. Inferred, trail"
+            " (2026-10-09): eq. 5's germination time, credited to Laviola et al. 1986 (p. 482),"
+            " was fitted to their data (datasets.laviola1986); the fit is not stated"
         ),
     ),
     "rossi2008pp.dormancy": Formulation(
@@ -138,7 +145,52 @@ FORMULATIONS: dict[str, Formulation] = {
             "2020-brischetto-10-3389-fpls-2020-01187.pdf"
         ),
         structures=("vpd-survival", "wet-degree-hours-infection"),
-        structures_note="from its title alone; the paper is not held",
+        structures_note=(
+            "read 2026-10-09 (literature/blaeser1979): survival as a quadratic in the saturation"
+            " deficit, infection as a constant temperature sum over the wet period"
+        ),
+        calibrated_on=("blaeser1978.survival", "blaeser1979"),
+        calibration_note=(
+            "Read 2026-10-09 in the paper (Z. PflKrankh. PflSchutz 86:489-498, by Marlene"
+            " Blaeser and H. C. Weltzien; Cooptera's list keeps its trail record): the survival"
+            " curves (Abb. 3) were fitted to the laboratory survival tests that Blaeser &"
+            " Weltzien 1978 describe (sporangia from potted Müller-Thurgau, 10-30 °C,"
+            " 30-100 % RH), leaving out 100 % RH and 30 °C; the infection rule to Tab. 1's"
+            " minimum wetness at 6-25 °C. That the 1979 fit used the 1978 tests is inferred: the"
+            " paper cites them and shows the same grid of conditions"
+        ),
+        parameters=(
+            Published("attached.c0_d", 9.27, "d", "Abb. 3, curve I, p. 493", "read"),
+            Published("attached.c1_d_per_mm", -1.12, "d/mm", "Abb. 3, curve I, p. 493", "read"),
+            Published("attached.c2_d_per_mm2", 0.04, "d/mm2", "Abb. 3, curve I, p. 493", "read"),
+            Published("detached.c0_d", 5.67, "d", "Abb. 3, curve II, p. 493", "read"),
+            Published("detached.c1_d_per_mm", -0.47, "d/mm", "Abb. 3, curve II, p. 493", "read"),
+            Published("detached.c2_d_per_mm2", 0.01, "d/mm2", "Abb. 3, curve II, p. 493", "read"),
+            Published(
+                "max_life_above_30c_h", 6.0, "h", "summary, p. 489; 1978 summary, p. 155", "read"
+            ),
+            Published("infection.mean_degree_hours", 49.7, "°C·h", "Tab. 1 and p. 491", "read"),
+            Published("infection.slope_degree_hours", 60.0, "°C·h", "Abb. 1, p. 491-492", "read"),
+            Published("infection.intercept_h", -0.67, "h", "Abb. 1, p. 491-492", "read"),
+        ),
+        flags=(
+            "Read 2026-10-09. Survival: y = c0 + c1·x + c2·x², y the maximum lifetime in days,"
+            " x the saturation deficit 'S_d = E (1 - F/100) (Steubing 1965)' in mm, F the RH."
+            " E is not defined in the text; as Steubing's saturation deficit it is the saturation"
+            " vapour pressure in mm Hg (inferred). Rossi et al. 2008 (eq. 6) and Brischetto et"
+            " al. 2020 (eqs 1-2) compute x as T·(1 - RH/100), T in °C, which is close to E's"
+            " value only between about 10 and 25 °C.",
+            "The fit leaves out 30 °C, 'da die relative Luftfeuchtigkeit keine Rolle spielt', and"
+            " its points stop near x = 17 mm (Abb. 3's axis), so the curves are unsupported"
+            " beyond that and above about 25 °C: both are U-shaped (curve II's"
+            " minimum is 0.15 d at x = 23.5 mm) and rise beyond. The papers' own rule for heat"
+            " is a lifetime of at most 6 h above 30 °C (the 1979 summary; the 1978 summary: 'bei"
+            " 30° C liegt sie bei maximal 6 Std.'), and the 1979 calendars mark days with more"
+            " than 6 h above 30 °C in the canopy.",
+            "Infection: the least wetness that infected at least half the inoculated leaves at"
+            " constant 6-25 °C; T·hours has mean 49.7 (s² = 23.55), and hours = -0.67 +"
+            " 60.0/T (r = 0.993). The summary states 'mindestens 50 Gradstunden'.",
+        ),
     ),
     "caffi2013.sporulation": Formulation(
         "Sporulation nights: three moist dark hours",
@@ -192,6 +244,20 @@ FORMULATIONS: dict[str, Formulation] = {
             " below about 34 h (x = 14), against none viable after 6-8 h of clear, dry days."
             " Kennelly found DMCast's survival model, from the same Blaeser & Weltzien study,"
             " overpredicted viability in the field.",
+            "Read at the source 2026-10-09 (literature/blaeser1979): Blaeser & Weltzien 1979"
+            " print c2 = 0.01 for detached sporangia (Abb. 3, curve II), so eq. 2's 0.02 is a"
+            " transcription error and Rossi et al. 2008's 0.01 is right. Their index is the"
+            " saturation deficit E·(1 - RH/100) in mm (E the saturation vapour pressure,"
+            " inferred), not T·(1 - RH/100), which both Brischetto and Rossi compute. The cap of"
+            " 1/24 an hour is Brischetto's construction (MOR = 1/(24·y)); the source gives"
+            " maximum lifetimes in days, and at most 6 h above 30 °C. Blaeser & Weltzien 1978"
+            " ('<24 h at 20 °C and 30 % RH' in Brischetto's discussion) show that only in a bar"
+            " chart (Abb. 3, p. 159).",
+        ),
+        parameters=(
+            Published("eq2.c0_d", 5.67, "d", "eq. 2", "read"),
+            Published("eq2.c1", -0.47, "d", "eq. 2", "read"),
+            Published("eq2.c2_as_printed", 0.02, "d", "eq. 2 (the source prints 0.01)", "read"),
         ),
     ),
     "brischetto2021.secondary": Formulation(
@@ -576,6 +642,13 @@ FORMULATIONS: dict[str, Formulation] = {
             " laboratory and in fields, oospore maturation being the example, with no place or"
             " years named. Bleyer et al. 2008 (read 2026-10-08) prints no oospore rule"
         ),
+        flags=(
+            "Hoppmann & Wittich 1997 (Z. PflKrankh. PflSchutz 104:533-544, p. 536; read"
+            " 2026-10-09) print the same form for the Geisenheim (DWD) model with 170"
+            " degree-days above a daily mean of 8 °C 'during spring', not 140. Gessler et al."
+            " 2011 (Phytopathol. Mediterr. 50:3-44, p. 7; read 2026-10-09) give Gehmann et"
+            " al. 1987's German rule as 160 °C·days above 8 °C from 1 January, at 2 m.",
+        ),
     ),
     "leoni2026.oospores": Formulation(
         "Oospore maturity by a germination model (GLM)",
@@ -594,6 +667,19 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="2026-leoni-10-20870-oeno-one-2026-60-3-9963.pdf",
         structures=("oospore-glm",),
         calibrated_on=("leoni2026.changins",),
+        parameters=(
+            Published("intercept", 2.36, "log d", "Table 1", "read"),
+            Published("precip_since_jan1", 0.00076, "log d per unit", "Table 1", "read"),
+            Published("rainy_days_since_jan1", -0.034, "log d/d", "Table 1", "read"),
+            Published("tdd8_since_jan1", -0.0046, "log d/(°C·d)", "Table 1", "read"),
+            Published("mature_mtg_d", 1.5, "d", "maturity when MTG < 1.5 d", "read"),
+        ),
+        flags=(
+            "Read 2026-10-09 (literature/leoni2026): a Poisson GLM, log link, of the mean time"
+            " to germination (MTG) before BBCH 13, n = 96; the precipitation term's unit is not"
+            " printed and its p is 0.53. Predictors, the BBCH 13 split and the MTG < 1.5 d"
+            " threshold were chosen on the same Changins data, with no hold-out.",
+        ),
     ),
     "broome1995.botrytis": Formulation(
         "Botrytis infection index per wet period",
@@ -875,36 +961,302 @@ FORMULATIONS: dict[str, Formulation] = {
             " bound (Cooptera, 2026-10-08); where the sheet's 5-17 days came from is unknown.",
         ),
     ),
+    # -- PLASMO, the Florence model (read 2026-10-09; literature/rosa1993, orlandini1993) --
+    "orlandini1993.plasmo": Formulation(
+        "PLASMO, the Florence model: primary trigger, infection, incubation and survival",
+        (
+            "Orlandini, Gozzini, Rosa, Egger, Storchi, Maracchi & Miglietta 1993, Bulletin"
+            " OEPP/EPPO Bulletin 23:619-626; first published as Rosa et al. 1993, Comput."
+            " Electron. Agric. 9:205-215, from Rosa 1988 (thesis, Firenze, not held)"
+        ),
+        year=1993,
+        authors=(
+            "Orlandini, S.",
+            "Gozzini, B.",
+            "Rosa, M.",
+            "Egger, E.",
+            "Storchi, P.",
+            "Maracchi, G.",
+            "Miglietta, F.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="EPPO Bulletin - December 1993 - ORLANDINI - PLASMO (10-9 drop), page images",
+        structures=(
+            "rain-temperature-trigger",
+            "wet-degree-hours-infection",
+            "daily-incubation-table",
+            "survival-hours-temperature-humidity",
+        ),
+        structures_note="the union of its pieces' tags",
+        flags=(
+            "No sporulation step (sporangia emerge when incubation reaches 100 %) and no"
+            " oospores (the trigger stands in). Rosa et al. 1993 add Genesio, R. to the authors;"
+            " the later fuzzy-logic version (Orlandini et al. 2003, EPPO Bull. 33:415-420)"
+            " prints no equations.",
+        ),
+    ),
+    "rosa1993.incubation": Formulation(
+        "Incubation progress per hour: a Gaussian in temperature fitted to Goidanich's table",
+        (
+            "Rosa, Genesio, Gozzini, Maracchi & Orlandini 1993, PLASMO: a computer program for "
+            "grapevine downy mildew development forecasting, Comput. Electron. Agric. "
+            "9:205-215, p. 208"
+        ),
+        year=1993,
+        authors=("Rosa, M.", "Genesio, R.", "Gozzini, B.", "Maracchi, G.", "Orlandini, S."),
+        authors_complete=True,
+        authors_from="read",
+        checked="1-s2.0-0168169993900394-main.pdf (10-9 drop), equations read in the page image",
+        part_of=("orlandini1993.plasmo",),
+        calibrated_on=("goidanich1957",),
+        calibration_note=(
+            "read: 'The development of incubation is described by a function deduced from the"
+            " Goidanich table (Goidanich et al., 1958). The latter has been translated into an"
+            " x-y graphic of points so as to find a curve passing sufficiently close to them'"
+            " (p. 208). Goidanich, Cesarini [sic] & Foschi 1958, I nemici della vite, is taken"
+            " to print the same table as the 1957 article (inferred: same authors, same table)"
+        ),
+        structures=("daily-incubation-table",),
+        structures_note=(
+            "an hourly rate curve fitted to Goidanich's table and summed to 100 %: the table's"
+            " rate-summation form, tagged strictly"
+        ),
+        parameters=(
+            Published("f1.t_peak_c", 23.5, "°C", "f1, p. 208", "read"),
+            Published("f1.width_c", 11.2, "°C", "f1, p. 208", "read"),
+            Published("f2.coefficient", 0.00577, "1/°C2", "f2, p. 208", "read"),
+            Published("f2.t_mid_c", 16.7, "°C", "f2, p. 208", "read"),
+            Published("f2.offset", 0.737, "1", "f2, p. 208", "read"),
+            Published("f3.coefficient", 0.15, "1", "f3 = 0.15·sqrt(RH - 30), p. 208", "read"),
+            Published("f3.rh_min_pct", 30.0, "%", "f3, p. 208", "read"),
+        ),
+        flags=(
+            "As printed: f4 = f1·f2·f3; f1 = exp(-[(T - 23.5)/11.2]²); f2 = 1 for T <= 10 or"
+            " T >= 23.5 °C, 0.00577(T - 16.7)² + 0.737 for 10-16.7 °C, 1 - 0.00577(T - 23.5)² for"
+            " 16.7-23.5 °C; f3 = 0.15·sqrt(RH - 30). The units of f4 (% an hour) are not stated.",
+        ),
+    ),
+    "orlandini1993.incubation": Formulation(
+        "Incubation progress per hour: a parabola in temperature times a line in humidity",
+        (
+            "Orlandini, Gozzini, Rosa, Egger, Storchi, Maracchi & Miglietta 1993, PLASMO: a "
+            "simulation model for control of Plasmopara viticola on grapevine, Bulletin "
+            "OEPP/EPPO Bulletin 23:619-626, pp. 620-621"
+        ),
+        year=1993,
+        authors=(
+            "Orlandini, S.",
+            "Gozzini, B.",
+            "Rosa, M.",
+            "Egger, E.",
+            "Storchi, P.",
+            "Maracchi, G.",
+            "Miglietta, F.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="EPPO Bulletin - December 1993 - ORLANDINI - PLASMO (10-9 drop), page images",
+        part_of=("orlandini1993.plasmo",),
+        calibrated_on=("goidanich1957", "orlandini1993.emergences"),
+        calibration_note=(
+            "read: Tmin about 10 °C, Topt about 22 °C and Tmax about 34 °C 'were observed'"
+            " in Goidanich 1959 (Manuale di Patologia Vegetale; Tmin also Magarey et al. 1991);"
+            " m was 'chosen when the difference in time between observed and calculated"
+            " sporangia emergences reached a minimum' (p. 621). That Goidanich's manual draws"
+            " on the 1957 table's data is inferred, so the goidanich1957 link is the strict"
+            " reading"
+        ),
+        structures=("daily-incubation-table",),
+        structures_note="an hourly rate summed to 100 %: the table's rate-summation form, strictly",
+        parameters=(
+            Published("t_min_c", 10.0, "°C", "p. 621, 'about 10 °C'", "read"),
+            Published("t_opt_c", 22.0, "°C", "p. 621, 'about 22 °C'", "read"),
+            Published("t_max_c", 34.0, "°C", "p. 621, 'about 34 °C'", "read"),
+            Published("rh_min_pct", 30.0, "%", "p. 620, null increments below RH 30 %", "read"),
+            Published("m", 0.097, "%/h per % RH", "p. 621", "read"),
+        ),
+        flags=(
+            "As printed (p. 621): d = f3(T)·f4(RH), f3 = 4(T - Tmin)(Tmax - T)/(Tmax - Tmin)²,"
+            " f4 = m(RH - RHmin), summed hourly to 100 %. With m = 0.097, d is 6.8 % an hour at"
+            " 22 °C and 100 % RH, which ends incubation in under 15 h against the 4-25 days the"
+            " paper states: m or its unit is misprinted, or d is not % an hour. No RHmax is"
+            " printed.",
+            "Franche 2012 prints incubRate = 2.616·(T - Tmin)(Tmax - T)·(RH - RHmin)/(RHmax -"
+            " RHmin)/(Tmax - Tmin)², 0.65 at the optimum. Neither 2.616 nor RHmax is in Rosa"
+            " 1993, Orlandini 1993 or Orlandini 2003; it probably comes from Rosa et al. 1995"
+            " (Comput. Electron. Agric. 12:311-322) or Orlandini et al. 2003a,b, not held.",
+        ),
+    ),
+    "orlandini1993.infection": Formulation(
+        "Infection when the wet hours reach n/T: a constant wet degree-hour sum",
+        (
+            "Orlandini, Gozzini, Rosa, Egger, Storchi, Maracchi & Miglietta 1993, PLASMO: a "
+            "simulation model for control of Plasmopara viticola on grapevine, Bulletin "
+            "OEPP/EPPO Bulletin 23:619-626, p. 620; Rosa et al. 1993, Comput. Electron. Agric."
+            " 9:205-215, p. 208"
+        ),
+        year=1993,
+        authors=(
+            "Orlandini, S.",
+            "Gozzini, B.",
+            "Rosa, M.",
+            "Egger, E.",
+            "Storchi, P.",
+            "Maracchi, G.",
+            "Miglietta, F.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="EPPO Bulletin - December 1993 - ORLANDINI - PLASMO (10-9 drop), page images",
+        part_of=("orlandini1993.plasmo",),
+        calibrated_on=("blaeser1979", "orlandini1993.emergences"),
+        calibration_note=(
+            "read: 'This function has been derived on the basis of data from Blaeser & Weltzien"
+            " (1979) ... The hyperbolic function most representative of Blaeser & Weltzien's"
+            " data was found by the least squares method' (p. 620); n = 75.69 then chosen with m"
+            " against observed sporangia emergences (p. 621). Rosa et al. 1993 fit the 'Blaeser"
+            " table' and print n = 52.7"
+        ),
+        structures=("wet-degree-hours-infection",),
+        parameters=(
+            Published("n_degree_hours", 75.69, "°C·h", "p. 621", "read"),
+            Published(
+                "n_degree_hours_rosa1993", 52.7, "°C·h", "Rosa et al. 1993, f5, p. 208", "read"
+            ),
+            Published("t_low_c", 6.0, "°C", "p. 620", "read"),
+            Published("t_high_c", 26.0, "°C", "p. 620", "read"),
+        ),
+        flags=(
+            "As printed: f1(T) = n/T for 6 <= T <= 26 °C, otherwise 0, the wet hours needed;"
+            " progress 100/f1 % per wet hour (p. 620). Blaeser & Weltzien's own fit is hours ="
+            " -0.67 + 60.0/T.",
+        ),
+    ),
+    "orlandini1993.survival": Formulation(
+        "Survival of sporangia in hours, piecewise linear in temperature and scaled by humidity",
+        (
+            "Orlandini, Gozzini, Rosa, Egger, Storchi, Maracchi & Miglietta 1993, PLASMO: a "
+            "simulation model for control of Plasmopara viticola on grapevine, Bulletin "
+            "OEPP/EPPO Bulletin 23:619-626, p. 621; the same in Rosa et al. 1993, p. 209"
+        ),
+        year=1993,
+        authors=(
+            "Orlandini, S.",
+            "Gozzini, B.",
+            "Rosa, M.",
+            "Egger, E.",
+            "Storchi, P.",
+            "Maracchi, G.",
+            "Miglietta, F.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="EPPO Bulletin - December 1993 - ORLANDINI - PLASMO (10-9 drop), page images",
+        part_of=("orlandini1993.plasmo",),
+        calibrated_on=("blaeser1978.survival",),
+        calibration_note=(
+            "inferred: credited to Blaeser & Weltzien 1979, who print no function of this form;"
+            " taken to be PLASMO's own fit of their survival data, which come from the 1978 tests"
+        ),
+        structures=("survival-hours-temperature-humidity",),
+        parameters=(
+            Published("below_10c_h", 235.8, "h", "f8, p. 621", "read"),
+            Published("slope_10_15c_h_per_c", 1.8, "h/°C", "f8, p. 621", "read"),
+            Published("intercept_10_15c_h", 217.8, "h", "f8, p. 621", "read"),
+            Published("slope_15_30c_h_per_c", 15.52, "h/°C", "f8, p. 621, as printed", "read"),
+            Published("intercept_15_30c_h", 12.0, "h", "f8, p. 621, as printed", "read"),
+            Published("above_30c_h", 12.0, "h", "f8, p. 621", "read"),
+        ),
+        flags=(
+            "As printed in both 1993 papers: hours = (f8(T) - 12)·RH/100 + 12; f8 = 235.8 (T <"
+            " 10 °C), 1.8T + 217.8 (10-15 °C), 15.52T + 12 (15-30 °C), 12 (T > 30 °C); progress"
+            " 100/hours % an hour. The 15-30 °C piece rises to 477.6 h at 30 °C and then drops to"
+            " 12: probably a misprinted sign, since 15.52(30 - T) + 12 meets both neighbours"
+            " (244.8 h at 15 °C, 12 h at 30 °C). Not corrected here.",
+            "Brischetto et al. 2020 say the survival equation Orlandini et al. 2008 added to"
+            " PLASMO prints no parameters; that is a later paper, not this one.",
+        ),
+    ),
+    "orlandini1993.trigger": Formulation(
+        "Primary infection: 8 mm of rain in 24 h once the minimum temperature stays above 10 °C",
+        (
+            "Orlandini, Gozzini, Rosa, Egger, Storchi, Maracchi & Miglietta 1993, PLASMO: a "
+            "simulation model for control of Plasmopara viticola on grapevine, Bulletin "
+            "OEPP/EPPO Bulletin 23:619-626, p. 620; Rosa et al. 1993, p. 208"
+        ),
+        year=1993,
+        authors=(
+            "Orlandini, S.",
+            "Gozzini, B.",
+            "Rosa, M.",
+            "Egger, E.",
+            "Storchi, P.",
+            "Maracchi, G.",
+            "Miglietta, F.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="EPPO Bulletin - December 1993 - ORLANDINI - PLASMO (10-9 drop), page images",
+        part_of=("orlandini1993.plasmo",),
+        borrows=(),
+        structures=("rain-temperature-trigger",),
+        structures_note="credited to Goidanich 1959; shoots must be 100 mm long",
+        parameters=(
+            Published("rain_mm", 8.0, "mm", "p. 620 ('>= 8 mm within any 24-h period')", "read"),
+            Published("t_min_c", 10.0, "°C", "p. 620", "read"),
+            Published("shoot_mm", 100.0, "mm", "p. 620", "read"),
+        ),
+    ),
     "rouzet2003.cold_days": Formulation(
-        "Start of oospore maturation after 60 cold days (7 °C <= Tmax <= 15 °C)",
+        (
+            "A correlation window, not a maturation start: days with Tmax over 10 °C counted"
+            " after 60 cold days (7 °C <= Tmax <= 15 °C), against the date oospores mature"
+        ),
         (
             "Rouzet & Jacquin 2003, Development of overwintering oospores of Plasmopara"
-            " viticola and severity of primary foci in relation to climate, EPPO Bulletin"
-            " 33(3):437-442, as Franche 2012 states the rule (§2-1-1, Tableau 1); the paper"
-            " is not held"
+            " viticola and severity of primary foci in relation to climate, Bulletin OEPP/EPPO"
+            " Bulletin 33:437-442, p. 440 and Table 7; the rule as Franche 2012 states it"
+            " (§2-1-1, Tableau 1) is his reading of this window"
         ),
         year=2003,
         authors=("Rouzet, J.", "Jacquin, D."),
         authors_complete=True,
-        authors_from="trail",
+        authors_from="read",
+        checked="EPPO Bulletin - 2004 - Rouzet - Development of overwintering oospores (10-9 drop)",
         doi="10.1111/j.1365-2338.2003.00670.x",
+        calibrated_on=("rouzet2003.balma",),
+        calibration_note=(
+            "read 2026-10-09: correlated, by 30-day windows, with the dates oospores stored 2 cm"
+            " under sand at Balma first germinated within 24 h, 23 years from 1969 to 1998"
+        ),
         structures=("cold-day-oospore-start",),
-        structures_note="a count of days in a band of daily maximum; replaces Rossi's 1 January",
+        structures_note=(
+            "the tag is Franche's use of the window; the paper fits no model with it, only"
+            " correlations (r up to -0.87, Table 7)"
+        ),
         parameters=(
-            Published("cold_days", 60.0, "d", "Franche 2012, §2-1-1", "trail"),
-            Published("tmax_low_c", 7.0, "°C", "Franche 2012, §2-1-1", "trail"),
-            Published("tmax_high_c", 15.0, "°C", "Franche 2012, §2-1-1", "trail"),
+            Published("cold_days", 60.0, "d", "p. 440", "read"),
+            Published("tmax_low_c", 7.0, "°C", "p. 440 and Table 7 (its list prints 4)", "read"),
+            Published("tmax_high_c", 15.0, "°C", "p. 440 and Table 7", "read"),
+            Published("warm_tmax_c", 10.0, "°C", "p. 440 and Table 7 ('Md Tm >= 10')", "read"),
         ),
         flags=(
-            "Only Franche's statement is held: when the count starts, and whether the days"
-            " must be consecutive, are not given. Franche's dates for Aquitaine (21 January"
-            " 2002, 24 January 2003, 31 December 2004) are his model's, not observations."
-            " Franche cites the paper as IOBC/WPRS Bull. 33; Crossref gives EPPO Bulletin.",
-            "The paper's abstract (Crossref, read 2026-10-08) states no such rule: maturation"
-            " 'is affected by low autumn and warm spring temperatures', long dry periods can"
-            " block it, and 'there is little prospect that oospore maturation can be modelled"
-            " in the near future'. Thirty years of the French Plant Protection Service's"
-            " observations lie behind it. Read the paper before a tool runs this.",
+            "Read 2026-10-09 (literature/rouzet2003). The paper states: 'Finally, we worked on"
+            " maximum temperature >= 10 °C. For this last condition, the calculation was started"
+            " when 60 'cold' days had passed (with maximum temperature between 7 and 15 °C) and"
+            " then cumulated days when maximum temperature was over 10 °C' (p. 440). It is the"
+            " start of a statistical window whose count correlates with how far a year's"
+            " maturity date falls from the mean; no date of maturation is predicted from it.",
+            "Not printed: when the 60-day count starts (leaves were collected at the end of"
+            " October; the windows are centred from 29 September), and whether the days must be"
+            " consecutive. The criteria list (p. 440) prints the cold band as 4-15 °C, Table 7"
+            " as 7-15 °C.",
+            "The authors' conclusion: 'there is little prospect that oospore maturation can be"
+            " modelled in the near future'; their maturation models gave only the divergence"
+            " from the average date. Franche's dates for Aquitaine (21 January 2002, 24 January"
+            " 2003, 31 December 2004) are his model's, not observations. Do not run this as a"
+            " start of maturation.",
         ),
     ),
     # -- Agrarium's truth: formulations the engine does not list ------------------------------

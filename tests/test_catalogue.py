@@ -76,7 +76,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
     recorded = {name: f.calibrated_on for name, f in FORMULATIONS.items() if f.calibrated_on}
     assert recorded == {
         "goidanich.incubation": ("goidanich1957",),
-        "rossi2008.primary": ("goidanich1957",),
+        "rossi2008.primary": ("goidanich1957", "laviola1986"),
         "rossi2008pp.dormancy": ("rossi2008pp.discs",),
         "brischetto2021.secondary": ("blaeser1979", "caffi2016"),
         "magarey2005.generic": ("blaeser1979", "caffi2016"),
@@ -93,4 +93,12 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "rafaila1968.incubation": ("rafaila1968",),
         "lalancette1988.infection": ("lalancette1988a",),
         "tranmanhsung1990.pom": ("tranmanhsung1990.bordeaux",),
+        # Read 2026-10-09 in the papers; the 1978 and goidanich1957 links are inferred.
+        "blaeser1979.survival": ("blaeser1978.survival", "blaeser1979"),
+        "rosa1993.incubation": ("goidanich1957",),
+        "orlandini1993.incubation": ("goidanich1957", "orlandini1993.emergences"),
+        "orlandini1993.infection": ("blaeser1979", "orlandini1993.emergences"),
+        "orlandini1993.survival": ("blaeser1978.survival",),
+        "rouzet2003.cold_days": ("rouzet2003.balma",),
+        "kennelly2007.trigger": ("kennelly2006.chancellor",),
     }
