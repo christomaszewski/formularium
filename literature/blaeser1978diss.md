@@ -43,6 +43,8 @@ infection rest on are printed in full.
 
 - The primary source of `blaeser1978.survival` and `blaeser1979`, the data under the
   engine's survival, its wet degree-hour infection and Brischetto 2021's Magarey parameters.
+- Hoppmann & Wittich 1997 call Bläser 1978 the laboratory basis of the Geisenheim model and
+  of its survival function ([hoppmann1997](hoppmann1997.md)).
 
 ## Bearing (2026-10-09)
 

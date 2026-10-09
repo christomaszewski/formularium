@@ -36,10 +36,19 @@ Only the contents pages are held.
 
 ## Dependence
 
-- Not known from the contents: no later model is known to be fitted to these data.
+- **Already in Formularium:**
+  - Gessler et al. 2011 (p. 7, [gessler2011](gessler2011.md)) give "Gehmann et al. 1987's" German
+    rule: first oospore maturity at 160 °C·days above 8 °C from 1 January, at 2 m. That is
+    the form of the engine's `vitimeteo.oospores` (`thermal-time-oospore-threshold`), and its
+    flags record the variant.
+  - Hoppmann & Wittich 1997 ([hoppmann1997](hoppmann1997.md)) name Gehmann 1987's field
+    data among the Geisenheim model's bases.
+- Which pages hold the 160 °C·day rule is not shown by the contents; probably 3.2.2.2
+  (p. 70), primary infection against the course of temperature (inferred).
 
 ## Bearing (2026-10-09)
 
-- Three seasons of primary-infection timing against temperature, and second-year
-  germination, would serve TRUTH-METHOD's oospore-season row. Ask KIM Hohenheim
+- The source of a degree-day oospore rule of the engine's form, and of field data behind
+  the Geisenheim model. Three seasons of primary-infection timing against temperature, and
+  second-year germination, would also serve TRUTH-METHOD's oospore-season row. Ask KIM Hohenheim
   (kim-bib@uni-hohenheim.de) for pp. 57-77.

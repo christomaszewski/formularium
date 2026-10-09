@@ -140,7 +140,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [garciagutierrez2023](garciagutierrez2023.md) | none | phenology | Chile | Held out by structure, as recorded |
 | [gashu2020](gashu2020.md) | none | phenology, berry composition | Israel | Clear and observational |
 | [gautam2013](gautam2013.md) | various | climate change | India, global | Context only |
-| [gehmann1987](gehmann1987.md) | downy mildew | oospores, primary infection | Baden | Contents only: primary-infection timing 1984-1986, pp. 57-77 |
+| [gehmann1987](gehmann1987.md) | downy mildew | oospores, primary infection | Baden | Contents only: behind the 160 °C·day oospore rule (Gessler 2011); pp. 57-77 |
 | [gent2007cones](gent2007cones.md) | powdery mildew | sampling, observation | Oregon, Washington | Held out by structure as Part I |
 | [gent2007leaves](gent2007leaves.md) | powdery mildew | sampling, observation | Oregon, Washington | Held out by structure if the truth's scouts sampled this way (D26) |
 | [gent2008](gent2008.md) | powdery mildew | risk index, management | Pacific Northwest | Context for the Gubler-Thomas index's hop use (gent2025 note) |
