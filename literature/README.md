@@ -128,11 +128,13 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [kanaley2024](kanaley2024.md) | downy mildew | remote sensing, detection | New York | Clear |
 | [kang2025](kang2025.md) | none | image analysis | greenhouse | Off-topic |
 | [kennelly2005](kennelly2005.md) | downy mildew | host susceptibility, ontogenic resistance | New York, South Australia | The engine's window is not what the paper found for berries |
+| [kennelly2007](kennelly2007.md) | downy mildew | sporangia survival, lesion productivity, oospores, trigger | New York, South Australia | no sporangia viable after 6-8 h of clear dry days; the engine's trigger; lesion decline per event |
 | [kennelly2007php](kennelly2007php.md) | downy mildew | trigger, lesions, sporangia, fruit | New York | the engine's trigger and bunch window; field sporangia survival |
 | [khaliq2019](khaliq2019.md) | none | remote sensing | Serralunga d'Alba, Piedmont | Inter-row pixels bias satellite vigour maps |
 | [kim2002](kim2002.md) | none | leaf wetness | Iowa, Nebraska | Held out by structure |
 | [kim2006](kim2006.md) | none | leaf wetness, forecasting | Iowa, Illinois | Forecast-driven wetness was biased low for every model it ran (its error tables) |
 | [knipper2019](knipper2019.md) | none | evapotranspiration, remote sensing | California | Clear |
+| [koopman2007](koopman2007.md) | downy mildew | epidemic structure, overwintering | Western Cape | new genotypes all season (12-74 %); one or two clones dominate; ten genotypes survive the winter |
 | [kowalczyk2006](kowalczyk2006.md) | none | evapotranspiration, canopy microclimate | Offline sites: Tharandt | A two-leaf canopy with in-canopy temperature and humidity, but no printed wet-canopy… |
 | [kudinha2014](kudinha2014.md) | none | leaf wetness, canopy microclimate | Western Cape | Clear |
 | [kunova2021](kunova2021.md) | powdery mildew | fungicide resistance | general | Context for a future spray module (M4) |

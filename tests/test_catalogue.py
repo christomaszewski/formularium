@@ -89,6 +89,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "leoni2026.oospores": ("leoni2026.changins",),
         "zachos1959.incubation": ("zachos1959",),
         "zachos1959.sporangia_survival": ("zachos1959.conidia",),
+        "kennelly2007.lesion_decline": ("kennelly2007.loxton",),
         "rafaila1968.incubation": ("rafaila1968",),
         "lalancette1988.infection": ("lalancette1988a",),
         "tranmanhsung1990.pom": ("tranmanhsung1990.bordeaux",),

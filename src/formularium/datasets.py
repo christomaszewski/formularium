@@ -68,6 +68,15 @@ DATASETS: dict[str, Dataset] = {
         " plans to check its oospore field's spatial structure against them",
         "read",
     ),
+    "kennelly2007.loxton": Dataset(
+        "Chardonnay shoots and potted vines in a vineyard at Loxton, South Australia, October"
+        " to December 2003: lesion cohorts induced to sporulate repeatedly, sporangia counted"
+        " per mm², and sporangia sampled at 1-4 h intervals after sunrise and scored for"
+        " germination within 4 h, with canopy temperature, RH and wetness every 10 min",
+        "Kennelly et al. 2007, Phytopathology 97:512-522, Materials and methods and Figs 3-7"
+        " (read 2026-10-09 in an Internet Archive capture of the publisher's PDF)",
+        "read",
+    ),
     "rafaila1968": Dataset(
         "Detached leaves in a polythermostat at 5-30 °C and 100% humidity, Bucharest"
         " 1963-1965; and incubation by leaf age in the Minis and Blaj vineyards",

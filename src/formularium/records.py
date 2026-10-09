@@ -96,6 +96,8 @@ STRUCTURES = {
     "clearness-index-partition": "direct and diffuse light from the clearness index",
     "upwind-slope-shelter": "wind slowed by terrain rising upwind",
     "sporulation-temperature-bounds": "sporulation only within a band of temperature",
+    "sporulation-decline-by-event": "a lesion's sporangia fall with each sporulation it has"
+    " made, not with its age",
     "bunch-susceptibility-window": "bunches susceptible for a set time after flowering",
     "sampling-detection-bound": "what a clean sample rules out, from a sampling model",
     "detection-sensitivity": "a scout's imperfect detection",
