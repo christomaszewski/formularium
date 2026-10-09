@@ -109,6 +109,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [gent2025](gent2025.md) | powdery mildew | risk index, spray timing | Washington | Kin, by a borrowed equation and form (Agrarium's candidates) |
 | [ghiani2025](ghiani2025.md) | downy mildew, powdery mildew | detection, observation | Sardinia | Clear |
 | [gleason1994](gleason1994.md) | none | leaf wetness, dew | Iowa, Kansas | Held out by structure, not by its author (Agrarium's candidates) |
+| [gobbin2006](gobbin2006.md) | downy mildew | population genetics, epidemic structure | Europe | random-mating oospore populations; Greek ones less diverse; cites the epidemic-structure numbers |
 | [gonzalezdominguez2023](gonzalezdominguez2023.md) | none | modelling history | general | Review by the Piacenza group |
 | [guevaratorres2025](guevaratorres2025.md) | none | evapotranspiration, remote sensing | South Australia | Pixel (about 100 m2) against canopy (about 2 m2) mismatch, for irrigation |
 | [gutierrez2017](gutierrez2017.md) | grapevine moth | pest demography | Europe | An insect pest model |
@@ -178,6 +179,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [peddicord2025](peddicord2025.md) | northern leaf blight, gray leaf spot | risk prediction | US Midwest | Uses a CART-style wetness tree (after Kim et al.) and RH >= 90% disease units |
 | [peng2025](peng2025.md) | none | animal science | China | Off-topic |
 | [pesquer2014](pesquer2014.md) | none | interpolation error | Catalonia, Spain | Interpolation error of Catalan precipitation by how stations are split |
+| [poeydebat2025](poeydebat2025.md) | downy mildew | oospores in soil, spatial structure | Bordeaux | 15 m patches (Matérn range 15.8 m); fivefold row contrast |
 | [pokovai2025](pokovai2025.md) | none | remote sensing | Hungary | Off-topic |
 | [qiu2015](qiu2015.md) | powdery mildew | host resistance | general | Host genetics review |
 | [rafaila1968](rafaila1968.md) | downy mildew | incubation | Romania | an incubation independent of Goidanich's data |
