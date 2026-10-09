@@ -48,7 +48,9 @@ computer aids, Wageningen, October 2006 (l. 61-62).
   observed onset of symptoms, as shown in Rossi et al. (2002)" (l. 239-242), and every
   model's predicted onset was dated with the UCSC model's incubation (Tables 3 and 4,
   footnotes l. 359, 430). The observed onsets are data; the inferred infection dates are
-  shaped by Rossi's incubation, the one `rossi2008.primary` computes.
+  shaped by Rossi's incubation, the one `rossi2008.primary` computes. Confirmed 2026-10-09
+  in Rossi et al. 2002 itself ([rossi2002](rossi2002.md), p. 265): it counts back with the
+  two regressions fitted to Goidanich's data, Rossi 2008's eqs 8-9.
 - DMCast computes POM's index, and POM borrows EPI's idea of rain limits.
 - Caffi and Rossi are authors of several engine models: flags.
 

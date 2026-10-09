@@ -68,8 +68,14 @@ equations, and cites reviews rather than the papers the rules were fitted to.
   temperature-band form (`sporulation-temperature-bounds`, `lalancette1988.sporulation_bounds`),
   strictly.
 - **The Californian model** is the engine's `gubler1999.powdery_index` (the UC Davis
-  index). This page states its rules, which Formularium had only from Cooptera's code. Pessl's
-  variant adds a wetness penalty: a variant of an engine model.
+  index), but its thresholds are not the engine's.
+  - Cooptera's code follows UC IPM's statement of the rules (read there 2026-10-03; trail,
+    Cooptera's message of 2026-10-09): 6 continuous hours between 70 and 85 °F
+    (21.1-29.4 °C), at the start and every day after, and -10 for a day reaching 95 °F
+    (35 °C) for 15 minutes.
+  - This page's 21-30 and 21-32 °C, and its "exceeds 32°C", read as a rounded
+    paraphrase or a vendor's variant. Pessl's wetness penalty is its own variant.
+  - Gubler et al. 1999, the primary, is held by neither tool.
 - **The grey-mould "wet points"** cite Broome 1995 but are not Broome's index as the engine
   runs it (`broome1995.botrytis`).
 - **Bregaglio et al. 2022** took MISFITS's default parameters "from the METOS service"
@@ -83,6 +89,6 @@ equations, and cites reviews rather than the papers the rules were fitted to.
   and its sporulation shares the engine's form.
 - **A comparator:** iMETOS alarms are what many growers act on. A FieldClimate-style alarm
   policy is a candidate baseline for spray timing in Agrarium's M4.
-- **For Cooptera:** a secondary statement of the UC Davis powdery index rules (the primary,
-  Gubler et al. 1999, is not held); black rot (Spotts 1977, Molitor 2009) and Lobesia
+- **For Cooptera:** a vendor's version of the UC Davis powdery index that differs from
+  UC IPM's; black rot (Spotts 1977, which Cooptera holds; Molitor 2009) and Lobesia
   degree-days for diseases and pests it does not yet cover.
