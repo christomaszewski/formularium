@@ -137,3 +137,44 @@ def test_quotes_are_found_at_their_line_or_reported(tmp_path: Path) -> None:
         "ok",
         1,
     )  # a Unicode minus
+
+
+def test_the_library_renames_papers_to_their_notes_and_checks_them(tmp_path: Path) -> None:
+    library = _script("library")
+    drop, lib = tmp_path / "drop", tmp_path / "lib"
+    (drop / "a" / "rejected-documents").mkdir(parents=True)
+    (drop / "a" / "Phyto78.pdf").write_bytes(b"paper one")
+    (drop / "a" / "Phyto78.txt").write_text("text one")
+    (drop / "a" / "supp.PDF").write_bytes(b"supplement")
+    (drop / "a" / "copy-of-phyto78.pdf").write_bytes(b"paper one")  # same bytes, other name
+    (drop / "a" / "unread.pdf").write_bytes(b"paper two")
+    (drop / "a" / "rejected-documents" / "page.pdf").write_bytes(b"not a paper")
+    notes = {"lalancette1988": ["Phyto78.pdf", "supp.PDF"], "biggs2016": []}
+
+    copies, problems = library.plan(notes, [drop])
+    assert problems == []
+    assert sorted(c.dest for c in copies) == [
+        "inbound/unread.pdf",
+        "lalancette1988-2.pdf",
+        "lalancette1988.pdf",
+        "lalancette1988.txt",
+        "rejected/page.pdf",
+    ]
+    rows = [library._place(c.source, lib, c.dest, c.note, c.original, move=False) for c in copies]
+    library.write_manifest(lib, rows)
+    assert (drop / "a" / "Phyto78.pdf").exists()  # copied, never moved
+    assert library.check(notes, lib) == []
+
+    notes["newpaper2020"] = ["unread.pdf"]
+    library.file_paper("newpaper2020", lib / "inbound" / "unread.pdf", None, notes, lib)
+    assert (lib / "newpaper2020.pdf").read_bytes() == b"paper two"
+    assert not (lib / "inbound" / "unread.pdf").exists()
+    assert library.check(notes, lib) == []
+
+    (lib / "lalancette1988.pdf").chmod(0o644)
+    (lib / "lalancette1988.pdf").write_bytes(b"changed")
+    notes["missing2001"] = ["gone.pdf"]
+    assert library.check(notes, lib) == [
+        "missing2001: gone.pdf is not in the library",
+        "lalancette1988.pdf: its checksum changed",
+    ]
