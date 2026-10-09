@@ -45,6 +45,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [alexi2011web](alexi2011web.md) | none | evapotranspiration | United States | Typical ALEXI flux errors (about 15%) |
 | [amir2016](amir2016.md) | none | leaf wetness | New Zealand | Clear |
 | [amirshekari2025](amirshekari2025.md) | none | evapotranspiration | Indoor plant factory, lettuce | Indoor lettuce under lamps |
+| [ammour2020](ammour2020.md) | Botrytis bunch rot | detection | Italy | An observation method (latent infection by LAMP) |
 | [anco2013](anco2013.md) | Phomopsis cane and leaf spot | sporulation, dispersal | Ohio | A flag now, not kin |
 | [anderson2001](anderson2001.md) | potato late blight | leaf wetness, dew | Wisconsin | Clear of the engine |
 | [anderson2007](anderson2007.md) | none | evapotranspiration, surface energy balance | United States | Clear |
@@ -60,6 +61,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [bregaglio2013](bregaglio2013.md) | downy mildew, Botrytis bunch rot | infection | Europe | Kin by a borrowed equation, as before, and now for that reason rather than its authors… |
 | [bregaglio2022](bregaglio2022.md) | downy mildew | primary infection, secondary infection | Italy | Kin by a borrowed equation, now recorded as such |
 | [brischetto2021](brischetto2021.md) | downy mildew | secondary infection | Italy | the engine's secondary infection; its Magarey parameters, read |
+| [broome1995](broome1995.md) | Botrytis bunch rot | infection | California, Chile | The engine's Botrytis model is now held and read |
 | [buciumeanu2019](buciumeanu2019.md) | none | phenology | Romania | ANOVA of factors only |
 | [caffi2007](caffi2007.md) | downy mildew | primary infection, oospore maturation | Sardinia | Formularium records the Siniscola data as `caffi2007.siniscola`, with the dating |
 | [caffi2009](caffi2009.md) | downy mildew | primary infection, season onset | Italy | Its observed onsets are data a truth could be matched to |
@@ -72,6 +74,8 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [chen2019](chen2019.md) | downy mildew | season risk, regional data | Bordeaux | see the note |
 | [chen2019onset](chen2019onset.md) | downy mildew | season onset | Bordeaux | A history-matching pattern made outside the engine's lineage |
 | [christoforides2026](christoforides2026.md) | downy mildew | oospore maturation, primary infection | Greece | Kin, for borrowed equations and four shared forms (Agrarium's candidates) |
+| [ciliberti2015berries](ciliberti2015berries.md) | Botrytis bunch rot | infection | Piacenza | A flag now, not kin |
+| [ciliberti2015flowers](ciliberti2015flowers.md) | Botrytis bunch rot | infection | Piacenza | A flag now, not kin |
 | [clippinger2024](clippinger2024.md) | downy mildew | management | global | Review |
 | [dubuis2019](dubuis2019.md) | downy mildew, powdery mildew | oospore maturation, primary infection | Switzerland, Baden-Württemberg | Changins's oil-spot dates are risky to match a truth to |
 | [dussert2020](dussert2020.md) | downy mildew | population genomics | France | Off-topic for simulation |
@@ -79,16 +83,22 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [erincik2003](erincik2003.md) | Phomopsis cane and leaf spot | infection | Ohio | A flag now, not kin (D27) |
 | [esteban2012](esteban2012.md) | none | climatology | Catalonia | Off-topic for the disease truth |
 | [fang2019](fang2019.md) | none | evapotranspiration | United States | An operational ET product |
+| [fedele2020](fedele2020.md) | Botrytis bunch rot | biocontrol, infection | Piacenza | A flag, not kin |
 | [fedele2025](fedele2025.md) | downy mildew | oospore dose | Italy | the truth's dose; calibrated with Rossi 2008's model |
 | [fedele2026](fedele2026.md) | downy mildew | host susceptibility, canopy microclimate | Italy | Denser canopies had more susceptible leaves and longer wetness, yet epidemics did not… |
 | [fontaine2021](fontaine2021.md) | downy mildew | population genomics | global | Off-topic for simulation |
 | [franche2012](franche2012.md) | downy mildew | whole cycle in a DSS | France | mostly Rossi's chain; a few independent pieces |
+| [gadoury2003](gadoury2003.md) | powdery mildew | host susceptibility, ontogenic resistance | New York | Held out by structure, as the rule stands |
 | [garciagutierrez2023](garciagutierrez2023.md) | none | phenology | Chile | Held out by structure, as recorded |
 | [gashu2020](gashu2020.md) | none | phenology, berry composition | Israel | Clear and observational |
+| [gent2008](gent2008.md) | powdery mildew | risk index, management | Pacific Northwest | Context for the Gubler-Thomas index's hop use (gent2025 note) |
+| [gent2025](gent2025.md) | powdery mildew | risk index, spray timing | Washington | Kin, by a borrowed equation and form (Agrarium's candidates) |
 | [gleason1994](gleason1994.md) | none | leaf wetness, dew | Iowa, Kansas | Held out by structure, not by its author (Agrarium's candidates) |
 | [gutierrez2017](gutierrez2017.md) | grapevine moth | pest demography | Europe | An insect pest model |
 | [hain2009](hain2009.md) | none | soil moisture | Oklahoma | Soil moisture proxy, not leaf wetness |
 | [hain2018poster](hain2018poster.md) | none | evapotranspiration | United States | A poster |
+| [hegyikalo2019](hegyikalo2019.md) | Botrytis bunch rot | incidence, isolate growth | Hungary | Noble rot isolate phenotypes in Eger |
+| [hill2019](hill2019.md) | Botrytis bunch rot | infection risk, season severity | New Zealand, south-east Australia | Bacchus is the Botrytis candidate, recorded in Formularium as `kim2007.bacchus` with |
 | [jensen2025](jensen2025.md) | none | modelling review | global | Review of 146 models |
 | [kabela2006](kabela2006.md) | none | dew, leaf wetness | Iowa | Clear |
 | [kabela2009](kabela2009.md) | none | dew, leaf wetness | Iowa | Clear |
@@ -100,11 +110,13 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [knipper2019](knipper2019.md) | none | evapotranspiration, remote sensing | California | Clear |
 | [kowalczyk2006](kowalczyk2006.md) | none | evapotranspiration, canopy microclimate | Offline sites: Tharandt | A two-leaf canopy with in-canopy temperature and humidity, but no printed wet-canopy… |
 | [kudinha2014](kudinha2014.md) | none | leaf wetness, canopy microclimate | Western Cape | Clear |
+| [kunova2021](kunova2021.md) | powdery mildew | fungicide resistance | general | Context for a future spray module (M4) |
 | [lalancette1988infection](lalancette1988infection.md) | downy mildew | infection | Ohio | No longer kin to the engine under D27 |
 | [lalancette1988sporulation](lalancette1988sporulation.md) | downy mildew | sporulation | Ohio | Kin, and rightly so, under D27 too |
 | [lan2003](lan2003.md) | peach scab | dispersal | Georgia (USA) | Splash and runoff, not dew or air, carried infection (rain shields cut severity most) |
 | [law2012](law2012.md) | none | land surface model | Australia | Planning document |
 | [liu2026tarag](liu2026tarag.md) | none | decision support | China | Off-topic |
+| [lu2020](lu2020.md) | powdery mildew | infection, latent period | Quebec | Clear by every recorded link, and a flag-free candidate for powdery mildew pieces, if… |
 | [luo2001](luo2001.md) | brown rot (Monilinia) | latent infection, host susceptibility | California | Clear |
 | [maclean2021](maclean2021.md) | none | canopy microclimate, leaf temperature | global | Clear |
 | [maddalena2020](maddalena2020.md) | downy mildew | population genetics | Italy | Population genetics |
@@ -114,6 +126,8 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [magarey1991](magarey1991.md) | downy mildew | incubation and more | South Australia | incubation cubic fitted to Müller, Zachos and Rafaila |
 | [magarey2005](magarey2005.md) | many | infection | general | the generic infection model; its grape rows' data |
 | [magarey2007](magarey2007.md) | none | risk mapping | United States | Templates for Magarey's generic infection model, described without equations |
+| [malviya2022](malviya2022.md) | powdery mildew | biocontrol efficacy | India | Product efficacy trials |
+| [marko2026](marko2026.md) | downy mildew, powdery mildew | disease occurrence | Hungary | Grower-survey effect sizes from Hungary |
 | [martre2014](martre2014.md) | none | crop growth | global | Off-topic, though its finding (an ensemble mean beats single models) is the argument… |
 | [massi2021](massi2021.md) | downy mildew | fungicide resistance | general | Review |
 | [masson2011](masson2011.md) | none (climate models) | model dependence | global | why dependence is judged by components and behaviour |
@@ -123,6 +137,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [moral2012infection](moral2012infection.md) | olive anthracnose | infection, latent period | Andalusia | Kin by a borrowed equation (Magarey's), for another host |
 | [moral2012inoculum](moral2012inoculum.md) | olive anthracnose | sporulation, epidemic progress | Andalusia | Kin through the temperature function it shares with Magarey's model |
 | [mouafo2022](mouafo2022.md) | downy mildew | clade competition | Quebec | little for Europe |
+| [moyer2016](moyer2016.md) | powdery mildew | season severity | New York | A flag now, not kin |
 | [ninyerola2005](ninyerola2005.md) | none | climatology | Iberian Peninsula | Mean climate surfaces at about 200 m from regression and residual interpolation |
 | [nityagovsky2025](nityagovsky2025.md) | downy mildew | detection | Russian Far East | A detection method from the Russian Far East |
 | [pak2008cable](pak2008cable.md) | none | land surface model | Australia | Slides only (OCR) |
@@ -130,11 +145,13 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [peddicord2025](peddicord2025.md) | northern leaf blight, gray leaf spot | risk prediction | US Midwest | Uses a CART-style wetness tree (after Kim et al.) and RH >= 90% disease units |
 | [peng2025](peng2025.md) | none | animal science | China | Off-topic |
 | [pokovai2025](pokovai2025.md) | none | remote sensing | Hungary | Off-topic |
+| [qiu2015](qiu2015.md) | powdery mildew | host resistance | general | Host genetics review |
 | [rafaila1968](rafaila1968.md) | downy mildew | incubation | Romania | an incubation independent of Goidanich's data |
 | [reis2020](reis2020.md) | none | phenology | Portugal | Held out by structure, read strictly (Agrarium's candidates) |
 | [roberts2017](roberts2017.md) | none | statistics | general | Block cross-validation for structured data |
 | [rose2016](rose2016.md) | none | decision support | England and Wales | Why farmers use or ignore decision tools |
 | [rossi2008](rossi2008.md) | downy mildew | primary infection, incubation | Italy | incubation eqs 8-9 from Rossi et al. 2002, after Goidanich |
+| [rossi2010](rossi2010.md) | powdery mildew | ascospore maturation, ascospore release | Piacenza | A flag, not kin |
 | [rossi2012](rossi2012.md) | downy mildew | splash dispersal, primary infection | Emilia-Romagna | Its splash data (4.4 drops/cm² at 40 cm, 0.03 at 80 cm, 0.003 at 140 cm |
 | [rossi2013](rossi2013.md) | downy mildew | epidemic structure | Europe | Gobbin's genotype patterns, for history matching |
 | [rossi2025](rossi2025.md) | downy mildew | host susceptibility, spray efficacy | Piacenza | Efficacy rises with cluster stage, interacting with ontogenic resistance |
@@ -150,13 +167,16 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [steel2011](steel2011.md) | bunch rots | berry infection by temperature | New South Wales | two temperatures; points to Nair & Allen 1993 |
 | [sun2026](sun2026.md) | none | dormancy, phenology | Shanghai | Held out by structure if it drove a truth |
 | [taibi2023](taibi2023.md) | downy mildew, powdery mildew | spray timing | Emilia-Romagna | Uses the engine's Rossi-group models to time sprays |
+| [thiessen2018](thiessen2018.md) | powdery mildew | ascospore release | Oregon | The engine's record can become `read`, with initials L |
 | [toffolatti2024](toffolatti2024.md) | downy mildew | fungicide resistance | northern Italy | Resistance-allele monitoring in Italy |
 | [tranmanhsung1990](tranmanhsung1990.md) | downy mildew | oospore maturation, season severity | Bordeaux | Clear of the engine by every substantive test, and its author list is read |
+| [valdesgomez2017](valdesgomez2017.md) | powdery mildew | scouting, spray decisions | Chile | A costed scouting policy (2-3 sprays against 7-9 |
 | [viruega2011](viruega2011.md) | olive scab | infection, incubation | Andalusia | Not held out today |
 | [viruega2013](viruega2013.md) | olive scab | inoculum production, dispersal | Andalusia | Clear |
 | [watson2002](watson2002.md) | brown rot (Monilinia) | sporulation | South Carolina | Clear and of little use to a grape truth |
 | [yang2026](yang2026.md) | none | evapotranspiration | Contiguous United States | Cropland monthly error about 17% |
 | [yin2018](yin2018.md) | none | drought | United States | Off-topic |
+| [yu2022metabolomics](yu2022metabolomics.md) | powdery mildew | fruit chemistry | Guangxi | Off-topic for simulation |
 | [yu2022shelter](yu2022shelter.md) | downy mildew | epidemic progress, canopy microclimate | Liaoning | Rain shelters cut leaf wetness and slowed epidemics (Shenyang) |
 | [zachos1959](zachos1959.md) | downy mildew | incubation, oospores, conidia | Greece | an incubation independent of Goidanich's data |
 | [zapata2015](zapata2015.md) | none | phenology, dormancy | Washington | Held out by structure, as before |
