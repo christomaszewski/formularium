@@ -100,4 +100,5 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "orlandini1993.infection": ("blaeser1979", "orlandini1993.emergences"),
         "orlandini1993.survival": ("blaeser1978.survival",),
         "rouzet2003.cold_days": ("rouzet2003.balma",),
+        "kennelly2007.trigger": ("kennelly2006.chancellor",),
     }

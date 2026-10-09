@@ -1,6 +1,7 @@
 ---
 id: salinari2007
 citation: Salinari, F., Giosuè, S., Rossi, V., Tubiello, F. N., Rosenzweig, C. & Gullino, M. L. 2007. Downy mildew outbreaks on grapevine under climate change: elaboration and application of an empirical-statistical model. Bulletin OEPP/EPPO Bulletin 37:317-326
+doi: 10.1111/j.1365-2338.2007.01126.x
 read: 2026-10-08, in full by a reading agent; the citation, site and groups checked in the extracted text
 status: read
 diseases: [downy mildew]
@@ -9,7 +10,7 @@ regions: [Italy]
 processes: [season onset, climate change]
 records: []
 datasets: []
-files: [Downy_mildew_outbreaks_on_grapevine_under_climate_.pdf]
+files: [Downy_mildew_outbreaks_on_grapevine_under_climate_.pdf, EPPO Bulletin - 2007 - Salinari - Downy mildew outbreaks on grapevine under climate change  elaboration and application of.pdf]
 ---
 
 # Salinari et al. 2007: an empirical model of outbreak dates

@@ -46,10 +46,14 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2007-kennelly-10-1094-phyto-97-4-0512.pdf",
         structures=("rain-temperature-trigger",),
+        calibrated_on=("kennelly2006.chancellor",),
         calibration_note=(
-            "Not recorded. Kennelly et al. 2007 say the criterion 'was developed (7,8)' by"
-            " Gadoury et al. 1998 and 2000 'using the reported data', naming none, and evaluated"
-            " it in four Finger Lakes Chancellor vineyards, 2001-2003 (read 2026-10-08)"
+            "Kennelly et al. 2007 say the criterion 'was developed (7,8)' by Gadoury et al."
+            " 1998 and 2000 'using the reported data', naming none, and evaluated it in four"
+            " Finger Lakes Chancellor vineyards, 2001-2003 (read 2026-10-08). Kennelly et al."
+            " 2006 (workshop proceedings, read 2026-10-09) say it was 'consistent across 15"
+            " years of historical data' on Chancellor at one site: inferred to be the data it"
+            " was developed on"
         ),
     ),
     "goidanich.incubation": Formulation(
@@ -642,7 +646,9 @@ FORMULATIONS: dict[str, Formulation] = {
         flags=(
             "Hoppmann & Wittich 1997 (Z. PflKrankh. PflSchutz 104:533-544, p. 536; read"
             " 2026-10-09) print the same form for the Geisenheim (DWD) model with 170"
-            " degree-days above a daily mean of 8 °C 'during spring', not 140.",
+            " degree-days above a daily mean of 8 °C 'during spring', not 140. Gessler et al."
+            " 2011 (Phytopathol. Mediterr. 50:3-44, p. 7; read 2026-10-09) give Gehmann et"
+            " al. 1987's German rule as 160 °C·days above 8 °C from 1 January, at 2 m.",
         ),
     ),
     "leoni2026.oospores": Formulation(
@@ -662,6 +668,19 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="2026-leoni-10-20870-oeno-one-2026-60-3-9963.pdf",
         structures=("oospore-glm",),
         calibrated_on=("leoni2026.changins",),
+        parameters=(
+            Published("intercept", 2.36, "log d", "Table 1", "read"),
+            Published("precip_since_jan1", 0.00076, "log d per unit", "Table 1", "read"),
+            Published("rainy_days_since_jan1", -0.034, "log d/d", "Table 1", "read"),
+            Published("tdd8_since_jan1", -0.0046, "log d/(°C·d)", "Table 1", "read"),
+            Published("mature_mtg_d", 1.5, "d", "maturity when MTG < 1.5 d", "read"),
+        ),
+        flags=(
+            "Read 2026-10-09 (literature/leoni2026): a Poisson GLM, log link, of the mean time"
+            " to germination (MTG) before BBCH 13, n = 96; the precipitation term's unit is not"
+            " printed and its p is 0.53. Predictors, the BBCH 13 split and the MTG < 1.5 d"
+            " threshold were chosen on the same Changins data, with no hold-out.",
+        ),
     ),
     "broome1995.botrytis": Formulation(
         "Botrytis infection index per wet period",

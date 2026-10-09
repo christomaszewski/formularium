@@ -290,4 +290,16 @@ DATASETS: dict[str, Dataset] = {
         " at 22 °C against 3 d (read 2026-10-09)",
         "trail",
     ),
+    "kennelly2006.chancellor": Dataset(
+        "Fifteen years of historical records of downy mildew's first outbreak on the highly"
+        " susceptible cultivar Chancellor at one New York site, with three more sites for two"
+        " of three years",
+        "Kennelly, Gadoury, Seem, Wilcox & Magarey 2006, Proceedings of the 5th International"
+        " Workshop on Grapevine Downy and Powdery Mildew, San Michele all'Adige (read"
+        " 2026-10-09): the rain > 2.5 mm, > 11 °C, past E-L 12 threshold 'was consistent"
+        " across 15 years of historical data on the highly susceptible cultivar Chancellor at"
+        " one site, and successfully predicted the initial outbreak ... for 2 of 3 years at"
+        " three additional sites'. That the threshold was set on those data is inferred",
+        "read",
+    ),
 }
