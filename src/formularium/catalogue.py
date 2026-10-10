@@ -94,6 +94,10 @@ FORMULATIONS: dict[str, Formulation] = {
             " version in circulation (checked 2026-10-09 against Cooptera's incubation.py). How"
             " it derives from Goidanich et al. 1957's high- and low-humidity data is not shown"
             " by any of them.",
+            "Casanova-Gascón et al. 2019 (Agronomy 9:738, Somontano, read 2026-10-10;"
+            " literature/casanovagascon2019): run by growers there to date infections, its dates"
+            " in 2016 and 2018 'were off by several weeks' against observed symptoms. No numbers"
+            " are printed.",
         ),
     ),
     "rule_3_10": Formulation(
@@ -787,6 +791,12 @@ FORMULATIONS: dict[str, Formulation] = {
                 "snippet",
                 "a search summary's author list",
             ),
+        ),
+        flags=(
+            "Casanova-Gascón et al. 2019 (Agronomy 9:738, Somontano, read 2026-10-10;"
+            " literature/casanovagascon2019): 'Thomas and Gubler's model was found to be very"
+            " accurate' there, within a week of observed powdery mildew, 2016-2018. No numbers"
+            " are printed.",
         ),
     ),
     "thiessen2018.ascospores": Formulation(
@@ -1533,6 +1543,12 @@ FORMULATIONS: dict[str, Formulation] = {
             "Needs 20 years of monthly normals. An EPI in [-10, 0] at the end of March is a"
             " critical zone (p. 51). Maddalena et al. 2023 and Sanna et al. 2014 run EPI in"
             " Epicure; their version's thresholds are not printed.",
+            "Kontogiannis et al. 2024 (Computers 13:63, p. 3, read in the page image 2026-10-10;"
+            " literature/kontogiannis2024) print another version, cited to Stryzik: daily Ri and"
+            " Ti against 0.95 of the monthly normal, k on the first term only, and EN = (1.5"
+            " RDm/18) log10(Rd/RDd); a kinetic term 0.012 [1/4 (5 RHnight + 3 RH10-18h)^2 sqrt(Ti)"
+            " - RH10-18h^2 sqrt(Tm)]/100, where Ronzon has Um = (3 day + 5 night)/8 against the"
+            " normal UM; first infection when EPI > -10. Take the model from Ronzon's printing.",
         ),
     ),
     "rouzet2003.cold_days": Formulation(
@@ -1859,8 +1875,9 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_complete=True,
         authors_from="read",
         checked=(
-            "Hill et al. 2019's reference list and eq. 1 (10-1094-phyto-10-17-0357-r.pdf, read"
-            " 2026-10-08); Kim et al. 2007 itself is not held"
+            "Hill et al. 2019's eq. 1 (10-1094-phyto-10-17-0357-r.pdf, read 2026-10-08, the"
+            " page image checked 2026-10-10); Kim et al. 2007 itself, p. 129, read in the page"
+            " image 2026-10-10 (literature/kim2007nzpp)"
         ),
         structures=("wetness-temperature-infection-index",),
         structures_note=(
@@ -1868,13 +1885,14 @@ FORMULATIONS: dict[str, Formulation] = {
             " tag of its own, an hourly rate summed over wet hours"
         ),
         calibration_note=(
-            "not recorded: Kim et al. 2007 is not held, and Hill et al. 2019 do not refit it"
-            " (read 2026-10-08)"
+            "not recorded: Kim et al. 2007 credit the model to Rengasamy & Edwards (unpublished"
+            " data) and print no fit; Hill et al. 2019 do not refit it"
         ),
         parameters=(
             Published("a", 84.37, "h", "Hill et al. 2019, eq. 1 and Fig. 3 caption", "read"),
             Published("b", 7.238, "h/°C", "Hill et al. 2019, eq. 1 and Fig. 3 caption", "read"),
             Published("c", 0.156, "h/°C²", "Hill et al. 2019, eq. 1 and Fig. 3 caption", "read"),
+            Published("c_kim2007", 0.1856, "h/°C²", "Kim et al. 2007, p. 129", "read"),
         ),
         flags=(
             "Per wet hour (sensor response above 50%), x = 1/(a - b·T + c·T²): about 2.42 at its"
@@ -1882,6 +1900,12 @@ FORMULATIONS: dict[str, Formulation] = {
             " without saying what changed; Beresford is an author of both.",
             "In 101 site-years it predicted bunch rot no better than simple humidity hours"
             " (AUC 0.647 against 0.729; Hill et al. 2019).",
+            "Kim et al. 2007 (p. 129, page image, 2026-10-10) print I = 84.37 - 7.238T +"
+            " 0.1856T² as the risk for each wet hour, summed over the wet period: no reciprocal,"
+            " c = 0.1856. Hill et al.'s 'correction' changes both. At one point: Kim's I is"
+            " lowest (13.8) at 19.5 °C and highest at 0 °C, so it reads as wet hours needed, near"
+            " Broome's 10.5 h at 20 °C; with Hill's c, the reciprocal reaches 2.42 per wet hour"
+            " at 23.2 °C, an infection in 0.41 wet hours. Which one Bacchus is, is not settled.",
         ),
     ),
 }

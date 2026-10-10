@@ -39,6 +39,11 @@ printed year is 2019. It has no bibliography.
     29.0: 12; 32.0: blank.
   - The text says "dende 24 horas de humectación a 10 °C"; the table puts 24 h at 7 °C and
     12 h at 10 °C.
+  - **Shifted one row against Spotts 1977** (read 2026-10-10,
+    [spotts1977](spotts1977.md), page image): Spotts gives 24 h at 10 °C, 12 at 13 °C, 9
+    at 15.5 °C ... 12 at 32 °C, and no infection at 7 °C after 48 h. The monograph's nine
+    values are Spotts's in order, one temperature row too low; its text is right. Its
+    incubation figures (28 days cold, 8-9 warm) are not in Spotts.
   - Incubation runs from 28 days in the cold to 8-9 days when warm, and stops below 7 °C
     and above 32 °C.
 
