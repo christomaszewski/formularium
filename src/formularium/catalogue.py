@@ -80,6 +80,14 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         calibrated_on=("goidanich1957",),
         calibration_note="the table is Goidanich et al. 1957's data (datasets.py)",
+        flags=(
+            "The same table, all 53 rows of both columns (12-25 °C by 0.25 °C, RH below and above"
+            " 75 %, the non-monotonic 18.25 °C humid value included), is printed by López Frías"
+            " et al. 2009 (Tenerife) and used by Puelles Ruiz de Gopegui 2020 (Rioja): a Spanish"
+            " version in circulation (checked 2026-10-09 against Cooptera's incubation.py). How"
+            " it derives from Goidanich et al. 1957's high- and low-humidity data is not shown"
+            " by any of them.",
+        ),
     ),
     "rule_3_10": Formulation(
         "The 3-10 rule: 10 °C, shoots of 10 cm, 10 mm of rain",
@@ -427,7 +435,32 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="read",
         checked="2024-puelles-10-1016-j-cropro-2023-106450.pdf",
         borrows=("goidanich.incubation",),
-        structures=("wet-degree-hours-infection",),
+        structures=(
+            "wet-degree-hours-infection",
+            "rain-temperature-trigger",
+            "thermal-time-oospore-threshold",
+            "dark-moist-hours-sporulation",
+            "sporulation-temperature-bounds",
+        ),
+        structures_note=(
+            "read 2026-10-09 (literature/puelles2024): the UR model is the Goidanich model (the"
+            " 3-10 conditions and Goidanich's daily incubation) with oospores at 140-160 °C·days"
+            " above 8 °C from 1 January, infection at 50 °C·h of wetness, and sporulation after"
+            " 4 h dark at 12-29 °C and RH > 95 %"
+        ),
+        calibrated_on=("puelles2024.rioja",),
+        calibration_note=(
+            "read 2026-10-09: 'a maturity value of 160 °C was the most appropriate (data not"
+            " shown)', on the study's own plots; the rule itself is credited to Gehmann et al."
+            " 1987, the 50 °C·h to Dubuis et al. 2012"
+        ),
+        flags=(
+            "The paper's UR model also computes the 3-10 conditions (T >= 10 °C, shoots >= 10 cm,"
+            " 10 mm in 24-48 h, 'the same algorithm as the Goidanich model'), which Cooptera's"
+            " list does not name among its borrowings (asked 2026-10-09). It adds germination"
+            " after 5 mm in 48 h at 12 °C or more, and kills spores after 6 h above 30 °C"
+            " (credited to Blaeser & Weltzien 1979).",
+        ),
     ),
     "kennelly2005.bunch_window": Formulation(
         "Bunches past downy mildew four weeks after flowering",
@@ -1374,6 +1407,107 @@ FORMULATIONS: dict[str, Formulation] = {
             " equation.",
         ),
     ),
+    "keil2007.sporulation": Formulation(
+        "Sporangia per cm² of lesion from the temperature of the sporulating night: a quadratic",
+        (
+            "Keil 2007, Epidemiologische Aspekte der Falschen Mehltauinfektion durch Plasmopara"
+            " viticola an Vitis, dissertation, Univ. Hohenheim, p. 53 and Fig. 19"
+        ),
+        year=2007,
+        authors=("Keil, Sven Benjamin",),
+        authors_complete=True,
+        authors_from="read",
+        checked="keil2008_epidemiologie.pdf (deep-research drop), title page",
+        calibrated_on=("keil2007.freiburg",),
+        calibration_note=(
+            "read 2026-10-09: a trend line through Keil's own means at 15, 20, 25, 28 and 30 °C"
+            " (R² 0.8955); compared with Lalancette 1988 and Blaeser 1978, not fitted to them"
+        ),
+        structures=("sporulation-temperature-bounds",),
+        structures_note=(
+            "positive only between about 13.5 and 31 °C (arithmetic): a temperature band read"
+            " strictly, with a shape inside it"
+        ),
+        parameters=(
+            Published("a", -747.5, "sporangia/cm² per °C²", "p. 53", "read"),
+            Published("b", 33397.0, "sporangia/cm² per °C", "p. 53", "read"),
+            Published("c", -330581.0, "sporangia/cm²", "p. 53", "read"),
+        ),
+        flags=(
+            "As printed (p. 53): sporangia/cm² = -747.5 T² + 33397 T - 330581. Its vertex is"
+            " 22.3 °C against the text's 'ca. 23 °C', and it is negative at 30 °C (about -1,400)"
+            " where the text says almost no sporulation (arithmetic). Sporulation was seen down"
+            " to 8 °C, below the fitted range.",
+        ),
+    ),
+    "keil2007.sun_mortality": Formulation(
+        "Extra deaths of sporangia in direct sun, against shaded controls: 3 points an hour",
+        "Keil 2007, dissertation, Univ. Hohenheim, p. 63",
+        year=2007,
+        authors=("Keil, Sven Benjamin",),
+        authors_complete=True,
+        authors_from="read",
+        checked="keil2008_epidemiologie.pdf (deep-research drop), title page",
+        calibrated_on=("keil2007.freiburg",),
+        calibration_note="read 2026-10-09: sporangia on glass in sun and in shade, summer 2005",
+        structures=("sun-exposure-mortality",),
+        parameters=(
+            Published("slope", 3.0, "percentage points per hour", "p. 63", "read"),
+            Published("intercept", -1.4, "percentage points", "p. 63", "read"),
+            Published("irradiance", 0.65, "kWh/m² (mean)", "p. 63", "read"),
+        ),
+        flags=(
+            "As printed (p. 63): Absterberate = 3 x Expositionsdauer - 1.4 (R² 0.85): the excess"
+            " of dead sporangia over shaded controls; little difference in the first 2 h, about"
+            " 10 % after 3-5 h, 17.5 % after 6 h, 23 % after 7 h. Light alone kills far fewer"
+            " than Kennelly et al. 2007 found dead after 6-8 h of hot, dry days.",
+            "Vitality also falls with the temperature sporangia formed at: 72.7 % at 15 °C, 40.5 %"
+            " at 27.5 °C (Table 8).",
+        ),
+    ),
+    "epi1983.corrected": Formulation(
+        (
+            "EPI, the potential infection state: winter potential energy from monthly rain and"
+            " temperature against normals, then a daily kinetic phase from humidity"
+        ),
+        (
+            "Strizyk's EPI, 'Modèle 83 corrigé', as printed in Ronzon (Tran Manh Sung) 1987,"
+            " Modélisation du comportement épidémique du mildiou de la vigne, thesis, Univ."
+            " Bordeaux II, pp. 49 and 51"
+        ),
+        year=1983,
+        authors=("Strizyk, S.",),
+        authors_from="trail",
+        checked=(
+            "Ronzon 1987 (deep-research drop, HAL tel-02856849), pp. 49-51, page images; the"
+            " model's own report (Strizyk 1983, ACTA) is not held"
+        ),
+        calibration_note=(
+            "not stated: run on 1975-1982 a posteriori and 1983-1986 in real time against the"
+            " Plant Protection Service's attack classes (ronzon1987.bordeaux); no fit described"
+        ),
+        structures=("potential-energy-index",),
+        parameters=(
+            Published("pe.factor", 2.0, "1", "p. 49, PE = 2 ct (√H - √Hc)", "read"),
+            Published("ep.factor", 0.2, "1", "p. 49, EP = 0.2 ct (√H√T - √Hc√Tc)", "read"),
+            Published("en.threshold", 135.0, "per NJM", "p. 49, k >= 135/NJM", "read"),
+            Published("kinetic.factor", 0.012, "1", "p. 51", "read"),
+            Published("um.low_sigma", 0.16, "sd", "p. 51, UM - 0.16 sd < Um", "read"),
+            Published("um.high_sigma", 0.7, "sd", "p. 51, Um < UM + 0.7 sd", "read"),
+        ),
+        flags=(
+            "As printed (pp. 49, 51, checked in the page images): PE = 2 ct (√H - √Hc); EP = 0.2"
+            " ct (√H √T - √Hc √Tc); EN_i = a log(K_i) when k >= 135/NJM, a = NJM x 1.5/18; EN ="
+            " the sum over three decades; EPI = EPI0 + (PE + EP - EN), monthly October-March."
+            " Kinetic phase: Um = ((U1 + U2 + U3) + 5 UN)/8, bounded by UM - 0.16 sd and UM +"
+            " 0.7 sd (sd: the standard deviation of UM over at least 20 years); EPI = 0.012"
+            " [(Um² √T - UM² √TM)/100] + EPI0. ct is a monthly constant (1.2, 1, 0.8 in the"
+            " original version).",
+            "Needs 20 years of monthly normals. An EPI in [-10, 0] at the end of March is a"
+            " critical zone (p. 51). Maddalena et al. 2023 and Sanna et al. 2014 run EPI in"
+            " Epicure; their version's thresholds are not printed.",
+        ),
+    ),
     "rouzet2003.cold_days": Formulation(
         (
             "A correlation window, not a maturation start: days with Tmax over 10 °C counted"
@@ -1642,6 +1776,10 @@ FORMULATIONS: dict[str, Formulation] = {
             "Fitted to three maturity dates; validated on the twelve years it was fitted to"
             " (a posteriori, as the paper says). It gives one date, not a cohort curve.",
             "DMCast (Park et al. 1997) computes POM's index (read in Caffi et al. 2007).",
+            "The 1987 thesis version (Ronzon 1987, literature/ronzon1987) fits its coefficients"
+            " to 1985 and 1986 alone, with 1984 as a check (17 April calculated, 16 April"
+            " observed), and gives severity classes, not a regression (six exact and four off by"
+            " one, 1977-1986).",
         ),
     ),
     "sentelhas2004.penman_monteith": Formulation(

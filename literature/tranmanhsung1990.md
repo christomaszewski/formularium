@@ -46,7 +46,9 @@ From INRA Bordeaux (Villenave d'Ornon; Tran Manh Sung, Clerjeau) and SESMA, Pari
 ## Dependence
 
 - It takes EPI's idea, that rain counts only between limits set from climatic normals
-  (Strizyk 1983; l. 566, 577), but computes none of EPI's equations.
+  (Strizyk 1983; l. 566, 577), but computes none of EPI's equations. EPI's equations are
+  printed in Ronzon 1987 ([ronzon1987](ronzon1987.md), `epi1983.corrected`), the thesis POM
+  came from.
 - Its maturity dates come from the authors' own assay; nothing was dated by a model. The
   severity ratings come from regional bulletins whose own basis is not stated (a flag:
   they may have leaned on EPI).
