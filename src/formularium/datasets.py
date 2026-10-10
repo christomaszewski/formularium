@@ -563,4 +563,43 @@ DATASETS: dict[str, Dataset] = {
         " fitted to them",
         "read",
     ),
+    "zanzotto2010.treviso": Dataset(
+        "First downy mildew symptoms on leaves and bunches and season severity classes in"
+        " untreated Merlot at Susegana (1999-2002) and Spresiano (2003-2009), Treviso province,"
+        " with station weather",
+        "Zanzotto & Borgo 2010, GDPM 2010 proceedings pp. 128-130 (read 2026-10-10). No"
+        " formulation is recorded as fitted to them",
+        "read",
+    ),
+    "magarey2010dispersal.nuriootpa": Dataset(
+        "Downy mildew incidence and oil spots per leaf at 4-34 m downwind of a single inoculated"
+        " source after one secondary event (29 November 1989), unsprayed vineyard near Nuriootpa,"
+        " South Australia",
+        "Magarey & Wicks 2010, GDPM 2010 proceedings pp. 103-105 (read 2026-10-10). No"
+        " formulation is recorded as fitted to them; a trend line is drawn without an equation",
+        "read",
+    ),
+    "lulu2008.jundiai": Dataset(
+        "Leaf wetness from Campbell 237 sensors at four canopy positions in a Niagara Rosada"
+        " vineyard and over turf at IAC Jundiaí, 11 November 2005 to 5 March 2006, with weather;"
+        " downy mildew severity under six pruning dates, 2006-2007 (figures only)",
+        "Lulu 2008, thesis, ESALQ/USP, and Lulu et al. 2008 (Sci. Agric. 65; Eng. Agríc. 28)"
+        " (read 2026-10-10): wetness regressions and in-sample disease regressions are fitted to"
+        " them",
+        "read",
+    ),
+    "spotts1977.ohio": Dataset(
+        "Minimum leaf wetness for light black rot infection at 10-32 °C on four cultivars in"
+        " chambers (Table 1), and vineyard observations at Chesterville, Ohio, 1975-1976",
+        "Spotts 1977, Phytopathology 67:1378-1381 (read 2026-10-10): VitiMeteo black rot's"
+        " infection thresholds come from it, through Ellis et al. 1986",
+        "read",
+    ),
+    "gonzalezdominguez2015.epidemics": Dataset(
+        "Incidence and severity of Botrytis bunch rot at harvest in 21 untreated epidemics in 12"
+        " Italian vineyards, 2009-2014, with hourly on-site weather",
+        "González-Domínguez et al. 2015, PLoS ONE 10:e0140444 (read 2026-10-10): its"
+        " discriminant analysis of the model's outputs is fitted to them",
+        "read",
+    ),
 }

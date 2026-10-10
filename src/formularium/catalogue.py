@@ -1865,8 +1865,9 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_complete=True,
         authors_from="read",
         checked=(
-            "Hill et al. 2019's reference list and eq. 1 (10-1094-phyto-10-17-0357-r.pdf, read"
-            " 2026-10-08); Kim et al. 2007 itself is not held"
+            "Hill et al. 2019's eq. 1 (10-1094-phyto-10-17-0357-r.pdf, read 2026-10-08, the"
+            " page image checked 2026-10-10); Kim et al. 2007 itself, p. 129, read in the page"
+            " image 2026-10-10 (literature/kim2007nzpp)"
         ),
         structures=("wetness-temperature-infection-index",),
         structures_note=(
@@ -1874,13 +1875,14 @@ FORMULATIONS: dict[str, Formulation] = {
             " tag of its own, an hourly rate summed over wet hours"
         ),
         calibration_note=(
-            "not recorded: Kim et al. 2007 is not held, and Hill et al. 2019 do not refit it"
-            " (read 2026-10-08)"
+            "not recorded: Kim et al. 2007 credit the model to Rengasamy & Edwards (unpublished"
+            " data) and print no fit; Hill et al. 2019 do not refit it"
         ),
         parameters=(
             Published("a", 84.37, "h", "Hill et al. 2019, eq. 1 and Fig. 3 caption", "read"),
             Published("b", 7.238, "h/°C", "Hill et al. 2019, eq. 1 and Fig. 3 caption", "read"),
             Published("c", 0.156, "h/°C²", "Hill et al. 2019, eq. 1 and Fig. 3 caption", "read"),
+            Published("c_kim2007", 0.1856, "h/°C²", "Kim et al. 2007, p. 129", "read"),
         ),
         flags=(
             "Per wet hour (sensor response above 50%), x = 1/(a - b·T + c·T²): about 2.42 at its"
@@ -1888,6 +1890,12 @@ FORMULATIONS: dict[str, Formulation] = {
             " without saying what changed; Beresford is an author of both.",
             "In 101 site-years it predicted bunch rot no better than simple humidity hours"
             " (AUC 0.647 against 0.729; Hill et al. 2019).",
+            "Kim et al. 2007 (p. 129, page image, 2026-10-10) print I = 84.37 - 7.238T +"
+            " 0.1856T² as the risk for each wet hour, summed over the wet period: no reciprocal,"
+            " c = 0.1856. Hill et al.'s 'correction' changes both. At one point: Kim's I is"
+            " lowest (13.8) at 19.5 °C and highest at 0 °C, so it reads as wet hours needed, near"
+            " Broome's 10.5 h at 20 °C; with Hill's c, the reciprocal reaches 2.42 per wet hour"
+            " at 23.2 °C, an infection in 0.41 wet hours. Which one Bacchus is, is not settled.",
         ),
     ),
 }
