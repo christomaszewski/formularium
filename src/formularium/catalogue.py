@@ -54,6 +54,13 @@ FORMULATIONS: dict[str, Formulation] = {
             " develop the criteria were collected'; Kennelly et al. 2006 give fifteen years of"
             " those data. Evaluated in four Finger Lakes Chancellor vineyards, 2001-2003"
         ),
+        flags=(
+            "First printed by Gadoury, Seem & Wilcox 1997 (NYS IPM Project Reports; read"
+            " 2026-10-09, literature/gadoury1997), from fifteen years of weather, vine growth and"
+            " first disease: 5-6 flat leaves with clusters visible, 0.10 in (2.5 mm) of rain or"
+            " more, and temperatures during the rain above 52 °F (11.1 °C). The engine's daily"
+            " mean of 11 °C is not 'during the rain', and the growth stage is dropped.",
+        ),
     ),
     "goidanich.incubation": Formulation(
         "Incubation of downy mildew by Goidanich's table",
@@ -260,6 +267,12 @@ FORMULATIONS: dict[str, Formulation] = {
             " maximum lifetimes in days, and at most 6 h above 30 °C. Blaeser & Weltzien 1978"
             " ('<24 h at 20 °C and 30 % RH' in Brischetto's discussion) show that only in a bar"
             " chart (Abb. 3, p. 159).",
+            "Table 1 (p. 4, read in the page image 2026-10-10; literature/brischetto2020) gives"
+            " VPD 11.6, 9.59 and 12.59 hPa at 22.4 °C and 57 %, 21.9 °C and 64.6 %, 23.0 °C and"
+            " 55.77 %. Those are the saturation deficit E·(1 - RH/100) in hPa (11.6, 9.3, 12.4"
+            " by Magnus), not the printed T·(1 - RH/100) (9.6, 7.8, 10.2), and the discussion"
+            " defines VPD as the saturation deficit. Which the authors ran is not stated; the"
+            " engine runs the printed form.",
         ),
         parameters=(
             Published("eq2.c0_d", 5.67, "d", "eq. 2", "read"),
@@ -740,6 +753,10 @@ FORMULATIONS: dict[str, Formulation] = {
             " Latorre and J. C. Aviles. The combined fit's b2 is garbled in the text copy, so"
             " 0.061601 needs the page image. Cooptera's list, which this record must match,"
             " still gives the trail.",
+            "Monteiro et al. 2015 (Embrapa Boletim 38, p. 10, read in the scan 2026-10-09;"
+            " literature/monteiro2015bol) print the combined fit as -2.647866 - 0.374927W +"
+            " 0.061601WT - 0.001511WT² (R² 0.75): the engine's coefficients, b2 included."
+            " Rodrigues et al. 2019 print the intercept as +2.6479, a misprint.",
         ),
     ),
     "gubler1999.powdery_index": Formulation(
@@ -915,9 +932,9 @@ FORMULATIONS: dict[str, Formulation] = {
             " 22 °C and the maximum at most 26 °C; 1-2 days at means of 22-25 °C; 6-8 days"
             " only in saturated air at means up to 23 °C, otherwise at most 2 days.",
             "Brischetto et al. 2020 cite this as sporangia 'on sporulating lesions' viable 4-8"
-            " days below a 22 °C maximum: the experiments were on detached conidia on slides,"
-            " and 6-8 days needed saturated air. Against Brischetto's eq. 2 (Agrarium"
-            " scripts/diagnostics/sporangia_survival.py, 2026-10-09): mild shade agrees;"
+            " days in shade when maxima 'did not exceed 22°C': the experiments were on detached"
+            " conidia on slides, and 6-8 days needed saturated air. Against Brischetto's eq. 2"
+            " (Agrarium scripts/diagnostics/sporangia_survival.py, 2026-10-09): mild shade agrees;"
             " saturated air at 25 °C (2 d) and ambient air at 23-25 °C (1 d) do not, since the"
             " eq. 2 index T (1 - RH/100) is 0 in saturated air at any temperature; and eq. 2"
             " has no sun.",
@@ -1744,6 +1761,12 @@ FORMULATIONS: dict[str, Formulation] = {
             "Magarey et al. 2005's P. viticola row was fitted to the same data (lalancette1988a);"
             " the engine runs Magarey's model with other parameters, so this shares no data with"
             " the engine. Ellis and Madden are authors of the engine's Lalancette bound: a flag.",
+            "Brazilian copies differ from eq. 5 (read 2026-10-09): Hamada et al. 2008 print the"
+            " intercept -0.71; Reis et al. 2013 the exponent 1/(-1.2); Monteiro et al. 2012 and"
+            " 2015 and Embrapa's Boletim 38 an intercept of -0.061, no +0.01 and e^(+rho);"
+            " Rodrigues et al. 2019 that, with T² for T and no WT² term. Take the equation from"
+            " eq. 5, not a copy (literature/hamada2008, reis2013, monteiro2012, monteiro2015,"
+            " monteiro2015bol, rodrigues2019).",
         ),
     ),
     "tranmanhsung1990.pom": Formulation(

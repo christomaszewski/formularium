@@ -396,4 +396,61 @@ DATASETS: dict[str, Dataset] = {
         " susceptible cultivar Chancellor at one site'",
         "read",
     ),
+    "brischetto2020.piacenza": Dataset(
+        "Airborne sporangia of P. viticola caught daily by a volumetric sampler, and lesions on"
+        " leaves sampled on 108 dates and incubated 24 h, beside artificially inoculated vines,"
+        " Piacenza campus vineyard, 2015-2017, with the vineyard station's weather (figures"
+        " only)",
+        "Brischetto et al. 2020, Front. Plant Sci. 11:1187 (read 2026-10-09): the logistic"
+        " regression of infection on viable sporangia, and its 2.52 sporangia/m³/day threshold,"
+        " are fitted to them. The predictor is computed with Blaeser & Weltzien's survival"
+        " equations (eqs 1-2); the lesions are observed",
+        "read",
+    ),
+    "salotti2022.piacenza": Dataset(
+        "Downy mildew, powdery mildew and black rot severity (EPPO classes; AUDPC) on leaves and"
+        " bunches of 16 unsprayed varieties, Merlot the susceptible control, Piacenza campus"
+        " vineyard, 2017, 2018, 2019 and 2021, with the vineyard station's weather",
+        "Salotti, Bove, Ji & Rossi 2022, Front. Plant Sci. 13:1017658 (read 2026-10-09). No"
+        " formulation is recorded as fitted to them; variety resistance patterns",
+        "read",
+    ),
+    "volpi2021.tuscany": Dataset(
+        "Weekly presence or absence of downy mildew, powdery mildew and grey mould symptoms on"
+        " Sangiovese in 112-179 vineyards a year of Tuscany's area-wide IPM network"
+        " (Agroambiente.info), 2006-2019 except 2011; 18,857 downy mildew records (not in the"
+        " paper)",
+        "Volpi, Guidotti, Mammini & Marchi 2021, Ital. J. Agrometeorol. 2:57-69 (read"
+        " 2026-10-09): their random forest and C5.0 classifiers are fitted to them, with"
+        " ERA5-Land weather",
+        "read",
+    ),
+    "kleb2026.hohenheim": Dataset(
+        "Air temperature, RH and leaf wetness at 100, 130 and 160 cm in 12 canopy sites, at a"
+        " border station (200 cm) and at the Metzingen network station 23 km away, with expert"
+        " estimates of infected leaf area every three days over three periods, Pinot Meunier,"
+        " Hohenheim, 2021",
+        "Kleb et al. 2026, Research Square preprint (read 2026-10-09). No formulation is"
+        " recorded as fitted to them; VitiMeteo-Plasmopara was run on each weather source and"
+        " compared with the scores",
+        "read",
+    ),
+    "firanjsremac2018.vrsac": Dataset(
+        "Dates shoots reached 10 cm and first downy mildew symptoms at the plant-protection"
+        " service's Vršac vineyard (VV), Serbia, 2012-2018, mostly untreated Šasla (Table 2),"
+        " with the service's station weather",
+        "Firanj Sremac, Lalić, Marčić & Dekić 2018, Atmosphere 9:484 (read 2026-10-09). No"
+        " formulation is recorded as fitted to them; BAHUS-P (the 3-10 rule at 12 °C) was"
+        " compared with them",
+        "read",
+    ),
+    "valleggi2023.chianti": Dataset(
+        "Leaves infected (yes or no) out of 400 per strategy and year at BBCH 85-89, five"
+        " control strategies in one Sangiovese vineyard in Chianti Classico, 2018-2020 (the"
+        " LIFE Green Grapes trial, Perria et al. 2022); 386, 34 and 318 infected under the"
+        " biostimulant-only control",
+        "Valleggi et al. 2023, Front. Plant Sci. 14:1117498 (read 2026-10-09): their Bayesian"
+        " GLMM is fitted to the counts (Table 1), with no weather",
+        "read",
+    ),
 }
