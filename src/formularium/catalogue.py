@@ -98,6 +98,11 @@ FORMULATIONS: dict[str, Formulation] = {
             " literature/casanovagascon2019): run by growers there to date infections, its dates"
             " in 2016 and 2018 'were off by several weeks' against observed symptoms. No numbers"
             " are printed.",
+            "Run in Spain by Pérez-Expósito et al. 2017 (VineSens, Ribeira Sacra) and Elbaile Mur"
+            " 2016 (Somontano, Barrios et al. 2004's table); the 1961 Penedès warning service used"
+            " a daily incubation step from 'the University of Bologna study', probably this table"
+            " (Ticó Maluquer 2013; literature/perezexposito2017, elbailemur2016,"
+            " ticomaluquer2013; light reads, 2026-10-10).",
         ),
     ),
     "rule_3_10": Formulation(
@@ -449,6 +454,13 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="2010-magarey-url-magarey-2010-gwrdc-managing-downy-mi.pdf",
         borrows=("noaa.solar_position",),
         structures=("rain-temperature-trigger",),
+        flags=(
+            "The fact sheet is held since 2026-10-10 (literature/magarey2010: Magarey, Managing"
+            " Downy Mildew, GWRDC Innovators Network Module INO904, March 2010). Cooptera's"
+            " docstring quotes it word for word (10:10:24, 45 °C-h, RH >= 98 % at >= 13 °C in 4"
+            " h of darkness, 5-17 days). The sheet also asks that oospores in the top 1-2 cm of"
+            " soil be wet for >= 16 h at >= 8 °C, which the module does not use.",
+        ),
     ),
     "puelles2024.ur": Formulation(
         "UR mildiu rules (La Rioja)",
@@ -717,6 +729,12 @@ FORMULATIONS: dict[str, Formulation] = {
             " degree-days above a daily mean of 8 °C 'during spring', not 140. Gessler et al."
             " 2011 (Phytopathol. Mediterr. 50:3-44, p. 7; read 2026-10-09) give Gehmann et"
             " al. 1987's German rule as 160 °C·days above 8 °C from 1 January, at 2 m.",
+            "The threshold varies by source (read 2026-10-10): VitiMeteo's Luxembourg user guide"
+            " calls it an adjustable setting, 'normalerweise 160 Gradtage' (literature/"
+            "institutvitivinicole2015); Pertot et al.'s SafeCrop booklet credits Gehmann 1987 with"
+            " 170 above 8 °C from 1 January (literature/pertot2007), where Gessler et al. 2011 give"
+            " Gehmann's as 160; Puelles et al. 2024 use 140-160. The engine's 140 is Leoni et al."
+            " 2026's reading of Siegfried et al. 2004.",
         ),
     ),
     "leoni2026.oospores": Formulation(
@@ -1797,9 +1815,9 @@ FORMULATIONS: dict[str, Formulation] = {
             "Brazilian copies differ from eq. 5 (read 2026-10-09): Hamada et al. 2008 print the"
             " intercept -0.71; Reis et al. 2013 the exponent 1/(-1.2); Monteiro et al. 2012 and"
             " 2015 and Embrapa's Boletim 38 an intercept of -0.061, no +0.01 and e^(+rho);"
-            " Rodrigues et al. 2019 that, with T² for T and no WT² term. Take the equation from"
-            " eq. 5, not a copy (literature/hamada2008, reis2013, monteiro2012, monteiro2015,"
-            " monteiro2015bol, rodrigues2019).",
+            " Rodrigues et al. 2019 and Alves et al. 2015 that, with T² for T and no WT² term."
+            " Take the equation from eq. 5, not a copy (literature/hamada2008, reis2013,"
+            " monteiro2012, monteiro2015, monteiro2015bol, rodrigues2019, alves2015).",
         ),
     ),
     "tranmanhsung1990.pom": Formulation(
