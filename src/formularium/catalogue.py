@@ -119,7 +119,10 @@ FORMULATIONS: dict[str, Formulation] = {
     ),
     "rossi2008.primary": Formulation(
         "Primary infections cohort by cohort: germination to incubation",
-        "Rossi, Caffi, Giosuè & Bugiani 2008, Ecological Modelling 212: 480-491",
+        (
+            "Rossi, Caffi, Giosuè & Bugiani 2008, Ecological Modelling 212: 480-491; sporangia"
+            " survival as Blaeser & Weltzien 1979 fit it (D30)"
+        ),
         year=2008,
         authors=("Rossi, Vittorio", "Caffi, Tito", "Giosuè, Simona", "Bugiani, Riccardo"),
         authors_complete=True,
@@ -157,16 +160,15 @@ FORMULATIONS: dict[str, Formulation] = {
     "blaeser1979.survival": Formulation(
         "Survival of sporangia, and 60 °C·h of wetness to infect",
         (
-            "Blaeser & Weltzien 1979, credited for these equations by Rossi et al. 2008 and "
-            "Brischetto et al. 2020 (both read); not held"
+            "Blaeser & Weltzien 1979, Z. PflKrankh. PflSchutz 86: 489-498, Abb. 3 and summary:"
+            " lifetime against the saturation deficit E (1 - RH/100) in mm, at most 6 h above"
+            " 30 °C (Rossi et al. 2008 eq. 6 prints T (1 - RH/100))"
         ),
         year=1979,
-        authors=("Blaeser", "Weltzien"),
-        authors_from="trail",
-        checked=(
-            "2008-rossi-10-1016-j-ecolmodel-2007-10-046.pdf; "
-            "2020-brischetto-10-3389-fpls-2020-01187.pdf"
-        ),
+        authors=("Blaeser, Marlene", "Weltzien, H. C."),
+        authors_complete=True,
+        authors_from="read",
+        checked="1979-blaeser-url-blaeser-weltzien-1979-plasmopara.pdf",
         structures=("vpd-survival", "wet-degree-hours-infection"),
         structures_note=(
             "read 2026-10-09 (literature/blaeser1979): survival as a quadratic in the saturation"
@@ -175,7 +177,8 @@ FORMULATIONS: dict[str, Formulation] = {
         calibrated_on=("blaeser1978.survival", "blaeser1979"),
         calibration_note=(
             "Read 2026-10-09 in the paper (Z. PflKrankh. PflSchutz 86:489-498, by Marlene"
-            " Blaeser and H. C. Weltzien; Cooptera's list keeps its trail record): the survival"
+            " Blaeser and H. C. Weltzien; Cooptera's list reads it since cooptera@2ae3182): the"
+            " survival"
             " curves (Abb. 3) were fitted to the laboratory survival tests that Blaeser &"
             " Weltzien 1978 describe (sporangia from potted Müller-Thurgau, 10-30 °C,"
             " 30-100 % RH), leaving out 100 % RH and 30 °C; the infection rule to Tab. 1's"
@@ -245,7 +248,10 @@ FORMULATIONS: dict[str, Formulation] = {
     ),
     "brischetto2020.survival": Formulation(
         "Survival of detached sporangia (written and tested; no run calls it yet)",
-        "Brischetto et al. 2020, doi:10.3389/fpls.2020.01187, equations 1 and 2",
+        (
+            "Brischetto et al. 2020, doi:10.3389/fpls.2020.01187, equations 1 and 2, run as"
+            " Blaeser & Weltzien 1979 fit them (D30)"
+        ),
         year=2020,
         authors=("Brischetto, Chiara", "Bove, Federica", "Languasco, Luca", "Rossi, Vittorio"),
         authors_complete=True,
@@ -438,13 +444,14 @@ FORMULATIONS: dict[str, Formulation] = {
     "magarey2010.rules": Formulation(
         "Downy mildew rules of thumb: 10:10:24, sporulation, infection",
         (
-            "Magarey 2010, Managing Downy Mildew (GWRDC fact sheet), the page's default disease "
-            "layer; not held"
+            "Magarey 2010, Managing Downy Mildew (Winning the war!), GWRDC Innovators Network"
+            " Module INO904, March 2010; the page's default disease layer"
         ),
         year=2010,
-        authors=("Magarey, P. A.",),
-        authors_from="trail",
-        checked="models/downy_mildew.py's docstring",
+        authors=("Magarey, Peter A.",),
+        authors_complete=True,
+        authors_from="read",
+        checked="2010-magarey-url-magarey-2010-gwrdc-managing-downy-mi.pdf",
         borrows=("noaa.solar_position",),
         structures=("rain-temperature-trigger",),
         flags=(
@@ -463,7 +470,7 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_complete=True,
         authors_from="read",
         checked="2024-puelles-10-1016-j-cropro-2023-106450.pdf",
-        borrows=("goidanich.incubation",),
+        borrows=("rule_3_10", "goidanich.incubation"),
         structures=(
             "wet-degree-hours-infection",
             "rain-temperature-trigger",
@@ -485,8 +492,8 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         flags=(
             "The paper's UR model also computes the 3-10 conditions (T >= 10 °C, shoots >= 10 cm,"
-            " 10 mm in 24-48 h, 'the same algorithm as the Goidanich model'), which Cooptera's"
-            " list does not name among its borrowings (asked 2026-10-09). It adds germination"
+            " 10 mm in 24-48 h, 'the same algorithm as the Goidanich model'): a borrowing"
+            " Cooptera's list names since cooptera@2ae3182 (asked 2026-10-09). It adds germination"
             " after 5 mm in 48 h at 12 °C or more, and kills spores after 6 h above 30 °C"
             " (credited to Blaeser & Weltzien 1979).",
         ),
@@ -763,18 +770,28 @@ FORMULATIONS: dict[str, Formulation] = {
     ),
     "broome1995.botrytis": Formulation(
         "Botrytis infection index per wet period",
-        "Broome et al. 1995, Phytopathology 85: 97-102, as UC IPM states the rules; not held",
+        (
+            "Broome et al. 1995, Phytopathology 85: 97-102, doi:10.1094/Phyto-85-97 (the combined"
+            " data's coefficients; the dry-period rules as UC IPM states them)"
+        ),
         year=1995,
-        authors=("Broome, J.", "English, J.", "Marois, J.", "Latorre, B. A.", "Aviles, J."),
-        authors_from="trail",
-        checked="UC IPM's page; González-Domínguez et al. 2015's reference list (held)",
+        authors=(
+            "Broome, J. C.",
+            "English, J. T.",
+            "Marois, J. J.",
+            "Latorre, B. A.",
+            "Aviles, J. C.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="1995-broome-10-1094-phyto-85-97.pdf",
         structures=("wetness-temperature-infection-index",),
         flags=(
             "The paper is held in Chris's drop and read since 2026-10-08 (literature/"
             "broome1995): its byline is J. C. Broome, J. T. English, J. J. Marois, B. A."
             " Latorre and J. C. Aviles. The combined fit's b2 is garbled in the text copy, so"
-            " 0.061601 needs the page image. Cooptera's list, which this record must match,"
-            " still gives the trail.",
+            " 0.061601 needs the page image. Cooptera's list takes the byline from the paper"
+            " since cooptera@2ae3182.",
             "Monteiro et al. 2015 (Embrapa Boletim 38, p. 10, read in the scan 2026-10-09;"
             " literature/monteiro2015bol) print the combined fit as -2.647866 - 0.374927W +"
             " 0.061601WT - 0.001511WT² (R² 0.75): the engine's coefficients, b2 included."
