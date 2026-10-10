@@ -78,6 +78,9 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "goidanich.incubation": ("goidanich1957",),
         "rossi2008.primary": ("goidanich1957", "laviola1986"),
         "rossi2002.onset": ("rossi2002.emilia",),
+        "keil2007.sporulation": ("keil2007.freiburg",),
+        "keil2007.sun_mortality": ("keil2007.freiburg",),
+        "puelles2024.ur": ("puelles2024.rioja",),
         "rosa1995.incubation": ("goidanich1957", "zachos1959", "orlandini1993.emergences"),
         "orlandini2008.plasmo": (
             "orlandini2008.mondeggi",

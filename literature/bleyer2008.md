@@ -34,6 +34,9 @@ Changins and Wädenswil (Viret, Siegfried). VitiMeteo's oospore rule is an engin
   10 and 15 May at an early and a late site (l. 232).
 - **PeroRisiko:** degree-hours of leaf wetness, 50-100 weak, 100-200 medium, above 200
   strong (l. 326-334), after Keil 2007 and experience (l. 336); unit and base not printed.
+  Keil 2007 itself (read 2026-10-09, [keil2007](keil2007.md)) says VitiMeteo's infection
+  strength had been set "nach Erfahrungswerten" and that its results were to be
+  integrated; it prints its leaf-disc data but no VitiMeteo classes.
 - **Checks:** symptoms appeared at about 70% of the computed incubation on young leaves
   (incubation over 10 days) and about 90% on old leaves (under 7 days) (l. 281-284).
   Validation against BIOMAT and HP 100 devices, 2001-2005 (l. 221); plots inoculated on

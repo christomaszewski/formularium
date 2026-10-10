@@ -295,6 +295,75 @@ DATASETS: dict[str, Dataset] = {
         " validated on 1998-2003 (Tables 2-4)",
         "read",
     ),
+    "keil2007.freiburg": Dataset(
+        "Leaf discs of Müller-Thurgau inoculated with 25,000 sporangia/ml at 5-30 °C and 1-23 h"
+        " of wetness, 20 discs per cell, the percent of stomata infected (Anhang 7.1); sporangia"
+        " per cm² of field lesions at 15-30 °C; sporangia under direct sun on glass, summer 2005;"
+        " untreated epidemics at the WBI Freiburg, 2004-2006",
+        "Keil 2007, dissertation, Univ. Hohenheim, pp. 41, 53, 63, 74 and Anhang 7.1 (read"
+        " 2026-10-09): the sporulation quadratic and the sun-exposure line are fitted to these"
+        " counts. The infection cells carry no fitted equation",
+        "read",
+    ),
+    "istvanffi1913.hungary": Dataset(
+        "Latent periods of downy mildew from natural infections dated by the institute"
+        " vineyard's weather station and from artificial infections in the open, Hungary, 1911"
+        " and 1912 combined, by half-month from early May to August",
+        "Istvánffi 1913, Botanikai Közlemények 12 (read 2026-10-09). No formulation is recorded"
+        " as fitted to them; an incubation calendar older than Müller & Sleumer's and"
+        " Goidanich's, for history matching",
+        "read",
+    ),
+    "haasbroek2006.westerncape": Dataset(
+        "Weekly downy mildew in untreated plots at Nietvoorbij (Stellenbosch), 6 November 2002 to"
+        " 19 February 2003 (100 leaves, visual); monthly disease classes 1998-2003; hourly"
+        " weather and leaf-wetness sensor readings at Nietvoorbij, Môrewag (Paarl) and four"
+        " Robertson stations, Western Cape",
+        "Haasbroek 2006, M.Sc. Agric. thesis, Univ. Free State (read 2026-10-09): the DSVW"
+        " leaf-wetness regression is fitted to the 2002 Nietvoorbij sensor data. A"
+        " Mediterranean-climate pattern for the truth",
+        "read",
+    ),
+    "puelles2024.rioja": Dataset(
+        "First symptoms and later infection blocks in eight Rioja vineyards (Tempranillo,"
+        " Graciano; 452-552 m), 2018-2019, visited every 5-7 days, at least 40 untreated vines a"
+        " plot beside an agroclimatic station; oospores buried in mesh bags and germinated at"
+        " 20 °C",
+        "Puelles et al. 2024, Crop Prot. (read 2026-10-09 in the authors' manuscript): the UR"
+        " model's 160 °C·day oospore threshold was chosen on these data ('data not shown'), and"
+        " the UR adjustments were judged on the same plots. Visits rose when models signalled",
+        "read",
+    ),
+    "maddalena2021.montorio": Dataset(
+        "Germination of P. viticola oospores from an untreated Corvina vineyard at Montorio"
+        " (Verona), four consecutive seasons, overwintered in the vineyard (MT) or at 5 °C on wet"
+        " sand (MTc), counted twice a week for 35 weeks, mid-November to mid-July, with daily"
+        " weather from a station in the vineyard",
+        "Maddalena, Russo & Toffolatti 2021, Front. Microbiol. (read 2026-10-09): the paper's"
+        " probit and logit models are fitted to them. Independent of Rossi 2008's leaf-disc"
+        " data (rossi2008pp.discs)",
+        "read",
+    ),
+    "maddalena2023.panzano": Dataset(
+        "Downy and powdery mildew incidence and severity in nine organic vineyards at Panzano in"
+        " Chianti, 2020-2021, untreated, EPI-timed and grower-timed plots, with first-symptom"
+        " dates; infection dates counted back from symptoms with Goidanich et al. 1957's"
+        " incubation",
+        "Maddalena et al. 2023, Plants (read 2026-10-09): used to judge EPI (Epicure). The"
+        " symptom dates are observed; the infection dates are computed with Goidanich's"
+        " incubation (section 4.4, ref. 55), so anything scored on them is calibrated with it",
+        "read",
+    ),
+    "ronzon1987.bordeaux": Dataset(
+        "Oospore maturation and germination of Malbec (1984, 1985) and Muscadelle (1986) lesions,"
+        " in chambers and buried in the vineyard (Bordeaux); downy mildew attack classes 1975-1986"
+        " from the Plant Protection Service's bulletins",
+        "Ronzon 1987, thesis, Univ. Bordeaux II (read 2026-10-09 in an OCR checked against the"
+        " page images): POM's thesis version fitted its coefficients to 1985 and 1986; EPI was"
+        " judged against the attack classes. The 1985 and 1986 maturity dates are among the"
+        " three of tranmanhsung1990.bordeaux (inferred: same lab, same years)",
+        "read",
+    ),
     "rouzet2003.balma": Dataset(
         "Dates from which oospores stored 2 cm under sand at Balma (Midi-Pyrénées) germinated"
         " within 24 h at 20-22 °C, 1969-1998 (Table 2); leaves collected at the end of October;"

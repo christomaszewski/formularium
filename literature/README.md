@@ -68,6 +68,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [bleyer2008](bleyer2008.md) | downy mildew | primary infection, sporulation | Baden-Württemberg, Switzerland | The engine's 140 °C·day oospore rule is still sourced only through Leoni et al |
 | [bleyer2020](bleyer2020.md) | downy mildew | spray timing, fungicide efficacy | Baden-Württemberg | States VitiMeteo's rule that one spray protects until 300-400 cm2 of new leaf has grown |
 | [bleyer2022](bleyer2022.md) | downy mildew | spray strategy, validation | Baden-Württemberg | Untreated severity at Freiburg and Ihringen (Table 1, mean 60.5%) is a severity… |
+| [bojkov2022](bojkov2022.md) | downy mildew | incubation | North Macedonia | One season, ten points, started by the 3-10 rule: not usable |
 | [bojkov2023](bojkov2023.md) | downy mildew | infection | North Macedonia | One season, inconsistent; not usable |
 | [borzini1950](borzini1950.md) | downy mildew | spray timing | Italy | The incubation calendar in practice, 1950 |
 | [bosshard1983](bosshard1983.md) | downy mildew | fungicide resistance | Switzerland | Context for a spray module |
@@ -160,6 +161,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [guevaratorres2025](guevaratorres2025.md) | none | evapotranspiration, remote sensing | South Australia | Pixel (about 100 m2) against canopy (about 2 m2) mismatch, for irrigation |
 | [gutierrez2017](gutierrez2017.md) | grapevine moth | pest demography | Europe | An insect pest model |
 | [gutierrez2021](gutierrez2021.md) | downy mildew, spider mite | detection, observation | Basque Country | Clear, and optimistic |
+| [haasbroek2006](haasbroek2006.md) | downy mildew | warning model, leaf wetness | Western Cape | Refines METOS's 10:10:24 rules; weekly untreated-plot data 2002-03 |
 | [hain2009](hain2009.md) | none | soil moisture | Oklahoma | Soil moisture proxy, not leaf wetness |
 | [hain2018poster](hain2018poster.md) | none | evapotranspiration | United States | A poster |
 | [halsted1900](halsted1900.md) | downy mildew | cluster infection | South Carolina | Historical field note |
@@ -173,6 +175,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [hughes2013](hughes2013.md) | none | warning scores, risk calibration | general | Clear and a method |
 | [hughes2017](hughes2017.md) | none | warning scores, forecast evaluation | general | Clear and a method |
 | [humphrey1891](humphrey1891.md) | cucurbit downy mildew, brown rot | taxonomy | Massachusetts | Off-topic |
+| [istvanffi1913](istvanffi1913.md) | downy mildew | incubation | Hungary | Latent periods by half-month, 1911-12: older than Müller and Goidanich |
 | [jacquin2003](jacquin2003.md) | downy mildew, others | warning systems | France | The French warning models in 2002; no equations |
 | [janczewski1897](janczewski1897.md) | cereal smuts | survey | Lithuania | Off-topic |
 | [jensen2025](jensen2025.md) | none | modelling review | global | Review of 146 models |
@@ -184,6 +187,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [kast1993](kast1993.md) | downy mildew | sporangia survival, dispersal | Württemberg | Infective sporangia caught when Bläser-based devices said none survived |
 | [kast2006](kast2006.md) | downy mildew, powdery mildew | season severity | Württemberg | 43 seasons of severity at one site |
 | [keil2006](keil2006.md) | downy mildew | infection severity | Baden | Severity by temperature and wetness; algorithm not printed |
+| [keil2007](keil2007.md) | downy mildew | infection, sporulation, survival | Baden-Württemberg | Infection by 5-30 °C x 1-23 h, independent of Blaeser & Weltzien; sun kills slowly |
 | [kennelly2005](kennelly2005.md) | downy mildew | host susceptibility, ontogenic resistance | New York, South Australia | The engine's window is not what the paper found for berries |
 | [kennelly2006](kennelly2006.md) | downy mildew | trigger, susceptibility, survival | New York, South Australia | The engine's trigger tuned on 15 Chancellor seasons |
 | [kennelly2007](kennelly2007.md) | downy mildew | sporangia survival, lesion productivity, oospores, trigger | New York, South Australia | no sporangia viable after 6-8 h of clear dry days; the engine's trigger; lesion decline per event |
@@ -217,12 +221,15 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [liu2026tarag](liu2026tarag.md) | none | decision support | China | Off-topic |
 | [locci1969](locci1969.md) | downy mildew | infection anatomy | Lombardy | Morphology only |
 | [locci1974](locci1974.md) | powdery mildew | infection anatomy | Lombardy | Morphology only |
+| [lopezfrias2009](lopezfrias2009.md) | downy mildew | incubation, validation | Canary Islands | Prints the engine's Goidanich table, identical row for row |
 | [lu2020](lu2020.md) | powdery mildew | infection, latent period | Quebec | Clear by every recorded link, and a flag-free candidate for powdery mildew pieces, if… |
 | [lukas2016](lukas2016.md) | downy mildew | fungicide efficacy | South Tyrol | Stop-spray efficacy |
 | [luo2001](luo2001.md) | brown rot (Monilinia) | latent infection, host susceptibility | California | Clear |
 | [maclean2021](maclean2021.md) | none | canopy microclimate, leaf temperature | global | Clear |
 | [maddalena2020](maddalena2020.md) | downy mildew | population genetics | Italy | Population genetics |
+| [maddalena2021](maddalena2021.md) | downy mildew | oospores | Veneto | Four seasons of field oospore germination with station weather |
 | [maddalena2022](maddalena2022.md) | downy mildew | oospore germination, primary infection | Lombardy | Kin by calibration, not by its authors (Agrarium's candidates |
+| [maddalena2023](maddalena2023.md) | downy mildew, powdery mildew | forecasting, validation | Tuscany | EPI in nine organic vineyards; infection dates counted back with Goidanich |
 | [madden2000](madden2000.md) | downy mildew | infection, sporulation | Ohio | Kin, now for substantive reasons |
 | [madden2018](madden2018.md) | none | sampling, spatial heterogeneity | global | Field heterogeneity across about 40 pathosystems (slopes 0.87-2.00, 80% between 1.06… |
 | [madden2024glmm](madden2024glmm.md) | none | statistics | general | A statistics tutorial |
@@ -273,10 +280,13 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [poeydebat2025](poeydebat2025.md) | downy mildew | oospores in soil, spatial structure | Bordeaux | 15 m patches (Matérn range 15.8 m); fivefold row contrast |
 | [pokovai2025](pokovai2025.md) | none | remote sensing | Hungary | Off-topic |
 | [prodorutti2006](prodorutti2006.md) | downy mildew | oospore germination | Trentino | Seven seasons of germination delay |
+| [puelles2020](puelles2020.md) | downy mildew | spray timing | La Rioja | A bachelor's thesis with the UR model's first rules |
+| [puelles2024](puelles2024.md) | downy mildew | oospores, infection, sporulation, validation | La Rioja | The engine's UR rules: Goidanich plus the 3-10 rule, Gehmann's oospores, 50 °C·h |
 | [qiu2015](qiu2015.md) | powdery mildew | host resistance | general | Host genetics review |
 | [rafaila1968](rafaila1968.md) | downy mildew | incubation | Romania | an incubation independent of Goidanich's data |
 | [reis2020](reis2020.md) | none | phenology | Portugal | Held out by structure, read strictly (Agrarium's candidates) |
 | [roberts2017](roberts2017.md) | none | statistics | general | Block cross-validation for structured data |
+| [ronzon1987](ronzon1987.md) | downy mildew | oospores, forecasting | Bordeaux | EPI printed in full; POM's thesis fit rests on 1985-86 |
 | [rosa1993](rosa1993.md) | downy mildew | infection, incubation, survival | Tuscany | PLASMO's first equations; incubation fitted to Goidanich's table, so kin |
 | [rosa1995](rosa1995.md) | downy mildew | incubation, spray timing | Tuscany | PLASMO 2.11's incubation, fully printed (m = 0.082); kin by Goidanich and Zachos |
 | [rose2016](rose2016.md) | none | decision support | England and Wales | Why farmers use or ignore decision tools |
@@ -334,6 +344,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [urbeztorres2010](urbeztorres2010.md) | Botryosphaeria dieback | spore release, observation | California | Clear, and of indirect use |
 | [valdesgomez2017](valdesgomez2017.md) | powdery mildew | scouting, spray decisions | Chile | A costed scouting policy (2-3 sprays against 7-9 |
 | [valsesia2005](valsesia2005.md) | downy mildew | detection, observation | Switzerland, Trentino | Clear |
+| [vazquezabal2019](vazquezabal2019.md) | downy mildew, black rot | infection, incubation | Galicia | Extension rules, all engine forms; Spotts's black rot table |
 | [velez2020](velez2020.md) | none | remote sensing | Greenhouse at Stellenbosch University, South Africa | NDVI falls about 0.3 per unit of lost leaf area |
 | [vercesi2002](vercesi2002.md) | downy mildew | oospore germination, fungicide | Lombardy | Untreated oospores germinated most in late March |
 | [veverka2009](veverka2009.md) | downy mildews | general | global | A book review only; the book is not held |

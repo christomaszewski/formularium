@@ -43,6 +43,9 @@ Only the contents pages are held.
     flags record the variant.
   - Hoppmann & Wittich 1997 ([hoppmann1997](hoppmann1997.md)) name Gehmann 1987's field
     data among the Geisenheim model's bases.
+  - Puelles et al. 2024 ([puelles2024](puelles2024.md)) credit the engine's UR oospore rule,
+    140-160 °C·days above 8 °C from 1 January, to "Gehmann et al., 1987" (read
+    2026-10-09).
 - Which pages hold the 160 °C·day rule is not shown by the contents; probably 3.2.2.2
   (p. 70), primary infection against the course of temperature (inferred).
 
