@@ -94,6 +94,10 @@ FORMULATIONS: dict[str, Formulation] = {
             " version in circulation (checked 2026-10-09 against Cooptera's incubation.py). How"
             " it derives from Goidanich et al. 1957's high- and low-humidity data is not shown"
             " by any of them.",
+            "Casanova-Gascón et al. 2019 (Agronomy 9:738, Somontano, read 2026-10-10;"
+            " literature/casanovagascon2019): run by growers there to date infections, its dates"
+            " in 2016 and 2018 'were off by several weeks' against observed symptoms. No numbers"
+            " are printed.",
         ),
     ),
     "rule_3_10": Formulation(
@@ -777,6 +781,12 @@ FORMULATIONS: dict[str, Formulation] = {
                 "snippet",
                 "a search summary's author list",
             ),
+        ),
+        flags=(
+            "Casanova-Gascón et al. 2019 (Agronomy 9:738, Somontano, read 2026-10-10;"
+            " literature/casanovagascon2019): 'Thomas and Gubler's model was found to be very"
+            " accurate' there, within a week of observed powdery mildew, 2016-2018. No numbers"
+            " are printed.",
         ),
     ),
     "thiessen2018.ascospores": Formulation(
@@ -1523,6 +1533,12 @@ FORMULATIONS: dict[str, Formulation] = {
             "Needs 20 years of monthly normals. An EPI in [-10, 0] at the end of March is a"
             " critical zone (p. 51). Maddalena et al. 2023 and Sanna et al. 2014 run EPI in"
             " Epicure; their version's thresholds are not printed.",
+            "Kontogiannis et al. 2024 (Computers 13:63, p. 3, read in the page image 2026-10-10;"
+            " literature/kontogiannis2024) print another version, cited to Stryzik: daily Ri and"
+            " Ti against 0.95 of the monthly normal, k on the first term only, and EN = (1.5"
+            " RDm/18) log10(Rd/RDd); a kinetic term 0.012 [1/4 (5 RHnight + 3 RH10-18h)^2 sqrt(Ti)"
+            " - RH10-18h^2 sqrt(Tm)]/100, where Ronzon has Um = (3 day + 5 night)/8 against the"
+            " normal UM; first infection when EPI > -10. Take the model from Ronzon's printing.",
         ),
     ),
     "rouzet2003.cold_days": Formulation(

@@ -453,4 +453,114 @@ DATASETS: dict[str, Dataset] = {
         " GLMM is fitted to the counts (Table 1), with no weather",
         "read",
     ),
+    "maronefassolo2022.isolates": Dataset(
+        "Infection frequency, sporulating area (5-13 days) and latent period of 72 northern"
+        " Italian P. viticola isolates (2019) on leaf discs of Pinot noir, Bianca (Rpv3-1) and"
+        " Mgaloblishvili (Rpv29) at 22 °C; oospore density and viability of three crosses",
+        "Marone Fassolo et al. 2022, Plants 11:2619 (read 2026-10-10): a log-logistic curve of"
+        " sporulating area is fitted to them per cultivar",
+        "read",
+    ),
+    "bove2020resistance.piacenza": Dataset(
+        "Leaf-disc monocycles at 20 °C on 15 partially resistant varieties and Merlot from three"
+        " unsprayed vineyards (Piacenza, Monte Baldo), 2014-2016, at three leaf stages: infection"
+        " frequency, latent period in degree-days, lesion size, sporangia per lesion, infectious"
+        " period and infectivity",
+        "Bove & Rossi 2020, Sci. Rep. 10:585 (read 2026-10-10). No formulation is recorded as"
+        " fitted to them",
+        "read",
+    ),
+    "calonnec2018.bordeaux": Dataset(
+        "Powdery mildew infection efficiency, sporulation and colony size on leaf discs of known"
+        " age, Cabernet Sauvignon (2005) and Merlot (2009-2010), Bordeaux, with leaf sugars and"
+        " water",
+        "Calonnec et al. 2018, Front. Plant Sci. 9:1808 (read 2026-10-10): exponential, logistic"
+        " and Gaussian curves against leaf age are fitted to them",
+        "read",
+    ),
+    "cortinas2020.galicia": Dataset(
+        "Daily airborne Botrytis, Erysiphe and P. viticola spores from Hirst-type traps at"
+        " Cenlle (Ribeiro) and O Mato (Ribeira Sacra), 2016-2018, with MeteoGalicia weather",
+        "Cortiñas Rodríguez et al. 2020, Agronomy 10:219 (read 2026-10-10): lagged regressions"
+        " of spore counts on weather are fitted to them",
+        "read",
+    ),
+    "albelda2005.cenlle": Dataset(
+        "Daily airborne Botrytis, Uncinula and P. viticola spores from a Lanzoni trap at Cenlle"
+        " (Ribeiro), 15 April to 22 September 2004, with a station a few metres away",
+        "Albelda et al. 2005, Bol. Micol. 20:1-8 (read 2026-10-10): lagged regressions of spore"
+        " counts on weather are fitted to them",
+        "read",
+    ),
+    "fernandezgonzalez2009.cenlle": Dataset(
+        "Daily airborne Botrytis, Uncinula and P. viticola spores from a Lanzoni trap at Cenlle"
+        " (Ribeiro), April-September 2007, with on-site weather; the 2007 season of Fernández"
+        " González's 2011 thesis",
+        "Fernández-González et al. 2009, Ann. Agric. Environ. Med. 16:263-271 (read 2026-10-10):"
+        " lagged regressions on dew point are fitted to them",
+        "read",
+    ),
+    "basso2020.geneva": Dataset(
+        "Real-time particle counts of P. viticola and E. necator spores, with leaf wetness and"
+        " weather, at five stations 400 m apart on 50 ha at Dardagny (2018-) and two at Pully"
+        " (2019-), one in an untreated plot",
+        "Basso et al. 2020, Rev. suisse Vitic. Arboric. Hortic. 52:334-349 (read 2026-10-10). No"
+        " formulation is recorded as fitted to them; compared with VitiMeteo's outputs",
+        "read",
+    ),
+    "chrelashvili1993.kvarely": Dataset(
+        "First appearance of downy mildew at Kvarely (Kakheti, east Georgia), 1971-1986, beside"
+        " the Müller curve's date for each year (Table 1)",
+        "Chrelashvili 1993, Phytologia 75:124-133 (read 2026-10-10). No formulation is recorded"
+        " as fitted to them; the Müller curve was run on them",
+        "read",
+    ),
+    "pereira2018.marialva": Dataset(
+        "Downy mildew leaf severity in untreated and sprayed BRS Vitória at Marialva, northern"
+        " Paraná (602 m), four crops 2013-2015 (two with epidemics), first symptoms, with an"
+        " in-vineyard station",
+        "Pereira et al. 2018, Semina Ciênc. Agrár. 39:19-28 (read 2026-10-10). No formulation is"
+        " recorded as fitted to them",
+        "read",
+    ),
+    "chavarria2009.floresdacunha": Dataset(
+        "Hourly airborne P. viticola sporangia from Burkard traps under plastic cover and in the"
+        " open, Moscato Giallo at Flores da Cunha (541 m), 2005/06 and 2006/07, with the"
+        " microclimate of both",
+        "Chavarria et al. 2009, Rev. Bras. Frutic. 31:710-717 (read 2026-10-10). No formulation"
+        " is recorded as fitted to them",
+        "read",
+    ),
+    "czermainski2004.bentogoncalves": Dataset(
+        "Downy mildew incidence and index by date in untreated and sprayed Tannat at Bento"
+        " Gonçalves, 1995 and 1996, with first symptoms",
+        "Czermainski & Sônego 2004, Ciênc. Rural 34:5-11 (read 2026-10-10). No formulation is"
+        " recorded as fitted to them",
+        "read",
+    ),
+    "romanazzi2024.marche": Dataset(
+        "Downy mildew incidence, severity and McKinney index in untreated controls and"
+        " treatments at Angeli di Varano, Castelplanio and Matelica (Marche), 2019-2021, with"
+        " first symptoms",
+        "Romanazzi et al. 2024, J. Clean. Prod. 451:142131 (read 2026-10-10). No formulation is"
+        " recorded as fitted to them",
+        "read",
+    ),
+    "casanovagascon2019.somontano": Dataset(
+        "Weekly downy and powdery mildew degree of attack on untreated and treated Sauvignon"
+        " blanc and resistant varieties at Barbastro (Somontano), 2016-2018, mostly in figures,"
+        " with in-plot and regional weather",
+        "Casanova-Gascón et al. 2019, Agronomy 9:738 (read 2026-10-10). No formulation is"
+        " recorded as fitted to them; Goidanich's incubation and the UC Davis powdery index were"
+        " checked against them",
+        "read",
+    ),
+    "eisenmann2023.neustadt": Dataset(
+        "Downy and powdery mildew incidence and severity on unsprayed grapes and leaves of"
+        " resistant and susceptible cultivars at Neustadt an der Weinstraße, 2019-2021, with a"
+        " station within 1 km",
+        "Eisenmann et al. 2023, Plants 12:3120 (read 2026-10-10). No formulation is recorded as"
+        " fitted to them",
+        "read",
+    ),
 }
