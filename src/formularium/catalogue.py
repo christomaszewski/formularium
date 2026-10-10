@@ -110,7 +110,10 @@ FORMULATIONS: dict[str, Formulation] = {
     ),
     "rossi2008.primary": Formulation(
         "Primary infections cohort by cohort: germination to incubation",
-        "Rossi, Caffi, Giosuè & Bugiani 2008, Ecological Modelling 212: 480-491",
+        (
+            "Rossi, Caffi, Giosuè & Bugiani 2008, Ecological Modelling 212: 480-491; sporangia"
+            " survival as Blaeser & Weltzien 1979 fit it (D30)"
+        ),
         year=2008,
         authors=("Rossi, Vittorio", "Caffi, Tito", "Giosuè, Simona", "Bugiani, Riccardo"),
         authors_complete=True,
@@ -148,9 +151,9 @@ FORMULATIONS: dict[str, Formulation] = {
     "blaeser1979.survival": Formulation(
         "Survival of sporangia, and 60 °C·h of wetness to infect",
         (
-            "Blaeser & Weltzien 1979, Z. PflKrankh. PflSchutz 86: 489-498, Abb. 3: lifetime"
-            " against the saturation deficit E (1 - RH/100) in mm, which Rossi et al. 2008 eq. 6"
-            " prints as T (1 - RH/100)"
+            "Blaeser & Weltzien 1979, Z. PflKrankh. PflSchutz 86: 489-498, Abb. 3 and summary:"
+            " lifetime against the saturation deficit E (1 - RH/100) in mm, at most 6 h above"
+            " 30 °C (Rossi et al. 2008 eq. 6 prints T (1 - RH/100))"
         ),
         year=1979,
         authors=("Blaeser, Marlene", "Weltzien, H. C."),
@@ -236,7 +239,10 @@ FORMULATIONS: dict[str, Formulation] = {
     ),
     "brischetto2020.survival": Formulation(
         "Survival of detached sporangia (written and tested; no run calls it yet)",
-        "Brischetto et al. 2020, doi:10.3389/fpls.2020.01187, equations 1 and 2",
+        (
+            "Brischetto et al. 2020, doi:10.3389/fpls.2020.01187, equations 1 and 2, run as"
+            " Blaeser & Weltzien 1979 fit them (D30)"
+        ),
         year=2020,
         authors=("Brischetto, Chiara", "Bove, Federica", "Languasco, Luca", "Rossi, Vittorio"),
         authors_complete=True,
@@ -429,13 +435,14 @@ FORMULATIONS: dict[str, Formulation] = {
     "magarey2010.rules": Formulation(
         "Downy mildew rules of thumb: 10:10:24, sporulation, infection",
         (
-            "Magarey 2010, Managing Downy Mildew (GWRDC fact sheet), the page's default disease "
-            "layer; not held"
+            "Magarey 2010, Managing Downy Mildew (Winning the war!), GWRDC Innovators Network"
+            " Module INO904, March 2010; the page's default disease layer"
         ),
         year=2010,
-        authors=("Magarey, P. A.",),
-        authors_from="trail",
-        checked="models/downy_mildew.py's docstring",
+        authors=("Magarey, Peter A.",),
+        authors_complete=True,
+        authors_from="read",
+        checked="2010-magarey-url-magarey-2010-gwrdc-managing-downy-mi.pdf",
         borrows=("noaa.solar_position",),
         structures=("rain-temperature-trigger",),
     ),
