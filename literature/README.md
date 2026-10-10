@@ -9,6 +9,10 @@ The repository is public. A note holds facts, numbers and short quotes, never th
 It says where a copy is held only as "held by Chris" or "open access", never a path;
 `files` records only the names a copy was dropped under.
 
+Documents a search found but triage judged off the point are listed, unread, in
+[unread/2026-10-09-deep-research-C.md](unread/2026-10-09-deep-research-C.md), so that
+nobody fetches or triages them again.
+
 ## A note's header
 
 Each note starts with a header between two `---` lines, one `key: value` per line; lists
