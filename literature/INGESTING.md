@@ -135,6 +135,32 @@ need judgement and the project's history.
   agent writing helper scripts outside its output directory; file names whose case
   differs from the drop's (`.PDF`), which `coverage.py` then cannot match.
 
+**The 2026-10-09 ingestion of the 10-9 drop, for scale** (100 PDFs: 111 new notes, among
+them 11 chapter notes for the 2006 workshop proceedings and 2 for a 2002 book; Haiku ran
+`claude-haiku-5-5`; formularium#20 and #23):
+- **Triage:** 4 agents of 18 to 28 papers, about 680,000 tokens (7,300 a paper). The
+  extracted text layers sufficed; nothing needed OCR.
+- **Reading:** 7 agents, 2 to 7 papers or one book each, about 1.6 million tokens. One agent
+  reading sporangia-survival papers was stopped by a content filter partway through; the main
+  session read those papers itself (they were short).
+- **Checks:** every quote from 47 readings sat at its cited line. The 60 triage-level notes
+  were written from triage records, and every number in them grepped against the text (a
+  script); three author lists the main session had filled from memory were wrong or
+  incomplete until checked against the bylines.
+- **Library:** `library.py build` runs only on an empty library; for a new drop, run
+  `library.py check` and then `file <id> <paper>` for each note it lists.
+- **Still unfound after it** (searched by title and author on scite.ai, 2026-10-09): Rossi,
+  Giosuè, Girometta & Bugiani 2002 and Giosuè et al. 2002 (where Rossi's incubation
+  regressions were fitted); Gehmann 1987 (160 °C·days above 8 °C); Hoppmann 1996 (the
+  Geisenheim model's report); Bläser's 1978 Bonn dissertation (the exponential survival
+  Hoppmann used). Where Franche 2012's 2.616 comes from is unknown: neither Rosa 1995 nor
+  Orlandini 2008 prints it.
+- **Waiting on others:** `blaeser1979.survival` keeps Cooptera's list's old source and
+  authors (trail) until Cooptera relists from its branch `blaeser-1979` (read in the paper:
+  "Blaeser, Marlene", "Weltzien, H. C."); then update the record here, or Agrarium's
+  comparison test fails. D30 (fix Brischetto's 0.02, or move Rossi's survival to the
+  saturation deficit) is Chris's.
+
 ### A brief for a reading agent
 
 Put the brief in a file and tell the agent to read it; ask for JSON files in an output
