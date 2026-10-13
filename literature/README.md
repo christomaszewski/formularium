@@ -672,6 +672,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [wakehamnd](wakehamnd.md) | grey mould | bio-aerosol, inoculum availability, wind speed, relative hu… | United Kingdom | None. Recorded so that it is not read again: Botrytis aerobiology in UK tomato glasshouses, with no downy mil… |
 | [watson2002](watson2002.md) | brown rot (Monilinia) | sporulation | South Carolina | Clear and of little use to a grape truth |
 | [williams2024](williams2024.md) | none | remote sensing | England | Cover crop dominates the Sentinel-2 signal of a vineyard |
+| [wimmer2009](wimmer2009.md) | none | phenology, flowering, climate trends | Wachau | Krems warming 1971-2007 with Gladstones' index and a 1965-2007 Grüner Veltliner flowering record trended on year (3 d a decade), no fit on temperature |
 | [winkler1949](winkler1949.md) | none | viticulture | California | Off-topic |
 | [winter1940](winter1940.md) | take-all | infection | Germany | Another disease |
 | [wober1920](wober1920.md) | downy mildew | fungicide efficacy | Austria | History of fungicides |
