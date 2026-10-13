@@ -139,6 +139,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [caffi2009thesis](caffi2009thesis.md) | downy mildew | oospores, primary infection | Italy | The thesis behind Rossi 2008's model; front matter only |
 | [caffi2010](caffi2010.md) | downy mildew | warning system, spray decisions | Emilia-Romagna | It evaluates the engine's rossi2008.primary in practice (Emilia-Romagna, 2006-2008) |
 | [caffi2010lesions](caffi2010lesions.md) | downy mildew | damage, incubation | Emilia-Romagna | Photosynthesis lost around lesions (virtual lesions) |
+| [caffi2013](caffi2013.md) | downy mildew | sporulation, sporangia production, airborne inoculum | Piedmont | The engine's rule as printed: 3 or more dark moist hours (20:00-07:00, RH 80 %, rain or 30 min wet), AUROC 0.816, accuracy 0.85; "or" in the abstract, "and" in the Methods |
 | [caffind](caffind.md) | downy mildew | primary infection, secondary infection, oospores, sporulati… | Italy, Piedmont, Piacenza | It names Rossi et al. 2008 as the primary-infection sub-model of a life-cycle frame, a dependence flag for th… |
 | [calderone2022](calderone2022.md) | powdery mildew, grey mould, sour rot, downy mildew (mentioned not assessed) | fungicide alternatives, resistance induction, arbuscular my… | Sicily, Italy, Messina province, Rodi Milici | None for downy mildew: the trials score powdery mildew, gray mould and sour rot and never P. viticola, so the… |
 | [calonnec2010](calonnec2010.md) | powdery mildew | host growth, epidemic dynamics | Bordeaux | Vine vigour drives powdery mildew |
@@ -490,6 +491,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [puopolo2014b](puopolo2014b.md) | downy mildew | copper resistance, biocontrol, copper reduction, phyllosphe… | Italy (Trentino San Michele all'Adige), greenhouse | None for the truth or the engine: a bacterial biocontrol greenhouse study whose copper figures (375 to 93.75 … |
 | [qiu2015](qiu2015.md) | powdery mildew | host resistance | general | Host genetics review |
 | [rafaila1968](rafaila1968.md) | downy mildew | incubation | Romania | an incubation independent of Goidanich's data |
+| [ramos2017](ramos2017.md) | none | phenology, degree-days, climate projection | Penedès | The catalogue's Penedès phenology record as read: Table 2's fitted bases and sums, RMSE 4-10 d; the station is 6 km away by the text, 42 km by the printed coordinates |
 | [raynal2010](raynal2010.md) | downy mildew | rainfall | Bordeaux | Radar rain differs from stations by tens of mm |
 | [raynal2010epicure](raynal2010epicure.md) | downy mildew, powdery mildew, hail damage | forecasting, rainfall, radar, hail detection, sample survey… | Bordeaux, Gironde, Dordogne, Blayais, Cognac | Offers the truth a fine-scale observed hail and damage dataset and a reason to vary rain within a region (rad… |
 | [redeacores2024](redeacores2024.md) | downy mildew | infection, oospores, primary infection, spray timing, seaso… | Azores Portugal | A field-scouting protocol and a statement of the 3-10 rule; the rule is on the engine's listed set, so the tr… |
@@ -513,6 +515,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [rossi2005](rossi2005.md) | downy mildew | primary infection, incubation | northern Italy | Does not say what the incubation regressions were fitted to |
 | [rossi2006](rossi2006.md) | downy mildew | primary infection model | Italy | No equations; does not settle the incubation's data |
 | [rossi2008](rossi2008.md) | downy mildew | primary infection, incubation | Italy | incubation eqs 8-9 from Rossi et al. 2002, fitted to Goidanich's data |
+| [rossi2008pp](rossi2008pp.md) | downy mildew | oospore germination, oospore dormancy, hydro-thermal time | Asti, Piedmont | The engine's moisture rule (VPD at most 4.5 hPa or rain) and Gompertz (a 15.9, b 0.653) as printed, fitted to 124 leaf-disc assays; 18 cases germinated below Gehmann's 160 degree-days |
 | [rossi2009](rossi2009.md) | downy mildew | primary infection, secondary infection, epidemic structure | Piacenza, Europe | Primary share of lesions 1.0 at onset to 0.27 by day 80 over 23 genotyped epidemics; its Gompertz coefficients are not where it says |
 | [rossi2010](rossi2010.md) | powdery mildew | ascospore maturation, ascospore release | Piacenza | A flag, not kin |
 | [rossi2012](rossi2012.md) | downy mildew | splash dispersal, primary infection | Emilia-Romagna | Its splash data (4.4 drops/cm² at 40 cm, 0.03 at 80 cm, 0.003 at 140 cm |

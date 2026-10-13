@@ -153,9 +153,39 @@ FORMULATIONS: dict[str, Formulation] = {
         authors=("Rossi, V.", "Caffi, T.", "Bugiani, R.", "Spanna, F.", "Della Valle, D."),
         authors_complete=True,
         authors_from="read",
-        checked="2008-rossi-10-1111-j-1365-3059-2007-01738-x.pdf",
+        checked=(
+            "2008-rossi-10-1111-j-1365-3059-2007-01738-x.pdf, page images (literature/rossi2008pp)"
+        ),
         structures=("hydro-thermal-oospore-cohorts",),
-        calibrated_on=("rossi2008pp.discs",),
+        calibrated_on=("rossi2008pp.discs", "laviola1986"),
+        calibration_note=(
+            "read 2026-10-12: the Gompertz on hydro-thermal time was fitted to leaf-disc"
+            " infection by oospores sampled weekly at Asti, 1999-2003 (R2 0.887 pooled); the"
+            " temperature rate is Laviola et al. 1986's polynomial and the moisture switch"
+            " (VPD <= 4.5 hPa or rain) is Rossi & Caffi 2007's upper confidence limit"
+        ),
+        parameters=(
+            Published(
+                "vpd_max_hpa",
+                4.5,
+                "hPa",
+                "eq. 4, p. 218 (M = 1 when R > 0 mm or VPD <= 4.5 hPa)",
+                "read",
+            ),
+            Published(
+                "gompertz_a", 15.9, "-", "abstract (pooled hydro-thermal time, +/- 2.63)", "read"
+            ),
+            Published("gompertz_b", 0.653, "per HT unit", "abstract (pooled, +/- 0.034)", "read"),
+            Published(
+                "laviola_t0",
+                1330.1,
+                "h",
+                "eq. 3, p. 218 (t = 1330.1 - 116.19 T + 2.6256 T^2)",
+                "read",
+            ),
+            Published("laviola_t1", -116.19, "h per degC", "eq. 3, p. 218", "read"),
+            Published("laviola_t2", 2.6256, "h per degC^2", "eq. 3, p. 218", "read"),
+        ),
     ),
     "blaeser1979.survival": Formulation(
         "Survival of sporangia, and 60 °C·h of wetness to infect",
@@ -225,8 +255,29 @@ FORMULATIONS: dict[str, Formulation] = {
         authors=("Caffi, Tito", "Gilardi, Giovanna", "Monchiero, Matteo", "Rossi, Vittorio"),
         authors_complete=True,
         authors_from="read",
-        checked="2013-caffi-10-1094-phyto-04-12-0082-r.pdf",
+        checked="2013-caffi-10-1094-phyto-04-12-0082-r.pdf, page images (literature/caffi2013)",
         structures=("dark-moist-hours-sporulation",),
+        calibrated_on=("caffi2013.piedmont",),
+        calibration_note=(
+            "read 2026-10-12: the cut-off of 3 or more dark moist hours was chosen by a ROC"
+            " analysis across 58 field assessments with new lesions at Grugliasco and Neive,"
+            " 2008-2010 (AUROC 0.816; accuracy 0.85, sensitivity 0.91, specificity 0.67)"
+        ),
+        parameters=(
+            Published("dark_moist_hours_min", 3.0, "h", "abstract and p. 68 (ROC cut-off)", "read"),
+            Published("rh_min", 80.0, "%", "abstract, Methods p. 65, Table 3 footnote f", "read"),
+            Published("wetness_min", 30.0, "min", "abstract and Table 3 footnote f", "read"),
+            Published(
+                "dark_start_hour", 20.0, "h", "Methods p. 65 (8:00 p.m. to 7:00 a.m.)", "read"
+            ),
+            Published("dark_end_hour", 7.0, "h", "Methods p. 65", "read"),
+        ),
+        flags=(
+            "A moist hour is one with RH >= 80 %, rain > 0 mm OR wetness > 30 min in the"
+            " abstract and Table 3; the Methods (p. 65) print the same three with AND and WD >"
+            " 0.5 h. The paper does not resolve it (read 2026-10-12). No temperature bound belongs"
+            " to the rule; the 10-30 C limits are cited from Lalancette et al. 1988.",
+        ),
     ),
     "lalancette1988.sporulation_bounds": Formulation(
         "Sporulation only between 10 and 30 °C",

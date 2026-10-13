@@ -228,11 +228,23 @@ DATASETS: dict[str, Dataset] = {
         " the truth's spatial heterogeneity",
         "read",
     ),
+    "caffi2013.piedmont": Dataset(
+        "Sporulating and non-sporulating downy mildew lesions counted every second or third day"
+        " on unsprayed vines at Grugliasco (Moscato) and Neive (Barbera), Piedmont, 2008-2010:"
+        " 100 assessments, 58 with new lesions, 61,921 lesions, with hourly weather from the"
+        " regional service's stations at the vineyard edges",
+        "Caffi et al. 2013, Phytopathology 103:64-73, Methods and Results (read 2026-10-12,"
+        " literature/caffi2013); observed, no model dated the assessments",
+        "read",
+    ),
     "rossi2008pp.discs": Dataset(
-        "Oospore germination, 1999-2003, as infection of grape leaf discs by oospores sampled"
-        " from a vineyard, March to July",
-        "Rossi et al. 2008, Plant Pathol. 57:216-226, abstract (read 2026-10-08 in the copy"
-        " Cooptera holds)",
+        "Oospore germination, 1999-2003, as infection of grape leaf discs (280 a sample) by"
+        " oospores from 10 g leaf-fragment samples taken weekly, late March to early July, in"
+        " a 500 m2 Barbera plot at Asti, Piedmont, with hourly weather from a station in the"
+        " vineyard; 124 fitted cases",
+        "Rossi et al. 2008, Plant Pathol. 57:216-226, Methods and Results (read 2026-10-12,"
+        " literature/rossi2008pp); the assays are observed, and the paper's field infection"
+        " dates, used only as a check, were placed by Rossi et al. 2002's method",
         "read",
     ),
     "ferguson2014.prosser": Dataset(
