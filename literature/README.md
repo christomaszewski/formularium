@@ -450,6 +450,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [magyar2017](magyar2017.md) | downy mildew, apple scab, powdery mildew, brown rot, tomato late blight, phoma leaf spot, fusarium, leaf spot of beet, grey mould | spore trapping, airborne inoculum, primary infection, secon… | Hungary, Poland, Spain, Italy, England (Rothamste… | The one useful pointer is ref 31: a spore-trap downy mildew predictor built on the Goidanich index, to be che… |
 | [maillet2022](maillet2022.md) | downy mildew | detection, remote sensing | Loire | Labels are months; not usable |
 | [malviya2022](malviya2022.md) | powdery mildew | biocontrol efficacy | India | Product efficacy trials |
+| [mandellind](mandellind.md) | none | phenology, degree-days | Serra Gaúcha | Ten seasons of eleven cultivars at Bento Gonçalves as subperiod lengths and degree-days above 10 °C (1,248-1,560 °C·d to maturity); undated Embrapa report |
 | [marchal1897](marchal1897.md) | downy mildew | distribution | Belgium | Historical note |
 | [marciano2023](marciano2023.md) | downy mildew | nitrogen nutrition, susceptibility, sporulation, leaf nitro… | Italy | A greenhouse and lab study of N effects on sporulation, with no field, weather or model content: a source for… |
 | [marko2026](marko2026.md) | downy mildew, powdery mildew | disease occurrence | Hungary | Grower-survey effect sizes from Hungary |
