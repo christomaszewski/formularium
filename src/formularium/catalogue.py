@@ -1818,6 +1818,152 @@ FORMULATIONS: dict[str, Formulation] = {
             " stage.",
         ),
     ),
+    "parker2013.gfv": Formulation(
+        "Flowering and veraison by degree-days above 0 °C from day 60 to a critical sum F* per"
+        " variety (the GFV model), 95 and 104 varieties classified",
+        "Parker et al. 2013, Agric. For. Meteorol. 180: 249-264, Eqs 1-2 (p. 252) and Tables 1-2",
+        year=2013,
+        authors=(
+            "Parker, Amber",
+            "Garcia de Cortázar-Atauri, Inaki",
+            "Chuine, Isabelle",
+            "Barbeau, Gérard",
+            "Bois, Benjamin",
+            "Boursiquot, Jean-Michel",
+            "Cahurel, Jean-Yves",
+            "Claverie, Marion",
+            "Dufourcq, Thierry",
+            "Gény, Laurence",
+            "Guimberteau, Guy",
+            "Hofmann, Rainer W.",
+            "Jacquet, Olivier",
+            "Lacombe, Thierry",
+            "Monamy, Christine",
+            "Ojeda, Hernan",
+            "Panigai, Laurent",
+            "Payan, Jean-Christophe",
+            "Rodriquez Lovelle, Bernard",
+            "Rouchaud, Eric",
+            "Schneider, Christophe",
+            "Spring, Jean-Laurent",
+            "Storchi, Paolo",
+            "Tomasi, Diego",
+            "Trambouze, William",
+            "Trought, Michael",
+            "van Leeuwen, Cornelis",
+        ),
+        authors_complete=False,
+        authors_from="trail",
+        checked=(
+            "2013-parker-10-1016-j-agrformet-2013-06-005.pdf (the author list from the reading"
+            " agent's citation block, not re-read; Parker, Garcia de Cortázar-Atauri, Chuine and"
+            " van Leeuwen confirmed in the page header)"
+        ),
+        doi="10.1016/j.agrformet.2013.06.005",
+        structures=("degree-day-phenology",),
+        calibrated_on=("parker2013.database",),
+        calibration_note=(
+            "F* fitted per variety by the Metropolis algorithm with t0 = day 60 and base 0 °C"
+            " fixed from Parker et al. 2011; each variety's RMSE and efficiency are in the same"
+            " tables (flowering RMSE under 7 d for all but one variety, veraison under 7 d for"
+            " all but twelve; Tempranillo rests on one site, 5 and 11 observations). The"
+            " catalogue holds thirteen of the varieties. Read 2026-10-13 in the page images"
+            " (literature/parker2013)."
+        ),
+        parameters=(
+            Published(
+                "flowering.tempranillo.f_star", 1188, "°C·d", "Table 1 (pp. 251-252)", "read"
+            ),
+            Published("flowering.chardonnay.f_star", 1217, "°C·d", "Table 1 (pp. 251-252)", "read"),
+            Published("flowering.pinot_noir.f_star", 1219, "°C·d", "Table 1 (pp. 251-252)", "read"),
+            Published("flowering.riesling.f_star", 1249, "°C·d", "Table 1 (pp. 251-252)", "read"),
+            Published(
+                "flowering.cabernet_franc.f_star", 1245, "°C·d", "Table 1 (pp. 251-252)", "read"
+            ),
+            Published("flowering.merlot.f_star", 1269, "°C·d", "Table 1 (pp. 251-252)", "read"),
+            Published("flowering.chasselas.f_star", 1276, "°C·d", "Table 1 (pp. 251-252)", "read"),
+            Published("flowering.grenache.f_star", 1277, "°C·d", "Table 1 (pp. 251-252)", "read"),
+            Published("flowering.syrah.f_star", 1279, "°C·d", "Table 1 (pp. 251-252)", "read"),
+            Published("flowering.sauvignon.f_star", 1282, "°C·d", "Table 1 (pp. 251-252)", "read"),
+            Published("flowering.carignan.f_star", 1288, "°C·d", "Table 1 (pp. 251-252)", "read"),
+            Published(
+                "flowering.cabernet_sauvignon.f_star", 1299, "°C·d", "Table 1 (pp. 251-252)", "read"
+            ),
+            Published("flowering.mourvedre.f_star", 1354, "°C·d", "Table 1 (pp. 251-252)", "read"),
+            Published("veraison.chasselas.f_star", 2374, "°C·d", "Table 2 (pp. 253-254)", "read"),
+            Published("veraison.tempranillo.f_star", 2484, "°C·d", "Table 2 (pp. 253-254)", "read"),
+            Published("veraison.pinot_noir.f_star", 2511, "°C·d", "Table 2 (pp. 253-254)", "read"),
+            Published("veraison.sauvignon.f_star", 2528, "°C·d", "Table 2 (pp. 253-254)", "read"),
+            Published("veraison.chardonnay.f_star", 2547, "°C·d", "Table 2 (pp. 253-254)", "read"),
+            Published("veraison.riesling.f_star", 2590, "°C·d", "Table 2 (pp. 253-254)", "read"),
+            Published("veraison.syrah.f_star", 2601, "°C·d", "Table 2 (pp. 253-254)", "read"),
+            Published("veraison.merlot.f_star", 2636, "°C·d", "Table 2 (pp. 253-254)", "read"),
+            Published(
+                "veraison.cabernet_sauvignon.f_star", 2689, "°C·d", "Table 2 (pp. 253-254)", "read"
+            ),
+            Published(
+                "veraison.cabernet_franc.f_star", 2692, "°C·d", "Table 2 (pp. 253-254)", "read"
+            ),
+            Published("veraison.mourvedre.f_star", 2706, "°C·d", "Table 2 (pp. 253-254)", "read"),
+            Published("veraison.carignan.f_star", 2749, "°C·d", "Table 2 (pp. 253-254)", "read"),
+            Published("veraison.grenache.f_star", 2761, "°C·d", "Table 2 (pp. 253-254)", "read"),
+            Published("t0", 60, "DOY", "Eq. 1-2 (p. 252)", "read"),
+            Published("t_base", 0.0, "°C", "Eq. 2 (p. 252)", "read"),
+        ),
+        flags=(
+            "Xarel·lo, Macabeo and Parellada are not among the 104 varieties; Grenache is"
+            " 'Grenache' for flowering and 'Grenache noir' for veraison.",
+            "The site effect quoted in the text for Syrah's veraison (13.96 %) is 3.28 % in"
+            " Table 4.",
+        ),
+    ),
+    "martinezluscher2016.sensitivity": Formulation(
+        "Days of change per °C of the period's mean temperature for budburst, flowering and"
+        " harvest intervals in Croatia",
+        "Martínez-Lüscher et al. 2016, Front. Environ. Sci. 4: 48, Fig. 3 and p. 5",
+        year=2016,
+        authors=(
+            "Martínez-Lüscher, Johann",
+            "Kizildeniz, Tefide",
+            "Vučetić, Višnja",
+            "Dai, Zhanwu",
+            "Luedeling, Eike",
+            "van Leeuwen, Cornelis",
+            "Gomès, Eric",
+            "Pascual, Inmaculada",
+            "Irigoyen, Juan J.",
+            "Morales, Fermín",
+            "Delrot, Serge",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="martinezluscher2016_fenvs.pdf (the 2026-10-12 drop's phenology folder)",
+        doi="10.3389/fenvs.2016.00048",
+        structures=("monthly-temperature-regression",),
+        calibrated_on=("martinezluscher2016.croatia",),
+        calibration_note=(
+            "Linear regressions, all sites pooled, of each interval's length on its own mean"
+            " temperature (Fig. 3); only the slopes are printed, no intercept, R² or n. A PLS of"
+            " Riesling Italico's budburst at Mandicevac on daily chill portions and degree hours"
+            " (Fig. 1) gave the windows: chilling 23 September to 27 February, warming 22 January"
+            " to 1 May; an interpolated surface gives 0.03 d/°C for the chilling phase and -4.38"
+            " d/°C for the warming phase. Read 2026-10-13 in the page image"
+            " (literature/martinezluscher2016)."
+        ),
+        parameters=(
+            Published("march_to_budburst.slope", -4.49, "d/°C", "p. 5, Fig. 3", "read"),
+            Published("budburst_to_flowering.slope", -3.29, "d/°C", "p. 5, Fig. 3", "read"),
+            Published("flowering_to_harvest.slope", -2.57, "d/°C", "p. 5, Fig. 3", "read"),
+            Published("budburst.warming_phase.slope", -4.38, "d/°C", "p. 5, Fig. 2", "read"),
+            Published("budburst.chilling_phase.slope", 0.03, "d/°C", "p. 5, Fig. 2", "read"),
+        ),
+        flags=(
+            "The interval's own mean temperature is the predictor, so the line is read after the"
+            " interval closes: a sensitivity, not a forecast.",
+            "Weather is E-OBS gridded, not station; the greenhouse sensitivities (-1.5 to +0.2"
+            " d/°C for Tempranillo in pots) are far smaller than the field ones.",
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

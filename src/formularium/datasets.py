@@ -329,6 +329,24 @@ DATASETS: dict[str, Dataset] = {
         " literature/nendel2010); observed except the BBCH 07 conversions",
         "read",
     ),
+    "parker2013.database": Dataset(
+        "Parker et al. 2011's flowering and veraison database, updated: 81 varieties, 2,278"
+        " flowering and 2,088 veraison observations, 1960-2007, 123 locations, mostly French"
+        " research stations and collections, with each site's daily temperatures",
+        "Parker et al. 2013, Agric. For. Meteorol. 180:249-264, section 2.1 (l. 156-171;"
+        " literature/parker2013); observed stage dates, no model",
+        "read",
+    ),
+    "martinezluscher2016.croatia": Dataset(
+        "Budburst, flowering and fruit-maturity dates of Chasselas Doré, Riesling Italico,"
+        " Istrian Malmsey and Plavac Mali in nine plantings at five Croatian stations"
+        " (42.75-46.03 °N), 307 seasonal records 1961-2013 from the Croatian Meteorological and"
+        " Hydrological Service via PEP725, with E-OBS gridded temperature and rain (hourly"
+        " values rebuilt by chillR)",
+        "Martínez-Lüscher et al. 2016, Front. Environ. Sci. 4:48, 'Materials and methods'"
+        " (l. 141-190; literature/martinezluscher2016); observed dates, gridded weather",
+        "read",
+    ),
     "pinarey2021.ribeiro": Dataset(
         "Budburst (BBCH 09) and flowering (BBCH 61) dates of Albariño, Godello, Loureira and"
         " Treixadura, 2008-2019, in one Ribeiro DO vineyard (140 m; 20 plants a variety, a"

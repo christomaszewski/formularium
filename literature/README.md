@@ -444,6 +444,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [marko2026](marko2026.md) | downy mildew, powdery mildew | disease occurrence | Hungary | Grower-survey effect sizes from Hungary |
 | [maronefassolo2022](maronefassolo2022.md) | downy mildew | latent period, host resistance | northern Italy | Latent period about 6 days at 22 °C across 72 isolates |
 | [martin2005](martin2005.md) | powdery mildew | fungicide efficacy | Spain | Control only |
+| [martinezluscher2016](martinezluscher2016.md) | none | phenology, sensitivity, chilling | Croatia, Navarra | Days per °C from 53 Croatian years (budburst −4.5, flowering −3.3, harvest −2.6) and a PLS scan of chill and heat windows; the warming phase, not chilling, moves budburst |
 | [martre2014](martre2014.md) | none | crop growth | global | Off-topic, though its finding (an ensemble mean beats single models) is the argument… |
 | [massi2021](massi2021.md) | downy mildew | fungicide resistance | general | Review |
 | [massi2022](massi2022.md) | downy mildew | infection efficiency | Italy | About 8% of single sporangia infected on leaf discs at 22 °C |
@@ -496,6 +497,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [pak2008cable](pak2008cable.md) | none | land surface model | Australia | Slides only (OCR) |
 | [palfi2022](palfi2022.md) | powdery mildew, grape powdery mildew (gpm), downy mildew (mentioned only) | spray timing, season severity, gas exchange, yield, phytoto… | Hungary, Eger, Eger wine region | None. Recorded so that it is not read again. |
 | [parker2011](parker2011.md) | none | phenology | France, Switzerland | Held out by structure (a degree-day forcing sum, the engine's form), as before |
+| [parker2013](parker2013.md) | none | phenology, flowering, veraison | France | GFV's critical sum F* for 95 and 104 varieties (Tables 1-2 read in the page images), thirteen recorded; none of the Penedès whites |
 | [pdmildew2006](pdmildew2006.md) | downy mildew, powdery mildew | proceedings: epidemiology, models, control | Europe, Australia, North America | Chapter notes for the epidemiology papers |
 | [peddicord2025](peddicord2025.md) | northern leaf blight, gray leaf spot | risk prediction | US Midwest | Uses a CART-style wetness tree (after Kim et al.) and RH >= 90% disease units |
 | [peng2024](peng2024.md) | downy mildew | review | global | Review; context |
@@ -516,6 +518,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [poeydebat2025](poeydebat2025.md) | downy mildew | oospores in soil, spatial structure | Bordeaux | 15 m patches (Matérn range 15.8 m); fivefold row contrast |
 | [pokovai2025](pokovai2025.md) | none | remote sensing | Hungary | Off-topic |
 | [pola2017](pola2017.md) | none | phenology, budburst, flowering | Santa Catarina | Goethe's budburst as a line in the June-August mean (R² 0.88, seven seasons) and phase lengths on hours at 19-25 °C: the requested form at its simplest |
+| [prats2020](prats2020.md) | none | phenology, pruning date | Lleida | Chardonnay regrown 60-230 days after budbreak to fit upper temperature limits (20.9 °C fruit set to veraison); regrowth date as a tool, not a driver |
 | [prillieux1883](prillieux1883.md) | downy mildew | oospores, germination, overwintering, primary infection | France (Nérac) | Offers the truth a dated 1883 observation that oospores germinate by a germ tube, which supports the spring-i… |
 | [prillieux1887](prillieux1887.md) | downy mildew | oospores, soil infection, germination, primary infection, o… | France, Indre-et-Loire, Isère valley, Gard, Neufc… | None. Recorded so that it is not read again. |
 | [prodorutti2006](prodorutti2006.md) | downy mildew | oospore germination | Trentino | Seven seasons of germination delay |
@@ -585,6 +588,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [sarejanni1951](sarejanni1951.md) | downy mildew | season severity, oospores, overwintering | Greece | Capus's winter-by-spring rain rule; preparatory years; Greek mildew years |
 | [savary2009](savary2009.md) | downy mildew, powdery mildew | epidemic progress, cluster infection | Bordeaux | Cluster disease follows foliage disease (dx_C/dt = t_c x_L (1 - x_C)) in four Bordeaux site-years; no weather in the equations |
 | [sawant2013](sawant2013.md) | grape anthracnose | climate change, temperature trend, minimum temperature, lea… | India, Solapur, Ludhiana, Pune | None. Recorded so that it is not read again: it is about anthracnose in India, not downy mildew, and its mons… |
+| [saxena2023](saxena2023.md) | none | phenology, budburst, machine learning | Prosser | A recurrent network giving a daily budbreak probability for 18 cultivars at Prosser: 3-day median error on random seasons, no code, no comparison with degree-days |
 | [schilder2010](schilder2010.md) | downy mildew, powdery mildew | fungicide efficacy, organic fungicides, spray timing, spray… | Michigan, Fennville | A field record of organic fungicide control, with incidence and severity per treatment for two Michigan seaso… |
 | [schmidt2003](schmidt2003.md) | grape berry moths | pest demography | Rheingau | An insect model; for Cooptera's pests |
 | [schnee2010](schnee2010.md) | powdery mildew | ontogenic resistance, sporulation, leaf age, host growth, v… | Bordeaux, Couhins, Latresne, France | Observed leaf-age and vigour effects on powdery mildew sporulation and leaf glucose at two sites and years: a… |
