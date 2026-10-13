@@ -619,10 +619,8 @@ FORMULATIONS: dict[str, Formulation] = {
     "cortazar2009.budburst": Formulation(
         "Budburst by degree-days above 5 °C from 1 January",
         (
-            "García de Cortázar-Atauri 2006, thesis, Table 11 (p. 43 of the budburst article,"
-            " PDF p. 64; read 2026-10-13 in the page image, literature/cortazar2006); the same"
-            " values in García de Cortázar-Atauri, Brisson & Gaudillère 2009, Int. J."
-            " Biometeorol. 53: 317-326, Table 8"
+            "García de Cortázar-Atauri 2006, thesis, Table 11; the same values in García de "
+            "Cortázar-Atauri, Brisson & Gaudillère 2009, Int. J. Biometeorol. 53: 317-326"
         ),
         year=2009,
         authors=("García de Cortázar-Atauri, Iñaki", "Brisson, Nadine", "Gaudillere, Jean Pierre"),
@@ -634,6 +632,11 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         structures=("degree-day-phenology",),
         calibrated_on=("phenoclim",),
+        calibration_note=(
+            "Table 11 is on p. 43 of the thesis's budburst article (PDF p. 64), read 2026-10-13"
+            " in the page image (literature/cortazar2006); the 2009 paper's Table 8 prints the"
+            " same values (literature/cortazar2009)."
+        ),
         parameters=(
             Published(
                 "gdd5_sum.cabernet_sauvignon",
@@ -2478,12 +2481,7 @@ FORMULATIONS: dict[str, Formulation] = {
     ),
     "vitimeteo.oospores": Formulation(
         "Oospore maturity at 140 degree-days above 8 °C",
-        (
-            "VitiMeteo's rule: Dubuis et al. 2012, Revue suisse Vitic. Arboric. Hortic. 44(3):"
-            " 192-198, p. 196 (140 °C at the 8 °C threshold from 1 January; Fig. 1 p. 194:"
-            " 140-160, after Gehmann 1987), read 2026-10-12; Siegfried et al. 2004, as Leoni"
-            " et al. 2026 describe it, not held"
-        ),
+        "VitiMeteo's rule, Siegfried et al. 2004, as Leoni et al. 2026 describe it; not held",
         year=2004,
         authors=("Siegfried, W.", "Viret, O.", "Bloesch, B.", "Bleyer, G.", "Kassemeyer, H.H."),
         authors_from="trail",
@@ -2513,7 +2511,10 @@ FORMULATIONS: dict[str, Formulation] = {
             " VitiMeteo's parameters 'were adjusted according to' observations in an external"
             " laboratory and in fields, oospore maturation being the example, with no place or"
             " years named. Bleyer et al. 2008 (read 2026-10-08) prints no oospore rule."
-            " Dubuis et al. 2012 (read 2026-10-12): since 2003 the oospore maturity in an"
+            " Dubuis et al. 2012, Revue suisse Vitic. Arboric. Hortic. 44(3):192-198, p. 196"
+            " (read 2026-10-12, literature/dubuis2012), is where the rule is printed: 140 °C"
+            " at the 8 °C threshold from 1 January, Fig. 1 (p. 194) 140-160 after Gehmann 1987."
+            " Dubuis et al. 2012: since 2003 the oospore maturity in an"
             " outdoor test, first infections and the untreated plot's epidemic at Changins"
             " 'serve to validate' the model, whose parameters experts adjust; in six of nine"
             " years (2003-2011) the end of incubation met the first oil spots, in 2005 and 2007"
