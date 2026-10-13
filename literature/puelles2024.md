@@ -73,3 +73,4 @@ the authors' manuscript.
   degree-day oospore threshold, wet degree-hours infection, or dark-hours sporulation.
 - The eight Rioja plots are a Mediterranean pattern of first symptoms, but the visit
   schedule followed the models' signals.
+- **2026-10-13:** the two rules this note credits to Dubuis et al. 2012 are read there (`dubuis2012`, Fig. 1 and p. 196): oospore germination after more than 5 mm of rain in 48 h, and infection at a sum of hourly means above 50 °C during leaf wetness. Dubuis prints the sporulation RH as 92 %, not the 95 % the UR model uses.

@@ -539,7 +539,8 @@ FORMULATIONS: dict[str, Formulation] = {
         calibration_note=(
             "read 2026-10-09: 'a maturity value of 160 °C was the most appropriate (data not"
             " shown)', on the study's own plots; the rule itself is credited to Gehmann et al."
-            " 1987, the 50 °C·h to Dubuis et al. 2012"
+            " 1987, the 50 °C·h to Dubuis et al. 2012 (read 2026-10-12: Dubuis prints both,"
+            " literature/dubuis2012)"
         ),
         flags=(
             "The paper's UR model also computes the 3-10 conditions (T >= 10 °C, shoots >= 10 cm,"
