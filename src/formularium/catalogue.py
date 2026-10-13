@@ -1964,6 +1964,44 @@ FORMULATIONS: dict[str, Formulation] = {
             " d/°C for Tempranillo in pots) are far smaller than the field ones.",
         ),
     ),
+    "alleweldt1975.budburst": Formulation(
+        "Riesling's budburst where the running sum of daily maxima from 15 March crosses a line"
+        " rising with the days",
+        "Alleweldt & Hofäcker 1975, Vitis 14: 103-115, p. 105 and the figure on p. 106",
+        year=1975,
+        authors=("Alleweldt, G.", "Hofäcker, W."),
+        authors_complete=True,
+        authors_from="read",
+        checked="alleweldt1975_vitis.pdf (the 2026-10-12 drop's phenology folder)",
+        structures=("degree-day-phenology",),
+        calibrated_on=("alleweldt1975.flein",),
+        calibration_note=(
+            "Of the sums from 15 March to budburst, the daily maxima correlated best with the"
+            " date (r 0.762, against 0.469 for the means above 0 °C, 0.296 for the minima and"
+            " 0.541 for the 20 cm soil temperature); the regression of that sum (y, °C) on the"
+            " days from 15 March (x) is y = 419.51 + 5.61 x, and budburst falls where a year's"
+            " cumulative curve meets the line (the figure prints 419.519, r 0.762). Twelve"
+            " site-years, deviations up to 5 d, no hold-out. Read 2026-10-13 in the page images"
+            " (literature/alleweldt1975)."
+        ),
+        parameters=(
+            Published(
+                "line.intercept", 419.51, "°C", "p. 105 (419.519 in the figure, p. 106)", "read"
+            ),
+            Published("line.slope", 5.61, "°C/d", "p. 105", "read"),
+            Published("start_doy", 74, "DOY", "p. 105: 15 March", "read"),
+            Published("flowering.tmax_sum_after_budburst", 850, "°C", "p. 110", "read"),
+            Published("flowering.t0_sum_after_budburst", 550, "°C", "p. 110", "read"),
+        ),
+        flags=(
+            "A heat sum against a threshold that rises 5.61 °C a day: the sum of maxima, with no"
+            " base, counts cold days too, which the authors say is why a fixed sum fails here.",
+            "The soil temperature at 20 cm (r 0.541) is the only soil-temperature correlation"
+            " the search found printed; it is not in the forecast.",
+            "The authors infer from two pairs of years that budburst speeds up above 7-8 °C; no"
+            " base temperature is fitted.",
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

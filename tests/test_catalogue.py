@@ -96,6 +96,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "ramos2023.regression": ("ramos2023.rueda",),
         "parker2013.gfv": ("parker2013.database",),
         "martinezluscher2016.sensitivity": ("martinezluscher2016.croatia",),
+        "alleweldt1975.budburst": ("alleweldt1975.flein",),
         "puelles2024.ur": ("puelles2024.rioja",),
         "rosa1995.incubation": ("goidanich1957", "zachos1959", "orlandini1993.emergences"),
         "orlandini2008.plasmo": (

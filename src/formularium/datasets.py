@@ -239,6 +239,16 @@ DATASETS: dict[str, Dataset] = {
         " the truth's spatial heterogeneity",
         "read",
     ),
+    "alleweldt1975.flein": Dataset(
+        "Budburst (first leaflets out of the wool), flowering start (25 % of caps shed) and"
+        " end, shoot length, inflorescence and flower counts and berry set of Riesling on"
+        " Kober 5 BB at three Württemberg plots (Flein Steinboden 202 m, Flein Tonboden 208 m,"
+        " Stetten 253 m), 1969-1972, with grape-zone air and 20 cm soil temperature from"
+        " recording thermographs, light by photocell, rain and gravimetric soil water",
+        "Alleweldt & Hofäcker 1975, Vitis 14:103-115, section 2 (l. 60-120; literature/"
+        "alleweldt1975); observed; the methods say 1968-1972, the results 1969-1972",
+        "read",
+    ),
     "barrios2004.vilafranca": Dataset(
         "The spring outcome of downy mildew at Vilafranca del Penedès for each year 1984-2004,"
         " in words (scarce and late primary infections, or general ones from the first rains,"
