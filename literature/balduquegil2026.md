@@ -1,7 +1,7 @@
 ---
 id: balduquegil2026
 citation: Balduque-Gil, Joaquín, Garcés-Claver, Ana, Barriuso-Vargas, Juan J. & Fayos, Oreto. 2026. Mejora de modelos predictivos para el manejo de plagas y enfermedades en la vid (Vitis vinifera L.) mediante nuevas metodologías: revisión bibliográfica [Improvement of predictive models for pest and disease management in grapevine (Vitis vinifera L.) using new methodologies: literature review]. ITEA-Información Técnica Económica Agraria 122(1):2-19
-doi: 
+doi: 10.12706/itea.2026.001
 read: 2026-10-10, a light read (methods, results and conclusions), by a reading agent (claude-haiku-5-5); 23 of 23 quotes found at their lines by scripts/verify_quotes.py
 status: read
 diseases: [downy mildew, powdery mildew, grey mould]
@@ -10,7 +10,7 @@ regions: [Spain, Europe]
 processes: [airborne inoculum, spore trapping, molecular detection, pcr, lamp, machine learning, decision support, spray timing, season severity]
 records: []
 datasets: []
-files: [itea_balduque_2026_modelos_vid.pdf]
+files: [itea_balduque_2026_modelos_vid.pdf, 2026-balduque-gil-10-12706-itea-2026-001.pdf]
 ---
 
 # Balduque-Gil et al. 2026: review of new methods for grapevine models

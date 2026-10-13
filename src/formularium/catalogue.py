@@ -695,11 +695,19 @@ FORMULATIONS: dict[str, Formulation] = {
     ),
     "vitimeteo.oospores": Formulation(
         "Oospore maturity at 140 degree-days above 8 °C",
-        "VitiMeteo's rule, Siegfried et al. 2004, as Leoni et al. 2026 describe it; not held",
+        (
+            "VitiMeteo's rule: Dubuis et al. 2012, Revue suisse Vitic. Arboric. Hortic. 44(3):"
+            " 192-198, p. 196 (140 °C at the 8 °C threshold from 1 January; Fig. 1 p. 194:"
+            " 140-160, after Gehmann 1987), read 2026-10-12; Siegfried et al. 2004, as Leoni"
+            " et al. 2026 describe it, not held"
+        ),
         year=2004,
         authors=("Siegfried, W.", "Viret, O.", "Bloesch, B.", "Bleyer, G.", "Kassemeyer, H.H."),
         authors_from="trail",
-        checked="Leoni et al. 2026's reference list (held)",
+        checked=(
+            "Leoni et al. 2026's reference list (held) for the 2004 authors; the rule in"
+            " dubuis2012_vitimeteo.pdf, page images (literature/dubuis2012)"
+        ),
         structures=("thermal-time-oospore-threshold",),
         added_authors=(
             Added(
@@ -721,7 +729,13 @@ FORMULATIONS: dict[str, Formulation] = {
             " threshold was fitted (read 2026-10-08). Dubuis et al. 2019 (read 2026-10-08):"
             " VitiMeteo's parameters 'were adjusted according to' observations in an external"
             " laboratory and in fields, oospore maturation being the example, with no place or"
-            " years named. Bleyer et al. 2008 (read 2026-10-08) prints no oospore rule"
+            " years named. Bleyer et al. 2008 (read 2026-10-08) prints no oospore rule."
+            " Dubuis et al. 2012 (read 2026-10-12): since 2003 the oospore maturity in an"
+            " outdoor test, first infections and the untreated plot's epidemic at Changins"
+            " 'serve to validate' the model, whose parameters experts adjust; in six of nine"
+            " years (2003-2011) the end of incubation met the first oil spots, in 2005 and 2007"
+            " the model was more than two weeks early. Calibration on those observations is"
+            " inferred, not stated"
         ),
         flags=(
             "Hoppmann & Wittich 1997 (Z. PflKrankh. PflSchutz 104:533-544, p. 536; read"
@@ -735,6 +749,11 @@ FORMULATIONS: dict[str, Formulation] = {
             " 170 above 8 °C from 1 January (literature/pertot2007), where Gessler et al. 2011 give"
             " Gehmann's as 160; Puelles et al. 2024 use 140-160. The engine's 140 is Leoni et al."
             " 2026's reading of Siegfried et al. 2004.",
+            "Read 2026-10-12 at VitiMeteo sources: Viret et al. 2007 (Revue suisse 39(1):57-59,"
+            " Fig. 3, page image) print the germination date as the sum above 8 °C reaching 160;"
+            " Dubuis et al. 2012 print 140 from 1 January in the text and 140-160 in Fig. 1."
+            " So the model ran 160 in 2006 and 140 in 2012 at Changins, and the value is a"
+            " regional setting, not a constant (literature/viret2007, literature/dubuis2012).",
         ),
     ),
     "leoni2026.oospores": Formulation(

@@ -237,7 +237,7 @@ DATASETS: dict[str, Dataset] = {
     ),
     "ferguson2014.prosser": Dataset(
         "Cold hardiness (differential thermal analysis) of primary buds of 23 Vitis genotypes"
-        " at Prosser, Washington",
+        " at Prosser and Paterson, Washington, since 1988, with budbreak dates since 1988",
         "Ferguson et al. 2014, Am. J. Enol. Vitic. 65:59-71, abstract and methods (read"
         " 2026-10-08 in the copy Cooptera holds)",
         "read",
