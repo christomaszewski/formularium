@@ -254,6 +254,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [fedele2020](fedele2020.md) | Botrytis bunch rot | biocontrol, infection | Piacenza | A flag, not kin |
 | [fedele2025](fedele2025.md) | downy mildew | oospore dose | Italy | the truth's dose; calibrated with Rossi 2008's model |
 | [fedele2026](fedele2026.md) | downy mildew | host susceptibility, canopy microclimate | Italy | Denser canopies had more susceptible leaves and longer wetness, yet epidemics did not… |
+| [felippeto2013](felippeto2013.md) | none | dormancy, chilling, budburst | Serra Gaúcha | Nine chilling methods ranked on ten years of Cabernet Sauvignon budburst at Bento Gonçalves: chill to a 4 August biofix explains R² 0.78, residual 2.4 d against 5.2 d for the date alone |
 | [ferguson2014](ferguson2014.md) | none | cold hardiness, budbreak | Washington | The catalogue's cold-hardiness record as read: Table 4, RMSE 1.5 °C fitted and 2.0 °C tested, budbreak RMSE 7.3 d; two sites, not one |
 | [fernandezgonzalez2009](fernandezgonzalez2009.md) | downy mildew, powdery mildew, grey mould | aerobiology | Galicia | Cenlle 2007, the thesis's first season |
 | [fernandezgonzalez2011](fernandezgonzalez2011.md) | downy mildew | airborne sporangia, phenology | Galicia | Four seasons of daily airborne sporangia |
