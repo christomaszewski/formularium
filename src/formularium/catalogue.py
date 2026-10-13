@@ -340,7 +340,7 @@ FORMULATIONS: dict[str, Formulation] = {
             " defines VPD as the saturation deficit. Which the authors ran is not stated; the"
             " engine runs the printed form.",
             "Douillet 2023 (thesis, Bordeaux; literature/douillet2023, p. 96, read 2026-10-13)"
-            " prints the hourly rate as (1/24)·(5.67 − 0.47·VPD + 0.01·VPD²) with VPD in hPa"
+            " prints the hourly rate as (1/24)·(5.67 - 0.47·VPD + 0.01·VPD²) with VPD in hPa"
             " by Tetens, crediting Blaeser & Weltzien 1979 and Brischetto 2020: c2 = 0.01 as"
             " the source has it, but y/24 where Brischetto's is 1/(24·y). Which the thesis ran"
             " is not printed.",
