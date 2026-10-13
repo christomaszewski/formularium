@@ -537,6 +537,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [poeydebat2025](poeydebat2025.md) | downy mildew | oospores in soil, spatial structure | Bordeaux | 15 m patches (Matérn range 15.8 m); fivefold row contrast |
 | [pokovai2025](pokovai2025.md) | none | remote sensing | Hungary | Off-topic |
 | [pola2017](pola2017.md) | none | phenology, budburst, flowering | Santa Catarina | Goethe's budburst as a line in the June-August mean (R² 0.88, seven seasons) and phase lengths on hours at 19-25 °C: the requested form at its simplest |
+| [pouget1988](pouget1988.md) | none | phenology, budburst, cultivar precocity | Bordeaux | Budburst when the sum from 1 January of K·t^c bud actions nears a cultivar constant S; the precocity scale of 22 cultivars (Table VII) with S, c, K and threshold; the ancestor of RIOU and BRIN's forcing |
 | [prats2020](prats2020.md) | none | phenology, pruning date | Lleida | Chardonnay regrown 60-230 days after budbreak to fit upper temperature limits (20.9 °C fruit set to veraison); regrowth date as a tool, not a driver |
 | [prillieux1883](prillieux1883.md) | downy mildew | oospores, germination, overwintering, primary infection | France (Nérac) | Offers the truth a dated 1883 observation that oospores germinate by a germ tube, which supports the spring-i… |
 | [prillieux1887](prillieux1887.md) | downy mildew | oospores, soil infection, germination, primary infection, o… | France, Indre-et-Loire, Isère valley, Gard, Neufc… | None. Recorded so that it is not read again. |

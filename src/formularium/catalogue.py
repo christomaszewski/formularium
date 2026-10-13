@@ -2190,6 +2190,232 @@ FORMULATIONS: dict[str, Formulation] = {
             " four times today's.",
         ),
     ),
+    "pouget1988.budburst": Formulation(
+        "Budburst when the sum from 1 January of each day's bud action, K t^c at the daily"
+        " maximum and minimum averaged, reaches a cultivar constant S",
+        (
+            "Pouget 1988, Connaissance de la Vigne et du Vin 22: 105-123, pp. 107-111 (the rate"
+            " law, the daily action and the sum) and Table VII (p. 116)"
+        ),
+        year=1988,
+        authors=("Pouget, R.",),
+        authors_complete=True,
+        authors_from="read",
+        checked="pouget1988_oeno.pdf (the 2026-10-12 drop's phenology folder; a scan, OCR'd)",
+        structures=("degree-day-phenology",),
+        calibrated_on=("pouget1988.bordeaux",),
+        calibration_note=(
+            "The rate of budburst V = 1000 / (days to 50 % budburst) follows V = K t^c between 5"
+            " and 25 °C, from growth-chamber tests (Pouget 1967, 1969); the day's action is the"
+            " mean of the actions at the maximum and the minimum, positive temperatures only,"
+            " summed from 1 January at Bordeaux; budburst comes when the sum nears S, observed"
+            " for the four references over 1961-1987 (Table V: Perle de Csaba 1,788 ± 38,"
+            " Traminer 1,585 ± 41, Merlot 1,255 ± 12, Ugni blanc 1,089 ± 15). The other"
+            " cultivars' S, c, K and threshold come from the fitted relations between the"
+            " references' S and mean budburst day, c and S, log K and c, and threshold and c."
+            " The threshold is the temperature at which V = 20 (50 days). Table VII read"
+            " 2026-10-13 in the page image; the relations at their OCR lines"
+            " (literature/pouget1988)."
+        ),
+        parameters=(
+            Published(
+                "perle_de_csaba.mean_budburst_day",
+                63.5,
+                "d from 1 Jan",
+                "Table VII (p. 116)",
+                "read",
+            ),
+            Published("perle_de_csaba.s", 1788, "action units", "Table VII (p. 116)", "read"),
+            Published("perle_de_csaba.c", 1.285, "1", "Table VII (p. 116)", "read"),
+            Published("perle_de_csaba.k", 2.27, "1", "Table VII (p. 116)", "read"),
+            Published("perle_de_csaba.threshold", 5.6, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "chardonnay.mean_budburst_day", 66.89, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("chardonnay.s", 1703, "action units", "Table VII (p. 116)", "read"),
+            Published("chardonnay.c", 1.345, "1", "Table VII (p. 116)", "read"),
+            Published("chardonnay.k", 1.795, "1", "Table VII (p. 116)", "read"),
+            Published("chardonnay.threshold", 6.1, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "traminer.mean_budburst_day", 72.12, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("traminer.s", 1585, "action units", "Table VII (p. 116)", "read"),
+            Published("traminer.c", 1.442, "1", "Table VII (p. 116)", "read"),
+            Published("traminer.k", 1.214, "1", "Table VII (p. 116)", "read"),
+            Published("traminer.threshold", 7.0, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "chasselas.mean_budburst_day", 74.39, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("chasselas.s", 1475, "action units", "Table VII (p. 116)", "read"),
+            Published("chasselas.c", 1.542, "1", "Table VII (p. 116)", "read"),
+            Published("chasselas.k", 0.821, "1", "Table VII (p. 116)", "read"),
+            Published("chasselas.threshold", 8.0, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "gamay.mean_budburst_day", 75.72, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("gamay.s", 1434, "action units", "Table VII (p. 116)", "read"),
+            Published("gamay.c", 1.578, "1", "Table VII (p. 116)", "read"),
+            Published("gamay.k", 0.711, "1", "Table VII (p. 116)", "read"),
+            Published("gamay.threshold", 8.3, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "pinot_noir.mean_budburst_day", 77.44, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("pinot_noir.s", 1382, "action units", "Table VII (p. 116)", "read"),
+            Published("pinot_noir.c", 1.623, "1", "Table VII (p. 116)", "read"),
+            Published("pinot_noir.k", 0.595, "1", "Table VII (p. 116)", "read"),
+            Published("pinot_noir.threshold", 8.7, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "syrah.mean_budburst_day", 78.78, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("syrah.s", 1342, "action units", "Table VII (p. 116)", "read"),
+            Published("syrah.c", 1.658, "1", "Table VII (p. 116)", "read"),
+            Published("syrah.k", 0.518, "1", "Table VII (p. 116)", "read"),
+            Published("syrah.threshold", 9.0, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "chenin.mean_budburst_day", 79.72, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("chenin.s", 1312, "action units", "Table VII (p. 116)", "read"),
+            Published("chenin.c", 1.684, "1", "Table VII (p. 116)", "read"),
+            Published("chenin.k", 0.467, "1", "Table VII (p. 116)", "read"),
+            Published("chenin.threshold", 9.3, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "riesling.mean_budburst_day", 79.83, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("riesling.s", 1309, "action units", "Table VII (p. 116)", "read"),
+            Published("riesling.c", 1.687, "1", "Table VII (p. 116)", "read"),
+            Published("riesling.k", 0.461, "1", "Table VII (p. 116)", "read"),
+            Published("riesling.threshold", 9.3, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "merlot.mean_budburst_day", 81.22, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("merlot.s", 1255, "action units", "Table VII (p. 116)", "read"),
+            Published("merlot.c", 1.702, "1", "Table VII (p. 116)", "read"),
+            Published("merlot.k", 0.444, "1", "Table VII (p. 116)", "read"),
+            Published("merlot.threshold", 9.4, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "semillon.mean_budburst_day", 81.33, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("semillon.s", 1263, "action units", "Table VII (p. 116)", "read"),
+            Published("semillon.c", 1.727, "1", "Table VII (p. 116)", "read"),
+            Published("semillon.k", 0.394, "1", "Table VII (p. 116)", "read"),
+            Published("semillon.threshold", 9.7, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "cabernet_franc.mean_budburst_day",
+                82.0,
+                "d from 1 Jan",
+                "Table VII (p. 116)",
+                "read",
+            ),
+            Published("cabernet_franc.s", 1243, "action units", "Table VII (p. 116)", "read"),
+            Published("cabernet_franc.c", 1.744, "1", "Table VII (p. 116)", "read"),
+            Published("cabernet_franc.k", 0.368, "1", "Table VII (p. 116)", "read"),
+            Published("cabernet_franc.threshold", 9.8, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "grenache.mean_budburst_day", 82.67, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("grenache.s", 1223, "action units", "Table VII (p. 116)", "read"),
+            Published("grenache.c", 1.761, "1", "Table VII (p. 116)", "read"),
+            Published("grenache.k", 0.344, "1", "Table VII (p. 116)", "read"),
+            Published("grenache.threshold", 10.0, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "sauvignon.mean_budburst_day", 83.33, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("sauvignon.s", 1203, "action units", "Table VII (p. 116)", "read"),
+            Published("sauvignon.c", 1.779, "1", "Table VII (p. 116)", "read"),
+            Published("sauvignon.k", 0.32, "1", "Table VII (p. 116)", "read"),
+            Published("sauvignon.threshold", 10.2, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "carignan.mean_budburst_day", 85.22, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("carignan.s", 1145, "action units", "Table VII (p. 116)", "read"),
+            Published("carignan.c", 1.829, "1", "Table VII (p. 116)", "read"),
+            Published("carignan.k", 0.262, "1", "Table VII (p. 116)", "read"),
+            Published("carignan.threshold", 10.6, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "ugni_blanc.mean_budburst_day", 85.94, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("ugni_blanc.s", 1089, "action units", "Table VII (p. 116)", "read"),
+            Published("ugni_blanc.c", 1.865, "1", "Table VII (p. 116)", "read"),
+            Published("ugni_blanc.k", 0.223, "1", "Table VII (p. 116)", "read"),
+            Published("ugni_blanc.threshold", 11.0, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "cabernet_sauvignon.mean_budburst_day",
+                91.22,
+                "d from 1 Jan",
+                "Table VII (p. 116)",
+                "read",
+            ),
+            Published("cabernet_sauvignon.s", 985, "action units", "Table VII (p. 116)", "read"),
+            Published("cabernet_sauvignon.c", 2.0, "1", "Table VII (p. 116)", "read"),
+            Published("cabernet_sauvignon.k", 0.133, "1", "Table VII (p. 116)", "read"),
+            Published("cabernet_sauvignon.threshold", 12.2, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "mourvedre.mean_budburst_day", 93.06, "d from 1 Jan", "Table VII (p. 116)", "read"
+            ),
+            Published("mourvedre.s", 907, "action units", "Table VII (p. 116)", "read"),
+            Published("mourvedre.c", 2.036, "1", "Table VII (p. 116)", "read"),
+            Published("mourvedre.k", 0.116, "1", "Table VII (p. 116)", "read"),
+            Published("mourvedre.threshold", 12.5, "°C", "Table VII (p. 116)", "read"),
+            Published(
+                "relation.log_k.intercept",
+                2.57403,
+                "1",
+                "p. 117-118 (l. 772 of the OCR text)",
+                "read",
+            ),
+            Published(
+                "relation.log_k.slope_c",
+                -1.72494,
+                "1",
+                "p. 117-118 (l. 772 of the OCR text)",
+                "read",
+            ),
+            Published(
+                "relation.s.intercept",
+                3737,
+                "action units",
+                "p. 117 (l. 752 of the OCR text)",
+                "read",
+            ),
+            Published(
+                "relation.s.slope_d",
+                -30.4138,
+                "action units/d",
+                "p. 117 (l. 752 of the OCR text)",
+                "read",
+            ),
+            Published(
+                "relation.c.intercept", 2.824, "1", "p. 117 (l. 762 of the OCR text)", "read"
+            ),
+            Published(
+                "relation.c.slope_s",
+                -0.000869,
+                "1/action unit",
+                "p. 117 (l. 762 of the OCR text)",
+                "read",
+            ),
+            Published(
+                "relation.threshold.intercept",
+                -6.40,
+                "°C",
+                "p. 118 (l. 798 of the OCR text)",
+                "read",
+            ),
+            Published(
+                "relation.threshold.slope_c", 9.31, "°C", "p. 118 (l. 798 of the OCR text)", "read"
+            ),
+        ),
+        flags=(
+            "A heat sum to a threshold with a power-law response, no chilling term and a fixed"
+            " 1 January start that the author says must be moved for other regions; the"
+            " ancestor of RIOU (cortazar2009's eq. 2) and of BRIN's forcing idea.",
+            "No forecast error is printed: 1-3 d is the observation error, 0-5 d the gap between"
+            " dates from 30-year mean temperatures and observed means; cold spells after the"
+            " sum is well along delay budburst and are not modelled.",
+            "'17 années (1961 à 1987)' spans 27 calendar years; the scale's 'dix-huit années"
+            " (1970-1988)' nineteen. Four references in the text, five starred in Table VII.",
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

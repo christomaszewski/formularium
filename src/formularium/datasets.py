@@ -405,6 +405,17 @@ DATASETS: dict[str, Dataset] = {
         " literature/ramos2023); observed; not public (l. 775)",
         "read",
     ),
+    "pouget1988.bordeaux": Dataset(
+        "Budburst dates of 22 cultivars at INRA's Bordeaux station (Pont-de-la-Maye), 18 years"
+        " within 1970-1988, and of the four reference cultivars (Perle de Csaba, Traminer,"
+        " Merlot, Ugni blanc) over 1961-1987 (printed as 17 years), with the station's daily"
+        " maxima and minima; the rate law behind them from growth-chamber tests at 5, 10, 15,"
+        " 20 and 25 °C whose years and bud counts are not printed",
+        "Pouget 1988, Conn. Vigne Vin 22:105-123, pp. 107-111 and Table VII (p. 116, read"
+        " 2026-10-13 in the page image; literature/pouget1988); the dates observed, the S sums"
+        " a model's",
+        "read",
+    ),
     "rossi2008pp.discs": Dataset(
         "Oospore germination, 1999-2003, as infection of grape leaf discs (280 a sample) by"
         " oospores from 10 g leaf-fragment samples taken weekly, late March to early July, in"
