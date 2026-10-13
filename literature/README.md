@@ -278,6 +278,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [garciagutierrez2023](garciagutierrez2023.md) | none | phenology | Chile | Held out by structure, as recorded |
 | [garciatejera2022](garciatejera2022.md) | none | phenology, seasonal forecast | Lleida, Badajoz, Douro, Campania | A Spring Warming sum run on monthly means through an effective-days correction; Raïmat's Tempranillo and Chardonnay F* printed; 4-7 d RMSD either way |
 | [gashu2020](gashu2020.md) | none | phenology, berry composition | Israel | Clear and observational |
+| [gatti2016](gatti2016.md) | none | phenology, budburst, pruning date | Piacenza | Pruning on 13 and 29 April delayed Sangiovese budburst 17 and 31 d but harvest only −3 and +6 d; one pot trial, a size for the pruning-date effect |
 | [gautam2013](gautam2013.md) | various | climate change | India, global | Context only |
 | [gawande2024](gawande2024.md) | downy mildew, powdery mildew | sensors, leaf wetness | not stated | 12 h of sensor bursts, no disease labels: not a training set |
 | [gdpm2010china](gdpm2010china.md) | downy mildew | season severity, aerobiology | Shandong | One Shandong season, 2009 |
