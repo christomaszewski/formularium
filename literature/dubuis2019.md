@@ -54,3 +54,4 @@ whose oospore rule the engine runs (`vitimeteo.oospores`).
   fitted at Changins too. Until VitiMeteo's calibration data are named, treat a truth
   matched to them as calibrated with VitiMeteo, in a sensitivity arm.
 - Nothing to compute here; the model papers (Viret 2005, Dubuis 2012) are not held.
+- **2026-10-13:** Viret et al. 2005 and Dubuis et al. 2012 are held and read now (`viret2005`, `dubuis2012`): Dubuis prints the oospore sum as 140 at the 8 °C threshold from 1 January and the nine Changins years (2003-2011) this paper's validation continues.

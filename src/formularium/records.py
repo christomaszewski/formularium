@@ -112,6 +112,10 @@ STRUCTURES = {
     " long-term normals (Strizyk's EPI)",
     "survival-hours-temperature-humidity": "sporangia survival in hours from temperature and"
     " relative humidity, not a vapour pressure deficit",
+    "monthly-temperature-regression": "a stage's day of year as a linear function of monthly"
+    " temperature means, with no heat summed to a threshold",
+    "days-remaining-regression": "days remaining to a stage as a linear function of the date,"
+    " heat and soil sums, photoperiod and light, refitted each day",
 }
 
 

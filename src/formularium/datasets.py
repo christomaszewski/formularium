@@ -162,6 +162,17 @@ DATASETS: dict[str, Dataset] = {
         "Magarey et al. 2005, Tables 1 and 2, ref. 56: its grape Botrytis rows",
         "read",
     ),
+    "ramos2010.penedes": Dataset(
+        "Budbreak, bloom, veraison and harvest dates of dry-farmed Xarel·lo in two Alt Penedès"
+        " vineyards over 14 seasons (1996-2009; the dates themselves are not printed), with"
+        " daily rain and temperature from four observatories (Vilafranca del Penedès from"
+        " 1952; Sant Sadurní d'Anoia, La Granada and Els Hostalets de Pierola from 1996) and"
+        " a stage-by-stage water balance (P minus FAO-56 crop ET) at Els Hostalets",
+        "Ramos & Martínez-Casasnovas 2010, VIII International Terroir Congress, pp. 3-23 to"
+        " 3-28, 'Materials and methods' (l. 88-106) and Table 2 (p. 3-27, read 2026-10-13 in"
+        " the page image; literature/ramos2010); the ET is a model's, the dates are observed",
+        "read",
+    ),
     "ramos2017.penedes": Dataset(
         "Phenology of Chardonnay (1998-2012), Macabeo and Parellada (1998-2009) in one Penedès"
         " vineyard grown for cava, with hourly weather from the Els Hostalets de Pierola"
@@ -228,16 +239,240 @@ DATASETS: dict[str, Dataset] = {
         " the truth's spatial heterogeneity",
         "read",
     ),
+    "alleweldt1975.flein": Dataset(
+        "Budburst (first leaflets out of the wool), flowering start (25 % of caps shed) and"
+        " end, shoot length, inflorescence and flower counts and berry set of Riesling on"
+        " Kober 5 BB at three Württemberg plots (Flein Steinboden 202 m, Flein Tonboden 208 m,"
+        " Stetten 253 m), 1969-1972, with grape-zone air and 20 cm soil temperature from"
+        " recording thermographs, light by photocell, rain and gravimetric soil water",
+        "Alleweldt & Hofäcker 1975, Vitis 14:103-115, section 2 (l. 60-120; literature/"
+        "alleweldt1975); observed; the methods say 1968-1972, the results 1969-1972",
+        "read",
+    ),
+    "barrios2004.vilafranca": Dataset(
+        "The spring outcome of downy mildew at Vilafranca del Penedès for each year 1984-2004,"
+        " in words (scarce and late primary infections, or general ones from the first rains,"
+        " with the rain in mm in some years), beside EPI's winter value and the Catalan plant"
+        " health service's verdict on the forecast (17 right, 2 partly, 2 wrong); INCAVI's"
+        " station weather",
+        "Barrios & Reyes 2004, Phytoma 164, table p. 4 (read 2026-10-13 in the page image,"
+        " literature/barrios2004); the outcomes are the service's observations, the EPI values"
+        " a model's",
+        "read",
+    ),
+    "brook1992.auckland": Dataset(
+        "Dates downy mildew lesions were first seen in a Black Hamburgh vineyard at Mt Albert,"
+        " Auckland, each season 1971/72 to 1981/82 (none in 1972/73), with the wet period the"
+        " author postulates as the primary infection (its dates, net rain in mm and mean air"
+        " temperature), and the share of leaves mildewed 50 days on in five seasons beside"
+        " that period's rain and night minima",
+        "Brook 1992, N. Z. J. Crop Hortic. Sci. 20:37-49, Tables 7 and 10 (pp. 44 and 47,"
+        " read 2026-10-13 in the page images, literature/brook1992); the first-lesion dates"
+        " are observed, the infection periods the author's reading of the rain record by"
+        " Galet 1977's two-wet-days rule",
+        "read",
+    ),
+    "daux2012.harvest_dates": Dataset(
+        "An open database of 380 grape harvest-date series (16,921 dates, 93 % French, from"
+        " 1354 in Burgundy), grouped into 27 regional composites; harvest dates are decisions"
+        " of authorities and growers, not stage observations",
+        "Daux et al. 2012, Clim. Past 8:1403-1418, sections 2-3 and Table 1 (literature/daux2012);"
+        " held at the GDR2968 phenology database and NOAA's World Data Center for"
+        " Paleoclimatology, free for research",
+        "read",
+    ),
+    "chacon2021.lamancha": Dataset(
+        "Bud break, flowering, veraison and maturity (50 % of sampled vines, lots of four) of"
+        " Tempranillo and Chardonnay, two series 2000-2019 plus two or three plots in half the"
+        " years, at 663 m in La Mancha DO, with the Argamasilla de Alba station's daily weather"
+        " (gaps filled from Tomelloso) and grape composition at ripening",
+        "Chacón-Vozmediano, Martínez-Gascueña & Ramos 2021, Agron. Sustain. Dev. 41:24,"
+        " section 2.2 (l. 84-142, 180-182; literature/chacon2021); observed; the data are IRIAF's"
+        " and the Ministry's, on request",
+        "read",
+    ),
+    "caffarra2010.conegliano": Dataset(
+        "Chardonnay budburst (BBCH 07), flowering (BBCH 65) and veraison (BBCH 85) at Conegliano"
+        " (Susegana 1969-2000, Spresiano 2001-2007; 39 years, the calibration series) and at"
+        " San Michele all'Adige, Mezzocorona, Cembra (Trentino) and Carpeneto (Piedmont),"
+        " 1986-2007, with daily mean temperatures (gaps filled by regression on nearby stations)",
+        "Caffarra & Eccel 2010, Int. J. Biometeorol. 54:255-267, 'Phenological and meteorological"
+        " data' and Table 1 (l. 74-88, 154-158; literature/caffarra2010); observed, the filled"
+        " temperatures computed",
+        "read",
+    ),
+    "caffi2013.piedmont": Dataset(
+        "Sporulating and non-sporulating downy mildew lesions counted every second or third day"
+        " on unsprayed vines at Grugliasco (Moscato) and Neive (Barbera), Piedmont, 2008-2010:"
+        " 100 assessments, 58 with new lesions, 61,921 lesions, with hourly weather from the"
+        " regional service's stations at the vineyard edges",
+        "Caffi et al. 2013, Phytopathology 103:64-73, Methods and Results (read 2026-10-12,"
+        " literature/caffi2013); observed, no model dated the assessments",
+        "read",
+    ),
+    "ramos2018.ribera": Dataset(
+        "Budbreak, bloom, véraison and maturity dates (Baggiolini stages C, I, M, N) of"
+        " Tempranillo and Cabernet Sauvignon in four Ribera del Duero plots, 2004-2015,"
+        " from the Consejo Regulador (a stage's date is when it was the most frequent in"
+        " the area), with daily and hourly weather from the Aranda de Duero station (798 m)",
+        "Ramos, Jones & Yuste 2018, OENO One 52(1):31-44, 'Materials and methods' (l. 173-227;"
+        " literature/ramos2018); the dates are the Consejo's observations, the P minus ETc"
+        " balance a model's",
+        "read",
+    ),
+    "pola2017.urussanga": Dataset(
+        "Budburst (50 % green tips), full bloom and harvest (50 % picked) of Goethe on Paulsen"
+        " 1103 at Epagri's Urussanga station, Santa Catarina (humid subtropical, 49 m), seven"
+        " seasons (2007-2011, 2013, 2014; three plants a stage), with the station's daily"
+        " readings about 100 m away (Ta = (Tmax + Tmin + T9 + 2 T21)/5; hourly values by"
+        " interpolation)",
+        "Pola et al. 2017, Rev. Ciênc. Agrár. 40(1):236-245, 'Materiais e métodos' (l. 68-138;"
+        " literature/pola2017); observed, the hourly temperatures interpolated",
+        "read",
+    ),
+    "nendel2010.coolwinter": Dataset(
+        "Budbreak dates (BBCH 09; at four sites BBCH 07 plus two days) of Riesling and"
+        " Müller-Thurgau at 13 vineyards in Germany, France, Luxembourg, Slovakia and Czechia,"
+        " 20 site-variety series within 1967-2008 (Table 1), with each site's station"
+        " temperatures (Trier's lapse-corrected)",
+        "Nendel 2010, Int. J. Biometeorol. 54:231-241, 'Data' and Table 1 (l. 142-183, 245-267;"
+        " literature/nendel2010); observed except the BBCH 07 conversions",
+        "read",
+    ),
+    "parker2013.database": Dataset(
+        "Parker et al. 2011's flowering and veraison database, updated: 81 varieties, 2,278"
+        " flowering and 2,088 veraison observations, 1960-2007, 123 locations, mostly French"
+        " research stations and collections, with each site's daily temperatures",
+        "Parker et al. 2013, Agric. For. Meteorol. 180:249-264, section 2.1 (l. 156-171;"
+        " literature/parker2013); observed stage dates, no model",
+        "read",
+    ),
+    "martinezluscher2016.croatia": Dataset(
+        "Budburst, flowering and fruit-maturity dates of Chasselas Doré, Riesling Italico,"
+        " Istrian Malmsey and Plavac Mali in nine plantings at five Croatian stations"
+        " (42.75-46.03 °N), 307 seasonal records 1961-2013 from the Croatian Meteorological and"
+        " Hydrological Service via PEP725, with E-OBS gridded temperature and rain (hourly"
+        " values rebuilt by chillR)",
+        "Martínez-Lüscher et al. 2016, Front. Environ. Sci. 4:48, 'Materials and methods'"
+        " (l. 141-190; literature/martinezluscher2016); observed dates, gridded weather",
+        "read",
+    ),
+    "pinarey2021.ribeiro": Dataset(
+        "Budburst (BBCH 09) and flowering (BBCH 61) dates of Albariño, Godello, Loureira and"
+        " Treixadura, 2008-2019, in one Ribeiro DO vineyard (140 m; 20 plants a variety, a"
+        " stage when half show it, visits every 6-7 days), with daily temperatures from a"
+        " station in the vineyard",
+        "Piña-Rey et al. 2021, Plants 10:502, section 4.1 (l. 1005-1046; literature/pinarey2021);"
+        " observed, no model; the data are not shared",
+        "read",
+    ),
+    "ruml2016.karlovci": Dataset(
+        "Onset of budburst, flowering, veraison and harvest of 20 cultivars (7 red, 13 white; 20"
+        " vines each) in the Novi Sad faculty's collection at Sremski Karlovci, Serbia,"
+        " 1986-2011, with the national service's daily Tmax and Tmin at the site 1981-2007"
+        " (the relations fitted on 1986-2007)",
+        "Ruml et al. 2016, J. Agric. Sci. 154:186-206, 'Materials and methods' (l. 138-208;"
+        " literature/ruml2016); observed, no model",
+        "read",
+    ),
+    "schrader2020.iowa": Dataset(
+        "Budbreak, bloom, veraison (50 % of buds, flowers, berries) and harvest maturity (by"
+        " soluble solids, pH and acidity) of Frontenac, La Crescent, Marquette, Petit Ami and"
+        " St. Croix (18 vines each) at Iowa State's research station near Gilbert, 2011, 2013"
+        " and 2014, with hourly air and soil temperature and solar radiation; 144 Marquette"
+        " vines 400 m away in 2019 for validation",
+        "Schrader et al. 2020, HortScience 55(12):1912-1925, 'Materials and methods'"
+        " (l. 125-216; literature/schrader2020); observed, the response (days remaining) is"
+        " the stage date minus the day",
+        "read",
+    ),
+    "ramos2022.rioja": Dataset(
+        "Flowers-separated, veraison and harvest dates (50 % of surveyed plants) of"
+        " non-irrigated Carignan in two Rioja DOCa plots (428 and 460 m), 2008-2020, with the"
+        " La Rioja government's Logroño stations (408 and 456 m) and grape composition at"
+        " harvest; soil water from the VSIM model",
+        "Ramos & Martínez de Toda 2022, Int. J. Biometeorol. 66:1067-1078, 'Materials and"
+        " methods' (l. 115-128, 176-180; literature/ramos2022); the dates observed, the soil"
+        " water a model's",
+        "read",
+    ),
+    "ramos2023.rueda": Dataset(
+        "Budbreak, flowering, veraison and ripening dates of Verdejo (nine plots), Viura and"
+        " Sauvignon Blanc (two each) in Rueda DO (700-930 m), 2008-2021, from the Consejo"
+        " Regulador, with the Rueda (709 m) and Medina del Campo (726 m) stations; four"
+        " non-irrigated Verdejo plots used, two to calibrate and two to validate",
+        "Ramos & Yuste 2023, Agronomy 13:146, section 2 (l. 142-146, 266, 306-308;"
+        " literature/ramos2023); observed; not public (l. 775)",
+        "read",
+    ),
+    "pouget1988.bordeaux": Dataset(
+        "Budburst dates of 22 cultivars at INRA's Bordeaux station (Pont-de-la-Maye), 18 years"
+        " within 1970-1988, and of the four reference cultivars (Perle de Csaba, Traminer,"
+        " Merlot, Ugni blanc) over 1961-1987 (printed as 17 years), with the station's daily"
+        " maxima and minima; the rate law behind them from growth-chamber tests at 5, 10, 15,"
+        " 20 and 25 °C whose years and bud counts are not printed",
+        "Pouget 1988, Conn. Vigne Vin 22:105-123, pp. 107-111 and Table VII (p. 116, read"
+        " 2026-10-13 in the page image; literature/pouget1988); the dates observed, the S sums"
+        " a model's",
+        "read",
+    ),
     "rossi2008pp.discs": Dataset(
-        "Oospore germination, 1999-2003, as infection of grape leaf discs by oospores sampled"
-        " from a vineyard, March to July",
-        "Rossi et al. 2008, Plant Pathol. 57:216-226, abstract (read 2026-10-08 in the copy"
-        " Cooptera holds)",
+        "Oospore germination, 1999-2003, as infection of grape leaf discs (280 a sample) by"
+        " oospores from 10 g leaf-fragment samples taken weekly, late March to early July, in"
+        " a 500 m2 Barbera plot at Asti, Piedmont, with hourly weather from a station in the"
+        " vineyard; 124 fitted cases",
+        "Rossi et al. 2008, Plant Pathol. 57:216-226, Methods and Results (read 2026-10-12,"
+        " literature/rossi2008pp); the assays are observed, and the paper's field infection"
+        " dates, used only as a check, were placed by Rossi et al. 2002's method",
+        "read",
+    ),
+    "douillet2023.grandeferrade": Dataset(
+        "Airborne Plasmopara viticola sporangia per m3 from six rotating-arm samplers read by"
+        " LAMP three times a week, 1 April to 30 September 2019-2021, at INRAE's Grande"
+        " Ferrade vineyard (Villenave-d'Ornon), three sprayed and three minimally sprayed"
+        " plots, with weekly leaf and cluster ratings and the station's hourly weather",
+        "Douillet 2023, thesis, chapter 3 (l. 3606-3607, 3838-3851, 3872 of the text;"
+        " literature/douillet2023); the counts are observed, daily values are split evenly"
+        " across 48-72 h samples, and the 'total' series adds survivors computed with"
+        " Brischetto 2020's mortality",
+        "read",
+    ),
+    "fraga2016.portugal": Dataset(
+        "Field-observed day of year of budburst, flowering and veraison for 16 varieties: 14"
+        " at the Dois Portos experimental vineyard, Lisbon (series of 11 to 22 years within"
+        " 1990-2011, Table 1), Loureiro at Arcos de Valdevez, Vinhos Verdes (2003-2012), and"
+        " Touriga-Franca at Ervedosa do Douro (2001-2011, from the Estação de Avisos do"
+        " Douro), with monthly means of daily Tmin, Tmax and Tmean from each site's station"
+        " (the Douro station about 20 km away)",
+        "Fraga et al. 2016, J. Agric. Sci. 154:795-811, Table 1 (p. 798, read 2026-10-13 in"
+        " the page image) and sections 'Phenological data' and 'Climate data'"
+        " (literature/fraga2016); stages scored by eye with OIV descriptors, no model",
+        "read",
+    ),
+    "didevarasl2026.sardinia": Dataset(
+        "Budburst (47), full bloom (42) and veraison (29) dates of Cannonau at 17 Sardinian"
+        " sites within 1991-2020 (University of Sassari records; mean day of year 95, 144 and"
+        " 205), with daily weather from a 2.2 km COSMO-CLM downscaling of ERA5 (a model"
+        " product, not station records)",
+        "Didevarasl et al. 2026, Int. J. Biometeorol. 70:273, 'Data collection and"
+        " preparation' (read 2026-10-13 in the publisher's HTML; literature/didevarasl2026);"
+        " the site list and the dates themselves are in the supplement, on request",
+        "read",
+    ),
+    "garciatejera2022.plots": Dataset(
+        "Weekly Baggiolini-scale phenology (bud break, bloom, fruit set, veraison) of"
+        " Tempranillo and Chardonnay at Raïmat (Lleida), Tempranillo at La Orden (Badajoz,"
+        " 2005-2017), Touriga Nacional at Vilariça (Douro) and Aglianico at Mirabella Eclano"
+        " (Campania), 2017-2020 at the three, with nearby station weather (Raïmat 1997-2017,"
+        " La Orden 1998-2005, Vilariça 1985-2017, Mirabella Eclano 1978-2017 as the historical"
+        " records)",
+        "García-Tejera et al. 2022, OENO One 56(4):173-183, section 3 and Table 1 (l. 317-407;"
+        " literature/garciatejera2022); observed, no model",
         "read",
     ),
     "ferguson2014.prosser": Dataset(
         "Cold hardiness (differential thermal analysis) of primary buds of 23 Vitis genotypes"
-        " at Prosser, Washington",
+        " at Prosser and Paterson, Washington, since 1988, with budbreak dates since 1988",
         "Ferguson et al. 2014, Am. J. Enol. Vitic. 65:59-71, abstract and methods (read"
         " 2026-10-08 in the copy Cooptera holds)",
         "read",

@@ -48,3 +48,4 @@ and its results; the rest by extraction.
 
 - Not usable as a truth: its biology is powdery mildew's, and nothing is fitted to downy
   mildew data.
+- **2026-10-13:** Caffi et al. 2013 (`caffi2013`, read) prints a lesion's infectious period as 6.7 ± 0.6 d (median 7), which matches the 7 d used here; the 10 d latency is not its measurement (its introduction cites 5 to 10 d to sporulation).

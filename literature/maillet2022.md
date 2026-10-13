@@ -10,7 +10,7 @@ regions: [Loire]
 processes: [detection, remote sensing]
 records: []
 datasets: []
-files: [p51.pdf]
+files: [p51.pdf, 2023-maillet-10-1109-access-2023-3237082.pdf]
 ---
 
 # Maillet et al. 2022: Sentinel-2 and weather to detect downy mildew at Amboise
@@ -22,6 +22,8 @@ files: [p51.pdf]
 - **Labels:** by calendar, July and August of 2018 and 2021 positive, everything else
   negative; the ground truth's source is not described.
 - Test accuracy 0.970 with all inputs, 0.662 with weather alone.
+
+- **Published version:** IEEE Access 11 (2023), held in the library under the file name above since 2026-10-07; its DOI, 10.1109/ACCESS.2023.3237082, is the file name's, not printed in the copy's text layer. The note was written from the arXiv preprint; the published text was not re-read (2026-10-12).
 
 ## Dependence
 

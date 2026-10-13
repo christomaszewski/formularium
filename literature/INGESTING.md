@@ -232,6 +232,55 @@ were called kin, or ruled out, for their authors alone. When the rules change, r
   record one topic at a time, so each PR is reviewable and the next session can stop
   between them.
 
+## The 2026-10-12 search's lessons
+
+A second deep-research pass, three days after the first, on the gaps the first left:
+the located-but-unfetched leads, the catalogue's own sources that had no note, and what
+OpenAlex and Scite showed as new since. What it taught:
+
+- **Start from the gaps, not from keywords.** The first search's `INDEX.tsv` held 326
+  "located" leads; cross-checking them against the notes' DOIs and titles left 312, and
+  OpenAlex's batched DOI filter (`filter=doi:a|b|c`, 40 a call, $0.001 each) resolved
+  114 of 115 to an open-access status and a PDF link in three calls. About half were
+  closed. Scite's `titles` filter matches exact titles only; use it for DOIs, not for
+  discovery.
+- **Where open copies came from this time:** Agroscope's repository (ira.agroscope.ch,
+  `Page/Einzelpublikation/Download?einzelpublikationId=N`) for the Revue suisse VitiMeteo
+  papers that two earlier hunts missed; the Wayback Machine's raw captures for BIO Web of
+  Conferences, the old Journal of Plant Pathology site (its DOI no longer resolves) and
+  APS open-access PDFs; MDPI's `mdpi-res.com/d_attachment/...` mirror when mdpi.com
+  refuses; a headless Chromium that opens the home page first for HAL theses and Taylor &
+  Francis (it saves the PDF the viewer loads, not a download event). Cloudflare still
+  stops curl and headless Chromium alike at Elsevier, Wiley, APS, SSRN and OUP, open
+  access or not: list those for Chris rather than retrying.
+- **Check the first page against the lead.** One DOI the first search attributed to Fenu
+  & Malloci was Lacotte et al. 2022; one "2015" Vitis file was a 2008 paper; the Korean
+  journal's PDF had no text layer (OCR); the Portuguese journal's file name said 2018 for
+  a 2008 paper. The triage agents caught all four.
+- **Held papers without notes are the cheapest gaps.** Seven catalogue sources had been
+  read for the catalogue on 2026-10-07 and never given a note; reading them properly
+  moved two records (caffi2013.sporulation, rossi2008pp.dormancy) from a title to their
+  printed thresholds, data and inconsistencies.
+- **The account's session limit kills agents.** Four Haiku readers died together at the
+  limit (it resets at 01:10 America/New_York); their finished JSON files survived, so
+  relaunch the missing keys only. Keep three agents in flight, and have each write its
+  output file as soon as a paper is done.
+- **Reading agents can view page images now,** and one did for the equations the text
+  layer lost (rossi2009); the main session still reads every equation that becomes a
+  record in the image itself.
+- **A form question needs a form brief.** Chris's 2026-10-13 ask (stage-date models that
+  sum no heat to a threshold) was answered by a triage brief that defined the forms wanted
+  (regressions on monthly means, days per degree, PLS, machine learning, photoperiod, soil
+  temperature, pruning date, survival models) and asked each reading to say which form the
+  fitted relation has and whether a heat sum is in it. Half the A papers turned out to be
+  threshold models with the form only in their regressions of composition or trends; the
+  readings caught that because the brief asked. The non-threshold forms that survived are
+  mostly retrospective (the window closes at or after the stage): say so in the note.
+- **Record what is printed, flag what is approximate.** A paper that prints "about 10 days
+  per °C" gets the number in the note, not as a Published value; the ones printed to the
+  decimal (Fraga's tables, Ruml's Table 8, Didevarasl's Table 4) become records with the
+  page image behind each.
+
 ## Judging dependence
 
 From Agrarium's decisions D27 to D29 (its PLAN section 15, and `src/formularium/stemma.py`):

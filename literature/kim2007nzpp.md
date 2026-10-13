@@ -40,3 +40,4 @@ The source of `kim2007.bacchus`, recorded so far from [hill2019](hill2019.md).
 
 - Which Bacchus is meant matters: as recorded (Hill's) it infects in under an hour at
   23 °C. Flagged on the record.
+- **2026-10-13:** Hill et al. 2019's corrected form, x = 1/(84.37 − 7.238T + 0.156T²), is what Pîrcălabu et al. 2020 run in Romania as "a correction to the model published by Kim et al. 2007" (`pircalabu2020`, l. 50-56): the correction has reached users abroad.

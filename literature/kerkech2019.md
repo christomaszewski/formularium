@@ -10,7 +10,7 @@ regions: [France, Centre-Val de Loire]
 processes: [symptom detection, image registration, segmentation, disease mapping, leaf wetness]
 records: []
 datasets: []
-files: [q219.pdf]
+files: [q219.pdf, 2020-kerkech-10-1016-j-compag-2020-105446.pdf]
 ---
 
 # Kerkech et al. 2019: deep-learning mapping of vine disease from UAV images
@@ -25,6 +25,8 @@ A light read (the deep-research B list).
 - Leaf-level total accuracy: visible 85.13%, infrared 78.72%, union fusion 90.23% (l. 979-981).
 - Grapevine-level union fusion symptom F1 is 92.81%, visible 91.50%, infrared 81.66% (l. 993-994).
 - The disease is named 'Mildew' and is called 'late blight' once; no pathogen is named in the body (l. 189, 875).
+
+- **Published version:** Computers and Electronics in Agriculture 174:105446 (2020), held in the library under the file name above since 2026-10-07; its DOI, 10.1016/j.compag.2020.105446, is the file name's, not printed in the copy's text layer. The note was written from the arXiv preprint; the published text was not re-read (2026-10-12).
 
 ## Dependence
 

@@ -17,7 +17,7 @@ files: [us_ripe_rot_prediction_fungicide_2023.pdf]
 
 ## What it holds
 
-- Two models from Cosseboom & Hu 2023 (not held): a small neural network and a decision
+- Two models from Cosseboom & Hu 2023 (`cosseboom2023`): a small neural network and a decision
   tree on wetness and temperature, times a phenological risk (0.043 after bloom to 0.961
   before harvest).
 - Six trials, three vineyards, 2021-2023: 26-52 % fewer sprays than a 12-day schedule;
@@ -30,3 +30,5 @@ files: [us_ripe_rot_prediction_fungicide_2023.pdf]
 ## Bearing (2026-10-10)
 
 - For Cooptera, if it adds ripe rot.
+- 2026-10-13: the source is read (`cosseboom2023`): its thresholds were tuned on the
+  same 45 epidemics it is scored on, so these six trials are the independent test.

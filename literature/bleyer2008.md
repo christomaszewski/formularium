@@ -58,3 +58,4 @@ Changins and Wädenswil (Viret, Siegfried). VitiMeteo's oospore rule is an engin
 - A truth built on VitiMeteo's other pieces would hold out the engine's oospore rule (one
   model). Kast 1999 and Hill 1989 are papers VitiMeteo drew on, not pieces the engine
   runs: flags, not kin (Agrarium's candidates.json).
+- **2026-10-13:** "Kast 1999" is Kast & Stark-Urnau 1999, Vitis 38:185-186 (`kast1999`, read): a table of leaf-disc infectivity by day after sporulation (100 % to day 6, 20 % on day 7, 0 on day 10 at 22 °C and 26-34 % RH), not a fitted curve.
