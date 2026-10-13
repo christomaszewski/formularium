@@ -116,6 +116,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [bojkov2023yield](bojkov2023yield.md) | downy mildew | season severity, yield loss, spray timing, infection, sporu… | North Macedonia | A small one-vineyard severity and incidence series (2022) with a usable record of bunch-stage severity, but i… |
 | [bombelli2012](bombelli2012.md) | alternaria leaf spot, downy mildew, late blight | severity, epidemic rate, senescence, leaf wetness, degree-d… | Argentina, San Pedro, Concordia, Gualeguaychú | Not downy mildew: an Alternaria method paper. Its shared forms (a fixed-date degree-day onset and a rain-plus… |
 | [bonanomi2025](bonanomi2025.md) | downy mildew, grey mould | infection, sporulation, season severity, spray timing, bioc… | Italy, Puglia, Cerignola | A field severity record from one vineyard in two years (l. 247-248, 410-414) is an observed dataset a truth c… |
+| [borghezan2012](borghezan2012.md) | none | shoot growth, photoperiod | Santa Catarina | Two seasons of shoot growth at 1,293 m with cubic fits on days after budburst; the photoperiod relation is a scatter without an equation |
 | [borzini1950](borzini1950.md) | downy mildew | spray timing | Italy | The incubation calendar in practice, 1950 |
 | [boso2008](boso2008.md) | downy mildew | host susceptibility | Freiburg, Pontevedra | Eight European cultivars ranked for susceptibility in the greenhouse; no weather |
 | [bosshard1983](bosshard1983.md) | downy mildew | fungicide resistance | Switzerland | Context for a spray module |
@@ -460,6 +461,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [meggio2008](meggio2008.md) | none | remote sensing | Ribera del Duero | Viewing geometry alters vineyard reflectance |
 | [menesatti2013](menesatti2013.md) | downy mildew | forecasting, spray timing | Lazio | PLS-DA on a Goidanich predictor; targets cut from its own data |
 | [menezes2024](menezes2024.md) | none | microclimate | Douro | Tree shade simulated, not validated |
+| [merrill2020](merrill2020.md) | none | phenology, flowering, high temperature | Davis | Ten varieties in chambers at 20-37 °C: time to flowering unchanged, flower abortion up to 57 buds a plant at 37 °C |
 | [mesa2024](mesa2024.md) | none | phenology, water balance, climate projection | Penedès, Empordà, Pla de Bages | A single Catalan degree-day set (406 °C·d to budburst from 1 January, base 10; data not shown) and FAO-56 water needs over three PDOs to 2100; the Penedès cycle 7-68 d shorter |
 | [metos2026](metos2026.md) | downy mildew, powdery mildew, black rot, grey mould | sporulation, risk index | general | iMETOS/FieldClimate rules: no data behind them; a comparator, not a truth |
 | [mezei2022](mezei2022.md) | downy mildew | warning system, incubation | Serbia | 3-10 trigger; incubation fitted to Miller's table |
