@@ -448,6 +448,17 @@ DATASETS: dict[str, Dataset] = {
         " the site list and the dates themselves are in the supplement, on request",
         "read",
     ),
+    "garciatejera2022.plots": Dataset(
+        "Weekly Baggiolini-scale phenology (bud break, bloom, fruit set, veraison) of"
+        " Tempranillo and Chardonnay at Raïmat (Lleida), Tempranillo at La Orden (Badajoz,"
+        " 2005-2017), Touriga Nacional at Vilariça (Douro) and Aglianico at Mirabella Eclano"
+        " (Campania), 2017-2020 at the three, with nearby station weather (Raïmat 1997-2017,"
+        " La Orden 1998-2005, Vilariça 1985-2017, Mirabella Eclano 1978-2017 as the historical"
+        " records)",
+        "García-Tejera et al. 2022, OENO One 56(4):173-183, section 3 and Table 1 (l. 317-407;"
+        " literature/garciatejera2022); observed, no model",
+        "read",
+    ),
     "ferguson2014.prosser": Dataset(
         "Cold hardiness (differential thermal analysis) of primary buds of 23 Vitis genotypes"
         " at Prosser and Paterson, Washington, since 1988, with budbreak dates since 1988",

@@ -205,6 +205,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [cosseboom2023](cosseboom2023.md) | ripe rot | infection, crop-stage susceptibility, spray timing | Maryland | The source of cosseboom2024's models: a Gompertz stage-susceptibility curve printed in full, infection classifiers not; thresholds tuned on the same 45 epidemics they are scored on |
 | [cosseboom2024](cosseboom2024.md) | ripe rot | spray timing | Maryland | Two ripe rot models time sprays |
 | [costa2013](costa2013.md) | none | thermal sensing | global | Sensor background |
+| [costa2019](costa2019.md) | none | phenology, dormancy, climate projection | Douro | Eight forms (four forcing, three chilling) for the two Tourigas on 73 pooled dates, leave-one-out RMSEP 4-8 d; a dormancy phase bought nothing |
 | [costafreda2025](costafreda2025.md) | none | phenology, budburst, uncertainty | Europe | Leolini 2020's calibrations over EURO-CORDEX grids: the phenological model holds 94.7 % of the spread in the baseline, climate models about 40 % by mid-century |
 | [costantini2022](costantini2022.md) | none | regulation | European Union | Regulatory context |
 | [courchinoux2025](courchinoux2025.md) | downy mildew | oospores | Bordeaux | A month at 50 °C kills oospores; compost does too |
@@ -225,6 +226,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [douillet2022](douillet2022.md) | downy mildew | airborne inoculum, detection | Bordeaux | Clear |
 | [douillet2023](douillet2023.md) | downy mildew | airborne inoculum, sporangia survival, forecasting | Bordeaux | Three years of LAMP sporangia counts at Grande Ferrade against epidemics; counts alone do not forecast, their product with a weather window does (R² 0.73 before symptoms); Blaeser & Weltzien's survival curve transcribed a third way |
 | [doutreloup2022](doutreloup2022.md) | downy mildew, powdery mildew | bud break, flowering, veraison, spray timing, season severi… | Belgium, Champagne, Alsace, Jura, Bourgogne, Arde… | A source of 2000-2020 daily station data for Belgium and north-east France (observed, l. 167-179) and a frost… |
+| [dry2004](dry2004.md) | none | growth stages, reference | none | The modified E-L scale on one page: budburst E-L 4, shoots 10 cm E-L 12, flowering E-L 23, veraison E-L 35, harvest E-L 38 |
 | [dubuis2012](dubuis2012.md) | downy mildew | oospore maturation, primary infection, sporulation, validation | Switzerland | The VitiMeteo rules in full (oospores 140 from 1 January; 5 mm in 48 h, 3 mm/h, 50 degree-hours), and nine years at Changins: six hits, two too early |
 | [dubuis2019](dubuis2019.md) | downy mildew, powdery mildew | oospore maturation, primary infection | Switzerland, Baden-Württemberg | Changins's oil-spot dates are risky to match a truth to |
 | [dumitriu2021](dumitriu2021.md) | downy mildew | leaf infection, bunch infection, spray timing, fungicide pr… | Romania, Dolj County | Little for the truth: one site, two seasons of variety-level visual attack scores with no weather series and … |
@@ -272,6 +274,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [garcia2021](garcia2021.md) | downy mildew | sporangia germination, fungicide efficacy, induced resistan… | Guarapuava Paraná Brazil, Brazil | Small greenhouse and laboratory trial of cinnamon extract and catalase on downy mildew, usable as a catalase … |
 | [garciaariza2024](garciaariza2024.md) | downy mildew | primary infection, secondary infection, oospores, leaf wetn… | Castilla y León, Spain | A regional extension sheet with unsourced qualitative thresholds; it offers the truth's grower-facing check o… |
 | [garciagutierrez2023](garciagutierrez2023.md) | none | phenology | Chile | Held out by structure, as recorded |
+| [garciatejera2022](garciatejera2022.md) | none | phenology, seasonal forecast | Lleida, Badajoz, Douro, Campania | A Spring Warming sum run on monthly means through an effective-days correction; Raïmat's Tempranillo and Chardonnay F* printed; 4-7 d RMSD either way |
 | [gashu2020](gashu2020.md) | none | phenology, berry composition | Israel | Clear and observational |
 | [gautam2013](gautam2013.md) | various | climate change | India, global | Context only |
 | [gawande2024](gawande2024.md) | downy mildew, powdery mildew | sensors, leaf wetness | not stated | 12 h of sensor bursts, no disease labels: not a training set |

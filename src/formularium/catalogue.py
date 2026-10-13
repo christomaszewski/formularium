@@ -2002,6 +2002,140 @@ FORMULATIONS: dict[str, Formulation] = {
             " base temperature is fitted.",
         ),
     ),
+    "garciatejera2022.spring_warming": Formulation(
+        "Bud break, bloom, fruit set and veraison by the Spring Warming sum from 1 January to a"
+        " critical sum per site and cultivar, run on daily or on monthly mean temperatures",
+        (
+            "García-Tejera et al. 2022, OENO One 56(4): 173-183, Eqs 1-5 (pp. 174-175) and Table 2"
+            " (p. 178)"
+        ),
+        year=2022,
+        authors=(
+            "Garcia-Tejera, Omar",
+            "Marcos-Matamoros, Raül",
+            "Basile, Boris",
+            "Mataffo, Alessandro",
+            "Scognamiglio, Pasquale",
+            "Prieto, Henar",
+            "Mancha, Luis",
+            "Cabral, Inês",
+            "Queiroz, Jorge",
+            "Valente, Joana",
+            "Alves, Fernando",
+            "González-Reviriego, Nube",
+            "Hernández-Barrera, Sara",
+            "Mata, Mercè",
+        ),
+        authors_complete=False,
+        authors_from="read",
+        checked=(
+            "garciatejera2022_oeno.pdf (the 2026-10-12 drop's phenology folder); the author list"
+            " as the reading agent transcribed it, cut at the fourteenth name"
+        ),
+        doi="10.20870/oeno-one.2022.56.4.5401",
+        structures=("degree-day-phenology",),
+        calibrated_on=("garciatejera2022.plots",),
+        calibration_note=(
+            "F* per site, cultivar and stage by inverse modelling of the daily Spring Warming"
+            " sum (Hunter & Lechowicz 1992) with Tb 3.5 °C to bud break and 7.1 °C after, from"
+            " Moncur et al. 1989, t0 1 January; the same F* then run on monthly means through"
+            " the downscaling approach (Eqs 3-5): the month's rate (Tm - Tb) times the effective"
+            " days n_days [1 - cdf(Tb; Tm, sigma_Tm)], the normal cdf from each site's"
+            " historical records (sigma not printed). RMSD over all sites: daily 5.4, 5.0, 6.0,"
+            " 6.4 d and monthly 6.7, 4.4, 6.0, 5.9 d for the four stages (Table 3); the two"
+            " agree (slope 1.00, intercept -2.32, R² 0.99, Fig. 5). Read 2026-10-13 in the page"
+            " images (literature/garciatejera2022)."
+        ),
+        parameters=(
+            Published(
+                "bud_break.raimat.tempranillo.f_star", 345, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published("bloom.raimat.tempranillo.f_star", 425, "°C·d", "Table 2 (p. 178)", "read"),
+            Published(
+                "fruit_set.raimat.tempranillo.f_star", 525, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published(
+                "veraison.raimat.tempranillo.f_star", 1443, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published(
+                "bud_break.raimat.chardonnay.f_star", 274, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published("bloom.raimat.chardonnay.f_star", 436, "°C·d", "Table 2 (p. 178)", "read"),
+            Published(
+                "fruit_set.raimat.chardonnay.f_star", 530, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published(
+                "veraison.raimat.chardonnay.f_star", 1489, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published(
+                "bud_break.vilarica.touriga_nacional.f_star",
+                499,
+                "°C·d",
+                "Table 2 (p. 178)",
+                "read",
+            ),
+            Published(
+                "bloom.vilarica.touriga_nacional.f_star", 428, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published(
+                "fruit_set.vilarica.touriga_nacional.f_star",
+                525,
+                "°C·d",
+                "Table 2 (p. 178)",
+                "read",
+            ),
+            Published(
+                "veraison.vilarica.touriga_nacional.f_star",
+                1648,
+                "°C·d",
+                "Table 2 (p. 178)",
+                "read",
+            ),
+            Published(
+                "bud_break.laorden.tempranillo.f_star", 514, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published("bloom.laorden.tempranillo.f_star", 434, "°C·d", "Table 2 (p. 178)", "read"),
+            Published(
+                "fruit_set.laorden.tempranillo.f_star", 636, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published(
+                "veraison.laorden.tempranillo.f_star", 1430, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published(
+                "bud_break.mirabella.aglianico.f_star", 534, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published("bloom.mirabella.aglianico.f_star", 478, "°C·d", "Table 2 (p. 178)", "read"),
+            Published(
+                "fruit_set.mirabella.aglianico.f_star", 718, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published(
+                "veraison.mirabella.aglianico.f_star", 1954, "°C·d", "Table 2 (p. 178)", "read"
+            ),
+            Published(
+                "t_base.bud_break",
+                3.5,
+                "°C",
+                "section 4 (p. 175), after Moncur et al. 1989",
+                "read",
+            ),
+            Published(
+                "t_base.later_stages",
+                7.1,
+                "°C",
+                "section 4 (p. 175), after Moncur et al. 1989",
+                "read",
+            ),
+            Published("t0", 1, "DOY", "section 4 (p. 175): 1 January", "read"),
+        ),
+        flags=(
+            "Raïmat is in Lleida, the nearest published Tempranillo and Chardonnay F* to the"
+            " Penedès; four seasons (2017-2020) behind each F* there.",
+            "A heat sum to a threshold driven by monthly means: Chris's monthly-mean theme in a"
+            " threshold model, with 4-7 d of error either way.",
+            "Raïmat's 2017 and 2019 had a monthly mean below Tb (the only such cases); La Orden"
+            " 2017 missed fruit set and veraison by 21 and 17 d in both models.",
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",
