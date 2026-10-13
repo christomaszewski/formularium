@@ -2136,6 +2136,60 @@ FORMULATIONS: dict[str, Formulation] = {
             " 2017 missed fruit set and veraison by 21 and 17 d in both models.",
         ),
     ),
+    "mesa2024.gdd": Formulation(
+        "Catalan vineyard stages by degree-days from 1 January to fixed sums, used over the"
+        " Empordà, Pla de Bages and Penedès PDOs",
+        "Funes Mesa et al. 2024, OENO One 58(4), section 3.2 (p. 6)",
+        year=2024,
+        authors=(
+            "Funes Mesa, Inmaculada",
+            "Sánchez-Costa, Elisenda",
+            "Aranda, Xavier",
+            "Altava-Ortiz, Vicent",
+            "Barrera-Escoda, Antoni",
+            "Prohom, Marc",
+            "Poyatos, Rafael",
+        ),
+        authors_complete=False,
+        authors_from="read",
+        checked=(
+            "2024-mesa-10-20870-oeno-one-2024-58-4-7789.pdf (the first seven authors as printed;"
+            " the list continues)"
+        ),
+        doi="10.20870/oeno-one.2024.58.4.7789",
+        structures=("degree-day-phenology",),
+        calibration_note=(
+            "The sums rest on 'several phenological records (following the BBCH scale) over"
+            " Catalonia from a few varieties (data not shown)', by the method of Ramos et al."
+            " 2008; no dataset, variety or error is printed, so nothing is recorded as"
+            " calibration data. Read 2026-10-13 in the page image (literature/mesa2024)."
+        ),
+        parameters=(
+            Published(
+                "t_base", 10.0, "°C", "section 3.2 (p. 6), after Winkler et al. 1974", "read"
+            ),
+            Published(
+                "t_opt", 25.0, "°C", "section 3.2 (p. 6), after Anderson et al. 1986", "read"
+            ),
+            Published("t_top_as_printed", 3.0, "°C", "section 3.2 (p. 6): 'Tmax = 3 °C'", "read"),
+            Published("budbreak.gdd", 406, "°C·d", "section 3.2 (p. 6), from 1 January", "read"),
+            Published("flowering.gdd", 517, "°C·d", "section 3.2 (p. 6), from 1 January", "read"),
+            Published("fruit_set.gdd", 798, "°C·d", "section 3.2 (p. 6), from 1 January", "read"),
+            Published("pea_size.gdd", 1322, "°C·d", "section 3.2 (p. 6), from 1 January", "read"),
+            Published("harvest.gdd", 1962, "°C·d", "section 3.2 (p. 6), from 1 January", "read"),
+            Published("dormancy_restart.gdd", 107, "°C·d", "section 3.2 (p. 6)", "read"),
+        ),
+        flags=(
+            "The upper threshold prints as 'Tmax = 3 °C', an evident misprint (Anderson et al."
+            " 1986's sour-cherry model uses 36 °C); recorded as printed, not corrected.",
+            "A single Catalan parameter set for every variety and PDO, with the data behind it"
+            " unpublished: a regional default, not a fitted model. Table 2's Penedès baseline"
+            " cycle of 287 d implies a budburst near 1 January, unexplained.",
+            "Projections (MPI-ESM downscaled to 1 km, RCP4.5 and 8.5): flowering 8-45 d and the"
+            " budburst-to-harvest cycle 7-68 d shorter by the 2090s; net water needs two to"
+            " four times today's.",
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

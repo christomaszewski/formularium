@@ -460,6 +460,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [meggio2008](meggio2008.md) | none | remote sensing | Ribera del Duero | Viewing geometry alters vineyard reflectance |
 | [menesatti2013](menesatti2013.md) | downy mildew | forecasting, spray timing | Lazio | PLS-DA on a Goidanich predictor; targets cut from its own data |
 | [menezes2024](menezes2024.md) | none | microclimate | Douro | Tree shade simulated, not validated |
+| [mesa2024](mesa2024.md) | none | phenology, water balance, climate projection | Penedès, Empordà, Pla de Bages | A single Catalan degree-day set (406 °C·d to budburst from 1 January, base 10; data not shown) and FAO-56 water needs over three PDOs to 2100; the Penedès cycle 7-68 d shorter |
 | [metos2026](metos2026.md) | downy mildew, powdery mildew, black rot, grey mould | sporulation, risk index | general | iMETOS/FieldClimate rules: no data behind them; a comparator, not a truth |
 | [mezei2022](mezei2022.md) | downy mildew | warning system, incubation | Serbia | 3-10 trigger; incubation fitted to Miller's table |
 | [mijailovic2022](mijailovic2022.md) | downy mildew | spray timing, infection, sporulation, sporangia germination… | laboratory (in vitro France) | None for the engine or the truth's field processes: it is a laboratory efficacy test of a biocontrol product,… |
@@ -478,6 +479,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [moral2012inoculum](moral2012inoculum.md) | olive anthracnose | sporulation, epidemic progress | Andalusia | Kin through the temperature function it shares with Magarey's model |
 | [morales2020](morales2020.md) | none | phenology, climate projection | global | Smoothed-Utah plus Wang-Engel phenology for 11 cultivars on the Parker database; 56 % of regions lost at +2 °C without cultivar turnover, 24 % with |
 | [morelli2026](morelli2026.md) | downy mildew, powdery mildew, grapevine pests (european grapevine moth) | integrated pest management, decision support, forecasting, … | Italy, Europe, North America, Oceania, China, Sou… | None. Recorded so that it is not read again (a survey of apps, with no formulation, observed dataset or model… |
+| [mosedale2015](mosedale2015.md) | none | phenology, frost risk, climate projection | Cornwall | Published spring-warming and chilling-forcing models run on generated weather: budbreak 45 d or 7 d earlier by 2080 depending on the family, frost risk up or down accordingly |
 | [mouafo2022](mouafo2022.md) | downy mildew | clade competition | Quebec | little for Europe |
 | [moyer2010](moyer2010.md) | powdery mildew | low temperature | New York | Leaves 4-8 °C below air on clear nights |
 | [moyer2016](moyer2016.md) | powdery mildew | season severity | New York | A flag now, not kin |
