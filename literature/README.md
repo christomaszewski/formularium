@@ -356,6 +356,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [kudinha2014](kudinha2014.md) | none | leaf wetness, canopy microclimate | Western Cape | Clear |
 | [kumasoglu2022](kumasoglu2022.md) | downy mildew | host resistance, sporulation | Turkey | Resistant genotypes' infection counts |
 | [kunova2021](kunova2021.md) | powdery mildew | fungicide resistance | general | Context for a future spray module (M4) |
+| [lacotte2022](lacotte2022.md) | downy mildew | symptom detection, hyperspectral imaging | France, growth chamber | Hyperspectral SVM detects infection 2 d after inoculation, two days before symptoms; no weather |
 | [lafond2010](lafond2010.md) | downy mildew | season severity, infection, primary infection, spray timing… | France, Loire Valley, Anjou, Saumur | A field test of whether soil-based intrinsic sensitivity classes explain downy mildew severity, which the tru… |
 | [lakatos2022](lakatos2022.md) | downy mildew, powdery mildew, black rot, grapevine trunk disease | season severity, drought, yield, climate projection, spray … | Hungary | None for the truth or the engine beyond a citable, uncomputed remark that downy mildew follows rainfall (l. 2… |
 | [lalancette1988infection](lalancette1988infection.md) | downy mildew | infection | Ohio | No longer kin to the engine under D27 |

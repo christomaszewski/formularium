@@ -89,7 +89,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
             "lalancette1988a",
             "goidanich1957",
         ),
-        "rossi2008pp.dormancy": ("rossi2008pp.discs",),
+        "rossi2008pp.dormancy": ("rossi2008pp.discs", "laviola1986"),
         "brischetto2021.secondary": ("blaeser1979", "caffi2016"),
         "magarey2005.generic": ("blaeser1979", "caffi2016"),
         "madden1999.detection_bound": ("madden1995",),
