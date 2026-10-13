@@ -126,6 +126,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [brink2016](brink2016.md) | grey mould, botrytis bunch rot | spray deposition, spray volume, fungicide efficacy, infecti… | Paarl Western Cape South Africa, South Africa | A detached-part dataset linking spray deposit to Botrytis control on grapevine, with deposition benchmarks, t… |
 | [brischetto2020](brischetto2020.md) | downy mildew | sporangia survival, aerobiology | Emilia-Romagna | Source of brischetto2020.survival; its Table 1 computes VPD as the saturation deficit, not the printed T(1 - RH/100) |
 | [brischetto2021](brischetto2021.md) | downy mildew | secondary infection | Italy | the engine's secondary infection; its Magarey parameters, read |
+| [brook1992](brook1992.md) | downy mildew, anthracnose | primary infection, season severity, observation | Auckland | Eleven seasons (1971-1982) read with Galet's two-wet-days rule; first lesions never before a mean of about 15 °C; the two wettest seasons had the least mildew; forecasting models judged inappropriate where primary infection is rare |
 | [broome1995](broome1995.md) | Botrytis bunch rot | infection | California, Chile | The engine's Botrytis model is now held and read |
 | [broussard2026](broussard2026.md) | downy mildew, plasmopara viticola | sporulation, sporangia, resistance induction, volatile orga… | Piacenza Italy, Northern Italy | A glasshouse proof of concept for sage-VOC resistance induction, with no field data and no model; its authors… |
 | [bruisson2019](bruisson2019.md) | grey mould, downy mildew, oomycete disease | biocontrol, antagonism, endophytes, epiphytes, volatile com… | Switzerland | None. Recorded so that it is not read again: lab biocontrol assays with P. infestans as a surrogate for P. vi… |
@@ -192,6 +193,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [coronelli2025](coronelli2025.md) | downy mildew | detection | Apulia | A qPCR test's detection limits |
 | [cortazar2009](cortazar2009.md) | none | phenology, budburst, dormancy | France | GDD5 and BRIN as the catalogue records them; GDD5 beats BRIN for five of ten cultivars, and dormancy never matters |
 | [cortinas2020](cortinas2020.md) | downy mildew, powdery mildew, grey mould | aerobiology | Galicia | Two Galician vineyards' airborne spores, 2016-2018 |
+| [cosseboom2023](cosseboom2023.md) | ripe rot | infection, crop-stage susceptibility, spray timing | Maryland | The source of cosseboom2024's models: a Gompertz stage-susceptibility curve printed in full, infection classifiers not; thresholds tuned on the same 45 epidemics they are scored on |
 | [cosseboom2024](cosseboom2024.md) | ripe rot | spray timing | Maryland | Two ripe rot models time sprays |
 | [costa2013](costa2013.md) | none | thermal sensing | global | Sensor background |
 | [costantini2022](costantini2022.md) | none | regulation | European Union | Regulatory context |
@@ -209,6 +211,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [digennaro2019](digennaro2019.md) | none | remote sensing | Orsogna Winery vineyards | Satellite NDVI agrees with UAV NDVI only so well on a tall trellis (R² 0.80 and 0.60) |
 | [dimitrovski2026](dimitrovski2026.md) | downy mildew, powdery mildew | forecasting, machine learning | not stated | Learns spray "events" from one vineyard's treatment records; the calendar alone detects 7 of 8, weather alone AUROC 0.65 |
 | [douillet2022](douillet2022.md) | downy mildew | airborne inoculum, detection | Bordeaux | Clear |
+| [douillet2023](douillet2023.md) | downy mildew | airborne inoculum, sporangia survival, forecasting | Bordeaux | Three years of LAMP sporangia counts at Grande Ferrade against epidemics; counts alone do not forecast, their product with a weather window does (R² 0.73 before symptoms); Blaeser & Weltzien's survival curve transcribed a third way |
 | [doutreloup2022](doutreloup2022.md) | downy mildew, powdery mildew | bud break, flowering, veraison, spray timing, season severi… | Belgium, Champagne, Alsace, Jura, Bourgogne, Arde… | A source of 2000-2020 daily station data for Belgium and north-east France (observed, l. 167-179) and a frost… |
 | [dubuis2012](dubuis2012.md) | downy mildew | oospore maturation, primary infection, sporulation, validation | Switzerland | The VitiMeteo rules in full (oospores 140 from 1 January; 5 mm in 48 h, 3 mm/h, 50 degree-hours), and nine years at Changins: six hits, two too early |
 | [dubuis2019](dubuis2019.md) | downy mildew, powdery mildew | oospore maturation, primary infection | Switzerland, Baden-Württemberg | Changins's oil-spot dates are risky to match a truth to |

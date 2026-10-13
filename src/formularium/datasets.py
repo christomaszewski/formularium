@@ -239,6 +239,18 @@ DATASETS: dict[str, Dataset] = {
         " a model's",
         "read",
     ),
+    "brook1992.auckland": Dataset(
+        "Dates downy mildew lesions were first seen in a Black Hamburgh vineyard at Mt Albert,"
+        " Auckland, each season 1971/72 to 1981/82 (none in 1972/73), with the wet period the"
+        " author postulates as the primary infection (its dates, net rain in mm and mean air"
+        " temperature), and the share of leaves mildewed 50 days on in five seasons beside"
+        " that period's rain and night minima",
+        "Brook 1992, N. Z. J. Crop Hortic. Sci. 20:37-49, Tables 7 and 10 (pp. 44 and 47,"
+        " read 2026-10-13 in the page images, literature/brook1992); the first-lesion dates"
+        " are observed, the infection periods the author's reading of the rain record by"
+        " Galet 1977's two-wet-days rule",
+        "read",
+    ),
     "caffi2013.piedmont": Dataset(
         "Sporulating and non-sporulating downy mildew lesions counted every second or third day"
         " on unsprayed vines at Grugliasco (Moscato) and Neive (Barbera), Piedmont, 2008-2010:"
@@ -256,6 +268,17 @@ DATASETS: dict[str, Dataset] = {
         "Rossi et al. 2008, Plant Pathol. 57:216-226, Methods and Results (read 2026-10-12,"
         " literature/rossi2008pp); the assays are observed, and the paper's field infection"
         " dates, used only as a check, were placed by Rossi et al. 2002's method",
+        "read",
+    ),
+    "douillet2023.grandeferrade": Dataset(
+        "Airborne Plasmopara viticola sporangia per m3 from six rotating-arm samplers read by"
+        " LAMP three times a week, 1 April to 30 September 2019-2021, at INRAE's Grande"
+        " Ferrade vineyard (Villenave-d'Ornon), three sprayed and three minimally sprayed"
+        " plots, with weekly leaf and cluster ratings and the station's hourly weather",
+        "Douillet 2023, thesis, chapter 3 (l. 3606-3607, 3838-3851, 3872 of the text;"
+        " literature/douillet2023); the counts are observed, daily values are split evenly"
+        " across 48-72 h samples, and the 'total' series adds survivors computed with"
+        " Brischetto 2020's mortality",
         "read",
     ),
     "ferguson2014.prosser": Dataset(
