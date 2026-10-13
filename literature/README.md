@@ -175,6 +175,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [casanovagascon2019](casanovagascon2019.md) | downy mildew, powdery mildew | model evaluation, host resistance | Aragón | Goidanich's dates off by weeks in Somontano; the Gubler index accurate |
 | [caselli2021](caselli2021.md) | none | pest ecology | Mediterranean | Olive insect pests; off-topic |
 | [castellvi2021](castellvi2021.md) | none | evapotranspiration | Central Iowa, USA | Sensible heat from surface renewal and land surface temperature |
+| [castex2023](castex2023.md) | none | grape berry moth, phenology, climate projection | Sanlúcar, Yecla, Avignon, Stäfa | The Lobesia Generic Model and a BRIN plus Wang-Engel vine model on one temperature response, projected to 2100: the third flight's gap to maturity shrinks to 12 d at Stäfa under RCP8.5 |
 | [cattani2026](cattani2026.md) | downy mildew | airborne inoculum, spore detection | Changins | A real-time sporangia cytometer: r 0.94 against the Hirst trap from veraison, nothing significant before bloom; assessments timed by Agrometeo |
 | [cavalcanti2025](cavalcanti2025.md) | downy mildew, mycosphaerella leaf spot | symptom classification, image classification, diagnosis, tr… | Brazil (Embrapa Uva e Vinho Bento Gonçalves RS) | None. Recorded so that it is not read again: a leaf-image classifier with no weather, incidence or model cont… |
 | [cawsenicholson2021](cawsenicholson2021.md) | none | evapotranspiration | Contiguous United States | TSEB equations and inputs as an operational product |
