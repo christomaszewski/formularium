@@ -91,6 +91,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [bellow2013](bellow2013.md) | downy mildew | detection | France | Fluorescence sees infection from day 1 (abaxial) |
 | [bendel2020](bendel2020.md) | esca | symptom detection, imaging | Palatinate | Hyperspectral imaging of Esca, accuracy up to 95 %; another disease |
 | [benninga2019](benninga2019.md) | none | sensor error | Netherlands | A generic radar error law |
+| [beresfordnd](beresfordnd.md) | grey mould | infection risk, season severity, latent infection | Australia, New Zealand | The Bacchus index against 44 unsprayed site-years: the threshold of 1 useless, the mean index 0.5-0.7 in bad years, latent incidence above 10 % only in major epidemics |
 | [berkett2010](berkett2010.md) | powdery mildew, downy mildew, black rot, anthracnose | fungicide use, spray timing, season severity, susceptibilit… | Vermont, United States, Burlington | A cold-site cultivar record of observed powdery and downy mildew incidence with five sprays in one season (Ta… |
 | [berlese1898](berlese1898.md) | downy mildews | taxonomy, morphology | Italy | History and morphology |
 | [biddulph1999](biddulph1999.md) | phoma leaf spot, stem canker (blackleg) | infection, incubation, leaf wetness, season severity, ascos… | UK, eastern England, Rothamsted, Boxworth, High M… | A controlled-environment and field dataset on temperature and leaf wetness for infection of leaves by ascospo… |
@@ -205,6 +206,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [dietz2019](dietz2019.md) | oat crown rust, leaf spot | yield loss | Argentina | Another crop: loss through healthy area duration |
 | [diezn2010](diezn2010.md) | downy mildew, powdery mildew | aerobiology | Basque Country | Spore traps against station risk; no numbers |
 | [digennaro2019](digennaro2019.md) | none | remote sensing | Orsogna Winery vineyards | Satellite NDVI agrees with UAV NDVI only so well on a tall trellis (R² 0.80 and 0.60) |
+| [dimitrovski2026](dimitrovski2026.md) | downy mildew, powdery mildew | forecasting, machine learning | not stated | Learns spray "events" from one vineyard's treatment records; the calendar alone detects 7 of 8, weather alone AUROC 0.65 |
 | [douillet2022](douillet2022.md) | downy mildew | airborne inoculum, detection | Bordeaux | Clear |
 | [doutreloup2022](doutreloup2022.md) | downy mildew, powdery mildew | bud break, flowering, veraison, spray timing, season severi… | Belgium, Champagne, Alsace, Jura, Bourgogne, Arde… | A source of 2000-2020 daily station data for Belgium and north-east France (observed, l. 167-179) and a frost… |
 | [dubuis2012](dubuis2012.md) | downy mildew | oospore maturation, primary infection, sporulation, validation | Switzerland | The VitiMeteo rules in full (oospores 140 from 1 January; 5 mm in 48 h, 3 mm/h, 50 degree-hours), and nine years at Changins: six hits, two too early |
@@ -223,6 +225,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [esteban2012](esteban2012.md) | none | climatology | Catalonia | Off-topic for the disease truth |
 | [eswari2021](eswari2021.md) | downy mildew | forecasting | Tamil Nadu | A regression with one residual df: not usable |
 | [eswari2022](eswari2022.md) | downy mildew | yield | Tamil Nadu | A mass-action model with no data fit; not usable |
+| [fabre2024](fabre2024.md) | downy mildew, powdery mildew | yield loss, damage function | Bordeaux | A Bayesian damage function from the Couhins and Latresne trials: yield loss per doubling of foliage AUDPC rises with a season moisture index (27-49 g in dry 2006, 273-286 g in 2007-08); a preprint |
 | [fang2019](fang2019.md) | none | evapotranspiration | United States | An operational ET product |
 | [faretra1991](faretra1991.md) | downy mildew | cultivar susceptibility | Apulia | Cultivar ranks in a severe year |
 | [farina1976](farina1976.md) | downy mildew | infection anatomy | Italy | Anatomy only |
