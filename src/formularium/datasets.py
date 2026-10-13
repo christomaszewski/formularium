@@ -358,6 +358,25 @@ DATASETS: dict[str, Dataset] = {
         " the stage date minus the day",
         "read",
     ),
+    "ramos2022.rioja": Dataset(
+        "Flowers-separated, veraison and harvest dates (50 % of surveyed plants) of"
+        " non-irrigated Carignan in two Rioja DOCa plots (428 and 460 m), 2008-2020, with the"
+        " La Rioja government's Logroño stations (408 and 456 m) and grape composition at"
+        " harvest; soil water from the VSIM model",
+        "Ramos & Martínez de Toda 2022, Int. J. Biometeorol. 66:1067-1078, 'Materials and"
+        " methods' (l. 115-128, 176-180; literature/ramos2022); the dates observed, the soil"
+        " water a model's",
+        "read",
+    ),
+    "ramos2023.rueda": Dataset(
+        "Budbreak, flowering, veraison and ripening dates of Verdejo (nine plots), Viura and"
+        " Sauvignon Blanc (two each) in Rueda DO (700-930 m), 2008-2021, from the Consejo"
+        " Regulador, with the Rueda (709 m) and Medina del Campo (726 m) stations; four"
+        " non-irrigated Verdejo plots used, two to calibrate and two to validate",
+        "Ramos & Yuste 2023, Agronomy 13:146, section 2 (l. 142-146, 266, 306-308;"
+        " literature/ramos2023); observed; not public (l. 775)",
+        "read",
+    ),
     "rossi2008pp.discs": Dataset(
         "Oospore germination, 1999-2003, as infection of grape leaf discs (280 a sample) by"
         " oospores from 10 g leaf-fragment samples taken weekly, late March to early July, in"

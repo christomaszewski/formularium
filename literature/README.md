@@ -141,6 +141,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [burruano2006](burruano2006.md) | downy mildew | oospores, latency | Sicily | Summer latency up to 52 days in Sicily |
 | [busato2022](busato2022.md) | downy mildew | sporulation, infection, biocontrol, biopesticide, secondary… | Italy, Veneto, Nervesa della Battaglia | None. Recorded so that it is not read again. |
 | [caffarra2010](caffarra2010.md) | none | phenology, budburst, dormancy, chilling | Trentino, Veneto, Piedmont | A chilling-forcing Chardonnay model (Chuine's Unified cut to six parameters) with every parameter printed; a third to a half of the variance explained away from Conegliano |
+| [caffarra2011](caffarra2011.md) | none | phenology, climate projection | Trentino | The 2010 Chardonnay model run at ten Trentino sites under HadCM3: larger advances higher up and for veraison |
 | [caffi2006validation](caffi2006validation.md) | downy mildew | primary infection, validation | Italy | Validates the engine's Rossi model: no misses, 9.6 % false alarms |
 | [caffi2006water](caffi2006water.md) | downy mildew | oospore germination, litter moisture | Emilia-Romagna | Litter moisture data behind Rossi's dormancy |
 | [caffi2007](caffi2007.md) | downy mildew | primary infection, oospore maturation | Sardinia | Formularium records the Siniscola data as `caffi2007.siniscola`, with the dating |
@@ -202,6 +203,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [cosseboom2023](cosseboom2023.md) | ripe rot | infection, crop-stage susceptibility, spray timing | Maryland | The source of cosseboom2024's models: a Gompertz stage-susceptibility curve printed in full, infection classifiers not; thresholds tuned on the same 45 epidemics they are scored on |
 | [cosseboom2024](cosseboom2024.md) | ripe rot | spray timing | Maryland | Two ripe rot models time sprays |
 | [costa2013](costa2013.md) | none | thermal sensing | global | Sensor background |
+| [costafreda2025](costafreda2025.md) | none | phenology, budburst, uncertainty | Europe | Leolini 2020's calibrations over EURO-CORDEX grids: the phenological model holds 94.7 % of the spread in the baseline, climate models about 40 % by mid-century |
 | [costantini2022](costantini2022.md) | none | regulation | European Union | Regulatory context |
 | [courchinoux2025](courchinoux2025.md) | downy mildew | oospores | Bordeaux | A month at 50 °C kills oospores; compost does too |
 | [czermainski2004](czermainski2004.md) | downy mildew | season severity, fungicide efficacy | Rio Grande do Sul | Untreated incidence by date, Bento Gonçalves 1995-96 |
@@ -399,6 +401,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [lebeda1994](lebeda1994.md) | downy mildews | review | global | Review; context |
 | [legler2010](legler2010.md) | powdery mildew | ascospore release, infection, conidia, sporulation, leaf we… | Italy, California, Germany, Chile, Quebec | A review of powdery mildew models that writes out the UC Davis index's rules (l. 196-215), which the truth mu… |
 | [lehoczky1965](lehoczky1965.md) | downy mildew | oospores, sporulation, infection, incubation, leaf wetness | Hungary | Summer oospore formation in leaf-disc culture without a cold period is a counter-observation to the winter-ma… |
+| [leolini2020](leolini2020.md) | none | phenology, budburst, model comparison | France, Luxembourg, Portugal | Six budbreak models for eight varieties: Unified best (RMSE 4-5 d), 8-10 d transferred; parameter tables printed, not transcribed |
 | [leoni2026](leoni2026.md) | downy mildew | oospore maturation | Switzerland | The engine's GLM; coefficients recorded; fitted and scored on the same data |
 | [lepik1931](lepik1931.md) | downy mildew | host resistance | Estonia | Historical anatomy |
 | [leroy2010](leroy2010.md) | downy mildew, powdery mildew | economics | Bordeaux | A bio-economic model of strategies |
@@ -525,6 +528,8 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [ramos2010](ramos2010.md) | none | climate trends, veraison, water balance | Penedès | Four Penedès observatories' 1996-2009 trends and a 14-season dry-farmed Xarel·lo record; only a weak veraison-on-water line, no stage model |
 | [ramos2017](ramos2017.md) | none | phenology, degree-days, climate projection | Penedès | The catalogue's Penedès phenology record as read: Table 2's fitted bases and sums, RMSE 4-10 d; the station is 6 km away by the text, 42 km by the printed coordinates |
 | [ramos2018](ramos2018.md) | none | phenology, water balance, climate projection | Ribera del Duero | Degree-days from 20 March with a fitted base per stage for Tempranillo and Cabernet Sauvignon, in-sample RMSE 4-12 d, and a water term of 1-2 d per 10 mm of spring deficit |
+| [ramos2022](ramos2022.md) | none | phenology, climate projection, grape composition | Rioja | Carignan by degree-days from 15 March after 100 chill units (RMSE 5-9 d); 2.7 and 3.65 d per °C stated for veraison and maturity |
+| [ramos2023](ramos2023.md) | none | phenology, water balance, climate projection | Rueda | Verdejo, Viura and Sauvignon Blanc both by validated degree-days (4-6 d) and by stepwise regressions on the previous period (R² 0.4-0.7, Verdejo's slopes printed) |
 | [raynal2010](raynal2010.md) | downy mildew | rainfall | Bordeaux | Radar rain differs from stations by tens of mm |
 | [raynal2010epicure](raynal2010epicure.md) | downy mildew, powdery mildew, hail damage | forecasting, rainfall, radar, hail detection, sample survey… | Bordeaux, Gironde, Dordogne, Blayais, Cognac | Offers the truth a fine-scale observed hail and damage dataset and a reason to vary rain within a region (rad… |
 | [redeacores2024](redeacores2024.md) | downy mildew | infection, oospores, primary infection, spray timing, seaso… | Azores Portugal | A field-scouting protocol and a statement of the 3-10 rule; the rule is on the engine's listed set, so the tr… |

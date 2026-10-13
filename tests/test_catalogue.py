@@ -91,6 +91,9 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "chacon2021.gdd": ("chacon2021.lamancha",),
         "caffarra2010.chardonnay": ("caffarra2010.conegliano",),
         "nendel2010.budbreak": ("nendel2010.coolwinter",),
+        "ramos2022.gdd": ("ramos2022.rioja",),
+        "ramos2023.gdd": ("ramos2023.rueda",),
+        "ramos2023.regression": ("ramos2023.rueda",),
         "puelles2024.ur": ("puelles2024.rioja",),
         "rosa1995.incubation": ("goidanich1957", "zachos1959", "orlandini1993.emergences"),
         "orlandini2008.plasmo": (

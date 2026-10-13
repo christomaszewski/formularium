@@ -1612,6 +1612,212 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="Caffarra & Eccel 2010's references (held)",
         structures=("chilling-dormancy", "degree-day-phenology"),
     ),
+    "ramos2022.gdd": Formulation(
+        "Carignan's flowering, veraison and maturity in Rioja by degree-days from 15 March with"
+        " a fitted base per stage, after 100 chill units",
+        "Ramos & Martínez de Toda 2022, Int. J. Biometeorol. 66: 1067-1078, Results (p. 1071)",
+        year=2022,
+        authors=("Ramos, M. C.", "Martínez de Toda, F."),
+        authors_complete=True,
+        authors_from="read",
+        checked="2022-ramos-10-1007-s00484-022-02258-6.pdf",
+        doi="10.1007/s00484-022-02258-6",
+        structures=("chilling-dormancy", "degree-day-phenology"),
+        calibrated_on=("ramos2022.rioja",),
+        calibration_note=(
+            "Ramos 2017's method: chill portions (Dynamic Model) and degree hours from 1"
+            " October, 100 chill units reached 15-25 March, heat from 15 March with the base per"
+            " stage minimising the SD of the sum over 2008-2020, the sums' means as thresholds;"
+            " RMSE 6.82, 5.16 and 8.71 d and Willmott d 0.57, 0.87, 0.68 on the same seasons."
+            " The text also gives slopes of about 2.7 d of veraison and 3.65 d of maturity per"
+            " °C of the previous period's mean, without equations. Read 2026-10-13 in the page"
+            " image (literature/ramos2022)."
+        ),
+        parameters=(
+            Published("flowers_separated.tb", 7.4, "°C", "Results, p. 1071", "read"),
+            Published("veraison.tb", 6.3, "°C", "Results, p. 1071", "read"),
+            Published("maturity.tb", 5.2, "°C", "Results, p. 1071", "read"),
+            Published("flowers_separated.gdd", 1350, "°C·d", "Results, p. 1071", "read"),
+            Published("veraison.gdd", 1690, "°C·d", "Results, p. 1071", "read"),
+            Published("maturity.gdd", 2480, "°C·d", "Results, p. 1071", "read"),
+            Published("start_doy", 74, "DOY", "Results, p. 1071: 15 March", "read"),
+            Published("chill_threshold", 100, "CHU", "Methods (l. 175) and p. 1071", "read"),
+            Published("tmax_cap", 26.0, "°C", "Methods (l. 182)", "read"),
+        ),
+        flags=(
+            "The abstract's projected advances (5, 8, 11 d by 2050 under RCP4.5) differ from"
+            " Table 3's (4, 6, 11); the flowering spread is 18 d in the abstract and 19 in the"
+            " Results.",
+            "The soil water that failed to move the dates is VSIM's, a model's.",
+        ),
+    ),
+    "ramos2023.gdd": Formulation(
+        "Verdejo, Viura and Sauvignon Blanc stages in Rueda by degree-days from 20 March with a"
+        " fitted base per stage and variety",
+        "Ramos & Yuste 2023, Agronomy 13: 146, Table 3 (p. 10)",
+        year=2023,
+        authors=("Ramos, María Concepción", "Yuste, Jesús"),
+        authors_complete=True,
+        authors_from="read",
+        checked="2023-ramos-10-3390-agronomy13010146.pdf",
+        doi="10.3390/agronomy13010146",
+        structures=("degree-day-phenology",),
+        calibrated_on=("ramos2023.rueda",),
+        calibration_note=(
+            "Ramos 2017's method with a 26 °C cap; the Verdejo set calibrated on two plots and"
+            " validated on two others (RMSE 5.4, 3.7, 6.1 and 5.9 d for budbreak to ripening,"
+            " Willmott d 0.84-1.0), Viura and Sauvignon Blanc on one plot each (RMSE 2.5-5.9"
+            " d). Read 2026-10-13 in the page image (literature/ramos2023)."
+        ),
+        parameters=(
+            Published("budbreak.verdejo.tb", 5.4, "°C", "Table 3 (p. 10)", "read"),
+            Published(
+                "budbreak.verdejo.gdd",
+                127,
+                "°C·d",
+                "Table 3 (p. 10), mean (the SD is printed)",
+                "read",
+            ),
+            Published("flowering.verdejo.tb", 5.4, "°C", "Table 3 (p. 10)", "read"),
+            Published(
+                "flowering.verdejo.gdd",
+                660,
+                "°C·d",
+                "Table 3 (p. 10), mean (the SD is printed)",
+                "read",
+            ),
+            Published("veraison.verdejo.tb", 5.8, "°C", "Table 3 (p. 10)", "read"),
+            Published(
+                "veraison.verdejo.gdd",
+                1765,
+                "°C·d",
+                "Table 3 (p. 10), mean (the SD is printed)",
+                "read",
+            ),
+            Published("ripening.verdejo.tb", 4.9, "°C", "Table 3 (p. 10)", "read"),
+            Published(
+                "ripening.verdejo.gdd",
+                2365,
+                "°C·d",
+                "Table 3 (p. 10), mean (the SD is printed)",
+                "read",
+            ),
+            Published("budbreak.viura.tb", 5.4, "°C", "Table 3 (p. 10)", "read"),
+            Published(
+                "budbreak.viura.gdd",
+                162,
+                "°C·d",
+                "Table 3 (p. 10), mean (the SD is printed)",
+                "read",
+            ),
+            Published("flowering.viura.tb", 5.4, "°C", "Table 3 (p. 10)", "read"),
+            Published(
+                "flowering.viura.gdd",
+                665,
+                "°C·d",
+                "Table 3 (p. 10), mean (the SD is printed)",
+                "read",
+            ),
+            Published("veraison.viura.tb", 5.7, "°C", "Table 3 (p. 10)", "read"),
+            Published(
+                "veraison.viura.gdd",
+                1882,
+                "°C·d",
+                "Table 3 (p. 10), mean (the SD is printed)",
+                "read",
+            ),
+            Published("ripening.viura.tb", 4.4, "°C", "Table 3 (p. 10)", "read"),
+            Published(
+                "ripening.viura.gdd",
+                2484,
+                "°C·d",
+                "Table 3 (p. 10), mean (the SD is printed)",
+                "read",
+            ),
+            Published("budbreak.sauvignon_blanc.tb", 6.1, "°C", "Table 3 (p. 10)", "read"),
+            Published(
+                "budbreak.sauvignon_blanc.gdd",
+                104,
+                "°C·d",
+                "Table 3 (p. 10), mean (the SD is printed)",
+                "read",
+            ),
+            Published("flowering.sauvignon_blanc.tb", 5.7, "°C", "Table 3 (p. 10)", "read"),
+            Published(
+                "flowering.sauvignon_blanc.gdd",
+                619,
+                "°C·d",
+                "Table 3 (p. 10), mean (the SD is printed)",
+                "read",
+            ),
+            Published("veraison.sauvignon_blanc.tb", 5.4, "°C", "Table 3 (p. 10)", "read"),
+            Published(
+                "veraison.sauvignon_blanc.gdd",
+                1593,
+                "°C·d",
+                "Table 3 (p. 10), mean (the SD is printed)",
+                "read",
+            ),
+            Published("ripening.sauvignon_blanc.tb", 3.4, "°C", "Table 3 (p. 10)", "read"),
+            Published(
+                "ripening.sauvignon_blanc.gdd",
+                2471,
+                "°C·d",
+                "Table 3 (p. 10), mean (the SD is printed)",
+                "read",
+            ),
+            Published("start_doy", 80, "DOY", "Table 3 caption: 20 March", "read"),
+            Published("tmax_cap", 26.0, "°C", "Methods (l. 305)", "read"),
+        ),
+        flags=(
+            "Table 3 calls the sums from DOY 80 cumulative to each stage, so the later"
+            " thresholds include the earlier ones.",
+            "Rueda is 700-930 m and dry (110 mm in the growing season); Table 4's projections"
+            " reach 20-25 d of earlier ripening by 2050.",
+        ),
+    ),
+    "ramos2023.regression": Formulation(
+        "Rueda stage dates by stepwise regression on the previous period's temperature and"
+        " water balance, with Verdejo's slopes printed",
+        "Ramos & Yuste 2023, Agronomy 13: 146, Table 1 and section 3.3 (p. 8)",
+        year=2023,
+        authors=("Ramos, María Concepción", "Yuste, Jesús"),
+        authors_complete=True,
+        authors_from="read",
+        checked="2023-ramos-10-3390-agronomy13010146.pdf",
+        doi="10.3390/agronomy13010146",
+        structures=("monthly-temperature-regression",),
+        calibrated_on=("ramos2023.rueda",),
+        calibration_note=(
+            "Forward stepwise regressions (Statgraphics) of each stage's date on the mean,"
+            " maximum and minimum temperature and P minus ETc of the period before it (from 20"
+            " March to budbreak, then stage to stage). Table 1 prints only R² (Verdejo 0.51,"
+            " 0.68, 0.45, 0.67; Viura 0.67, 0.56, 0.38, 0.60; Sauvignon Blanc 0.73, 0.47, 0.41,"
+            " 0.55), the terms kept with their sign and share of variance; the text gives"
+            " Verdejo's slopes: budbreak 6.6 d earlier per °C of the previous month's mean,"
+            " flowering about 10, ripening about 4, veraison 1.6 d per °C of Tmin (0.5-2.7 by"
+            " plot), and ripening 2.6 and veraison 1.9 d later per 10 mm of P minus ETc. No"
+            " intercept, no validation. Read 2026-10-13 in the page image (literature/ramos2023)."
+        ),
+        parameters=(
+            Published("budbreak.verdejo.alpha", -6.6, "d/°C", "section 3.3 (p. 8), text", "read"),
+            Published(
+                "veraison.verdejo.tmin_alpha", -1.6, "d/°C", "section 3.3 (p. 8), text", "read"
+            ),
+            Published(
+                "veraison.verdejo.water", 0.19, "d/mm", "section 3.3: 1.9 d per 10 mm", "read"
+            ),
+            Published(
+                "ripening.verdejo.water", 0.26, "d/mm", "section 3.3: 2.6 d per 10 mm", "read"
+            ),
+        ),
+        flags=(
+            "A sign-and-share table, not a model one can run: only the four Verdejo slopes above"
+            " are printed as numbers, the 'about 10' and 'about 4' d per °C are not recorded.",
+            "The budbreak window ends at budbreak; the period means are known only after the"
+            " stage.",
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",
