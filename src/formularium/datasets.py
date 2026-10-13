@@ -228,6 +228,17 @@ DATASETS: dict[str, Dataset] = {
         " the truth's spatial heterogeneity",
         "read",
     ),
+    "barrios2004.vilafranca": Dataset(
+        "The spring outcome of downy mildew at Vilafranca del Penedès for each year 1984-2004,"
+        " in words (scarce and late primary infections, or general ones from the first rains,"
+        " with the rain in mm in some years), beside EPI's winter value and the Catalan plant"
+        " health service's verdict on the forecast (17 right, 2 partly, 2 wrong); INCAVI's"
+        " station weather",
+        "Barrios & Reyes 2004, Phytoma 164, table p. 4 (read 2026-10-13 in the page image,"
+        " literature/barrios2004); the outcomes are the service's observations, the EPI values"
+        " a model's",
+        "read",
+    ),
     "caffi2013.piedmont": Dataset(
         "Sporulating and non-sporulating downy mildew lesions counted every second or third day"
         " on unsprayed vines at Grugliasco (Moscato) and Neive (Barbera), Piedmont, 2008-2010:"
