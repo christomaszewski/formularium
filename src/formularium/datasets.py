@@ -162,6 +162,17 @@ DATASETS: dict[str, Dataset] = {
         "Magarey et al. 2005, Tables 1 and 2, ref. 56: its grape Botrytis rows",
         "read",
     ),
+    "ramos2010.penedes": Dataset(
+        "Budbreak, bloom, veraison and harvest dates of dry-farmed Xarel·lo in two Alt Penedès"
+        " vineyards over 14 seasons (1996-2009; the dates themselves are not printed), with"
+        " daily rain and temperature from four observatories (Vilafranca del Penedès from"
+        " 1952; Sant Sadurní d'Anoia, La Granada and Els Hostalets de Pierola from 1996) and"
+        " a stage-by-stage water balance (P minus FAO-56 crop ET) at Els Hostalets",
+        "Ramos & Martínez-Casasnovas 2010, VIII International Terroir Congress, pp. 3-23 to"
+        " 3-28, 'Materials and methods' (l. 88-106) and Table 2 (p. 3-27, read 2026-10-13 in"
+        " the page image; literature/ramos2010); the ET is a model's, the dates are observed",
+        "read",
+    ),
     "ramos2017.penedes": Dataset(
         "Phenology of Chardonnay (1998-2012), Macabeo and Parellada (1998-2009) in one Penedès"
         " vineyard grown for cava, with hourly weather from the Els Hostalets de Pierola"
@@ -251,6 +262,15 @@ DATASETS: dict[str, Dataset] = {
         " Galet 1977's two-wet-days rule",
         "read",
     ),
+    "daux2012.harvest_dates": Dataset(
+        "An open database of 380 grape harvest-date series (16,921 dates, 93 % French, from"
+        " 1354 in Burgundy), grouped into 27 regional composites; harvest dates are decisions"
+        " of authorities and growers, not stage observations",
+        "Daux et al. 2012, Clim. Past 8:1403-1418, sections 2-3 and Table 1 (literature/daux2012);"
+        " held at the GDR2968 phenology database and NOAA's World Data Center for"
+        " Paleoclimatology, free for research",
+        "read",
+    ),
     "caffi2013.piedmont": Dataset(
         "Sporulating and non-sporulating downy mildew lesions counted every second or third day"
         " on unsprayed vines at Grugliasco (Moscato) and Neive (Barbera), Piedmont, 2008-2010:"
@@ -258,6 +278,25 @@ DATASETS: dict[str, Dataset] = {
         " regional service's stations at the vineyard edges",
         "Caffi et al. 2013, Phytopathology 103:64-73, Methods and Results (read 2026-10-12,"
         " literature/caffi2013); observed, no model dated the assessments",
+        "read",
+    ),
+    "ramos2018.ribera": Dataset(
+        "Budbreak, bloom, véraison and maturity dates (Baggiolini stages C, I, M, N) of"
+        " Tempranillo and Cabernet Sauvignon in four Ribera del Duero plots, 2004-2015,"
+        " from the Consejo Regulador (a stage's date is when it was the most frequent in"
+        " the area), with daily and hourly weather from the Aranda de Duero station (798 m)",
+        "Ramos, Jones & Yuste 2018, OENO One 52(1):31-44, 'Materials and methods' (l. 173-227;"
+        " literature/ramos2018); the dates are the Consejo's observations, the P minus ETc"
+        " balance a model's",
+        "read",
+    ),
+    "pinarey2021.ribeiro": Dataset(
+        "Budburst (BBCH 09) and flowering (BBCH 61) dates of Albariño, Godello, Loureira and"
+        " Treixadura, 2008-2019, in one Ribeiro DO vineyard (140 m; 20 plants a variety, a"
+        " stage when half show it, visits every 6-7 days), with daily temperatures from a"
+        " station in the vineyard",
+        "Piña-Rey et al. 2021, Plants 10:502, section 4.1 (l. 1005-1046; literature/pinarey2021);"
+        " observed, no model; the data are not shared",
         "read",
     ),
     "rossi2008pp.discs": Dataset(
@@ -279,6 +318,28 @@ DATASETS: dict[str, Dataset] = {
         " literature/douillet2023); the counts are observed, daily values are split evenly"
         " across 48-72 h samples, and the 'total' series adds survivors computed with"
         " Brischetto 2020's mortality",
+        "read",
+    ),
+    "fraga2016.portugal": Dataset(
+        "Field-observed day of year of budburst, flowering and veraison for 16 varieties: 14"
+        " at the Dois Portos experimental vineyard, Lisbon (series of 11 to 22 years within"
+        " 1990-2011, Table 1), Loureiro at Arcos de Valdevez, Vinhos Verdes (2003-2012), and"
+        " Touriga-Franca at Ervedosa do Douro (2001-2011, from the Estação de Avisos do"
+        " Douro), with monthly means of daily Tmin, Tmax and Tmean from each site's station"
+        " (the Douro station about 20 km away)",
+        "Fraga et al. 2016, J. Agric. Sci. 154:795-811, Table 1 (p. 798, read 2026-10-13 in"
+        " the page image) and sections 'Phenological data' and 'Climate data'"
+        " (literature/fraga2016); stages scored by eye with OIV descriptors, no model",
+        "read",
+    ),
+    "didevarasl2026.sardinia": Dataset(
+        "Budburst (47), full bloom (42) and veraison (29) dates of Cannonau at 17 Sardinian"
+        " sites within 1991-2020 (University of Sassari records; mean day of year 95, 144 and"
+        " 205), with daily weather from a 2.2 km COSMO-CLM downscaling of ERA5 (a model"
+        " product, not station records)",
+        "Didevarasl et al. 2026, Int. J. Biometeorol. 70:273, 'Data collection and"
+        " preparation' (read 2026-10-13 in the publisher's HTML; literature/didevarasl2026);"
+        " the site list and the dates themselves are in the supplement, on request",
         "read",
     ),
     "ferguson2014.prosser": Dataset(

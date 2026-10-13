@@ -76,3 +76,5 @@ citations behind `bidabe1965.cold_action` and `richardson1974.forcing_hours`. He
   model of a different form than GDD5 or BRIN (both engine pieces); it also shows that a
   chilling stage adds nothing measurable at these French sites, so a truth may use
   chilling only if it wants a structural difference, not a better fit.
+- 2026-10-13: the thesis's Table 11 (`cortazar2006`, p. 43) read in the page image: the
+  same values as Table 8; the GDD5 sums are now Published on `cortazar2009.budburst`.

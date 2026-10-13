@@ -81,6 +81,10 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "keil2007.sporulation": ("keil2007.freiburg",),
         "keil2007.sun_mortality": ("keil2007.freiburg",),
         "caffi2013.sporulation": ("caffi2013.piedmont",),
+        "didevarasl2026.monthly_regression": ("didevarasl2026.sardinia",),
+        "fraga2016.monthly_regression": ("fraga2016.portugal",),
+        "pinarey2021.gdd": ("pinarey2021.ribeiro",),
+        "ramos2018.gdd": ("ramos2018.ribera",),
         "puelles2024.ur": ("puelles2024.rioja",),
         "rosa1995.incubation": ("goidanich1957", "zachos1959", "orlandini1993.emergences"),
         "orlandini2008.plasmo": (

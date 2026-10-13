@@ -619,8 +619,10 @@ FORMULATIONS: dict[str, Formulation] = {
     "cortazar2009.budburst": Formulation(
         "Budburst by degree-days above 5 °C from 1 January",
         (
-            "García de Cortázar-Atauri 2006, thesis, Table 11; the same values in García de "
-            "Cortázar-Atauri, Brisson & Gaudillère 2009, Int. J. Biometeorol. 53: 317-326"
+            "García de Cortázar-Atauri 2006, thesis, Table 11 (p. 43 of the budburst article,"
+            " PDF p. 64; read 2026-10-13 in the page image, literature/cortazar2006); the same"
+            " values in García de Cortázar-Atauri, Brisson & Gaudillère 2009, Int. J."
+            " Biometeorol. 53: 317-326, Table 8"
         ),
         year=2009,
         authors=("García de Cortázar-Atauri, Iñaki", "Brisson, Nadine", "Gaudillere, Jean Pierre"),
@@ -632,6 +634,38 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         structures=("degree-day-phenology",),
         calibrated_on=("phenoclim",),
+        parameters=(
+            Published(
+                "gdd5_sum.cabernet_sauvignon",
+                318.6,
+                "°C·d",
+                "thesis Table 11, GDD (5 °C) G_dc",
+                "read",
+            ),
+            Published(
+                "gdd5_sum.chasselas", 257.8, "°C·d", "thesis Table 11, GDD (5 °C) G_dc", "read"
+            ),
+            Published(
+                "gdd5_sum.chardonnay", 220.1, "°C·d", "thesis Table 11, GDD (5 °C) G_dc", "read"
+            ),
+            Published(
+                "gdd5_sum.grenache", 321.3, "°C·d", "thesis Table 11, GDD (5 °C) G_dc", "read"
+            ),
+            Published("gdd5_sum.merlot", 265.3, "°C·d", "thesis Table 11, GDD (5 °C) G_dc", "read"),
+            Published(
+                "gdd5_sum.pinot_noir", 258.4, "°C·d", "thesis Table 11, GDD (5 °C) G_dc", "read"
+            ),
+            Published(
+                "gdd5_sum.riesling", 257.7, "°C·d", "thesis Table 11, GDD (5 °C) G_dc", "read"
+            ),
+            Published(
+                "gdd5_sum.sauvignon", 294.4, "°C·d", "thesis Table 11, GDD (5 °C) G_dc", "read"
+            ),
+            Published("gdd5_sum.syrah", 265.3, "°C·d", "thesis Table 11, GDD (5 °C) G_dc", "read"),
+            Published(
+                "gdd5_sum.ugni_blanc", 284.7, "°C·d", "thesis Table 11, GDD (5 °C) G_dc", "read"
+            ),
+        ),
     ),
     "cortazar2009.brin": Formulation(
         "Budburst after chilling: Bidabe's cold actions, then forcing hours",
@@ -689,6 +723,426 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="2017-ramos-10-1016-j-agrformet-2017-07-022.pdf",
         structures=("degree-day-phenology",),
         calibrated_on=("ramos2017.penedes",),
+    ),
+    "fraga2016.monthly_regression": Formulation(
+        "Budburst, flowering and veraison dates as linear functions of monthly temperature"
+        " means, per variety",
+        (
+            "Fraga, Santos et al. 2016, J. Agric. Sci. 154: 795-811, Eqs 1-6 (p. 802) and"
+            " Tables 5-7 (pp. 804-805)"
+        ),
+        year=2016,
+        authors=(
+            "Fraga, H.",
+            "Santos, J. A.",
+            "Moutinho-Pereira, J.",
+            "Carlos, C.",
+            "Silvestre, J.",
+            "Eiras-Dias, J.",
+            "Mota, T.",
+            "Malheiro, A. C.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="2015-fraga-10-1017-s0021859615000933.pdf",
+        doi="10.1017/S0021859615000933",
+        structures=("monthly-temperature-regression",),
+        calibrated_on=("fraga2016.portugal",),
+        calibration_note=(
+            "Each variety's k, alpha and beta are least-squares fits of its own observed series"
+            " (Table 1's years), with the predictors chosen by forward-backward stepwise selection"
+            " on the calibration varieties Fernão-Pires (white) and Castelão (red), whose own"
+            " coefficients are not printed. Leave-one-out R²cv and RMSE per variety are in the"
+            " same tables: budburst 0.32-0.93 and 2.3-6.7 d, flowering 0.50-0.93 and 2.7-4.9"
+            " d, veraison 0.51-0.91 and 2.4-5.6 d; the 16-variety means 0.71, 0.83 and 0.78."
+            " Read 2026-10-13 in the page images (literature/fraga2016)."
+        ),
+        equations="monthly_regression",
+        parameters=(
+            Published("budburst.alvarinho.k", 123.68, "DOY", "Table 5, Eq. 1", "read"),
+            Published("budburst.alvarinho.alpha", -6.1, "d/°C", "Table 5, Eq. 1", "read"),
+            Published("flowering.alvarinho.k", 291.44, "DOY", "Table 5, Eq. 2", "read"),
+            Published("flowering.alvarinho.alpha", -7.89, "d/°C", "Table 5, Eq. 2", "read"),
+            Published("veraison.alvarinho.k", 457.65, "DOY", "Table 5, Eq. 3", "read"),
+            Published("veraison.alvarinho.alpha", -14.27, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("veraison.alvarinho.beta", -3.54, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("budburst.encruzado.k", 123.39, "DOY", "Table 5, Eq. 1", "read"),
+            Published("budburst.encruzado.alpha", -5.88, "d/°C", "Table 5, Eq. 1", "read"),
+            Published("flowering.encruzado.k", 293.56, "DOY", "Table 5, Eq. 2", "read"),
+            Published("flowering.encruzado.alpha", -8.07, "d/°C", "Table 5, Eq. 2", "read"),
+            Published("veraison.encruzado.k", 401.28, "DOY", "Table 5, Eq. 3", "read"),
+            Published("veraison.encruzado.alpha", -3.84, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("veraison.encruzado.beta", -7.01, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("budburst.rabigato.k", 123.31, "DOY", "Table 5, Eq. 1", "read"),
+            Published("budburst.rabigato.alpha", -6.51, "d/°C", "Table 5, Eq. 1", "read"),
+            Published("flowering.rabigato.k", 298.45, "DOY", "Table 5, Eq. 2", "read"),
+            Published("flowering.rabigato.alpha", -8.25, "d/°C", "Table 5, Eq. 2", "read"),
+            Published("veraison.rabigato.k", 458.63, "DOY", "Table 5, Eq. 3", "read"),
+            Published("veraison.rabigato.alpha", -10.18, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("veraison.rabigato.beta", -6.05, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("budburst.riesling.k", 117.22, "DOY", "Table 5, Eq. 1", "read"),
+            Published("budburst.riesling.alpha", -5.09, "d/°C", "Table 5, Eq. 1", "read"),
+            Published("flowering.riesling.k", 305.29, "DOY", "Table 5, Eq. 2", "read"),
+            Published("flowering.riesling.alpha", -8.69, "d/°C", "Table 5, Eq. 2", "read"),
+            Published("veraison.riesling.k", 407.18, "DOY", "Table 5, Eq. 3", "read"),
+            Published("veraison.riesling.alpha", -6.08, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("veraison.riesling.beta", -6.21, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("budburst.trincadeira.k", 111.42, "DOY", "Table 5, Eq. 1", "read"),
+            Published("budburst.trincadeira.alpha", -5.42, "d/°C", "Table 5, Eq. 1", "read"),
+            Published("flowering.trincadeira.k", 267.7, "DOY", "Table 5, Eq. 2", "read"),
+            Published("flowering.trincadeira.alpha", -6.79, "d/°C", "Table 5, Eq. 2", "read"),
+            Published("veraison.trincadeira.k", 439.08, "DOY", "Table 5, Eq. 3", "read"),
+            Published("veraison.trincadeira.alpha", -12.42, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("veraison.trincadeira.beta", -4.3, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("budburst.viosinho.k", 120.1, "DOY", "Table 5, Eq. 1", "read"),
+            Published("budburst.viosinho.alpha", -5.69, "d/°C", "Table 5, Eq. 1", "read"),
+            Published("flowering.viosinho.k", 285.96, "DOY", "Table 5, Eq. 2", "read"),
+            Published("flowering.viosinho.alpha", -7.8, "d/°C", "Table 5, Eq. 2", "read"),
+            Published("veraison.viosinho.k", 456.85, "DOY", "Table 5, Eq. 3", "read"),
+            Published("veraison.viosinho.alpha", -9.028, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("veraison.viosinho.beta", -6.99, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("budburst.loureiro.k", 108.52, "DOY", "Table 7, Eq. 1", "read"),
+            Published("budburst.loureiro.alpha", -4.76, "d/°C", "Table 7, Eq. 1", "read"),
+            Published("flowering.loureiro.k", 248.18, "DOY", "Table 7, Eq. 2", "read"),
+            Published("flowering.loureiro.alpha", -5.34, "d/°C", "Table 7, Eq. 2", "read"),
+            Published("veraison.loureiro.k", 350.71, "DOY", "Table 7, Eq. 3", "read"),
+            Published("veraison.loureiro.alpha", -4.5, "d/°C", "Table 7, Eq. 3", "read"),
+            Published("veraison.loureiro.beta", -4.37, "d/°C", "Table 7, Eq. 3", "read"),
+            Published("budburst.borracal.k", 143.2, "DOY", "Table 6, Eq. 4", "read"),
+            Published("budburst.borracal.alpha", -9.48, "d/°C", "Table 6, Eq. 4", "read"),
+            Published("flowering.borracal.k", 309.2, "DOY", "Table 6, Eq. 5", "read"),
+            Published("flowering.borracal.alpha", -9.05, "d/°C", "Table 6, Eq. 5", "read"),
+            Published("veraison.borracal.k", 488.75, "DOY", "Table 6, Eq. 6", "read"),
+            Published("veraison.borracal.alpha", -3.24, "d/°C", "Table 6, Eq. 6", "read"),
+            Published("veraison.borracal.beta", -12.81, "d/°C", "Table 6, Eq. 6", "read"),
+            Published("budburst.grenache.k", 125.83, "DOY", "Table 6, Eq. 4", "read"),
+            Published("budburst.grenache.alpha", -7.44, "d/°C", "Table 6, Eq. 4", "read"),
+            Published("flowering.grenache.k", 294.55, "DOY", "Table 6, Eq. 5", "read"),
+            Published("flowering.grenache.alpha", -8.16, "d/°C", "Table 6, Eq. 5", "read"),
+            Published("veraison.grenache.k", 586.18, "DOY", "Table 6, Eq. 6", "read"),
+            Published("veraison.grenache.alpha", -7.23, "d/°C", "Table 6, Eq. 6", "read"),
+            Published("veraison.grenache.beta", -12.78, "d/°C", "Table 6, Eq. 6", "read"),
+            Published("budburst.jaen.k", 136.47, "DOY", "Table 6, Eq. 4", "read"),
+            Published("budburst.jaen.alpha", -8.09, "d/°C", "Table 6, Eq. 4", "read"),
+            Published("flowering.jaen.k", 300.48, "DOY", "Table 6, Eq. 5", "read"),
+            Published("flowering.jaen.alpha", -8.3, "d/°C", "Table 6, Eq. 5", "read"),
+            Published("veraison.jaen.k", 388.39, "DOY", "Table 6, Eq. 6", "read"),
+            Published("veraison.jaen.alpha", -1.57, "d/°C", "Table 6, Eq. 6", "read"),
+            Published("veraison.jaen.beta", -9.87, "d/°C", "Table 6, Eq. 6", "read"),
+            Published("budburst.merlot.k", 137.69, "DOY", "Table 6, Eq. 4", "read"),
+            Published("budburst.merlot.alpha", -8.69, "d/°C", "Table 6, Eq. 4", "read"),
+            Published("flowering.merlot.k", 309.54, "DOY", "Table 6, Eq. 5", "read"),
+            Published("flowering.merlot.alpha", -8.92, "d/°C", "Table 6, Eq. 5", "read"),
+            Published("veraison.merlot.k", 554.83, "DOY", "Table 6, Eq. 6", "read"),
+            Published("veraison.merlot.alpha", -5.62, "d/°C", "Table 6, Eq. 6", "read"),
+            Published("veraison.merlot.beta", -13.94, "d/°C", "Table 6, Eq. 6", "read"),
+            Published("budburst.pinot.k", 129.85, "DOY", "Table 6, Eq. 4", "read"),
+            Published("budburst.pinot.alpha", -8.05, "d/°C", "Table 6, Eq. 4", "read"),
+            Published("flowering.pinot.k", 302.3, "DOY", "Table 6, Eq. 5", "read"),
+            Published("flowering.pinot.alpha", -8.84, "d/°C", "Table 6, Eq. 5", "read"),
+            Published("veraison.pinot.k", 419.65, "DOY", "Table 6, Eq. 6", "read"),
+            Published("veraison.pinot.alpha", -2.75, "d/°C", "Table 6, Eq. 6", "read"),
+            Published("veraison.pinot.beta", -9.98, "d/°C", "Table 6, Eq. 6", "read"),
+            Published("budburst.tinta_francisca.k", 147.38, "DOY", "Table 6, Eq. 4", "read"),
+            Published("budburst.tinta_francisca.alpha", -9.53, "d/°C", "Table 6, Eq. 4", "read"),
+            Published("flowering.tinta_francisca.k", 307.12, "DOY", "Table 6, Eq. 5", "read"),
+            Published("flowering.tinta_francisca.alpha", -8.61, "d/°C", "Table 6, Eq. 5", "read"),
+            Published("veraison.tinta_francisca.k", 396.83, "DOY", "Table 6, Eq. 6", "read"),
+            Published("veraison.tinta_francisca.alpha", -1.89, "d/°C", "Table 6, Eq. 6", "read"),
+            Published("veraison.tinta_francisca.beta", -9.6, "d/°C", "Table 6, Eq. 6", "read"),
+            Published("budburst.touriga_franca.k", 100.15, "DOY", "Table 7, Eq. 4", "read"),
+            Published("budburst.touriga_franca.alpha", -3.64, "d/°C", "Table 7, Eq. 4", "read"),
+            Published("flowering.touriga_franca.k", 229.63, "DOY", "Table 7, Eq. 5", "read"),
+            Published("flowering.touriga_franca.alpha", -5.25, "d/°C", "Table 7, Eq. 5", "read"),
+            Published("veraison.touriga_franca.k", 318.28, "DOY", "Table 7, Eq. 6", "read"),
+            Published("veraison.touriga_franca.alpha", -1.09, "d/°C", "Table 7, Eq. 6", "read"),
+            Published("veraison.touriga_franca.beta", -7.19, "d/°C", "Table 7, Eq. 6", "read"),
+        ),
+        flags=(
+            "White varieties: budburst on the mean of daily Tmin over February-March (Eq. 1),"
+            " flowering on Tmax over March-April (Eq. 2), veraison on Tmin over March-July (alpha)"
+            " and Tmax over March-April (beta) (Eq. 3). Red: Tmin over January-March (Eq. 4),"
+            " Tmax over March-April (Eq. 5), Tmax over June-July (alpha) and Tmean over March-April"
+            " (beta) (Eq. 6). The abstract names other veraison windows than the equations.",
+            "A retrospective form: the veraison windows end in July, after some veraison dates;"
+            " the paper calls it prediction, not a forecast in season. The authors say the"
+            " models need local calibration; applied to Loureiro (Vinhos Verdes) and"
+            " Touriga-Franca (Douro) the budburst R²cv fell to 0.32 and 0.38.",
+            "Compared with a 10 °C degree-day model on the two calibration varieties (Table 4):"
+            " budburst R²cv 0.63 and 0.69 against 0.40 and 0.48; veraison 0.77 and 0.88"
+            " against 0.31 and 0.53.",
+        ),
+    ),
+    "didevarasl2026.monthly_regression": Formulation(
+        "Budburst, bloom and veraison of Cannonau as linear functions of monthly temperature"
+        " and precipitation, chosen by PLS screening and stepwise regression",
+        "Didevarasl et al. 2026, Int. J. Biometeorol. 70: 273, Table 4 (with Table 2's statistics)",
+        year=2026,
+        authors=(
+            "Didevarasl, Ali",
+            "Deiana, Pierfrancesco",
+            "Spano, Donatella",
+            "Costa Saura, Jose M.",
+            "Mercenaro, Luca",
+            "Nieddu, Giovanni",
+            "Trabucco, Antonio",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="the publisher's HTML (phenology/didevarasl2026_ijb.html in the 2026-10-12 drop)",
+        doi="10.1007/s00484-026-03312-3",
+        structures=("monthly-temperature-regression",),
+        calibrated_on=("didevarasl2026.sardinia",),
+        calibration_note=(
+            "Fitted to the 47, 42 and 29 stage dates with weather from a 2.2 km ERA5 downscaling,"
+            " not stations. Predictors screened by PLS (VIP above 1, repeated) on all"
+            " observations, then bidirectional stepwise by AIC; leave-one-out validation after"
+            " the screening, which the authors say may flatter it. In-sample RMSE 7, 5.5 and 4.5"
+            " d, R² 0.43, 0.58 and 0.55. Read 2026-10-13 in the HTML (literature/didevarasl2026)."
+        ),
+        equations="didevarasl2026",
+        parameters=(
+            Published("budburst.k", 12.468353, "DOY", "Table 4", "read"),
+            Published("budburst.jun_prev_tmax", 1.520173, "d/°C", "Table 4", "read"),
+            Published("budburst.oct_prev_tmin", 2.505555, "d/°C", "Table 4", "read"),
+            Published("budburst.oct_prev_precip", -0.023587, "d/mm", "Table 4", "read"),
+            Published("budburst.dec_prev_precip", 0.019851, "d/mm", "Table 4", "read"),
+            Published("bloom.k", 302.06883, "DOY", "Table 4", "read"),
+            Published("bloom.apr_tmax", -5.67263, "d/°C", "Table 4", "read"),
+            Published("bloom.dec_prev_tmin", -1.32845, "d/°C", "Table 4", "read"),
+            Published("bloom.apr_tmin", 4.32647, "d/°C", "Table 4", "read"),
+            Published("bloom.may_tmin", -4.97576, "d/°C", "Table 4", "read"),
+            Published("bloom.mar_precip", -0.21747, "d/mm", "Table 4", "read"),
+            Published("bloom.jun_precip", -0.15103, "d/mm", "Table 4", "read"),
+            Published("veraison.k", 349.783, "DOY", "Table 4", "read"),
+            Published("veraison.apr_tmax", -7.723, "d/°C", "Table 4", "read"),
+            Published("veraison.may_tmin", -4.739, "d/°C", "Table 4", "read"),
+            Published("veraison.jul_tmin", -8.076, "d/°C", "Table 4", "read"),
+            Published("veraison.apr_tmean", 7.469, "d/°C", "Table 4", "read"),
+            Published("veraison.jul_tmean", 5.483, "d/°C", "Table 4", "read"),
+        ),
+        flags=(
+            "Units are not printed: the temperatures are monthly means of daily maxima (TX),"
+            " minima (TN) or means (TM) in °C and PR the month's precipitation, inferred;"
+            " '-1' marks the previous calendar year.",
+            "Table 2's caption says five variables a stage; the printed budburst line has four"
+            " terms and the bloom line six.",
+            "Against the paper's own threshold models (Table 1, in-sample): GDD 6 and 4 d for"
+            " bloom and veraison; the regressions 5.5 and 4.5 d; for budburst CH_GDH 7 d against"
+            " the regression's 7 d.",
+        ),
+    ),
+    "pinarey2021.gdd": Formulation(
+        "Budburst and flowering by degree-days from a fitted start day and base, per variety",
+        "Piña-Rey et al. 2021, Plants 10: 502, Eqs 1-2 (p. 13) and Tables 2-3 (p. 6)",
+        year=2021,
+        authors=(
+            "Piña-Rey, Alba",
+            "Ribeiro, Helena",
+            "Fernández-González, María",
+            "Abreu, Ilda",
+            "Rodríguez-Rajo, F. Javier",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="2021-pina-rey-10-3390-plants10030502.pdf",
+        doi="10.3390/plants10030502",
+        structures=("degree-day-phenology",),
+        calibrated_on=("pinarey2021.ribeiro",),
+        calibration_note=(
+            "t0, Tb and F* fitted per variety and stage by simulated annealing in the"
+            " Phenological Modelling Platform (Chuine et al.) on the 2008-2019 dates; each"
+            " variety's set then tested on the other three (Table 2). The sets kept are"
+            " Treixadura's for budburst and Godello's for flowering (Table 3), within 3 days in"
+            " 60 % and 81 % of the other varieties' cases. Read 2026-10-13 in the page images"
+            " (literature/pinarey2021)."
+        ),
+        parameters=(
+            Published("budburst.albarino.t0", 62, "DOY", "Table 2 (p. 6)", "read"),
+            Published("budburst.albarino.tb", 8, "°C", "Table 2 (p. 6)", "read"),
+            Published("budburst.godello.t0", 49, "DOY", "Table 2 (p. 6)", "read"),
+            Published("budburst.godello.tb", 5, "°C", "Table 2 (p. 6)", "read"),
+            Published("budburst.loureira.t0", 79, "DOY", "Table 2 (p. 6)", "read"),
+            Published("budburst.loureira.tb", 10, "°C", "Table 2 (p. 6)", "read"),
+            Published("budburst.treixadura.t0", 49, "DOY", "Table 2 (p. 6)", "read"),
+            Published("budburst.treixadura.tb", 5, "°C", "Table 2 (p. 6)", "read"),
+            Published("flowering.albarino.t0", 27, "DOY", "Table 2 (p. 6)", "read"),
+            Published("flowering.albarino.tb", 8, "°C", "Table 2 (p. 6)", "read"),
+            Published("flowering.godello.t0", 52, "DOY", "Table 2 (p. 6)", "read"),
+            Published("flowering.godello.tb", 6, "°C", "Table 2 (p. 6)", "read"),
+            Published("flowering.loureira.t0", 71, "DOY", "Table 2 (p. 6)", "read"),
+            Published("flowering.loureira.tb", 6, "°C", "Table 2 (p. 6)", "read"),
+            Published("flowering.treixadura.t0", 52, "DOY", "Table 2 (p. 6)", "read"),
+            Published("flowering.treixadura.tb", 7, "°C", "Table 2 (p. 6)", "read"),
+            Published("budburst.treixadura.f_star", 228.503, "°C·d", "Table 3 (p. 6)", "read"),
+            Published("flowering.godello.f_star", 626.092, "°C·d", "Table 3 (p. 6)", "read"),
+        ),
+        flags=(
+            "Albariño's flowering Tb is 7 °C in Table 1 and the text but 8 °C in Table 2;"
+            " Loureira's flowering t0 is 72 in Table 1 and 71 in Table 2.",
+            "The triangular and UniFORC forms (Table 1) fitted no better; the GDD form was kept"
+            " for its fewer parameters.",
+        ),
+    ),
+    "ramos2018.gdd": Formulation(
+        "Budbreak, bloom, véraison and maturity by degree-days from 20 March with a fitted base"
+        " per stage, and a water term",
+        (
+            "Ramos, Jones & Yuste 2018, OENO One 52(1): 31-44, sections 3.1-3.2 (pp. 36-38) and"
+            " Table 3 (p. 38)"
+        ),
+        year=2018,
+        authors=("Ramos, M. Concepción", "Jones, Gregory V.", "Yuste, Jesús"),
+        authors_complete=True,
+        authors_from="read",
+        checked="2018-ramos-10-20870-oeno-one-2018-52-1-2119.pdf",
+        doi="10.20870/oeno-one.2018.52.1.2119",
+        structures=("degree-day-phenology",),
+        calibrated_on=("ramos2018.ribera",),
+        calibration_note=(
+            "The 20 March start comes from a partial least squares regression of budbreak on"
+            " 10-day chill and heat units (Fig. 2); each stage's base temperature was then"
+            " chosen to minimise the standard deviation of the degree-day sum over the 2004-2015"
+            " dates (after Zapata et al. 2017), and the sums' means are the thresholds. The RMSE"
+            " (budbreak 5.2-7.3 d, bloom 3.8-7.6, véraison 5.1-7.0, maturity 8.9-12.2) is"
+            " in-sample. The water slopes are stepwise regressions of each plot's bloom and"
+            " véraison dates on P minus ETc over 15 April to 30 May (R² 0.46-0.84). Read"
+            " 2026-10-13 in the page images (literature/ramos2018)."
+        ),
+        parameters=(
+            Published("budbreak.tempranillo.tb", 3.8, "°C", "p. 36 and p. 38, text", "read"),
+            Published("budbreak.cabernet_sauvignon.tb", 4.7, "°C", "p. 36 and p. 38, text", "read"),
+            Published("bloom.tempranillo.tb", 6.4, "°C", "p. 36 and p. 38, text", "read"),
+            Published("bloom.cabernet_sauvignon.tb", 7.2, "°C", "p. 36 and p. 38, text", "read"),
+            Published("veraison.tempranillo.tb", 13.4, "°C", "p. 36 and p. 38, text", "read"),
+            Published(
+                "veraison.cabernet_sauvignon.tb", 13.4, "°C", "p. 36 and p. 38, text", "read"
+            ),
+            Published("maturity.tempranillo.tb", 9.2, "°C", "p. 36 and p. 38, text", "read"),
+            Published(
+                "maturity.cabernet_sauvignon.tb", 10.5, "°C", "p. 36 and p. 38, text", "read"
+            ),
+            Published(
+                "budbreak.tempranillo.gdd",
+                250,
+                "°C·d",
+                "p. 38, text (mean; the SD is printed)",
+                "read",
+            ),
+            Published(
+                "bloom.tempranillo.gdd",
+                425,
+                "°C·d",
+                "p. 38, text (mean; the SD is printed)",
+                "read",
+            ),
+            Published(
+                "veraison.tempranillo.gdd",
+                398,
+                "°C·d",
+                "p. 38, text (mean; the SD is printed)",
+                "read",
+            ),
+            Published(
+                "maturity.tempranillo.gdd",
+                410,
+                "°C·d",
+                "p. 38, text (mean; the SD is printed)",
+                "read",
+            ),
+            Published(
+                "budbreak.cabernet_sauvignon.gdd",
+                205,
+                "°C·d",
+                "p. 38, text (mean; the SD is printed)",
+                "read",
+            ),
+            Published(
+                "bloom.cabernet_sauvignon.gdd",
+                395,
+                "°C·d",
+                "p. 38, text (mean; the SD is printed)",
+                "read",
+            ),
+            Published(
+                "veraison.cabernet_sauvignon.gdd",
+                386,
+                "°C·d",
+                "p. 38, text (mean; the SD is printed)",
+                "read",
+            ),
+            Published(
+                "maturity.cabernet_sauvignon.gdd",
+                372,
+                "°C·d",
+                "p. 38, text (mean; the SD is printed)",
+                "read",
+            ),
+            Published(
+                "bloom.pa_cs.water_slope",
+                0.18,
+                "d/mm",
+                "Table 3 (p. 38), P-ETc 15 Apr-30 May",
+                "read",
+            ),
+            Published(
+                "bloom.pa_t.water_slope",
+                0.17,
+                "d/mm",
+                "Table 3 (p. 38), P-ETc 15 Apr-30 May",
+                "read",
+            ),
+            Published(
+                "bloom.pb_cs.water_slope",
+                0.14,
+                "d/mm",
+                "Table 3 (p. 38), P-ETc 15 Apr-30 May",
+                "read",
+            ),
+            Published(
+                "bloom.pb_t.water_slope",
+                0.18,
+                "d/mm",
+                "Table 3 (p. 38), P-ETc 15 Apr-30 May",
+                "read",
+            ),
+            Published(
+                "veraison.pa_cs.water_slope",
+                0.16,
+                "d/mm",
+                "Table 3 (p. 38), P-ETc 15 Apr-30 May",
+                "read",
+            ),
+            Published(
+                "veraison.pa_t.water_slope",
+                0.16,
+                "d/mm",
+                "Table 3 (p. 38), P-ETc 15 Apr-30 May",
+                "read",
+            ),
+            Published(
+                "veraison.pb_cs.water_slope",
+                0.09,
+                "d/mm",
+                "Table 3 (p. 38), P-ETc 15 Apr-30 May",
+                "read",
+            ),
+            Published(
+                "veraison.pb_t.water_slope",
+                0.12,
+                "d/mm",
+                "Table 3 (p. 38), P-ETc 15 Apr-30 May",
+                "read",
+            ),
+        ),
+        flags=(
+            "The thresholds are printed as mean ± SD (Tempranillo budbreak 250 ± 45 °C·d); the"
+            " SD is the spread over the twelve seasons, so a sum to the mean is the model.",
+            "The discussion gives budbreak bases of 3.3-3.7 °C against the Results' 3.8 and 4.7"
+            " °C; the footer prints 2017 for a 2018 issue.",
+            "Degree-days capped at a 26 °C optimum (Parker et al. 2011) and the water slopes'"
+            " intercepts are not printed.",
+        ),
     ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
