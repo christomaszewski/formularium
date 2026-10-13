@@ -159,6 +159,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [calonnec2018](calonnec2018.md) | powdery mildew | ontogenic resistance | Bordeaux | Leaf susceptibility falls within two weeks, by a fitted curve |
 | [calzarano2022](calzarano2022.md) | downy mildew, grey mould, sour rot, berry brown rot | infection, leaf wetness, spray timing, fungicide efficacy, … | Italy, Abruzzo, Ari (Chieti) | Two-year field data on downy mildew severity under a copper-reduced mineral product against a farm programme,… |
 | [camargo2017](camargo2017.md) | downy mildew, grapevine rust | primary infection, oospores, sporangia, leaf wetness, seaso… | São Paulo State, Piracicaba | The richest downy mildew data in the set for a truth: three seasons of weekly incidence and severity with sen… |
+| [camargoalvarez2018](camargoalvarez2018.md) | none | dormancy, survival analysis, method | Prosser | Kaplan-Meier curves of forced single-bud cuttings date endodormancy: onset late August to early September, release 21 October to 5 November, 2013-2016; chilling not computed |
 | [cameron2021](cameron2021.md) | none | phenology | global | Clear |
 | [cammalleri2012](cammalleri2012.md) | none | evapotranspiration | Southern Sicily, Italy | TSEB run without in-situ air temperature (scene calibration or DisALEXI), over a… |
 | [cannon2001](cannon2001.md) | none | sampling, detection | Australia | The engine's observation piece, confirmed |
