@@ -55,3 +55,4 @@ the one above is the file's name.
 - Biggs & Northover 1988's cherry model has its form (a logit polynomial in wetness and
   temperature): held out by structure. Agrarium's D34 recommends narrowing Broome's tag so
   that it stops covering other infection indices, such as Bacchus.
+- **2026-10-13:** b2 = 0.061601, which this copy's text layer garbles, is printed as such in two later copies of the logit: Monteiro et al. 2015 (`monteiro2015bol`) and Pîrcălabu et al. 2020 (`pircalabu2020`, l. 58-59). Read there, not here.

@@ -122,6 +122,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [breen2026](breen2026.md) | downy mildew | oospores, management | Europe | A perspective |
 | [bregaglio2013](bregaglio2013.md) | downy mildew, Botrytis bunch rot | infection | Europe | Kin by a borrowed equation, as before, and now for that reason rather than its authors… |
 | [bregaglio2022](bregaglio2022.md) | downy mildew | primary infection, secondary infection | Italy | Kin by a borrowed equation, now recorded as such |
+| [bregaglio2024](bregaglio2024.md) | downy mildew | primary infection, model ensemble, phenology | Italy | The octoPus: eight primary-infection models (3-10 after Baldacci 1947, Laore, EPI, IPI, DM-Cast, UCSC, Misfits, Magarey 1991) run over Italy 2001-2020; DM-Cast and EPI call three times Magarey's infections |
 | [brink2016](brink2016.md) | grey mould, botrytis bunch rot | spray deposition, spray volume, fungicide efficacy, infecti… | Paarl Western Cape South Africa, South Africa | A detached-part dataset linking spray deposit to Botrytis control on grapevine, with deposition benchmarks, t… |
 | [brischetto2020](brischetto2020.md) | downy mildew | sporangia survival, aerobiology | Emilia-Romagna | Source of brischetto2020.survival; its Table 1 computes VPD as the saturation deficit, not the printed T(1 - RH/100) |
 | [brischetto2021](brischetto2021.md) | downy mildew | secondary infection | Italy | the engine's secondary infection; its Magarey parameters, read |
@@ -258,7 +259,9 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [gautam2013](gautam2013.md) | various | climate change | India, global | Context only |
 | [gawande2024](gawande2024.md) | downy mildew, powdery mildew | sensors, leaf wetness | not stated | 12 h of sensor bursts, no disease labels: not a training set |
 | [gdpm2010china](gdpm2010china.md) | downy mildew | season severity, aerobiology | Shandong | One Shandong season, 2009 |
+| [gdpm2017](gdpm2017.md) | downy mildew, powdery mildew | proceedings: spray intervals, simulation, bunch infection | Oregon | Abstracts: VitiMeteo's growth-based interval (300-400 cm2 a shoot), the Piacenza simulator in 2017, Swiss bunch infection only to BBCH 65 |
 | [gehmann1987](gehmann1987.md) | downy mildew | oospores, primary infection | Baden | Contents only: behind the 160 °C·day oospore rule (Gessler 2011); pp. 57-77 |
+| [geisler1959](geisler1959.md) | downy mildew | zoospore release, germination | Palatinate | Zoospores released best at 1.1 atm, stopped at 10-12 atm; germ tubes best at 8-10 atm; laboratory |
 | [gent2007cones](gent2007cones.md) | powdery mildew | sampling, observation | Oregon, Washington | Held out by structure as Part I |
 | [gent2007leaves](gent2007leaves.md) | powdery mildew | sampling, observation | Oregon, Washington | Held out by structure if the truth's scouts sampled this way (D26) |
 | [gent2008](gent2008.md) | powdery mildew | risk index, management | Pacific Northwest | Context for the Gubler-Thomas index's hop use (gent2025 note) |
@@ -347,6 +350,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [kerkech2019](kerkech2019.md) | downy mildew, esca, flavescence doree | symptom detection, image registration, segmentation, diseas… | France, Centre-Val de Loire | A labelled UAV symptom map from one summer, two plots, with no weather or infection dates: it could check a t… |
 | [khaliq2019](khaliq2019.md) | none | remote sensing | Serralunga d'Alba, Piedmont | Inter-row pixels bias satellite vigour maps |
 | [kim2002](kim2002.md) | none | leaf wetness | Iowa, Nebraska | Held out by structure |
+| [kim2005](kim2005.md) | downy mildew | secondary infection, sporulation, leaf wetness, forecasting | New York | DMCast's structure as printed (night and RH 90 % sporulation; risk = survival x infection) on mesoscale weather with SWEB wetness: 53-66 % of days agree with stations |
 | [kim2006](kim2006.md) | none | leaf wetness, forecasting | Iowa, Illinois | Forecast-driven wetness was biased low for every model it ran (its error tables) |
 | [kim2007nzpp](kim2007nzpp.md) | grey mould | infection risk, weather interpolation | New Zealand | Bacchus as first printed: c = 0.1856, no reciprocal |
 | [kleb2022](kleb2022.md) | downy mildew | canopy microclimate, leaf wetness, sensors | Hohenheim | Canopy sensors read warmer and drier than the station: 13 lethal-heat days against 2, wetness hours shorter; the paper's summary figures disagree with its tables |
@@ -489,6 +493,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [pezzotti2020](pezzotti2020.md) | downy mildew, powdery mildew | sporangia, sporangia viability, zoospore release, infection… | Italy, Japan, USA | None. Recorded so that it is not read again. |
 | [piemontemodelli](piemontemodelli.md) | downy mildew, powdery mildew, apple scab, black rot, grey mould, late blight, rice blast, grape berry moth, fruit moths, thrips, scaphoideus titanus | primary infection, secondary infection, oospores, sporulati… | Emilia-Romagna, Italy, Switzerland, Germany | A pointer list: it names the grapevine models a regional service uses (Rossi 2008, VitiMeteo, Magarey 2005, K… |
 | [pii2024](pii2024.md) | downy mildew, powdery mildew | fungicide residues, leaf wetness, season severity, remote s… | Italy, France, Brazil | None for the truth's disease process; its one downy mildew item is an optical-sensing diagnosis (Calcante et … |
+| [pircalabu2020](pircalabu2020.md) | grey mould | infection risk, validation | Romania | Bacchus in Hill 2019's corrected form and Broome's logit, coefficients printed (b2 = 0.061601), over ten Romanian seasons; Broome separates attack classes, Bacchus does not |
 | [pobleteecheverria2025](pobleteecheverria2025.md) | downy mildew | symptom detection, canopy imaging, deep learning, leaf coun… | Spain, La Rioja, Basque Country | A vision-based symptom detector with a labelled canopy dataset from northern Spain; it offers an observation … |
 | [poeydebat2025](poeydebat2025.md) | downy mildew | oospores in soil, spatial structure | Bordeaux | 15 m patches (Matérn range 15.8 m); fivefold row contrast |
 | [pokovai2025](pokovai2025.md) | none | remote sensing | Hungary | Off-topic |
@@ -645,4 +650,5 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [zhang2025unet](zhang2025unet.md) | none | image analysis | China | Off-topic |
 | [zhang2026](zhang2026.md) | powdery mildew | season severity | Shaanxi | Powdery mildew under rain shelters |
 | [zipse2010](zipse2010.md) | downy mildew | infection, incubation, sporulation, sporangia density, leaf… | Mosel, Bernkastel-Kues, Germany, Baden (WBI Freib… | Offers the truth a description of the VitiMeteo incubation and sporangia-density outputs, but no printed oosp… |
+| [zorman2008](zorman2008.md) | downy mildew, powdery mildew | incidence, season severity | Terceira, Azores | Two Azorean seasons of fortnightly incidence: first infections early May, peak mid-July, 48 % of plants in 2006; no weather |
 | [zorrilla2024](zorrilla2024.md) | downy mildew | biofungicide, allelopathy, leaf disc bioassay, disease seve… | Italy, Trentino, San Michele all'Adige | A lab leaf-disc record of an extract whose severity (11.4 %) the authors call similar to copper hydroxide (2.… |
