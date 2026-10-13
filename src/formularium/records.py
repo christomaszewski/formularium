@@ -114,6 +114,8 @@ STRUCTURES = {
     " relative humidity, not a vapour pressure deficit",
     "monthly-temperature-regression": "a stage's day of year as a linear function of monthly"
     " temperature means, with no heat summed to a threshold",
+    "days-remaining-regression": "days remaining to a stage as a linear function of the date,"
+    " heat and soil sums, photoperiod and light, refitted each day",
 }
 
 

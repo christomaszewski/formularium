@@ -1144,6 +1144,474 @@ FORMULATIONS: dict[str, Formulation] = {
             " intercepts are not printed.",
         ),
     ),
+    "pola2017.monthly_regression": Formulation(
+        "Goethe's budburst from the June-August mean, and the next stages' lengths from hours"
+        " in a temperature band",
+        (
+            "Pola, Della Bruna, Back & Moreto 2017, Rev. Ciênc. Agrár. 40(1): 236-245, Quadro 2"
+            " (p. 240) and Quadro 3 (p. 243)"
+        ),
+        year=2017,
+        authors=(
+            "Pola, Augusto C.",
+            "Della Bruna, Emílio",
+            "Back, Álvaro J.",
+            "Moreto, Alexsander L.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="pola2017_rca.pdf (the 2026-10-12 drop's phenology folder)",
+        doi="10.19084/RCA16061",
+        structures=("monthly-temperature-regression",),
+        calibrated_on=("pola2017.urussanga",),
+        calibration_note=(
+            "Least-squares lines on seven seasons, no hold-out: budburst (days from 1 August) on"
+            " the July, June-July or June-August mean (R² 0.62, 0.72, 0.88; Se 3.5, 3.0, 2.0 d);"
+            " budburst-to-bloom length on hours at 19-25 °C (nh) or 22-25 °C (NH) in the first 14"
+            " days (R² 0.83, 0.90); bloom-to-harvest on the same counts over 30 to 70 days"
+            " (R² 0.58-0.67). The sum of the same form as monthly_regression.stage_doy. Read"
+            " 2026-10-13 in the page images (literature/pola2017)."
+        ),
+        parameters=(
+            Published("budburst.jul.k", 82.65, "d from 1 Aug", "Quadro 2, eq. 6 (p. 240)", "read"),
+            Published("budburst.jul.alpha", -2.98, "d/°C", "Quadro 2, eq. 6 (p. 240)", "read"),
+            Published(
+                "budburst.jun_jul.k", 116.1, "d from 1 Aug", "Quadro 2, eq. 7 (p. 240)", "read"
+            ),
+            Published("budburst.jun_jul.alpha", -5.24, "d/°C", "Quadro 2, eq. 7 (p. 240)", "read"),
+            Published(
+                "budburst.jun_aug.k", 157.34, "d from 1 Aug", "Quadro 2, eq. 8 (p. 240)", "read"
+            ),
+            Published("budburst.jun_aug.alpha", -7.87, "d/°C", "Quadro 2, eq. 8 (p. 240)", "read"),
+            Published("budburst_to_bloom.nh14.k", 51.2, "d", "Quadro 3, eq. 10 (p. 243)", "read"),
+            Published(
+                "budburst_to_bloom.nh14.alpha", -0.17, "d/h", "Quadro 3, eq. 10 (p. 243)", "read"
+            ),
+            Published("budburst_to_bloom.NH14.k", 46.17, "d", "Quadro 3, eq. 9 (p. 243)", "read"),
+            Published(
+                "budburst_to_bloom.NH14.alpha", -0.4, "d/h", "Quadro 3, eq. 9 (p. 243)", "read"
+            ),
+            Published("bloom_to_harvest.nh30.k", 166.7, "d", "Quadro 3, eq. 12 (p. 243)", "read"),
+            Published(
+                "bloom_to_harvest.nh30.alpha", -0.18, "d/h", "Quadro 3, eq. 12 (p. 243)", "read"
+            ),
+            Published("bloom_to_harvest.nh70.k", 220.4, "d", "Quadro 3, eq. 15 (p. 243)", "read"),
+            Published(
+                "bloom_to_harvest.nh70.alpha", -0.14, "d/h", "Quadro 3, eq. 15 (p. 243)", "read"
+            ),
+        ),
+        flags=(
+            "A hybrid (Goethe) in humid subtropical Brazil (Urussanga, 19.4 °C mean, 234 chill"
+            " hours a year), budburst in September: the signs and slopes transfer, the numbers"
+            " do not.",
+            "Hours in a band come from hourly temperatures interpolated between four daily"
+            " readings; the daily mean is INMET's (Tmax + Tmin + T9 + 2 T21)/5.",
+        ),
+    ),
+    "ruml2016.monthly_regression": Formulation(
+        "Stage onsets of 20 cultivars as lines in the mean or maximum temperature of a period"
+        " before the stage",
+        "Ruml, Korać, Vujadinović, Vuković & Ivanišević 2016, J. Agric. Sci. 154: 186-206, Table 8",
+        year=2016,
+        authors=(
+            "Ruml, M.",
+            "Korać, N.",
+            "Vujadinović, M.",
+            "Vuković, A.",
+            "Ivanišević, D.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="ruml2015_jas.pdf (the 2026-10-12 drop's phenology folder)",
+        doi="10.1017/S0021859615000453",
+        structures=("monthly-temperature-regression",),
+        calibrated_on=("ruml2016.karlovci",),
+        calibration_note=(
+            "Onset date = k + alpha * T, T the mean daily temperature from 1 March to the onset"
+            " (budburst), the daily maximum from 15 April to the onset (flowering), or the"
+            " maximum over 1 April to 30 June (veraison) and 1 April to 31 August (harvest); the"
+            " period was picked by correlation on the same 1986-2007 data and no hold-out is"
+            " reported. R² 0.71, 0.85, 0.90 and 0.90 for the average cultivar. The catalogue"
+            " holds the average and four international cultivars of Table 8's twenty. Read"
+            " 2026-10-13 in the page image (literature/ruml2016)."
+        ),
+        parameters=(
+            Published("budburst.average.alpha", -3.6, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("budburst.average.k", 133.0, "DOY", "Table 8 (p. 200)", "read"),
+            Published("flowering.average.alpha", -3.1, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("flowering.average.k", 217.1, "DOY", "Table 8 (p. 200)", "read"),
+            Published("veraison.average.alpha", -5.2, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("veraison.average.k", 332.9, "DOY", "Table 8 (p. 200)", "read"),
+            Published("harvest.average.alpha", -7.4, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("harvest.average.k", 442.3, "DOY", "Table 8 (p. 200)", "read"),
+            Published(
+                "budburst.cabernet_sauvignon.alpha", -2.6, "d/°C", "Table 8 (p. 200)", "read"
+            ),
+            Published("budburst.cabernet_sauvignon.k", 130.0, "DOY", "Table 8 (p. 200)", "read"),
+            Published(
+                "flowering.cabernet_sauvignon.alpha", -2.9, "d/°C", "Table 8 (p. 200)", "read"
+            ),
+            Published("flowering.cabernet_sauvignon.k", 214.1, "DOY", "Table 8 (p. 200)", "read"),
+            Published(
+                "veraison.cabernet_sauvignon.alpha", -5.0, "d/°C", "Table 8 (p. 200)", "read"
+            ),
+            Published("veraison.cabernet_sauvignon.k", 322.9, "DOY", "Table 8 (p. 200)", "read"),
+            Published("harvest.cabernet_sauvignon.alpha", -7.8, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("harvest.cabernet_sauvignon.k", 462.9, "DOY", "Table 8 (p. 200)", "read"),
+            Published("budburst.merlot.alpha", -3.3, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("budburst.merlot.k", 132.6, "DOY", "Table 8 (p. 200)", "read"),
+            Published("flowering.merlot.alpha", -3.2, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("flowering.merlot.k", 219.4, "DOY", "Table 8 (p. 200)", "read"),
+            Published("veraison.merlot.alpha", -5.8, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("veraison.merlot.k", 342.6, "DOY", "Table 8 (p. 200)", "read"),
+            Published("harvest.merlot.alpha", -8.5, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("harvest.merlot.k", 480.4, "DOY", "Table 8 (p. 200)", "read"),
+            Published("budburst.chardonnay.alpha", -4.4, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("budburst.chardonnay.k", 134.4, "DOY", "Table 8 (p. 200)", "read"),
+            Published("flowering.chardonnay.alpha", -3.4, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("flowering.chardonnay.k", 219.5, "DOY", "Table 8 (p. 200)", "read"),
+            Published("veraison.chardonnay.alpha", -5.1, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("veraison.chardonnay.k", 319.1, "DOY", "Table 8 (p. 200)", "read"),
+            Published("harvest.chardonnay.alpha", -8.3, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("harvest.chardonnay.k", 459.0, "DOY", "Table 8 (p. 200)", "read"),
+            Published("budburst.pinot_noir.alpha", 4.0, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("budburst.pinot_noir.k", 134.3, "DOY", "Table 8 (p. 200)", "read"),
+            Published("flowering.pinot_noir.alpha", -3.2, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("flowering.pinot_noir.k", 217.4, "DOY", "Table 8 (p. 200)", "read"),
+            Published("veraison.pinot_noir.alpha", -5.4, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("veraison.pinot_noir.k", 322.7, "DOY", "Table 8 (p. 200)", "read"),
+            Published("harvest.pinot_noir.alpha", -10.5, "d/°C", "Table 8 (p. 200)", "read"),
+            Published("harvest.pinot_noir.k", 521.3, "DOY", "Table 8 (p. 200)", "read"),
+        ),
+        flags=(
+            "The budburst and flowering windows end at the onset itself, so the fit is"
+            " retrospective: the predictor is not known until the stage has happened.",
+            "Pinot Noir's budburst slope is printed as 4.0 without a minus sign; the other"
+            " nineteen cultivars and the average are negative.",
+            "The summary's 74-90 % of variance explained overstates budburst (R² 0.71).",
+        ),
+    ),
+    "schrader2020.days_remaining": Formulation(
+        "Days remaining to budbreak from the date, soil thaw, photoperiod, heat and soil degree"
+        " days and solar sum, refitted each day",
+        (
+            "Schrader, Domoto, Nonnecke & Cochran 2020, HortScience 55(12): 1912-1925, Table 6"
+            " (p. 1923)"
+        ),
+        year=2020,
+        authors=("Schrader, James A.", "Domoto, Paul A.", "Nonnecke, Gail R.", "Cochran, Diana R."),
+        authors_complete=True,
+        authors_from="read",
+        checked="schrader2020_hortsci.pdf (the 2026-10-12 drop's phenology folder)",
+        doi="10.21273/HORTSCI15367-20",
+        structures=("days-remaining-regression",),
+        calibrated_on=("schrader2020.iowa",),
+        calibration_note=(
+            "Elastic-net multiple regression (JMP) of days remaining on each day's predictors,"
+            " all five cultivars pooled with a cultivar adjustment (Table 6 prints them: Marquette"
+            " -1.98, Petit Ami 0.86, Frontenac -1.02, La Crescent -2.25, St. Croix 0). GDD10"
+            " (hourly, no cap) and SDD5 (soil at 10.2 cm) are summed from soil thaw; solar in"
+            " MJ/m². Training error 0.70 d (n 4,403 vine-days) against 5.27 d for cultivar plus"
+            " GDD10 alone; validation on Marquette 2019, 1.92 d against 10.05 d. Bloom, veraison"
+            " and harvest models are in the same table, not recorded here. Read 2026-10-13 in"
+            " the page image (literature/schrader2020)."
+        ),
+        parameters=(
+            Published(
+                "budbreak.doy",
+                -2.41136571255827,
+                "d/d",
+                "Table 6 (p. 1923), top budbreak model",
+                "read",
+            ),
+            Published(
+                "budbreak.soil_thaw_doy",
+                0.152194171942409,
+                "d/d",
+                "Table 6 (p. 1923), top budbreak model",
+                "read",
+            ),
+            Published(
+                "budbreak.photoperiod",
+                24.3727170859005,
+                "d/h",
+                "Table 6 (p. 1923), top budbreak model",
+                "read",
+            ),
+            Published(
+                "budbreak.gdd10_hourly",
+                -0.134957195561917,
+                "d/(°C·d)",
+                "Table 6 (p. 1923), top budbreak model",
+                "read",
+            ),
+            Published(
+                "budbreak.sdd5",
+                0.0804770431283008,
+                "d/(°C·d)",
+                "Table 6 (p. 1923), top budbreak model",
+                "read",
+            ),
+            Published(
+                "budbreak.solar_acc",
+                0.0238725444616138,
+                "d/(MJ/m2)",
+                "Table 6 (p. 1923), top budbreak model",
+                "read",
+            ),
+            Published(
+                "budbreak.constant",
+                -66.4256807364779,
+                "d",
+                "Table 6 (p. 1923), top budbreak model",
+                "read",
+            ),
+        ),
+        flags=(
+            "A heat sum is among the predictors but no threshold triggers the prediction; the"
+            " catalogue's first days-remaining form.",
+            "Cold-climate hybrids in Iowa (chilling above 1,000 h every winter); three training"
+            " seasons at one vineyard and one validation season.",
+            "Units of the coefficients are not printed; those here are inferred from the"
+            " predictors' definitions.",
+        ),
+    ),
+    "chacon2021.gdd": Formulation(
+        "Tempranillo and Chardonnay stages in La Mancha by degree-days from a PLS-chosen start"
+        " with a fitted base per stage and a 22 °C cap",
+        (
+            "Chacón-Vozmediano, Martínez-Gascueña & Ramos 2021, Agron. Sustain. Dev. 41: 24,"
+            " section 3.2 (p. 6) and Table 1"
+        ),
+        year=2021,
+        authors=(
+            "Chacón-Vozmediano, Juan Luis",
+            "Martínez-Gascueña, Jesús",
+            "Ramos, María Concepción",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="2021-chacon-vozmediano-10-1007-s13593-021-00672-5.pdf",
+        doi="10.1007/s13593-021-00672-5",
+        structures=("degree-day-phenology",),
+        calibrated_on=("chacon2021.lamancha",),
+        calibration_note=(
+            "Ramos 2017's method: the start from a PLS regression of bud break on 10-day chill"
+            " and heat units, the base per stage by minimising the SD of the sum over the"
+            " 2000-2019 dates, the sums' means as thresholds; RMSE in-sample (Tempranillo bud"
+            " break 5.5 d, Willmott d 0.74). Read 2026-10-13 in the page image"
+            " (literature/chacon2021)."
+        ),
+        parameters=(
+            Published("budbreak.tempranillo.tb", 6.6, "°C", "section 3.2 (p. 6)", "read"),
+            Published("bloom.tempranillo.tb", 6.4, "°C", "section 3.2 (p. 6)", "read"),
+            Published("veraison.tempranillo.tb", 3.2, "°C", "section 3.2 (p. 6)", "read"),
+            Published("maturity.tempranillo.tb", 12.5, "°C", "section 3.2 (p. 6)", "read"),
+            Published("budbreak.chardonnay.tb", 0.0, "°C", "section 3.2 (p. 6)", "read"),
+            Published("bloom.chardonnay.tb", 5.5, "°C", "section 3.2 (p. 6)", "read"),
+            Published("veraison.chardonnay.tb", 1.1, "°C", "section 3.2 (p. 6)", "read"),
+            Published("maturity.chardonnay.tb", 10.5, "°C", "section 3.2 (p. 6)", "read"),
+            Published(
+                "budbreak.tempranillo.gdd",
+                180,
+                "°C·d",
+                "section 3.2 (p. 6), mean (the SD is printed)",
+                "read",
+            ),
+            Published(
+                "bloom.tempranillo.gdd",
+                431,
+                "°C·d",
+                "section 3.2 (p. 6), mean (the SD is printed)",
+                "read",
+            ),
+            Published(
+                "veraison.tempranillo.gdd",
+                1020,
+                "°C·d",
+                "section 3.2 (p. 6), mean (the SD is printed)",
+                "read",
+            ),
+            Published(
+                "maturity.tempranillo.gdd",
+                259,
+                "°C·d",
+                "section 3.2 (p. 6), mean (the SD is printed)",
+                "read",
+            ),
+            Published(
+                "budbreak.chardonnay.gdd",
+                276,
+                "°C·d",
+                "section 3.2 (p. 6), mean (the SD is printed)",
+                "read",
+            ),
+            Published(
+                "bloom.chardonnay.gdd",
+                479,
+                "°C·d",
+                "section 3.2 (p. 6), mean (the SD is printed)",
+                "read",
+            ),
+            Published(
+                "veraison.chardonnay.gdd",
+                1207,
+                "°C·d",
+                "section 3.2 (p. 6), mean (the SD is printed)",
+                "read",
+            ),
+            Published(
+                "maturity.chardonnay.gdd",
+                262,
+                "°C·d",
+                "section 3.2 (p. 6), mean (the SD is printed)",
+                "read",
+            ),
+            Published("tmax_cap", 22.0, "°C", "section 3.2 (p. 6)", "read"),
+            Published(
+                "start_doy.tempranillo", 57, "DOY", "section 3.2 (p. 6): 26 February", "read"
+            ),
+            Published("start_doy.chardonnay", 70, "DOY", "section 3.2 (p. 6): 11 March", "read"),
+        ),
+        flags=(
+            "Chardonnay's bud-break base is 0.0 °C and its veraison base 1.1 °C: the SD-minimising"
+            " procedure drove them to the search bound.",
+            "Projections use temperature only; the water index built for composition is not in"
+            " the phenology model.",
+        ),
+    ),
+    "caffarra2010.chardonnay": Formulation(
+        "Chardonnay budburst by a bell-shaped chilling sum and a sigmoid forcing sum whose"
+        " requirement falls with chilling, then flowering and veraison by the same forcing",
+        (
+            "Caffarra & Eccel 2010, Int. J. Biometeorol. 54: 255-267, Table 3 (p. 259) and"
+            " Table 4 (p. 261)"
+        ),
+        year=2010,
+        authors=("Caffarra, Amelia", "Eccel, Emanuele"),
+        authors_complete=True,
+        authors_from="read",
+        checked="2010-caffarra-10-1007-s00484-009-0277-5.pdf",
+        doi="10.1007/s00484-009-0277-5",
+        borrows=("chuine2000.unified",),
+        structures=("chilling-dormancy", "degree-day-phenology"),
+        calibrated_on=("caffarra2010.conegliano",),
+        calibration_note=(
+            "ChillState = sum of 2 / (1 + exp(a (Tm - c)^2)) from 1 September; forcing from"
+            " ChillState >= Ccrit as the sum of 1 / (1 + exp(-0.26 (Tm - 16.06))), the sigmoid"
+            " fixed on Pouget 1968's Merlot data (Fig. 2); budburst when the forcing sum reaches"
+            " Fcrit = co1 exp(co2 ChillState); flowering and veraison by the same forcing from"
+            " the simulated previous stage to their own Fcrit. Six plus two parameters fitted by"
+            " the Metropolis algorithm on Conegliano's 39 years, validated on four other series"
+            " (budburst R² 0.36, flowering 0.79, veraison 0.69 within Conegliano; 33-52 % of the"
+            " external variance beyond the site mean). Read 2026-10-13 in the page images"
+            " (literature/caffarra2010)."
+        ),
+        parameters=(
+            Published("chill.a", 0.005, "1/°C²", "Table 4 (p. 261)", "read"),
+            Published("chill.c", 2.8, "°C", "Table 4 (p. 261)", "read"),
+            Published(
+                "forcing_requirement.co1", 176.26, "forcing units", "Table 4 (p. 261)", "read"
+            ),
+            Published(
+                "forcing_requirement.co2", -0.015, "1/chilling unit", "Table 4 (p. 261)", "read"
+            ),
+            Published("chill.c_crit", 78.692, "chilling units", "Table 4 (p. 261)", "read"),
+            Published("chill.t_c", 234, "d from 1 Sep", "Table 4 (p. 261)", "read"),
+            Published("forcing.rate", 0.26, "1/°C", "Table 3, Eq. 2 (p. 259)", "read"),
+            Published("forcing.t_half", 16.06, "°C", "Table 3, Eq. 2 (p. 259)", "read"),
+            Published("flowering.f_crit", 24.71, "forcing units", "Table 4 (p. 261)", "read"),
+            Published("veraison.f_crit", 51.146, "forcing units", "Table 4 (p. 261)", "read"),
+        ),
+        flags=(
+            "The forcing response is Merlot's (Pouget 1968), not Chardonnay's; the chilling bell"
+            " is a two-parameter cut of Chuine 2000's curve.",
+            "Flowering and veraison were calibrated from simulated, not observed, starts; at"
+            " Cembra (the mountain site) they ran late 85-91 % of the time.",
+        ),
+    ),
+    "nendel2010.budbreak": Formulation(
+        "Budbreak by single-triangle degree-days above a fitted threshold from a fitted start"
+        " day, the pair chosen to minimise the heat sum's variation across years",
+        "Nendel 2010, Int. J. Biometeorol. 54: 231-241, Eqs 1-6 (p. 232) and Table 1 (p. 235)",
+        year=2010,
+        authors=("Nendel, Claas",),
+        authors_complete=True,
+        authors_from="read",
+        checked="2010-nendel-10-1007-s00484-009-0274-8.pdf",
+        doi="10.1007/s00484-009-0274-8",
+        structures=("degree-day-phenology",),
+        calibrated_on=("nendel2010.coolwinter",),
+        calibration_note=(
+            "Start day (1-90) and threshold (0-12 °C) by minimising the coefficient of variation"
+            " of the heat sum at budbreak (BBCH 09) across each site's years; the threshold read"
+            " off the intersection of two lines fitted to the CV curve. Site values in Table 1"
+            " (Riesling thresholds 5.2-6.5 °C, starts 14 February to 12 March, sums 166-242"
+            " °C·d); the catalogue holds the means. Local parameters predict to about ±2.6"
+            " (Riesling) and ±3.2 d (Müller-Thurgau); the general model leave-one-out ±4.6 d."
+            " Read 2026-10-13 in the page image (literature/nendel2010)."
+        ),
+        parameters=(
+            Published(
+                "riesling.threshold",
+                5.9,
+                "°C",
+                "Table 1 (p. 235), the mean row (1 March = day 60)",
+                "read",
+            ),
+            Published(
+                "riesling.start_doy",
+                60,
+                "DOY",
+                "Table 1 (p. 235), the mean row (1 March = day 60)",
+                "read",
+            ),
+            Published(
+                "riesling.heat_sum",
+                186.1,
+                "°C·d",
+                "Table 1 (p. 235), the mean row (1 March = day 60)",
+                "read",
+            ),
+            Published(
+                "muller_thurgau.threshold",
+                5.9,
+                "°C",
+                "Table 1 (p. 235), the mean row (1 March = day 60)",
+                "read",
+            ),
+            Published(
+                "muller_thurgau.start_doy",
+                60,
+                "DOY",
+                "Table 1 (p. 235), the mean row (1 March = day 60)",
+                "read",
+            ),
+            Published(
+                "muller_thurgau.heat_sum",
+                180.3,
+                "°C·d",
+                "Table 1 (p. 235), the mean row (1 March = day 60)",
+                "read",
+            ),
+        ),
+        flags=(
+            "Cool-winter sites only (Germany, France, Luxembourg, Slovakia, Czechia); sites 60"
+            " km apart differ by more than 5 d. Four sites' BBCH 09 is BBCH 07 plus two days.",
+            "Chilling algorithms (Cannell & Smith 1983, Cesaraccio et al. 2004) gave no gain,"
+            " without printed numbers.",
+        ),
+    ),
+    "chuine2000.unified": Formulation(
+        "The Unified model: chilling and forcing sums with sigmoid responses, the forcing"
+        " requirement falling with chilling",
+        "Chuine 2000, J. Theor. Biol. 207: 337-347, as Caffarra & Eccel 2010 cite it; not held",
+        year=2000,
+        authors=("Chuine, Isabelle",),
+        authors_from="trail",
+        checked="Caffarra & Eccel 2010's references (held)",
+        structures=("chilling-dormancy", "degree-day-phenology"),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

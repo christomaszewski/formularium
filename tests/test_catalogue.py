@@ -85,6 +85,12 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "fraga2016.monthly_regression": ("fraga2016.portugal",),
         "pinarey2021.gdd": ("pinarey2021.ribeiro",),
         "ramos2018.gdd": ("ramos2018.ribera",),
+        "pola2017.monthly_regression": ("pola2017.urussanga",),
+        "ruml2016.monthly_regression": ("ruml2016.karlovci",),
+        "schrader2020.days_remaining": ("schrader2020.iowa",),
+        "chacon2021.gdd": ("chacon2021.lamancha",),
+        "caffarra2010.chardonnay": ("caffarra2010.conegliano",),
+        "nendel2010.budbreak": ("nendel2010.coolwinter",),
         "puelles2024.ur": ("puelles2024.rioja",),
         "rosa1995.incubation": ("goidanich1957", "zachos1959", "orlandini1993.emergences"),
         "orlandini2008.plasmo": (

@@ -271,6 +271,26 @@ DATASETS: dict[str, Dataset] = {
         " Paleoclimatology, free for research",
         "read",
     ),
+    "chacon2021.lamancha": Dataset(
+        "Bud break, flowering, veraison and maturity (50 % of sampled vines, lots of four) of"
+        " Tempranillo and Chardonnay, two series 2000-2019 plus two or three plots in half the"
+        " years, at 663 m in La Mancha DO, with the Argamasilla de Alba station's daily weather"
+        " (gaps filled from Tomelloso) and grape composition at ripening",
+        "Chacón-Vozmediano, Martínez-Gascueña & Ramos 2021, Agron. Sustain. Dev. 41:24,"
+        " section 2.2 (l. 84-142, 180-182; literature/chacon2021); observed; the data are IRIAF's"
+        " and the Ministry's, on request",
+        "read",
+    ),
+    "caffarra2010.conegliano": Dataset(
+        "Chardonnay budburst (BBCH 07), flowering (BBCH 65) and veraison (BBCH 85) at Conegliano"
+        " (Susegana 1969-2000, Spresiano 2001-2007; 39 years, the calibration series) and at"
+        " San Michele all'Adige, Mezzocorona, Cembra (Trentino) and Carpeneto (Piedmont),"
+        " 1986-2007, with daily mean temperatures (gaps filled by regression on nearby stations)",
+        "Caffarra & Eccel 2010, Int. J. Biometeorol. 54:255-267, 'Phenological and meteorological"
+        " data' and Table 1 (l. 74-88, 154-158; literature/caffarra2010); observed, the filled"
+        " temperatures computed",
+        "read",
+    ),
     "caffi2013.piedmont": Dataset(
         "Sporulating and non-sporulating downy mildew lesions counted every second or third day"
         " on unsprayed vines at Grugliasco (Moscato) and Neive (Barbera), Piedmont, 2008-2010:"
@@ -290,6 +310,25 @@ DATASETS: dict[str, Dataset] = {
         " balance a model's",
         "read",
     ),
+    "pola2017.urussanga": Dataset(
+        "Budburst (50 % green tips), full bloom and harvest (50 % picked) of Goethe on Paulsen"
+        " 1103 at Epagri's Urussanga station, Santa Catarina (humid subtropical, 49 m), seven"
+        " seasons (2007-2011, 2013, 2014; three plants a stage), with the station's daily"
+        " readings about 100 m away (Ta = (Tmax + Tmin + T9 + 2 T21)/5; hourly values by"
+        " interpolation)",
+        "Pola et al. 2017, Rev. Ciênc. Agrár. 40(1):236-245, 'Materiais e métodos' (l. 68-138;"
+        " literature/pola2017); observed, the hourly temperatures interpolated",
+        "read",
+    ),
+    "nendel2010.coolwinter": Dataset(
+        "Budbreak dates (BBCH 09; at four sites BBCH 07 plus two days) of Riesling and"
+        " Müller-Thurgau at 13 vineyards in Germany, France, Luxembourg, Slovakia and Czechia,"
+        " 20 site-variety series within 1967-2008 (Table 1), with each site's station"
+        " temperatures (Trier's lapse-corrected)",
+        "Nendel 2010, Int. J. Biometeorol. 54:231-241, 'Data' and Table 1 (l. 142-183, 245-267;"
+        " literature/nendel2010); observed except the BBCH 07 conversions",
+        "read",
+    ),
     "pinarey2021.ribeiro": Dataset(
         "Budburst (BBCH 09) and flowering (BBCH 61) dates of Albariño, Godello, Loureira and"
         " Treixadura, 2008-2019, in one Ribeiro DO vineyard (140 m; 20 plants a variety, a"
@@ -297,6 +336,26 @@ DATASETS: dict[str, Dataset] = {
         " station in the vineyard",
         "Piña-Rey et al. 2021, Plants 10:502, section 4.1 (l. 1005-1046; literature/pinarey2021);"
         " observed, no model; the data are not shared",
+        "read",
+    ),
+    "ruml2016.karlovci": Dataset(
+        "Onset of budburst, flowering, veraison and harvest of 20 cultivars (7 red, 13 white; 20"
+        " vines each) in the Novi Sad faculty's collection at Sremski Karlovci, Serbia,"
+        " 1986-2011, with the national service's daily Tmax and Tmin at the site 1981-2007"
+        " (the relations fitted on 1986-2007)",
+        "Ruml et al. 2016, J. Agric. Sci. 154:186-206, 'Materials and methods' (l. 138-208;"
+        " literature/ruml2016); observed, no model",
+        "read",
+    ),
+    "schrader2020.iowa": Dataset(
+        "Budbreak, bloom, veraison (50 % of buds, flowers, berries) and harvest maturity (by"
+        " soluble solids, pH and acidity) of Frontenac, La Crescent, Marquette, Petit Ami and"
+        " St. Croix (18 vines each) at Iowa State's research station near Gilbert, 2011, 2013"
+        " and 2014, with hourly air and soil temperature and solar radiation; 144 Marquette"
+        " vines 400 m away in 2019 for validation",
+        "Schrader et al. 2020, HortScience 55(12):1912-1925, 'Materials and methods'"
+        " (l. 125-216; literature/schrader2020); observed, the response (days remaining) is"
+        " the stage date minus the day",
         "read",
     ),
     "rossi2008pp.discs": Dataset(
