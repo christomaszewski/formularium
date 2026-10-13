@@ -268,6 +268,18 @@ OpenAlex and Scite showed as new since. What it taught:
 - **Reading agents can view page images now,** and one did for the equations the text
   layer lost (rossi2009); the main session still reads every equation that becomes a
   record in the image itself.
+- **A form question needs a form brief.** Chris's 2026-10-13 ask (stage-date models that
+  sum no heat to a threshold) was answered by a triage brief that defined the forms wanted
+  (regressions on monthly means, days per degree, PLS, machine learning, photoperiod, soil
+  temperature, pruning date, survival models) and asked each reading to say which form the
+  fitted relation has and whether a heat sum is in it. Half the A papers turned out to be
+  threshold models with the form only in their regressions of composition or trends; the
+  readings caught that because the brief asked. The non-threshold forms that survived are
+  mostly retrospective (the window closes at or after the stage): say so in the note.
+- **Record what is printed, flag what is approximate.** A paper that prints "about 10 days
+  per °C" gets the number in the note, not as a Published value; the ones printed to the
+  decimal (Fraga's tables, Ruml's Table 8, Didevarasl's Table 4) become records with the
+  page image behind each.
 
 ## Judging dependence
 

@@ -88,6 +88,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [barrios2004](barrios2004.md) | downy mildew | oospore maturation, primary infection, incubation, forecasting | Penedès, Tarragona | EPI's winter value against 21 Penedès springs (17 right, both misses under-forecasts), 3-5 mm rains setting off primary infections, and the Goidanich table in full |
 | [basso2020](basso2020.md) | downy mildew, powdery mildew | aerobiology | Geneva, Vaud | Real-time spore counters 400 m apart differ sharply |
 | [basso2026](basso2026.md) | downy mildew, powdery mildew | airborne inoculum, spore detection, spray timing, fungicide… | Switzerland, Bordeaux, France, Changins, Chateau … | A real-time airborne spore record for downy mildew at one Bordeaux vineyard (2021-2022) that a truth could us… |
+| [behnamian2025](behnamian2025.md) | none | phenology, survival analysis | USA | The preprint of behnamian2026, with time ratios per standard deviation and the endogenous to-cutoff fits shown beside the fixed-window ones |
 | [behnamian2026](behnamian2026.md) | none | phenology, survival analysis | USA | Accelerated failure time models of USA-NPN flowering and ripening on pre-season heat; a time-to-event form on seven unnamed vines, a method reference only |
 | [bellow2012](bellow2012.md) | downy mildew | detection | France | Background to fluorescence sensing |
 | [bellow2013](bellow2013.md) | downy mildew | detection | France | Fluorescence sees infection from day 1 (abaxial) |
