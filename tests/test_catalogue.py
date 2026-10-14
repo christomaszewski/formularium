@@ -104,6 +104,8 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "ruml2020.monthly_regression": ("ruml2016.karlovci",),
         "sanchezdemiguel2011.shoot_leaf_area": ("sanchezdemiguel2011.madrid_toledo",),
         "su2022.lai_curve": ("su2022.turpan",),
+        "schumacher2024.cluster_resistance": ("schumacher2024.freiburg",),
+        "zhu2021.apsim_grapevine": ("zhu2021.marlborough",),
         "puelles2024.ur": ("puelles2024.rioja",),
         "rosa1995.incubation": ("goidanich1957", "zachos1959", "orlandini1993.emergences"),
         "orlandini2008.plasmo": (

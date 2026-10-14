@@ -123,6 +123,8 @@ STRUCTURES = {
     "allometry": "one plant measure from another (leaf area from leaf count, length or shoot"
     " length)",
     "radiation-use-efficiency": "biomass as intercepted radiation times an efficiency",
+    "age-resistance": "susceptibility of leaves, clusters or berries falling with their age or"
+    " growth stage",
 }
 
 

@@ -2775,6 +2775,145 @@ FORMULATIONS: dict[str, Formulation] = {
             " calculation, not printed).",
         ),
     ),
+    "schumacher2024.cluster_resistance": Formulation(
+        "Downy mildew severity of Pinot Noir clusters and leaf discs at seven growth stages",
+        "Schumacher, Mertes, Kaltenbach, Bleyer & Fuchs 2024, Scientific Reports 14: 915,"
+        " Results (p. 4)",
+        year=2024,
+        authors=(
+            "Schumacher, S.",
+            "Mertes, C.",
+            "Kaltenbach, T.",
+            "Bleyer, G.",
+            "Fuchs, R.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="schumacher_2024.pdf (q191.pdf of the 2026-10-09 drop)",
+        doi="10.1038/s41598-023-50666-4",
+        structures=("age-resistance", "bunch-susceptibility-window"),
+        calibrated_on=("schumacher2024.freiburg",),
+        calibration_note=(
+            "No curve is fitted: mean severity by BBCH stage, as the text prints it"
+            " (literature/schumacher2024). Clusters, Pinot Noir: about 100 % to BBCH 75"
+            " (92 % at 75), 55 % at 77-79, 2 % at 81-83. Souvignier Gris: nearly 100 % to"
+            " 75, 64-65 % at 75, 41 % at 77-79, none at 81-83. Cabernet Cortis: 77, 86, 54,"
+            " 20, 2 % at 53-55, 57-59, 65-68, 71-73, 75, none after. Solaris: 44-73 % to"
+            " 65-68, 9 % at 71-73, none after. Leaf discs, Pinot Noir: 77, 73, 50, 16 % at"
+            " 53-55, 57-59, 65-68, 71-73, 3 % at 81-83; Cabernet Cortis 13 and 6 %, Solaris"
+            " 6 and under 1 % at the first two stages, below 1 % later; Souvignier Gris"
+            " about 2 % throughout."
+        ),
+        parameters=(
+            Published(
+                "pinot_noir.cluster.bbch53_75",
+                100,
+                "%",
+                "p. 4 text, 'almost 100%' up to and including BBCH 75",
+                "read",
+            ),
+            Published("pinot_noir.cluster.bbch75", 92, "%", "p. 4 text, later paragraph", "read"),
+            Published("pinot_noir.cluster.bbch77_79", 55, "%", "p. 4 text", "read"),
+            Published("pinot_noir.cluster.bbch81_83", 2, "%", "p. 4 text", "read"),
+            Published("pinot_noir.leaf_disc.bbch53_55", 77, "%", "p. 4 text", "read"),
+            Published("pinot_noir.leaf_disc.bbch57_59", 73, "%", "p. 4 text", "read"),
+            Published("pinot_noir.leaf_disc.bbch65_68", 50, "%", "p. 4 text", "read"),
+            Published("pinot_noir.leaf_disc.bbch71_73", 16, "%", "p. 4 text", "read"),
+            Published("pinot_noir.leaf_disc.bbch81_83", 3, "%", "p. 4 text", "read"),
+        ),
+        flags=(
+            "Potted vines in an open greenhouse at Freiburg, 42 a cultivar, 2020-2023,"
+            " inoculated in a chamber at 40,000 sporangia/ml and rated 4 weeks after; leaf"
+            " discs are leaves matched to the cluster's stage, scored 7 days after, so they"
+            " show a leaf of a given stage, not a given leaf's age in days. No calendar"
+            " dates, no fitted curve, means read from the text, SDs only in the figures. The"
+            " 2021 field trial gave Pinot Noir over 90 %.",
+        ),
+    ),
+    "zhu2021.apsim_grapevine": Formulation(
+        "Whole-vine model of Sauvignon blanc in APSIM Next Generation: chilling-forcing"
+        " budburst, development-day growth, radiation-use biomass",
+        "Zhu et al. 2021, in silico Plants 3(2): diab021, Table 2 (pp. 11-12) and text",
+        year=2021,
+        authors=(
+            "Zhu, J.",
+            "Parker, A.",
+            "Gou, F.",
+            "Agnew, R.",
+            "Yang, L.",
+            "Greven, M.",
+            "Raw, V.",
+            "Neal, S.",
+            "Martin, D.",
+            "Trought, M. C. T.",
+            "Huth, N.",
+            "Brown, H. E.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="junqi_2021.pdf (the 2026-10-14 drop)",
+        doi="10.1093/insilicoplants/diab021",
+        structures=(
+            "rate-temperature-response",
+            "growth-on-thermal-time",
+            "degree-day-phenology",
+            "chilling-dormancy",
+            "radiation-use-efficiency",
+        ),
+        calibrated_on=("zhu2021.marlborough",),
+        calibration_note=(
+            "Sauvignon blanc, four Marlborough long-term sites, data sets 1-4 (2001-2020),"
+            " fitted with DEoptim. RMSE budburst 4.1, flowering 3.1, veraison 6.8 d in"
+            " calibration; 4.9, 4.2, 5.3 d in validation; 6.5, 4.85, 6.5 d for four other"
+            " varieties. Table 2 read in the page images 2026-10-14 (literature/zhu2021)."
+        ),
+        parameters=(
+            Published("chill.c", 12.42, "1", "Table 2 (p. 11)", "read"),
+            Published("chill.d", -3.865, "1", "Table 2 (p. 11)", "read"),
+            Published("forcing.t_base", 0.008, "°C", "Table 2 (p. 11)", "read"),
+            Published("wang_engel.t_min", 3.9, "°C", "Table 2 (p. 11)", "read"),
+            Published("wang_engel.t_opt", 29, "°C", "Table 2 (p. 11)", "read"),
+            Published("wang_engel.t_max", 37.9, "°C", "Table 2 (p. 11)", "read"),
+            Published("wang_engel.t_ref", 25, "°C", "Table 2 (p. 11)", "read"),
+            Published("phyllochron.first", 1.64, "Ds", "text, l. 295 (first five leaves)", "read"),
+            Published("phyllochron.later", 1.82, "Ds", "text, l. 295 (from the 10th leaf)", "read"),
+            Published("leaf.max_area", 12000, "mm²", "Table 2 (p. 11)", "read"),
+            Published("leaf.growth_duration", 14, "Ds", "Table 2 (p. 11)", "read"),
+            Published("leaf.lag_duration", 40, "Ds", "Table 2 (p. 11)", "read"),
+            Published("leaf.senescence_duration", 5, "Ds", "Table 2 (p. 11)", "read"),
+            Published("sla.max", 20000, "mm²/g", "Table 2 (p. 11)", "read"),
+            Published("sla.min", 15000, "mm²/g", "Table 2 (p. 11)", "read"),
+            Published("rue.before_flowering", 0.8, "g/MJ", "Table 2 (p. 11)", "read"),
+            Published("rue.after_flowering", 0.9, "g/MJ", "Table 2 (p. 11)", "read"),
+            Published("extinction", 0.6, "1", "Table 2 (p. 11)", "read"),
+            Published("shoot.t_m", 43, "Ds from budburst", "Table 2 (p. 12)", "read"),
+            Published("shoot.t_e", 79.2, "Ds from budburst", "Table 2 (p. 12)", "read"),
+            Published("nsc.k_max", 0.03, "g/g", "Table 2 (p. 11)", "read"),
+            Published("nsc.t_m", 34.4, "Ds", "Table 2 (p. 11)", "read"),
+            Published("nsc.t_e", 54, "Ds", "Table 2 (p. 11)", "read"),
+            Published("berry.dw_max", 0.6, "g", "Table 2 (p. 12)", "read"),
+            Published("berry.t_m", 47.8, "Ds from flowering", "Table 2 (p. 12)", "read"),
+            Published("berry.t_e", 70, "Ds from flowering", "Table 2 (p. 12)", "read"),
+            Published("ta.min", 7.8, "g/L", "Table 2 (p. 12)", "read"),
+            Published("ta.max", 30.3, "g/L", "Table 2 (p. 12)", "read"),
+            Published("ta.r", 0.0923, "1/Ds", "Table 2 (p. 12)", "read"),
+            Published(
+                "photoperiod.critical",
+                13.1,
+                "h",
+                "text, l. 167 (cited to Camargo-Alvarez et al. 2020)",
+                "read",
+            ),
+        ),
+        flags=(
+            "The engine's form twice over: a chilling sum then a forcing heat sum to a"
+            " threshold for budburst (Chuine 2000's form), and growth as beta functions of"
+            " development days (Wang & Engel 1998's rate integrated: thermal time). The"
+            " forcing base 0.008 °C is printed as is and not explained. StructuralDMmax has"
+            " no printed value. Eq. 10's TA at t = 0 (38.1 g/L) disagrees with the text"
+            " (30.3 g/L at veraison). Needs APSIM Next Generation to run as published.",
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

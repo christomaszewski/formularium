@@ -404,6 +404,28 @@ DATASETS: dict[str, Dataset] = {
         "Su et al. 2022, Tables 1-2 (pp. 4, 7); the per-treatment LAI series are in Table 2",
         "read",
     ),
+    "schumacher2024.freiburg": Dataset(
+        "Downy mildew severity (percent of infected berries, 13 classes) of clusters of Pinot"
+        " Noir, Souvignier Gris, Cabernet Cortis and Solaris inoculated at seven BBCH stages"
+        " (53-55 to 81-83) on 42 potted vines a cultivar in an open greenhouse at Freiburg im"
+        " Breisgau, 2020-2023 (1,856 clusters), rated 4 weeks after inoculation; leaf-disc"
+        " sporulation of leaves at the same stages, 2021-2023, 36 discs a cultivar and stage;"
+        " the 2021 untreated field trial (Pinot Noir over 90 %)",
+        "Schumacher et al. 2024, Scientific Reports 14: 915, Methods and Results (pp. 2-6;"
+        " literature/schumacher2024); observed, no calendar dates, means in the text only",
+        "read",
+    ),
+    "zhu2021.marlborough": Dataset(
+        "Sauvignon blanc phenology (budburst, flowering, veraison), yield, bunch number, berry"
+        " weight, TSS and TA at four Marlborough long-term sites from 2004 (other regions and"
+        " varieties from 2014); the retained-node-number trial at Rowley Crescent 2006-2010"
+        " (leaf appearance, leaf area, biomass, NSC, yield); the post-harvest defoliation trial"
+        " 2008-2012; MRL_Rapaura irrigation trial 2001-2005 (canopy, light interception, leaf"
+        " and shoot biomass)",
+        "Zhu et al. 2021, in silico Plants 3(2): diab021, Table 1 and 'Data sets' (l. 465-546;"
+        " literature/zhu2021); observed, TSS from an empirical water-content relation",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"
