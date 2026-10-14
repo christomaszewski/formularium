@@ -2914,6 +2914,181 @@ FORMULATIONS: dict[str, Formulation] = {
             " (30.3 g/L at veraison). Needs APSIM Next Generation to run as published.",
         ),
     ),
+    "schmidt2019.virtual_riesling": Formulation(
+        "Virtual Riesling: a functional-structural model of the canopy of a Riesling vine, with"
+        " phytomer, internode and leaf growth on thermal time and budburst by a degree-day sum",
+        "Schmidt, Bahr, Friedel & Kahlen 2019, Agronomy 9(8): 426, Eqs 1-10 and text",
+        year=2019,
+        authors=(
+            "Schmidt, D.",
+            "Bahr, C.",
+            "Friedel, M.",
+            "Kahlen, K.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="dominik_2019.pdf (the 2026-10-14 drop)",
+        doi="10.3390/agronomy9080426",
+        structures=("growth-on-thermal-time", "degree-day-phenology", "allometry"),
+        calibrated_on=("schmidt2019.geisenheim",),
+        calibration_note=(
+            "Phytomer rate, internode, leaf-vein and lateral budburst curves fitted to three"
+            " Riesling vines digitised at Geisenheim in 2018 (E-L 12, 15, 26); leaf area form"
+            " (Eq. 10) fitted to 302 leaves of Doring et al. 2013 after Beslic et al. 2010;"
+            " budburst in other years is Nendel 2010's degree-day model with its parameters,"
+            " borrowed, not fitted here. Read 2026-10-14 (literature/schmidt2019)."
+        ),
+        parameters=(
+            Published("phyllochron.mu", 0.0453, "phytomers/°Cd", "text, l. 376", "read"),
+            Published("phyllochron", 22.0892, "°Cd per phytomer", "text, l. 377", "read"),
+            Published("t_base", 10, "°C", "Eq. 1, l. 343 (after Schultz 1992)", "read"),
+            Published("internode.k", -3.1812, "1", "Eq. 3 (p. 7)", "read"),
+            Published("il1max.a1", -0.5562, "cm per rank", "Eq. 4 (p. 7), as printed", "read"),
+            Published("il1max.b1", 1.5729, "cm", "Eq. 4 (p. 7), as printed", "read"),
+            Published("il1max.a2", 0.7212, "cm per rank", "Eq. 4 (p. 7)", "read"),
+            Published("il1max.b2", 9.0909, "cm", "Eq. 4 (p. 7)", "read"),
+            Published("lateral_internode.k", -3.9706, "1", "text, l. 459", "read"),
+            Published("lateral_budburst.q0", 337.0334, "°Cd", "Eq. 8, l. 598", "read"),
+            Published("lateral_budburst.q1", -18.5344, "°Cd per rank", "Eq. 8, l. 598", "read"),
+            Published("lateral_budburst.min", 66.2676, "°Cd", "Eq. 9, l. 601", "read"),
+            Published(
+                "leaf.s_la",
+                0.6869294,
+                "sqrt(cm²) per cm of second-order vein",
+                "Eq. 10, l. 649 (fitted to 302 leaves of Doring et al. 2013)",
+                "read",
+            ),
+            Published(
+                "nendel.t0",
+                5.9,
+                "°C",
+                "text, l. 364 (borrowed from Nendel 2010)",
+                "read",
+            ),
+            Published(
+                "nendel.d_bb",
+                186.1,
+                "°Cd from 1 March",
+                "text, l. 363-366 (borrowed from Nendel 2010; SD 24.7 °Cd)",
+                "read",
+            ),
+            Published(
+                "canopy.stop_height",
+                2.3,
+                "m",
+                "text, l. 749-750 (run ends when 90 % of shoots reach it)",
+                "read",
+            ),
+        ),
+        flags=(
+            "Eq. 4 as printed (a1 -0.5562, b1 1.5729) gives negative maxima for ranks 3-7,"
+            " while Figure 4 shows 1.0 at rank 1 and 10.4 at rank 7, which a1 1.5729 and b1"
+            " -0.5562 reproduce. The values are recorded as printed; the swap is a reading,"
+            " confirmed on the page image 2026-10-14. Budburst is Nendel 2010's degree-day"
+            " threshold, borrowed. The model needs its own code (GroIMP or similar, as the paper"
+            " says) to run. Three vines of one cultivar in one year. Mean leaf area per shoot of"
+            " 0.5-1.3 m² (l. 1512) and a cited LAI of about 3.8 (l. 1572) are outputs, not"
+            " fits. Kin to the engine's degree-day pieces by form: growth on thermal time.",
+        ),
+    ),
+    "vrignonbrenas2022.leaf_area_ramp": Formulation(
+        "Leaf area per plant as a piecewise-linear ramp of thermal time after budburst, with"
+        " a plateau, its slope and plateau time shifted by leaf nitrogen (SPAD) and storage",
+        "Vrignon-Brenas et al. 2022, J. Exp. Bot. 73(5): 1385-1401, Table 4 (p. 10), Table 2",
+        year=2022,
+        authors=(
+            "Vrignon-Brenas, S.",
+            "Fontez, B.",
+            "Bisson, A.",
+            "Rolland, G.",
+            "Chopard, J.",
+            "Fumey, D.",
+            "Metay, A.",
+            "Pellegrino, A.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="sylvain_2021.pdf (the 2026-10-14 drop)",
+        doi="10.1093/jxb/erab469",
+        structures=("growth-on-thermal-time", "degree-day-phenology", "radiation-use-efficiency"),
+        calibrated_on=("vrignonbrenas2022.montpellier_pots",),
+        calibration_note=(
+            "Own model, Bayesian fit to leaf area of potted Sauvignon blanc, five experiments"
+            " on three batches, 2017-2019. Priors from earlier studies: plateau 1400 °Cd"
+            " (Valdes-Gomez et al. 2009; Zufferey et al. 2012), onset 150 °Cd (Munitz et al."
+            " 2016); no model shaped the data. Read 2026-10-14 (literature/vrignonbrenas2022)."
+        ),
+        parameters=(
+            Published("slope.mu", 53.44, "cm²/°Cd", "Table 4 (p. 10); SD 3.21", "read"),
+            Published(
+                "slope.spad", 1.86, "cm²/°Cd per SPAD unit", "Table 4 (p. 10); SD 0.27", "read"
+            ),
+            Published("slope.storage", -7.49, "cm²/°Cd per g", "Table 4 (p. 10); SD 1.45", "read"),
+            Published("tt_max.mu", 1335.35, "°Cd", "Table 4 (p. 10); SD 20.49", "read"),
+            Published(
+                "tt_max.spad", 12.47, "°Cd per SPAD unit", "Table 4 (p. 10); SD 4.65", "read"
+            ),
+            Published("tt_max.storage", -34.88, "°Cd per g", "Table 4 (p. 10); SD 3.72", "read"),
+            Published(
+                "tt_onset", 150, "°Cd after budburst", "text, l. 596-597 (fixed, a prior)", "read"
+            ),
+            Published("dm_per_mj.intercept", -6.35e-3, "g/MJ", "Eq. 4 fit, l. 871", "read"),
+            Published("dm_per_mj.spad", 6.21e-4, "g/MJ per SPAD unit", "l. 871", "read"),
+            Published("dm_per_mj.leaf_area", 5.29e-2, "g/MJ per m²", "l. 871 (R² 0.88)", "read"),
+            Published("tt.budburst_to_flowering.2017", 326, "°Cd", "Table 2, l. 345", "read"),
+            Published("tt.budburst_to_flowering.2018", 336, "°Cd", "Table 2, l. 348", "read"),
+            Published("tt.budburst_to_flowering.2019", 272, "°Cd", "Table 2, l. 351", "read"),
+            Published("tt.flowering_to_veraison.2017", 728, "°Cd", "Table 2, l. 346", "read"),
+            Published("tt.flowering_to_veraison.2018", 779, "°Cd", "Table 2, l. 349", "read"),
+            Published("tt.flowering_to_veraison.2019", 811, "°Cd", "Table 2, l. 352", "read"),
+        ),
+        flags=(
+            "Potted Sauvignon blanc on SO4 outdoors, five experiments on three batches"
+            " 2017-2019. The thermal-time base and formula are not printed. Eq. 1's leaf"
+            " allometry has an unprinted sign. Leaf area per plant at the plateau is"
+            " 0.17-1.68 m² (l. 797-798). The ramp is in thermal time after budburst, the"
+            " engine's form (growth on thermal time), so kin by form. The text gives 12.45"
+            " °Cd per SPAD unit (l. 781) where Table 4 prints 12.47.",
+        ),
+    ),
+    "tsialtas2008.leaf_area": Formulation(
+        "Leaf area of a Cabernet Sauvignon leaf from its length (own line) or from length and"
+        " width (the best of eleven published lines)",
+        "Tsialtas, Koundouras & Zioziou 2008, Photosynthetica 46(3): 452-456, text and Table 4",
+        year=2008,
+        authors=(
+            "Tsialtas, J. T.",
+            "Koundouras, S.",
+            "Zioziou, E.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="j__2008.pdf (the 2026-10-14 drop)",
+        structures=("allometry",),
+        calibrated_on=("tsialtas2008.thessaly",),
+        calibration_note=(
+            "Own line fitted to 18 means of rootstock x irrigation x sampling, not to the 324"
+            " leaves. The 0.587 line is Montero et al. 2000's, chosen as the best of eleven"
+            " published lines by r² and mean squared difference. Read 2026-10-14"
+            " (literature/tsialtas2008)."
+        ),
+        parameters=(
+            Published("l.a", -151.41, "cm²", "text, l. 121 (r² 0.97, n 18 means)", "read"),
+            Published("l.b", 18.379, "cm", "text, l. 121 (LA = a + b L)", "read"),
+            Published(
+                "best_published.lw",
+                0.587,
+                "1",
+                "text, l. 100, 215-218 (LA = 0.587 L x W, cited to Montero et al. 2000)",
+                "read",
+            ),
+        ),
+        flags=(
+            "Fitted to 18 treatment-stage means, not to the 324 leaves. Buttaro et al. 2015"
+            " found the 0.587 line biased by 18 % on table grapes (literature/buttaro2015)."
+            " No leaf counts per shoot. Independent of the engine.",
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

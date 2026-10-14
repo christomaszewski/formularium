@@ -106,6 +106,9 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "su2022.lai_curve": ("su2022.turpan",),
         "schumacher2024.cluster_resistance": ("schumacher2024.freiburg",),
         "zhu2021.apsim_grapevine": ("zhu2021.marlborough",),
+        "schmidt2019.virtual_riesling": ("schmidt2019.geisenheim",),
+        "vrignonbrenas2022.leaf_area_ramp": ("vrignonbrenas2022.montpellier_pots",),
+        "tsialtas2008.leaf_area": ("tsialtas2008.thessaly",),
         "puelles2024.ur": ("puelles2024.rioja",),
         "rosa1995.incubation": ("goidanich1957", "zachos1959", "orlandini1993.emergences"),
         "orlandini2008.plasmo": (

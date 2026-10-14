@@ -426,6 +426,46 @@ DATASETS: dict[str, Dataset] = {
         " literature/zhu2021); observed, TSS from an empirical water-content relation",
         "read",
     ),
+    "schmidt2019.geisenheim": Dataset(
+        "Three Riesling vines (clone 198-30 Gm on SO4, planted 2012, 0.9 x 1.8 m) of the"
+        " VineyardFACE at Geisenheim, digitised in 3D at E-L 12, 15 and 26 in"
+        " May-June 2018; 50 primary shoots in the bud-position analysis; bud break 2018 at DOY"
+        " 109-111; DWD station 1580 daily weather 1927-2018, about 200 m away",
+        "Schmidt, Bahr, Friedel & Kahlen 2019, Agronomy 9(8): 426, 'Materials and methods'"
+        " (l. 139-216, 331-349, 468-470; literature/schmidt2019); observed",
+        "read",
+    ),
+    "vrignonbrenas2022.montpellier_pots": Dataset(
+        "Leaf area per plant (5 plants a treatment, 2-7 dates an experiment), dry matter by"
+        " organ, trunk and root carbohydrate and SPAD of potted Sauvignon blanc on SO4 grown"
+        " outdoors at Montpellier, five experiments on three batches 2017-2019, N supply 0-8.61"
+        " g per plant from budburst to veraison, SPAD 11.8-41.6; stage thermal times in Table 2",
+        "Vrignon-Brenas et al. 2022, J. Exp. Bot. 73(5): 1385-1401, 'Materials and methods'"
+        " (l. 129-176; literature/vrignonbrenas2022); observed; the data are available on"
+        " request only",
+        "read",
+    ),
+    "tsialtas2008.thessaly": Dataset(
+        "324 leaves of Cabernet Sauvignon, 10-year-old vines on 1103 Paulsen and SO4 under"
+        " three irrigation regimes (100 % ETc, 50 % ETc, none), sampled at bunch closure,"
+        " veraison and ripeness in 2005 and 2006 near Thessaly (39°48' N, 22°27' E, 190 m),"
+        " leaf area, length, width and perimeter by image analysis",
+        "Tsialtas, Koundouras & Zioziou 2008, Photosynthetica 46(3): 452-456, 'Materials and"
+        " methods' (l. 81-107; literature/tsialtas2008); observed",
+        "read",
+    ),
+    "fernandezgomez2013.chinchon": Dataset(
+        "Cabernet Sauvignon on 41 B planted 2005, 3 x 1 m VSP, Chinchon (Madrid, 550 m), 2010"
+        " and 2011, four deficit regimes: stage days of the year (50 % rule, E-L 4, 23, 27, 35,"
+        " 38) 111, 153, 165, 214, 280 in 2010 and 98, 143, 152, 203, 258 in 2011; Ite (base 10"
+        " °C from 1 April) at flowering 328.0 and 339.8 °Cd; shoot length 110 and 103 cm at"
+        " fruit set and 166 and 160 cm at growth stop (day 218 and 187); year-mean LAI 1.2,"
+        " external leaf area 0.8 m²/m²; 1.9-2.0 bunches a shoot",
+        "Fernandez Gomez 2013, PhD thesis, Universidad Politecnica de Madrid, Tabla 2.6"
+        " (l. 3627-3630), Tabla 3.1 (l. 5879-5880), Tabla 3.2 (l. 6067-6068), Tabla 3.3"
+        " (literature/fernandezgomez2013); observed, LAI computed from leaf counts",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"

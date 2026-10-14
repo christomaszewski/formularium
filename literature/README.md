@@ -259,6 +259,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [fedele2026](fedele2026.md) | downy mildew | host susceptibility, canopy microclimate | Italy | Denser canopies had more susceptible leaves and longer wetness, yet epidemics did not… |
 | [felippeto2013](felippeto2013.md) | none | dormancy, chilling, budburst | Serra Gaúcha | Nine chilling methods ranked on ten years of Cabernet Sauvignon budburst at Bento Gonçalves: chill to a 4 August biofix explains R² 0.78, residual 2.4 d against 5.2 d for the date alone |
 | [ferguson2014](ferguson2014.md) | none | cold hardiness, budbreak | Washington | The catalogue's cold-hardiness record as read: Table 4, RMSE 1.5 °C fitted and 2.0 °C tested, budbreak RMSE 7.3 d; two sites, not one |
+| [fernandezgomez2013](fernandezgomez2013.md) | none | phenology, shoot growth, leaf area index, deficit irrigation | Madrid, Chinchón | Observed stage days and shoot lengths for two Madrid seasons of Cabernet Sauvignon under deficit irrigation, free of any engine fitting, a test set for a truth phenology; year-mean LAI 1.2 and external leaf area 0.8 m²/m² |
 | [fernandezgonzalez2009](fernandezgonzalez2009.md) | downy mildew, powdery mildew, grey mould | aerobiology | Galicia | Cenlle 2007, the thesis's first season |
 | [fernandezgonzalez2011](fernandezgonzalez2011.md) | downy mildew | airborne sporangia, phenology | Galicia | Four seasons of daily airborne sporangia |
 | [ferreira2023](ferreira2023.md) | downy mildew, powdery mildew, scab, blast, asian soybean rust | leaf wetness, season severity, infection, sporulation, fung… | Paraná State Brazil, Londrina, Paranavaí, Cascave… | The observed Paraná daily RH series (1975-2021) is a usable station record for a truth's climate; its RH abov… |
@@ -618,6 +619,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [saxena2023](saxena2023.md) | none | phenology, budburst, machine learning | Prosser | A recurrent network giving a daily budbreak probability for 18 cultivars at Prosser: 3-day median error on random seasons, no code, no comparison with degree-days |
 | [schilder2010](schilder2010.md) | downy mildew, powdery mildew | fungicide efficacy, organic fungicides, spray timing, spray… | Michigan, Fennville | A field record of organic fungicide control, with incidence and severity per treatment for two Michigan seaso… |
 | [schmidt2003](schmidt2003.md) | grape berry moths | pest demography | Rheingau | An insect model; for Cooptera's pests |
+| [schmidt2019](schmidt2019.md) | none | canopy architecture, phyllochron, internode growth, leaf area, budburst | Geisenheim, Rheingau | A functional-structural Riesling canopy model on thermal time with a phyllochron of 22 °Cd per leaf (base 10 °C), Nendel's degree-day budburst and leaf area per shoot of 0.5-1.3 m²; kin to the engine's degree-day pieces by form |
 | [schnee2010](schnee2010.md) | powdery mildew | ontogenic resistance, sporulation, leaf age, host growth, v… | Bordeaux, Couhins, Latresne, France | Observed leaf-age and vigour effects on powdery mildew sporulation and leaf glucose at two sites and years: a… |
 | [schrader2020](schrader2020.md) | none | phenology, photoperiod, soil temperature | Iowa | Days remaining to each stage from the date, soil thaw, photoperiod, air and soil degree-days and solar sum, coefficients printed; 0.7 d against 5.3 d for GDD alone |
 | [schuepp1986](schuepp1986.md) | downy mildew | laboratory method | Switzerland | Method only |
@@ -668,6 +670,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [tonle2024](tonle2024.md) | none | decision support | Africa | Off-topic |
 | [tor2023](tor2023.md) | downy mildews | host-pathogen biology | global | Molecular review; context |
 | [tranmanhsung1990](tranmanhsung1990.md) | downy mildew | oospore maturation, season severity | Bordeaux | Clear of the engine by every substantive test, and its author list is read |
+| [tsialtas2008](tsialtas2008.md) | none | leaf area, allometry | Thessaly | A per-leaf line for Cabernet Sauvignon (LA = 18.379 L - 151.41 from 18 means) and the best of eleven published lines (0.587 L x W), independent of the engine; complements Sánchez-de-Miguel 2011 |
 | [twomey2015](twomey2015.md) | powdery mildew | infection, season severity, spray timing, latent period, sp… | Oregon, United States | None. Recorded so that it is not read again. |
 | [urbeztorres2010](urbeztorres2010.md) | Botryosphaeria dieback | spore release, observation | California | Clear, and of indirect use |
 | [valdesgomez2017](valdesgomez2017.md) | powdery mildew | scouting, spray decisions | Chile | A costed scouting policy (2-3 sprays against 7-9 |
@@ -684,6 +687,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [viruega2011](viruega2011.md) | olive scab | infection, incubation | Andalusia | Not held out today |
 | [viruega2013](viruega2013.md) | olive scab | inoculum production, dispersal | Andalusia | Clear |
 | [volpi2021](volpi2021.md) | downy mildew, powdery mildew, grey mould | forecasting | Tuscany | Tuscany's IPM network, 2006-2019, behind tree classifiers |
+| [vrignonbrenas2022](vrignonbrenas2022.md) | none | leaf area, growth, nitrogen, radiation use | Montpellier | Leaf area of potted Sauvignon blanc as a ramp of thermal time after budburst (onset 150 °Cd, plateau near 1,335 °Cd); kin to the engine by form, and the thermal-time onset and plateau are what the truth's leaf curve in days lacks |
 | [wakehamnd](wakehamnd.md) | grey mould | bio-aerosol, inoculum availability, wind speed, relative hu… | United Kingdom | None. Recorded so that it is not read again: Botrytis aerobiology in UK tomato glasshouses, with no downy mil… |
 | [wang2020](wang2020.md) | none | phenology, model transfer | China | Six European heat-sum and chilling models run with their parameters on four cultivars at five Chinese sites: most err by 10 d or more until the critical sum is refitted; GDD10 the only budburst model that held |
 | [watson2002](watson2002.md) | brown rot (Monilinia) | sporulation | South Carolina | Clear and of little use to a grape truth |
@@ -695,6 +699,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [wurz2021](wurz2021.md) | downy mildew, anthracnose | season severity, canopy density, bud load, incidence, sever… | Brazil, Santa Catarina, São Joaquim | Field incidence and severity by canopy density in a humid highland site, which gives a truth scenario the can… |
 | [wurz2023](wurz2023.md) | downy mildew | season severity, host vigour | Santa Catarina | More buds, more downy mildew; no untreated plot |
 | [yang2023](yang2023.md) | downy mildew | primary inoculum, latent infection | Ningxia | Clear |
+| [yang2023b](yang2023b.md) | none | phenology, flowering, calibration | Douro | Five flowering models (GDD, Richardson, Sigmoid, Triangular, Wang) for two Douro varieties, all heat-sum-threshold forms like the engine's, fitted values in a supplement not held, ensemble RMSE 5-6 d on fitting data; not a truth candidate |
 | [yang2026](yang2026.md) | none | evapotranspiration | Contiguous United States | Cropland monthly error about 17% |
 | [yin2018](yin2018.md) | none | drought | United States | Off-topic |
 | [yu2022metabolomics](yu2022metabolomics.md) | powdery mildew | fruit chemistry | Guangxi | Off-topic for simulation |
