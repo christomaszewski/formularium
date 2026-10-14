@@ -127,6 +127,8 @@ STRUCTURES = {
     " growth stage",
     "water-limited-growth": "growth or its timing scaled by soil or plant water status",
     "growth-on-days": "a shoot, leaf or mass measure as a curve of days after a stage",
+    "carbon-balance": "biomass as photosynthesis minus respiration, shared out by source-sink"
+    " rules",
 }
 
 

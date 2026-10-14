@@ -3327,6 +3327,114 @@ FORMULATIONS: dict[str, Formulation] = {
             " and unchecked on the image; the Ch. 9 year is not confirmed in the lines read.",
         ),
     ),
+    "cola2014.barbera_canopy": Formulation(
+        "Leaf area per shoot by vegetative BBCH stage and shoot count, canopy porosity on width,"
+        " and the canopy ramp of Cola et al.'s Barbera model",
+        "Cola, Mariani, Salinari, Civardi, Bernizzoni, Gatti & Poni 2014, Agricultural and Forest"
+        " Meteorology 184: 117-136, Eqs 12-13 and 7-11 (p. 122), Eq. 15 (p. 123), Table 1 (p. 119)",
+        year=2014,
+        authors=(
+            "Cola, G.",
+            "Mariani, L.",
+            "Salinari, F.",
+            "Civardi, S.",
+            "Bernizzoni, F.",
+            "Gatti, M.",
+            "Poni, S.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="1-s2.0-S0168192313002633-main.pdf (the 2026-10-15 drop)",
+        doi="10.1016/j.agrformet.2013.09.008",
+        structures=(
+            "degree-day-phenology",
+            "allometry",
+            "carbon-balance",
+            "water-limited-growth",
+            "rate-temperature-response",
+        ),
+        calibrated_on=("cola2014.piacenza",),
+        calibration_note=(
+            "Barbera AT 84 on 420A, planted 1999, Piacenza, 2011-2012, low density cane-pruned"
+            " Guyot and high density spur cordon; BBCH scored every 3-4 days; five shoots sampled"
+            " destructively on 12 dates in 2011; porosity from 3,480 line-bar readings a date."
+            " Validation 2003-2007 on other vines of the same vineyard for final leaf area (R²"
+            " 0.92 HD, 0.63 LD) and yield (R² 0.96 LD; the abstract says 0.94 HD and Table 9"
+            " 0.96). Pages 119-123 read 2026-10-14, p. 122 in the page image"
+            " (literature/cola2014)."
+        ),
+        parameters=(
+            Published("la1.bbch2", 3.51e-4, "m² shoot^-1", "Eq. 12 (p. 122), R² 0.99", "read"),
+            Published("la1.bbch_n", -1.798e-6, "m² shoot^-1", "Eq. 12 (p. 122)", "read"),
+            Published("la1.n2", -9.3745e-6, "m² shoot^-1", "Eq. 12 (p. 122)", "read"),
+            Published("la1.bbch", -6.848e-2, "m² shoot^-1", "Eq. 12 (p. 122)", "read"),
+            Published("la1.n", 8.66e-4, "m² shoot^-1", "Eq. 12 (p. 122)", "read"),
+            Published(
+                "la1.c",
+                3.3268,
+                "m² shoot^-1",
+                "Eq. 12 (p. 122); BBCHveg 101-127, Nshoots clamped 10-65",
+                "read",
+            ),
+            Published("la2.bbch2", 7.7521e-5, "m² shoot^-1", "Eq. 13 (p. 122), R² 0.98", "read"),
+            Published("la2.bbch_n", -1.594e-4, "m² shoot^-1", "Eq. 13 (p. 122)", "read"),
+            Published("la2.n2", 6.88e-5, "m² shoot^-1", "Eq. 13 (p. 122)", "read"),
+            Published("la2.bbch", 3.028e-2, "m² shoot^-1", "Eq. 13 (p. 122)", "read"),
+            Published("la2.n", 1.263e-2, "m² shoot^-1", "Eq. 13 (p. 122)", "read"),
+            Published("la2.c", -2.3443, "m² shoot^-1", "Eq. 13 (p. 122)", "read"),
+            Published("cp.a", 0.6417, "1", "Eq. 15 (p. 123), porosity on width, R² 0.82", "read"),
+            Published("cp.b", -0.33, "m^-1", "Eq. 15 (p. 123), width Wx in m", "read"),
+            Published("phdel.max", 1.55, "1", "Eq. 11 (p. 122), for more than 65 shoots", "read"),
+            Published("phdel.base", 0.08, "1", "Eq. 8 (p. 122), read in the page image", "read"),
+            Published("canopy.wx_min", 0.3, "m", "Table 1 (p. 119), low density 2011", "read"),
+            Published("canopy.wx_max", 0.8, "m", "Table 1 (p. 119), low density 2011", "read"),
+            Published("canopy.h_min", 0.2, "m", "Table 1 (p. 119), low density 2011", "read"),
+            Published("canopy.h_max", 1.2, "m", "Table 1 (p. 119), low density 2011", "read"),
+            Published("canopy.hd.wx_min", 0.2, "m", "Table 1 (p. 119), high density", "read"),
+            Published("canopy.hd.wx_max", 0.6, "m", "Table 1 (p. 119), high density", "read"),
+            Published("canopy.hd.h_min", 0.2, "m", "Table 1 (p. 119), high density", "read"),
+            Published("canopy.hd.h_max", 1.0, "m", "Table 1 (p. 119), high density", "read"),
+            Published(
+                "canopy.ramp_start",
+                101,
+                "BBCH",
+                "text, l. 400-408 (ramp to BBCH 77, then held)",
+                "read",
+            ),
+            Published("canopy.ramp_end", 77, "BBCH", "text, l. 400-408", "read"),
+            Published("leaf_weight.la1.a", 43.34, "cm² g^-1", "Eq. 2 (l. 206), R² 0.95", "read"),
+            Published("leaf_weight.la1.b", -50.99, "cm²", "Eq. 2 (l. 206)", "read"),
+            Published("leaf_weight.la2.a", 44.12, "cm² g^-1", "Eq. 3 (l. 209), R² 0.95", "read"),
+            Published("leaf_weight.la2.b", 70.34, "cm²", "Eq. 3 (l. 209)", "read"),
+            Published(
+                "flowering.leaf_area.hd",
+                4.8,
+                "m² vine^-1",
+                "text, l. 637-638 (BBCH 65, 2011)",
+                "read",
+            ),
+            Published(
+                "flowering.leaf_area.ld",
+                1.2,
+                "m² vine^-1",
+                "text, l. 637-638 (BBCH 65, 2011)",
+                "read",
+            ),
+        ),
+        flags=(
+            "The phenology is a heat sum (cumulated normal heat hours to stage thresholds, Fig. 4"
+            " curves only, read by eye; thresholds shifted from Iphen's Cabernet Sauvignon"
+            " reference, Mariani et al. 2013), the engine's form. Eqs 12-13 take BBCHveg as"
+            " input, so in the paper's own run the clock is the heat sum.",
+            "Eq. 39 (thermal limitation) as printed is negative at every temperature from 7 to"
+            " 40 °C and cannot be used; Eq. 32's water factor is printed as a product in mm, not"
+            " a ratio; Eqs 20-21 print 2 pi x 365 where 2 pi/365 would give a yearly cycle.",
+            "The NHH cardinal temperatures (7, 25.5, 35 °C, cited to Mariani et al. 2012) and base"
+            " are not printed as the NHH's own numbers; the light-interception equations are"
+            " Oyarzun et al. 2007's, not printed; Table 1 spacing (2.2 x 1.8 m) disagrees with"
+            " the text (2.5 x 1.2 m).",
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

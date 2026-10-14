@@ -517,6 +517,19 @@ DATASETS: dict[str, Dataset] = {
         " literature/mcartney1998; observed",
         "read",
     ),
+    "cola2014.piacenza": Dataset(
+        "Observed BBCH by shoot every 3-4 days, destructive shoot samples (five shoots on 12"
+        " dates in 2011: leaf number, leaf weight, leaf area), shoot and leaf counts, canopy"
+        " width and height, light interception on 8 days in 2011 (3,480 line-bar readings a"
+        " date) and cluster yield of Barbera AT 84 on 420A (planted 1999) at Piacenza,"
+        " 2011-2012, low density cane-pruned Guyot and high density spur cordon; validation"
+        " 2003-2007 on other vines of the same vineyard for final leaf area and yield (from"
+        " Bernizzoni et al. 2009), with ARPA-SIM weather at Pianello Val Tidone",
+        "Cola et al. 2014, Agricultural and Forest Meteorology 184:117-136, sections 2.1-2.3"
+        " (l. 111-277; literature/cola2014); observed, the raw series not printed (Table 1"
+        " inputs, Tables 4-9 statistics and figures only)",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"
