@@ -466,6 +466,18 @@ DATASETS: dict[str, Dataset] = {
         " (literature/fernandezgomez2013); observed, LAI computed from leaf counts",
         "read",
     ),
+    "linares2009.el_socorro": Dataset(
+        "Syrah 2005 and Merlot 2006-2007 at El Socorro, Comunidad de Madrid, under cover crops"
+        " (Cent3, CNA), tillage and herbicide: weekly length of marked shoots (4 plants a"
+        " treatment and block) and shoot velocity in cm per degree-day; leaf area from midrib"
+        " lines, one leaf in three; LAI and external leaf area SA at flowering, veraison and"
+        " harvest, with LAI/SA; Ite (daily mean above 10 °C, summed from 1 April) at the dated"
+        " samplings of 2007 and observed budburst and veraison dates 2007-2008",
+        "Linares Torres 2009, thesis, Tabla 24 (l. 9214), Tabla 48 (l. 12817-12844), Tablas"
+        " 50-52 (l. 13126-13245) and Ecuaciones 11-13 (l. 6612-6677; literature/linares2009);"
+        " observed, leaf area computed from midrib length",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"
