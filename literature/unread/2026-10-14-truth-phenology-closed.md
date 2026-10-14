@@ -115,3 +115,12 @@ as printed.
   1992's quadratic in lamina length, refitted on 93 leaves.
 - **Louarn 2007a and 2007b** and Lebon 2004 are bronze open access at Oxford; Scite's
   publisher links for all three answer 403 from this VM.
+
+## Read since (2026-10-14, from Chris's drop `2026-10-15-closed-leads`)
+
+Chris supplied PDFs the same day. Read and recorded, so their rows above no longer apply:
+Lebon 2004 (`lebon2004`), Louarn 2007a (`louarn2007`), Louarn 2008 (`louarn2008`, the
+shortlist's "2007b"), Cola 2014 (`cola2014`), Keller 2010 (`keller2010`, the Australian
+Journal paper). Two files were the wrong paper and were not read: a Reuveni 2003 fungicide
+study in place of Reuveni 1998, and Dong et al. 2008's GreenLab tomato paper. Schultz 1992
+is still unobtained.
