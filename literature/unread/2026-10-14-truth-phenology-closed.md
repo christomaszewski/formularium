@@ -3,6 +3,10 @@
 These are the documents the 2026-10-14 OpenAlex search for a phenology model and a vine growth model, for Agrarium's truth, found and could not read. Table 1 holds the leads shortlisted as class A or B that were not obtained. Table 2 holds the documents triaged as class C. Nothing here was read, and nothing here is checked beyond the sources named.
 
 - **How Table 1 was tried:** each DOI was fetched once directly, and once through the retry pipeline (Wayback, publisher URL patterns, headless browser). Do not retry these from this VM.
+- **Scite (checked 2026-10-14 after the search):** its full-text reader is denied for Lebon 2004
+  (abstract only), Schultz 1992, Reuveni 1998 and Cola 2014 (no text), and the publisher PDF
+  link it gives for Lebon 2004 (academic.oup.com, bronze open access) answers 403 from this VM.
+  Schultz 1992 can be ordered through Article Galaxy for about 42 USD; that is Chris's call.
 - **Pallas 2008 (Physiol. Plant. 134:49-63):** its content was read instead as Manuscript 1 of the Pallas 2009 thesis (`beno_t_2009`). The thesis is not in the table.
 - **Bindi 1997 II:** not listed, because `text/bindi_1997b` holds it. **Lopes & Pinto 2005:** listed, because no copy is in `text/`.
 - **Keys reused by other papers:** `chenyao_2021` and `francisco_2026` have directories in `text/`, but those hold other papers (Yang et al. 2021, agronomy; and a 2026 thesis). The two papers in the failed list under those keys are not in `text/`, so both rows stay.
