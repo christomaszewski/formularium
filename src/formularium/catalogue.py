@@ -3167,6 +3167,166 @@ FORMULATIONS: dict[str, Formulation] = {
             " Lebon et al. 2006's, cited."
         ),
     ),
+    "mcartney1998.shoot_leaf_area": Formulation(
+        "Leaf area per shoot as a logistic in days after bud break, Seyval and DeChaunac, shaded"
+        " and unshaded",
+        (
+            "McArtney 1998, PhD dissertation, The Ohio State University, Fig. 4.4 (p. 47), Ch. 4"
+            " text (pp. 44-45), Fig. 9.1 (p. 143)"
+        ),
+        year=1998,
+        authors=("McArtney, S. J.",),
+        authors_complete=True,
+        authors_from="read",
+        checked="steven_1998.pdf (the 2026-10-14 drop)",
+        structures=("growth-on-days", "allometry"),
+        calibrated_on=("mcartney1998.ohio",),
+        calibration_note=(
+            "area = a / (1 + exp(b - c t)), t in days after bud break, a in cm² a shoot. The"
+            " 'DeChaunac' and 'Seyval' vines (French-American hybrids) had been under 80 % shade"
+            " cloth from flowering in the previous season, or unshaded (Fig. 4.4 and Table 4.1"
+            " say the previous year), in Ohio; shoot leaf area was sampled through the"
+            " season and fitted by a sigmoid in SAS (Fig. 4.4, read in the page image). Single"
+            " leaf area is k x length x width; in Ch. 9 field Seyval (45 shoots) leaf area is a"
+            " line in shoot length. No model shaped the data; no dependence recorded. Days to"
+            " half the final area, b/c, are 20.0 to 26.9 and the time scale 1/c 4.0 to 6.3 days,"
+            " my own calculation, not printed."
+        ),
+        parameters=(
+            Published(
+                "seyval.a", 299, "cm² a shoot", "Fig. 4.4 (p. 47), read in the page image", "read"
+            ),
+            Published("seyval.b", 4.0, "1", "Fig. 4.4 (p. 47), read in the page image", "read"),
+            Published("seyval.c", 0.17, "1/d", "Fig. 4.4 (p. 47), read in the page image", "read"),
+            Published(
+                "seyval_shaded.a",
+                197,
+                "cm² a shoot",
+                "Fig. 4.4 (p. 47), read in the page image",
+                "read",
+            ),
+            Published(
+                "seyval_shaded.b", 4.8, "1", "Fig. 4.4 (p. 47), read in the page image", "read"
+            ),
+            Published(
+                "seyval_shaded.c", 0.22, "1/d", "Fig. 4.4 (p. 47), read in the page image", "read"
+            ),
+            Published(
+                "dechaunac.a",
+                619,
+                "cm² a shoot",
+                "Fig. 4.4 (p. 47), read in the page image",
+                "read",
+            ),
+            Published("dechaunac.b", 4.3, "1", "Fig. 4.4 (p. 47), read in the page image", "read"),
+            Published(
+                "dechaunac.c", 0.16, "1/d", "Fig. 4.4 (p. 47), read in the page image", "read"
+            ),
+            Published(
+                "dechaunac_shaded.a",
+                252,
+                "cm² a shoot",
+                "Fig. 4.4 (p. 47), read in the page image",
+                "read",
+            ),
+            Published(
+                "dechaunac_shaded.b", 5.0, "1", "Fig. 4.4 (p. 47), read in the page image", "read"
+            ),
+            Published(
+                "dechaunac_shaded.c",
+                0.25,
+                "1/d",
+                "Fig. 4.4 (p. 47), read in the page image",
+                "read",
+            ),
+            Published(
+                "leaf.k.dechaunac",
+                0.83,
+                "1",
+                "l. 2442, area = k length x width, R² 0.98, P < 0.0001",
+                "read",
+            ),
+            Published(
+                "leaf.k.seyval",
+                0.86,
+                "1",
+                "l. 2444, area = k length x width, R² 0.99, P < 0.0001",
+                "read",
+            ),
+            Published(
+                "shoot.area_intercept",
+                -5.73,
+                "cm²",
+                "Fig. 9.1 B (p. 143), read in the page image, R² 0.84, n 45 Seyval shoots",
+                "read",
+            ),
+            Published(
+                "shoot.area_slope",
+                10.9,
+                "cm²/cm",
+                "Fig. 9.1 B (p. 143), per cm of shoot length, read in the page image",
+                "read",
+            ),
+            Published(
+                "shoot.diameter_intercept",
+                -351,
+                "cm²",
+                "Fig. 9.1 A (p. 143), read in the page image by the main session, R² 0.71",
+                "read",
+            ),
+            Published(
+                "shoot.diameter_slope",
+                124.8,
+                "cm²/mm",
+                "Fig. 9.1 A (p. 143), per mm of basal shoot diameter, read in the page image",
+                "read",
+            ),
+            Published(
+                "shoot.leaves_intercept",
+                -242,
+                "cm²",
+                "Fig. 9.1 C (p. 143), read in the page image by the main session, R² 0.71",
+                "read",
+            ),
+            Published(
+                "shoot.leaves_slope",
+                69.8,
+                "cm² per leaf",
+                "Fig. 9.1 C (p. 143), per leaf on the shoot, read in the page image",
+                "read",
+            ),
+            Published(
+                "elongation.budbreak_to_bloom",
+                13.98,
+                "mm/d",
+                "Ch. 9 table (l. 6481), bud break to bloom; OCR, unchecked",
+                "read",
+            ),
+            Published(
+                "elongation.bloom_to_2wab",
+                17.34,
+                "mm/d",
+                "Ch. 9 table (l. 6481), bloom to 2 weeks after bloom; OCR, unchecked",
+                "read",
+            ),
+            Published(
+                "elongation.2_to_6wab",
+                5.61,
+                "mm/d",
+                "Ch. 9 table (l. 6481), 2 to 6 weeks after bloom; OCR, unchecked",
+                "read",
+            ),
+        ),
+        flags=(
+            "Hybrids in Ohio, not Vitis vinifera in a Mediterranean vineyard; the curve is for a"
+            " shoot, not a vine.",
+            "The logistic is in calendar days after bud break with no temperature, the form the"
+            " truth now uses; its midpoint b/c (20 to 27 days) and time scale 1/c (4 to 6 days)"
+            " are the comparable numbers.",
+            "The exponents were read from a scanned figure; the Ch. 9 elongation values are OCR"
+            " and unchecked on the image; the Ch. 9 year is not confirmed in the lines read.",
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

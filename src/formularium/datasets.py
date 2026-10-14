@@ -506,6 +506,17 @@ DATASETS: dict[str, Dataset] = {
         " 'Materials and methods' and Tables 1-2 (l. 2220-2510; literature/pallas2009); observed",
         "read",
     ),
+    "mcartney1998.ohio": Dataset(
+        "Shoot leaf area by sampling date, 10 to 50 days after bud break, of 'DeChaunac' and"
+        " 'Seyval' vines under 80 % shade cloth from flowering or unshaded (eight vines a"
+        " treatment, three shoots a vine), single-leaf areas against lamina length and width,"
+        " and in Chapter 9 the shoot length, diameter, leaf number and leaf area of field"
+        " Seyval (n 45 shoots) and shoot elongation by period; Ohio",
+        "McArtney 1998, PhD dissertation, The Ohio State University, Ch. 4 (l. 2196-2230,"
+        " 2420-2480), Fig. 4.4 (p. 47), Ch. 9 (l. 6455-6490), Fig. 9.1 (p. 143);"
+        " literature/mcartney1998; observed",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"

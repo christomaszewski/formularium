@@ -126,6 +126,7 @@ STRUCTURES = {
     "age-resistance": "susceptibility of leaves, clusters or berries falling with their age or"
     " growth stage",
     "water-limited-growth": "growth or its timing scaled by soil or plant water status",
+    "growth-on-days": "a shoot, leaf or mass measure as a curve of days after a stage",
 }
 
 

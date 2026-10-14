@@ -472,6 +472,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [massi2022](massi2022.md) | downy mildew | infection efficiency | Italy | About 8% of single sporangia infected on leaf discs at 22 °C |
 | [masson2011](masson2011.md) | none (climate models) | model dependence | global | why dependence is judged by components and behaviour |
 | [matasci2010](matasci2010.md) | downy mildew | epidemic development, incidence, severity, cultivar mixture… | Switzerland, Ticino | A small observed incidence-and-severity dataset on cultivar mixtures that the truth could use as a cultivar-s… |
+| [mcartney1998](mcartney1998.md) | none | shoot leaf area, leaf expansion, shoot elongation, carbohydrate reserves | Ohio | The one growth curve in days after budburst found, independent of the engine (no heat sum) and the truth's current form; per shoot and for hybrids in Ohio, shoot leaf area halves its final value about three to four weeks after bud break. |
 | [mecikalski2004alexi](mecikalski2004alexi.md) | none | evapotranspiration | United States | Methods in words |
 | [meggio2008](meggio2008.md) | none | remote sensing | Ribera del Duero | Viewing geometry alters vineyard reflectance |
 | [menesatti2013](menesatti2013.md) | downy mildew | forecasting, spray timing | Lazio | PLS-DA on a Goidanich predictor; targets cut from its own data |
