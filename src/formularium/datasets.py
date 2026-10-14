@@ -135,6 +135,17 @@ DATASETS: dict[str, Dataset] = {
         " squares. The table itself read 2026-10-09 (literature/blaeser1979)",
         "read",
     ),
+    "bindi1997.mondeggi": Dataset(
+        "Shoot leaf number and leaf area, cluster counts and dry weights of leaves, stems,"
+        " stalks and berries of 20-year-old Sangiovese on 420 A at Mondeggi-Lappeggi (Chianti),"
+        " sampled every three weeks from May to September 1992, with daily temperature and"
+        " radiation from sensors about 10 m away; the phenology indicators were tested on"
+        " Conegliano's 1965-1970 observations of 123 cultivars (Calò & Costacurta 1973)",
+        "Bindi, Miglietta, Gozzini, Orlandini & Seghi 1997, Vitis 36:67-71, 'Materials and"
+        " methods' (l. 29-64; literature/bindi1997); observed; one season behind every fitted"
+        " constant",
+        "read",
+    ),
     "blaeser1978.survival": Dataset(
         "Blaeser & Weltzien 1978, Z. PflKrankh. PflSchutz 85:155-161, Abb. 2-3: the maximum"
         " lifetime of sporangia on the leaf and detached (on aluminium foil), at 10-30 °C and"
@@ -373,6 +384,17 @@ DATASETS: dict[str, Dataset] = {
         " (the relations fitted on 1986-2007)",
         "Ruml et al. 2016, J. Agric. Sci. 154:186-206, 'Materials and methods' (l. 138-208;"
         " literature/ruml2016); observed, no model",
+        "read",
+    ),
+    "tarara2009.prosser": Dataset(
+        "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
+        " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"
+        " of four vines every 14-21 days from before bloom to 3-4 weeks before maturity,"
+        " 2002-2006 (n 1,360 shoots), shoot length on 54 vines, under deficit irrigation to"
+        " 2004 and full irrigation in 2005; degree-days above 10 °C from 1 January by"
+        " trapezoidal integration of 15-minute air temperature",
+        "Tarara, Blom, Shafii, Price & Olmstead 2009, HortScience 44(2):334-340, 'Materials"
+        " and methods' (l. 86-151; literature/tarara2009); observed, the degree-days computed",
         "read",
     ),
     "schrader2020.iowa": Dataset(

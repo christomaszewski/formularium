@@ -101,6 +101,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [biddulph1999](biddulph1999.md) | phoma leaf spot, stem canker (blackleg) | infection, incubation, leaf wetness, season severity, ascos… | UK, eastern England, Rothamsted, Boxworth, High M… | A controlled-environment and field dataset on temperature and leaf wetness for infection of leaves by ascospo… |
 | [biggs1988](biggs1988.md) | brown rot (Monilinia) | infection, incubation | Ontario | Its infection models are held out by structure (Broome's form) |
 | [biggs2016](biggs2016.md) | none | evapotranspiration | global | Clear, and of indirect use |
+| [bindi1997](bindi1997.md) | none | vine growth, leaf appearance, leaf area, phenology | Chianti | A whole-vine model with every constant printed from one 1992 Sangiovese season: leaves at a temperature-linear rate (a heat sum above 7 °C), bloom at 17 leaves, leaf area a power of leaf number, biomass by RUE; kin to the engine's degree-day pieces |
 | [biomebgc2010](biomebgc2010.md) | none | evapotranspiration, interception | Generic global biomes | No hourly wetness |
 | [bivolnd](bivolnd.md) | downy mildew, powdery mildew, grey mould, botrytis, pseudopeziza tracheiphila | fungicide efficacy, copper fungicide, spray timing, disease… | Moldova, central zone, Ialoveni | Little for the truth or the engine: a Moldovan copper and metiram efficacy trial with no weather series and a… |
 | [blaeser1978](blaeser1978.md) | downy mildew | sporulation, sporangia survival, dispersal | Germany | The laboratory survival data behind the 1979 curves; sporulation needs 98 % RH and 4 h dark |
@@ -649,6 +650,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [syobu2022](syobu2022.md) | downy mildew | infection, sporulation, season severity, leaf wetness, incu… | Japan, Saga Prefecture | A dataset for onion, not grapevine: observed disease in three seasons with station weather (2016-2018) that a… |
 | [taibi2023](taibi2023.md) | downy mildew, powdery mildew | spray timing | Emilia-Romagna | Uses the engine's Rossi-group models to time sprays |
 | [taibi2023inducers](taibi2023inducers.md) | downy mildew, powdery mildew | infection, incubation, latent period, sporulation, sporangi… | Emilia-Romagna, Italy | Field data on the monocycle after PRI treatment, with observed latency and lesion counts for 2020-2022 at one… |
+| [tarara2009](tarara2009.md) | none | vine growth, shoot elongation, canopy mass | Prosser | Logistic shoot length, leaf number and mass of Concord on degree-days above 10 °C, five seasons, parameters with errors; half the final length at 300 °C·d; on the engine's clock |
 | [thiessen2018](thiessen2018.md) | powdery mildew | ascospore release | Oregon | The engine's record can become `read`, with initials L |
 | [thind1988](thind1988.md) | downy mildew | laboratory method | Punjab | Method only |
 | [thomidis2021](thomidis2021.md) | olive leaf spot | conidial germination, infection, leaf wetness, temperature … | Northern Greece, Chalkidiki, Potidea | Gives a Magarey-type infection response run on field data with a stated validation rule (predicted day agains… |
@@ -675,6 +677,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [viruega2013](viruega2013.md) | olive scab | inoculum production, dispersal | Andalusia | Clear |
 | [volpi2021](volpi2021.md) | downy mildew, powdery mildew, grey mould | forecasting | Tuscany | Tuscany's IPM network, 2006-2019, behind tree classifiers |
 | [wakehamnd](wakehamnd.md) | grey mould | bio-aerosol, inoculum availability, wind speed, relative hu… | United Kingdom | None. Recorded so that it is not read again: Botrytis aerobiology in UK tomato glasshouses, with no downy mil… |
+| [wang2020](wang2020.md) | none | phenology, model transfer | China | Six European heat-sum and chilling models run with their parameters on four cultivars at five Chinese sites: most err by 10 d or more until the critical sum is refitted; GDD10 the only budburst model that held |
 | [watson2002](watson2002.md) | brown rot (Monilinia) | sporulation | South Carolina | Clear and of little use to a grape truth |
 | [williams2024](williams2024.md) | none | remote sensing | England | Cover crop dominates the Sentinel-2 signal of a vineyard |
 | [wimmer2009](wimmer2009.md) | none | phenology, flowering, climate trends | Wachau | Krems warming 1971-2007 with Gladstones' index and a 1965-2007 Grüner Veltliner flowering record trended on year (3 d a decade), no fit on temperature |

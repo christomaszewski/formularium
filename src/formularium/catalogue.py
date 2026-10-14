@@ -790,13 +790,17 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("veraison.riesling.k", 407.18, "DOY", "Table 5, Eq. 3", "read"),
             Published("veraison.riesling.alpha", -6.08, "d/°C", "Table 5, Eq. 3", "read"),
             Published("veraison.riesling.beta", -6.21, "d/°C", "Table 5, Eq. 3", "read"),
-            Published("budburst.trincadeira.k", 111.42, "DOY", "Table 5, Eq. 1", "read"),
-            Published("budburst.trincadeira.alpha", -5.42, "d/°C", "Table 5, Eq. 1", "read"),
-            Published("flowering.trincadeira.k", 267.7, "DOY", "Table 5, Eq. 2", "read"),
-            Published("flowering.trincadeira.alpha", -6.79, "d/°C", "Table 5, Eq. 2", "read"),
-            Published("veraison.trincadeira.k", 439.08, "DOY", "Table 5, Eq. 3", "read"),
-            Published("veraison.trincadeira.alpha", -12.42, "d/°C", "Table 5, Eq. 3", "read"),
-            Published("veraison.trincadeira.beta", -4.3, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("budburst.trincadeira_pratas.k", 111.42, "DOY", "Table 5, Eq. 1", "read"),
+            Published("budburst.trincadeira_pratas.alpha", -5.42, "d/°C", "Table 5, Eq. 1", "read"),
+            Published("flowering.trincadeira_pratas.k", 267.7, "DOY", "Table 5, Eq. 2", "read"),
+            Published(
+                "flowering.trincadeira_pratas.alpha", -6.79, "d/°C", "Table 5, Eq. 2", "read"
+            ),
+            Published("veraison.trincadeira_pratas.k", 439.08, "DOY", "Table 5, Eq. 3", "read"),
+            Published(
+                "veraison.trincadeira_pratas.alpha", -12.42, "d/°C", "Table 5, Eq. 3", "read"
+            ),
+            Published("veraison.trincadeira_pratas.beta", -4.3, "d/°C", "Table 5, Eq. 3", "read"),
             Published("budburst.viosinho.k", 120.1, "DOY", "Table 5, Eq. 1", "read"),
             Published("budburst.viosinho.alpha", -5.69, "d/°C", "Table 5, Eq. 1", "read"),
             Published("flowering.viosinho.k", 285.96, "DOY", "Table 5, Eq. 2", "read"),
@@ -871,6 +875,8 @@ FORMULATIONS: dict[str, Formulation] = {
             " the paper calls it prediction, not a forecast in season. The authors say the"
             " models need local calibration; applied to Loureiro (Vinhos Verdes) and"
             " Touriga-Franca (Douro) the budburst R²cv fell to 0.32 and 0.38.",
+            "Trincadeira-das-Pratas (white, Table 5) is keyed trincadeira_pratas to keep it apart"
+            " from the red Trincadeira; Pinot is printed without its colour.",
             "Compared with a 10 °C degree-day model on the two calibration varieties (Table 4):"
             " budburst R²cv 0.63 and 0.69 against 0.40 and 0.48; veraison 0.77 and 0.88"
             " against 0.31 and 0.53.",
@@ -2417,6 +2423,128 @@ FORMULATIONS: dict[str, Formulation] = {
             " sum is well along delay budburst and are not modelled.",
             "'17 années (1961 à 1987)' spans 27 calendar years; the scale's 'dix-huit années"
             " (1970-1988)' nineteen. Four references in the text, five starred in Table VII.",
+        ),
+    ),
+    "bindi1997.growth": Formulation(
+        "A whole-vine model: leaves appear at a rate linear in the day's mean temperature,"
+        " bloom at 17 leaves, shoot leaf area a power of leaf number, biomass by radiation use"
+        " efficiency, fruit growth after degree-day lags",
+        (
+            "Bindi, Miglietta, Gozzini, Orlandini & Seghi 1997, Vitis 36(2): 67-71, Table 1 and"
+            " Fig. 1 (p. 68)"
+        ),
+        year=1997,
+        authors=("Bindi, M.", "Miglietta, F.", "Gozzini, B.", "Orlandini, S.", "Seghi, L."),
+        authors_complete=True,
+        authors_from="read",
+        checked="bindi_1997a.pdf (the 2026-10-14 drop; Vitis OJS galley)",
+        doi="10.5073/vitis.1997.36.67-71",
+        structures=(
+            "rate-temperature-response",
+            "degree-day-phenology",
+            "growth-on-thermal-time",
+            "allometry",
+            "radiation-use-efficiency",
+        ),
+        calibrated_on=("bindi1997.mondeggi",),
+        calibration_note=(
+            "Leaf number rate RLF = (a + b Tmd)(1 + c SLN) with a -0.28, b 0.04, c -0.015 per"
+            " day, credited to Miglietta et al. 1992; since the rate is linear in the daily mean"
+            " and accumulates daily, the leaf count is a degree-day sum above a/b = 7 °C scaled"
+            " by (1 + c SLN), and bloom at SLN > 17 is a heat-sum threshold: the engine's form"
+            " for a stage, which is why degree-day-phenology is among the tags. Shoot leaf area"
+            " SLA = d SLN^f (5.39, 2.13) and LAI = SLA NS / (COV PLA); fruit growth starts after"
+            " LAG = 40 °C d above 10 °C from bloom and ends at MAT = 1,440; biomass is"
+            " radiation times RUE 1.001 g/MJ cut by a quadratic in 0.25 Tmn + 0.75 Tmx, with"
+            " interception 1 - exp(-0.5 LAI). Budburst is an observed input. Every constant"
+            " comes from one Sangiovese season (1992); part II validates on 1993-1994 (literature/"
+            "bindi1997b when read). Table 1 read 2026-10-14 in the page image"
+            " (literature/bindi1997)."
+        ),
+        parameters=(
+            Published("rlf.a", -0.28, "leaf/d", "Table 1 (p. 68)", "read"),
+            Published("rlf.b", 0.04, "leaf/d/°C", "Table 1 (p. 68)", "read"),
+            Published("rlf.c", -0.015, "1/leaf", "Table 1 (p. 68)", "read"),
+            Published("sla.d", 5.39, "m²? (see flag)", "Table 1 (p. 68)", "read"),
+            Published("sla.f", 2.13, "1", "Table 1 (p. 68)", "read"),
+            Published("bloom_leaf_number", 17, "leaves", "Fig. 1 box a (p. 68): SLN > 17", "read"),
+            Published("cov", 0.75, "1", "Table 1 (p. 68)", "read"),
+            Published("rue", 1.001, "g/MJ", "Table 1 (p. 68)", "read"),
+            Published("k_extinction", 0.5, "1", "Table 1 (p. 68)", "read"),
+            Published("lag", 40.0, "°C·d", "Table 1 (p. 68)", "read"),
+            Published("mat", 1440.0, "°C·d", "Table 1 (p. 68)", "read"),
+            Published("t_base", 10.0, "°C", "Table 1 (p. 68): TU = Tmd - Tb", "read"),
+            Published("shoots_per_plant", 11, "shoots", "Table 1 (p. 68)", "read"),
+            Published("planting_area", 3.0, "m²/plant", "Table 1 (p. 68)", "read"),
+            Published("fbi_slope", 0.00443, "1/d", "Table 1 (p. 68)", "read"),
+        ),
+        flags=(
+            "SLA = 5.39 SLN^2.13 gives about 2,250 at 17 leaves, far above Fig. 2's 0-2 m²"
+            " axis, so the printed units or form of the leaf-area relation do not reproduce"
+            " the figure; the text calls it exponential. Not corrected.",
+            "The units of a, b, c are not printed; the RLF base of 7 °C is arithmetic, not a"
+            " printed base. K = 0.5 has no source.",
+            "Parameterised on a single season of one vineyard, as the authors say; no shoot"
+            " length, canopy height or susceptibility is modelled.",
+        ),
+    ),
+    "tarara2009.canopy_logistic": Formulation(
+        "Shoot length, leaves per shoot and shoot vegetative and fruit mass of Concord as"
+        " logistic curves of degree-days above 10 °C from 1 January",
+        (
+            "Tarara, Blom, Shafii, Price & Olmstead 2009, HortScience 44(2): 334-340, Eq. 1 and"
+            " Table 1 (pp. 336-337)"
+        ),
+        year=2009,
+        authors=(
+            "Tarara, Julie M.",
+            "Blom, Paul E.",
+            "Shafii, Bahman",
+            "Price, William J.",
+            "Olmstead, Mercy A.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="julie_2009.pdf (the 2026-10-14 drop)",
+        doi="10.21273/HORTSCI.44.2.334",
+        structures=("growth-on-thermal-time", "degree-day-phenology", "allometry"),
+        calibrated_on=("tarara2009.prosser",),
+        calibration_note=(
+            "y = A / (1 + exp(-B (DD - D_A))), fitted by nonlinear least squares to 1,360"
+            " destructively sampled shoots pooled over five seasons; A the asymptote, D_A the"
+            " degree-days to half of it, B the rate, with standard errors and 95 % limits in"
+            " Table 1. The clock is the engine's degree-day sum (base 10 °C from 1 January, no"
+            " cap), and the day a shoot reaches a length is a degree-day threshold on this"
+            " curve, which is why degree-day-phenology is among the tags. Vegetative mass is"
+            " also a line in shoot length (0.678 SL - 7.25 g, R² 0.87) and in leaf number"
+            " (4.431 LN - 8.31, R² 0.83). The fruit curves fit poorly by the authors' account."
+            " Table 1 read 2026-10-14 in the page image (literature/tarara2009)."
+        ),
+        parameters=(
+            Published("shoot_length.a", 82.047, "cm", "Table 1 (p. 337), SE 1.938", "read"),
+            Published("shoot_length.b", 0.009, "1/(°C·d)", "Table 1 (p. 337), SE 0.001", "read"),
+            Published("shoot_length.d_a", 300.560, "°C·d", "Table 1 (p. 337), SE 9.244", "read"),
+            Published("leaves.a", 11.953, "leaves", "Table 1 (p. 337), SE 0.254", "read"),
+            Published("leaves.b", 0.011, "1/(°C·d)", "Table 1 (p. 337), SE 0.001", "read"),
+            Published("leaves.d_a", 253.320, "°C·d", "Table 1 (p. 337), SE 7.894", "read"),
+            Published("vegetative_mass.a", 47.146, "g", "Table 1 (p. 337), SE 1.298", "read"),
+            Published("vegetative_mass.b", 0.011, "1/(°C·d)", "Table 1 (p. 337), SE 0.001", "read"),
+            Published(
+                "vegetative_mass.d_a", 330.306, "°C·d", "Table 1 (p. 337), SE 10.398", "read"
+            ),
+            Published("fruit_mass.a", 72.285, "g", "Table 1 (p. 337), SE 3.232", "read"),
+            Published("fruit_mass.b", 0.013, "1/(°C·d)", "Table 1 (p. 337), SE 0.001", "read"),
+            Published("fruit_mass.d_a", 599.100, "°C·d", "Table 1 (p. 337), SE 14.695", "read"),
+            Published("mass_from_length.slope", 0.678, "g/cm", "p. 336, R² 0.87", "read"),
+            Published("mass_from_length.intercept", -7.250, "g", "p. 336", "read"),
+            Published("t_base", 10.0, "°C", "p. 335, from 1 January, no upper threshold", "read"),
+        ),
+        flags=(
+            "Concord is Vitis labruscana under deficit irrigation at Prosser: shoot length"
+            " saturates at 82 cm and 12 leaves, numbers no vinifera vineyard would share; the"
+            " form and the time scale (half the final length at 300 °C·d) are what transfer.",
+            "No leaf area, canopy height or susceptibility; the only dates are degree-day marks"
+            " (shoot length within 5 % of its maximum at 635 °C·d, 8-13 July).",
         ),
     ),
     "molitor2014.shoots": Formulation(

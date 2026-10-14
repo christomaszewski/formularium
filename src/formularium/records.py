@@ -116,6 +116,13 @@ STRUCTURES = {
     " temperature means, with no heat summed to a threshold",
     "days-remaining-regression": "days remaining to a stage as a linear function of the date,"
     " heat and soil sums, photoperiod and light, refitted each day",
+    "growth-on-thermal-time": "a shoot, leaf or mass measure as a curve of a heat sum (the"
+    " engine's clock, with no threshold stage)",
+    "rate-temperature-response": "a daily rate of growth or development as a function of"
+    " that day's temperature",
+    "allometry": "one plant measure from another (leaf area from leaf count, length or shoot"
+    " length)",
+    "radiation-use-efficiency": "biomass as intercepted radiation times an efficiency",
 }
 
 

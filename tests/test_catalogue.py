@@ -99,6 +99,8 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "alleweldt1975.budburst": ("alleweldt1975.flein",),
         "garciatejera2022.spring_warming": ("garciatejera2022.plots",),
         "pouget1988.budburst": ("pouget1988.bordeaux",),
+        "bindi1997.growth": ("bindi1997.mondeggi",),
+        "tarara2009.canopy_logistic": ("tarara2009.prosser",),
         "puelles2024.ur": ("puelles2024.rioja",),
         "rosa1995.incubation": ("goidanich1957", "zachos1959", "orlandini1993.emergences"),
         "orlandini2008.plasmo": (
