@@ -564,6 +564,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [reinehr2021](reinehr2021.md) | downy mildew, grey mould | season severity, host vigour | Santa Catarina | Less vigour, less downy mildew; no untreated plot |
 | [reis2013](reis2013.md) | downy mildew | spray timing, validation | Rio Grande do Sul | A Lalancette-based trigger; three seasons of untreated AUDPC |
 | [reis2020](reis2020.md) | none | phenology | Portugal | Held out by structure, read strictly (Agrarium's candidates) |
+| [reis2022](reis2022.md) | none | phenology, budburst, flowering, veraison | Douro | Reis 2020's sigmoid forcing model mapped over the Douro for two Touriga cultivars with EURO-CORDEX futures, only the critical sums F printed; a heat sum to a threshold, so not a truth candidate, nothing runnable added |
 | [rienth2019](rienth2019.md) | downy mildew | infection, spray timing, leaf wetness | Switzerland | None. Recorded so that it is not read again. |
 | [rienth2021](rienth2021.md) | downy mildew, powdery mildew, grey mould, grapevine fanleaf virus, grapevine leafroll virus, grapevine red blotch virus | season severity, infection, ontogenic resistance, sporulati… | Burgundy (cited model study), Europe, wine-growin… | None beyond leads: its cited Bove et al. 2020 DM simulation and Kennelly et al. 2005 ontogenic-resistance pap… |
 | [roberts2017](roberts2017.md) | none | statistics | general | Block cross-validation for structured data |
@@ -603,6 +604,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [salotti2022](salotti2022.md) | downy mildew, powdery mildew, black rot | host resistance | Emilia-Romagna | 16 unsprayed varieties over four seasons |
 | [salotti2023](salotti2023.md) | anthracnose, ripe rot | infection, incubation | several | A Colletotrichum model by clade; Magarey's f(T) for incubation |
 | [salotti2026](salotti2026.md) | alternaria disease complex, alternaria leaf spot, mycotoxin contamination | infection, sporulation, wetness duration, relative humidity… | Italy, India, Canada, Foggia Italy | A tomato Alternaria process model with a temperature-times-wetness infection rate, of the form the brief list… |
+| [sanchezdemiguel2011](sanchezdemiguel2011.md) | none | leaf area, allometry | Madrid, Toledo | Leaf area per shoot as a power law of leaves per shoot times the mean of the largest and smallest leaf (Lopes & Pinto refitted, MAPE 6-11 %) with per-cultivar main-vein lines, and the leaf sizes and counts per shoot at flowering and ripening for five cultivars |
 | [sanna2014](sanna2014.md) | downy mildew | forecasting, measurement | Italy | Sensor calibration moves EPI's start by 7-12 days |
 | [sanna2017](sanna2017.md) | downy mildew | incubation, sensor uncertainty | Piedmont | Says the Rossi-group regressions were adapted to Goidanich's table |
 | [sanna2018](sanna2018.md) | downy mildew | sensor error | Piedmont | Calibration shifts the forecast by up to 4 days |
@@ -648,6 +650,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [stille1965](stille1965.md) | potato late blight | germination | Germany | Another oomycete |
 | [stobwasser1956](stobwasser1956.md) | apple scab, downy mildew | spray application | Württemberg | Spray technology |
 | [stojanova2026](stojanova2026.md) | downy mildew, powdery mildew | spray timing, season severity, leaf wetness, infection, spr… | Slovenia, Podravska region | The paper offers only an operational spray count from one vineyard and an unvalidated proposal to run a powde… |
+| [su2022](su2022.md) | none | leaf area index, growth | Turpan | Relative LAI of Thompson Seedless as a modified logistic or log-normal of degree-days above 10 °C from one drip-irrigated season, maximum LAI a line on water use; the engine's thermal-time form, said so |
 | [sun2026](sun2026.md) | none | dormancy, phenology | Shanghai | Held out by structure if it drove a truth |
 | [sutherland2010](sutherland2010.md) | powdery mildew | volatile organic compounds, detection, infection, sensor, e… | California, USA | None. Recorded so that it is not read again. |
 | [syobu2022](syobu2022.md) | downy mildew | infection, sporulation, season severity, leaf wetness, incu… | Japan, Saga Prefecture | A dataset for onion, not grapevine: observed disease in three seasons with station weather (2016-2018) that a… |

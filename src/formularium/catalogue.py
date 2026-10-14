@@ -2664,6 +2664,117 @@ FORMULATIONS: dict[str, Formulation] = {
             " constants for L² and W².",
         ),
     ),
+    "sanchezdemiguel2011.shoot_leaf_area": Formulation(
+        "Leaf area per shoot from leaves per shoot and the largest and smallest leaf, five"
+        " cultivars at Madrid and Toledo",
+        "Sanchez-de-Miguel, Junquera, de la Fuente, Jimenez, Linares, Baeza & Lissarrague 2011,"
+        " Spanish Journal of Agricultural Research 9(1): 202-212, Eqs 6-7 (p. 206), Eqs 1-5"
+        " (p. 205), Table 7 (p. 208)",
+        year=2011,
+        authors=(
+            "Sanchez-de-Miguel, P.",
+            "Junquera, P.",
+            "de la Fuente, M.",
+            "Jimenez, L.",
+            "Linares, R.",
+            "Baeza, P.",
+            "Lissarrague, J. R.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="patricia_2011.pdf (the 2026-10-14 drop)",
+        doi="10.5424/sjar/20110901-354-10",
+        structures=("allometry",),
+        calibrated_on=("sanchezdemiguel2011.madrid_toledo",),
+        calibration_note=(
+            "Lopes & Pinto 2005's form refitted: log10 of leaf area per shoot on log10 of"
+            " leaves per shoot times the mean of the largest and smallest leaf (MLA), primary"
+            " and lateral shoots apart, on the Syrah Toledo matrix (n 1,229) and applied to all"
+            " six cultivar-sites; the reference areas are sums of one leaf in three through the"
+            " paper's own main-vein lines (Eqs 1-5, 25 leaves a cultivar). Validation slopes"
+            " 0.89-1.08, MAPE 6.3-11.3 %. The page prints the equations as 10 x [...]; read as"
+            " a power of ten (literature/sanchezdemiguel2011). Pages 205-208 read 2026-10-14"
+            " in the page images."
+        ),
+        parameters=(
+            Published("primary.a", 0.012, "log10 cm²", "Eq. 6 (p. 206), R² 0.98", "read"),
+            Published("primary.b", 0.996, "1", "Eq. 6 (p. 206)", "read"),
+            Published("lateral.a", 0.036, "log10 cm²", "Eq. 7 (p. 206), R² 0.99", "read"),
+            Published("lateral.b", 0.982, "1", "Eq. 7 (p. 206)", "read"),
+            Published("cabernet_franc.leaf.k", 1.9077, "cm² cm^-1.803", "Eq. 1 (p. 205)", "read"),
+            Published("cabernet_franc.leaf.p", 1.803, "1", "Eq. 1 (p. 205), R² 0.93", "read"),
+            Published("cabernet_sauvignon.leaf.a", 0.38, "cm²", "Eq. 2 (p. 205)", "read"),
+            Published("cabernet_sauvignon.leaf.b", 1.21, "1", "Eq. 2 (p. 205), R² 0.93", "read"),
+            Published("merlot.leaf.a", -58.452, "cm²", "Eq. 3 (p. 205)", "read"),
+            Published("merlot.leaf.b", 18.291, "cm", "Eq. 3 (p. 205), R² 0.86", "read"),
+            Published("syrah.leaf.a", -75.409, "cm²", "Eq. 4 (p. 205)", "read"),
+            Published("syrah.leaf.b", 21.41, "cm", "Eq. 4 (p. 205), R² 0.94", "read"),
+            Published("tempranillo.leaf.a", -69.302, "cm²", "Eq. 5 (p. 205)", "read"),
+            Published("tempranillo.leaf.b", 20.306, "cm", "Eq. 5 (p. 205), R² 0.93", "read"),
+            Published(
+                "flowering.cabernet_sauvignon.leaf_area", 96, "cm²", "Table 7 (p. 208)", "read"
+            ),
+            Published("flowering.cabernet_sauvignon.leaves", 20, "1", "Table 7 (p. 208)", "read"),
+            Published("flowering.merlot.leaf_area", 118, "cm²", "Table 7 (p. 208)", "read"),
+            Published("flowering.merlot.leaves", 17, "1", "Table 7 (p. 208)", "read"),
+            Published("flowering.syrah.leaf_area", 183, "cm²", "Table 7 (p. 208)", "read"),
+            Published("flowering.syrah.leaves", 12, "1", "Table 7 (p. 208)", "read"),
+            Published("flowering.tempranillo.leaf_area", 141, "cm²", "Table 7 (p. 208)", "read"),
+            Published("flowering.tempranillo.leaves", 12, "1", "Table 7 (p. 208)", "read"),
+        ),
+        flags=(
+            "Needs a leaf count and two leaf sizes per shoot: no time or temperature term."
+            " Cabernet Sauvignon's leaf line is quadratic in the main vein, Cabernet franc's a"
+            " power; the others are lines. Table 7's flowering and ripening means (primary"
+            " leaves, cm² and leaves a shoot) are the only seasonal numbers printed.",
+        ),
+    ),
+    "su2022.lai_curve": Formulation(
+        "Relative leaf area index of Thompson Seedless as a curve of degree-days above 10 °C,"
+        " with the maximum LAI a line on seasonal water use",
+        "Su, Tao, Sun, Shan & Wang 2022, Agronomy 12(5): 988, Table 3 (p. 9), Table 4 and"
+        " Eq. 15 (pp. 10-14)",
+        year=2022,
+        authors=("Su, L.", "Tao, W.", "Sun, Y.", "Shan, Y.", "Wang, Q."),
+        authors_complete=True,
+        authors_from="read",
+        checked="lijun_2022.pdf (the 2026-10-14 drop)",
+        doi="10.3390/agronomy12050988",
+        structures=("growth-on-thermal-time", "degree-day-phenology"),
+        calibrated_on=("su2022.turpan",),
+        calibration_note=(
+            "RLAI = LAI / LAIm against degree-days (daily mean of maximum and minimum, each"
+            " capped at 38 °C, above 10 °C; start date not printed), fitted by a genetic"
+            " algorithm to the mean of six drip treatments on 15 sampling days of one season"
+            " (2009). Five forms printed; the modified logistic (R² 0.9837, relative error"
+            " 7.45 %) and the log-normal (0.9805, 8.16 %) are recorded, the paper preferring"
+            " the three-parameter log-normal. Table 3 read 2026-10-14 in the page image"
+            " (literature/su2022)."
+        ),
+        parameters=(
+            Published("logistic.max", 1.4, "1", "Table 3 (p. 9)", "read"),
+            Published("logistic.a", 3.7437, "1", "Table 3 (p. 9)", "read"),
+            Published("logistic.b", -4.8303e-3, "1/°Cd", "Table 3 (p. 9)", "read"),
+            Published("logistic.c", 1.2340e-6, "1/°Cd²", "Table 3 (p. 9)", "read"),
+            Published("lognormal.max", 0.9771, "1", "Table 3 (p. 9)", "read"),
+            Published("lognormal.gdd0", 2274.5, "°Cd", "Table 3 (p. 9)", "read"),
+            Published("lognormal.alpha", 0.9142, "1", "Table 3 (p. 9)", "read"),
+            Published("t_base", 10, "°C", "p. 5", "read"),
+            Published("t_upper", 38, "°C", "p. 5", "read"),
+            Published("laim.slope", 0.0056, "1/mm", "Eq. 15 (p. 10), R² 0.9654", "read"),
+            Published("laim.intercept", -0.7418, "1", "Eq. 15 (p. 10)", "read"),
+            Published("laim.x1", 5.84, "1", "Table 4 (p. 14), 1,215 mm", "read"),
+            Published("laim.x6", 2.73, "1", "Table 4 (p. 14), 637.5 mm", "read"),
+        ),
+        flags=(
+            "The engine's form: a growth measure as a function of a degree-day sum alone."
+            " One season, one table-grape cultivar, a desert climate with two prunings. The"
+            " fitted peaks (1,960-2,275 °Cd) sit after the measured one (about 1,690 °Cd). The"
+            " modified logistic's fitted ceiling is 1.4 for a relative index whose maximum"
+            " is 1; it peaks at 1.02 near 1,960 °Cd and passes half of that near 840 °Cd (own"
+            " calculation, not printed).",
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

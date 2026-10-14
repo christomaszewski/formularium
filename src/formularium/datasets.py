@@ -386,6 +386,24 @@ DATASETS: dict[str, Dataset] = {
         " literature/ruml2016); observed, no model",
         "read",
     ),
+    "sanchezdemiguel2011.madrid_toledo": Dataset(
+        "Leaves per shoot and the largest, smallest and mean leaf area of primary and lateral"
+        " shoots of Syrah, Cabernet Sauvignon, Cabernet franc, Merlot and Tempranillo at El"
+        " Socorro (Madrid, 730 m) and Syrah at a Toledo vineyard (488 m), 4,856 shoots over"
+        " 2003-2007 (the text says three years), late April to early October, with 25 primary"
+        " and 25 lateral leaves a cultivar measured by image analysis for the main-vein lines",
+        "Sanchez-de-Miguel et al. 2011, Table 1 (p. 204) and pp. 204-205; the raw values are"
+        " not printed",
+        "read",
+    ),
+    "su2022.turpan": Dataset(
+        "Leaf area index of 12-year-old Thompson Seedless at Tie-Tier village, Turpan"
+        " (42.87 °N, 89.20 °E, 32.8 m), under six drip quotas of 637.5-1,215 mm, three vines a"
+        " treatment on 15 sampling days from 1 April to 1 October 2009, LAI from leaf counts and"
+        " a vein-length allometry; degree-days above 10 °C with a 38 °C cap",
+        "Su et al. 2022, Tables 1-2 (pp. 4, 7); the per-treatment LAI series are in Table 2",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"

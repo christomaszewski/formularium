@@ -102,6 +102,8 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "bindi1997.growth": ("bindi1997.mondeggi",),
         "tarara2009.canopy_logistic": ("tarara2009.prosser",),
         "ruml2020.monthly_regression": ("ruml2016.karlovci",),
+        "sanchezdemiguel2011.shoot_leaf_area": ("sanchezdemiguel2011.madrid_toledo",),
+        "su2022.lai_curve": ("su2022.turpan",),
         "puelles2024.ur": ("puelles2024.rioja",),
         "rosa1995.incubation": ("goidanich1957", "zachos1959", "orlandini1993.emergences"),
         "orlandini2008.plasmo": (
