@@ -102,6 +102,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [biggs1988](biggs1988.md) | brown rot (Monilinia) | infection, incubation | Ontario | Its infection models are held out by structure (Broome's form) |
 | [biggs2016](biggs2016.md) | none | evapotranspiration | global | Clear, and of indirect use |
 | [bindi1997](bindi1997.md) | none | vine growth, leaf appearance, leaf area, phenology | Chianti | A whole-vine model with every constant printed from one 1992 Sangiovese season: leaves at a temperature-linear rate (a heat sum above 7 °C), bloom at 17 leaves, leaf area a power of leaf number, biomass by RUE; kin to the engine's degree-day pieces |
+| [bindi1997b](bindi1997b.md) | none | vine growth, model validation | Chianti | The whole-vine model on two more seasons and on Cabernet Sauvignon with three constants refitted: dry matter within 10-12 %, leaf area over-predicted and shown only in a figure |
 | [biomebgc2010](biomebgc2010.md) | none | evapotranspiration, interception | Generic global biomes | No hourly wetness |
 | [bivolnd](bivolnd.md) | downy mildew, powdery mildew, grey mould, botrytis, pseudopeziza tracheiphila | fungicide efficacy, copper fungicide, spray timing, disease… | Moldova, central zone, Ialoveni | Little for the truth or the engine: a Moldovan copper and metiram efficacy trial with no weather series and a… |
 | [blaeser1978](blaeser1978.md) | downy mildew | sporulation, sporangia survival, dispersal | Germany | The laboratory survival data behind the 1979 curves; sporulation needs 98 % RH and 4 h dark |
@@ -144,6 +145,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [burruano1992soil](burruano1992soil.md) | downy mildew | oospore maturation | Sicily | Soil moisture changes maturation; preliminary |
 | [burruano2006](burruano2006.md) | downy mildew | oospores, latency | Sicily | Summer latency up to 52 days in Sicily |
 | [busato2022](busato2022.md) | downy mildew | sporulation, infection, biocontrol, biopesticide, secondary… | Italy, Veneto, Nervesa della Battaglia | None. Recorded so that it is not read again. |
+| [buttaro2015](buttaro2015.md) | none | leaf area, allometry | Apulia | A leaf's area as −0.465 + 0.914 × length × width for eight table-grape genotypes, r² 0.986, validated on a ninth |
 | [caffarra2010](caffarra2010.md) | none | phenology, budburst, dormancy, chilling | Trentino, Veneto, Piedmont | A chilling-forcing Chardonnay model (Chuine's Unified cut to six parameters) with every parameter printed; a third to a half of the variance explained away from Conegliano |
 | [caffarra2011](caffarra2011.md) | none | phenology, climate projection | Trentino | The 2010 Chardonnay model run at ten Trentino sites under HadCM3: larger advances higher up and for veraison |
 | [caffi2006validation](caffi2006validation.md) | downy mildew | primary infection, validation | Italy | Validates the engine's Rossi model: no misses, 9.6 % false alarms |
@@ -590,6 +592,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [rowlandson2015](rowlandson2015.md) | none | leaf wetness, sensors | general | The review behind the wetness definitions Agrarium uses |
 | [rumbou2004](rumbou2004.md) | downy mildew | epidemic structure, oospores, season severity | Greece | one clone 72-92 %; a drier 2002 worse after a heavier 2001: the previous year's inoculum |
 | [ruml2016](ruml2016.md) | none | phenology, sensitivity | Serbia | Days per °C for 20 cultivars and four stages (budburst 3.6, flowering 3.1, veraison 5.2, harvest 7.4 d) from lines on period temperatures; the windows close at the onset |
+| [ruml2020](ruml2020.md) | none | phenology, budburst, flowering | Serbia | The Sremski Karlovci lines recast: one pooled line per stage on the period's mean temperature plus a cultivar offset for 20 cultivars; in-sample errors 3-4 d |
 | [ruralcatmildiu](ruralcatmildiu.md) | downy mildew | copper use, alternative fungicides, primary infection, seco… | Catalonia, Spain, Falset | Gives the truth a practitioner's rule set and timing (10:10:24, four stages, 10 mm wash-off) for Catalan orga… |
 | [ryu2024](ryu2024.md) | none | interpolation error | Jeju Island, South Korea | Interpolation error of 10-min temperature with IoT stations (MAE about 0.7 °C) |
 | [sagar2023](sagar2023.md) | powdery mildew | conidial germination | Karnataka | Inconsistent tables; not usable |

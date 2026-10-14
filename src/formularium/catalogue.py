@@ -2457,8 +2457,9 @@ FORMULATIONS: dict[str, Formulation] = {
             " LAG = 40 °C d above 10 °C from bloom and ends at MAT = 1,440; biomass is"
             " radiation times RUE 1.001 g/MJ cut by a quadratic in 0.25 Tmn + 0.75 Tmx, with"
             " interception 1 - exp(-0.5 LAI). Budburst is an observed input. Every constant"
-            " comes from one Sangiovese season (1992); part II validates on 1993-1994 (literature/"
-            "bindi1997b when read). Table 1 read 2026-10-14 in the page image"
+            " comes from one Sangiovese season (1992); part II (literature/bindi1997b) validates on"
+            " 1993-1994 and refits three constants for Cabernet Sauvignon. Table 1 read"
+            " 2026-10-14 in the page image"
             " (literature/bindi1997)."
         ),
         parameters=(
@@ -2477,6 +2478,9 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("shoots_per_plant", 11, "shoots", "Table 1 (p. 68)", "read"),
             Published("planting_area", 3.0, "m²/plant", "Table 1 (p. 68)", "read"),
             Published("fbi_slope", 0.00443, "1/d", "Table 1 (p. 68)", "read"),
+            Published("cabernet.sla.f", 2.06, "1", "Part II, Table 1 (p. 73)", "read"),
+            Published("cabernet.rue", 0.691, "g/MJ", "Part II, Table 1 (p. 73)", "read"),
+            Published("cabernet.fbi_slope", 0.00328, "1/d", "Part II, Table 1 (p. 73)", "read"),
         ),
         flags=(
             "SLA = 5.39 SLN^2.13 gives about 2,250 at 17 leaves, far above Fig. 2's 0-2 m²"
@@ -2545,6 +2549,119 @@ FORMULATIONS: dict[str, Formulation] = {
             " form and the time scale (half the final length at 300 °C·d) are what transfer.",
             "No leaf area, canopy height or susceptibility; the only dates are degree-day marks"
             " (shoot length within 5 % of its maximum at 635 °C·d, 8-13 July).",
+        ),
+    ),
+    "ruml2020.monthly_regression": Formulation(
+        "Budburst and flowering of 20 cultivars as the average cultivar's line on the period's"
+        " mean temperature plus a cultivar offset in days",
+        (
+            "Ruml & Korać 2020, Agro-knowledge Journal 21(2): 81-88, Eqs 2-3 (p. 84) and Table 1"
+            " (p. 83)"
+        ),
+        year=2020,
+        authors=("Ruml, Mirjana", "Korać, Nada"),
+        authors_complete=True,
+        authors_from="read",
+        checked="mirjana_2020.pdf (the 2026-10-14 drop)",
+        doi="10.7251/AGREN2002081R",
+        structures=("monthly-temperature-regression",),
+        calibrated_on=("ruml2016.karlovci",),
+        calibration_note=(
+            "The average cultivar's lines of literature/ruml2016 restated: budburst day of year"
+            " = -3.62 Tb + 133.0 with Tb the mean daily temperature from 1 March to the onset"
+            " (R² 0.71), flowering = -3.13 Tf + 217.1 with Tf the mean daily maximum from 15"
+            " April to the onset (R² 0.85); each cultivar adds its correction factor, the"
+            " difference between its mean date and the average cultivar's over 1986-2007"
+            " (Table 1). In-sample mean absolute error 4 d (budburst, 3-6 by cultivar) and 3 d"
+            " (flowering, 2-4); no hold-out. Read 2026-10-14 in the page images"
+            " (literature/ruml2020)."
+        ),
+        parameters=(
+            Published("budburst.k", 133.0, "DOY", "Eq. 2 (p. 84)", "read"),
+            Published("budburst.alpha", -3.62, "d/°C", "Eq. 2 (p. 84)", "read"),
+            Published("flowering.k", 217.1, "DOY", "Eq. 3 (p. 84)", "read"),
+            Published("flowering.alpha", -3.13, "d/°C", "Eq. 3 (p. 84)", "read"),
+            Published("budburst.pinot_noir.offset", -1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.pinot_noir.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.cabernet_sauvignon.offset", 7, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.cabernet_sauvignon.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.gamay.offset", -3, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.gamay.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.merlot.offset", 3, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.merlot.offset", 0, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.probus.offset", 5, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.probus.offset", 4, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.limberger.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.limberger.offset", -1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.prokupac.offset", -1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.prokupac.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.chardonnay.offset", -4, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.chardonnay.offset", -3, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.bouvier.offset", -4, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.bouvier.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.ezerjo.offset", -3, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.ezerjo.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.petra.offset", -4, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.petra.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.pinot_blanc.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.pinot_blanc.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.neoplanta.offset", 0, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.neoplanta.offset", 2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.kreaca.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.kreaca.offset", 2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.muscat_ottonel.offset", 0, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.muscat_ottonel.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.riesling_239_20_gm.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.riesling_239_20_gm.offset", 0, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.pinot_gris.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.pinot_gris.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.beli_medenac.offset", 2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.beli_medenac.offset", 2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.bagrina.offset", 3, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.bagrina.offset", 4, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.riesling_italico.offset", 2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.riesling_italico.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+        ),
+        flags=(
+            "The windows end at the onset itself, so as printed the lines cannot forecast; the"
+            " paper does not say how it would be used before the stage. A simulator that knows"
+            " its season can read them retrospectively.",
+            "Slopes of -3.62 and -3.13 here against the 2016 table's -3.6 and -3.1 (rounding);"
+            " the cultivar lines of 2016's Table 8 are replaced by offsets to the pooled line.",
+        ),
+    ),
+    "buttaro2015.leaf_area": Formulation(
+        "A grapevine leaf's area from its length times width, one line for eight table-grape"
+        " genotypes",
+        "Buttaro, Rouphael, Rivera, Colla & Gonnella 2015, Photosynthetica 53(3): 342-348,"
+        " Table 3 (p. 346)",
+        year=2015,
+        authors=("Buttaro, D.", "Rouphael, Y.", "Rivera, C. M.", "Colla, G.", "Gonnella, M."),
+        authors_complete=True,
+        authors_from="read",
+        checked="donato_2015.pdf (the 2026-10-14 drop)",
+        doi="10.1007/s11099-015-0117-2",
+        structures=("allometry",),
+        calibration_note=(
+            "LA = a + b (L x W) in cm2 fitted to 1,630 leaves of eight genotypes at Rutigliano"
+            " (Bari), 2010, pooled after per-genotype lines proved alike (not shown); r² 0.986;"
+            " validated on about 200 leaves of Italia in 2011 with a 0.8 % overestimate. Leaves"
+            " 10-540 cm², length 3.1-25 cm. Twelve earlier single-cultivar models are listed"
+            " (Table 1), Tsialtas et al. 2008's Cabernet line among them. Table 3 read 2026-10-14"
+            " in the page image (literature/buttaro2015)."
+        ),
+        parameters=(
+            Published("lw.a", -0.465, "cm²", "Table 3 (p. 346), SE 0.718", "read"),
+            Published("lw.b", 0.914, "1", "Table 3 (p. 346), SE 0.004", "read"),
+            Published("l.a", -88.599, "cm²", "Table 3 (p. 346), r² 0.884", "read"),
+            Published("l.b", 20.758, "cm", "Table 3 (p. 346)", "read"),
+            Published("w.a", -112.92, "cm²", "Table 3 (p. 346), r² 0.754", "read"),
+            Published("w.b", 20.075, "cm", "Table 3 (p. 346)", "read"),
+        ),
+        flags=(
+            "Table grapes in Apulia; a per-leaf relation, so leaf area per shoot or vine needs"
+            " leaf counts and sizes from elsewhere. Table 3's rows 4 and 5 print identical"
+            " constants for L² and W².",
         ),
     ),
     "molitor2014.shoots": Formulation(
