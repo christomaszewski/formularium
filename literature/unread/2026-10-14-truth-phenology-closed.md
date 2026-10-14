@@ -89,3 +89,29 @@ These are the documents the 2026-10-14 OpenAlex search for a phenology model and
 | 2026 | Miccichè, D. | Interannual assessment of intra-vineyard variability through NDVI-based zoning in a mediterranean environment | article | Camporeale, Alcamo PDO area, Sicily, Italy | Two-date UAV NDVI zoning of one vineyard with no seasonal curve and no growth or phenology model. | daniele_2026.pdf |
 | 2026 | Sodini, M. | Canopy volume mitigates hail damage on grapevine berries: insights on the use of ground-based LiDAR and Bayesian probabilistic analysis | article | University of Udine experimental vineyard, north-eastern Italy | One LiDAR survey around one hailstorm; no seasonal growth series and no growth or phenology model. | mirko_2026.pdf |
 | not stated | not stated | Policy dell'Università degli Studi di Firenze a favore dell'Accesso aperto alla letteratura scientifica | other (policy text) | Florence, Italy (University of Florence) | The file is an Italian open-access policy text, not a science paper; the batch lead (DOI 10.36253/ijam-1083) is absent from it, so the class is on the text as given. | giorgia_2021.pdf |
+
+## Snippet-grade facts from citing papers (Scite citation graph, 2026-10-14)
+
+Not read: these are sentences from open citing papers, found through Scite's citation
+graph for Schultz 1992 (78 citing edges resolved) and Lebon 2004 (3 edges, too few to
+trust). Each is `snippet` grade. They say what the closed papers hold, not their numbers
+as printed.
+
+- **Schultz 1992** models primary-shoot leaf emergence and the expansion of each leaf on
+  daily mean temperature above 10 °C and sums the primary leaf area per shoot; laterals
+  are not in it (Molitor et al. 2015, doi 10.1007/s10658-015-0835-0; Bleyer et al. 2020,
+  doi 10.3390/plants9060710, whose VitiMeteo treatments fire after 400, 600 or 800 cm² of
+  new main-shoot leaf area). VitiMeteo runs it, so it is a flag beside the engine's
+  vitimeteo.oospores, not a dependence.
+- **Phyllochron:** Louarn et al. 2007 (doi 10.1093/aob/mcl276) say their 0.044 ± 0.002
+  leaves per °Cd matches Lebon et al. 2004 (Grenache N) and Schultz 1992 (Riesling);
+  Calonnec et al. 2008 (doi 10.1111/j.1365-3059.2007.01783.x) take one leaf per
+  20 degree-days above 10 °C from Miglietta 1992 and Schultz 1992. Schultz's rate falls
+  with advancing thermal time (Schmidt et al. 2022, doi 10.3390/plants11060801).
+- **Leaf area per shoot:** Schultz 1992 reported 0.27 m² of primary leaf area a shoot in
+  1987 on vines with 16 shoots (Schmidt et al. 2019, doi 10.3390/agronomy9080426).
+- **Lebon 2004:** leaf number on the primary axis is linear in thermal time (Pallas et al.
+  2008; Louarn et al. 2010, doi 10.1093/aob/mcq173); its leaf-area allometry is Schultz
+  1992's quadratic in lamina length, refitted on 93 leaves.
+- **Louarn 2007a and 2007b** and Lebon 2004 are bronze open access at Oxford; Scite's
+  publisher links for all three answer 403 from this VM.
