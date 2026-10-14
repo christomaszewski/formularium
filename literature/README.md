@@ -421,6 +421,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [laviola2006](laviola2006.md) | downy mildew | laboratory storage | Sicily | Laboratory method only |
 | [law2012](law2012.md) | none | land surface model | Australia | Planning document |
 | [lebeda1994](lebeda1994.md) | downy mildews | review | global | Review; context |
+| [lebon2004](lebon2004.md) | none | leaf appearance, base temperature, leaf expansion, shoot architecture | Montpellier | Base temperature 9.2 °C fitted (10 °C used) and 0.046 unfolded leaves per °Cd for Grenache N, the rule behind Pallas 2008, Louarn 2007 and Schmidt 2019, with 0.043 leaves per day per °C above 9.2 °C as the one printed rate-temperature response; kin to the engine by form. |
 | [legler2010](legler2010.md) | powdery mildew | ascospore release, infection, conidia, sporulation, leaf we… | Italy, California, Germany, Chile, Quebec | A review of powdery mildew models that writes out the UC Davis index's rules (l. 196-215), which the truth mu… |
 | [lehoczky1965](lehoczky1965.md) | downy mildew | oospores, sporulation, infection, incubation, leaf wetness | Hungary | Summer oospore formation in leaf-disc culture without a cold period is a counter-observation to the winter-ma… |
 | [leolini2020](leolini2020.md) | none | phenology, budburst, model comparison | France, Luxembourg, Portugal | Six budbreak models for eight varieties: Unified best (RMSE 4-5 d), 8-10 d transferred; parameter tables printed, not transcribed |
@@ -435,6 +436,8 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [locci1969](locci1969.md) | downy mildew | infection anatomy | Lombardy | Morphology only |
 | [locci1974](locci1974.md) | powdery mildew | infection anatomy | Lombardy | Morphology only |
 | [lopezfrias2009](lopezfrias2009.md) | downy mildew | incubation, validation | Canary Islands | Prints the engine's Goidanich table, identical row for row |
+| [louarn2007](louarn2007.md) | none | shoot architecture, phyllochron, branching, leaf area | Montpellier | The cleanest printed phyllochron (0.044 ± 0.002 leaves per °Cd over three years and two cultivars) and the first printed branch rates and durations by zone for Grenache N and Syrah in pots; kin to the engine by form. |
+| [louarn2008](louarn2008.md) | none | canopy structure, leaf area density, light interception, training system | Châteauneuf-de-Gadagne, Vaucluse | A static 3D reconstruction of eight cultivar and training-system pairs with no heat sum and no growth in time; the usable numbers are maximal leaf area density (4.2-6.7 m²/m³) and light interception (20-67 %), and there is no record. |
 | [lu2020](lu2020.md) | powdery mildew | infection, latent period | Quebec | Clear by every recorded link, and a flag-free candidate for powdery mildew pieces, if… |
 | [lukas2016](lukas2016.md) | downy mildew | fungicide efficacy | South Tyrol | Stop-spray efficacy |
 | [lulu2008spatial](lulu2008spatial.md) | none | leaf wetness | São Paulo | Wetness across a canopy, against turf |

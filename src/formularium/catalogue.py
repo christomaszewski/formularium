@@ -3435,6 +3435,187 @@ FORMULATIONS: dict[str, Formulation] = {
             " the text (2.5 x 1.2 m).",
         ),
     ),
+    "lebon2004.leaf_development": Formulation(
+        "Leaves on a grapevine main stem as lines in degree-days above 10 °C, the leaf appearance"
+        " rate on mean temperature, and a leaf-area allometry, Grenache N",
+        "Lebon, Pellegrino, Tardieu & Lecoeur 2004, Annals of Botany 93(3): 263-274, Eqs 5-8"
+        " (p. 268), Eqs 1-3 and the lamina allometry (p. 266), Table 3",
+        year=2004,
+        authors=("Lebon, E.", "Pellegrino, A.", "Tardieu, F.", "Lecoeur, J."),
+        authors_complete=True,
+        authors_from="read",
+        checked="mch038.pdf (the 2026-10-15 drop)",
+        doi="10.1093/aob/mch038",
+        structures=(
+            "rate-temperature-response",
+            "growth-on-thermal-time",
+            "degree-day-phenology",
+            "allometry",
+        ),
+        calibrated_on=("lebon2004.montpellier",),
+        calibration_note=(
+            "Grenache N, four experiments at Montpellier with no water deficit: two in pots"
+            " (clone 226 on Fercal; 1999 and 2000 in the text, 2000 and 2001 in the tables) and"
+            " two in a vineyard (clone 70 on 110 Richter, planted 1987; 1999 and 2000). Leaves"
+            " counted on six to twelve shoots every 3-4 days or weekly; the leaf appearance rate"
+            " fitted over periods of 9-15 days at 13.0-23.8 °C across all four experiments, one"
+            " line for all (F 1.22); thermal time by daily integration above the base (CDD,"
+            " after Bonhomme 2000). The framework is Rickman & Klepper 1995's, the leaf-area"
+            " form Schultz 1992's. Pallas 2008 and Louarn 2007 borrow this paper's base and"
+            " rate: pallas2008.shoot_development and louarn2007.shoot_architecture compute the"
+            " same leaf-appearance rule. Read 2026-10-15 (literature/lebon2004); Eqs 1-3, the"
+            " 93-leaf allometry and Eqs 5-8 on printed pp. 266 and 268 read in the page images."
+        ),
+        parameters=(
+            Published(
+                "lar.a", 0.0430, "leaves/day/°C", "Eq. 5, p. 268, r² 0.837, n 376 (l. 545)", "read"
+            ),
+            Published("lar.b", -0.3946, "leaves/day", "Eq. 5, p. 268 (l. 545)", "read"),
+            Published(
+                "t_base.fitted",
+                9.2,
+                "°C",
+                "p. 268 (l. 547), -b/a, +/- 0.5 (SD or SE not said)",
+                "read",
+            ),
+            Published("t_base.used", 10, "°C", "pp. 266 and 268 (l. 421, 552)", "read"),
+            Published("initiated.a", 0.050, "leaves/°Cd", "Eq. 6, l. 548, r² 0.993", "read"),
+            Published("initiated.b", 7.85, "leaves", "Eq. 6, l. 548", "read"),
+            Published("unfolded.a", 0.046, "leaves/°Cd", "Eq. 7, l. 550, r² 0.986, n 186", "read"),
+            Published("unfolded.b", 0.36, "leaves", "Eq. 7, l. 550", "read"),
+            Published("expanded.a", 0.038, "leaves/°Cd", "Eq. 8, l. 551, r² 0.991", "read"),
+            Published("expanded.b", -5.27, "leaves", "Eq. 8, l. 551", "read"),
+            Published(
+                "leaf.a", 0.0075, "area/length² (units not printed)", "p. 266, l. 394, n 93", "read"
+            ),
+            Published(
+                "leaf.b",
+                0.07505,
+                "area/length (units not printed)",
+                "p. 266, l. 394, r² 0.901",
+                "read",
+            ),
+            Published("leaf.c", -29.151, "area (units not printed)", "p. 266, l. 394", "read"),
+            Published("expansion.duration.phytomer10", 366, "°Cd", "l. 579", "read"),
+            Published("expansion.duration.phytomer20", 425, "°Cd", "l. 579", "read"),
+            Published("expansion.increment.to10", 25, "°Cd per phytomer", "l. 598", "read"),
+            Published("expansion.increment.after10", 5, "°Cd per phytomer", "l. 599", "read"),
+            Published("internode.plateau", 100, "mm", "from phytomer 12, l. 587", "read"),
+        ),
+        flags=(
+            "Growth on thermal time is the engine's own form, so the record is kin to it by form."
+            " The per-leaf logistic (Eq. 1) has no printed parameters, only Fig. 5. No branch"
+            " relation is fitted: branch rates were not linear in thermal time, about 15 % of"
+            " branches stopped, up to 25 % of R0 and 50 % of R1 and R2 in the vineyard. The pot"
+            " years conflict (text 1999-2000, tables 2000-2001). No stage dates. The leaf-area"
+            " allometry prints no units."
+        ),
+    ),
+    "louarn2007.shoot_architecture": Formulation(
+        "Main-stem phyllochron, branch leaf-appearance rates and durations by zone, and"
+        " leaf-area allometries for Syrah and Grenache N in pots",
+        "Louarn, Guedon, Lecoeur & Lebon 2007, Annals of Botany 99(3): 425-437, Table 1 (p. 430),"
+        " Table 5 (p. 434), text p. 433 and 437",
+        year=2007,
+        authors=("Louarn, G.", "Guedon, Y.", "Lecoeur, J.", "Lebon, E."),
+        authors_complete=True,
+        authors_from="read",
+        checked="mcl276.pdf (the 2026-10-15 drop)",
+        doi="10.1093/aob/mcl276",
+        structures=("growth-on-thermal-time", "degree-day-phenology", "allometry"),
+        calibrated_on=("louarn2007.montpellier_pots",),
+        calibration_note=(
+            "Grenache N and Syrah in 0.050 m3 pots outdoors at Montpellier, four experiments"
+            " 2002-2005, 60 shoots a genotype; thermal time above 10 °C after Lebon et al. 2004"
+            " (this record computes the same leaf-appearance rule as"
+            " lebon2004.leaf_development); the leaf-area form is Schultz 1992's. Zones come from"
+            " a hidden semi-Markov model fitted to the branching sequences. Table 1 lines are"
+            " from independent leaves. Read 2026-10-15 (literature/louarn2007); Table 1's minus"
+            " signs, lost in the text layer, restored from the layout."
+        ),
+        parameters=(
+            Published("t_base", 10, "°C", "l. 180 (after Lebon et al. 2004)", "read"),
+            Published(
+                "phyllochron.rate",
+                0.044,
+                "leaves/°Cd",
+                "l. 812, +/- 0.002 (SD or SE not said), three years pooled",
+                "read",
+            ),
+            Published(
+                "syrah.leaf.a", 0.0111, "cm²/mm²", "Table 1, expts 3-4, n 182, r² 0.953", "read"
+            ),
+            Published("syrah.leaf.b", 0.1494, "cm²/mm", "Table 1, expts 3-4", "read"),
+            Published(
+                "grenache.leaf.a", 0.0091, "cm²/mm²", "Table 1, expts 3-4, n 135, r² 0.972", "read"
+            ),
+            Published("grenache.leaf.b", 0.2547, "cm²/mm", "Table 1, expts 3-4", "read"),
+            Published(
+                "syrah.leaf2.a", 0.0134, "cm²/mm²", "Table 1, expt 2, n 248, r² 0.971", "read"
+            ),
+            Published("syrah.leaf2.b", -0.0762, "cm²/mm", "Table 1, expt 2", "read"),
+            Published(
+                "grenache.leaf2.a", 0.0100, "cm²/mm²", "Table 1, expt 2, n 233, r² 0.956", "read"
+            ),
+            Published("grenache.leaf2.b", 0.1620, "cm²/mm", "Table 1, expt 2", "read"),
+            Published("internode.a4.syrah", 1.315, "1", "Table 1, Eq. 4, n 160, r² 0.95", "read"),
+            Published("internode.a4.grenache", 1.510, "1", "Table 1, Eq. 4, n 75, r² 0.98", "read"),
+            Published("grenache.r0", 0.0334, "leaves/°Cd", "Table 5, zone B, R0 (l. 827)", "read"),
+            Published("grenache.r1", 0.0235, "leaves/°Cd", "Table 5, zone B, R1 (l. 827)", "read"),
+            Published("grenache.r2", 0.0260, "leaves/°Cd", "Table 5, zone B, R2 (l. 827)", "read"),
+            Published("syrah.r0", 0.0341, "leaves/°Cd", "Table 5, zone B, R0 (l. 827)", "read"),
+            Published("syrah.r1", 0.0337, "leaves/°Cd", "Table 5, zone B, R1 (l. 827)", "read"),
+            Published("syrah.r2", 0.0297, "leaves/°Cd", "Table 5, zone B, R2 (l. 827)", "read"),
+            Published("grenache.d0", 967, "°Cd", "Table 5, zone B, R0 duration (l. 832)", "read"),
+            Published("grenache.d1", 631, "°Cd", "Table 5, zone B, R1 duration (l. 832)", "read"),
+            Published("grenache.d2", 650, "°Cd", "Table 5, zone B, R2 duration (l. 832)", "read"),
+            Published("syrah.d0", 912, "°Cd", "Table 5, zone B, R0 duration (l. 832)", "read"),
+            Published("syrah.d1", 930, "°Cd", "Table 5, zone B, R1 duration (l. 832)", "read"),
+            Published("syrah.d2", 720, "°Cd", "Table 5, zone B, R2 duration (l. 832)", "read"),
+            Published(
+                "zone_a.phytomers.grenache", 4.0, "phytomers", "l. 488-490, SD 0.8, n 58", "read"
+            ),
+            Published(
+                "zone_a.phytomers.syrah", 2.7, "phytomers", "l. 488-490, SD 0.6, n 56", "read"
+            ),
+            Published(
+                "state_1200.primary_phytomers.grenache",
+                50.8,
+                "phytomers",
+                "Table 2, expt 3, l. 439",
+                "read",
+            ),
+            Published(
+                "state_1200.primary_phytomers.syrah",
+                52.9,
+                "phytomers",
+                "Table 2, expt 3, l. 439",
+                "read",
+            ),
+            Published(
+                "state_1200.secondary_leaf_area.grenache",
+                2.00,
+                "m²",
+                "Table 2, expt 3, l. 443",
+                "read",
+            ),
+            Published(
+                "state_1200.secondary_leaf_area.syrah",
+                2.58,
+                "m²",
+                "Table 2, expt 3, l. 443",
+                "read",
+            ),
+        ),
+        flags=(
+            "Potted vines, not a vineyard. Growth on thermal time is the engine's own form, so the"
+            " record is kin to it by form. Table 5's Grenache R1 zone C proximal rate prints"
+            " 0.288, an order above its neighbours, probably 0.0288; not corrected and not in the"
+            " record. Table 1's minus signs are lost in the text layer and restored from the"
+            " layout. The leaf area by rank logistics (Eq. 6, eight sets, r² 0.56-0.84) are in"
+            " the note, not here. The +/- 0.002 on the phyllochron is not labelled SD or SE."
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

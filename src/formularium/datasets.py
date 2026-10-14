@@ -530,6 +530,28 @@ DATASETS: dict[str, Dataset] = {
         " inputs, Tables 4-9 statistics and figures only)",
         "read",
     ),
+    "lebon2004.montpellier": Dataset(
+        "Four experiments with Grenache N at Montpellier, no water deficit: pots of clone 226 on"
+        " Fercal (expt 1 in a glasshouse, expt 2 outside; 1999-2000 in the text, 2000-2001 in the"
+        " tables) and a vineyard of clone 70 on 110 Richter planted 1987 (expts 3 and 4, 1999 and"
+        " 2000): leaves initiated, unfolded and expanded on the main stem against thermal time"
+        " above 10 °C (n 52, 186 and 42), leaf appearance rate against mean temperature (n 376,"
+        " periods of 9-15 days at 13.0-23.8 °C), leaf length and area (93 leaves), internode"
+        " length, branch leaves, harvest totals",
+        "Lebon et al. 2004, Annals of Botany 93(3): 263-274, 'Materials and methods', Tables 1-3,"
+        " Figs 3-4 (l. 92-470; literature/lebon2004); observed",
+        "read",
+    ),
+    "louarn2007.montpellier_pots": Dataset(
+        "Four pot experiments at Montpellier 2002-2005 with Grenache N and Syrah on Fercal (0.050"
+        " m3 pots outdoors, one branch a plant, water above 70 % of pot capacity): phytomer-type"
+        " sequences of 60 shoots a genotype, unfolded leaf counts on the main stem and branches,"
+        " lamina length and leaf area (n 135-515 a fit), internode length and volume, branch"
+        " durations, and plant state at 1200 °Cd (primary phytomers, axis lengths, leaf area)",
+        "Louarn et al. 2007, Annals of Botany 99(3): 425-437, 'Materials and methods', Tables 1,"
+        " 2 and 5 (l. 138-440, 826-835; literature/louarn2007); observed",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"

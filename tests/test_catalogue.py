@@ -112,6 +112,8 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "pallas2008.shoot_development": ("pallas2008.montpellier_pots",),
         "mcartney1998.shoot_leaf_area": ("mcartney1998.ohio",),
         "cola2014.barbera_canopy": ("cola2014.piacenza",),
+        "lebon2004.leaf_development": ("lebon2004.montpellier",),
+        "louarn2007.shoot_architecture": ("louarn2007.montpellier_pots",),
         "puelles2024.ur": ("puelles2024.rioja",),
         "rosa1995.incubation": ("goidanich1957", "zachos1959", "orlandini1993.emergences"),
         "orlandini2008.plasmo": (
