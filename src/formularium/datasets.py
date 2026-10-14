@@ -135,6 +135,17 @@ DATASETS: dict[str, Dataset] = {
         " squares. The table itself read 2026-10-09 (literature/blaeser1979)",
         "read",
     ),
+    "bindi1997.mondeggi": Dataset(
+        "Shoot leaf number and leaf area, cluster counts and dry weights of leaves, stems,"
+        " stalks and berries of 20-year-old Sangiovese on 420 A at Mondeggi-Lappeggi (Chianti),"
+        " sampled every three weeks from May to September 1992, with daily temperature and"
+        " radiation from sensors about 10 m away; the phenology indicators were tested on"
+        " Conegliano's 1965-1970 observations of 123 cultivars (Calò & Costacurta 1973)",
+        "Bindi, Miglietta, Gozzini, Orlandini & Seghi 1997, Vitis 36:67-71, 'Materials and"
+        " methods' (l. 29-64; literature/bindi1997); observed; one season behind every fitted"
+        " constant",
+        "read",
+    ),
     "blaeser1978.survival": Dataset(
         "Blaeser & Weltzien 1978, Z. PflKrankh. PflSchutz 85:155-161, Abb. 2-3: the maximum"
         " lifetime of sporangia on the leaf and detached (on aluminium foil), at 10-30 °C and"
@@ -373,6 +384,183 @@ DATASETS: dict[str, Dataset] = {
         " (the relations fitted on 1986-2007)",
         "Ruml et al. 2016, J. Agric. Sci. 154:186-206, 'Materials and methods' (l. 138-208;"
         " literature/ruml2016); observed, no model",
+        "read",
+    ),
+    "sanchezdemiguel2011.madrid_toledo": Dataset(
+        "Leaves per shoot and the largest, smallest and mean leaf area of primary and lateral"
+        " shoots of Syrah, Cabernet Sauvignon, Cabernet franc, Merlot and Tempranillo at El"
+        " Socorro (Madrid, 730 m) and Syrah at a Toledo vineyard (488 m), 4,856 shoots over"
+        " 2003-2007 (the text says three years), late April to early October, with 25 primary"
+        " and 25 lateral leaves a cultivar measured by image analysis for the main-vein lines",
+        "Sanchez-de-Miguel et al. 2011, Table 1 (p. 204) and pp. 204-205; the raw values are"
+        " not printed",
+        "read",
+    ),
+    "su2022.turpan": Dataset(
+        "Leaf area index of 12-year-old Thompson Seedless at Tie-Tier village, Turpan"
+        " (42.87 °N, 89.20 °E, 32.8 m), under six drip quotas of 637.5-1,215 mm, three vines a"
+        " treatment on 15 sampling days from 1 April to 1 October 2009, LAI from leaf counts and"
+        " a vein-length allometry; degree-days above 10 °C with a 38 °C cap",
+        "Su et al. 2022, Tables 1-2 (pp. 4, 7); the per-treatment LAI series are in Table 2",
+        "read",
+    ),
+    "schumacher2024.freiburg": Dataset(
+        "Downy mildew severity (percent of infected berries, 13 classes) of clusters of Pinot"
+        " Noir, Souvignier Gris, Cabernet Cortis and Solaris inoculated at seven BBCH stages"
+        " (53-55 to 81-83) on 42 potted vines a cultivar in an open greenhouse at Freiburg im"
+        " Breisgau, 2020-2023 (1,856 clusters), rated 4 weeks after inoculation; leaf-disc"
+        " sporulation of leaves at the same stages, 2021-2023, 36 discs a cultivar and stage;"
+        " the 2021 untreated field trial (Pinot Noir over 90 %)",
+        "Schumacher et al. 2024, Scientific Reports 14: 915, Methods and Results (pp. 2-6;"
+        " literature/schumacher2024); observed, no calendar dates, means in the text only",
+        "read",
+    ),
+    "zhu2021.marlborough": Dataset(
+        "Sauvignon blanc phenology (budburst, flowering, veraison), yield, bunch number, berry"
+        " weight, TSS and TA at four Marlborough long-term sites from 2004 (other regions and"
+        " varieties from 2014); the retained-node-number trial at Rowley Crescent 2006-2010"
+        " (leaf appearance, leaf area, biomass, NSC, yield); the post-harvest defoliation trial"
+        " 2008-2012; MRL_Rapaura irrigation trial 2001-2005 (canopy, light interception, leaf"
+        " and shoot biomass)",
+        "Zhu et al. 2021, in silico Plants 3(2): diab021, Table 1 and 'Data sets' (l. 465-546;"
+        " literature/zhu2021); observed, TSS from an empirical water-content relation",
+        "read",
+    ),
+    "schmidt2019.geisenheim": Dataset(
+        "Three Riesling vines (clone 198-30 Gm on SO4, planted 2012, 0.9 x 1.8 m) of the"
+        " VineyardFACE at Geisenheim, digitised in 3D at E-L 12, 15 and 26 in"
+        " May-June 2018; 50 primary shoots in the bud-position analysis; bud break 2018 at DOY"
+        " 109-111; DWD station 1580 daily weather 1927-2018, about 200 m away",
+        "Schmidt, Bahr, Friedel & Kahlen 2019, Agronomy 9(8): 426, 'Materials and methods'"
+        " (l. 139-216, 331-349, 468-470; literature/schmidt2019); observed",
+        "read",
+    ),
+    "vrignonbrenas2022.montpellier_pots": Dataset(
+        "Leaf area per plant (5 plants a treatment, 2-7 dates an experiment), dry matter by"
+        " organ, trunk and root carbohydrate and SPAD of potted Sauvignon blanc on SO4 grown"
+        " outdoors at Montpellier, five experiments on three batches 2017-2019, N supply 0-8.61"
+        " g per plant from budburst to veraison, SPAD 11.8-41.6; stage thermal times in Table 2",
+        "Vrignon-Brenas et al. 2022, J. Exp. Bot. 73(5): 1385-1401, 'Materials and methods'"
+        " (l. 129-176; literature/vrignonbrenas2022); observed; the data are available on"
+        " request only",
+        "read",
+    ),
+    "tsialtas2008.thessaly": Dataset(
+        "324 leaves of Cabernet Sauvignon, 10-year-old vines on 1103 Paulsen and SO4 under"
+        " three irrigation regimes (100 % ETc, 50 % ETc, none), sampled at bunch closure,"
+        " veraison and ripeness in 2005 and 2006 near Thessaly (39°48' N, 22°27' E, 190 m),"
+        " leaf area, length, width and perimeter by image analysis",
+        "Tsialtas, Koundouras & Zioziou 2008, Photosynthetica 46(3): 452-456, 'Materials and"
+        " methods' (l. 81-107; literature/tsialtas2008); observed",
+        "read",
+    ),
+    "fernandezgomez2013.chinchon": Dataset(
+        "Cabernet Sauvignon on 41 B planted 2005, 3 x 1 m VSP, Chinchon (Madrid, 550 m), 2010"
+        " and 2011, four deficit regimes: stage days of the year (50 % rule, E-L 4, 23, 27, 35,"
+        " 38) 111, 153, 165, 214, 280 in 2010 and 98, 143, 152, 203, 258 in 2011; Ite (base 10"
+        " °C from 1 April) at flowering 328.0 and 339.8 °Cd; shoot length 110 and 103 cm at"
+        " fruit set and 166 and 160 cm at growth stop (day 218 and 187); year-mean LAI 1.2,"
+        " external leaf area 0.8 m²/m²; 1.9-2.0 bunches a shoot",
+        "Fernandez Gomez 2013, PhD thesis, Universidad Politecnica de Madrid, Tabla 2.6"
+        " (l. 3627-3630), Tabla 3.1 (l. 5879-5880), Tabla 3.2 (l. 6067-6068), Tabla 3.3"
+        " (literature/fernandezgomez2013); observed, LAI computed from leaf counts",
+        "read",
+    ),
+    "linares2009.el_socorro": Dataset(
+        "Syrah 2005 and Merlot 2006-2007 at El Socorro, Comunidad de Madrid, under cover crops"
+        " (Cent3, CNA), tillage and herbicide: weekly length of marked shoots (4 plants a"
+        " treatment and block) and shoot velocity in cm per degree-day; leaf area from midrib"
+        " lines, one leaf in three; LAI and external leaf area SA at flowering, veraison and"
+        " harvest, with LAI/SA; Ite (daily mean above 10 °C, summed from 1 April) at the dated"
+        " samplings of 2007 and observed budburst and veraison dates 2007-2008",
+        "Linares Torres 2009, thesis, Tabla 24 (l. 9214), Tabla 48 (l. 12817-12844), Tablas"
+        " 50-52 (l. 13126-13245) and Ecuaciones 11-13 (l. 6612-6677; literature/linares2009);"
+        " observed, leaf area computed from midrib length",
+        "read",
+    ),
+    "barajas2010.duero": Dataset(
+        "Tempranillo on 110 R (planted 2000, Royat cordon) at four Duero vineyards, Castrillo de"
+        " Duero, Pollos, Rodilana and Toro, at 1.2, 1.5 and 1.8 m spacing, 2005-2007: stage"
+        " dates (50 % rule; budburst, bloom, fruit set, veraison, harvest, mean of the three"
+        " spacings) in 2006 (Castrillo 14 Apr, 10 Jun, 17 Jun, 2 Aug, 26 Sep; Pollos 3 Apr,"
+        " 2 Jun, 9 Jun, 25 Jul, 20 Sep; Rodilana 7 Apr, 7 Jun, 14 Jun, 30 Jul, 18 Sep; Toro"
+        " 6 Apr, 5 Jun, 10 Jun, 31 Jul, 13 Sep) and veraison in 2007 (21, 16, 18 and 17 Aug);"
+        " LAI (shoot leaf area by midrib length, 12, 15 and 18 shoots a vine) 1.33-3.43 and"
+        " external leaf area SA 0.76-1.08 m²/m² at veraison, SA/LAI 0.28-0.61; leaf area on"
+        " shoot length in 2006, y = 17.1873 x + 842.363 for all spacings (units not printed)",
+        "Barajas Tola 2010, PhD thesis (Spanish; the cover names the Escuela Tecnica Superior"
+        " de Ingenierias Agrarias, no university), Tabla II.20 (l. 5017-5028), Tablas"
+        " III.9-III.12 (l. 7095-7147), Tabla III.15 (l. 7439-7442), Tabla II.23 (l. 5410-5433)"
+        " (literature/barajas2010); observed, LAI and SA computed from shoot measurements",
+        "read",
+    ),
+    "pallas2008.montpellier_pots": Dataset(
+        "Pot experiments at Montpellier (SupAgro-INRA) with Syrah (clone 174) and Grenache N"
+        " (clone 224) on Fercal, 2003, 2004 and 2006, cluster loads 0C, 1C, 2C and 6C, 12 plants"
+        " a treatment: leaves unfolded on the primary axis against thermal time to 1200 °Cd"
+        " above 10 °C (n 481 Syrah, 441 Grenache N), leaf length and area (n 182 and 135), leaf"
+        " number and area of secondary axes (n 42 and 37), secondary-axis lag and phytomer"
+        " counts, plant state at 1200 °Cd (Table 2), cluster dry weight and cluster-to-leaf"
+        " ratio (1.98 to 16.7 m²/kg); water kept above 75 % of transpirable soil water",
+        "Pallas et al. 2008, Physiologia Plantarum 134: 49-63, as Manuscript 1 of Pallas 2009,"
+        " 'Materials and methods' and Tables 1-2 (l. 2220-2510; literature/pallas2009); observed",
+        "read",
+    ),
+    "mcartney1998.ohio": Dataset(
+        "Shoot leaf area by sampling date, 10 to 50 days after bud break, of 'DeChaunac' and"
+        " 'Seyval' vines under 80 % shade cloth from flowering or unshaded (eight vines a"
+        " treatment, three shoots a vine), single-leaf areas against lamina length and width,"
+        " and in Chapter 9 the shoot length, diameter, leaf number and leaf area of field"
+        " Seyval (n 45 shoots) and shoot elongation by period; Ohio",
+        "McArtney 1998, PhD dissertation, The Ohio State University, Ch. 4 (l. 2196-2230,"
+        " 2420-2480), Fig. 4.4 (p. 47), Ch. 9 (l. 6455-6490), Fig. 9.1 (p. 143);"
+        " literature/mcartney1998; observed",
+        "read",
+    ),
+    "cola2014.piacenza": Dataset(
+        "Observed BBCH by shoot every 3-4 days, destructive shoot samples (five shoots on 12"
+        " dates in 2011: leaf number, leaf weight, leaf area), shoot and leaf counts, canopy"
+        " width and height, light interception on 8 days in 2011 (3,480 line-bar readings a"
+        " date) and cluster yield of Barbera AT 84 on 420A (planted 1999) at Piacenza,"
+        " 2011-2012, low density cane-pruned Guyot and high density spur cordon; validation"
+        " 2003-2007 on other vines of the same vineyard for final leaf area and yield (from"
+        " Bernizzoni et al. 2009), with ARPA-SIM weather at Pianello Val Tidone",
+        "Cola et al. 2014, Agricultural and Forest Meteorology 184:117-136, sections 2.1-2.3"
+        " (l. 111-277; literature/cola2014); observed, the raw series not printed (Table 1"
+        " inputs, Tables 4-9 statistics and figures only)",
+        "read",
+    ),
+    "lebon2004.montpellier": Dataset(
+        "Four experiments with Grenache N at Montpellier, no water deficit: pots of clone 226 on"
+        " Fercal (expt 1 in a glasshouse, expt 2 outside; 1999-2000 in the text, 2000-2001 in the"
+        " tables) and a vineyard of clone 70 on 110 Richter planted 1987 (expts 3 and 4, 1999 and"
+        " 2000): leaves initiated, unfolded and expanded on the main stem against thermal time"
+        " above 10 °C (n 52, 186 and 42), leaf appearance rate against mean temperature (n 376,"
+        " periods of 9-15 days at 13.0-23.8 °C), leaf length and area (93 leaves), internode"
+        " length, branch leaves, harvest totals",
+        "Lebon et al. 2004, Annals of Botany 93(3): 263-274, 'Materials and methods', Tables 1-3,"
+        " Figs 3-4 (l. 92-470; literature/lebon2004); observed",
+        "read",
+    ),
+    "louarn2007.montpellier_pots": Dataset(
+        "Four pot experiments at Montpellier 2002-2005 with Grenache N and Syrah on Fercal (0.050"
+        " m3 pots outdoors, one branch a plant, water above 70 % of pot capacity): phytomer-type"
+        " sequences of 60 shoots a genotype, unfolded leaf counts on the main stem and branches,"
+        " lamina length and leaf area (n 135-515 a fit), internode length and volume, branch"
+        " durations, and plant state at 1200 °Cd (primary phytomers, axis lengths, leaf area)",
+        "Louarn et al. 2007, Annals of Botany 99(3): 425-437, 'Materials and methods', Tables 1,"
+        " 2 and 5 (l. 138-440, 826-835; literature/louarn2007); observed",
+        "read",
+    ),
+    "tarara2009.prosser": Dataset(
+        "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
+        " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"
+        " of four vines every 14-21 days from before bloom to 3-4 weeks before maturity,"
+        " 2002-2006 (n 1,360 shoots), shoot length on 54 vines, under deficit irrigation to"
+        " 2004 and full irrigation in 2005; degree-days above 10 °C from 1 January by"
+        " trapezoidal integration of 15-minute air temperature",
+        "Tarara, Blom, Shafii, Price & Olmstead 2009, HortScience 44(2):334-340, 'Materials"
+        " and methods' (l. 86-151; literature/tarara2009); observed, the degree-days computed",
         "read",
     ),
     "schrader2020.iowa": Dataset(

@@ -790,13 +790,17 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("veraison.riesling.k", 407.18, "DOY", "Table 5, Eq. 3", "read"),
             Published("veraison.riesling.alpha", -6.08, "d/°C", "Table 5, Eq. 3", "read"),
             Published("veraison.riesling.beta", -6.21, "d/°C", "Table 5, Eq. 3", "read"),
-            Published("budburst.trincadeira.k", 111.42, "DOY", "Table 5, Eq. 1", "read"),
-            Published("budburst.trincadeira.alpha", -5.42, "d/°C", "Table 5, Eq. 1", "read"),
-            Published("flowering.trincadeira.k", 267.7, "DOY", "Table 5, Eq. 2", "read"),
-            Published("flowering.trincadeira.alpha", -6.79, "d/°C", "Table 5, Eq. 2", "read"),
-            Published("veraison.trincadeira.k", 439.08, "DOY", "Table 5, Eq. 3", "read"),
-            Published("veraison.trincadeira.alpha", -12.42, "d/°C", "Table 5, Eq. 3", "read"),
-            Published("veraison.trincadeira.beta", -4.3, "d/°C", "Table 5, Eq. 3", "read"),
+            Published("budburst.trincadeira_pratas.k", 111.42, "DOY", "Table 5, Eq. 1", "read"),
+            Published("budburst.trincadeira_pratas.alpha", -5.42, "d/°C", "Table 5, Eq. 1", "read"),
+            Published("flowering.trincadeira_pratas.k", 267.7, "DOY", "Table 5, Eq. 2", "read"),
+            Published(
+                "flowering.trincadeira_pratas.alpha", -6.79, "d/°C", "Table 5, Eq. 2", "read"
+            ),
+            Published("veraison.trincadeira_pratas.k", 439.08, "DOY", "Table 5, Eq. 3", "read"),
+            Published(
+                "veraison.trincadeira_pratas.alpha", -12.42, "d/°C", "Table 5, Eq. 3", "read"
+            ),
+            Published("veraison.trincadeira_pratas.beta", -4.3, "d/°C", "Table 5, Eq. 3", "read"),
             Published("budburst.viosinho.k", 120.1, "DOY", "Table 5, Eq. 1", "read"),
             Published("budburst.viosinho.alpha", -5.69, "d/°C", "Table 5, Eq. 1", "read"),
             Published("flowering.viosinho.k", 285.96, "DOY", "Table 5, Eq. 2", "read"),
@@ -871,6 +875,8 @@ FORMULATIONS: dict[str, Formulation] = {
             " the paper calls it prediction, not a forecast in season. The authors say the"
             " models need local calibration; applied to Loureiro (Vinhos Verdes) and"
             " Touriga-Franca (Douro) the budburst R²cv fell to 0.32 and 0.38.",
+            "Trincadeira-das-Pratas (white, Table 5) is keyed trincadeira_pratas to keep it apart"
+            " from the red Trincadeira; Pinot is printed without its colour.",
             "Compared with a 10 °C degree-day model on the two calibration varieties (Table 4):"
             " budburst R²cv 0.63 and 0.69 against 0.40 and 0.48; veraison 0.77 and 0.88"
             " against 0.31 and 0.53.",
@@ -2417,6 +2423,1197 @@ FORMULATIONS: dict[str, Formulation] = {
             " sum is well along delay budburst and are not modelled.",
             "'17 années (1961 à 1987)' spans 27 calendar years; the scale's 'dix-huit années"
             " (1970-1988)' nineteen. Four references in the text, five starred in Table VII.",
+        ),
+    ),
+    "bindi1997.growth": Formulation(
+        "A whole-vine model: leaves appear at a rate linear in the day's mean temperature,"
+        " bloom at 17 leaves, shoot leaf area a power of leaf number, biomass by radiation use"
+        " efficiency, fruit growth after degree-day lags",
+        (
+            "Bindi, Miglietta, Gozzini, Orlandini & Seghi 1997, Vitis 36(2): 67-71, Table 1 and"
+            " Fig. 1 (p. 68)"
+        ),
+        year=1997,
+        authors=("Bindi, M.", "Miglietta, F.", "Gozzini, B.", "Orlandini, S.", "Seghi, L."),
+        authors_complete=True,
+        authors_from="read",
+        checked="bindi_1997a.pdf (the 2026-10-14 drop; Vitis OJS galley)",
+        doi="10.5073/vitis.1997.36.67-71",
+        structures=(
+            "rate-temperature-response",
+            "degree-day-phenology",
+            "growth-on-thermal-time",
+            "allometry",
+            "radiation-use-efficiency",
+        ),
+        calibrated_on=("bindi1997.mondeggi",),
+        calibration_note=(
+            "Leaf number rate RLF = (a + b Tmd)(1 + c SLN) with a -0.28, b 0.04, c -0.015 per"
+            " day, credited to Miglietta et al. 1992; since the rate is linear in the daily mean"
+            " and accumulates daily, the leaf count is a degree-day sum above a/b = 7 °C scaled"
+            " by (1 + c SLN), and bloom at SLN > 17 is a heat-sum threshold: the engine's form"
+            " for a stage, which is why degree-day-phenology is among the tags. Shoot leaf area"
+            " SLA = d SLN^f (5.39, 2.13) and LAI = SLA NS / (COV PLA); fruit growth starts after"
+            " LAG = 40 °C d above 10 °C from bloom and ends at MAT = 1,440; biomass is"
+            " radiation times RUE 1.001 g/MJ cut by a quadratic in 0.25 Tmn + 0.75 Tmx, with"
+            " interception 1 - exp(-0.5 LAI). Budburst is an observed input. Every constant"
+            " comes from one Sangiovese season (1992); part II (literature/bindi1997b) validates on"
+            " 1993-1994 and refits three constants for Cabernet Sauvignon. Table 1 read"
+            " 2026-10-14 in the page image"
+            " (literature/bindi1997)."
+        ),
+        parameters=(
+            Published("rlf.a", -0.28, "leaf/d", "Table 1 (p. 68)", "read"),
+            Published("rlf.b", 0.04, "leaf/d/°C", "Table 1 (p. 68)", "read"),
+            Published("rlf.c", -0.015, "1/leaf", "Table 1 (p. 68)", "read"),
+            Published("sla.d", 5.39, "m²? (see flag)", "Table 1 (p. 68)", "read"),
+            Published("sla.f", 2.13, "1", "Table 1 (p. 68)", "read"),
+            Published("bloom_leaf_number", 17, "leaves", "Fig. 1 box a (p. 68): SLN > 17", "read"),
+            Published("cov", 0.75, "1", "Table 1 (p. 68)", "read"),
+            Published("rue", 1.001, "g/MJ", "Table 1 (p. 68)", "read"),
+            Published("k_extinction", 0.5, "1", "Table 1 (p. 68)", "read"),
+            Published("lag", 40.0, "°C·d", "Table 1 (p. 68)", "read"),
+            Published("mat", 1440.0, "°C·d", "Table 1 (p. 68)", "read"),
+            Published("t_base", 10.0, "°C", "Table 1 (p. 68): TU = Tmd - Tb", "read"),
+            Published("shoots_per_plant", 11, "shoots", "Table 1 (p. 68)", "read"),
+            Published("planting_area", 3.0, "m²/plant", "Table 1 (p. 68)", "read"),
+            Published("fbi_slope", 0.00443, "1/d", "Table 1 (p. 68)", "read"),
+            Published("cabernet.sla.f", 2.06, "1", "Part II, Table 1 (p. 73)", "read"),
+            Published("cabernet.rue", 0.691, "g/MJ", "Part II, Table 1 (p. 73)", "read"),
+            Published("cabernet.fbi_slope", 0.00328, "1/d", "Part II, Table 1 (p. 73)", "read"),
+        ),
+        flags=(
+            "SLA = 5.39 SLN^2.13 gives about 2,250 at 17 leaves, far above Fig. 2's 0-2 m²"
+            " axis, so the printed units or form of the leaf-area relation do not reproduce"
+            " the figure; the text calls it exponential. Not corrected.",
+            "The units of a, b, c are not printed; the RLF base of 7 °C is arithmetic, not a"
+            " printed base. K = 0.5 has no source.",
+            "Parameterised on a single season of one vineyard, as the authors say; no shoot"
+            " length, canopy height or susceptibility is modelled.",
+        ),
+    ),
+    "tarara2009.canopy_logistic": Formulation(
+        "Shoot length, leaves per shoot and shoot vegetative and fruit mass of Concord as"
+        " logistic curves of degree-days above 10 °C from 1 January",
+        (
+            "Tarara, Blom, Shafii, Price & Olmstead 2009, HortScience 44(2): 334-340, Eq. 1 and"
+            " Table 1 (pp. 336-337)"
+        ),
+        year=2009,
+        authors=(
+            "Tarara, Julie M.",
+            "Blom, Paul E.",
+            "Shafii, Bahman",
+            "Price, William J.",
+            "Olmstead, Mercy A.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="julie_2009.pdf (the 2026-10-14 drop)",
+        doi="10.21273/HORTSCI.44.2.334",
+        structures=("growth-on-thermal-time", "degree-day-phenology", "allometry"),
+        calibrated_on=("tarara2009.prosser",),
+        calibration_note=(
+            "y = A / (1 + exp(-B (DD - D_A))), fitted by nonlinear least squares to 1,360"
+            " destructively sampled shoots pooled over five seasons; A the asymptote, D_A the"
+            " degree-days to half of it, B the rate, with standard errors and 95 % limits in"
+            " Table 1. The clock is the engine's degree-day sum (base 10 °C from 1 January, no"
+            " cap), and the day a shoot reaches a length is a degree-day threshold on this"
+            " curve, which is why degree-day-phenology is among the tags. Vegetative mass is"
+            " also a line in shoot length (0.678 SL - 7.25 g, R² 0.87) and in leaf number"
+            " (4.431 LN - 8.31, R² 0.83). The fruit curves fit poorly by the authors' account."
+            " Table 1 read 2026-10-14 in the page image (literature/tarara2009)."
+        ),
+        parameters=(
+            Published("shoot_length.a", 82.047, "cm", "Table 1 (p. 337), SE 1.938", "read"),
+            Published("shoot_length.b", 0.009, "1/(°C·d)", "Table 1 (p. 337), SE 0.001", "read"),
+            Published("shoot_length.d_a", 300.560, "°C·d", "Table 1 (p. 337), SE 9.244", "read"),
+            Published("leaves.a", 11.953, "leaves", "Table 1 (p. 337), SE 0.254", "read"),
+            Published("leaves.b", 0.011, "1/(°C·d)", "Table 1 (p. 337), SE 0.001", "read"),
+            Published("leaves.d_a", 253.320, "°C·d", "Table 1 (p. 337), SE 7.894", "read"),
+            Published("vegetative_mass.a", 47.146, "g", "Table 1 (p. 337), SE 1.298", "read"),
+            Published("vegetative_mass.b", 0.011, "1/(°C·d)", "Table 1 (p. 337), SE 0.001", "read"),
+            Published(
+                "vegetative_mass.d_a", 330.306, "°C·d", "Table 1 (p. 337), SE 10.398", "read"
+            ),
+            Published("fruit_mass.a", 72.285, "g", "Table 1 (p. 337), SE 3.232", "read"),
+            Published("fruit_mass.b", 0.013, "1/(°C·d)", "Table 1 (p. 337), SE 0.001", "read"),
+            Published("fruit_mass.d_a", 599.100, "°C·d", "Table 1 (p. 337), SE 14.695", "read"),
+            Published("mass_from_length.slope", 0.678, "g/cm", "p. 336, R² 0.87", "read"),
+            Published("mass_from_length.intercept", -7.250, "g", "p. 336", "read"),
+            Published("t_base", 10.0, "°C", "p. 335, from 1 January, no upper threshold", "read"),
+        ),
+        flags=(
+            "Concord is Vitis labruscana under deficit irrigation at Prosser: shoot length"
+            " saturates at 82 cm and 12 leaves, numbers no vinifera vineyard would share; the"
+            " form and the time scale (half the final length at 300 °C·d) are what transfer.",
+            "No leaf area, canopy height or susceptibility; the only dates are degree-day marks"
+            " (shoot length within 5 % of its maximum at 635 °C·d, 8-13 July).",
+        ),
+    ),
+    "ruml2020.monthly_regression": Formulation(
+        "Budburst and flowering of 20 cultivars as the average cultivar's line on the period's"
+        " mean temperature plus a cultivar offset in days",
+        (
+            "Ruml & Korać 2020, Agro-knowledge Journal 21(2): 81-88, Eqs 2-3 (p. 84) and Table 1"
+            " (p. 83)"
+        ),
+        year=2020,
+        authors=("Ruml, Mirjana", "Korać, Nada"),
+        authors_complete=True,
+        authors_from="read",
+        checked="mirjana_2020.pdf (the 2026-10-14 drop)",
+        doi="10.7251/AGREN2002081R",
+        structures=("monthly-temperature-regression",),
+        calibrated_on=("ruml2016.karlovci",),
+        calibration_note=(
+            "The average cultivar's lines of literature/ruml2016 restated: budburst day of year"
+            " = -3.62 Tb + 133.0 with Tb the mean daily temperature from 1 March to the onset"
+            " (R² 0.71), flowering = -3.13 Tf + 217.1 with Tf the mean daily maximum from 15"
+            " April to the onset (R² 0.85); each cultivar adds its correction factor, the"
+            " difference between its mean date and the average cultivar's over 1986-2007"
+            " (Table 1). In-sample mean absolute error 4 d (budburst, 3-6 by cultivar) and 3 d"
+            " (flowering, 2-4); no hold-out. Read 2026-10-14 in the page images"
+            " (literature/ruml2020)."
+        ),
+        parameters=(
+            Published("budburst.k", 133.0, "DOY", "Eq. 2 (p. 84)", "read"),
+            Published("budburst.alpha", -3.62, "d/°C", "Eq. 2 (p. 84)", "read"),
+            Published("flowering.k", 217.1, "DOY", "Eq. 3 (p. 84)", "read"),
+            Published("flowering.alpha", -3.13, "d/°C", "Eq. 3 (p. 84)", "read"),
+            Published("budburst.pinot_noir.offset", -1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.pinot_noir.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.cabernet_sauvignon.offset", 7, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.cabernet_sauvignon.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.gamay.offset", -3, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.gamay.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.merlot.offset", 3, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.merlot.offset", 0, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.probus.offset", 5, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.probus.offset", 4, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.limberger.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.limberger.offset", -1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.prokupac.offset", -1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.prokupac.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.chardonnay.offset", -4, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.chardonnay.offset", -3, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.bouvier.offset", -4, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.bouvier.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.ezerjo.offset", -3, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.ezerjo.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.petra.offset", -4, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.petra.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.pinot_blanc.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.pinot_blanc.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.neoplanta.offset", 0, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.neoplanta.offset", 2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.kreaca.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.kreaca.offset", 2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.muscat_ottonel.offset", 0, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.muscat_ottonel.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.riesling_239_20_gm.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.riesling_239_20_gm.offset", 0, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.pinot_gris.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.pinot_gris.offset", -2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.beli_medenac.offset", 2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.beli_medenac.offset", 2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.bagrina.offset", 3, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.bagrina.offset", 4, "d", "Table 1 (p. 83), CF", "read"),
+            Published("budburst.riesling_italico.offset", 2, "d", "Table 1 (p. 83), CF", "read"),
+            Published("flowering.riesling_italico.offset", 1, "d", "Table 1 (p. 83), CF", "read"),
+        ),
+        flags=(
+            "The windows end at the onset itself, so as printed the lines cannot forecast; the"
+            " paper does not say how it would be used before the stage. A simulator that knows"
+            " its season can read them retrospectively.",
+            "Slopes of -3.62 and -3.13 here against the 2016 table's -3.6 and -3.1 (rounding);"
+            " the cultivar lines of 2016's Table 8 are replaced by offsets to the pooled line.",
+        ),
+    ),
+    "buttaro2015.leaf_area": Formulation(
+        "A grapevine leaf's area from its length times width, one line for eight table-grape"
+        " genotypes",
+        "Buttaro, Rouphael, Rivera, Colla & Gonnella 2015, Photosynthetica 53(3): 342-348,"
+        " Table 3 (p. 346)",
+        year=2015,
+        authors=("Buttaro, D.", "Rouphael, Y.", "Rivera, C. M.", "Colla, G.", "Gonnella, M."),
+        authors_complete=True,
+        authors_from="read",
+        checked="donato_2015.pdf (the 2026-10-14 drop)",
+        doi="10.1007/s11099-015-0117-2",
+        structures=("allometry",),
+        calibration_note=(
+            "LA = a + b (L x W) in cm2 fitted to 1,630 leaves of eight genotypes at Rutigliano"
+            " (Bari), 2010, pooled after per-genotype lines proved alike (not shown); r² 0.986;"
+            " validated on about 200 leaves of Italia in 2011 with a 0.8 % overestimate. Leaves"
+            " 10-540 cm², length 3.1-25 cm. Twelve earlier single-cultivar models are listed"
+            " (Table 1), Tsialtas et al. 2008's Cabernet line among them. Table 3 read 2026-10-14"
+            " in the page image (literature/buttaro2015)."
+        ),
+        parameters=(
+            Published("lw.a", -0.465, "cm²", "Table 3 (p. 346), SE 0.718", "read"),
+            Published("lw.b", 0.914, "1", "Table 3 (p. 346), SE 0.004", "read"),
+            Published("l.a", -88.599, "cm²", "Table 3 (p. 346), r² 0.884", "read"),
+            Published("l.b", 20.758, "cm", "Table 3 (p. 346)", "read"),
+            Published("w.a", -112.92, "cm²", "Table 3 (p. 346), r² 0.754", "read"),
+            Published("w.b", 20.075, "cm", "Table 3 (p. 346)", "read"),
+        ),
+        flags=(
+            "Table grapes in Apulia; a per-leaf relation, so leaf area per shoot or vine needs"
+            " leaf counts and sizes from elsewhere. Table 3's rows 4 and 5 print identical"
+            " constants for L² and W².",
+        ),
+    ),
+    "sanchezdemiguel2011.shoot_leaf_area": Formulation(
+        "Leaf area per shoot from leaves per shoot and the largest and smallest leaf, five"
+        " cultivars at Madrid and Toledo",
+        "Sanchez-de-Miguel, Junquera, de la Fuente, Jimenez, Linares, Baeza & Lissarrague 2011,"
+        " Spanish Journal of Agricultural Research 9(1): 202-212, Eqs 6-7 (p. 206), Eqs 1-5"
+        " (p. 205), Table 7 (p. 208)",
+        year=2011,
+        authors=(
+            "Sanchez-de-Miguel, P.",
+            "Junquera, P.",
+            "de la Fuente, M.",
+            "Jimenez, L.",
+            "Linares, R.",
+            "Baeza, P.",
+            "Lissarrague, J. R.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="patricia_2011.pdf (the 2026-10-14 drop)",
+        doi="10.5424/sjar/20110901-354-10",
+        structures=("allometry",),
+        calibrated_on=("sanchezdemiguel2011.madrid_toledo",),
+        calibration_note=(
+            "Lopes & Pinto 2005's form refitted: log10 of leaf area per shoot on log10 of"
+            " leaves per shoot times the mean of the largest and smallest leaf (MLA), primary"
+            " and lateral shoots apart, on the Syrah Toledo matrix (n 1,229) and applied to all"
+            " six cultivar-sites; the reference areas are sums of one leaf in three through the"
+            " paper's own main-vein lines (Eqs 1-5, 25 leaves a cultivar). Validation slopes"
+            " 0.89-1.08, MAPE 6.3-11.3 %. The page prints the equations as 10 x [...]; read as"
+            " a power of ten (literature/sanchezdemiguel2011). Pages 205-208 read 2026-10-14"
+            " in the page images."
+        ),
+        parameters=(
+            Published("primary.a", 0.012, "log10 cm²", "Eq. 6 (p. 206), R² 0.98", "read"),
+            Published("primary.b", 0.996, "1", "Eq. 6 (p. 206)", "read"),
+            Published("lateral.a", 0.036, "log10 cm²", "Eq. 7 (p. 206), R² 0.99", "read"),
+            Published("lateral.b", 0.982, "1", "Eq. 7 (p. 206)", "read"),
+            Published("cabernet_franc.leaf.k", 1.9077, "cm² cm^-1.803", "Eq. 1 (p. 205)", "read"),
+            Published("cabernet_franc.leaf.p", 1.803, "1", "Eq. 1 (p. 205), R² 0.93", "read"),
+            Published("cabernet_sauvignon.leaf.a", 0.38, "cm²", "Eq. 2 (p. 205)", "read"),
+            Published("cabernet_sauvignon.leaf.b", 1.21, "1", "Eq. 2 (p. 205), R² 0.93", "read"),
+            Published("merlot.leaf.a", -58.452, "cm²", "Eq. 3 (p. 205)", "read"),
+            Published("merlot.leaf.b", 18.291, "cm", "Eq. 3 (p. 205), R² 0.86", "read"),
+            Published("syrah.leaf.a", -75.409, "cm²", "Eq. 4 (p. 205)", "read"),
+            Published("syrah.leaf.b", 21.41, "cm", "Eq. 4 (p. 205), R² 0.94", "read"),
+            Published("tempranillo.leaf.a", -69.302, "cm²", "Eq. 5 (p. 205)", "read"),
+            Published("tempranillo.leaf.b", 20.306, "cm", "Eq. 5 (p. 205), R² 0.93", "read"),
+            Published(
+                "flowering.cabernet_sauvignon.leaf_area", 96, "cm²", "Table 7 (p. 208)", "read"
+            ),
+            Published("flowering.cabernet_sauvignon.leaves", 20, "1", "Table 7 (p. 208)", "read"),
+            Published("flowering.merlot.leaf_area", 118, "cm²", "Table 7 (p. 208)", "read"),
+            Published("flowering.merlot.leaves", 17, "1", "Table 7 (p. 208)", "read"),
+            Published("flowering.syrah.leaf_area", 183, "cm²", "Table 7 (p. 208)", "read"),
+            Published("flowering.syrah.leaves", 12, "1", "Table 7 (p. 208)", "read"),
+            Published("flowering.tempranillo.leaf_area", 141, "cm²", "Table 7 (p. 208)", "read"),
+            Published("flowering.tempranillo.leaves", 12, "1", "Table 7 (p. 208)", "read"),
+        ),
+        flags=(
+            "Needs a leaf count and two leaf sizes per shoot: no time or temperature term."
+            " Cabernet Sauvignon's leaf line is quadratic in the main vein, Cabernet franc's a"
+            " power; the others are lines. Table 7's flowering and ripening means (primary"
+            " leaves, cm² and leaves a shoot) are the only seasonal numbers printed.",
+        ),
+    ),
+    "su2022.lai_curve": Formulation(
+        "Relative leaf area index of Thompson Seedless as a curve of degree-days above 10 °C,"
+        " with the maximum LAI a line on seasonal water use",
+        "Su, Tao, Sun, Shan & Wang 2022, Agronomy 12(5): 988, Table 3 (p. 9), Table 4 and"
+        " Eq. 15 (pp. 10-14)",
+        year=2022,
+        authors=("Su, L.", "Tao, W.", "Sun, Y.", "Shan, Y.", "Wang, Q."),
+        authors_complete=True,
+        authors_from="read",
+        checked="lijun_2022.pdf (the 2026-10-14 drop)",
+        doi="10.3390/agronomy12050988",
+        structures=("growth-on-thermal-time", "degree-day-phenology"),
+        calibrated_on=("su2022.turpan",),
+        calibration_note=(
+            "RLAI = LAI / LAIm against degree-days (daily mean of maximum and minimum, each"
+            " capped at 38 °C, above 10 °C; start date not printed), fitted by a genetic"
+            " algorithm to the mean of six drip treatments on 15 sampling days of one season"
+            " (2009). Five forms printed; the modified logistic (R² 0.9837, relative error"
+            " 7.45 %) and the log-normal (0.9805, 8.16 %) are recorded, the paper preferring"
+            " the three-parameter log-normal. Table 3 read 2026-10-14 in the page image"
+            " (literature/su2022)."
+        ),
+        parameters=(
+            Published("logistic.max", 1.4, "1", "Table 3 (p. 9)", "read"),
+            Published("logistic.a", 3.7437, "1", "Table 3 (p. 9)", "read"),
+            Published("logistic.b", -4.8303e-3, "1/°Cd", "Table 3 (p. 9)", "read"),
+            Published("logistic.c", 1.2340e-6, "1/°Cd²", "Table 3 (p. 9)", "read"),
+            Published("lognormal.max", 0.9771, "1", "Table 3 (p. 9)", "read"),
+            Published("lognormal.gdd0", 2274.5, "°Cd", "Table 3 (p. 9)", "read"),
+            Published("lognormal.alpha", 0.9142, "1", "Table 3 (p. 9)", "read"),
+            Published("t_base", 10, "°C", "p. 5", "read"),
+            Published("t_upper", 38, "°C", "p. 5", "read"),
+            Published("laim.slope", 0.0056, "1/mm", "Eq. 15 (p. 10), R² 0.9654", "read"),
+            Published("laim.intercept", -0.7418, "1", "Eq. 15 (p. 10)", "read"),
+            Published("laim.x1", 5.84, "1", "Table 4 (p. 14), 1,215 mm", "read"),
+            Published("laim.x6", 2.73, "1", "Table 4 (p. 14), 637.5 mm", "read"),
+        ),
+        flags=(
+            "The engine's form: a growth measure as a function of a degree-day sum alone."
+            " One season, one table-grape cultivar, a desert climate with two prunings. The"
+            " fitted peaks (1,960-2,275 °Cd) sit after the measured one (about 1,690 °Cd). The"
+            " modified logistic's fitted ceiling is 1.4 for a relative index whose maximum"
+            " is 1; it peaks at 1.02 near 1,960 °Cd and passes half of that near 840 °Cd (own"
+            " calculation, not printed).",
+        ),
+    ),
+    "schumacher2024.cluster_resistance": Formulation(
+        "Downy mildew severity of Pinot Noir clusters and leaf discs at seven growth stages",
+        "Schumacher, Mertes, Kaltenbach, Bleyer & Fuchs 2024, Scientific Reports 14: 915,"
+        " Results (p. 4)",
+        year=2024,
+        authors=(
+            "Schumacher, S.",
+            "Mertes, C.",
+            "Kaltenbach, T.",
+            "Bleyer, G.",
+            "Fuchs, R.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="schumacher_2024.pdf (q191.pdf of the 2026-10-09 drop)",
+        doi="10.1038/s41598-023-50666-4",
+        structures=("age-resistance", "bunch-susceptibility-window"),
+        calibrated_on=("schumacher2024.freiburg",),
+        calibration_note=(
+            "No curve is fitted: mean severity by BBCH stage, as the text prints it"
+            " (literature/schumacher2024). Clusters, Pinot Noir: about 100 % to BBCH 75"
+            " (92 % at 75), 55 % at 77-79, 2 % at 81-83. Souvignier Gris: nearly 100 % to"
+            " 75, 64-65 % at 75, 41 % at 77-79, none at 81-83. Cabernet Cortis: 77, 86, 54,"
+            " 20, 2 % at 53-55, 57-59, 65-68, 71-73, 75, none after. Solaris: 44-73 % to"
+            " 65-68, 9 % at 71-73, none after. Leaf discs, Pinot Noir: 77, 73, 50, 16 % at"
+            " 53-55, 57-59, 65-68, 71-73, 3 % at 81-83; Cabernet Cortis 13 and 6 %, Solaris"
+            " 6 and under 1 % at the first two stages, below 1 % later; Souvignier Gris"
+            " about 2 % throughout."
+        ),
+        parameters=(
+            Published(
+                "pinot_noir.cluster.bbch53_75",
+                100,
+                "%",
+                "p. 4 text, 'almost 100%' up to and including BBCH 75",
+                "read",
+            ),
+            Published("pinot_noir.cluster.bbch75", 92, "%", "p. 4 text, later paragraph", "read"),
+            Published("pinot_noir.cluster.bbch77_79", 55, "%", "p. 4 text", "read"),
+            Published("pinot_noir.cluster.bbch81_83", 2, "%", "p. 4 text", "read"),
+            Published("pinot_noir.leaf_disc.bbch53_55", 77, "%", "p. 4 text", "read"),
+            Published("pinot_noir.leaf_disc.bbch57_59", 73, "%", "p. 4 text", "read"),
+            Published("pinot_noir.leaf_disc.bbch65_68", 50, "%", "p. 4 text", "read"),
+            Published("pinot_noir.leaf_disc.bbch71_73", 16, "%", "p. 4 text", "read"),
+            Published("pinot_noir.leaf_disc.bbch81_83", 3, "%", "p. 4 text", "read"),
+        ),
+        flags=(
+            "Potted vines in an open greenhouse at Freiburg, 42 a cultivar, 2020-2023,"
+            " inoculated in a chamber at 40,000 sporangia/ml and rated 4 weeks after; leaf"
+            " discs are leaves matched to the cluster's stage, scored 7 days after, so they"
+            " show a leaf of a given stage, not a given leaf's age in days. No calendar"
+            " dates, no fitted curve, means read from the text, SDs only in the figures. The"
+            " 2021 field trial gave Pinot Noir over 90 %.",
+        ),
+    ),
+    "zhu2021.apsim_grapevine": Formulation(
+        "Whole-vine model of Sauvignon blanc in APSIM Next Generation: chilling-forcing"
+        " budburst, development-day growth, radiation-use biomass",
+        "Zhu et al. 2021, in silico Plants 3(2): diab021, Table 2 (pp. 11-12) and text",
+        year=2021,
+        authors=(
+            "Zhu, J.",
+            "Parker, A.",
+            "Gou, F.",
+            "Agnew, R.",
+            "Yang, L.",
+            "Greven, M.",
+            "Raw, V.",
+            "Neal, S.",
+            "Martin, D.",
+            "Trought, M. C. T.",
+            "Huth, N.",
+            "Brown, H. E.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="junqi_2021.pdf (the 2026-10-14 drop)",
+        doi="10.1093/insilicoplants/diab021",
+        structures=(
+            "rate-temperature-response",
+            "growth-on-thermal-time",
+            "degree-day-phenology",
+            "chilling-dormancy",
+            "radiation-use-efficiency",
+        ),
+        calibrated_on=("zhu2021.marlborough",),
+        calibration_note=(
+            "Sauvignon blanc, four Marlborough long-term sites, data sets 1-4 (2001-2020),"
+            " fitted with DEoptim. RMSE budburst 4.1, flowering 3.1, veraison 6.8 d in"
+            " calibration; 4.9, 4.2, 5.3 d in validation; 6.5, 4.85, 6.5 d for four other"
+            " varieties. Table 2 read in the page images 2026-10-14 (literature/zhu2021)."
+        ),
+        parameters=(
+            Published("chill.c", 12.42, "1", "Table 2 (p. 11)", "read"),
+            Published("chill.d", -3.865, "1", "Table 2 (p. 11)", "read"),
+            Published("forcing.t_base", 0.008, "°C", "Table 2 (p. 11)", "read"),
+            Published("wang_engel.t_min", 3.9, "°C", "Table 2 (p. 11)", "read"),
+            Published("wang_engel.t_opt", 29, "°C", "Table 2 (p. 11)", "read"),
+            Published("wang_engel.t_max", 37.9, "°C", "Table 2 (p. 11)", "read"),
+            Published("wang_engel.t_ref", 25, "°C", "Table 2 (p. 11)", "read"),
+            Published("phyllochron.first", 1.64, "Ds", "text, l. 295 (first five leaves)", "read"),
+            Published("phyllochron.later", 1.82, "Ds", "text, l. 295 (from the 10th leaf)", "read"),
+            Published("leaf.max_area", 12000, "mm²", "Table 2 (p. 11)", "read"),
+            Published("leaf.growth_duration", 14, "Ds", "Table 2 (p. 11)", "read"),
+            Published("leaf.lag_duration", 40, "Ds", "Table 2 (p. 11)", "read"),
+            Published("leaf.senescence_duration", 5, "Ds", "Table 2 (p. 11)", "read"),
+            Published("sla.max", 20000, "mm²/g", "Table 2 (p. 11)", "read"),
+            Published("sla.min", 15000, "mm²/g", "Table 2 (p. 11)", "read"),
+            Published("rue.before_flowering", 0.8, "g/MJ", "Table 2 (p. 11)", "read"),
+            Published("rue.after_flowering", 0.9, "g/MJ", "Table 2 (p. 11)", "read"),
+            Published("extinction", 0.6, "1", "Table 2 (p. 11)", "read"),
+            Published("shoot.t_m", 43, "Ds from budburst", "Table 2 (p. 12)", "read"),
+            Published("shoot.t_e", 79.2, "Ds from budburst", "Table 2 (p. 12)", "read"),
+            Published("nsc.k_max", 0.03, "g/g", "Table 2 (p. 11)", "read"),
+            Published("nsc.t_m", 34.4, "Ds", "Table 2 (p. 11)", "read"),
+            Published("nsc.t_e", 54, "Ds", "Table 2 (p. 11)", "read"),
+            Published("berry.dw_max", 0.6, "g", "Table 2 (p. 12)", "read"),
+            Published("berry.t_m", 47.8, "Ds from flowering", "Table 2 (p. 12)", "read"),
+            Published("berry.t_e", 70, "Ds from flowering", "Table 2 (p. 12)", "read"),
+            Published("ta.min", 7.8, "g/L", "Table 2 (p. 12)", "read"),
+            Published("ta.max", 30.3, "g/L", "Table 2 (p. 12)", "read"),
+            Published("ta.r", 0.0923, "1/Ds", "Table 2 (p. 12)", "read"),
+            Published(
+                "photoperiod.critical",
+                13.1,
+                "h",
+                "text, l. 167 (cited to Camargo-Alvarez et al. 2020)",
+                "read",
+            ),
+        ),
+        flags=(
+            "The engine's form twice over: a chilling sum then a forcing heat sum to a"
+            " threshold for budburst (Chuine 2000's form), and growth as beta functions of"
+            " development days (Wang & Engel 1998's rate integrated: thermal time). The"
+            " forcing base 0.008 °C is printed as is and not explained. StructuralDMmax has"
+            " no printed value. Eq. 10's TA at t = 0 (38.1 g/L) disagrees with the text"
+            " (30.3 g/L at veraison). Needs APSIM Next Generation to run as published.",
+        ),
+    ),
+    "schmidt2019.virtual_riesling": Formulation(
+        "Virtual Riesling: a functional-structural model of the canopy of a Riesling vine, with"
+        " phytomer, internode and leaf growth on thermal time and budburst by a degree-day sum",
+        "Schmidt, Bahr, Friedel & Kahlen 2019, Agronomy 9(8): 426, Eqs 1-10 and text",
+        year=2019,
+        authors=(
+            "Schmidt, D.",
+            "Bahr, C.",
+            "Friedel, M.",
+            "Kahlen, K.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="dominik_2019.pdf (the 2026-10-14 drop)",
+        doi="10.3390/agronomy9080426",
+        structures=("growth-on-thermal-time", "degree-day-phenology", "allometry"),
+        calibrated_on=("schmidt2019.geisenheim",),
+        calibration_note=(
+            "Phytomer rate, internode, leaf-vein and lateral budburst curves fitted to three"
+            " Riesling vines digitised at Geisenheim in 2018 (E-L 12, 15, 26); leaf area form"
+            " (Eq. 10) fitted to 302 leaves of Doring et al. 2013 after Beslic et al. 2010;"
+            " budburst in other years is Nendel 2010's degree-day model with its parameters,"
+            " borrowed, not fitted here. Read 2026-10-14 (literature/schmidt2019)."
+        ),
+        parameters=(
+            Published("phyllochron.mu", 0.0453, "phytomers/°Cd", "text, l. 376", "read"),
+            Published("phyllochron", 22.0892, "°Cd per phytomer", "text, l. 377", "read"),
+            Published("t_base", 10, "°C", "Eq. 1, l. 343 (after Schultz 1992)", "read"),
+            Published("internode.k", -3.1812, "1", "Eq. 3 (p. 7)", "read"),
+            Published("il1max.a1", -0.5562, "cm per rank", "Eq. 4 (p. 7), as printed", "read"),
+            Published("il1max.b1", 1.5729, "cm", "Eq. 4 (p. 7), as printed", "read"),
+            Published("il1max.a2", 0.7212, "cm per rank", "Eq. 4 (p. 7)", "read"),
+            Published("il1max.b2", 9.0909, "cm", "Eq. 4 (p. 7)", "read"),
+            Published("lateral_internode.k", -3.9706, "1", "text, l. 459", "read"),
+            Published("lateral_budburst.q0", 337.0334, "°Cd", "Eq. 8, l. 598", "read"),
+            Published("lateral_budburst.q1", -18.5344, "°Cd per rank", "Eq. 8, l. 598", "read"),
+            Published("lateral_budburst.min", 66.2676, "°Cd", "Eq. 9, l. 601", "read"),
+            Published(
+                "leaf.s_la",
+                0.6869294,
+                "sqrt(cm²) per cm of second-order vein",
+                "Eq. 10, l. 649 (fitted to 302 leaves of Doring et al. 2013)",
+                "read",
+            ),
+            Published(
+                "nendel.t0",
+                5.9,
+                "°C",
+                "text, l. 364 (borrowed from Nendel 2010)",
+                "read",
+            ),
+            Published(
+                "nendel.d_bb",
+                186.1,
+                "°Cd from 1 March",
+                "text, l. 363-366 (borrowed from Nendel 2010; SD 24.7 °Cd)",
+                "read",
+            ),
+            Published(
+                "canopy.stop_height",
+                2.3,
+                "m",
+                "text, l. 749-750 (run ends when 90 % of shoots reach it)",
+                "read",
+            ),
+        ),
+        flags=(
+            "Eq. 4 as printed (a1 -0.5562, b1 1.5729) gives negative maxima for ranks 3-7,"
+            " while Figure 4 shows 1.0 at rank 1 and 10.4 at rank 7, which a1 1.5729 and b1"
+            " -0.5562 reproduce. The values are recorded as printed; the swap is a reading,"
+            " confirmed on the page image 2026-10-14. Budburst is Nendel 2010's degree-day"
+            " threshold, borrowed. The model needs its own code (GroIMP or similar, as the paper"
+            " says) to run. Three vines of one cultivar in one year. Mean leaf area per shoot of"
+            " 0.5-1.3 m² (l. 1512) and a cited LAI of about 3.8 (l. 1572) are outputs, not"
+            " fits. Kin to the engine's degree-day pieces by form: growth on thermal time.",
+        ),
+    ),
+    "vrignonbrenas2022.leaf_area_ramp": Formulation(
+        "Leaf area per plant as a piecewise-linear ramp of thermal time after budburst, with"
+        " a plateau, its slope and plateau time shifted by leaf nitrogen (SPAD) and storage",
+        "Vrignon-Brenas et al. 2022, J. Exp. Bot. 73(5): 1385-1401, Table 4 (p. 10), Table 2",
+        year=2022,
+        authors=(
+            "Vrignon-Brenas, S.",
+            "Fontez, B.",
+            "Bisson, A.",
+            "Rolland, G.",
+            "Chopard, J.",
+            "Fumey, D.",
+            "Metay, A.",
+            "Pellegrino, A.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="sylvain_2021.pdf (the 2026-10-14 drop)",
+        doi="10.1093/jxb/erab469",
+        structures=("growth-on-thermal-time", "degree-day-phenology", "radiation-use-efficiency"),
+        calibrated_on=("vrignonbrenas2022.montpellier_pots",),
+        calibration_note=(
+            "Own model, Bayesian fit to leaf area of potted Sauvignon blanc, five experiments"
+            " on three batches, 2017-2019. Priors from earlier studies: plateau 1400 °Cd"
+            " (Valdes-Gomez et al. 2009; Zufferey et al. 2012), onset 150 °Cd (Munitz et al."
+            " 2016); no model shaped the data. Read 2026-10-14 (literature/vrignonbrenas2022)."
+        ),
+        parameters=(
+            Published("slope.mu", 53.44, "cm²/°Cd", "Table 4 (p. 10); SD 3.21", "read"),
+            Published(
+                "slope.spad", 1.86, "cm²/°Cd per SPAD unit", "Table 4 (p. 10); SD 0.27", "read"
+            ),
+            Published("slope.storage", -7.49, "cm²/°Cd per g", "Table 4 (p. 10); SD 1.45", "read"),
+            Published("tt_max.mu", 1335.35, "°Cd", "Table 4 (p. 10); SD 20.49", "read"),
+            Published(
+                "tt_max.spad", 12.47, "°Cd per SPAD unit", "Table 4 (p. 10); SD 4.65", "read"
+            ),
+            Published("tt_max.storage", -34.88, "°Cd per g", "Table 4 (p. 10); SD 3.72", "read"),
+            Published(
+                "tt_onset", 150, "°Cd after budburst", "text, l. 596-597 (fixed, a prior)", "read"
+            ),
+            Published("dm_per_mj.intercept", -6.35e-3, "g/MJ", "Eq. 4 fit, l. 871", "read"),
+            Published("dm_per_mj.spad", 6.21e-4, "g/MJ per SPAD unit", "l. 871", "read"),
+            Published("dm_per_mj.leaf_area", 5.29e-2, "g/MJ per m²", "l. 871 (R² 0.88)", "read"),
+            Published("tt.budburst_to_flowering.2017", 326, "°Cd", "Table 2, l. 345", "read"),
+            Published("tt.budburst_to_flowering.2018", 336, "°Cd", "Table 2, l. 348", "read"),
+            Published("tt.budburst_to_flowering.2019", 272, "°Cd", "Table 2, l. 351", "read"),
+            Published("tt.flowering_to_veraison.2017", 728, "°Cd", "Table 2, l. 346", "read"),
+            Published("tt.flowering_to_veraison.2018", 779, "°Cd", "Table 2, l. 349", "read"),
+            Published("tt.flowering_to_veraison.2019", 811, "°Cd", "Table 2, l. 352", "read"),
+        ),
+        flags=(
+            "Potted Sauvignon blanc on SO4 outdoors, five experiments on three batches"
+            " 2017-2019. The thermal-time base and formula are not printed. Eq. 1's leaf"
+            " allometry has an unprinted sign. Leaf area per plant at the plateau is"
+            " 0.17-1.68 m² (l. 797-798). The ramp is in thermal time after budburst, the"
+            " engine's form (growth on thermal time), so kin by form. The text gives 12.45"
+            " °Cd per SPAD unit (l. 781) where Table 4 prints 12.47.",
+        ),
+    ),
+    "tsialtas2008.leaf_area": Formulation(
+        "Leaf area of a Cabernet Sauvignon leaf from its length (own line) or from length and"
+        " width (the best of eleven published lines)",
+        "Tsialtas, Koundouras & Zioziou 2008, Photosynthetica 46(3): 452-456, text and Table 4",
+        year=2008,
+        authors=(
+            "Tsialtas, J. T.",
+            "Koundouras, S.",
+            "Zioziou, E.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="j__2008.pdf (the 2026-10-14 drop)",
+        structures=("allometry",),
+        calibrated_on=("tsialtas2008.thessaly",),
+        calibration_note=(
+            "Own line fitted to 18 means of rootstock x irrigation x sampling, not to the 324"
+            " leaves. The 0.587 line is Montero et al. 2000's, chosen as the best of eleven"
+            " published lines by r² and mean squared difference. Read 2026-10-14"
+            " (literature/tsialtas2008)."
+        ),
+        parameters=(
+            Published("l.a", -151.41, "cm²", "text, l. 121 (r² 0.97, n 18 means)", "read"),
+            Published("l.b", 18.379, "cm", "text, l. 121 (LA = a + b L)", "read"),
+            Published(
+                "best_published.lw",
+                0.587,
+                "1",
+                "text, l. 100, 215-218 (LA = 0.587 L x W, cited to Montero et al. 2000)",
+                "read",
+            ),
+        ),
+        flags=(
+            "Fitted to 18 treatment-stage means, not to the 324 leaves. Buttaro et al. 2015"
+            " found the 0.587 line biased by 18 % on table grapes (literature/buttaro2015)."
+            " No leaf counts per shoot. Independent of the engine.",
+        ),
+    ),
+    "pallas2008.shoot_development": Formulation(
+        "Shoot development of potted Syrah and Grenache N on thermal time: leaf emergence on the"
+        " primary axis, the lag and end of secondary axes, and leaf area from leaf length and"
+        " from leaf number",
+        "Pallas, Louarn, Christophe, Lebon & Lecoeur 2008, Physiologia Plantarum 134: 49-63,"
+        " read as Manuscript 1 of Pallas 2009 (PhD thesis, Ecole Centrale Paris), printed pp."
+        " 50-63",
+        year=2008,
+        authors=(
+            "Pallas, B.",
+            "Louarn, G.",
+            "Christophe, A.",
+            "Lebon, E.",
+            "Lecoeur, J.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="beno_t_2009.pdf (the 2026-10-14 drop; the thesis reprints the paper)",
+        doi="10.1111/j.1399-3054.2008.01100.x",
+        structures=("growth-on-thermal-time", "degree-day-phenology", "allometry"),
+        calibrated_on=("pallas2008.montpellier_pots",),
+        calibration_note=(
+            "Potted Syrah and Grenache N at Montpellier, 2003, 2004 and 2006, 12 plants a"
+            " cluster-load treatment, leaves counted and measured through 1200 °Cd above 10 °C;"
+            " the thermal time is Lebon et al. 2004's, the secondary-axis structure (lag,"
+            " linear production, end) is Louarn et al. 2007's, the leaf-length form follows"
+            " Schultz 1992; neither Annals of Botany paper nor Schultz could be obtained"
+            " (literature/unread/2026-10-14-truth-phenology-closed.md). Read in the thesis"
+            " 2026-10-14 (literature/pallas2009); Eqs 6-8 on printed p. 53 read in the page image."
+        ),
+        parameters=(
+            Published("t_base", 10, "°C", "l. 2329 (after Lebon et al. 2004)", "read"),
+            Published(
+                "phyllochron.rate", 0.044, "leaves/°Cd", "l. 2518, 2686 (both cultivars)", "read"
+            ),
+            Published("syrah.leaves_intercept", 2.75, "leaves", "l. 2686, R² 0.991, n 481", "read"),
+            Published(
+                "grenache.leaves_intercept", 3.50, "leaves", "l. 2686, R² 0.987, n 441", "read"
+            ),
+            Published("secondary.lag", 126, "°Cd", "l. 2603 (SD 32 °Cd)", "read"),
+            Published(
+                "secondary.end_gap",
+                200,
+                "°Cd without a new phytomer",
+                "printed p. 53 (after Louarn et al. 2007)",
+                "read",
+            ),
+            Published(
+                "syrah.leaf.a", 0.011, "cm²/mm²", "Eq. 6, printed p. 53, n 182, r² 0.97", "read"
+            ),
+            Published("syrah.leaf.b", 0.1494, "cm²/mm", "Eq. 6, printed p. 53", "read"),
+            Published(
+                "grenache.leaf.a", 0.0091, "cm²/mm²", "Eq. 7, printed p. 53, n 135, r² 0.95", "read"
+            ),
+            Published("grenache.leaf.b", 0.2547, "cm²/mm", "Eq. 7, printed p. 53", "read"),
+            Published(
+                "syrah.axis.a", 0.93, "cm² per leaf²", "Eq. 8, printed p. 53, n 42, r² 0.97", "read"
+            ),
+            Published("syrah.axis.b", 56.63, "cm² per leaf", "Eq. 8, printed p. 53", "read"),
+            Published(
+                "grenache.axis.a",
+                1.03,
+                "cm² per leaf²",
+                "Eq. 8, printed p. 53, n 37, r² 0.98",
+                "read",
+            ),
+            Published("grenache.axis.b", 52.68, "cm² per leaf", "Eq. 8, printed p. 53", "read"),
+            Published("experiment_end", 1200, "°Cd", "l. 2313", "read"),
+        ),
+        flags=(
+            "Potted vines with cluster-load treatments, not a vineyard. Growth on thermal time is"
+            " the engine's own form, so the record is kin to it by form. Manuscript 3's water"
+            " effect (growth cycle of 23 °Cd lengthened by a sigmoid in FTSW, Eq. 21; the"
+            " probability of leaf production, Eq. 22) has its parameters unprinted in the"
+            " thesis, so it is in the note, not here; the RUE water factor in Manuscript 3 is"
+            " Lebon et al. 2006's, cited."
+        ),
+    ),
+    "mcartney1998.shoot_leaf_area": Formulation(
+        "Leaf area per shoot as a logistic in days after bud break, Seyval and DeChaunac, shaded"
+        " and unshaded",
+        (
+            "McArtney 1998, PhD dissertation, The Ohio State University, Fig. 4.4 (p. 47), Ch. 4"
+            " text (pp. 44-45), Fig. 9.1 (p. 143)"
+        ),
+        year=1998,
+        authors=("McArtney, S. J.",),
+        authors_complete=True,
+        authors_from="read",
+        checked="steven_1998.pdf (the 2026-10-14 drop)",
+        structures=("growth-on-days", "allometry"),
+        calibrated_on=("mcartney1998.ohio",),
+        calibration_note=(
+            "area = a / (1 + exp(b - c t)), t in days after bud break, a in cm² a shoot. The"
+            " 'DeChaunac' and 'Seyval' vines (French-American hybrids) had been under 80 % shade"
+            " cloth from flowering in the previous season, or unshaded (Fig. 4.4 and Table 4.1"
+            " say the previous year), in Ohio; shoot leaf area was sampled through the"
+            " season and fitted by a sigmoid in SAS (Fig. 4.4, read in the page image). Single"
+            " leaf area is k x length x width; in Ch. 9 field Seyval (45 shoots) leaf area is a"
+            " line in shoot length. No model shaped the data; no dependence recorded. Days to"
+            " half the final area, b/c, are 20.0 to 26.9 and the time scale 1/c 4.0 to 6.3 days,"
+            " my own calculation, not printed."
+        ),
+        parameters=(
+            Published(
+                "seyval.a", 299, "cm² a shoot", "Fig. 4.4 (p. 47), read in the page image", "read"
+            ),
+            Published("seyval.b", 4.0, "1", "Fig. 4.4 (p. 47), read in the page image", "read"),
+            Published("seyval.c", 0.17, "1/d", "Fig. 4.4 (p. 47), read in the page image", "read"),
+            Published(
+                "seyval_shaded.a",
+                197,
+                "cm² a shoot",
+                "Fig. 4.4 (p. 47), read in the page image",
+                "read",
+            ),
+            Published(
+                "seyval_shaded.b", 4.8, "1", "Fig. 4.4 (p. 47), read in the page image", "read"
+            ),
+            Published(
+                "seyval_shaded.c", 0.22, "1/d", "Fig. 4.4 (p. 47), read in the page image", "read"
+            ),
+            Published(
+                "dechaunac.a",
+                619,
+                "cm² a shoot",
+                "Fig. 4.4 (p. 47), read in the page image",
+                "read",
+            ),
+            Published("dechaunac.b", 4.3, "1", "Fig. 4.4 (p. 47), read in the page image", "read"),
+            Published(
+                "dechaunac.c", 0.16, "1/d", "Fig. 4.4 (p. 47), read in the page image", "read"
+            ),
+            Published(
+                "dechaunac_shaded.a",
+                252,
+                "cm² a shoot",
+                "Fig. 4.4 (p. 47), read in the page image",
+                "read",
+            ),
+            Published(
+                "dechaunac_shaded.b", 5.0, "1", "Fig. 4.4 (p. 47), read in the page image", "read"
+            ),
+            Published(
+                "dechaunac_shaded.c",
+                0.25,
+                "1/d",
+                "Fig. 4.4 (p. 47), read in the page image",
+                "read",
+            ),
+            Published(
+                "leaf.k.dechaunac",
+                0.83,
+                "1",
+                "l. 2442, area = k length x width, R² 0.98, P < 0.0001",
+                "read",
+            ),
+            Published(
+                "leaf.k.seyval",
+                0.86,
+                "1",
+                "l. 2444, area = k length x width, R² 0.99, P < 0.0001",
+                "read",
+            ),
+            Published(
+                "shoot.area_intercept",
+                -5.73,
+                "cm²",
+                "Fig. 9.1 B (p. 143), read in the page image, R² 0.84, n 45 Seyval shoots",
+                "read",
+            ),
+            Published(
+                "shoot.area_slope",
+                10.9,
+                "cm²/cm",
+                "Fig. 9.1 B (p. 143), per cm of shoot length, read in the page image",
+                "read",
+            ),
+            Published(
+                "shoot.diameter_intercept",
+                -351,
+                "cm²",
+                "Fig. 9.1 A (p. 143), read in the page image by the main session, R² 0.71",
+                "read",
+            ),
+            Published(
+                "shoot.diameter_slope",
+                124.8,
+                "cm²/mm",
+                "Fig. 9.1 A (p. 143), per mm of basal shoot diameter, read in the page image",
+                "read",
+            ),
+            Published(
+                "shoot.leaves_intercept",
+                -242,
+                "cm²",
+                "Fig. 9.1 C (p. 143), read in the page image by the main session, R² 0.71",
+                "read",
+            ),
+            Published(
+                "shoot.leaves_slope",
+                69.8,
+                "cm² per leaf",
+                "Fig. 9.1 C (p. 143), per leaf on the shoot, read in the page image",
+                "read",
+            ),
+            Published(
+                "elongation.budbreak_to_bloom",
+                13.98,
+                "mm/d",
+                "Ch. 9 table (l. 6481), bud break to bloom; OCR, unchecked",
+                "read",
+            ),
+            Published(
+                "elongation.bloom_to_2wab",
+                17.34,
+                "mm/d",
+                "Ch. 9 table (l. 6481), bloom to 2 weeks after bloom; OCR, unchecked",
+                "read",
+            ),
+            Published(
+                "elongation.2_to_6wab",
+                5.61,
+                "mm/d",
+                "Ch. 9 table (l. 6481), 2 to 6 weeks after bloom; OCR, unchecked",
+                "read",
+            ),
+        ),
+        flags=(
+            "Hybrids in Ohio, not Vitis vinifera in a Mediterranean vineyard; the curve is for a"
+            " shoot, not a vine.",
+            "The logistic is in calendar days after bud break with no temperature, the form the"
+            " truth now uses; its midpoint b/c (20 to 27 days) and time scale 1/c (4 to 6 days)"
+            " are the comparable numbers.",
+            "The exponents were read from a scanned figure; the Ch. 9 elongation values are OCR"
+            " and unchecked on the image; the Ch. 9 year is not confirmed in the lines read.",
+        ),
+    ),
+    "cola2014.barbera_canopy": Formulation(
+        "Leaf area per shoot by vegetative BBCH stage and shoot count, canopy porosity on width,"
+        " and the canopy ramp of Cola et al.'s Barbera model",
+        "Cola, Mariani, Salinari, Civardi, Bernizzoni, Gatti & Poni 2014, Agricultural and Forest"
+        " Meteorology 184: 117-136, Eqs 12-13 and 7-11 (p. 122), Eq. 15 (p. 123), Table 1 (p. 119)",
+        year=2014,
+        authors=(
+            "Cola, G.",
+            "Mariani, L.",
+            "Salinari, F.",
+            "Civardi, S.",
+            "Bernizzoni, F.",
+            "Gatti, M.",
+            "Poni, S.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="1-s2.0-S0168192313002633-main.pdf (the 2026-10-15 drop)",
+        doi="10.1016/j.agrformet.2013.09.008",
+        structures=(
+            "degree-day-phenology",
+            "allometry",
+            "carbon-balance",
+            "water-limited-growth",
+            "rate-temperature-response",
+        ),
+        calibrated_on=("cola2014.piacenza",),
+        calibration_note=(
+            "Barbera AT 84 on 420A, planted 1999, Piacenza, 2011-2012, low density cane-pruned"
+            " Guyot and high density spur cordon; BBCH scored every 3-4 days; five shoots sampled"
+            " destructively on 12 dates in 2011; porosity from 3,480 line-bar readings a date."
+            " Validation 2003-2007 on other vines of the same vineyard for final leaf area (R²"
+            " 0.92 HD, 0.63 LD) and yield (R² 0.96 LD; the abstract says 0.94 HD and Table 9"
+            " 0.96). Pages 119-123 read 2026-10-14, p. 122 in the page image"
+            " (literature/cola2014)."
+        ),
+        parameters=(
+            Published("la1.bbch2", 3.51e-4, "m² shoot^-1", "Eq. 12 (p. 122), R² 0.99", "read"),
+            Published("la1.bbch_n", -1.798e-6, "m² shoot^-1", "Eq. 12 (p. 122)", "read"),
+            Published("la1.n2", -9.3745e-6, "m² shoot^-1", "Eq. 12 (p. 122)", "read"),
+            Published("la1.bbch", -6.848e-2, "m² shoot^-1", "Eq. 12 (p. 122)", "read"),
+            Published("la1.n", 8.66e-4, "m² shoot^-1", "Eq. 12 (p. 122)", "read"),
+            Published(
+                "la1.c",
+                3.3268,
+                "m² shoot^-1",
+                "Eq. 12 (p. 122); BBCHveg 101-127, Nshoots clamped 10-65",
+                "read",
+            ),
+            Published("la2.bbch2", 7.7521e-5, "m² shoot^-1", "Eq. 13 (p. 122), R² 0.98", "read"),
+            Published("la2.bbch_n", -1.594e-4, "m² shoot^-1", "Eq. 13 (p. 122)", "read"),
+            Published("la2.n2", 6.88e-5, "m² shoot^-1", "Eq. 13 (p. 122)", "read"),
+            Published("la2.bbch", 3.028e-2, "m² shoot^-1", "Eq. 13 (p. 122)", "read"),
+            Published("la2.n", 1.263e-2, "m² shoot^-1", "Eq. 13 (p. 122)", "read"),
+            Published("la2.c", -2.3443, "m² shoot^-1", "Eq. 13 (p. 122)", "read"),
+            Published("cp.a", 0.6417, "1", "Eq. 15 (p. 123), porosity on width, R² 0.82", "read"),
+            Published("cp.b", -0.33, "m^-1", "Eq. 15 (p. 123), width Wx in m", "read"),
+            Published("phdel.max", 1.55, "1", "Eq. 11 (p. 122), for more than 65 shoots", "read"),
+            Published("phdel.base", 0.08, "1", "Eq. 8 (p. 122), read in the page image", "read"),
+            Published("canopy.wx_min", 0.3, "m", "Table 1 (p. 119), low density 2011", "read"),
+            Published("canopy.wx_max", 0.8, "m", "Table 1 (p. 119), low density 2011", "read"),
+            Published("canopy.h_min", 0.2, "m", "Table 1 (p. 119), low density 2011", "read"),
+            Published("canopy.h_max", 1.2, "m", "Table 1 (p. 119), low density 2011", "read"),
+            Published("canopy.hd.wx_min", 0.2, "m", "Table 1 (p. 119), high density", "read"),
+            Published("canopy.hd.wx_max", 0.6, "m", "Table 1 (p. 119), high density", "read"),
+            Published("canopy.hd.h_min", 0.2, "m", "Table 1 (p. 119), high density", "read"),
+            Published("canopy.hd.h_max", 1.0, "m", "Table 1 (p. 119), high density", "read"),
+            Published(
+                "canopy.ramp_start",
+                101,
+                "BBCH",
+                "text, l. 400-408 (ramp to BBCH 77, then held)",
+                "read",
+            ),
+            Published("canopy.ramp_end", 77, "BBCH", "text, l. 400-408", "read"),
+            Published("leaf_weight.la1.a", 43.34, "cm² g^-1", "Eq. 2 (l. 206), R² 0.95", "read"),
+            Published("leaf_weight.la1.b", -50.99, "cm²", "Eq. 2 (l. 206)", "read"),
+            Published("leaf_weight.la2.a", 44.12, "cm² g^-1", "Eq. 3 (l. 209), R² 0.95", "read"),
+            Published("leaf_weight.la2.b", 70.34, "cm²", "Eq. 3 (l. 209)", "read"),
+            Published(
+                "flowering.leaf_area.hd",
+                4.8,
+                "m² vine^-1",
+                "text, l. 637-638 (BBCH 65, 2011)",
+                "read",
+            ),
+            Published(
+                "flowering.leaf_area.ld",
+                1.2,
+                "m² vine^-1",
+                "text, l. 637-638 (BBCH 65, 2011)",
+                "read",
+            ),
+        ),
+        flags=(
+            "The phenology is a heat sum (cumulated normal heat hours to stage thresholds, Fig. 4"
+            " curves only, read by eye; thresholds shifted from Iphen's Cabernet Sauvignon"
+            " reference, Mariani et al. 2013), the engine's form. Eqs 12-13 take BBCHveg as"
+            " input, so in the paper's own run the clock is the heat sum.",
+            "Eq. 39 (thermal limitation) as printed is negative at every temperature from 7 to"
+            " 40 °C and cannot be used; Eq. 32's water factor is printed as a product in mm, not"
+            " a ratio; Eqs 20-21 print 2 pi x 365 where 2 pi/365 would give a yearly cycle.",
+            "The NHH cardinal temperatures (7, 25.5, 35 °C, cited to Mariani et al. 2012) and base"
+            " are not printed as the NHH's own numbers; the light-interception equations are"
+            " Oyarzun et al. 2007's, not printed; Table 1 spacing (2.2 x 1.8 m) disagrees with"
+            " the text (2.5 x 1.2 m).",
+        ),
+    ),
+    "lebon2004.leaf_development": Formulation(
+        "Leaves on a grapevine main stem as lines in degree-days above 10 °C, the leaf appearance"
+        " rate on mean temperature, and a leaf-area allometry, Grenache N",
+        "Lebon, Pellegrino, Tardieu & Lecoeur 2004, Annals of Botany 93(3): 263-274, Eqs 5-8"
+        " (p. 268), Eqs 1-3 and the lamina allometry (p. 266), Table 3",
+        year=2004,
+        authors=("Lebon, E.", "Pellegrino, A.", "Tardieu, F.", "Lecoeur, J."),
+        authors_complete=True,
+        authors_from="read",
+        checked="mch038.pdf (the 2026-10-15 drop)",
+        doi="10.1093/aob/mch038",
+        structures=(
+            "rate-temperature-response",
+            "growth-on-thermal-time",
+            "degree-day-phenology",
+            "allometry",
+        ),
+        calibrated_on=("lebon2004.montpellier",),
+        calibration_note=(
+            "Grenache N, four experiments at Montpellier with no water deficit: two in pots"
+            " (clone 226 on Fercal; 1999 and 2000 in the text, 2000 and 2001 in the tables) and"
+            " two in a vineyard (clone 70 on 110 Richter, planted 1987; 1999 and 2000). Leaves"
+            " counted on six to twelve shoots every 3-4 days or weekly; the leaf appearance rate"
+            " fitted over periods of 9-15 days at 13.0-23.8 °C across all four experiments, one"
+            " line for all (F 1.22); thermal time by daily integration above the base (CDD,"
+            " after Bonhomme 2000). The framework is Rickman & Klepper 1995's, the leaf-area"
+            " form Schultz 1992's. Pallas 2008 and Louarn 2007 borrow this paper's base and"
+            " rate: pallas2008.shoot_development and louarn2007.shoot_architecture compute the"
+            " same leaf-appearance rule. Read 2026-10-15 (literature/lebon2004); Eqs 1-3, the"
+            " 93-leaf allometry and Eqs 5-8 on printed pp. 266 and 268 read in the page images."
+        ),
+        parameters=(
+            Published(
+                "lar.a", 0.0430, "leaves/day/°C", "Eq. 5, p. 268, r² 0.837, n 376 (l. 545)", "read"
+            ),
+            Published("lar.b", -0.3946, "leaves/day", "Eq. 5, p. 268 (l. 545)", "read"),
+            Published(
+                "t_base.fitted",
+                9.2,
+                "°C",
+                "p. 268 (l. 547), -b/a, +/- 0.5 (SD or SE not said)",
+                "read",
+            ),
+            Published("t_base.used", 10, "°C", "pp. 266 and 268 (l. 421, 552)", "read"),
+            Published("initiated.a", 0.050, "leaves/°Cd", "Eq. 6, l. 548, r² 0.993", "read"),
+            Published("initiated.b", 7.85, "leaves", "Eq. 6, l. 548", "read"),
+            Published("unfolded.a", 0.046, "leaves/°Cd", "Eq. 7, l. 550, r² 0.986, n 186", "read"),
+            Published("unfolded.b", 0.36, "leaves", "Eq. 7, l. 550", "read"),
+            Published("expanded.a", 0.038, "leaves/°Cd", "Eq. 8, l. 551, r² 0.991", "read"),
+            Published("expanded.b", -5.27, "leaves", "Eq. 8, l. 551", "read"),
+            Published(
+                "leaf.a", 0.0075, "area/length² (units not printed)", "p. 266, l. 394, n 93", "read"
+            ),
+            Published(
+                "leaf.b",
+                0.07505,
+                "area/length (units not printed)",
+                "p. 266, l. 394, r² 0.901",
+                "read",
+            ),
+            Published("leaf.c", -29.151, "area (units not printed)", "p. 266, l. 394", "read"),
+            Published("expansion.duration.phytomer10", 366, "°Cd", "l. 579", "read"),
+            Published("expansion.duration.phytomer20", 425, "°Cd", "l. 579", "read"),
+            Published("expansion.increment.to10", 25, "°Cd per phytomer", "l. 598", "read"),
+            Published("expansion.increment.after10", 5, "°Cd per phytomer", "l. 599", "read"),
+            Published("internode.plateau", 100, "mm", "from phytomer 12, l. 587", "read"),
+        ),
+        flags=(
+            "Growth on thermal time is the engine's own form, so the record is kin to it by form."
+            " The per-leaf logistic (Eq. 1) has no printed parameters, only Fig. 5. No branch"
+            " relation is fitted: branch rates were not linear in thermal time, about 15 % of"
+            " branches stopped, up to 25 % of R0 and 50 % of R1 and R2 in the vineyard. The pot"
+            " years conflict (text 1999-2000, tables 2000-2001). No stage dates. The leaf-area"
+            " allometry prints no units."
+        ),
+    ),
+    "louarn2007.shoot_architecture": Formulation(
+        "Main-stem phyllochron, branch leaf-appearance rates and durations by zone, and"
+        " leaf-area allometries for Syrah and Grenache N in pots",
+        "Louarn, Guedon, Lecoeur & Lebon 2007, Annals of Botany 99(3): 425-437, Table 1 (p. 430),"
+        " Table 5 (p. 434), text p. 433 and 437",
+        year=2007,
+        authors=("Louarn, G.", "Guedon, Y.", "Lecoeur, J.", "Lebon, E."),
+        authors_complete=True,
+        authors_from="read",
+        checked="mcl276.pdf (the 2026-10-15 drop)",
+        doi="10.1093/aob/mcl276",
+        structures=("growth-on-thermal-time", "degree-day-phenology", "allometry"),
+        calibrated_on=("louarn2007.montpellier_pots",),
+        calibration_note=(
+            "Grenache N and Syrah in 0.050 m3 pots outdoors at Montpellier, four experiments"
+            " 2002-2005, 60 shoots a genotype; thermal time above 10 °C after Lebon et al. 2004"
+            " (this record computes the same leaf-appearance rule as"
+            " lebon2004.leaf_development); the leaf-area form is Schultz 1992's. Zones come from"
+            " a hidden semi-Markov model fitted to the branching sequences. Table 1 lines are"
+            " from independent leaves. Read 2026-10-15 (literature/louarn2007); Table 1's minus"
+            " signs, lost in the text layer, restored from the layout."
+        ),
+        parameters=(
+            Published("t_base", 10, "°C", "l. 180 (after Lebon et al. 2004)", "read"),
+            Published(
+                "phyllochron.rate",
+                0.044,
+                "leaves/°Cd",
+                "l. 812, +/- 0.002 (SD or SE not said), three years pooled",
+                "read",
+            ),
+            Published(
+                "syrah.leaf.a", 0.0111, "cm²/mm²", "Table 1, expts 3-4, n 182, r² 0.953", "read"
+            ),
+            Published("syrah.leaf.b", 0.1494, "cm²/mm", "Table 1, expts 3-4", "read"),
+            Published(
+                "grenache.leaf.a", 0.0091, "cm²/mm²", "Table 1, expts 3-4, n 135, r² 0.972", "read"
+            ),
+            Published("grenache.leaf.b", 0.2547, "cm²/mm", "Table 1, expts 3-4", "read"),
+            Published(
+                "syrah.leaf2.a", 0.0134, "cm²/mm²", "Table 1, expt 2, n 248, r² 0.971", "read"
+            ),
+            Published("syrah.leaf2.b", -0.0762, "cm²/mm", "Table 1, expt 2", "read"),
+            Published(
+                "grenache.leaf2.a", 0.0100, "cm²/mm²", "Table 1, expt 2, n 233, r² 0.956", "read"
+            ),
+            Published("grenache.leaf2.b", 0.1620, "cm²/mm", "Table 1, expt 2", "read"),
+            Published("internode.a4.syrah", 1.315, "1", "Table 1, Eq. 4, n 160, r² 0.95", "read"),
+            Published("internode.a4.grenache", 1.510, "1", "Table 1, Eq. 4, n 75, r² 0.98", "read"),
+            Published("grenache.r0", 0.0334, "leaves/°Cd", "Table 5, zone B, R0 (l. 827)", "read"),
+            Published("grenache.r1", 0.0235, "leaves/°Cd", "Table 5, zone B, R1 (l. 827)", "read"),
+            Published("grenache.r2", 0.0260, "leaves/°Cd", "Table 5, zone B, R2 (l. 827)", "read"),
+            Published("syrah.r0", 0.0341, "leaves/°Cd", "Table 5, zone B, R0 (l. 827)", "read"),
+            Published("syrah.r1", 0.0337, "leaves/°Cd", "Table 5, zone B, R1 (l. 827)", "read"),
+            Published("syrah.r2", 0.0297, "leaves/°Cd", "Table 5, zone B, R2 (l. 827)", "read"),
+            Published("grenache.d0", 967, "°Cd", "Table 5, zone B, R0 duration (l. 832)", "read"),
+            Published("grenache.d1", 631, "°Cd", "Table 5, zone B, R1 duration (l. 832)", "read"),
+            Published("grenache.d2", 650, "°Cd", "Table 5, zone B, R2 duration (l. 832)", "read"),
+            Published("syrah.d0", 912, "°Cd", "Table 5, zone B, R0 duration (l. 832)", "read"),
+            Published("syrah.d1", 930, "°Cd", "Table 5, zone B, R1 duration (l. 832)", "read"),
+            Published("syrah.d2", 720, "°Cd", "Table 5, zone B, R2 duration (l. 832)", "read"),
+            Published(
+                "zone_a.phytomers.grenache", 4.0, "phytomers", "l. 488-490, SD 0.8, n 58", "read"
+            ),
+            Published(
+                "zone_a.phytomers.syrah", 2.7, "phytomers", "l. 488-490, SD 0.6, n 56", "read"
+            ),
+            Published(
+                "state_1200.primary_phytomers.grenache",
+                50.8,
+                "phytomers",
+                "Table 2, expt 3, l. 439",
+                "read",
+            ),
+            Published(
+                "state_1200.primary_phytomers.syrah",
+                52.9,
+                "phytomers",
+                "Table 2, expt 3, l. 439",
+                "read",
+            ),
+            Published(
+                "state_1200.secondary_leaf_area.grenache",
+                2.00,
+                "m²",
+                "Table 2, expt 3, l. 443",
+                "read",
+            ),
+            Published(
+                "state_1200.secondary_leaf_area.syrah",
+                2.58,
+                "m²",
+                "Table 2, expt 3, l. 443",
+                "read",
+            ),
+        ),
+        flags=(
+            "Potted vines, not a vineyard. Growth on thermal time is the engine's own form, so the"
+            " record is kin to it by form. Table 5's Grenache R1 zone C proximal rate prints"
+            " 0.288, an order above its neighbours, probably 0.0288; not corrected and not in the"
+            " record. Table 1's minus signs are lost in the text layer and restored from the"
+            " layout. The leaf area by rank logistics (Eq. 6, eight sets, r² 0.56-0.84) are in"
+            " the note, not here. The +/- 0.002 on the phyllochron is not labelled SD or SE."
         ),
     ),
     "molitor2014.shoots": Formulation(
