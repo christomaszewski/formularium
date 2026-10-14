@@ -494,6 +494,18 @@ DATASETS: dict[str, Dataset] = {
         " (literature/barajas2010); observed, LAI and SA computed from shoot measurements",
         "read",
     ),
+    "pallas2008.montpellier_pots": Dataset(
+        "Pot experiments at Montpellier (SupAgro-INRA) with Syrah (clone 174) and Grenache N"
+        " (clone 224) on Fercal, 2003, 2004 and 2006, cluster loads 0C, 1C, 2C and 6C, 12 plants"
+        " a treatment: leaves unfolded on the primary axis against thermal time to 1200 °Cd"
+        " above 10 °C (n 481 Syrah, 441 Grenache N), leaf length and area (n 182 and 135), leaf"
+        " number and area of secondary axes (n 42 and 37), secondary-axis lag and phytomer"
+        " counts, plant state at 1200 °Cd (Table 2), cluster dry weight and cluster-to-leaf"
+        " ratio (1.98 to 16.7 m²/kg); water kept above 75 % of transpirable soil water",
+        "Pallas et al. 2008, Physiologia Plantarum 134: 49-63, as Manuscript 1 of Pallas 2009,"
+        " 'Materials and methods' and Tables 1-2 (l. 2220-2510; literature/pallas2009); observed",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"

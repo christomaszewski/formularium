@@ -3089,6 +3089,84 @@ FORMULATIONS: dict[str, Formulation] = {
             " No leaf counts per shoot. Independent of the engine.",
         ),
     ),
+    "pallas2008.shoot_development": Formulation(
+        "Shoot development of potted Syrah and Grenache N on thermal time: leaf emergence on the"
+        " primary axis, the lag and end of secondary axes, and leaf area from leaf length and"
+        " from leaf number",
+        "Pallas, Louarn, Christophe, Lebon & Lecoeur 2008, Physiologia Plantarum 134: 49-63,"
+        " read as Manuscript 1 of Pallas 2009 (PhD thesis, Ecole Centrale Paris), printed pp."
+        " 50-63",
+        year=2008,
+        authors=(
+            "Pallas, B.",
+            "Louarn, G.",
+            "Christophe, A.",
+            "Lebon, E.",
+            "Lecoeur, J.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="beno_t_2009.pdf (the 2026-10-14 drop; the thesis reprints the paper)",
+        doi="10.1111/j.1399-3054.2008.01100.x",
+        structures=("growth-on-thermal-time", "degree-day-phenology", "allometry"),
+        calibrated_on=("pallas2008.montpellier_pots",),
+        calibration_note=(
+            "Potted Syrah and Grenache N at Montpellier, 2003, 2004 and 2006, 12 plants a"
+            " cluster-load treatment, leaves counted and measured through 1200 °Cd above 10 °C;"
+            " the thermal time is Lebon et al. 2004's, the secondary-axis structure (lag,"
+            " linear production, end) is Louarn et al. 2007's, the leaf-length form follows"
+            " Schultz 1992; neither Annals of Botany paper nor Schultz could be obtained"
+            " (literature/unread/2026-10-14-truth-phenology-closed.md). Read in the thesis"
+            " 2026-10-14 (literature/pallas2009); Eqs 6-8 on printed p. 53 read in the page image."
+        ),
+        parameters=(
+            Published("t_base", 10, "°C", "l. 2329 (after Lebon et al. 2004)", "read"),
+            Published(
+                "phyllochron.rate", 0.044, "leaves/°Cd", "l. 2518, 2686 (both cultivars)", "read"
+            ),
+            Published("syrah.leaves_intercept", 2.75, "leaves", "l. 2686, R² 0.991, n 481", "read"),
+            Published(
+                "grenache.leaves_intercept", 3.50, "leaves", "l. 2686, R² 0.987, n 441", "read"
+            ),
+            Published("secondary.lag", 126, "°Cd", "l. 2603 (SD 32 °Cd)", "read"),
+            Published(
+                "secondary.end_gap",
+                200,
+                "°Cd without a new phytomer",
+                "printed p. 53 (after Louarn et al. 2007)",
+                "read",
+            ),
+            Published(
+                "syrah.leaf.a", 0.011, "cm²/mm²", "Eq. 6, printed p. 53, n 182, r² 0.97", "read"
+            ),
+            Published("syrah.leaf.b", 0.1494, "cm²/mm", "Eq. 6, printed p. 53", "read"),
+            Published(
+                "grenache.leaf.a", 0.0091, "cm²/mm²", "Eq. 7, printed p. 53, n 135, r² 0.95", "read"
+            ),
+            Published("grenache.leaf.b", 0.2547, "cm²/mm", "Eq. 7, printed p. 53", "read"),
+            Published(
+                "syrah.axis.a", 0.93, "cm² per leaf²", "Eq. 8, printed p. 53, n 42, r² 0.97", "read"
+            ),
+            Published("syrah.axis.b", 56.63, "cm² per leaf", "Eq. 8, printed p. 53", "read"),
+            Published(
+                "grenache.axis.a",
+                1.03,
+                "cm² per leaf²",
+                "Eq. 8, printed p. 53, n 37, r² 0.98",
+                "read",
+            ),
+            Published("grenache.axis.b", 52.68, "cm² per leaf", "Eq. 8, printed p. 53", "read"),
+            Published("experiment_end", 1200, "°Cd", "l. 2313", "read"),
+        ),
+        flags=(
+            "Potted vines with cluster-load treatments, not a vineyard. Growth on thermal time is"
+            " the engine's own form, so the record is kin to it by form. Manuscript 3's water"
+            " effect (growth cycle of 23 °Cd lengthened by a sigmoid in FTSW, Eq. 21; the"
+            " probability of leaf production, Eq. 22) has its parameters unprinted in the"
+            " thesis, so it is in the note, not here; the RUE water factor in Manuscript 3 is"
+            " Lebon et al. 2006's, cited."
+        ),
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

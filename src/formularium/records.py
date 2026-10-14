@@ -125,6 +125,7 @@ STRUCTURES = {
     "radiation-use-efficiency": "biomass as intercepted radiation times an efficiency",
     "age-resistance": "susceptibility of leaves, clusters or berries falling with their age or"
     " growth stage",
+    "water-limited-growth": "growth or its timing scaled by soil or plant water status",
 }
 
 

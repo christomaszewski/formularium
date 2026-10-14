@@ -525,6 +525,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [padro2019](padro2019.md) | none | remote sensing | Catalonia | Positional error of UAV images by method (raw GNSS about 1 m |
 | [pak2008cable](pak2008cable.md) | none | land surface model | Australia | Slides only (OCR) |
 | [palfi2022](palfi2022.md) | powdery mildew, grape powdery mildew (gpm), downy mildew (mentioned only) | spray timing, season severity, gas exchange, yield, phytoto… | Hungary, Eger, Eger wine region | None. Recorded so that it is not read again. |
+| [pallas2009](pallas2009.md) | none | shoot development, phyllochron, leaf area, source-sink, water status | Montpellier | Phyllochron 0.044 leaves per °Cd (base 10 °C), secondary-axis lag and leaf allometries of potted Syrah and Grenache N; growth on thermal time, kin to the engine by form; the water effect on phytomer timing is unrunnable from the thesis. |
 | [parker2011](parker2011.md) | none | phenology | France, Switzerland | Held out by structure (a degree-day forcing sum, the engine's form), as before |
 | [parker2013](parker2013.md) | none | phenology, flowering, veraison | France | GFV's critical sum F* for 95 and 104 varieties (Tables 1-2 read in the page images), thirteen recorded; none of the Penedès whites |
 | [parker2020](parker2020.md) | none | phenology, climate projection | Bordeaux, Champagne, Marlborough | GFV and the sugar-target model GSR with fixed F* on three new series: 5-7 d RMSE, worse in Marlborough; Champagne Chardonnay projected |
