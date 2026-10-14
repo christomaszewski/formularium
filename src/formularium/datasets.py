@@ -478,6 +478,22 @@ DATASETS: dict[str, Dataset] = {
         " observed, leaf area computed from midrib length",
         "read",
     ),
+    "barajas2010.duero": Dataset(
+        "Tempranillo on 110 R (planted 2000, Royat cordon) at four Duero vineyards, Castrillo de"
+        " Duero, Pollos, Rodilana and Toro, at 1.2, 1.5 and 1.8 m spacing, 2005-2007: stage"
+        " dates (50 % rule; budburst, bloom, fruit set, veraison, harvest, mean of the three"
+        " spacings) in 2006 (Castrillo 14 Apr, 10 Jun, 17 Jun, 2 Aug, 26 Sep; Pollos 3 Apr,"
+        " 2 Jun, 9 Jun, 25 Jul, 20 Sep; Rodilana 7 Apr, 7 Jun, 14 Jun, 30 Jul, 18 Sep; Toro"
+        " 6 Apr, 5 Jun, 10 Jun, 31 Jul, 13 Sep) and veraison in 2007 (21, 16, 18 and 17 Aug);"
+        " LAI (shoot leaf area by midrib length, 12, 15 and 18 shoots a vine) 1.33-3.43 and"
+        " external leaf area SA 0.76-1.08 m²/m² at veraison, SA/LAI 0.28-0.61; leaf area on"
+        " shoot length in 2006, y = 17.1873 x + 842.363 for all spacings (units not printed)",
+        "Barajas Tola 2010, PhD thesis (Spanish; the cover names the Escuela Tecnica Superior"
+        " de Ingenierias Agrarias, no university), Tabla II.20 (l. 5017-5028), Tablas"
+        " III.9-III.12 (l. 7095-7147), Tabla III.15 (l. 7439-7442), Tabla II.23 (l. 5410-5433)"
+        " (literature/barajas2010); observed, LAI and SA computed from shoot measurements",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"
