@@ -41,6 +41,7 @@ def test_the_roles_judged_so_far() -> None:
     assert judged == {
         "madden1999.detection_bound": "observation",
         "cannon2001.sensitivity": "observation",
+        "nakamura2005.radiative_error": "observation",
         "noaa.solar_position": "reference",
         "alduchov1996.magnus": "reference",
         "fao56.eq47": "reference",
@@ -108,6 +109,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "zhu2021.apsim_grapevine": ("zhu2021.marlborough",),
         "forster2016.melodist": ("forster2016.five_sites",),
         "kuwagata2024.canopy_dew": ("kuwagata2024.kumamoto",),
+        "nakamura2005.radiative_error": ("nakamura2005.corvallis",),
         "brunetto2018.leaf_litter_decay": ("brunetto2018.santana",),
         "penaquinones2020.canopy_station": ("penaquinones2020.prosser",),
         "paulescu2023.minute_separation": ("paulescu2023.payerne",),

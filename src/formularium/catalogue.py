@@ -4108,6 +4108,59 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="process",
     ),
+    "nakamura2005.radiative_error": Formulation(
+        "Radiative error of a naturally ventilated shield's air temperature, RE = C0 + C1 X,"
+        " X = Rad / (rho Cp T U), from shortwave radiation by day and net radiation by night"
+        " and the wind speed",
+        "Nakamura & Mahrt 2005, J. Atmos. Oceanic Technol. 22:1046-1058, Eqs 11-12 (p. 1054) and"
+        " Table 3 (p. 1055)",
+        year=2005,
+        authors=("Nakamura, Reina", "Mahrt, L."),
+        authors_complete=True,
+        authors_from="read",
+        checked="reina_2005.pdf (the 2026-10-18 drop)",
+        structures=("shield-radiative-error",),
+        calibrated_on=("nakamura2005.corvallis",),
+        calibration_note=(
+            "Fitted to bin averages of the 30-min error of an Onset HOBO Pro thermistor in a"
+            " naturally ventilated Davis 7714 multiplate shield against an aspirated RTD (RM"
+            " Young 43408), both at 1 m over flat grassland at the Hyslop Experimental Station,"
+            " Corvallis, Oregon, 14 March to 30 August 2002 (R2 0.98 day, 0.94 night). Tested"
+            " with the 2002 coefficients on a second dataset at the same site, 15 July to"
+            " 30 August 2003: daytime RMSE 0.29 to 0.13 °C, night 0.05 to 0.04 °C (Table 5)."
+            " Rad is the shortwave outside the shield by day and the net radiation by night"
+            " (W m-2), T_HB the sensor's air temperature in kelvin, U the 30-min wind speed"
+            " (m s-1). The aspirated reference's own radiative error is assumed small."
+        ),
+        parameters=(
+            Published("day.c0", 0.13, "°C", "Table 3, p. 1055 (day, shortwave)", "read"),
+            Published(
+                "day.c1", 373.40, "°C per unit X", "Table 3, p. 1055 (day, shortwave)", "read"
+            ),
+            Published("night.c0", 0.047, "°C", "Table 3, p. 1055 (night, net radiation)", "read"),
+            Published(
+                "night.c1",
+                355.84,
+                "°C per unit X",
+                "Table 3, p. 1055 (night, net radiation)",
+                "read",
+            ),
+            Published("air_density", 1.2, "kg m-3", "text under Eq. 11, p. 1054", "read"),
+            Published("specific_heat", 1004, "J K-1 kg-1", "text under Eq. 11, p. 1054", "read"),
+        ),
+        flags=(
+            "One shield (Davis 7714 multiplate) and one sensor (HOBO Pro thermistor), over grass at"
+            " one Oregon site in spring and summer; the coefficients may not hold for a surface of"
+            " another albedo (l. 568) or for another shield.",
+            "The error it describes is large by day: a mean of 0.39 °C, above 0.5 °C in 22.9 % of"
+            " daytime periods and above 1.0 °C in 2.6 % (l. 508-509); at night the mean is"
+            " -0.002 °C and the error is below -0.5 °C in 4.6 % of periods (l. 513-514).",
+            "Higher-order terms in X were not significant by an F test (l. 553); the daytime fit"
+            " breaks down below X = 1.0e-4 and the correction is neglected there (3.1 % of"
+            " daytime data, l. 581-584).",
+        ),
+        role="observation",
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

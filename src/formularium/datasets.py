@@ -682,6 +682,18 @@ DATASETS: dict[str, Dataset] = {
         " literature/quenol2004); not fitted by a formulation here",
         "read",
     ),
+    "nakamura2005.corvallis": Dataset(
+        "Air temperature at 1 m from an Onset HOBO Pro thermistor in a naturally ventilated Davis"
+        " 7714 multiplate shield and from an aspirated platinum RTD (RM Young 43408), with wind and"
+        " four-component radiation at 1 m and 1.5 m, over flat grassland at the Hyslop"
+        " Experimental Station, Corvallis, Oregon (44°38' N, 123°12' W); dataset A 14 March to"
+        " 30 August 2002 (fits the correction), dataset B 15 July to 30 August 2003 (tests it);"
+        " 30-min means of 300-s HOBO samples; observed; not offered",
+        "Nakamura & Mahrt 2005, J. Atmos. Oceanic Technol. 22:1046-1058, Sect. 2 and Table 2"
+        " (l. 222-224, 293-298; literature/nakamura2005); not a model's output, the aspirated"
+        " sensor's own radiative error being assumed small (l. 470-472)",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"
