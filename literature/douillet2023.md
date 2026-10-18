@@ -2,7 +2,7 @@
 id: douillet2023
 citation: Douillet, Antonin. 2023. Étude pluriannuelle de la sporée aérienne de Plasmopara viticola par quantification moléculaire : un nouvel indicateur de risque des épidémies du mildiou de la vigne. PhD thesis, Université de Bordeaux (NNT 2023BORD0033), defended 2023-02-27; HAL tel-04970525, 258 pages
 doi:
-read: 2026-10-13, the abstracts, contents, the models section of the introduction, chapters 1-3 and annexes 1, 2 and 8, by a reading agent (claude-haiku-5-5); 60 of 60 quotes found at their lines by scripts/verify_quotes.py; equations 6-9 (p. 96) and the IMPI algorithm (p. 99) read in the page images by the main session; read again 2026-10-18, targeted (samplers, efficiency, limits), by a reading agent (claude-haiku-5-5)
+read: 2026-10-13, the abstracts, contents, the models section of the introduction, chapters 1-3 and annexes 1, 2 and 8, by a reading agent (claude-haiku-5-5); 60 of 60 quotes found at their lines by scripts/verify_quotes.py; equations 6-9 (p. 96) and the IMPI algorithm (p. 99) read in the page images by the main session; read again 2026-10-18, targeted (samplers, efficiency, limits), by a reading agent (claude-haiku-5-5); Chapter 2's height test read 2026-10-18
 status: read
 diseases: [downy mildew]
 crops: [grapevine]
@@ -124,3 +124,13 @@ read as zero); and a counting error that
 LAMP against ddPCR puts at sensitivity 0.80 and specificity 0.75 in the field. It is a
 laboratory result for the limits and a field result for the agreement, one season at one
 château, and nothing for drift or failure.
+
+### Chapter 2: capture height (read 2026-10-18)
+
+A targeted reading of Chapter 2, section II (printed pp. 88-92; l. 3347-3521), with the chapter summary and the discussion on p. 130, by a reading agent (claude-haiku-5-5); 23 of 23 quotes found at their lines by scripts/verify_quotes.py. Figures 28-32 were read by eye from the rendered pages.
+
+- **Design** (l. 3370-3376, 3379-3380): three Sporestick samplers at 30, 80 and 130 cm on a training stake, on the westernmost row of organic plot SPM-A (2 August to 18 September 2019; 3 August to 3 September 2020) and of SPM-A and SPM-C (30 April to 30 August 2021), Grande Ferrade; sticks collected Monday, Wednesday and Friday. Response log10(sporangia per m3 + 1), Kruskal-Wallis then Dunnett with Bonferroni adjustment, per year (l. 3397-3402). No p-values, sample sizes or canopy height are printed.
+- **No height effect** (l. 3409, 3446): not significant in any of the three years; every box carries the same letter in Figures 28-30. Medians read by eye on the log scale, 30 / 80 / 130 cm: 2019 about 0.1 / 0 / 0; 2020 about 0.15 / 0 / 0.66; 2021 about 0.07 / 0 / 0 (approximate, plus or minus about 0.1). End of August 2021 cumulative, by eye (l. 3484): bloc A about 7,300 / 4,950 / 5,900 sporangia per m3; bloc C about 5,150 / 3,900 / 4,250 (plus or minus about 200). The lowest sampler holds the highest cumulative total in both plots, and the 130 cm one is not the highest.
+- **The 130 cm recommendation rests on first detection, not on significance** (l. 3413-3422, 3516-3518, 4822): in 2021 the first positive capture was at 130 cm in both plots (bloc A, 6 June, against 13 June at 30 cm and 22 June at 80 cm; bloc C, 2 May, against 29 May and 29 June); only the 2021 series began at the start of the season (l. 3418). The authors read this as a Gaussian plume with a strong source effect (Severns et al. 2019) and as confirming Van der Heyden et al. 2021's advice, say above the canopy "seems better" though not significant (l. 3516), and keep 130 cm. The early-season hypothesis of a lower sampler nearer the soil source is not validated (l. 4822).
+
+Bearing for strand 5 (sampler placement): a capture-height effect on counts is not established by this test (a sampler-height offset of zero with an uncertainty, not a correction), the first-detection difference is two plots in one year and a reason to place the sampler above the canopy rather than a measured bias.
