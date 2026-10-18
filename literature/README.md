@@ -94,6 +94,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [bellow2012](bellow2012.md) | downy mildew | detection | France | Background to fluorescence sensing |
 | [bellow2013](bellow2013.md) | downy mildew | detection | France | Fluorescence sees infection from day 1 (abaxial) |
 | [bendel2020](bendel2020.md) | esca | symptom detection, imaging | Palatinate | Hyperspectral imaging of Esca, accuracy up to 95 %; another disease |
+| [bennett2019](bennett2019.md) | none | disaggregation, hourly weather, relative humidity | Stehekin, Washington, USA | MetSim: open MTCLIM-based estimator, tested only against VIC 4.2 output for one cell; no humidity check against observations. |
 | [benninga2019](benninga2019.md) | none | sensor error | Netherlands | A generic radar error law |
 | [beresfordnd](beresfordnd.md) | grey mould | infection risk, season severity, latent infection | Australia, New Zealand | The Bacchus index against 44 unsprayed site-years: the threshold of 1 useless, the mean index 0.5-0.7 in bad years, latent incidence above 10 % only in major epidemics |
 | [berkett2010](berkett2010.md) | powdery mildew, downy mildew, black rot, anthracnose | fungicide use, spray timing, season severity, susceptibilit… | Vermont, United States, Burlington | A cold-site cultivar record of observed powdery and downy mildew incidence with five sprays in one season (Ta… |
@@ -273,6 +274,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [foister1946](foister1946.md) | downy mildews, various | weather and disease | general | History; no formulation |
 | [folkedal2003](folkedal2003.md) | apple scab, potato late blight | decision support | Norway | A web warning system's design |
 | [fontaine2021](fontaine2021.md) | downy mildew | population genomics | global | Off-topic for simulation |
+| [forster2016](forster2016.md) | none | disaggregation, hourly weather, relative humidity, wind, radiation | Netherlands, Svalbard, Austria, Rio de Janeiro, Arizona | MELODIST: open (GPL-3) daily-to-hourly tool, one variable at a time, validated at five sites on whole-series humidity only, not near saturation. |
 | [fraga2016](fraga2016.md) | none | phenology, budburst, flowering, veraison | Portugal | Stage dates as straight lines in one or two monthly temperature means, k and slopes printed for 14 varieties with leave-one-out errors; beats a 10 °C degree-day model on the same series |
 | [franche2012](franche2012.md) | downy mildew | whole cycle in a DSS | France | mostly Rossi's chain; a few independent pieces |
 | [franzen2025](franzen2025.md) | downy mildew, powdery mildew, black rot, black wood | infection, incubation, infection risk forecast, leaf wetnes… | Germany (Baden-Württemberg Bavaria Rhineland-Pala… | Gives the truth only the descriptive shape of VitiMeteo's Plasmopara model and field-trial figures for PIWI v… |
@@ -319,6 +321,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [gonzalezdominguez2022](gonzalezdominguez2022.md) | Phomopsis cane and leaf spot | infection, validation | Italy, Montenegro | A Phomopsis model, for Cooptera |
 | [gonzalezdominguez2023](gonzalezdominguez2023.md) | none | modelling history | general | Review by the Piacenza group |
 | [gonzalezfernandez2021](gonzalezfernandez2021.md) | grey mould | aerobiology | Galicia | Botrytis conidia viability by immunoassay |
+| [gorner2021](gorner2021.md) | none | disaggregation, hourly weather, relative humidity, wind | Saxony, Germany, De Bilt, Netherlands | Analogue-day hourly resampling keeping rain, humidity and wind together; RH 95th percentile matches, Fichtelberg high end 2.8 points low; no code. |
 | [gregory1915](gregory1915.md) | downy mildew | conidial germination, sporulation, oospores, oospore germin… | United States (Ithaca New York), Europe (cited) | Offers the truth a set of observed 1913 incubation and germination values for American varieties at Ithaca, b… |
 | [groot2026](groot2026.md) | grey mould, apple scab, septoria leaf blotch, soybean rust, late blight, downy mildew (as a grapevine case in the literature only) | leaf wetness, infection, infection threshold, sensor placem… | Western Europe, Pacific Northwest, Central Europe… | None for the truth or the engine: it is a review with no data of its own, and its wetness thresholds for grap… |
 | [grunzel1961](grunzel1961.md) | downy mildew | oospore formation | Germany | Oospores formed in few leaves; weather no clear driver |
@@ -548,6 +551,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [pertot2016](pertot2016.md) | downy mildew, powdery mildew, grey mould, black rot, esca, grapevine trunk diseases | oospores, primary infection, secondary infection, spray tim… | Italy, France, Switzerland, Quebec, Germany, Aust… | A review that reports the engine-list primary model (Rossi et al. 2008) and the 3-10 rule as used by other DS… |
 | [pesquer2014](pesquer2014.md) | none | interpolation error | Catalonia, Spain | Interpolation error of Catalan precipitation by how stations are split |
 | [pezzotti2020](pezzotti2020.md) | downy mildew, powdery mildew | sporangia, sporangia viability, zoospore release, infection… | Italy, Japan, USA | None. Recorded so that it is not read again. |
+| [pidoto2023](pidoto2023.md) | none | weather generator, rainfall, hourly disaggregation, relative humidity | Germany | Hourly rain, T, RH and radiation, no wind; hourly RH is es(Tmin)/es(T) by MELODIST; not validated near saturation; code on request. |
 | [piemontemodelli](piemontemodelli.md) | downy mildew, powdery mildew, apple scab, black rot, grey mould, late blight, rice blast, grape berry moth, fruit moths, thrips, scaphoideus titanus | primary infection, secondary infection, oospores, sporulati… | Emilia-Romagna, Italy, Switzerland, Germany | A pointer list: it names the grapevine models a regional service uses (Rossi 2008, VitiMeteo, Magarey 2005, K… |
 | [pii2024](pii2024.md) | downy mildew, powdery mildew | fungicide residues, leaf wetness, season severity, remote s… | Italy, France, Brazil | None for the truth's disease process; its one downy mildew item is an optical-sensing diagnosis (Calcante et … |
 | [pinarey2021](pinarey2021.md) | none | phenology, budburst, flowering | Galicia | GDD start day and base per variety for Albariño, Godello, Loureira and Treixadura, 2008-2019; the GDD form matched triangular and UniFORC |
@@ -581,6 +585,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [reis2013](reis2013.md) | downy mildew | spray timing, validation | Rio Grande do Sul | A Lalancette-based trigger; three seasons of untreated AUDPC |
 | [reis2020](reis2020.md) | none | phenology | Portugal | Held out by structure, read strictly (Agrarium's candidates) |
 | [reis2022](reis2022.md) | none | phenology, budburst, flowering, veraison | Douro | Reis 2020's sigmoid forcing model mapped over the Douro for two Touriga cultivars with EURO-CORDEX futures, only the critical sums F printed; a heat sum to a threshold, so not a truth candidate, nothing runnable added |
+| [reynolds2016](reynolds2016.md) | none | frost forecast, bias correction, temperature forecast, vineyard weather stations | Sonoma and Mendocino Counties, California | Frost forecast bias-corrected on 72 vineyard stations; skill on minimum temperature only; no weather series for a sweep. |
 | [rienth2019](rienth2019.md) | downy mildew | infection, spray timing, leaf wetness | Switzerland | None. Recorded so that it is not read again. |
 | [rienth2021](rienth2021.md) | downy mildew, powdery mildew, grey mould, grapevine fanleaf virus, grapevine leafroll virus, grapevine red blotch virus | season severity, infection, ontogenic resistance, sporulati… | Burgundy (cited model study), Europe, wine-growin… | None beyond leads: its cited Bove et al. 2020 DM simulation and Kennelly et al. 2005 ontogenic-resistance pap… |
 | [roberts2017](roberts2017.md) | none | statistics | general | Block cross-validation for structured data |
@@ -720,6 +725,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [yu2022metabolomics](yu2022metabolomics.md) | powdery mildew | fruit chemistry | Guangxi | Off-topic for simulation |
 | [yu2022shelter](yu2022shelter.md) | downy mildew | epidemic progress, canopy microclimate | Liaoning | Rain shelters cut leaf wetness and slowed epidemics (Shenyang) |
 | [yuen2002](yuen2002.md) | none | warning scores | England, Sweden | Clear and a method |
+| [zabel2023](zabel2023.md) | none | disaggregation, hourly weather, wet hours, relative humidity | global | Teddy: MATLAB most-similar-day disaggregation of climate-model data; wet hours validated (MAE 7.8 %), humidity only by r; no licence. |
 | [zachos1959](zachos1959.md) | downy mildew | incubation, oospores, conidia | Greece | an incubation independent of Goidanich's data |
 | [zaffaroni2022](zaffaroni2022.md) | downy mildew | sexual reproduction, oospores, dormancy, dispersal, resista… | general | A model framework only: it gives the truth a structural note (sexual spores persist in soil and reach the can… |
 | [zanzotto2010](zanzotto2010.md) | downy mildew | season onset, season severity | Veneto | Eleven untreated seasons of first symptoms |

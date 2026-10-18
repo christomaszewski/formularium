@@ -552,6 +552,40 @@ DATASETS: dict[str, Dataset] = {
         " 2 and 5 (l. 138-440, 826-835; literature/louarn2007); observed",
         "read",
     ),
+    "forster2016.five_sites": Dataset(
+        "Hourly and daily station series at five sites, each split into a calibration and a"
+        " validation period: De Bilt, Netherlands (2 m; 1961-1990, 1991-2014), Ny-Alesund,"
+        " Svalbard (11 m; 1993-2004, 2006-2011), Obergurgl, Austria (1938 m; 2000-2007,"
+        " 2008-2014; project data, not free), Rio de Janeiro (5 m; 2003-2008, 2009-2014) and"
+        " Tucson airport (779 m; 1973-1993, 1994-2014); temperature, wind, humidity and, by"
+        " site, precipitation and radiation; observed",
+        "Forster et al. 2016, Geosci. Model Dev. 9:2315-2333, Sect. 2 and Table 1 (l. 208-260;"
+        " literature/forster2016); humidity methods H2 and H3 and the radiation constants are"
+        " fitted on the calibration period, H1 and H4 need no fit",
+        "read",
+    ),
+    "pidoto2023.germany": Dataset(
+        "Germany: DWD sub-daily rainfall at 699 stations for 400 catchments (30 to over 20,000"
+        " km2), common period January 2006 to December 2020; HYRAS v4.0 gridded daily mean,"
+        " minimum and maximum temperature, relative humidity and global radiation, 1976-2015,"
+        " for the k-NN resampling; 40 DWD sub-daily reference climate stations (20 with global"
+        " radiation) for validation, 100 realisations of 15 years; observed",
+        "Pidoto & Haberlandt 2023, Hydrol. Earth Syst. Sci. 27:3957-3975, Sect. 3 and 4"
+        " (l. 519-587; literature/pidoto2023); the hourly step uses MELODIST's forms that need"
+        " no hourly observations, set from the catchment midpoint only",
+        "read",
+    ),
+    "gorner2021.saxony_debilt": Dataset(
+        "Hourly and daily DWD data for six Saxon stations including Dresden-Klotzsche (222 m)"
+        " and Fichtelberg (1213 m), September 1995 to August 2014, and KNMI De Bilt (2 m),"
+        " January 1981 to December 2014 (validation against MELODIST on 1991-2014): mean"
+        " temperature, precipitation, sunshine duration, relative humidity and wind speed;"
+        " DWD objective weather patterns from 1979 as a filter; observed",
+        "Gorner et al. 2021, Theor. Appl. Climatol. 143:241-265, Sect. 2 and Table 1 (l. 145-207,"
+        " 1440; literature/gorner2021); a resampling method with no fitted parameter, the"
+        " observed days are its pool",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"

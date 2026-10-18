@@ -3616,6 +3616,158 @@ FORMULATIONS: dict[str, Formulation] = {
             " the note, not here. The +/- 0.002 on the phyllochron is not labelled SD or SE."
         ),
     ),
+    "forster2016.melodist": Formulation(
+        "MELODIST v0.1.1: hourly temperature, humidity, wind, radiation and precipitation from"
+        " daily values, one variable at a time at one site (methods T1, H1-H4, W1-W3, R1-R3,"
+        " P1-P2)",
+        "Foerster et al. 2016, Geosci. Model Dev. 9:2315-2333, Table 2 and Sect. 3-4",
+        year=2016,
+        authors=(
+            "Foerster, Kristian",
+            "Hanzer, Florian",
+            "Winter, Benjamin",
+            "Marke, Thomas",
+            "Strasser, Ulrich",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="kristian_2016.pdf (the 2026-10-18 drop)",
+        doi="10.5194/gmd-9-2315-2016",
+        structures=("disaggregation",),
+        calibrated_on=("forster2016.five_sites",),
+        calibration_note=(
+            "Methods named in Table 2: temperature T1 (cosine between Tmin and Tmax); humidity"
+            " H1 (dew point = Tmin), H2 (dew point = a Tmin + b, fitted per site), H3 (dew"
+            " point linear between days with a sine term) and H4 (daily Hmin and Hmax); wind"
+            " W1-W3; radiation R1-R3; precipitation P1-P2. H2, H3 and R2 are fitted on each"
+            " site's calibration period, H1 and H4 are not. Fitted a and b are not printed."
+            " Five sites, calibration and validation periods in forster2016.five_sites."
+        ),
+        parameters=(
+            Published("h1.a", 1, "1", "text, l. 319 (H1: a = 1, b = 0)", "read"),
+            Published("h1.b", 0, "°C", "text, l. 319 (H1: a = 1, b = 0)", "read"),
+            Published(
+                "h3.kr_high_radiation", 6, "1", "Eq. 8 text, l. 409 (above 100 W m-2)", "read"
+            ),
+            Published("h3.kr_low_radiation", 12, "1", "Eq. 8 text, l. 409 (otherwise)", "read"),
+            Published("t1.tmax_after_noon", 2, "h", "text, l. 193 (rule of thumb)", "read"),
+            Published("r2.angstrom_a", 0.25, "1", "text, l. 471 (default)", "read"),
+            Published("r2.angstrom_b", 0.75, "1", "text, l. 471 (default)", "read"),
+        ),
+        flags=(
+            "Not validated on humidity near saturation or on wet hours: Table 4 gives only"
+            " whole-series mean, RMSE, r and NSE for H3 relative humidity (RMSE 10.39 to 18.52 %,"
+            " r 0.02 at Ny-Alesund, 0.51 to 0.72 elsewhere); the text says RMSE 20 %, which"
+            " Table 4 does not show. H1, H2 and H4 results are not printed in the tables read.",
+            "Humidity from H1-H3 is es(Tdew) / es(T) of the disaggregated temperature; nothing"
+            " printed says whether it is capped at 100 %. H1 holds the dew point at Tmin all day.",
+            "Each variable is disaggregated alone, with no co-variation: wind speed has no link to"
+            " rain or humidity, and there is no wind direction.",
+            "Code is open: GPL-3, Python, GitHub kristianfoerster/melodist and Zenodo"
+            " 10.5281/zenodo.54676, so it can run. It is a disaggregation tool, not a generator:"
+            " the daily series come from elsewhere.",
+        ),
+        role="process",
+    ),
+    "pidoto2023.hourly_generator": Formulation(
+        "Semi-parametric hourly weather generator: space-time rainfall (alternating renewal,"
+        " copulas), k-NN resampling of daily temperature, humidity and radiation, hourly"
+        " values by MELODIST's deterministic forms",
+        "Pidoto & Haberlandt 2023, Hydrol. Earth Syst. Sci. 27:3957-3975, Sect. 2.1-2.4, Eqs 19-23",
+        year=2023,
+        authors=("Pidoto, Ross", "Haberlandt, Uwe"),
+        authors_complete=True,
+        authors_from="read",
+        checked="ross_2023.pdf (the 2026-10-18 drop)",
+        doi="10.5194/hess-27-3957-2023",
+        borrows=("forster2016.melodist",),
+        structures=("weather-generator", "disaggregation"),
+        calibrated_on=("pidoto2023.germany",),
+        calibration_note=(
+            "Rainfall fitted to 699 DWD sub-daily stations in two seasons (April-September,"
+            " October-March); the k-NN resamples HYRAS daily data conditioned on the"
+            " catchment rainfall state. The hourly step applies MELODIST (Foerster et al."
+            " 2016) with forms that need no hourly observations: temperature by the cosine"
+            " (Eq. 20), relative humidity from Eq. 21 with the dew point equal to the daily"
+            " minimum temperature through the day (Tdew = Tmin, a rule, no diurnal profile),"
+            " radiation by Eq. 23. Fitted rainfall parameters are not printed."
+        ),
+        parameters=(
+            Published("t1.tmax_after_noon", 2, "h", "p. 3964, text under Eq. 20", "read"),
+            Published("magnus.pos.a", 6.1078, "not stated", "Eq. 22, p. 3964 (T >= 0 °C)", "read"),
+            Published("magnus.pos.b", 17.08085, "1", "Eq. 22, p. 3964 (T >= 0 °C)", "read"),
+            Published("magnus.pos.c", 234.175, "°C", "Eq. 22, p. 3964 (T >= 0 °C)", "read"),
+            Published("magnus.neg.a", 6.1071, "not stated", "Eq. 22, p. 3964 (T < 0 °C)", "read"),
+            Published("magnus.neg.b", 22.4429, "1", "Eq. 22, p. 3964 (T < 0 °C)", "read"),
+            Published("magnus.neg.c", 272.44, "°C", "Eq. 22, p. 3964 (T < 0 °C)", "read"),
+            Published("solar_constant", 1370, "W m-2", "Eq. 23, p. 3964", "read"),
+            Published("hyetograph.alpha", 1 / 3, "1", "text, l. 233 (Callau Poduje 2017)", "read"),
+        ),
+        flags=(
+            "Not validated on humidity near saturation or on wet hours: humidity is checked as"
+            " monthly means and hourly means (bias rarely above 5 % daily; relative humidity has"
+            " the greatest spread, April to July; hourly means deviate in winter, l. 786-818);"
+            " the correlation with daily rainfall is shown, with no wet-hour statistic.",
+            "Co-variation: humidity, temperature and radiation are resampled together as one"
+            " daily day, conditioned on the rainfall state; hourly humidity follows only from"
+            " the hourly temperature, with the dew point fixed at Tmin all day, so a rainy hour"
+            " carries no extra humidity. Eq. 21 prints no cap at 100 %.",
+            "No wind variable, so no wind direction with rain.",
+            "Code: R and Python, 'on request from the author' (l. 905); no repository or"
+            " licence printed, so it cannot be run from the paper. The input data (DWD, HYRAS)"
+            " are open.",
+        ),
+        role="process",
+    ),
+    "gorner2021.edm": Formulation(
+        "Euclidean distance model: hourly temperature, precipitation, sunshine, humidity and"
+        " wind speed by resampling the most similar observed day",
+        "Goerner et al. 2021, Theor. Appl. Climatol. 143:241-265, Sect. 3, Eqs 1-6",
+        year=2021,
+        authors=(
+            "Goerner, Christina",
+            "Franke, Johannes",
+            "Kronenberg, Rico",
+            "Hellmuth, Olaf",
+            "Bernhofer, Christian",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="c__2020.pdf (the 2026-10-18 drop)",
+        doi="10.1007/s00704-020-03426-7",
+        structures=("disaggregation",),
+        calibrated_on=("gorner2021.saxony_debilt",),
+        calibration_note=(
+            "An analogue method with no fitted parameter: the day to disaggregate is matched to"
+            " the observed day of least Euclidean distance on standardised daily values, equal"
+            " weights (Eq. 3), and that day's hourly course is scaled by the ratio of daily"
+            " values (Eqs 4-6; temperature shifted). Selection S1 narrows windows of local"
+            " observation time; S2 adds DWD objective weather patterns. Rescaled relative"
+            " humidity above 100 % is set to 100 %."
+        ),
+        parameters=(
+            Published("window.s1_first", 120, "min", "text, l. 350 (LOD +/- 2 h)", "read"),
+            Published("window.s1_second", 60, "min", "text, l. 350 (+/- 1 h)", "read"),
+            Published("window.s1_third", 30, "min", "text, l. 350 (+/- 30 min)", "read"),
+            Published("window.s1_fourth", 15, "min", "text, l. 350 (+/- 15 min)", "read"),
+            Published("rh.cap", 100, "%", "text, l. 393", "read"),
+            Published("sunshine.cap", 60, "min", "text, l. 393", "read"),
+        ),
+        flags=(
+            "Humidity near saturation is only partly checked: the observed and the generated"
+            " 95th percentile are both 100 % (Tables 2-3), the Fichtelberg median is 90.2 %"
+            " against 93.0 % observed, and 3780 (S1) and 2844 (S2) generated hourly values at"
+            " Dresden were cut to 100 %. Nothing is checked on wet hours.",
+            "Co-variation comes from the observed day: temperature, rain, sunshine, humidity"
+            " and wind speed move together as they did in the chosen day. Wind direction is not"
+            " handled. Fichtelberg wind speed can come out with an inverse diurnal cycle"
+            " (l. 1171).",
+            "Needs at least 10 years of hourly observations at or near the site (l. 1547); only"
+            " as many days as were observed, so rare events have a small pool.",
+            "No code or licence statement in the paper: it cannot be run from the paper.",
+        ),
+        role="process",
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",
