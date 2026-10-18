@@ -651,6 +651,37 @@ DATASETS: dict[str, Dataset] = {
         " literature/pipan2021); no formulation is fitted to it; Table 2 read by eye",
         "read",
     ),
+    "sanderson2022.stations": Dataset(
+        "Nine Sogrape Vinhos weather stations in vineyards of the upper Douro Valley, Portugal"
+        " (80 to 624 m), 15-min temperature, humidity, leaf wetting, wind and rain at 2 m,"
+        " January 2011 to December 2017 (Pinhao-Porto 2014-2017 only); the Leda pair (Leda 2,"
+        " 318 m, and Leda 3, 163 m) gave 834 cold-pool nights; observed; not open",
+        "Sanderson et al. 2022, J. Appl. Meteorol. Climatol. 61:1893-1904, Sect. 2 and Table 1"
+        " (l. 107-190, 301-368; literature/sanderson2022); not fitted to TAF, which uses the SRTM"
+        " 90 m DEM; daily values of the same stations are in ECA&D",
+        "read",
+    ),
+    "kuwagata2024.kumamoto": Dataset(
+        "Rice-canopy dew and micrometeorology at the NARO Kyushu Okinawa center, Kumamoto,"
+        " Japan (32.87°N, 130.74°E, 76 m; rice 'Hinohikari' transplanted 11 June 2003): leaf dew"
+        " by layer on four nights (three at booting, one at grain filling), with solar and"
+        " downward longwave radiation, 2 m air temperature and humidity and wind;"
+        " 18-27 August and 24 September-3 October 2003; observed; DOI 10.17632/fmvr43csy3.3",
+        "Kuwagata et al. 2024, Agric. For. Meteorol. 354:109911, Sect. 2.3 and 3 (l. 643-723;"
+        " literature/kuwagata2024); the same observations as Maruyama et al. 2023"
+        " (literature/maruyama2023); the multilayer reference was checked against them",
+        "read",
+    ),
+    "quenol2004.vinho_verde": Dataset(
+        "Tiny Talk logger series in two Vinho Verde vineyards about 30 km apart, Arcos de"
+        " Valdevez (Lima valley) and Moncao/Troviscoso (Minho valley), Portugal: 16 + 8 open-air"
+        " thermometers at 1.50 m and 12 sheltered temperature and humidity loggers (10 + 2), every"
+        " 15 min, February to October 2003; three nights analysed (15-16 and 16-17 February,"
+        " 3-4 May); humidity recorded but no result printed; observed; data not offered",
+        "Quenol et al. 2004, Norois 193:117-132, Sect. 2 and Tables 1-3 (l. 251-331;"
+        " literature/quenol2004); not fitted by a formulation here",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"

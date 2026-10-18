@@ -133,6 +133,8 @@ STRUCTURES = {
     "disaggregation": "daily weather turned into hourly or sub-daily values",
     "litter-decay": "mass of fallen leaves or litter decaying over time",
     "station-to-canopy": "canopy air temperature as a regression on a standard station's",
+    "cold-air-pool": "night cooling in hollows and valleys from terrain",
+    "dew-energy-balance": "dew and leaf drying from a surface energy balance",
 }
 
 

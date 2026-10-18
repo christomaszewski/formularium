@@ -107,6 +107,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "schumacher2024.cluster_resistance": ("schumacher2024.freiburg",),
         "zhu2021.apsim_grapevine": ("zhu2021.marlborough",),
         "forster2016.melodist": ("forster2016.five_sites",),
+        "kuwagata2024.canopy_dew": ("kuwagata2024.kumamoto",),
         "brunetto2018.leaf_litter_decay": ("brunetto2018.santana",),
         "penaquinones2020.canopy_station": ("penaquinones2020.prosser",),
         "paulescu2023.minute_separation": ("paulescu2023.payerne",),

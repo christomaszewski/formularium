@@ -3972,6 +3972,142 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="process",
     ),
+    "sanderson2022.taf": Formulation(
+        "Topographic amplification factor TAF = W H / A of a valley cross-section from a 90 m"
+        " DEM, and its down-valley gradient, to map where cold air pools",
+        "Sanderson et al. 2022, J. Appl. Meteorol. Climatol. 61:1893-1904, Sect. 2 and 3"
+        " (l. 260-270)",
+        year=2022,
+        authors=(
+            "Sanderson, Michael G.",
+            "Teixeira, Marta",
+            "Graca, Antonio",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="michael_2022_2.pdf (the 2026-10-18 drop)",
+        doi="10.1175/JAMC-D-21-0263.1",
+        structures=("cold-air-pool",),
+        structures_note=(
+            "TAF is a terrain index of how much more a valley cools than an open column of air"
+            " of the same width (Whiteman 1990; Lundquist et al. 2008, which this paper follows);"
+            " it is a map of where cold air is likely to collect, not a temperature."
+        ),
+        calibration_note=(
+            "Nothing is fitted. TAF is computed from the SRTM v4.1 90 m DEM alone: for each"
+            " valley-floor pixel a transect gives W (valley width, from the edge coordinates),"
+            " H (height from the transect low point to the lower of the two local maxima, the"
+            " valley top) and A (cross-sectional area, by the trapezium rule); TAF = W H / A,"
+            " the text layer's '5' being '=' in the page image. The down-valley gradient is a"
+            " least-squares line over 5 contiguous pixels, tested at 5 %. Cold pools were then"
+            " identified separately from 15-min data at the Leda pair of stations"
+            " (sanderson2022.stations); no TAF value is compared with those events in the text"
+            " read, so the station data are not a calibration of TAF."
+        ),
+        parameters=(
+            Published(
+                "transect.tributary_radius", 10, "pixel", "text, l. 231 (about 900 m)", "read"
+            ),
+            Published("transect.main_radius", 20, "pixel", "text, l. 233 (about 1800 m)", "read"),
+            Published("dem.resolution", 90, "m", "text, l. 165 (SRTM v4.1, 3 arc s)", "read"),
+        ),
+        flags=(
+            "Printed TAF results are ranges only: most values along the main Douro channel 1.4"
+            " to 2.0, a few reaches 2.0 to 2.8 on convex sides (l. 266-270); no threshold of TAF"
+            " for pooling and no units for the gradient are printed.",
+            "Cold-pool events are counted at one pair of stations (Leda 2, 318 m, and Leda 3,"
+            " 163 m, 155 m apart): inversion of at least 1 °C between sunset and sunrise,"
+            " strong above 4 °C (l. 259-261, 317-318). Pools shallower than about 30 m are not"
+            " recorded (l. 174, 598). These thresholds and the event counts are dataset facts,"
+            " not parameters of TAF.",
+            "The event total is 834 (32 % of nights, l. 368), but Table 2's rows sum to 796"
+            " (182+240+79+0+6+11+0+53+225, checked in the page image); the 28 % marginal share"
+            " fits 796. The abstract says seven categories and Table 2 has nine rows, two of"
+            " them zero. Categories were assigned by eye.",
+            "Humidity and leaf-wetting sensors exist at each station (l. 162-164) but no"
+            " humidity, dew point or wetness result is printed: nothing here says how wet the"
+            " air in a pool is.",
+            "Station data are 15 min, not hourly, and are not open (commercial sensitivity,"
+            " l. 628); daily values of the nine stations are in ECA&D (l. 122, 551).",
+        ),
+        role="process",
+    ),
+    "kuwagata2024.canopy_dew": Formulation(
+        "One-layer energy-balance model of dew on a plant canopy: condensation rate from"
+        " effective radiation, air temperature, relative humidity and an exchange velocity kL;"
+        " the critical relative humidity for dew; potential and reference dew amounts",
+        "Kuwagata et al. 2024, Agric. For. Meteorol. 354:109911, Sect. 2 and 3, Eqs 1-28",
+        year=2024,
+        authors=(
+            "Kuwagata, Tsuneo",
+            "Maruyama, Atsushi",
+            "Kondo, Junsei",
+            "Watanabe, Tsutomu",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="tsuneo_2024.pdf (the 2026-10-18 drop; the manuscript's author line)",
+        doi="10.1016/j.agrformet.2024.109911",
+        structures=("dew-energy-balance",),
+        structures_note=(
+            "Dew is a result of the canopy energy balance (Eq 1; bulk fluxes Eqs 4-5; Eq 7,"
+            " dW/dt = -E_L / rho_w); the model has no relative-humidity threshold, and the"
+            " critical relative humidity (Eq 8, approximated by Eq 24) is an output."
+        ),
+        calibrated_on=("kuwagata2024.kumamoto",),
+        calibration_note=(
+            "Not fitted. Checked against rice-canopy dew at Kumamoto, 18-27 August and"
+            " 24 September-3 October 2003 (measured on four nights), the same observations as"
+            " Maruyama et al. 2023 (literature/maruyama2023), by the reference dew amount W0"
+            " (Eq 25) and the potential dew amount Wp (Eq 26). A multilayer reference (MLC, a"
+            " MINCER derivative, Watanabe et al. 2004, 2005) is run on the same data and was"
+            " itself checked against them, so W0 and Wp against MLC is not independent. The"
+            " canopy length scale DL = 0.1 m was chosen 'for comparison with the measured"
+            " data' (l. 629); how is not said. No error statistic is printed: measured against"
+            " MLC 'fairly consistent', W0 'roughly consistent', Wp 'slightly larger'"
+            " (l. 1213-1223)."
+            " The structure is Kondo (1996)'s one-layer model (l. 411; not in the catalogue)"
+            " and the maximum rate of Eq 10 is Monteith's (1961); neither is a record here."
+        ),
+        parameters=(
+            Published("stefan_boltzmann", 5.67e-8, "W m-2 K-4", "text, l. 307", "read"),
+            Published("emissivity", 1.0, "1", "text, l. 309 and 403 (assumed, black body)", "read"),
+            Published("beta", 1.0, "1", "text, l. 403 (assumed: all leaves wet)", "read"),
+            Published("water_density", 1000, "kg m-3", "text, l. 401 (10^3 in the paper)", "read"),
+            Published("surface_pressure", 1013, "hPa", "text, l. 409", "read"),
+            Published("time_step", 1800, "s", "text, l. 613", "read"),
+            Published("wind_minimum", 0.05, "m s-1", "text, l. 613", "read"),
+            Published(
+                "min_evaporation_coefficient", 0.05, "1", "text, l. 615 (chL, Eq 27b)", "read"
+            ),
+            Published("albedo_daytime", 0.3, "1", "text, l. 617 (paddy rice)", "read"),
+            Published("transmittance_daytime", 0.2, "1", "text, l. 617 (paddy rice)", "read"),
+            Published("canopy_length_scale", 0.1, "m", "text, l. 629 (rice, DL)", "read"),
+            Published(
+                "wet_dew_threshold", 0.01, "mm", "text, l. 1374 (leaf wetness duration)", "read"
+            ),
+        ),
+        flags=(
+            "Dew forms below the engine's wetness rule: the paper derives a critical relative"
+            " humidity that falls with strong radiative cooling and low air temperature, and"
+            " states that for an effective radiation below -100 W m-2 condensation can occur at"
+            " relative humidity under 0.4 (l. 1576-1578). Fig. 4 (not rendered by the reading;"
+            " its axis runs to -150 W m-2) plots it, near 1.0 at zero effective radiation. At"
+            " -100 W m-2 and 20 °C the maximum rate is 1.42 mm per day at 0.9, 0.37 mm per day"
+            " at 0.6 (26 %) and 0.058 mm per day at 0.4 (4 %) (l. 1582-1589). The engine's"
+            " RH >= 90 % stand-in is therefore not this model's rule; the paper itself notes"
+            " empirical rules near 0.9 (l. 1566).",
+            "A rice paddy, not a vineyard; one site, four measured nights, warm temperate"
+            " humid subtropical climate (l. 643-653). Leaf wetness is the time dew exceeds"
+            " 0.01 mm, afternoon to 07:30 local time (l. 1374).",
+            "Needs effective radiation (measured downward longwave here), air temperature,"
+            " humidity, wind (corrected from 2 m to canopy top) and canopy properties; the exchange"
+            " velocity kL is from an empirical equation (Watanabe and Mizutani 1996). Eqs 1-7 and"
+            " 21-24 were checked in page images, Eqs 8-20, 22-23, 27b and 28 from the text layer.",
+            "Data: DOI 10.17632/fmvr43csy3.3 (Mendeley Data); licence not printed.",
+        ),
+        role="process",
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",
