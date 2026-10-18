@@ -131,6 +131,8 @@ STRUCTURES = {
     " rules",
     "weather-generator": "stochastic generation of weather series",
     "disaggregation": "daily weather turned into hourly or sub-daily values",
+    "litter-decay": "mass of fallen leaves or litter decaying over time",
+    "station-to-canopy": "canopy air temperature as a regression on a standard station's",
 }
 
 

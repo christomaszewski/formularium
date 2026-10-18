@@ -3768,6 +3768,210 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="process",
     ),
+    "brunetto2018.leaf_litter_decay": Formulation(
+        "Mass of fallen grapevine leaves left in a vineyard, as percent remaining falling"
+        " exponentially with days after deposition, in the row and between rows",
+        "Brunetto et al. 2018, Rev. Cienc. Agrar. 61:1-10, Table 4 (p. 7), as X = X0 exp(-k t)",
+        year=2018,
+        authors=(
+            "Brunetto, Gustavo",
+            "Garlete, Luana",
+            "Ceretta, Carlos Alberto",
+            "Melo, George Wellington Bastos de",
+            "Hammerschmitt, Rodrigo Knevitz",
+            "Couto, Rafael da Rosa",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="gustavo_2018.pdf (the 2026-10-18 drop)",
+        doi="10.22491/rca.2018.2624",
+        structures=("litter-decay",),
+        calibrated_on=("brunetto2018.santana",),
+        calibration_note=(
+            "Leaves in litter bags, Cabernet Sauvignon, Santana do Livramento (Brazil), bags laid"
+            " 16 April 2009 and collected from 0 to 210 days (the paper says May to November"
+            " 2009, southern autumn to spring). The form is borrowed (cite as the paper does):"
+            " Boer et al. 2007 for the exponential, Paul & Clark 1989 for the half-life"
+            " 0.693 / k. t is in days after deposition; X is percent of dry mass remaining."
+        ),
+        parameters=(
+            Published(
+                "mass.in_row.x0", 96.17, "%", "Table 4, p. 7 (leaves, mass, in the row)", "read"
+            ),
+            Published("mass.in_row.k", 0.003, "1/d", "Table 4, p. 7 (printed 'g g-1')", "read"),
+            Published("mass.in_row.half_life", 231, "d", "Table 4, p. 7", "read"),
+            Published("mass.in_row.r2", 0.90, "1", "Table 4, p. 7", "read"),
+            Published("mass.between_rows.x0", 94.43, "%", "Table 4, p. 7", "read"),
+            Published(
+                "mass.between_rows.k", 0.003, "1/d", "Table 4, p. 7 (printed 'g g-1')", "read"
+            ),
+            Published("mass.between_rows.half_life", 231, "d", "Table 4, p. 7", "read"),
+            Published("mass.between_rows.r2", 0.92, "1", "Table 4, p. 7", "read"),
+            Published("n15.in_row.k", 0.05, "1/d", "Table 4, p. 7 (15N excess in leaves)", "read"),
+            Published("n15.in_row.half_life", 13.86, "d", "Table 4, p. 7", "read"),
+        ),
+        flags=(
+            "One site and one winter, in a subtropical climate (Cfa, 18.4 °C mean): the rate is"
+            " not for a temperate winter. It is the mass of the leaf, not the survival of any"
+            " pathogen on it.",
+            "k is printed to one significant figure and in 'g g-1'; per day is implied by the"
+            " half-lives (0.693 / 0.003 = 231 d).",
+            "Table 5 (stems) was not used. The reader reported its P row as k 0.002 against a"
+            " half-life of 231 d, which would be inconsistent; the main session read k 0.002"
+            " with 346.5 d, which is consistent.",
+            "Soil temperature and moisture were not measured; the authors infer they are similar"
+            " in the row and between rows.",
+        ),
+        role="process",
+    ),
+    "penaquinones2020.canopy_station": Formulation(
+        "Daily maximum and minimum canopy air temperature at 0.5 m and 1.2 m as straight lines"
+        " in a standard station's daily maximum and minimum at 1.7 m",
+        "Pena Quinones et al. 2020, PLOS ONE 15(6):e0234436, Fig. 5 (p. 11)",
+        year=2020,
+        authors=(
+            "Pena Quinones, Andres Javier",
+            "Hoogenboom, Gerrit",
+            "Salazar Gutierrez, Melba Ruth",
+            "Stockle, Claudio",
+            "Keller, Markus",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="andr_s_2020.pdf (the 2026-10-18 drop)",
+        doi="10.1371/journal.pone.0234436",
+        structures=("station-to-canopy",),
+        calibrated_on=("penaquinones2020.prosser",),
+        calibration_note=(
+            "Each line is canopy temperature (°C) = a + b x station temperature (°C), fitted to"
+            " the daily series of one Chardonnay vineyard at Prosser, Washington. Maximum at"
+            " 0.5 m: R2 0.994, n 437; at 1.2 m: R2 0.991; minimum at 0.5 m: R2 0.987, n 436; at"
+            " 1.2 m: R2 0.987. Standard errors are not printed. Read from the page image."
+        ),
+        parameters=(
+            Published("max_05.a", -0.155, "°C", "Fig. 5, p. 11 (maximum, 0.5 m)", "read"),
+            Published("max_05.b", 1.071, "1", "Fig. 5, p. 11 (maximum, 0.5 m)", "read"),
+            Published("max_12.a", -0.384, "°C", "Fig. 5, p. 11 (maximum, 1.2 m)", "read"),
+            Published("max_12.b", 1.082, "1", "Fig. 5, p. 11 (maximum, 1.2 m)", "read"),
+            Published("min_05.a", -0.728, "°C", "Fig. 5, p. 11 (minimum, 0.5 m)", "read"),
+            Published("min_05.b", 0.965, "1", "Fig. 5, p. 11 (minimum, 0.5 m)", "read"),
+            Published("min_12.a", -0.414, "°C", "Fig. 5, p. 11 (minimum, 1.2 m)", "read"),
+            Published("min_12.b", 0.942, "1", "Fig. 5, p. 11 (minimum, 1.2 m)", "read"),
+        ),
+        flags=(
+            "One Chardonnay vineyard at Prosser, Washington (a dry climate), with the station"
+            " about 410-415 m away (the abstract says 410 m, the text 415 m), from December 2015"
+            " to 30 June 2017; the daily regressions use 436-437 of the 478 days compared.",
+            "The offsets change with the season (a summer minimum 1.1-1.3 °C below the station's,"
+            " a summer maximum 1.7-2.2 °C above it, near zero in winter), which one line per"
+            " extreme does not show.",
+            "The abstract's berry-cluster maxima (1.5 and 4.0 °C above the station, east and"
+            " west) disagree with Table 2b (1.67 and 6.14 °C); the abstract's 2.0 °C summer"
+            " canopy maximum is not a printed value either (Table 2a: 1.67 and 2.16 °C).",
+            "No humidity, wetness or wind was measured in the canopy; it says nothing about"
+            " relative humidity or leaf wetness hours.",
+        ),
+        role="process",
+    ),
+    "paulescu2023.minute_separation": Formulation(
+        "Diffuse fraction of global horizontal irradiance at 1-minute steps from the clearness"
+        " index and its hourly and daily values (M2); an eight-predictor version (M1)",
+        "Paulescu & Paulescu 2023, Appl. Sci. 13:6558, Eqs 5 and 6 (p. 5)",
+        year=2023,
+        authors=("Paulescu, Eugenia", "Paulescu, Marius"),
+        authors_complete=True,
+        authors_from="read",
+        checked="eugenia_2023.pdf (the 2026-10-18 drop)",
+        doi="10.3390/app13116558",
+        structures=("clearness-index-partition",),
+        calibrated_on=("paulescu2023.payerne",),
+        calibration_note=(
+            "M2 (Eq. 6): kd = (1 + a1 kt + a2 kt^2 + a3 (kt khour)^2) / (1 + b1 kt + b2 kt^2 +"
+            " b3 (kt kday)^2), kt the 1-minute clearness index and khour, kday the hourly and"
+            " daily ones, all from global irradiance; R2 0.917, nMBE 0.007. M1 (Eq. 5) has eight"
+            " predictors (kt, dKtc, kde, kday, khour, a persistence term psi, the clear-sky"
+            " irradiance Gcs in MJ/(h m2), Kcsi), R2 0.929, nMBE 0.011, whose definitions are in"
+            " the paper: numerator 1 + 7.217 Kcsi kt dKtc^2 - 0.656 Kcsi^0.5 kt^2 + 7.947 kde +"
+            " 0.187 Gcs - 2.747 kt^2 khour^3 - 15.379 kt psi dKtc^3; denominator 1 + 1.655 Kcsi"
+            " dKtc^3 + 14.008 (kday kt)^3 + 17.477 kde + 0.16 Gcs. Fitted on Payerne 2020"
+            " (1-minute, elevation above 5 degrees) and tested on 36 BSRN stations with no"
+            " overlap in time. M1 gathers predictors of earlier models (a predictor borrowing,"
+            " not an equation); no model is said to have shaped the data."
+        ),
+        parameters=(
+            Published("m2.a1", -2.525, "1", "Eq. 6, p. 5 (numerator, kt)", "read"),
+            Published("m2.a2", 1.834, "1", "Eq. 6, p. 5 (numerator, kt^2)", "read"),
+            Published("m2.a3", -0.204, "1", "Eq. 6, p. 5 (numerator, (kt khour)^2)", "read"),
+            Published("m2.b1", -2.578, "1", "Eq. 6, p. 5 (denominator, kt)", "read"),
+            Published("m2.b2", 1.902, "1", "Eq. 6, p. 5 (denominator, kt^2)", "read"),
+            Published("m2.b3", 1.054, "1", "Eq. 6, p. 5 (denominator, (kt kday)^2)", "read"),
+        ),
+        flags=(
+            "Erbs 1982 is not among the models compared (the reference models are PB, E2, S1, S3"
+            " and Y4), so its error at these stations is not given.",
+            "Fitted on one station-year at Payerne; the weakest results are at arid stations"
+            " (Tamanrasset, DHI nRMSE 52.9 % for M2). The fit statistics do not name their"
+            " dataset. Per-station errors are in Fig. 4, which was not extracted.",
+            "A 1-minute model: the sweep's hourly weather does not have the inputs.",
+        ),
+        role="process",
+    ),
+    "laiti2018.brl_bolzano": Formulation(
+        "Hourly diffuse fraction as a logistic function of the clearness index, solar time,"
+        " elevation, the daily clearness index and a persistence index (BRL), with the"
+        " coefficients refitted to an Alpine valley station",
+        "Laiti et al. 2018, Atmosphere 9:117, Eq. 7 and Table 5 (l. 498-508)",
+        year=2018,
+        authors=(
+            "Laiti, Lavinia",
+            "Giovannini, Lorenzo",
+            "Zardi, Dino",
+            "Belluardo, Giorgio",
+            "Moser, David",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="lavinia_2018.pdf (the 2026-10-18 drop)",
+        doi="10.3390/atmos9040117",
+        structures=("clearness-index-partition",),
+        calibrated_on=("laiti2018.bolzano",),
+        calibration_note=(
+            "kd = 1 / (1 + exp(a0 + a1 kt + a2 t + a3 h + a4 Kt + a5 psi)), t apparent solar"
+            " time, h solar elevation, Kt the daily clearness index, psi the mean of the"
+            " clearness index in the hours before and after. The form and the original"
+            " coefficients (brl.*) are Lauret et al. 2013's, borrowed and cited by the paper;"
+            " the local ones (brl_local.*) are fitted to the Bolzano hours by robust least"
+            " squares with a null mean bias, on the same 10,310 hours that validate them."
+        ),
+        parameters=(
+            Published("brl.a0", -5.32, "1", "Table 5, l. 498-508 (original)", "read"),
+            Published("brl.a1", 7.28, "1", "Table 5, l. 498-508 (original)", "read"),
+            Published("brl.a2", -0.03, "not stated", "Table 5, l. 498-508 (original)", "read"),
+            Published("brl.a3", -0.0047, "not stated", "Table 5, l. 498-508 (original)", "read"),
+            Published("brl.a4", 1.72, "1", "Table 5, l. 498-508 (original)", "read"),
+            Published("brl.a5", 1.08, "1", "Table 5, l. 498-508 (original)", "read"),
+            Published("brl_local.a0", -6.67, "1", "Table 5, l. 498-508 (Bolzano)", "read"),
+            Published("brl_local.a1", 6.72, "1", "Table 5, l. 498-508 (Bolzano)", "read"),
+            Published("brl_local.a2", 0.06, "not stated", "Table 5, l. 498-508 (Bolzano)", "read"),
+            Published(
+                "brl_local.a3", -0.0072, "not stated", "Table 5, l. 498-508 (Bolzano)", "read"
+            ),
+            Published("brl_local.a4", 2.01, "1", "Table 5, l. 498-508 (Bolzano)", "read"),
+            Published("brl_local.a5", 2.47, "1", "Table 5, l. 498-508 (Bolzano)", "read"),
+        ),
+        flags=(
+            "The local fit is in-sample: the same 10,310 hours fit and validate it, and no split"
+            " is stated. Its diffuse rMBE of 0.00 % is imposed by the fit.",
+            "In the same valley Erbs 1982 has a diffuse rRMSE of 37.23 % and rMBE 7.35 % (Table 3,"
+            " l. 430), and direct rRMSE 21.20 % (Table 4); the paper does not print the Erbs"
+            " equation.",
+            "Orographically shadowed hours (2,098 of 10,310) raise the mean diffuse bias of the 13"
+            " models to 27 % against 7 % unshadowed; the sky view factor is 0.788.",
+            "Units of t and h are not stated in the equation's text; the validation excludes solar"
+            " elevations below 7 degrees.",
+        ),
+        role="process",
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

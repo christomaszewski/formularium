@@ -586,6 +586,71 @@ DATASETS: dict[str, Dataset] = {
         " observed days are its pool",
         "read",
     ),
+    "brunetto2018.santana": Dataset(
+        "Dry mass of Cabernet Sauvignon leaves (and pruned stems) in 20 x 20 cm litter bags of"
+        " 1 mm mesh, 30 g each, on the soil surface in the row and between rows of a vineyard at"
+        " Santana do Livramento (Rio Grande do Sul, Brazil), bags laid 16 April 2009 and five per"
+        " material and position collected at 0, 30, 60, 90, 120, 150, 180 and 210 days; monthly"
+        " 2009 rain and air temperature from an unnamed station; observed",
+        "Brunetto et al. 2018, Rev. Cienc. Agrar. 61:1-10, Sect. 2 and Table 4 (l. 75-141,"
+        " 368-398; literature/brunetto2018); the exponential decay is fitted per position to the"
+        " percent of mass remaining; Table 5 (stems) not used",
+        "read",
+    ),
+    "penaquinones2020.prosser": Dataset(
+        "Daily maximum and minimum air temperature from 4 thermistors at 0.5 m and 3 at 1.2 m in a"
+        " Chardonnay canopy (rows north-south, 2,035 vines/ha) at Roza Farm, Prosser, Washington,"
+        " against a standard station at 1.7 m about 410-415 m away, 10 December 2015 to 30 June"
+        " 2017 (n 478 days compared; 437 maxima and 436 minima in the regressions); berry-cluster"
+        " thermocouples on the east and west sides in 2016 and 2017; observed",
+        "Pena Quinones et al. 2020, PLOS ONE 15(6):e0234436, Methods and Fig. 5 (l. 136-258;"
+        " literature/penaquinones2020); the four daily regressions are fitted on this series;"
+        " the S1 data file was not checked",
+        "read",
+    ),
+    "paulescu2023.payerne": Dataset(
+        "BSRN 1-minute global, diffuse and direct irradiance at Payerne, Switzerland (46.815 N,"
+        " 6.944 E), the year 2020, 193,294 records with solar elevation above 5 degrees (D_FIT),"
+        " on which M1 and M2 are fitted; observed. The test set (D_TEST) is 36 BSRN stations,"
+        " one year each from 2002 to 2021, nearly 7 million records, with no overlap in time"
+        " with the fit",
+        "Paulescu & Paulescu 2023, Appl. Sci. 13:6558, Sect. 2 (l. 186-259; literature/"
+        "paulescu2023); the fit statistics (R2 0.917 for M2, 0.929 for M1) do not name their"
+        " dataset; BSRN access date 15 May 2023, licence not printed",
+        "read",
+    ),
+    "laiti2018.bolzano": Dataset(
+        "Hourly global, diffuse and direct irradiance from 1-minute data averaged to 15 minutes at"
+        " Bolzano city airport (46.458 N, 11.329 E, 265 m), Adige Valley, 2011-2014; 10,310 valid"
+        " hours (solar elevation 7 degrees or more) of which 2,098 orographically shadowed; sky"
+        " view factor 0.788; observed",
+        "Laiti et al. 2018, Atmosphere 9:117, Sect. 2 and Table 5 (l. 152-193, 292-293, 498-508;"
+        " literature/laiti2018); the local coefficients are fitted on the same hours that"
+        " validate them, no split stated",
+        "read",
+    ),
+    "lecap2022.quincy": Dataset(
+        "Hourly temperature from 37 Weenat anti-frost sensors across the Quincy vineyard (about"
+        " 700 ha, flat, mean altitude 122 m), installed December 2019, daily minimum from 18:00 to"
+        " 18:00, 34 frost nights in 2020-2022; Bourges synoptic data 22 km away, AROME night"
+        " cloud forecast, 5 m DEM; observed. Data available from the corresponding author on"
+        " request; no repository, no licence",
+        "Le Cap et al. 2022, Research Square preprint rs-1932104/v1, Sect. 2 (l. 178-200,"
+        " 790-796; literature/lecap2022); a preprint, the published version was not read; no"
+        " formulation is fitted to it",
+        "read",
+    ),
+    "pipan2021.victoria": Dataset(
+        "Daily minimum and maximum temperature from one Tinytag TGP-4500 logger in a Stevenson"
+        " screen at each of four Victorian vineyards (Yarra Burn, Whitlands, Coldstream and"
+        " Rutherglen), 30-minute records, four seasons from 2015-16 to 2018-19, against SILO's 0.05"
+        " degree (about 5 km) interpolated grid of about 4,600 Bureau of Meteorology stations;"
+        " observed and interpolated. Logger data from the authors on request; the SILO licence is"
+        " not printed",
+        "Pipan et al. 2021, Front. Plant Sci. 12:635299, Sect. 2 and Table 2 (l. 160-191;"
+        " literature/pipan2021); no formulation is fitted to it; Table 2 read by eye",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"
