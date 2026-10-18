@@ -9,7 +9,7 @@ crops: [grapevine]
 regions: [Italy, Tuscany, Siena]
 processes: [sensor network, missing data, gap filling, reconstruction, graph neural network, air temperature, relative humidity]
 records: []
-datasets: [costanti2026.siena_five_nodes]
+datasets: []
 files: [filippo_2026.pdf (the 2026-10-18 drop)]
 ---
 

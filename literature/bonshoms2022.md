@@ -9,7 +9,7 @@ crops: []
 regions: [Peru, Andes, Cordillera Blanca, Quelccaya, Coropuna]
 processes: [reanalysis, ERA5-Land, air temperature, relative humidity, lapse rate, night humidity, saturation]
 records: []
-datasets: [bonshoms2022.peru_glacier_aws]
+datasets: []
 files: [mart__2022.pdf (the 2026-10-18 drop)]
 ---
 

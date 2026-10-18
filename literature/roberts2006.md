@@ -9,7 +9,7 @@ crops: [soybean]
 regions: [United States, Corn Belt]
 processes: [value of information, early warning, fungicide decision, forecast quality, decision tree]
 records: []
-datasets: [roberts2006.sbr_value]
+datasets: []
 files: [roberts_2006.pdf (the 2026-10-18 drop)]
 ---
 

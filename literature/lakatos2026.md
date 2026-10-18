@@ -9,7 +9,7 @@ crops: [grapevine]
 regions: [Hungary, Eger, Tokaj]
 processes: [gridded climate data, minimum temperature, interpolation error, microclimate, vapour pressure deficit, terrain]
 records: []
-datasets: [lakatos2026.boreas_six_vineyards]
+datasets: []
 files: [l__2026.pdf (the 2026-10-18 drop)]
 ---
 
