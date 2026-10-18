@@ -3616,6 +3616,551 @@ FORMULATIONS: dict[str, Formulation] = {
             " the note, not here. The +/- 0.002 on the phyllochron is not labelled SD or SE."
         ),
     ),
+    "forster2016.melodist": Formulation(
+        "MELODIST v0.1.1: hourly temperature, humidity, wind, radiation and precipitation from"
+        " daily values, one variable at a time at one site (methods T1, H1-H4, W1-W3, R1-R3,"
+        " P1-P2)",
+        "Foerster et al. 2016, Geosci. Model Dev. 9:2315-2333, Table 2 and Sect. 3-4",
+        year=2016,
+        authors=(
+            "Foerster, Kristian",
+            "Hanzer, Florian",
+            "Winter, Benjamin",
+            "Marke, Thomas",
+            "Strasser, Ulrich",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="kristian_2016.pdf (the 2026-10-18 drop)",
+        doi="10.5194/gmd-9-2315-2016",
+        structures=("disaggregation",),
+        calibrated_on=("forster2016.five_sites",),
+        calibration_note=(
+            "Methods named in Table 2: temperature T1 (cosine between Tmin and Tmax); humidity"
+            " H1 (dew point = Tmin), H2 (dew point = a Tmin + b, fitted per site), H3 (dew"
+            " point linear between days with a sine term) and H4 (daily Hmin and Hmax); wind"
+            " W1-W3; radiation R1-R3; precipitation P1-P2. H2, H3 and R2 are fitted on each"
+            " site's calibration period, H1 and H4 are not. Fitted a and b are not printed."
+            " Five sites, calibration and validation periods in forster2016.five_sites."
+        ),
+        parameters=(
+            Published("h1.a", 1, "1", "text, l. 319 (H1: a = 1, b = 0)", "read"),
+            Published("h1.b", 0, "°C", "text, l. 319 (H1: a = 1, b = 0)", "read"),
+            Published(
+                "h3.kr_high_radiation", 6, "1", "Eq. 8 text, l. 409 (above 100 W m-2)", "read"
+            ),
+            Published("h3.kr_low_radiation", 12, "1", "Eq. 8 text, l. 409 (otherwise)", "read"),
+            Published("t1.tmax_after_noon", 2, "h", "text, l. 193 (rule of thumb)", "read"),
+            Published("r2.angstrom_a", 0.25, "1", "text, l. 471 (default)", "read"),
+            Published("r2.angstrom_b", 0.75, "1", "text, l. 471 (default)", "read"),
+        ),
+        flags=(
+            "Not validated on humidity near saturation or on wet hours: Table 4 gives only"
+            " whole-series mean, RMSE, r and NSE for H3 relative humidity (RMSE 10.39 to 18.52 %,"
+            " r 0.02 at Ny-Alesund, 0.51 to 0.72 elsewhere); the text says RMSE 20 %, which"
+            " Table 4 does not show. H1, H2 and H4 results are not printed in the tables read.",
+            "Humidity from H1-H3 is es(Tdew) / es(T) of the disaggregated temperature; nothing"
+            " printed says whether it is capped at 100 %. H1 holds the dew point at Tmin all day.",
+            "Each variable is disaggregated alone, with no co-variation: wind speed has no link to"
+            " rain or humidity, and there is no wind direction.",
+            "Code is open: GPL-3, Python, GitHub kristianfoerster/melodist and Zenodo"
+            " 10.5281/zenodo.54676, so it can run. It is a disaggregation tool, not a generator:"
+            " the daily series come from elsewhere.",
+        ),
+        role="process",
+    ),
+    "pidoto2023.hourly_generator": Formulation(
+        "Semi-parametric hourly weather generator: space-time rainfall (alternating renewal,"
+        " copulas), k-NN resampling of daily temperature, humidity and radiation, hourly"
+        " values by MELODIST's deterministic forms",
+        "Pidoto & Haberlandt 2023, Hydrol. Earth Syst. Sci. 27:3957-3975, Sect. 2.1-2.4, Eqs 19-23",
+        year=2023,
+        authors=("Pidoto, Ross", "Haberlandt, Uwe"),
+        authors_complete=True,
+        authors_from="read",
+        checked="ross_2023.pdf (the 2026-10-18 drop)",
+        doi="10.5194/hess-27-3957-2023",
+        borrows=("forster2016.melodist",),
+        structures=("weather-generator", "disaggregation"),
+        calibrated_on=("pidoto2023.germany",),
+        calibration_note=(
+            "Rainfall fitted to 699 DWD sub-daily stations in two seasons (April-September,"
+            " October-March); the k-NN resamples HYRAS daily data conditioned on the"
+            " catchment rainfall state. The hourly step applies MELODIST (Foerster et al."
+            " 2016) with forms that need no hourly observations: temperature by the cosine"
+            " (Eq. 20), relative humidity from Eq. 21 with the dew point equal to the daily"
+            " minimum temperature through the day (Tdew = Tmin, a rule, no diurnal profile),"
+            " radiation by Eq. 23. Fitted rainfall parameters are not printed."
+        ),
+        parameters=(
+            Published("t1.tmax_after_noon", 2, "h", "p. 3964, text under Eq. 20", "read"),
+            Published("magnus.pos.a", 6.1078, "not stated", "Eq. 22, p. 3964 (T >= 0 °C)", "read"),
+            Published("magnus.pos.b", 17.08085, "1", "Eq. 22, p. 3964 (T >= 0 °C)", "read"),
+            Published("magnus.pos.c", 234.175, "°C", "Eq. 22, p. 3964 (T >= 0 °C)", "read"),
+            Published("magnus.neg.a", 6.1071, "not stated", "Eq. 22, p. 3964 (T < 0 °C)", "read"),
+            Published("magnus.neg.b", 22.4429, "1", "Eq. 22, p. 3964 (T < 0 °C)", "read"),
+            Published("magnus.neg.c", 272.44, "°C", "Eq. 22, p. 3964 (T < 0 °C)", "read"),
+            Published("solar_constant", 1370, "W m-2", "Eq. 23, p. 3964", "read"),
+            Published("hyetograph.alpha", 1 / 3, "1", "text, l. 233 (Callau Poduje 2017)", "read"),
+        ),
+        flags=(
+            "Not validated on humidity near saturation or on wet hours: humidity is checked as"
+            " monthly means and hourly means (bias rarely above 5 % daily; relative humidity has"
+            " the greatest spread, April to July; hourly means deviate in winter, l. 786-818);"
+            " the correlation with daily rainfall is shown, with no wet-hour statistic.",
+            "Co-variation: humidity, temperature and radiation are resampled together as one"
+            " daily day, conditioned on the rainfall state; hourly humidity follows only from"
+            " the hourly temperature, with the dew point fixed at Tmin all day, so a rainy hour"
+            " carries no extra humidity. Eq. 21 prints no cap at 100 %.",
+            "No wind variable, so no wind direction with rain.",
+            "Code: R and Python, 'on request from the author' (l. 905); no repository or"
+            " licence printed, so it cannot be run from the paper. The input data (DWD, HYRAS)"
+            " are open.",
+        ),
+        role="process",
+    ),
+    "gorner2021.edm": Formulation(
+        "Euclidean distance model: hourly temperature, precipitation, sunshine, humidity and"
+        " wind speed by resampling the most similar observed day",
+        "Goerner et al. 2021, Theor. Appl. Climatol. 143:241-265, Sect. 3, Eqs 1-6",
+        year=2021,
+        authors=(
+            "Goerner, Christina",
+            "Franke, Johannes",
+            "Kronenberg, Rico",
+            "Hellmuth, Olaf",
+            "Bernhofer, Christian",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="c__2020.pdf (the 2026-10-18 drop)",
+        doi="10.1007/s00704-020-03426-7",
+        structures=("disaggregation",),
+        calibrated_on=("gorner2021.saxony_debilt",),
+        calibration_note=(
+            "An analogue method with no fitted parameter: the day to disaggregate is matched to"
+            " the observed day of least Euclidean distance on standardised daily values, equal"
+            " weights (Eq. 3), and that day's hourly course is scaled by the ratio of daily"
+            " values (Eqs 4-6; temperature shifted). Selection S1 narrows windows of local"
+            " observation time; S2 adds DWD objective weather patterns. Rescaled relative"
+            " humidity above 100 % is set to 100 %."
+        ),
+        parameters=(
+            Published("window.s1_first", 120, "min", "text, l. 350 (LOD +/- 2 h)", "read"),
+            Published("window.s1_second", 60, "min", "text, l. 350 (+/- 1 h)", "read"),
+            Published("window.s1_third", 30, "min", "text, l. 350 (+/- 30 min)", "read"),
+            Published("window.s1_fourth", 15, "min", "text, l. 350 (+/- 15 min)", "read"),
+            Published("rh.cap", 100, "%", "text, l. 393", "read"),
+            Published("sunshine.cap", 60, "min", "text, l. 393", "read"),
+        ),
+        flags=(
+            "Humidity near saturation is only partly checked: the observed and the generated"
+            " 95th percentile are both 100 % (Tables 2-3), the Fichtelberg median is 90.2 %"
+            " against 93.0 % observed, and 3780 (S1) and 2844 (S2) generated hourly values at"
+            " Dresden were cut to 100 %. Nothing is checked on wet hours.",
+            "Co-variation comes from the observed day: temperature, rain, sunshine, humidity"
+            " and wind speed move together as they did in the chosen day. Wind direction is not"
+            " handled. Fichtelberg wind speed can come out with an inverse diurnal cycle"
+            " (l. 1171).",
+            "Needs at least 10 years of hourly observations at or near the site (l. 1547); only"
+            " as many days as were observed, so rare events have a small pool.",
+            "No code or licence statement in the paper: it cannot be run from the paper.",
+        ),
+        role="process",
+    ),
+    "brunetto2018.leaf_litter_decay": Formulation(
+        "Mass of fallen grapevine leaves left in a vineyard, as percent remaining falling"
+        " exponentially with days after deposition, in the row and between rows",
+        "Brunetto et al. 2018, Rev. Cienc. Agrar. 61:1-10, Table 4 (p. 7), as X = X0 exp(-k t)",
+        year=2018,
+        authors=(
+            "Brunetto, Gustavo",
+            "Garlete, Luana",
+            "Ceretta, Carlos Alberto",
+            "Melo, George Wellington Bastos de",
+            "Hammerschmitt, Rodrigo Knevitz",
+            "Couto, Rafael da Rosa",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="gustavo_2018.pdf (the 2026-10-18 drop)",
+        doi="10.22491/rca.2018.2624",
+        structures=("litter-decay",),
+        calibrated_on=("brunetto2018.santana",),
+        calibration_note=(
+            "Leaves in litter bags, Cabernet Sauvignon, Santana do Livramento (Brazil), bags laid"
+            " 16 April 2009 and collected from 0 to 210 days (the paper says May to November"
+            " 2009, southern autumn to spring). The form is borrowed (cite as the paper does):"
+            " Boer et al. 2007 for the exponential, Paul & Clark 1989 for the half-life"
+            " 0.693 / k. t is in days after deposition; X is percent of dry mass remaining."
+        ),
+        parameters=(
+            Published(
+                "mass.in_row.x0", 96.17, "%", "Table 4, p. 7 (leaves, mass, in the row)", "read"
+            ),
+            Published("mass.in_row.k", 0.003, "1/d", "Table 4, p. 7 (printed 'g g-1')", "read"),
+            Published("mass.in_row.half_life", 231, "d", "Table 4, p. 7", "read"),
+            Published("mass.in_row.r2", 0.90, "1", "Table 4, p. 7", "read"),
+            Published("mass.between_rows.x0", 94.43, "%", "Table 4, p. 7", "read"),
+            Published(
+                "mass.between_rows.k", 0.003, "1/d", "Table 4, p. 7 (printed 'g g-1')", "read"
+            ),
+            Published("mass.between_rows.half_life", 231, "d", "Table 4, p. 7", "read"),
+            Published("mass.between_rows.r2", 0.92, "1", "Table 4, p. 7", "read"),
+            Published("n15.in_row.k", 0.05, "1/d", "Table 4, p. 7 (15N excess in leaves)", "read"),
+            Published("n15.in_row.half_life", 13.86, "d", "Table 4, p. 7", "read"),
+        ),
+        flags=(
+            "One site and one winter, in a subtropical climate (Cfa, 18.4 °C mean): the rate is"
+            " not for a temperate winter. It is the mass of the leaf, not the survival of any"
+            " pathogen on it.",
+            "k is printed to one significant figure and in 'g g-1'; per day is implied by the"
+            " half-lives (0.693 / 0.003 = 231 d).",
+            "Table 5 (stems) was not used. The reader reported its P row as k 0.002 against a"
+            " half-life of 231 d, which would be inconsistent; the main session read k 0.002"
+            " with 346.5 d, which is consistent.",
+            "Soil temperature and moisture were not measured; the authors infer they are similar"
+            " in the row and between rows.",
+        ),
+        role="process",
+    ),
+    "penaquinones2020.canopy_station": Formulation(
+        "Daily maximum and minimum canopy air temperature at 0.5 m and 1.2 m as straight lines"
+        " in a standard station's daily maximum and minimum at 1.7 m",
+        "Pena Quinones et al. 2020, PLOS ONE 15(6):e0234436, Fig. 5 (p. 11)",
+        year=2020,
+        authors=(
+            "Pena Quinones, Andres Javier",
+            "Hoogenboom, Gerrit",
+            "Salazar Gutierrez, Melba Ruth",
+            "Stockle, Claudio",
+            "Keller, Markus",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="andr_s_2020.pdf (the 2026-10-18 drop)",
+        doi="10.1371/journal.pone.0234436",
+        structures=("station-to-canopy",),
+        calibrated_on=("penaquinones2020.prosser",),
+        calibration_note=(
+            "Each line is canopy temperature (°C) = a + b x station temperature (°C), fitted to"
+            " the daily series of one Chardonnay vineyard at Prosser, Washington. Maximum at"
+            " 0.5 m: R2 0.994, n 437; at 1.2 m: R2 0.991; minimum at 0.5 m: R2 0.987, n 436; at"
+            " 1.2 m: R2 0.987. Standard errors are not printed. Read from the page image."
+        ),
+        parameters=(
+            Published("max_05.a", -0.155, "°C", "Fig. 5, p. 11 (maximum, 0.5 m)", "read"),
+            Published("max_05.b", 1.071, "1", "Fig. 5, p. 11 (maximum, 0.5 m)", "read"),
+            Published("max_12.a", -0.384, "°C", "Fig. 5, p. 11 (maximum, 1.2 m)", "read"),
+            Published("max_12.b", 1.082, "1", "Fig. 5, p. 11 (maximum, 1.2 m)", "read"),
+            Published("min_05.a", -0.728, "°C", "Fig. 5, p. 11 (minimum, 0.5 m)", "read"),
+            Published("min_05.b", 0.965, "1", "Fig. 5, p. 11 (minimum, 0.5 m)", "read"),
+            Published("min_12.a", -0.414, "°C", "Fig. 5, p. 11 (minimum, 1.2 m)", "read"),
+            Published("min_12.b", 0.942, "1", "Fig. 5, p. 11 (minimum, 1.2 m)", "read"),
+        ),
+        flags=(
+            "One Chardonnay vineyard at Prosser, Washington (a dry climate), with the station"
+            " about 410-415 m away (the abstract says 410 m, the text 415 m), from December 2015"
+            " to 30 June 2017; the daily regressions use 436-437 of the 478 days compared.",
+            "The offsets change with the season (a summer minimum 1.1-1.3 °C below the station's,"
+            " a summer maximum 1.7-2.2 °C above it, near zero in winter), which one line per"
+            " extreme does not show.",
+            "The abstract's berry-cluster maxima (1.5 and 4.0 °C above the station, east and"
+            " west) disagree with Table 2b (1.67 and 6.14 °C); the abstract's 2.0 °C summer"
+            " canopy maximum is not a printed value either (Table 2a: 1.67 and 2.16 °C).",
+            "No humidity, wetness or wind was measured in the canopy; it says nothing about"
+            " relative humidity or leaf wetness hours.",
+        ),
+        role="process",
+    ),
+    "paulescu2023.minute_separation": Formulation(
+        "Diffuse fraction of global horizontal irradiance at 1-minute steps from the clearness"
+        " index and its hourly and daily values (M2); an eight-predictor version (M1)",
+        "Paulescu & Paulescu 2023, Appl. Sci. 13:6558, Eqs 5 and 6 (p. 5)",
+        year=2023,
+        authors=("Paulescu, Eugenia", "Paulescu, Marius"),
+        authors_complete=True,
+        authors_from="read",
+        checked="eugenia_2023.pdf (the 2026-10-18 drop)",
+        doi="10.3390/app13116558",
+        structures=("clearness-index-partition",),
+        calibrated_on=("paulescu2023.payerne",),
+        calibration_note=(
+            "M2 (Eq. 6): kd = (1 + a1 kt + a2 kt^2 + a3 (kt khour)^2) / (1 + b1 kt + b2 kt^2 +"
+            " b3 (kt kday)^2), kt the 1-minute clearness index and khour, kday the hourly and"
+            " daily ones, all from global irradiance; R2 0.917, nMBE 0.007. M1 (Eq. 5) has eight"
+            " predictors (kt, dKtc, kde, kday, khour, a persistence term psi, the clear-sky"
+            " irradiance Gcs in MJ/(h m2), Kcsi), R2 0.929, nMBE 0.011, whose definitions are in"
+            " the paper: numerator 1 + 7.217 Kcsi kt dKtc^2 - 0.656 Kcsi^0.5 kt^2 + 7.947 kde +"
+            " 0.187 Gcs - 2.747 kt^2 khour^3 - 15.379 kt psi dKtc^3; denominator 1 + 1.655 Kcsi"
+            " dKtc^3 + 14.008 (kday kt)^3 + 17.477 kde + 0.16 Gcs. Fitted on Payerne 2020"
+            " (1-minute, elevation above 5 degrees) and tested on 36 BSRN stations with no"
+            " overlap in time. M1 gathers predictors of earlier models (a predictor borrowing,"
+            " not an equation); no model is said to have shaped the data."
+        ),
+        parameters=(
+            Published("m2.a1", -2.525, "1", "Eq. 6, p. 5 (numerator, kt)", "read"),
+            Published("m2.a2", 1.834, "1", "Eq. 6, p. 5 (numerator, kt^2)", "read"),
+            Published("m2.a3", -0.204, "1", "Eq. 6, p. 5 (numerator, (kt khour)^2)", "read"),
+            Published("m2.b1", -2.578, "1", "Eq. 6, p. 5 (denominator, kt)", "read"),
+            Published("m2.b2", 1.902, "1", "Eq. 6, p. 5 (denominator, kt^2)", "read"),
+            Published("m2.b3", 1.054, "1", "Eq. 6, p. 5 (denominator, (kt kday)^2)", "read"),
+        ),
+        flags=(
+            "Erbs 1982 is not among the models compared (the reference models are PB, E2, S1, S3"
+            " and Y4), so its error at these stations is not given.",
+            "Fitted on one station-year at Payerne; the weakest results are at arid stations"
+            " (Tamanrasset, DHI nRMSE 52.9 % for M2). The fit statistics do not name their"
+            " dataset. Per-station errors are in Fig. 4, which was not extracted.",
+            "A 1-minute model: the sweep's hourly weather does not have the inputs.",
+        ),
+        role="process",
+    ),
+    "laiti2018.brl_bolzano": Formulation(
+        "Hourly diffuse fraction as a logistic function of the clearness index, solar time,"
+        " elevation, the daily clearness index and a persistence index (BRL), with the"
+        " coefficients refitted to an Alpine valley station",
+        "Laiti et al. 2018, Atmosphere 9:117, Eq. 7 and Table 5 (l. 498-508)",
+        year=2018,
+        authors=(
+            "Laiti, Lavinia",
+            "Giovannini, Lorenzo",
+            "Zardi, Dino",
+            "Belluardo, Giorgio",
+            "Moser, David",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="lavinia_2018.pdf (the 2026-10-18 drop)",
+        doi="10.3390/atmos9040117",
+        structures=("clearness-index-partition",),
+        calibrated_on=("laiti2018.bolzano",),
+        calibration_note=(
+            "kd = 1 / (1 + exp(a0 + a1 kt + a2 t + a3 h + a4 Kt + a5 psi)), t apparent solar"
+            " time, h solar elevation, Kt the daily clearness index, psi the mean of the"
+            " clearness index in the hours before and after. The form and the original"
+            " coefficients (brl.*) are Lauret et al. 2013's, borrowed and cited by the paper;"
+            " the local ones (brl_local.*) are fitted to the Bolzano hours by robust least"
+            " squares with a null mean bias, on the same 10,310 hours that validate them."
+        ),
+        parameters=(
+            Published("brl.a0", -5.32, "1", "Table 5, l. 498-508 (original)", "read"),
+            Published("brl.a1", 7.28, "1", "Table 5, l. 498-508 (original)", "read"),
+            Published("brl.a2", -0.03, "not stated", "Table 5, l. 498-508 (original)", "read"),
+            Published("brl.a3", -0.0047, "not stated", "Table 5, l. 498-508 (original)", "read"),
+            Published("brl.a4", 1.72, "1", "Table 5, l. 498-508 (original)", "read"),
+            Published("brl.a5", 1.08, "1", "Table 5, l. 498-508 (original)", "read"),
+            Published("brl_local.a0", -6.67, "1", "Table 5, l. 498-508 (Bolzano)", "read"),
+            Published("brl_local.a1", 6.72, "1", "Table 5, l. 498-508 (Bolzano)", "read"),
+            Published("brl_local.a2", 0.06, "not stated", "Table 5, l. 498-508 (Bolzano)", "read"),
+            Published(
+                "brl_local.a3", -0.0072, "not stated", "Table 5, l. 498-508 (Bolzano)", "read"
+            ),
+            Published("brl_local.a4", 2.01, "1", "Table 5, l. 498-508 (Bolzano)", "read"),
+            Published("brl_local.a5", 2.47, "1", "Table 5, l. 498-508 (Bolzano)", "read"),
+        ),
+        flags=(
+            "The local fit is in-sample: the same 10,310 hours fit and validate it, and no split"
+            " is stated. Its diffuse rMBE of 0.00 % is imposed by the fit.",
+            "In the same valley Erbs 1982 has a diffuse rRMSE of 37.23 % and rMBE 7.35 % (Table 3,"
+            " l. 430), and direct rRMSE 21.20 % (Table 4); the paper does not print the Erbs"
+            " equation.",
+            "Orographically shadowed hours (2,098 of 10,310) raise the mean diffuse bias of the 13"
+            " models to 27 % against 7 % unshadowed; the sky view factor is 0.788.",
+            "Units of t and h are not stated in the equation's text; the validation excludes solar"
+            " elevations below 7 degrees.",
+        ),
+        role="process",
+    ),
+    "sanderson2022.taf": Formulation(
+        "Topographic amplification factor TAF = W H / A of a valley cross-section from a 90 m"
+        " DEM, and its down-valley gradient, to map where cold air pools",
+        "Sanderson et al. 2022, J. Appl. Meteorol. Climatol. 61:1893-1904, Sect. 2 and 3"
+        " (l. 260-270)",
+        year=2022,
+        authors=(
+            "Sanderson, Michael G.",
+            "Teixeira, Marta",
+            "Graca, Antonio",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="michael_2022_2.pdf (the 2026-10-18 drop)",
+        doi="10.1175/JAMC-D-21-0263.1",
+        structures=("cold-air-pool",),
+        structures_note=(
+            "TAF is a terrain index of how much more a valley cools than an open column of air"
+            " of the same width (Whiteman 1990; Lundquist et al. 2008, which this paper follows);"
+            " it is a map of where cold air is likely to collect, not a temperature."
+        ),
+        calibration_note=(
+            "Nothing is fitted. TAF is computed from the SRTM v4.1 90 m DEM alone: for each"
+            " valley-floor pixel a transect gives W (valley width, from the edge coordinates),"
+            " H (height from the transect low point to the lower of the two local maxima, the"
+            " valley top) and A (cross-sectional area, by the trapezium rule); TAF = W H / A,"
+            " the text layer's '5' being '=' in the page image. The down-valley gradient is a"
+            " least-squares line over 5 contiguous pixels, tested at 5 %. Cold pools were then"
+            " identified separately from 15-min data at the Leda pair of stations"
+            " (sanderson2022.stations); no TAF value is compared with those events in the text"
+            " read, so the station data are not a calibration of TAF."
+        ),
+        parameters=(
+            Published(
+                "transect.tributary_radius", 10, "pixel", "text, l. 231 (about 900 m)", "read"
+            ),
+            Published("transect.main_radius", 20, "pixel", "text, l. 233 (about 1800 m)", "read"),
+            Published("dem.resolution", 90, "m", "text, l. 165 (SRTM v4.1, 3 arc s)", "read"),
+        ),
+        flags=(
+            "Printed TAF results are ranges only: most values along the main Douro channel 1.4"
+            " to 2.0, a few reaches 2.0 to 2.8 on convex sides (l. 266-270); no threshold of TAF"
+            " for pooling and no units for the gradient are printed.",
+            "Cold-pool events are counted at one pair of stations (Leda 2, 318 m, and Leda 3,"
+            " 163 m, 155 m apart): inversion of at least 1 °C between sunset and sunrise,"
+            " strong above 4 °C (l. 259-261, 317-318). Pools shallower than about 30 m are not"
+            " recorded (l. 174, 598). These thresholds and the event counts are dataset facts,"
+            " not parameters of TAF.",
+            "The event total is 834 (32 % of nights, l. 368), but Table 2's rows sum to 796"
+            " (182+240+79+0+6+11+0+53+225, checked in the page image); the 28 % marginal share"
+            " fits 796. The abstract says seven categories and Table 2 has nine rows, two of"
+            " them zero. Categories were assigned by eye.",
+            "Humidity and leaf-wetting sensors exist at each station (l. 162-164) but no"
+            " humidity, dew point or wetness result is printed: nothing here says how wet the"
+            " air in a pool is.",
+            "Station data are 15 min, not hourly, and are not open (commercial sensitivity,"
+            " l. 628); daily values of the nine stations are in ECA&D (l. 122, 551).",
+        ),
+        role="process",
+    ),
+    "kuwagata2024.canopy_dew": Formulation(
+        "One-layer energy-balance model of dew on a plant canopy: condensation rate from"
+        " effective radiation, air temperature, relative humidity and an exchange velocity kL;"
+        " the critical relative humidity for dew; potential and reference dew amounts",
+        "Kuwagata et al. 2024, Agric. For. Meteorol. 354:109911, Sect. 2 and 3, Eqs 1-28",
+        year=2024,
+        authors=(
+            "Kuwagata, Tsuneo",
+            "Maruyama, Atsushi",
+            "Kondo, Junsei",
+            "Watanabe, Tsutomu",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="tsuneo_2024.pdf (the 2026-10-18 drop; the manuscript's author line)",
+        doi="10.1016/j.agrformet.2024.109911",
+        structures=("dew-energy-balance",),
+        structures_note=(
+            "Dew is a result of the canopy energy balance (Eq 1; bulk fluxes Eqs 4-5; Eq 7,"
+            " dW/dt = -E_L / rho_w); the model has no relative-humidity threshold, and the"
+            " critical relative humidity (Eq 8, approximated by Eq 24) is an output."
+        ),
+        calibrated_on=("kuwagata2024.kumamoto",),
+        calibration_note=(
+            "Not fitted. Checked against rice-canopy dew at Kumamoto, 18-27 August and"
+            " 24 September-3 October 2003 (measured on four nights), the same observations as"
+            " Maruyama et al. 2023 (literature/maruyama2023), by the reference dew amount W0"
+            " (Eq 25) and the potential dew amount Wp (Eq 26). A multilayer reference (MLC, a"
+            " MINCER derivative, Watanabe et al. 2004, 2005) is run on the same data and was"
+            " itself checked against them, so W0 and Wp against MLC is not independent. The"
+            " canopy length scale DL = 0.1 m was chosen 'for comparison with the measured"
+            " data' (l. 629); how is not said. No error statistic is printed: measured against"
+            " MLC 'fairly consistent', W0 'roughly consistent', Wp 'slightly larger'"
+            " (l. 1213-1223)."
+            " The structure is Kondo (1996)'s one-layer model (l. 411; not in the catalogue)"
+            " and the maximum rate of Eq 10 is Monteith's (1961); neither is a record here."
+        ),
+        parameters=(
+            Published("stefan_boltzmann", 5.67e-8, "W m-2 K-4", "text, l. 307", "read"),
+            Published("emissivity", 1.0, "1", "text, l. 309 and 403 (assumed, black body)", "read"),
+            Published("beta", 1.0, "1", "text, l. 403 (assumed: all leaves wet)", "read"),
+            Published("water_density", 1000, "kg m-3", "text, l. 401 (10^3 in the paper)", "read"),
+            Published("surface_pressure", 1013, "hPa", "text, l. 409", "read"),
+            Published("time_step", 1800, "s", "text, l. 613", "read"),
+            Published("wind_minimum", 0.05, "m s-1", "text, l. 613", "read"),
+            Published(
+                "min_evaporation_coefficient", 0.05, "1", "text, l. 615 (chL, Eq 27b)", "read"
+            ),
+            Published("albedo_daytime", 0.3, "1", "text, l. 617 (paddy rice)", "read"),
+            Published("transmittance_daytime", 0.2, "1", "text, l. 617 (paddy rice)", "read"),
+            Published("canopy_length_scale", 0.1, "m", "text, l. 629 (rice, DL)", "read"),
+            Published(
+                "wet_dew_threshold", 0.01, "mm", "text, l. 1374 (leaf wetness duration)", "read"
+            ),
+        ),
+        flags=(
+            "Dew forms below the engine's wetness rule: the paper derives a critical relative"
+            " humidity that falls with strong radiative cooling and low air temperature, and"
+            " states that for an effective radiation below -100 W m-2 condensation can occur at"
+            " relative humidity under 0.4 (l. 1576-1578). Fig. 4 (not rendered by the reading;"
+            " its axis runs to -150 W m-2) plots it, near 1.0 at zero effective radiation. At"
+            " -100 W m-2 and 20 °C the maximum rate is 1.42 mm per day at 0.9, 0.37 mm per day"
+            " at 0.6 (26 %) and 0.058 mm per day at 0.4 (4 %) (l. 1582-1589). The engine's"
+            " RH >= 90 % stand-in is therefore not this model's rule; the paper itself notes"
+            " empirical rules near 0.9 (l. 1566).",
+            "A rice paddy, not a vineyard; one site, four measured nights, warm temperate"
+            " humid subtropical climate (l. 643-653). Leaf wetness is the time dew exceeds"
+            " 0.01 mm, afternoon to 07:30 local time (l. 1374).",
+            "Needs effective radiation (measured downward longwave here), air temperature,"
+            " humidity, wind (corrected from 2 m to canopy top) and canopy properties; the exchange"
+            " velocity kL is from an empirical equation (Watanabe and Mizutani 1996). Eqs 1-7 and"
+            " 21-24 were checked in page images, Eqs 8-20, 22-23, 27b and 28 from the text layer.",
+            "Data: DOI 10.17632/fmvr43csy3.3 (Mendeley Data); licence not printed.",
+        ),
+        role="process",
+    ),
+    "nakamura2005.radiative_error": Formulation(
+        "Radiative error of a naturally ventilated shield's air temperature, RE = C0 + C1 X,"
+        " X = Rad / (rho Cp T U), from shortwave radiation by day and net radiation by night"
+        " and the wind speed",
+        "Nakamura & Mahrt 2005, J. Atmos. Oceanic Technol. 22:1046-1058, Eqs 11-12 (p. 1054) and"
+        " Table 3 (p. 1055)",
+        year=2005,
+        authors=("Nakamura, Reina", "Mahrt, L."),
+        authors_complete=True,
+        authors_from="read",
+        checked="reina_2005.pdf (the 2026-10-18 drop)",
+        structures=("shield-radiative-error",),
+        calibrated_on=("nakamura2005.corvallis",),
+        calibration_note=(
+            "Fitted to bin averages of the 30-min error of an Onset HOBO Pro thermistor in a"
+            " naturally ventilated Davis 7714 multiplate shield against an aspirated RTD (RM"
+            " Young 43408), both at 1 m over flat grassland at the Hyslop Experimental Station,"
+            " Corvallis, Oregon, 14 March to 30 August 2002 (R2 0.98 day, 0.94 night). Tested"
+            " with the 2002 coefficients on a second dataset at the same site, 15 July to"
+            " 30 August 2003: daytime RMSE 0.29 to 0.13 °C, night 0.05 to 0.04 °C (Table 5)."
+            " Rad is the shortwave outside the shield by day and the net radiation by night"
+            " (W m-2), T_HB the sensor's air temperature in kelvin, U the 30-min wind speed"
+            " (m s-1). The aspirated reference's own radiative error is assumed small."
+        ),
+        parameters=(
+            Published("day.c0", 0.13, "°C", "Table 3, p. 1055 (day, shortwave)", "read"),
+            Published(
+                "day.c1", 373.40, "°C per unit X", "Table 3, p. 1055 (day, shortwave)", "read"
+            ),
+            Published("night.c0", 0.047, "°C", "Table 3, p. 1055 (night, net radiation)", "read"),
+            Published(
+                "night.c1",
+                355.84,
+                "°C per unit X",
+                "Table 3, p. 1055 (night, net radiation)",
+                "read",
+            ),
+            Published("air_density", 1.2, "kg m-3", "text under Eq. 11, p. 1054", "read"),
+            Published("specific_heat", 1004, "J K-1 kg-1", "text under Eq. 11, p. 1054", "read"),
+        ),
+        flags=(
+            "One shield (Davis 7714 multiplate) and one sensor (HOBO Pro thermistor), over grass at"
+            " one Oregon site in spring and summer; the coefficients may not hold for a surface of"
+            " another albedo (l. 568) or for another shield.",
+            "The error it describes is large by day: a mean of 0.39 °C, above 0.5 °C in 22.9 % of"
+            " daytime periods and above 1.0 °C in 2.6 % (l. 508-509); at night the mean is"
+            " -0.002 °C and the error is below -0.5 °C in 4.6 % of periods (l. 513-514).",
+            "Higher-order terms in X were not significant by an F test (l. 553); the daytime fit"
+            " breaks down below X = 1.0e-4 and the correction is neglected there (3.1 % of"
+            " daytime data, l. 581-584).",
+        ),
+        role="observation",
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",

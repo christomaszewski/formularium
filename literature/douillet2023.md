@@ -2,7 +2,7 @@
 id: douillet2023
 citation: Douillet, Antonin. 2023. Étude pluriannuelle de la sporée aérienne de Plasmopara viticola par quantification moléculaire : un nouvel indicateur de risque des épidémies du mildiou de la vigne. PhD thesis, Université de Bordeaux (NNT 2023BORD0033), defended 2023-02-27; HAL tel-04970525, 258 pages
 doi:
-read: 2026-10-13, the abstracts, contents, the models section of the introduction, chapters 1-3 and annexes 1, 2 and 8, by a reading agent (claude-haiku-5-5); 60 of 60 quotes found at their lines by scripts/verify_quotes.py; equations 6-9 (p. 96) and the IMPI algorithm (p. 99) read in the page images by the main session
+read: 2026-10-13, the abstracts, contents, the models section of the introduction, chapters 1-3 and annexes 1, 2 and 8, by a reading agent (claude-haiku-5-5); 60 of 60 quotes found at their lines by scripts/verify_quotes.py; equations 6-9 (p. 96) and the IMPI algorithm (p. 99) read in the page images by the main session; read again 2026-10-18, targeted (samplers, efficiency, limits), by a reading agent (claude-haiku-5-5); Chapter 2's height test read 2026-10-18
 status: read
 diseases: [downy mildew]
 crops: [grapevine]
@@ -78,3 +78,59 @@ potential built to combine with them. In French.
   on three years at one site). The 2022 VISA delay of 19 days is the field number.
 - For `brischetto2020.survival`: a third transcription of Blaeser & Weltzien's curve,
   with the source's 0.01.
+
+## Read again (2026-10-18)
+
+A targeted reading for strand 5 (sensor error), by a reading agent (claude-haiku-5-5);
+28 of 28 quotes found at their lines by scripts/verify_quotes.py; text layer only, no page
+images. It adds, in the order of the sampler:
+
+- **The sampler** (l. 2309-2311, 2523, 3102): a Sporestick (OptiSense), a rotating-arm
+  impaction sampler at 2400 rpm with two wooden sticks coated with petroleum jelly at the ends
+  of the arm, drawing 6.22 m³ of air per hour. At Château Dillon (Blanquefort) it hung 130 cm
+  above the ground over Merlot from 13 March 2020 (l. 2517).
+- **Catch efficiency is assumed, not measured** (l. 3019, 3046): the thesis uses Aylor
+  1982's formula EC(u) = 0.86 / (1 + 0.442 St^-1.967), St = u v / (g L) (Equations 4-5, the
+  formula as cited; the equation images were not rendered), and states that wind has no
+  effect on the rotating arm's efficiency. No efficiency is reported. Repeatability of the
+  rotating-arm capture "was not tested" (l. 3169).
+- **Limits of the molecular count** (l. 2660, 2727-2731, 2835): the limit of detection is
+  the concentration detected in 95 % of samples (the Forootan et al. 2017 approach): 50 to
+  500 sporangia per mL of lysis solution (87.5 % to 100 % amplified); the limit of
+  quantification is 500 sporangia per mL (CV 15.6 %), or 1000 sporangia stuck on the
+  collectors. In air the detection limit is 0.33 to 3.34 sporangia per m³ sampled.
+- **LAMP against ddPCR** (l. 2791-2807, Château Dillon 2020, 88 samples, 0 to 243 sporangia per
+  m³, l. 2413): 68 % positive by ddPCR (60 of 88), 62 % by LAMP (55), 55 % by both; LAMP and
+  ddPCR R² 0.52 on the field samples; likelihood ratios LR(+) 3.2 and LR(-) 0.27.
+- **Counts of other studies** (l. 3253): Albelda 2005, Chavarria 2009, Fernandez Gonzalez 2009
+  and Caffi 2013 report about ten sporangia per m³, an order below this thesis.
+- **Onset dates** (l. 2345, 4133-4137): six plots at Grande Ferrade, 2019-2021. First symptoms
+  2019 on 15 May on the minimal-protection plots only; 2020 on 2 May (block B) and 6 May
+  (blocks A and C); 2021 on 17 June (minimal) and 22 June (sprayed). Positive captures after
+  the first symptoms 89 % (2019), 97 % (2020), 94 % (2021) (l. 4113).
+- **Weekly R² ranges** (l. 4245, 4372, 4681-4691): before symptoms, the 7-day epidemic speed
+  against IMPI alone 0.21 and 0.30, against IMPI times captured sporangia 0.73 and 0.59; after
+  symptoms, the same week 0.23 to 0.36 and the next week 0.10 to 0.26 (Table 19); on the
+  minimal-protection plots 0.16 (measured) and 0.17 (total). The author calls the 7-day
+  predictive power limited.
+
+### Bearing (2026-10-18)
+
+For strand 5: a spore sampler's observation error is a chain, none of it measured here: a
+catch efficiency taken from a formula and assumed independent of wind (a model could take a
+fixed efficiency, with no wind dependence, as the thesis does, and a stated uncertainty); a
+molecular detection floor of about 0.3 to 3.3 sporangia per m³ (a threshold: counts below it
+read as zero); and a counting error that
+LAMP against ddPCR puts at sensitivity 0.80 and specificity 0.75 in the field. It is a
+laboratory result for the limits and a field result for the agreement, one season at one
+château, and nothing for drift or failure.
+
+### Chapter 2: capture height (read 2026-10-18)
+
+A targeted reading of Chapter 2, section II (printed pp. 88-92; l. 3347-3521), with the chapter summary and the discussion on p. 130, by a reading agent (claude-haiku-5-5); 23 of 23 quotes found at their lines by scripts/verify_quotes.py. Figures 28-32 were read by eye from the rendered pages.
+
+- **Design** (l. 3370-3376, 3379-3380): three Sporestick samplers at 30, 80 and 130 cm on a training stake, on the westernmost row of organic plot SPM-A (2 August to 18 September 2019; 3 August to 3 September 2020) and of SPM-A and SPM-C (30 April to 30 August 2021), Grande Ferrade; sticks collected Monday, Wednesday and Friday. Response log10(sporangia per m3 + 1), Kruskal-Wallis then Dunnett with Bonferroni adjustment, per year (l. 3397-3402). No p-values, sample sizes or canopy height are printed.
+- **No height effect** (l. 3409, 3446): not significant in any of the three years; every box carries the same letter in Figures 28-30. Medians read by eye on the log scale, 30 / 80 / 130 cm: 2019 about 0.1 / 0 / 0; 2020 about 0.15 / 0 / 0.66; 2021 about 0.07 / 0 / 0 (approximate, plus or minus about 0.1). End of August 2021 cumulative, by eye (l. 3484): bloc A about 7,300 / 4,950 / 5,900 sporangia per m3; bloc C about 5,150 / 3,900 / 4,250 (plus or minus about 200). The lowest sampler holds the highest cumulative total in both plots, and the 130 cm one is not the highest.
+- **The 130 cm recommendation rests on first detection, not on significance** (l. 3413-3422, 3516-3518, 4822): in 2021 the first positive capture was at 130 cm in both plots (bloc A, 6 June, against 13 June at 30 cm and 22 June at 80 cm; bloc C, 2 May, against 29 May and 29 June); only the 2021 series began at the start of the season (l. 3418). The authors read this as a Gaussian plume with a strong source effect (Severns et al. 2019) and as confirming Van der Heyden et al. 2021's advice, say above the canopy "seems better" though not significant (l. 3516), and keep 130 cm. The early-season hypothesis of a lower sampler nearer the soil source is not validated (l. 4822).
+
+Bearing for strand 5 (sampler placement): a capture-height effect on counts is not established by this test (a sampler-height offset of zero with an uncertainty, not a correction), the first-detection difference is two plots in one year and a reason to place the sampler above the canopy rather than a measured bias.

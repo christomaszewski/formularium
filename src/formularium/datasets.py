@@ -552,6 +552,148 @@ DATASETS: dict[str, Dataset] = {
         " 2 and 5 (l. 138-440, 826-835; literature/louarn2007); observed",
         "read",
     ),
+    "forster2016.five_sites": Dataset(
+        "Hourly and daily station series at five sites, each split into a calibration and a"
+        " validation period: De Bilt, Netherlands (2 m; 1961-1990, 1991-2014), Ny-Alesund,"
+        " Svalbard (11 m; 1993-2004, 2006-2011), Obergurgl, Austria (1938 m; 2000-2007,"
+        " 2008-2014; project data, not free), Rio de Janeiro (5 m; 2003-2008, 2009-2014) and"
+        " Tucson airport (779 m; 1973-1993, 1994-2014); temperature, wind, humidity and, by"
+        " site, precipitation and radiation; observed",
+        "Forster et al. 2016, Geosci. Model Dev. 9:2315-2333, Sect. 2 and Table 1 (l. 208-260;"
+        " literature/forster2016); humidity methods H2 and H3 and the radiation constants are"
+        " fitted on the calibration period, H1 and H4 need no fit",
+        "read",
+    ),
+    "pidoto2023.germany": Dataset(
+        "Germany: DWD sub-daily rainfall at 699 stations for 400 catchments (30 to over 20,000"
+        " km2), common period January 2006 to December 2020; HYRAS v4.0 gridded daily mean,"
+        " minimum and maximum temperature, relative humidity and global radiation, 1976-2015,"
+        " for the k-NN resampling; 40 DWD sub-daily reference climate stations (20 with global"
+        " radiation) for validation, 100 realisations of 15 years; observed",
+        "Pidoto & Haberlandt 2023, Hydrol. Earth Syst. Sci. 27:3957-3975, Sect. 3 and 4"
+        " (l. 519-587; literature/pidoto2023); the hourly step uses MELODIST's forms that need"
+        " no hourly observations, set from the catchment midpoint only",
+        "read",
+    ),
+    "gorner2021.saxony_debilt": Dataset(
+        "Hourly and daily DWD data for six Saxon stations including Dresden-Klotzsche (222 m)"
+        " and Fichtelberg (1213 m), September 1995 to August 2014, and KNMI De Bilt (2 m),"
+        " January 1981 to December 2014 (validation against MELODIST on 1991-2014): mean"
+        " temperature, precipitation, sunshine duration, relative humidity and wind speed;"
+        " DWD objective weather patterns from 1979 as a filter; observed",
+        "Gorner et al. 2021, Theor. Appl. Climatol. 143:241-265, Sect. 2 and Table 1 (l. 145-207,"
+        " 1440; literature/gorner2021); a resampling method with no fitted parameter, the"
+        " observed days are its pool",
+        "read",
+    ),
+    "brunetto2018.santana": Dataset(
+        "Dry mass of Cabernet Sauvignon leaves (and pruned stems) in 20 x 20 cm litter bags of"
+        " 1 mm mesh, 30 g each, on the soil surface in the row and between rows of a vineyard at"
+        " Santana do Livramento (Rio Grande do Sul, Brazil), bags laid 16 April 2009 and five per"
+        " material and position collected at 0, 30, 60, 90, 120, 150, 180 and 210 days; monthly"
+        " 2009 rain and air temperature from an unnamed station; observed",
+        "Brunetto et al. 2018, Rev. Cienc. Agrar. 61:1-10, Sect. 2 and Table 4 (l. 75-141,"
+        " 368-398; literature/brunetto2018); the exponential decay is fitted per position to the"
+        " percent of mass remaining; Table 5 (stems) not used",
+        "read",
+    ),
+    "penaquinones2020.prosser": Dataset(
+        "Daily maximum and minimum air temperature from 4 thermistors at 0.5 m and 3 at 1.2 m in a"
+        " Chardonnay canopy (rows north-south, 2,035 vines/ha) at Roza Farm, Prosser, Washington,"
+        " against a standard station at 1.7 m about 410-415 m away, 10 December 2015 to 30 June"
+        " 2017 (n 478 days compared; 437 maxima and 436 minima in the regressions); berry-cluster"
+        " thermocouples on the east and west sides in 2016 and 2017; observed",
+        "Pena Quinones et al. 2020, PLOS ONE 15(6):e0234436, Methods and Fig. 5 (l. 136-258;"
+        " literature/penaquinones2020); the four daily regressions are fitted on this series;"
+        " the S1 data file was not checked",
+        "read",
+    ),
+    "paulescu2023.payerne": Dataset(
+        "BSRN 1-minute global, diffuse and direct irradiance at Payerne, Switzerland (46.815 N,"
+        " 6.944 E), the year 2020, 193,294 records with solar elevation above 5 degrees (D_FIT),"
+        " on which M1 and M2 are fitted; observed. The test set (D_TEST) is 36 BSRN stations,"
+        " one year each from 2002 to 2021, nearly 7 million records, with no overlap in time"
+        " with the fit",
+        "Paulescu & Paulescu 2023, Appl. Sci. 13:6558, Sect. 2 (l. 186-259; literature/"
+        "paulescu2023); the fit statistics (R2 0.917 for M2, 0.929 for M1) do not name their"
+        " dataset; BSRN access date 15 May 2023, licence not printed",
+        "read",
+    ),
+    "laiti2018.bolzano": Dataset(
+        "Hourly global, diffuse and direct irradiance from 1-minute data averaged to 15 minutes at"
+        " Bolzano city airport (46.458 N, 11.329 E, 265 m), Adige Valley, 2011-2014; 10,310 valid"
+        " hours (solar elevation 7 degrees or more) of which 2,098 orographically shadowed; sky"
+        " view factor 0.788; observed",
+        "Laiti et al. 2018, Atmosphere 9:117, Sect. 2 and Table 5 (l. 152-193, 292-293, 498-508;"
+        " literature/laiti2018); the local coefficients are fitted on the same hours that"
+        " validate them, no split stated",
+        "read",
+    ),
+    "lecap2022.quincy": Dataset(
+        "Hourly temperature from 37 Weenat anti-frost sensors across the Quincy vineyard (about"
+        " 700 ha, flat, mean altitude 122 m), installed December 2019, daily minimum from 18:00 to"
+        " 18:00, 34 frost nights in 2020-2022; Bourges synoptic data 22 km away, AROME night"
+        " cloud forecast, 5 m DEM; observed. Data available from the corresponding author on"
+        " request; no repository, no licence",
+        "Le Cap et al. 2022, Research Square preprint rs-1932104/v1, Sect. 2 (l. 178-200,"
+        " 790-796; literature/lecap2022); a preprint, the published version was not read; no"
+        " formulation is fitted to it",
+        "read",
+    ),
+    "pipan2021.victoria": Dataset(
+        "Daily minimum and maximum temperature from one Tinytag TGP-4500 logger in a Stevenson"
+        " screen at each of four Victorian vineyards (Yarra Burn, Whitlands, Coldstream and"
+        " Rutherglen), 30-minute records, four seasons from 2015-16 to 2018-19, against SILO's 0.05"
+        " degree (about 5 km) interpolated grid of about 4,600 Bureau of Meteorology stations;"
+        " observed and interpolated. Logger data from the authors on request; the SILO licence is"
+        " not printed",
+        "Pipan et al. 2021, Front. Plant Sci. 12:635299, Sect. 2 and Table 2 (l. 160-191;"
+        " literature/pipan2021); no formulation is fitted to it; Table 2 read by eye",
+        "read",
+    ),
+    "sanderson2022.stations": Dataset(
+        "Nine Sogrape Vinhos weather stations in vineyards of the upper Douro Valley, Portugal"
+        " (80 to 624 m), 15-min temperature, humidity, leaf wetting, wind and rain at 2 m,"
+        " January 2011 to December 2017 (Pinhao-Porto 2014-2017 only); the Leda pair (Leda 2,"
+        " 318 m, and Leda 3, 163 m) gave 834 cold-pool nights; observed; not open",
+        "Sanderson et al. 2022, J. Appl. Meteorol. Climatol. 61:1893-1904, Sect. 2 and Table 1"
+        " (l. 107-190, 301-368; literature/sanderson2022); not fitted to TAF, which uses the SRTM"
+        " 90 m DEM; daily values of the same stations are in ECA&D",
+        "read",
+    ),
+    "kuwagata2024.kumamoto": Dataset(
+        "Rice-canopy dew and micrometeorology at the NARO Kyushu Okinawa center, Kumamoto,"
+        " Japan (32.87°N, 130.74°E, 76 m; rice 'Hinohikari' transplanted 11 June 2003): leaf dew"
+        " by layer on four nights (three at booting, one at grain filling), with solar and"
+        " downward longwave radiation, 2 m air temperature and humidity and wind;"
+        " 18-27 August and 24 September-3 October 2003; observed; DOI 10.17632/fmvr43csy3.3",
+        "Kuwagata et al. 2024, Agric. For. Meteorol. 354:109911, Sect. 2.3 and 3 (l. 643-723;"
+        " literature/kuwagata2024); the same observations as Maruyama et al. 2023"
+        " (literature/maruyama2023); the multilayer reference was checked against them",
+        "read",
+    ),
+    "quenol2004.vinho_verde": Dataset(
+        "Tiny Talk logger series in two Vinho Verde vineyards about 30 km apart, Arcos de"
+        " Valdevez (Lima valley) and Moncao/Troviscoso (Minho valley), Portugal: 16 + 8 open-air"
+        " thermometers at 1.50 m and 12 sheltered temperature and humidity loggers (10 + 2), every"
+        " 15 min, February to October 2003; three nights analysed (15-16 and 16-17 February,"
+        " 3-4 May); humidity recorded but no result printed; observed; data not offered",
+        "Quenol et al. 2004, Norois 193:117-132, Sect. 2 and Tables 1-3 (l. 251-331;"
+        " literature/quenol2004); not fitted by a formulation here",
+        "read",
+    ),
+    "nakamura2005.corvallis": Dataset(
+        "Air temperature at 1 m from an Onset HOBO Pro thermistor in a naturally ventilated Davis"
+        " 7714 multiplate shield and from an aspirated platinum RTD (RM Young 43408), with wind and"
+        " four-component radiation at 1 m and 1.5 m, over flat grassland at the Hyslop"
+        " Experimental Station, Corvallis, Oregon (44°38' N, 123°12' W); dataset A 14 March to"
+        " 30 August 2002 (fits the correction), dataset B 15 July to 30 August 2003 (tests it);"
+        " 30-min means of 300-s HOBO samples; observed; not offered",
+        "Nakamura & Mahrt 2005, J. Atmos. Oceanic Technol. 22:1046-1058, Sect. 2 and Table 2"
+        " (l. 222-224, 293-298; literature/nakamura2005); not a model's output, the aspirated"
+        " sensor's own radiative error being assumed small (l. 470-472)",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"

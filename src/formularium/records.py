@@ -129,6 +129,13 @@ STRUCTURES = {
     "growth-on-days": "a shoot, leaf or mass measure as a curve of days after a stage",
     "carbon-balance": "biomass as photosynthesis minus respiration, shared out by source-sink"
     " rules",
+    "weather-generator": "stochastic generation of weather series",
+    "disaggregation": "daily weather turned into hourly or sub-daily values",
+    "litter-decay": "mass of fallen leaves or litter decaying over time",
+    "station-to-canopy": "canopy air temperature as a regression on a standard station's",
+    "cold-air-pool": "night cooling in hollows and valleys from terrain",
+    "dew-energy-balance": "dew and leaf drying from a surface energy balance",
+    "shield-radiative-error": "a shielded air-temperature sensor's error from radiation and wind",
 }
 
 
