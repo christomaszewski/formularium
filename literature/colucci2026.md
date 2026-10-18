@@ -2,7 +2,7 @@
 id: colucci2026
 citation: Colucci, G. P., Filipescu, E., Scatozza, F. & Trinchero, D. 2026. Machine learning methods for leaf wetness prediction using agrometeorological data. IEEE Transactions on AgriFood Electronics (accepted version, early access), pp. 1-9
 doi: 10.1109/TAFE.2026.3711283
-read: 2026-10-18, LIGHT, by a reading agent (claude-haiku-5-5) and a note writer (claude-sonnet-5-5); 25 of 25 quotes found at their lines by scripts/verify_quotes.py; Tables I-VI read from the page images; the appendix grid-search tables VII-XI not transcribed; accepted version (repository cover page)
+read: 2026-10-18, LIGHT, by a reading agent (claude-haiku-5-5) and a note writer (claude-sonnet-5-5); 25 of 25 quotes found at their lines by scripts/verify_quotes.py; Tables I-VI read from the page images; the appendix grid-search tables VII-XI not transcribed; accepted version (repository cover page); Tables III-IV (p. 6) read in the page image by the main session
 status: read
 diseases: []
 crops: [grapevine]
