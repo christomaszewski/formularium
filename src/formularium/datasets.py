@@ -694,6 +694,40 @@ DATASETS: dict[str, Dataset] = {
         " sensor's own radiative error being assumed small (l. 470-472)",
         "read",
     ),
+    "magarey2006.geneva_adelaide": Dataset(
+        "Visual and sensor leaf wetness in three grape canopies, canopy about 1.8 m: Chardonnay"
+        " at Geneva, New York, 1997 (LAI 1.0; 15 unpainted and 3 painted Campbell 237"
+        " sensors), Concord at Geneva, 1998 (LAI 2.0; 15 painted sensors) and Cabernet Franc"
+        " in the Adelaide Hills, South Australia, 1998 (LAI 1.0; 15 painted sensors); water"
+        " seen on 15 tagged leaves of each of 3 vines at 5 canopy positions, with canopy"
+        " temperature and humidity, rain, wind and net radiation logged on site every 60 s;"
+        " counts of dew and rain periods differ between its text, Table 1 and Tables 4-5;"
+        " observed; not offered",
+        "Magarey, Seem & Russo 2006, Agric. For. Meteorol. 139:361-372, Sect. 2 and Table 1"
+        " (literature/magarey2006b); SWEB (magarey2006.sweb) was validated on them, not"
+        " fitted; the lab Cl values came from Concord and Chancellor leaves",
+        "read",
+    ),
+    "reuveni1998.golan": Dataset(
+        "Leaf discs (12 mm) of field Cabernet Sauvignon cut from three shoot positions"
+        " counted from the tip (top 3 + 4, middle 15 + 16, bottom 29 + 30), drop-inoculated"
+        " with Plasmopara viticola (5 ul of 2e4 sporangia per ml), severity 0-4 at 4, 5 and 7"
+        " days and sporangia per cm2 of disc; field ratings by leaf number in 1993 and 1995"
+        " and a greenhouse spray test by leaf number; Golan Research Institute, Israel;"
+        " observed; the raw counts are not given",
+        "Reuveni 1998, J. Phytopathol. 146:525-530, Methods and Table 1 (pp. 526, 528;"
+        " literature/reuveni1998)",
+        "read",
+    ),
+    "dhakar2025.awn": Dataset(
+        "Leaf wetness from PHYTOS 31 sensors at 45° (normalised 0-1, wet at 0.4) and air"
+        " temperature, humidity, wind and rain at 1.5-2 m (ATMOS 41), 15-min means, from ten"
+        " AgWeatherNet stations in Washington State, January 2019 to February 2023; the"
+        " station Havillah alone fitted the model's parameters; observed; on request",
+        "Dhakar et al. 2025, Agric. For. Meteorol. 363:110399, Sects 2.1, 2.3.6 and Table 2"
+        " (literature/dhakar2025); the same station is in the validation",
+        "read",
+    ),
     "tarara2009.prosser": Dataset(
         "Fresh mass of clusters, leaves and stem, shoot length and leaves per shoot of"
         " own-rooted Concord (Vitis labruscana) near Prosser, Washington, 10 shoots from each"

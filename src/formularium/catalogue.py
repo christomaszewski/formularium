@@ -4161,6 +4161,273 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="observation",
     ),
+    "magarey2006.sweb": Formulation(
+        "Canopy wetness from a water budget and an energy balance (SWEB): storage C = LAI x Cl,"
+        " rain intercepted as 1 - exp(-0.5 LAI), a wet-area index (S/C)^0.67 scaled by Wmax,"
+        " evaporation by the Tanner-Fuchs combination equation, night dew from half the canopy"
+        " net radiation; the canopy is wet when the index exceeds 0.1",
+        "Magarey, Russo & Seem 2006, Agric. For. Meteorol. 139:373-381, Eqs 1-15 (pp. 375-377)",
+        year=2006,
+        authors=("Magarey, R. D.", "Russo, J. M.", "Seem, R. C."),
+        authors_complete=True,
+        authors_from="read",
+        checked="1-s2.0-S0168192306002371-main.pdf (the 2026-10-19 drop; the author line)",
+        doi="10.1016/j.agrformet.2006.08.016",
+        structures=("canopy-water-balance", "dew-energy-balance"),
+        structures_note=(
+            "A water store filled by rain (Eq 8) and dew (Eq 12) and emptied by evaporation"
+            " (Eq 11), with wetness read from the wet-area index Wind = (S/C)^0.67 (Eq 3), not"
+            " from a humidity. The dew term and the evaporation come from one Tanner-Fuchs"
+            " energy balance on a big leaf at mean canopy height."
+        ),
+        calibrated_on=("magarey2006.geneva_adelaide",),
+        calibration_note=(
+            "Not fitted to those data: they are what it was validated against (visual wetness"
+            " at Geneva NY in 1997 and 1998 and at Adelaide in 1998; mean absolute error 1.5,"
+            " 0.8 and 0.7 h, Table 3; literature/magarey2006b). The transfer-coefficient"
+            " constants cd 8.7 and cf 2.0 were fitted in controlled laboratory tests of"
+            " drying drops and films on an artificial leaf (Magarey et al. 2005a,"
+            " literature/magarey2005b; this paper prints none of those data). The energy"
+            " balance is Tanner & Fuchs 1968's combination formula (l. 110), the transfer"
+            " coefficient the generic form of Bird et al. 1960 (l. 111), the interception"
+            " Norman & Campbell 1983's (Eq 8), the canopy storage Noilhan & Planton 1989's"
+            " (l. 187); none is a record here, and each is credited, not read. Daytime net"
+            " radiation is ignored because the first sunlit leaf layer absorbs 94 % of the"
+            " solar radiation (Smart & Robinson 1991, l. 122); net radiation enters only for"
+            " night condensation. Roughness length is Z/10 and zero-plane displacement 2/3 Zc"
+            " (Eq 15), assumed. Code on request from the first author; no licence printed."
+        ),
+        parameters=(
+            Published(
+                "canopy_storage_per_leaf_area",
+                0.02,
+                "cm",
+                "p. 376, l. 187 (Cl, 'a commonly accepted value', credited to Noilhan & Planton"
+                " 1989); 0.2 mm per unit LAI",
+                "read",
+            ),
+            Published(
+                "w_max", 0.5, "1", "p. 376, l. 229 (grapes; from the authors' lab tests)", "read"
+            ),
+            Published(
+                "w_th", 0.1, "1", "p. 375, l. 152 (threshold on the wet-area index Wind)", "read"
+            ),
+            Published("wind_exponent", 0.67, "1", "p. 375, Eq 3, Wind = (S/C)^0.67", "read"),
+            Published(
+                "interception_k",
+                0.5,
+                "per unit LAI",
+                "p. 376, Eq 8, I = (1 - exp(-0.5 LAI)) P, after Norman & Campbell 1983",
+                "read",
+            ),
+            Published(
+                "dew_radiation_share",
+                0.5,
+                "1",
+                "p. 377, Eq 12 (night dew from 0.5 of the canopy net radiation)",
+                "read",
+            ),
+            Published(
+                "c_d",
+                8.7,
+                "cm^0.5 min^-0.5",
+                "p. 377, l. 284 (drops; from Magarey et al. 2005a)",
+                "read",
+            ),
+            Published(
+                "c_f",
+                2.0,
+                "cm^0.5 min^-0.5",
+                "p. 377, l. 284 (films; from Magarey et al. 2005a)",
+                "read",
+            ),
+            Published("alpha", 1.3, "1", "p. 377, Eq 15 (wind profile shape, assumed)", "read"),
+        ),
+        flags=(
+            "Wetness is the wet-area index above 0.1 (a fraction of leaves, l. 148-153), not a"
+            " humidity and not an amount of water, and no comparison with a relative-humidity"
+            " rule is printed. Turned into stored water, S/C > 0.1^(1/0.67) = 0.032, which is"
+            " 0.0064 mm at LAI 1.0 and 0.013 mm at LAI 2.0 with Cl = 0.2 mm per unit LAI (own"
+            " calculation, not printed); Agrarium's micro.wet_threshold_mm (0.02 mm, range"
+            " 0.005-0.05) is the same order.",
+            "In Agrarium's units Cl = 0.2 mm per unit LAI, against micro.storage_mm_per_lai 0.25"
+            " (range 0.1-0.5). Interception 1 - exp(-0.5 LAI) is 0.39 at LAI 1, 0.63 at 2 and"
+            " 0.78 at 3 (own calculation), against micro.interception 0.6 (0.3-0.9): equal near"
+            " LAI 1.8. Storage and interception carry all of SWEB's LAI effect (wetness 130 to"
+            " 650 min for LAI 1 to 4, l. 335, a text range; Fig. 1A reads about 150 to 640);"
+            " there is no separate density term, so micro.density_drying_slowdown has no"
+            " counterpart (own reading).",
+            "Dew is a night term only, from half the canopy net radiation, so it is capped by"
+            " the radiative loss: at a canopy net radiation of -100 W m-2 (an assumed value, not"
+            " printed) and Delta/(Delta + gamma) near 0.7, about 0.05 mm per hour (own"
+            " calculation). There is no leaf-cooling or dew-point input as in"
+            " micro.leaf_cooling_c and micro.dew_rate_mm_h_per_c.",
+            "The paper and its companion (magarey2006b) credit Cl differently: here 0.02 cm to"
+            " Noilhan & Planton 1989, with 0.018 for grapes from Hoppmann & Wittich 1997 and"
+            " 0.02 from the authors' unpublished lab tests (p. 378); there 0.02 to Hoppmann &"
+            " Wittich 1997 and lab values of 0.022 (Concord) and 0.016 (Chancellor). Wmax 0.5"
+            " is from lab tests on young (wettable) and mature (non-wettable) grape leaves,"
+            " not tabulated; Wd, Wf and p (Eq 5) are not printed.",
+            "Table 3 and the text disagree: the text gives MAE 1.5-1.8 h at the humid site and"
+            " 0.9 h at Adelaide (l. 366-368), the table 1.5 and 0.8 h at Geneva and 0.7 h at"
+            " Adelaide. The sign of the mean error is not printed (visual minus SWEB, from"
+            " the means). The symbol whose value depends on crop type (l. 311) is missing in"
+            " the text and the page image.",
+            "Can it run: not from the paper alone. The equations are printed, but Eqs 9 and 10"
+            " are inconsistent in units as printed, Wd, Wf and p are missing, and the"
+            " operational time step is not printed (10 min in the sensitivity runs). Pages"
+            " 375-377 were checked in the page images.",
+        ),
+        role="process",
+    ),
+    "reuveni1998.leaf_age": Formulation(
+        "Downy mildew severity and sporulation of grape leaf discs by leaf position on the"
+        " shoot (young top leaves, middle, old bottom leaves)",
+        "Reuveni 1998, J. Phytopathol. 146:525-530, Table 1 (p. 528) and Figs 1-3",
+        year=1998,
+        authors=("Reuveni, M.",),
+        authors_complete=True,
+        authors_from="read",
+        checked="the Wiley copy of the 2026-10-19 drop (single author, initial only)",
+        structures=("age-resistance",),
+        calibrated_on=("reuveni1998.golan",),
+        calibration_note=(
+            "No curve is fitted: three leaf positions measured. Leaf discs (12 mm, 10 per"
+            " leaf) of field Cabernet Sauvignon, positions counted from the shoot tip: top"
+            " leaves 3 + 4, middle 15 + 16, bottom 29 + 30 (l. 151-152); in the peroxidase"
+            " experiment 2, 14 + 15 and 28 + 29 (l. 270-271). Each disc got one 5 ul drop of 2e4"
+            " sporangia per ml; severity 0-4 (0 none; 4 over 50 % of the disc infected and"
+            " sporulating); sporangia were counted per cm2 of disc. Field symptoms were not seen"
+            " on leaves from number 12 down in 1993 and from 27 down in 1995 (Figs 1-2,"
+            " p. 527-528; values only in the plots). Spray inoculation of attached greenhouse"
+            " plants (2e4 sporangia per ml, rated 10 days later) gave severity near 3.5-4 for"
+            " leaves 1-6 falling to near 0 by leaf 18 (Fig. 3, read from the figure,"
+            " approximate). Leaf age in days was not measured; position stands for age"
+            " (l. 156)."
+        ),
+        parameters=(
+            Published("disc_sev_d4.top", 0.4, "scale 0-4", "Table 1, p. 528 (4 days)", "read"),
+            Published("disc_sev_d4.middle", 0.1, "scale 0-4", "Table 1, p. 528 (4 days)", "read"),
+            Published("disc_sev_d4.bottom", 0.03, "scale 0-4", "Table 1, p. 528 (4 days)", "read"),
+            Published("disc_sev_d5.top", 1.2, "scale 0-4", "Table 1, p. 528 (5 days)", "read"),
+            Published("disc_sev_d5.middle", 1.0, "scale 0-4", "Table 1, p. 528 (5 days)", "read"),
+            Published("disc_sev_d5.bottom", 0.3, "scale 0-4", "Table 1, p. 528 (5 days)", "read"),
+            Published("disc_sev_d7.top", 2.4, "scale 0-4", "Table 1, p. 528 (7 days)", "read"),
+            Published("disc_sev_d7.middle", 2.3, "scale 0-4", "Table 1, p. 528 (7 days)", "read"),
+            Published("disc_sev_d7.bottom", 1.0, "scale 0-4", "Table 1, p. 528 (7 days)", "read"),
+            Published("sporangia.top", 13874, "per cm2 of disc", "Table 1, p. 528", "read"),
+            Published("sporangia.middle", 8547, "per cm2 of disc", "Table 1, p. 528", "read"),
+            Published("sporangia.bottom", 4870, "per cm2 of disc", "Table 1, p. 528", "read"),
+        ),
+        flags=(
+            "Leaf position, not leaf age in days, and one cultivar (Cabernet Sauvignon) in the"
+            " disc test; the middle leaves do not differ from the top at 5 and 7 days (the"
+            " letters as printed, the test not checked), so the fall is between middle and"
+            " bottom. Discs in dishes at 19 then 24 °C are not a field canopy.",
+            "Golan Research Institute, Israel, as printed; field weather and site are not given."
+            " The field ratings (1993 Cabernet Sauvignon, Chardonnay and Sauvignon Blanc; 1995"
+            " Cabernet Sauvignon) are in the figures only, and the 1993 methods and the Fig. 1"
+            " caption disagree on the plots and shoots (l. 281, 338).",
+            "The paper is an OCR of a scan; Table 1 was read in the page image. Table 3's unit"
+            " header (umol glucose per g per 10 min) and its footnote (milliunits per g)"
+            " disagree (l. 528, 535); the enzyme tables are not recorded here.",
+        ),
+        role="process",
+    ),
+    "dhakar2025.leaf_wetness": Formulation(
+        "Leaf wetness of a flat sensor plate (M1) from dew by energy balance, rain"
+        " interception capped at 0.6 mm per event and evaporation by the SWEB combination"
+        " equation; M2 adds a dew-point-depression gate on dew",
+        "Dhakar, Amogi, Kothawade & Khot 2025, Agric. For. Meteorol. 363:110399, Eqs 2-11 and"
+        " Table 2",
+        year=2025,
+        authors=(
+            "Dhakar, Rajkumar",
+            "Amogi, Basavaraj R.",
+            "Kothawade, Gajanan S.",
+            "Khot, Lav R.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="1-s2.0-S016819232500019X-main.pdf (the 2026-10-19 drop; the author line)",
+        doi="10.1016/j.agrformet.2025.110399",
+        borrows=("magarey2006.sweb",),
+        structures=("dew-energy-balance", "canopy-water-balance"),
+        structures_note=(
+            "A wetness store (LW = Df + Ri - E, Eq 2) filled by dew from an energy balance on"
+            " a plate (Eqs 3-6) and by rain, emptied by evaporation (Eqs 7-10). Wetness is"
+            " the store above 0 mm. Evaporation and the weighting c = Wmax Cf + (1 - Wmax) Cd"
+            " are SWEB's (l. 238-245, 265)."
+        ),
+        calibrated_on=("dhakar2025.awn",),
+        calibration_note=(
+            "Cd, Cf, alpha, DPDc, Wmax, Wf, N, Dp and Lp were fitted by Bayesian optimisation"
+            " (maximising the F1 score of 15-min wet or dry) to the leaf wetness sensor of one"
+            " station, Havillah (l. 315-326); Table 2 prints the values and the Morris bounds."
+            " Havillah is also one of the ten validation stations, so that validation is not"
+            " independent. The M3 and M4 thresholds (2.2 °C; RH 95 %) were chosen against the"
+            " same sensor data. Evaporation and the c weighting are computed from SWEB"
+            " (magarey2006.sweb); the DPDc of 2.2 °C is Sentelhas et al. 2008's (a value, not"
+            " an equation computed); the 0.6 mm interception cap is Sentelhas et al. 2006's."
+            " The fitted Cd and Cf replace SWEB's 8.7 and 2.0, which came from laboratory"
+            " drying tests."
+        ),
+        parameters=(
+            Published("alpha", 1.41, "1", "Table 2 (Bayesian value; bounds 0.5-2.0)", "read"),
+            Published(
+                "c_d",
+                4.23,
+                "cm^0.5 min^-0.5",
+                "Table 2 (Bayesian value; printed bounds 5-10, so outside them)",
+                "read",
+            ),
+            Published(
+                "c_f", 1.78, "cm^0.5 min^-0.5", "Table 2 (Bayesian value; bounds 1-3)", "read"
+            ),
+            Published(
+                "dpdc.table2", 1.85, "°C", "Table 2 (Bayesian value; bounds 1.5-5.0)", "read"
+            ),
+            Published("dpdc.text", 2.2, "°C", "text, l. 302 (from Sentelhas et al. 2008)", "read"),
+            Published(
+                "w_max",
+                0.718,
+                "1",
+                "Table 2 (max fraction of the sensor's surface wet, not of a canopy)",
+                "read",
+            ),
+            Published("w_f", 0.368, "1", "Table 2 (wettable fraction)", "read"),
+            Published("stomata_n", 25e7, "m-2", "Table 2 (bounds 15e7-30e7)", "read"),
+            Published("pore_diameter", 6.23, "um", "Table 2 (bounds 6-7)", "read"),
+            Published("pore_length", 2.5, "um", "Table 2 (bounds 1-3)", "read"),
+            Published("z_ref", 0.2, "m", "Table 2 (fixed)", "read"),
+            Published("z_c", 0.15, "m", "Table 2 (fixed)", "read"),
+            Published("plate_length", 0.12, "m", "Table 2 (D, fixed)", "read"),
+            Published("plate_width", 0.07, "m", "Table 2 (Wl, fixed)", "read"),
+            Published("rain_cap", 0.6, "mm", "text, l. 233-234 (per event)", "read"),
+        ),
+        flags=(
+            "Table 2 prints Cd = 4.23, outside its own bounds of 5-10, and DPDc = 1.85 °C where"
+            " the text sets 2.2 °C for M2 (l. 302); the paper does not say which value M2"
+            " used. The text says the fitted values are in Table 1 (l. 326); they are in"
+            " Table 2.",
+            "The abstract gives M3 and M4 mean absolute errors of 10.16 and 7.03 h; the results"
+            " give MAE 2.0-7.03 h and RMSE 4.53-10.16 h (l. 439-441), so the abstract's"
+            " figures look like RMSE maxima. M2 daily: R2 0.84, RMSE 1.13 h and MAE 0.34 h"
+            " (abstract); by station RMSE 0.76-1.95 h and MAE 0.2-0.81 h. M1 RMSE 0.76-2.14 h.",
+            "It models the sensor, not a canopy: a flat plate 0.12 by 0.07 m at 0.15 m, with"
+            " no leaf area index; Wmax is the sensor's wet fraction, and W = Wf x Wmax where"
+            " SWEB has Wind x Wmax. Wetness is the store above 0 mm; the truth it is scored"
+            " against is the sensor's normalised output above 0.4 (701 counts). Ten"
+            " Washington AgWeatherNet stations, 15-min data, January 2019 to February 2023;"
+            " no crop is named.",
+            "M4, the relative humidity rule, is RH > 95 %, chosen from 85, 90 and 95 % against"
+            " the sensor; the 90 % result is not printed, so the paper gives no verdict on the"
+            " engine's RH >= 90 %. M4 accuracy 75-80 %, M3 60-75 % (l. 388).",
+            "Data on request; no code or licence printed. Eq 5, the stomatal resistance, cites"
+            " no source; the text cites Eq 9 where Eq 8 is meant (l. 485-487).",
+        ),
+        role="process",
+    ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",
         "Molitor et al. 2014, doi:10.5344/ajev.2013.13066",
