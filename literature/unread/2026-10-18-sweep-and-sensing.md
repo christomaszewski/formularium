@@ -150,3 +150,18 @@ Reuveni 1998, Dhakar et al. 2025, Kim et al. 2005 (Costa Rica) and Burruano 2000
 `magarey2006`, `magarey2006b`, `magarey2005b`, `sentelhas2005`, `vercesi1999`,
 `taylor2018`, `reuveni1998`, `dhakar2025`, `kim2005b`, `burruano2000`; their rows above no
 longer apply. Killigrew et al. 2005 (Plant Disease 89:777) is still not obtained.
+
+## SWEB sources not obtained (2026-10-19, branch ingest/sweb-complete)
+
+Searched while completing `magarey2006.sweb`; not obtained from this VM:
+- Magarey, R. D. 1999. PhD thesis, Cornell University (SWEB's original description; cited by
+  `magarey2005chapter` and `kim2005`). Not in OpenAlex or Cornell eCommons.
+- Dalla Marta, A., Magarey, R. D. & Orlandini, S. 2005. Modelling leaf wetness duration and
+  downy mildew simulation on grapevine in Italy. Agric. For. Meteorol.
+  (10.1016/j.agrformet.2005.07.003). Florence repository hdl 2158/345927, request-a-copy only.
+- Dalla Marta, A. et al. 2007. Leaf wetness duration in sunflower. Eur. J. Agron.
+  (10.1016/j.eja.2006.11.002). Florence repository hdl 2158/345945, request-a-copy only.
+- Laurenson, M. 2002. Developing agricultural models using MetBroker mediation software. J.
+  Agric. Meteorol. 58:1 (10.2480/agrmet.58.1). Open on J-STAGE; refused this VM.
+- Seem, R. C. et al. 2000. Environmental Pollution 108 (10.1016/S0269-7491(99)00218-3): an early
+  SWEB version from microclimate data. Elsevier; not fetched.
