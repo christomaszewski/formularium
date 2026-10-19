@@ -4207,7 +4207,13 @@ FORMULATIONS: dict[str, Formulation] = {
                 "read",
             ),
             Published(
-                "w_max", 0.5, "1", "p. 376, l. 229 (grapes; from the authors' lab tests)", "read"
+                "w_max",
+                0.5,
+                "1",
+                "p. 376, l. 229 (grapes; from the authors' lab tests), and 'Wmax, was assumed as"
+                " 0.5' in the validation (magarey2006b, p. 365); used directly, not built from"
+                " Wd, Wf and p (Eq 5)",
+                "read",
             ),
             Published(
                 "w_th", 0.1, "1", "p. 375, l. 152 (threshold on the wet-area index Wind)", "read"
@@ -4267,16 +4273,48 @@ FORMULATIONS: dict[str, Formulation] = {
             " 0.02 from the authors' unpublished lab tests (p. 378); there 0.02 to Hoppmann &"
             " Wittich 1997 and lab values of 0.022 (Concord) and 0.016 (Chancellor). Wmax 0.5"
             " is from lab tests on young (wettable) and mature (non-wettable) grape leaves,"
-            " not tabulated; Wd, Wf and p (Eq 5) are not printed.",
+            " not tabulated. The 2005 review chapter by the same authors (magarey2005chapter,"
+            " Table 10-2, p. 219) gives water storage 0.20 cm for a standard sensor, credited"
+            " to the same Noilhan & Planton 1989: tenfold the 0.02 cm here; both are recorded.",
+            "Wd, Wf and p (Eq 5) are printed nowhere found: not in this paper, its validation"
+            " (magarey2006b), the drop-and-film paper (magarey2005b), the 2005 review chapter"
+            " (magarey2005chapter), the uses by Dalla Marta et al. 2006 (dallamarta2006), Kim et"
+            " al. 2005 (kim2005), Gil et al. 2015 (gil2015), Kudinha 2014 or Amir 2016. The"
+            " authors and every user ran SWEB with Wmax = 0.5 set directly, so Eq 5 is not needed"
+            " to run it. Amir 2016 reads Wmax 0.5 as a canopy of half mature and half immature"
+            " leaves and credits that to Magarey 2006, which does not say it.",
+            "Units of Eqs 9-10, checked at two sources: the 2005 chapter (Eq 3, p. 206, page"
+            " image) prints the same combination equation with the same unit for every symbol"
+            " as Table 2 here (Delta and delta mb per C, lambda J/g, Rn J/(min cm2), rho g/cm3,"
+            " Cp J/(g C), h cm/min, vapour pressures mb). Worked through, the right side is"
+            " g/(cm2 min), which is cm/min of water at 1 g/cm3; the printed units are"
+            " consistent, and only the water density is implicit. Ep is named a 'latent heat"
+            " flux density' but carries cm/min. Eq 13, h = c Uc^0.5 with c in cm^0.5 min^-0.5"
+            " and Uc in cm/min, also gives cm/min. An earlier version of this record called"
+            " Eqs 9-10 inconsistent; that was wrong.",
+            "Time step, as printed: 'The model was run in 10 min time steps' in the sensitivity runs (p. 378); the"
+            " validation scored SWEB at 1-h intervals at all three sites and at 10-min"
+            " intervals at LO98 and AA98 (magarey2006b, p. 364-365), from weather logged every"
+            " 60 s with hourly summaries, without saying at which step the model itself ran."
+            " The 2005 chapter says wetness models are 'usually run using hourly weather data'"
+            " (p. 207). Every later use ran it hourly: Gil et al. 2015 ('the model ran on an"
+            " hourly basis', from 10-min data averaged per hour), Kudinha 2014, Amir 2016,"
+            " Kim et al. 2005.",
             "Table 3 and the text disagree: the text gives MAE 1.5-1.8 h at the humid site and"
             " 0.9 h at Adelaide (l. 366-368), the table 1.5 and 0.8 h at Geneva and 0.7 h at"
             " Adelaide. The sign of the mean error is not printed (visual minus SWEB, from"
             " the means). The symbol whose value depends on crop type (l. 311) is missing in"
             " the text and the page image.",
-            "Can it run: not from the paper alone. The equations are printed, but Eqs 9 and 10"
-            " are inconsistent in units as printed, Wd, Wf and p are missing, and the"
-            " operational time step is not printed (10 min in the sensitivity runs). Pages"
-            " 375-377 were checked in the page images.",
+            "Can it run: yes, with stated choices. Every equation is printed and the units"
+            " close (above). A tool must set: Wmax 0.5 directly (as the authors did); a time"
+            " step of 10 min (the authors' sensitivity runs) or 1 h (their validation scoring"
+            " and every later use); Cl 0.02 cm (the 2006 papers) rather than 0.20 cm (the 2005"
+            " chapter's sensor); canopy net radiation at night, which SWEB takes as an input"
+            " and the paper measured, so a tool without it must estimate it; and the standard"
+            " constants (lambda, delta, rho, Cp, Delta(T)) at its own choice, since none is"
+            " printed. Not printed anywhere found: Wd, Wf, p; the symbol at l. 311."
+            " Pages 375-378 here, p. 206 and 219 of the chapter and p. 364-365 of the"
+            " validation were read on the page images (2026-10-19).",
         ),
         role="process",
     ),
