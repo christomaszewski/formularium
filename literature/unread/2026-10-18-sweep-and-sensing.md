@@ -141,3 +141,12 @@ These are the papers the 2026-10-18 OpenAlex search (six strands: autumn inoculu
 - Arens, K. 1929. Jahrbücher für wissenschaftliche Botanik 70:57-92 and 93-157. The Internet Archive run stops at about vol. 62; only the English abstract (Review of Applied Mycology 8:482-484) is held.
 - Capus, J. 1918/1919. Rapport sur les avertissements contre les parasites de la vigne (Service de la météorologie agricole, Annales fasc. XXXVIII). Not on the Internet Archive; only secondary texts and his Cadillac report (see capus1918) are held.
 - Gallica, HathiTrust and the Biodiversity Heritage Library refuse this VM (Cloudflare), so a search from Chris's browser there may find these.
+
+## Read since (2026-10-19, from Chris's drop `2026-10-19-references`)
+
+Chris supplied: Magarey et al. 2006 (SWEB) and its grape-canopy companion, Magarey et al.
+2005 (listed above as 2004), Sentelhas et al. 2005, Vercesi et al. 1999, Taylor 2018,
+Reuveni 1998, Dhakar et al. 2025, Kim et al. 2005 (Costa Rica) and Burruano 2000. Read:
+`magarey2006`, `magarey2006b`, `magarey2005b`, `sentelhas2005`, `vercesi1999`,
+`taylor2018`, `reuveni1998`, `dhakar2025`, `kim2005b`, `burruano2000`; their rows above no
+longer apply. Killigrew et al. 2005 (Plant Disease 89:777) is still not obtained.

@@ -124,3 +124,5 @@ shortlist's "2007b"), Cola 2014 (`cola2014`), Keller 2010 (`keller2010`, the Aus
 Journal paper). Two files were the wrong paper and were not read: a Reuveni 2003 fungicide
 study in place of Reuveni 1998, and Dong et al. 2008's GreenLab tomato paper. Schultz 1992
 is still unobtained.
+- **Reuveni 1998** (leaf age and resistance) was supplied by Chris on 2026-10-19 and read
+  (`reuveni1998`, with the record `reuveni1998.leaf_age`).
