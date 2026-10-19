@@ -134,3 +134,10 @@ These are the papers the 2026-10-18 OpenAlex search (six strands: autumn inoculu
 | 2016 | Alfonso | Probabilistic Flood Maps to support decision‐making: Mapping the Value of Information | 10.1002/2015wr017378 | A2 | OA |
 | 2017 | Yin | Multi-model uncertainty analysis in predicting grain N for crop rotations in Europe | 10.1016/j.eja.2016.12.009 | A2 | OA |
 | 2024 | Zare | Within-season crop yield prediction by a multi-model ensemble with integrated data assimilation | 10.1016/j.fcr.2024.109293 | A2 | OA |
+
+## Old literature not obtained (2026-10-19)
+
+- Laviola, C. 1964. Prime osservazioni sulla biologia di Plasmopara viticola in Puglia. Annali della Facoltà di Agraria, Università di Bari 18:1-59. Citation taken from Burruano 1990 and Burruano et al. 1992; searched Internet Archive, OpenAlex, Crossref and Review of Applied Mycology 42-44, not found.
+- Arens, K. 1929. Jahrbücher für wissenschaftliche Botanik 70:57-92 and 93-157. The Internet Archive run stops at about vol. 62; only the English abstract (Review of Applied Mycology 8:482-484) is held.
+- Capus, J. 1918/1919. Rapport sur les avertissements contre les parasites de la vigne (Service de la météorologie agricole, Annales fasc. XXXVIII). Not on the Internet Archive; only secondary texts and his Cadillac report (see capus1918) are held.
+- Gallica, HathiTrust and the Biodiversity Heritage Library refuse this VM (Cloudflare), so a search from Chris's browser there may find these.
