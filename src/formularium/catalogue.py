@@ -4292,7 +4292,8 @@ FORMULATIONS: dict[str, Formulation] = {
             " flux density' but carries cm/min. Eq 13, h = c Uc^0.5 with c in cm^0.5 min^-0.5"
             " and Uc in cm/min, also gives cm/min. An earlier version of this record called"
             " Eqs 9-10 inconsistent; that was wrong.",
-            "Time step, as printed: 'The model was run in 10 min time steps' in the sensitivity runs (p. 378); the"
+            "Time step, as printed: 'The model was run in 10 min time steps' in the sensitivity"
+            " runs (p. 378); the"
             " validation scored SWEB at 1-h intervals at all three sites and at 10-min"
             " intervals at LO98 and AA98 (magarey2006b, p. 364-365), from weather logged every"
             " 60 s with hourly summaries, without saying at which step the model itself ran."

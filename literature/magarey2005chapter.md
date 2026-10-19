@@ -10,7 +10,7 @@ regions: []
 processes: [leaf wetness, energy balance, canopy water budget, sensor standards]
 records: []
 datasets: []
-files: [unl_chapter_pw.pdf (the 2026-10-19 SWEB drop, /srv/papers/drop/2026-10-19-sweb/fetch/)]
+files: [unl_chapter_pw.pdf (the 2026-10-19 SWEB drop)]
 ---
 
 # Magarey et al. 2005: estimating surface wetness on plants (review chapter)
