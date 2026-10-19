@@ -61,7 +61,8 @@ run or cite. Its companion, `magarey2006b`, holds the vineyard comparison.
 - **Code:** available on request from the first author; no licence (l. 425).
 - **Not printed:** Wd, Wf and p; the symbol whose value depends on crop type (l. 311, blank in
   the text and the page image); the operational time step; any comparison with an RH threshold;
-  consistent units for Eqs 9-10.
+  (an earlier version also listed "consistent units for Eqs 9-10"; the units are consistent:
+  see the record, checked 2026-10-19 against magarey2005chapter).
 
 ## Dependence
 
@@ -100,4 +101,4 @@ stand-in:
 - **Errors.** 0.7-1.5 h a day against visual wetness at three site-years (table), canopy
   humidity and temperature measured in the vineyard. A truth built on SWEB needs canopy net
   radiation at night, which a weather generator without longwave cannot give.
-- **Can it run:** not from this paper alone (Wd, Wf, p, units of Eqs 9-10, time step).
+- **Can it run:** from this paper with stated choices; see the record's flags (completed 2026-10-19 on branch ingest/sweb-complete: Wmax set directly, the units of Eqs 9-10 consistent at a second source, 10-min steps in the sensitivity runs, hourly in the validation and every later use).
