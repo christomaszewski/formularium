@@ -178,7 +178,7 @@ def test_the_library_renames_papers_to_their_notes_and_checks_them(tmp_path: Pat
     (drop / "a" / "Phyto78.txt").write_text("text one")
     (drop / "a" / "supp.PDF").write_bytes(b"supplement")
     (drop / "a" / "copy-of-phyto78.pdf").write_bytes(b"paper one")  # same bytes, other name
-    (drop / "a" / "unread.pdf").write_bytes(b"paper two")
+    (drop / "a" / "unread.pdf").write_bytes(b"%PDF- paper two")
     (drop / "a" / "rejected-documents" / "page.pdf").write_bytes(b"not a paper")
     notes = {"lalancette1988": ["Phyto78.pdf", "supp.PDF"], "biggs2016": []}
 
@@ -198,7 +198,7 @@ def test_the_library_renames_papers_to_their_notes_and_checks_them(tmp_path: Pat
 
     notes["newpaper2020"] = ["unread.pdf"]
     library.file_paper("newpaper2020", lib / "inbound" / "unread.pdf", None, notes, lib)
-    assert (lib / "newpaper2020.pdf").read_bytes() == b"paper two"
+    assert (lib / "newpaper2020.pdf").read_bytes() == b"%PDF- paper two"
     assert not (lib / "inbound" / "unread.pdf").exists()
     assert library.check(notes, lib) == []
 
@@ -209,3 +209,65 @@ def test_the_library_renames_papers_to_their_notes_and_checks_them(tmp_path: Pat
         "missing2001: gone.pdf is not in the library",
         "lalancette1988.pdf: its checksum changed",
     ]
+
+
+def test_annotated_file_names_and_adding_to_a_library(tmp_path: Path) -> None:
+    library = _script("library")
+    assert library.file_names(
+        "[1-s2.0-main.pdf (the 10-19 drop, supplied by Chris), PDIS.85.9.1018 (1).pdf, c.txt (OCR"
+        " (eng))]"
+    ) == ["1-s2.0-main.pdf", "PDIS.85.9.1018 (1).pdf", "c.txt"]
+    assert library.file_names("[]") == []
+
+    drop, lib = tmp_path / "drop", tmp_path / "lib"
+    (drop / "old").mkdir(parents=True)
+    (drop / "old" / "first.pdf").write_bytes(b"first")
+    (drop / "old" / "waiting.pdf").write_bytes(b"%PDF- waiting")
+    notes = {"first2001": ["first.pdf"]}
+    copies, _ = library.plan(notes, [drop])
+    rows = [library._place(c.source, lib, c.dest, c.note, c.original, move=False) for c in copies]
+    library.write_manifest(lib, rows)
+    assert sorted(r["path"] for r in rows) == ["first2001.pdf", "inbound/waiting.pdf"]
+
+    (drop / "new").mkdir()
+    (drop / "new" / "volume.pdf").write_bytes(b"a proceedings volume")
+    (drop / "new" / "volume.txt").write_text("its text")
+    (drop / "new" / "unnoted.pdf").write_bytes(b"%PDF- no note yet")
+    (drop / "new" / "error.pdf").write_bytes(b"<!DOCTYPE html>")  # a failed download
+    (drop / "new" / "copy-of-first.pdf").write_bytes(b"first")  # bytes already held
+    (drop / "new" / "text" / "key_2020").mkdir(parents=True)
+    (drop / "new" / "text" / "key_2020" / "paper.pdf").write_bytes(b"extracted")
+    (drop / "new" / "text" / "key_2020" / "paper.txt").write_text("extracted text")
+    (drop / "new" / "text" / "loose_2021").mkdir()
+    (drop / "new" / "text" / "loose_2021" / "paper.pdf").write_bytes(b"%PDF- no note either")
+    notes.update(
+        {
+            "waiting2010": library.file_names("[waiting.pdf (the old drop)]"),
+            "chapter2012": library.file_names("[volume.pdf (the new drop, pp. 1-9)]"),
+            "chapter2013": library.file_names("[volume.pdf (the new drop, pp. 10-19)]"),
+            "lost2015": ["gone.pdf"],
+            "key2020": library.file_names("[key_2020.pdf (the new drop)]"),
+        }
+    )
+    copies, problems = library.plan(notes, [drop])
+    placed, left = library.add_plan(copies, problems, notes, lib)
+    assert sorted((c.dest, move) for c, move in placed) == [
+        ("chapter2012.pdf", False),
+        ("chapter2012.txt", False),
+        ("chapter2013.pdf", False),
+        ("chapter2013.txt", False),
+        ("inbound/loose_2021.pdf", False),
+        ("inbound/unnoted.pdf", False),
+        ("key2020.pdf", False),
+        ("key2020.txt", False),
+        ("rejected/error.pdf", False),
+        ("waiting2010.pdf", True),
+    ]
+    assert left == ["lost2015: gone.pdf is in no drop"]
+    assert library.add(copies, problems, notes, lib, go=True) == 0
+    assert not (lib / "inbound" / "waiting.pdf").exists()
+    assert (lib / "waiting2010.pdf").read_bytes() == b"%PDF- waiting"
+    assert library.check({k: v for k, v in notes.items() if k != "lost2015"}, lib) == []
+    # A second run adds nothing.
+    copies, problems = library.plan(notes, [drop])
+    assert library.add_plan(copies, problems, notes, lib)[0] == []

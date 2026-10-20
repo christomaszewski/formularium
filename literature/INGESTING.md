@@ -32,6 +32,11 @@ first fifteen papers ingested, for sessions that arrive without that history; re
     `python scripts/library.py file <id> <paper>`. `python scripts/library.py check` finds
     notes whose papers are missing and copies that changed.
   - **New drops:** run `coverage.py` on `$FORMULARIUM_LIBRARY/inbound` and on the drop.
+  - **After a merge,** file every merged note's paper at once: `python scripts/library.py
+    build DROP [DROP ...] --add` prints the plan, `--add --go` copies, then `check`. It skips
+    what is held (by checksum), moves a note's paper out of `inbound/`, and sends a `.pdf` that
+    is not a PDF to `rejected/`. A `files` entry may carry an annotation after its name, as
+    `paper.pdf (the 10-18 drop)`; give each file a name no other drop uses.
   - Notes keep the names papers were dropped under, never the library's names or paths.
 - **Cooptera keeps its own:** a model the engine runs needs its paper in Cooptera's
   `drop/papers/`, added with Cooptera's `scripts/papers/fetch_oa.py --add`, so that its
