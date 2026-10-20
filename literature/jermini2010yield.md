@@ -33,3 +33,13 @@ A light read (the deep-research B list).
 ## Bearing (2026-10-10)
 
 - A measured site dataset of reserve starch and sugars and of severity under downy mildew defoliation, usable as an observed check on a compensation term in an evaluator, with no model run here.
+
+## Bearing (2026-10-20)
+
+- Read again (a light reading by claude-haiku-5-5, 27 of 27 quotes at their lines), from a
+  copy in the 2026-10-20 drop: under the untreated canopy root starch fell 53.2 % (1997) and
+  78.5 % (1998) and total root reserves 37-58 % below the standard schedule; trunk, cane and
+  shoot starch fell less, in that order (Tables 1-4); roots are mobilised first. Its
+  severities at veraison (1.3, 4.5 and 9.1 % for 1996-1998, l. 107-113) are the reverse of
+  the order the companion paper prints (literature/jermini2010b: 9.17, 4.46, 1.29 %).
+

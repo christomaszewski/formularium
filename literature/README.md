@@ -446,6 +446,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [janczewski1897](janczewski1897.md) | cereal smuts | survey | Lithuania | Off-topic |
 | [jensen2025](jensen2025.md) | none | modelling review | global | Review of 146 models |
 | [jermini2010](jermini2010.md) | downy mildew | damage, spray strategy | Ticino | A measured damage function for Merlot |
+| [jermini2010b](jermini2010b.md) | downy mildew | damage, leaf area loss, yield, sugar content | Ticino | Late leaf downy mildew (37-48 % severity) left yield unchanged in two of three years but cut sugar by up to 2 °Brix; the vine compensates from reserves |
 | [jermini2010yield](jermini2010yield.md) | downy mildew | compensation, carbohydrate reserves, reserve mobilisation, … | Switzerland, Cadenazzo (Ticino) | A measured site dataset of reserve starch and sugars and of severity under downy mildew defoliation, usable a… |
 | [ji2021coniella](ji2021coniella.md) | white rot | infection, incubation | Emilia-Romagna | White rot infection; incubation by Magarey's f(T) |
 | [ji2021ripe](ji2021ripe.md) | ripe rot | infection, sporulation | China, Japan, United States | A ripe rot model on 19 epidemics |
@@ -488,6 +489,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [kolbl2023](kolbl2023.md) | downy mildew | inoculation, sporulation, detection, incubation, leaf wetne… | Germany, Geisenheim | A small greenhouse dataset (one cultivar, one 17-day campaign) that gives observed detection timing for downy… |
 | [koledenkova2022](koledenkova2022.md) | downy mildew | review | global | Review; context |
 | [koltzow2022](koltzow2022.md) | none | reanalysis validation, 2 m temperature, 10 m wind, representativeness error, regional reanalysis | Svalbard, northern Norway, Sweden and Finland | CARRA 2.5 km against ERA5 for 2 m temperature and 10 m wind in the Arctic; sub-grid representativeness error is a large share of the mismatch (s2, s5). |
+| [kong2016](kong2016.md) | downy mildew | latent detection, LAMP, spore trap | China | LAMP detects P. viticola 4 days after inoculation (symptoms at 7) in about an hour; 65 % of symptomless field leaves positive; about 20 sporangia needed on traps |
 | [kontogiannis2024](kontogiannis2024.md) | downy mildew | forecasting | Greece | Prints a variant of EPI and DMCast's maturity curve; labels simulated |
 | [koopman2007](koopman2007.md) | downy mildew | epidemic structure, overwintering | Western Cape | new genotypes all season (12-74 %); one or two clones dominate; ten genotypes survive the winter |
 | [kortekamp1998](kortekamp1998.md) | downy mildew | host resistance | Palatinate | Resistance acts 3-4 days after infection |
