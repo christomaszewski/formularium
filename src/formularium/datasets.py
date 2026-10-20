@@ -1219,4 +1219,12 @@ DATASETS: dict[str, Dataset] = {
         " (Eq. 2) is fitted to the New York populations overwintered in New York",
         "read",
     ),
+    "oriolani2015.mendoza": Dataset(
+        "Weekly powdery mildew incidence on Chenin clusters from flowering to veraison in one"
+        " untreated plot at EEA INTA Mendoza, six seasons (2001/02-2009/10), with hourly canopy"
+        " weather; 40 daily increment rates classed nil, moderate or severe",
+        "Oriolani et al. 2015, Rev. FCA UNCuyo 47(2):197-211 (read 2026-10-20): its ordinal"
+        " logistic models are fitted to them",
+        "read",
+    ),
 }

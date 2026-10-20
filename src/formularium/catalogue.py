@@ -6205,4 +6205,72 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="process",
     ),
+    "oriolani2015.powdery_rate": Formulation(
+        "Grapevine powdery mildew on clusters, Mendoza: the probability that the daily"
+        " increase in incidence is severe, moderate or nil, an ordinal logistic of the 15 days"
+        " before: two-day spells with at least 9 h at 21.0-29.4 °C (and RH above 17 %) less"
+        " those with 9 h outside it and dry, plus hours of light rain",
+        "Oriolani et al. 2015, Rev. FCA UNCuyo 47(2):197-211, Table 3 (p. 204), models I-III",
+        year=2015,
+        authors=(
+            "Oriolani, Enrique J. A.",
+            "Moschini, Ricardo C.",
+            "Salas, Sergio",
+            "Martinez, Malvina I.",
+            "Banchero, Santiago",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="oriolani_2015.pdf (the 2026-10-20 drop); Table 3 and its definitions read in"
+        " the page image (p. 204)",
+        structures=("temperature-hours-mildew-index",),
+        structures_note=(
+            "Its predictor counts days with at least 9 h in a 21.0-29.4 °C band (NPp2) against"
+            " days with 9 h at or below 21.0 or at or above 32.5 °C and RH below 80 % (NPn2):"
+            " hours in a temperature band, the UC Davis index's form, with nearly its band"
+            " (21.1-29.4 °C; the paper compares, l. 605-612, and does not say it borrows)."
+        ),
+        calibrated_on=("oriolani2015.mendoza",),
+        calibration_note=(
+            "Stepwise ordinal logistic regression (SAS PROC LOGISTIC) on 40 daily increment"
+            " rates from six seasons at one untreated Chenin plot (oriolani2015.mendoza);"
+            " accuracy 87.5, 90.0 and 92.5 % for models I-III, in-sample. Classes cut at the"
+            " 25th and 50th percentiles (0 and 0.795 % a day). A 2000/01 season (11 dates) is"
+            " shown without an accuracy. Incidence was observed; no model dated it."
+        ),
+        parameters=(
+            Published("m1_b0_severe", -0.3378, "1", "Table 3, model I", "read"),
+            Published("m1_b0_moderate_or_more", 3.1954, "1", "Table 3, model I", "read"),
+            Published("m1_dif2", 0.6825, "1/period", "Table 3, model I", "read"),
+            Published("m3_b0_severe", -0.7944, "1", "Table 3, model III", "read"),
+            Published("m3_b0_moderate_or_more", 3.2169, "1", "Table 3, model III", "read"),
+            Published("m3_dif2", 0.7626, "1/period", "Table 3, model III", "read"),
+            Published("m3_fpr2", 0.2314, "1/h", "Table 3, model III (hours 1-6 mm)", "read"),
+            Published("band_low", 21.0, "°C", "Table 3 footnote, NPp2", "read"),
+            Published("band_high", 29.4, "°C", "Table 3 footnote, NPp2", "read"),
+            Published("hot_limit", 32.5, "°C", "Table 3 footnote, NPn2", "read"),
+            Published("rh_positive", 17, "%", "Table 3 footnote, NPp2 (HRh > 17 %)", "read"),
+            Published("rh_negative", 80, "%", "Table 3 footnote, NPn2 (HRh < 80 %)", "read"),
+            Published("hours_per_day", 9, "h", "Table 3 footnote", "read"),
+            Published(
+                "window", 15, "d", "text l. 31 and 254, the 15 days before each observation", "read"
+            ),
+            Published(
+                "severe_rate_cut",
+                0.795,
+                "%/d",
+                "text l. 186-192, the 50th percentile of 40 rates",
+                "read",
+            ),
+        ),
+        flags=(
+            "Can it run: yes, from hourly temperature, humidity and rain at the canopy; PrS from"
+            " the first equation, PrMac from the second, PrM = PrMac - PrS, PrN = 1 - PrMac; the"
+            " class with the largest probability is the prediction. Model III without its"
+            " humidity term fell to 80 % (l. 574-577). One plot, 40 points, in-sample.",
+            "The printed RH threshold for a positive hour is 17 % (Table 3 footnote, page"
+            " image), not a misprint the paper corrects; Mendoza is arid.",
+        ),
+        role="process",
+    ),
 }

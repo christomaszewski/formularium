@@ -133,6 +133,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "calonnec2018.leaf_susceptibility": ("calonnec2018.bordeaux",),
         "savary2009.cluster_transfer": ("savary2009.bordeaux",),
         "moyer2014.ascospore_release": ("moyer2014.cleistothecia",),
+        "oriolani2015.powdery_rate": ("oriolani2015.mendoza",),
         "orlandini2008.plasmo": (
             "orlandini2008.mondeggi",
             "blaeser1978.survival",
