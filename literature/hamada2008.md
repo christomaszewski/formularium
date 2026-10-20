@@ -10,7 +10,7 @@ regions: [São Paulo]
 processes: [infection, climatic risk, leaf wetness]
 records: [lalancette1988.infection]
 datasets: []
-files: [hamada2008_scientia_agricola.pdf]
+files: [hamada2008_scientia_agricola.pdf, 10_1590_s0103_90162008000700010.pdf (the 2026-10-20 drop)]
 ---
 
 # Hamada et al. 2008: Lalancette's infection efficiency mapped over São Paulo
