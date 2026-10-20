@@ -292,6 +292,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [elhelaly1965](elhelaly1965.md) | berry rots | postharvest | Egypt | Off-topic |
 | [elsharkawy2018](elsharkawy2018.md) | downy mildew | biocontrol | Egypt | Control efficacy only |
 | [emmett2010](emmett2010.md) | powdery mildew, downy mildew | spray timing, spray programme, primary infection, secondary… | south eastern Australia, Victoria, Sunraysia, Riv… | A dated Australian record of spray practice and a named downy mildew simulation model (DModel, not in the tex… |
+| [erincik2002](erincik2002.md) | Phomopsis cane and leaf spot | infection, berry susceptibility, rachis susceptibility | Ohio | The thesis behind erincik2003: fruit and rachis stay susceptible from stage 12 to about 33; its worked example fixes alpha's log base at 10 |
 | [erincik2003](erincik2003.md) | Phomopsis cane and leaf spot | infection | Ohio | A flag now, not kin (D27) |
 | [esteban2012](esteban2012.md) | none | climatology | Catalonia | Off-topic for the disease truth |
 | [eswari2021](eswari2021.md) | downy mildew | forecasting | Tamil Nadu | A regression with one residual df: not usable |

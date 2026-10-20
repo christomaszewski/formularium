@@ -6355,4 +6355,96 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="process",
     ),
+    "erincik2003.phomopsis_infection": Formulation(
+        "Phomopsis cane and leaf spot of grapevine: lesions per leaf and internode severity after"
+        " a wet period, Y = alpha tau^beta (1 - tau)^gamma W^delta, tau = (T - Tmin)/(Tmax -"
+        " Tmin), fitted for Catawba and Seyval",
+        "Erincik et al. 2003, Plant Dis. 87:832-840, eq. 2 and Tables 1-2 (pp. 835-836)",
+        year=2003,
+        authors=("Erincik, O.", "Madden, L. V.", "Ferree, D. C.", "Ellis, M. A."),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "10-1094-pdis-2003-87-7-832.pdf (literature/erincik2003); Tables 1-2 and Fig. 3 read"
+            " in the page images 2026-10-20, and the same tables in Erincik's 2002 thesis"
+            " (literature/erincik2002, pp. 74-75)"
+        ),
+        doi="10.1094/PDIS.2003.87.7.832",
+        structures=("analytis-beta-wetness",),
+        structures_note=(
+            "The generalized Analytis Beta (cited to Grove et al. 1985 and Analytis 1977): a"
+            " single-peaked temperature response times a power of wetness duration. That is the"
+            " question of Agrarium's open D33 (it names Erincik 2003), so it has a tag of its own,"
+            " not Magarey's, until D33 is decided."
+        ),
+        calibrated_on=("erincik2003.ohio",),
+        calibration_note=(
+            "Fitted by least squares on log Y to the means across three replicate chamber runs"
+            " (Tables 1-2, 'Mean' rows), Tmin 4.95 and Tmax 35.5 °C set from Figs 1-2 before the"
+            " fit; tested against natural-rain field inoculations, 2000-2001 (17-19 per vineyard),"
+            " r above 0.71 in all but one case (the thesis: two). No model produced or dated the"
+            " data."
+        ),
+        parameters=(
+            Published(
+                "catawba_leaf_log10_alpha", 1.54, "1", "Table 1, leaf, Mean (R² 0.90)", "read"
+            ),
+            Published("catawba_leaf_beta", 1.84, "1", "Table 1, leaf, Mean (R² 0.90)", "read"),
+            Published("catawba_leaf_gamma", 2.58, "1", "Table 1, leaf, Mean (R² 0.90)", "read"),
+            Published("catawba_leaf_delta", 1.43, "1", "Table 1, leaf, Mean (R² 0.90)", "read"),
+            Published(
+                "catawba_internode_log10_alpha",
+                1.58,
+                "1",
+                "Table 1, internode, Mean (R² 0.85)",
+                "read",
+            ),
+            Published(
+                "catawba_internode_beta", 2.73, "1", "Table 1, internode, Mean (R² 0.85)", "read"
+            ),
+            Published(
+                "catawba_internode_gamma", 3.68, "1", "Table 1, internode, Mean (R² 0.85)", "read"
+            ),
+            Published(
+                "catawba_internode_delta", 1.5, "1", "Table 1, internode, Mean (R² 0.85)", "read"
+            ),
+            Published(
+                "seyval_leaf_log10_alpha", 1.79, "1", "Table 2, leaf, Mean (R² 0.88)", "read"
+            ),
+            Published("seyval_leaf_beta", 1.53, "1", "Table 2, leaf, Mean (R² 0.88)", "read"),
+            Published("seyval_leaf_gamma", 1.67, "1", "Table 2, leaf, Mean (R² 0.88)", "read"),
+            Published("seyval_leaf_delta", 1.04, "1", "Table 2, leaf, Mean (R² 0.88)", "read"),
+            Published(
+                "seyval_internode_log10_alpha",
+                2.12,
+                "1",
+                "Table 2, internode, Mean (R² 0.76)",
+                "read",
+            ),
+            Published(
+                "seyval_internode_beta", 3.13, "1", "Table 2, internode, Mean (R² 0.76)", "read"
+            ),
+            Published(
+                "seyval_internode_gamma", 5.31, "1", "Table 2, internode, Mean (R² 0.76)", "read"
+            ),
+            Published(
+                "seyval_internode_delta", 1.28, "1", "Table 2, internode, Mean (R² 0.76)", "read"
+            ),
+            Published("tmin", 4.95, "°C", "p. 835, text", "read"),
+            Published("tmax", 35.5, "°C", "p. 835, text", "read"),
+        ),
+        flags=(
+            "Can it run: yes, per wet period, from its mean temperature and duration. The"
+            " tabulated alpha is 'log-transformed' with no base printed; base 10 reproduces the"
+            " paper's own numbers (derived 2026-10-20): Catawba leaves at 18 °C, 30.1 lesions"
+            " after 7.4 h (printed: 30 needs 7.4 h) and 124.8 after 20 h (Fig. 3, about 125);"
+            " Seyval at 20 °C, 29.9 after 4.2 h. Optima 17.7 °C (Catawba leaf) and 19.6 °C"
+            " (Seyval leaf; printed 20).",
+            "Response is lesion count or internode severity, not an infection probability; Y is"
+            " unbounded above, so wetness beyond 20 h (the longest tested) extrapolates.",
+            "Madden and Ellis are authors of the engine's Lalancette bound, Madden of its"
+            " sampling bound: flags.",
+        ),
+        role="process",
+    ),
 }

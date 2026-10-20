@@ -142,6 +142,9 @@ STRUCTURES = {
     " curve of a heat sum",
     "first-order-residue-decay": "a deposit or residue falling exponentially with time, set by"
     " a half-life",
+    "analytis-beta-wetness": "infection as a beta function of temperature times a power of"
+    " wetness duration (the generalized Analytis form; Agrarium's open D33 may fold it into"
+    " Magarey's response)",
     "minimum-wetness-table": "infection when leaf wetness exceeds a minimum read from a table by"
     " temperature (the Mills form; Agrarium's open D33 may fold it into Magarey's response)",
 }

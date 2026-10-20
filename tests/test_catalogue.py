@@ -135,6 +135,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "moyer2014.ascospore_release": ("moyer2014.cleistothecia",),
         "oriolani2015.powdery_rate": ("oriolani2015.mendoza",),
         "lewis2017.residue_dt50": ("lewis2017.ppdb_dissipation",),
+        "erincik2003.phomopsis_infection": ("erincik2003.ohio",),
         "orlandini2008.plasmo": (
             "orlandini2008.mondeggi",
             "blaeser1978.survival",

@@ -1235,4 +1235,13 @@ DATASETS: dict[str, Dataset] = {
         " MDPI's file (read 2026-10-20); values from the cited studies, first-order where computed",
         "read",
     ),
+    "erincik2003.ohio": Dataset(
+        "Phomopsis viticola lesions per leaf and internode severity on potted Catawba and Seyval"
+        " after inoculation at 5-35 °C and 5-20 h of wetness, three replicate runs, 1998-1999;"
+        " and natural-rain field inoculations in two Ohio vineyards, 2000-2001",
+        "Erincik et al. 2003, Plant Dis. 87:832-840 (read 2026-10-08; Tables 1-2 in the page"
+        " images 2026-10-20), and Erincik's 2002 thesis: the generalized Beta model is fitted to"
+        " the chamber data and tested on the field inoculations",
+        "read",
+    ),
 }
