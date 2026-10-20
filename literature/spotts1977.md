@@ -8,7 +8,7 @@ diseases: [black rot]
 crops: [grapevine]
 regions: [Ohio]
 processes: [infection, leaf wetness]
-records: []
+records: [spotts1977.black_rot_wetness]
 datasets: [spotts1977.ohio]
 files: [spotts1977_phytopathology.pdf]
 ---
@@ -29,3 +29,12 @@ files: [spotts1977_phytopathology.pdf]
 ## Bearing (2026-10-10)
 
 - The reprint in [vazquezabal2019](vazquezabal2019.md) is shifted one row (see there).
+
+## Bearing (2026-10-20)
+
+- Recorded as `spotts1977.black_rot_wetness` (Table 1 read again in the page image). Kin
+  report against the engine's list (cooptera@6f8d0a2): independent of every model, as
+  expected: the engine runs no black rot model, and the table's form waits on D33 untagged.
+- For Agrarium: a black rot infection piece for a later truth (M7); it needs an
+  interpolation rule, a severity response and the rest of a life cycle from other sources.
+

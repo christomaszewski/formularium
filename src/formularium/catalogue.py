@@ -5784,4 +5784,172 @@ FORMULATIONS: dict[str, Formulation] = {
             " at 23.2 °C, an infection in 0.41 wet hours. Which one Bacchus is, is not settled.",
         ),
     ),
+    "gonzalezdominguez2015.botrytis": Formulation(
+        "Botrytis bunch rot of grapevine, daily: conidia on inoculum sources from mycelial growth"
+        " and sporulation (temperature, moist hours, humidity), infection of inflorescences and"
+        " young clusters (stages 53-73) and of ripening berries by conidia and berry to berry"
+        " (stages 79-89), each scaled by a growth-stage susceptibility, summed into three"
+        " severity indices",
+        "González-Domínguez et al. 2015, PLoS ONE 10(10):e0140444, Eqs 1-12 (pp. 4-7) and Table 1",
+        year=2015,
+        authors=(
+            "González-Domínguez, Elisa",
+            "Caffi, Tito",
+            "Ciliberti, Nicola",
+            "Rossi, Vittorio",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "gonzalez2015_botrytis_plosone.pdf (literature/gonzalezdominguez2015); Eqs 1-12 read"
+            " in the page images 2026-10-20"
+        ),
+        doi="10.1371/journal.pone.0140444",
+        structures=("age-resistance",),
+        structures_note=(
+            "SUS1 (Eq 5), the inflorescences' and young clusters' susceptibility, is a cubic in"
+            " the growth stage that peaks near stage 65 and falls by stage 73: age resistance."
+            " SUS2 and SUS3 (Eqs 8, 11) rise with the stage as berries ripen. INF1 and INF2"
+            " (Eqs 4, 7) are a beta function of temperature times a function of wetness"
+            " duration (logistic; Gompertz), Ciliberti's form: the form of Agrarium's open"
+            " decision D33 (Magarey's structure), left untagged until it is decided, as"
+            " literature/ciliberti2015flowers leaves it. INF3 (Eq 10) is a beta in temperature"
+            " over a logistic in relative humidity; sporulation (Eq 3) a beta in temperature"
+            " times a quadratic in relative humidity. No rain or temperature threshold"
+            " triggers infection: the model assumes conidia disperse and land every day"
+            " (DISR = DEPR = 1, p. 4)."
+        ),
+        calibrated_on=(),
+        calibration_note=(
+            "Not fitted here. Eqs 2 and 4 are Ciliberti et al. 2015 (Phytopathology 105:325-333,"
+            " literature/ciliberti2015flowers), Eqs 7 and 10 Ciliberti et al. 2015"
+            " (Phytopathology 105:1090-1096, literature/ciliberti2015berries), Eq 3 Ciliberti et"
+            " al. 2015 (Aust. J. Grape Wine Res., 'accepted', not held), Eq 8 from"
+            " Deytieux-Belleau et al. 2009's data (Eur. J. Plant Pathol. 125:551-563, not held),"
+            " Eqs 5 and 11 from Ciliberti's data (S1 Appendix, not held): laboratory"
+            " inoculations, none dated by a model. None of these sources is a record here."
+            " Evaluated, not fitted, on 21 untreated epidemics in 12 vineyards, 2009-2014"
+            " (gonzalezdominguez2015.epidemics) by discriminant analysis of SEV1-SEV3 against"
+            " severity groups: 17 of 21 right, 15 of 21 cross-validated (literature/"
+            "gonzalezdominguez2015). The authors say the equations 'were not validated"
+            " against independent data'."
+        ),
+        parameters=(
+            Published("time_step", 1, "d", "p. 4", "read"),
+            Published("sporulation_window", 7, "d", "Eq 1 (the sum over i-6 to i, over 7)", "read"),
+            Published("mygr_a", 3.78, "1", "Eq 2", "read"),
+            Published("mygr_b", 0.9, "1", "Eq 2", "read"),
+            Published("mygr_c", 0.475, "1", "Eq 2", "read"),
+            Published("mygr_tmin", 0.0, "°C", "p. 4, under Eq 3", "read"),
+            Published("mygr_tmax", 40.0, "°C", "p. 4, under Eq 3", "read"),
+            Published("spor_a", 3.7, "1", "Eq 3", "read"),
+            Published("spor_b", 0.9, "1", "Eq 3", "read"),
+            Published("spor_c", 10.49, "1", "Eq 3", "read"),
+            Published("spor_rh0", -3.595, "1", "Eq 3", "read"),
+            Published("spor_rh1", 0.097, "1/%", "Eq 3", "read"),
+            Published("spor_rh2", -0.0005, "1/%2", "Eq 3", "read"),
+            Published("spor_tmax", 35.0, "°C", "p. 4, under Eq 3", "read"),
+            Published(
+                "moist_hour_rain", 0.2, "mm", "p. 4 (R >= 0.2 mm makes a moist hour)", "read"
+            ),
+            Published("moist_hour_wetness", 30, "min", "p. 4 (WD >= 30 min)", "read"),
+            Published("moist_hour_rh", 90, "%", "p. 4 (daily average RH >= 90 %)", "read"),
+            Published("inf1_a", 3.56, "1", "Eq 4", "read"),
+            Published("inf1_b", 0.99, "1", "Eq 4", "read"),
+            Published("inf1_c", 0.71, "1", "Eq 4", "read"),
+            Published("inf1_d", 1.85, "1", "Eq 4", "read"),
+            Published("inf1_e", 0.19, "1/h", "Eq 4", "read"),
+            Published("inf1_tmax", 35.0, "°C", "p. 6, under Eq 4", "read"),
+            Published("sus1_c3", -379.09, "1", "Eq 5, on GS/100", "read"),
+            Published("sus1_c2", 671.25, "1", "Eq 5", "read"),
+            Published("sus1_c1", -390.33, "1", "Eq 5", "read"),
+            Published("sus1_c0", 75.209, "1", "Eq 5", "read"),
+            Published("inf2_a", 6.416, "1", "Eq 7", "read"),
+            Published("inf2_b", 1.292, "1", "Eq 7", "read"),
+            Published("inf2_c", 0.469, "1", "Eq 7", "read"),
+            Published("inf2_gompertz_b", 2.3, "1", "Eq 7", "read"),
+            Published("inf2_gompertz_k", 0.048, "1/h", "Eq 7", "read"),
+            Published("inf2_tmax", 35.0, "°C", "p. 7, under Eq 7", "read"),
+            Published("sus2_a", 5e-17, "1", "Eq 8", "read"),
+            Published("sus2_b", 0.4219, "1", "Eq 8, per growth stage", "read"),
+            Published("inf3_a", 7.75, "1", "Eq 10", "read"),
+            Published("inf3_b", 2.14, "1", "Eq 10", "read"),
+            Published("inf3_c", 0.469, "1", "Eq 10", "read"),
+            Published("inf3_d", 35.36, "1", "Eq 10", "read"),
+            Published("inf3_e", 40.26, "1", "Eq 10, on RH/100", "read"),
+            Published("inf3_tmax", 30.0, "°C", "p. 7, under Eq 10", "read"),
+            Published("sus3_slope", 0.0546, "1", "Eq 11, per growth stage", "read"),
+            Published("sus3_intercept", -3.87, "1", "Eq 11 (capped at 1)", "read"),
+        ),
+        flags=(
+            "Can it run: yes, from daily mean temperature, mean relative humidity, rain, wetness"
+            " hours and the BBCH-like stage (Lorenz et al.); every coefficient is printed. Teq ="
+            " (T - Tmin)/(Tmax - Tmin), Tmin 0 °C throughout. Evaluated at one point each"
+            " (derived 2026-10-20): MYGR peaks at 1.01 near 19 °C, SPOR's temperature term at"
+            " 0.94 near 16.6 °C and its humidity term at 1.11 near 97 % (0.43 at 60 %); INF1"
+            " at 0.93 near 17.4 °C before the wetness term; INF2's temperature term reaches"
+            " 1.15 near 19.7 °C, above 1, and its wetness term is 0.10 at 0 h, 0.48 at 24 h;"
+            " INF3's humidity term is 0.52 at 88 % and 0.04 at 80 %; SUS1 is 0.45 at stage 53,"
+            " 1.0 at 65 and 0.5 at 73; SUS2 0.015 at 79 and 1.0 at 89; SUS3 0.44 at 79.",
+            "Latent infection and incubation are not modelled ('insufficient quantitative"
+            " information', p. 5); outputs are severity indices, not diseased area.",
+            "Rossi and Caffi are authors of engine models (Rossi 2008, Caffi 2013): a flag.",
+        ),
+        role="process",
+    ),
+    "spotts1977.black_rot_wetness": Formulation(
+        "Black rot (Guignardia bidwellii) leaf infection: the minimum leaf wetness for light"
+        " infection at each of nine constant temperatures, 10-32 °C",
+        "Spotts 1977, Phytopathology 67:1378-1381, Table 1 (p. 1379)",
+        year=1977,
+        authors=("Spotts, Robert A.",),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "spotts1977_phytopathology.pdf (literature/spotts1977); Table 1 read in the page"
+            " image 2026-10-10 and again 2026-10-20"
+        ),
+        structures=("minimum-wetness-table",),
+        structures_note=(
+            "A table of the minimum wetness for infection at each temperature: infection when"
+            " wetness exceeds a temperature-dependent minimum, the assumption Magarey's response"
+            " fits a curve to. That is the question of Agrarium's open decision D33, so it gets"
+            " a tag of its own, not Magarey's, until D33 is decided. No rain trigger."
+        ),
+        calibrated_on=("spotts1977.ohio",),
+        calibration_note=(
+            "Its own chamber inoculations: a compilation of several experiments on Concord,"
+            " Catawba, Aurore and Baco Noir, five replicates a cultivar an experiment (Table 1,"
+            " footnote a), conidia at constant temperature in a moisture chamber. No model"
+            " produced or dated the data. The dataset record also holds the vineyard studies at"
+            " Chesterville, Ohio, 1975-1976, which Table 1 was not made from."
+        ),
+        parameters=(
+            Published("min_wetness_10_0c", 24, "h", "Table 1 (p. 1379), 10.0 °C", "read"),
+            Published("min_wetness_13_0c", 12, "h", "Table 1 (p. 1379), 13.0 °C", "read"),
+            Published("min_wetness_15_5c", 9, "h", "Table 1 (p. 1379), 15.5 °C", "read"),
+            Published("min_wetness_18_5c", 8, "h", "Table 1 (p. 1379), 18.5 °C", "read"),
+            Published("min_wetness_21_0c", 7, "h", "Table 1 (p. 1379), 21.0 °C", "read"),
+            Published("min_wetness_24_0c", 7, "h", "Table 1 (p. 1379), 24.0 °C", "read"),
+            Published("min_wetness_26_5c", 6, "h", "Table 1 (p. 1379), 26.5 °C", "read"),
+            Published("min_wetness_29_0c", 9, "h", "Table 1 (p. 1379), 29.0 °C", "read"),
+            Published("min_wetness_32_0c", 12, "h", "Table 1 (p. 1379), 32.0 °C", "read"),
+            Published(
+                "no_infection_temperature", 7.0, "°C", "p. 1379, Results (none after 48 h)", "read"
+            ),
+        ),
+        flags=(
+            "Can it run: as a lookup, from hourly temperature and leaf wetness; between the"
+            " printed temperatures the table must be interpolated, which the paper does not"
+            " do. Above 32 °C nothing was tested; at 7 °C no infection after 48 h of wetness."
+            " Minimum near 26.5 °C (6 h), rising to 24 h at 10 °C and 12 h at 32 °C.",
+            "Light infection only; no severity response is printed. Plants under variable"
+            " temperature were infected significantly less than at constant temperature"
+            " (Table 2), and a 1-day dry period after inoculation reduced severity (Table 3).",
+            "The source of VitiMeteo black rot's thresholds, via Ellis et al. 1986"
+            " (literature/molitor2016); the reprint in literature/vazquezabal2019 is shifted one"
+            " row. The engine runs no black rot model.",
+        ),
+        role="process",
+    ),
 }

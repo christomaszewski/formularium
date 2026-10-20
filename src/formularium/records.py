@@ -136,6 +136,8 @@ STRUCTURES = {
     "cold-air-pool": "night cooling in hollows and valleys from terrain",
     "dew-energy-balance": "dew and leaf drying from a surface energy balance",
     "shield-radiative-error": "a shielded air-temperature sensor's error from radiation and wind",
+    "minimum-wetness-table": "infection when leaf wetness exceeds a minimum read from a table by"
+    " temperature (the Mills form; Agrarium's open D33 may fold it into Magarey's response)",
 }
 
 
