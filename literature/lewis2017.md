@@ -41,6 +41,8 @@ on leaves, fruits and other plant matrices from 1,390 studies, CC-BY, as one Exc
   27-28).
 - Not printed: fungicide medians, grape values, a default for missing data, and per-matrix
   counts.
+- The PDF's text layer holds an unrelated passage (a New Zealand coastal-hazard text, l. 207-259)
+  not visible on the printed page; not used.
 
 ## Dependence
 
