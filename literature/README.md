@@ -518,6 +518,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [lepik1931](lepik1931.md) | downy mildew | host resistance | Estonia | Historical anatomy |
 | [leroy2010](leroy2010.md) | downy mildew, powdery mildew | economics | Bordeaux | A bio-economic model of strategies |
 | [levourch2025](levourch2025.md) | none | airborne inoculum, Burkard spore trap, qPCR, decision support system | Belgium | s1 (autumn/primary inoculum), as an analogy: a measured case that the model assumption of ubiquitous primary inoculum is wrong early in the season. s6: Burkard trap plus qPCR as a method. Not grape, not downy mildew. Not read in full. |
+| [lewis2017](lewis2017.md) | none | fungicide residue, residue decay, dissipation half-life | none (global) | Over 2,200 measured DT50 records on leaves, fruit and other plant matrices (CC-BY): the open source for residue decay rates; the spreadsheet was not obtained |
 | [li2015](li2015.md) | none | crop model ensemble, yield uncertainty, climate scenarios | Philippines, India, China, Japan | Strand s6: 13 rice models at four sites; the ensemble mean is within 10 percent of yield and spread among models exceeds that from climate scenarios. |
 | [linares2009](linares2009.md) | none | shoot growth, leaf area index, cover crops, phenology | Madrid | Observed shoot length and LAI by stage for Syrah and Merlot at El Socorro with Ite at the 2007 samplings, nothing fitted and no engine fitting; dataset only. |
 | [lindau1908](lindau1908.md) | downy mildew | distribution | South Africa | Historical arrival at the Cape |
@@ -707,6 +708,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [raynal2010epicure](raynal2010epicure.md) | downy mildew, powdery mildew, hail damage | forecasting, rainfall, radar, hail detection, sample survey… | Bordeaux, Gironde, Dordogne, Blayais, Cognac | Offers the truth a fine-scale observed hail and damage dataset and a reason to vary rain within a region (rad… |
 | [redeacores2024](redeacores2024.md) | downy mildew | infection, oospores, primary infection, spray timing, seaso… | Azores Portugal | A field-scouting protocol and a statement of the 3-10 rule; the rule is on the engine's listed set, so the tr… |
 | [redeacores2025](redeacores2025.md) | downy mildew | primary infection, secondary infection, leaf wetness, spray… | Azores, Portugal | A field-scoring protocol (organ and plot scales, sampling design) for the observation operator of a downy mil… |
+| [redl2021](redl2021.md) | powdery mildew | ascospore release, chasmothecia maturation, primary inoculum | Austria | Austrian release runs autumn to June, 84-95 % of the trapped release between budbreak and flowering, tied to weekly rain; a check on Moyer's curve |
 | [regionelazio2024](regionelazio2024.md) | downy mildew | primary infection, secondary infection, incubation, oospore… | Lazio Italy, Italy | A regional advisory: the 3-10 rule, called superseded, is on the engine's list, so the truth must not take it… |
 | [reinehr2021](reinehr2021.md) | downy mildew, grey mould | season severity, host vigour | Santa Catarina | Less vigour, less downy mildew; no untreated plot |
 | [reis2013](reis2013.md) | downy mildew | spray timing, validation | Rio Grande do Sul | A Lalancette-based trigger; three seasons of untreated AUDPC |
@@ -791,6 +793,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [sentelhas2004](sentelhas2004.md) | none | leaf wetness, sensors | Ontario, Sao Paulo | The wetness candidate D27 frees |
 | [sentelhas2005](sentelhas2005.md) | none | leaf wetness duration, wetness sensor, canopy position | Iowa, Ontario, Brazil | Grape top and bottom wetness 8.48 and 8.33 h (the same Jundiai data as sentelhas2004), apple 2 h shorter at the bottom; turf reads 6-7 % longer than grape; no density figures. |
 | [sentelhas2008](sentelhas2008.md) | none | leaf wetness, humidity threshold | Ames, Elora, Florence, Piracicaba | The engine's RH ≥ 90 % stand-in: MAE 1.7-2.6 h a day on turf, biased low at three sites; the paper recommends a local threshold (83-92 %) |
+| [serey2007](serey2007.md) | grey mould | fungicide protection, protection period, post-infection activity | Chile | Botrytis fungicides on table grape berries: 0-4 days of protection by drop (up to 21 by immersion) and under 24 h of curative action |
 | [serrano2010](serrano2010.md) | downy mildew | fungicide dose, spray water quality, adjuvant, phosphite, e… | France, Gaillac (AOP), Tarn | Field efficacy data for a half-dose and adjuvant strategy against downy mildew in France, with a ratio-to-unt… |
 | [shahhosseini2021](shahhosseini2021.md) | none | hybrid crop model and machine learning, yield prediction, APSIM, feature importance | US Corn Belt | APSIM outputs as ML features cut corn yield RMSE 7 to 20 percent; a hybrid simulator plus ML pattern (s6). |
 | [shin2020](shin2020.md) | none | leaf wetness, remote sensing | South Korea | Kin by calibration (Agrarium's candidates) |
@@ -873,6 +876,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [winkler1949](winkler1949.md) | none | viticulture | California | Off-topic |
 | [winter1940](winter1940.md) | take-all | infection | Germany | Another disease |
 | [wober1920](wober1920.md) | downy mildew | fungicide efficacy | Austria | History of fungicides |
+| [wong2001](wong2001.md) | downy mildew | fungicide protection, post-infection activity, antisporulant activity | New York | Protectants held 5 days unweathered; only metalaxyl cured (fully at 1 day, partly at 3-5); strobilurin and mancozeb after infection cut sporulation, not incidence |
 | [wurz2021](wurz2021.md) | downy mildew, anthracnose | season severity, canopy density, bud load, incidence, sever… | Brazil, Santa Catarina, São Joaquim | Field incidence and severity by canopy density in a humid highland site, which gives a truth scenario the can… |
 | [wurz2023](wurz2023.md) | downy mildew | season severity, host vigour | Santa Catarina | More buds, more downy mildew; no untreated plot |
 | [yang2021](yang2021.md) | none | phenology, flowering, harvest, yield, crop model | Douro | STICS v9.1 with flowering as a degree-day sum from budburst above 10 °C to a threshold RG (250 to 300 °Cd fitted) and dormancy by BRIN; shares model and data with Fraga 2015, no LAI; not a truth candidate. |
