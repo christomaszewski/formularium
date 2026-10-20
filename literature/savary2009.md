@@ -8,8 +8,8 @@ diseases: [downy mildew, powdery mildew]
 crops: [grapevine]
 regions: [Bordeaux, Couhins, Latresne]
 processes: [epidemic progress, cluster infection, season severity, spray timing]
-records: []
-datasets: []
+records: [savary2009.cluster_transfer]
+datasets: [savary2009.bordeaux]
 files: [savary2009_phyto.pdf]
 ---
 
@@ -61,3 +61,16 @@ reuses for its yield-loss work.
   a pattern a truth's epidemic layer could be matched to, with the structural finding
   that cluster disease follows foliage disease within crop stages 2-5. Nothing for the
   engine's process models.
+
+## Bearing (2026-10-20)
+
+- Recorded as `savary2009.cluster_transfer` with the dataset `savary2009.bordeaux`; Eqs 1-2
+  and Tables 4-5 read in the page images. tc is zero outside crop stages 2-5 because of the
+  clusters' ontogenic resistance, citing Kennelly et al. 2005 (its reference 21, the engine's
+  bunch window), whose stage scale it also uses.
+- Kin report against the engine's list (cooptera@6f8d0a2): same form as
+  `kennelly2005.bunch_window`, as expected. A truth that used it would hold the engine's
+  bunch window out (development families only, unless D43/D44's limit is met).
+- For Agrarium: the simplest published link from leaf to cluster severity, with fitted
+  values for both mildews; tc varies tenfold between years.
+

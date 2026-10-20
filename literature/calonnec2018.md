@@ -8,7 +8,7 @@ diseases: [powdery mildew]
 crops: [grapevine]
 regions: [Bordeaux]
 processes: [ontogenic resistance, infection, sporulation]
-records: []
+records: [calonnec2018.leaf_susceptibility]
 datasets: [calonnec2018.bordeaux]
 files: [q186.pdf]
 ---
@@ -40,3 +40,13 @@ files: [q186.pdf]
 
 - For Cooptera's powdery mildew, and for a truth's host: leaves lose susceptibility within
   about two weeks, by a measured curve.
+
+## Bearing (2026-10-20)
+
+- Recorded as `calonnec2018.leaf_susceptibility` (Tables 4-5 and the p. 9 logistic read in
+  the page images). Merlot exp. 6's I0 of 2243 is left out. Kin report against the engine's
+  list (cooptera@6f8d0a2): independent, as expected (the engine has no age-resistance piece).
+- For Agrarium and Cooptera: the host side of a powdery mildew truth or engine piece; a
+  leaf's age needs a leaf-appearance clock (about one leaf per 21 degree-days above 10 °C,
+  the paper's).
+
