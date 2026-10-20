@@ -10,7 +10,7 @@ regions: [Bordeaux, France]
 processes: [dispersal kernel, roguing, data augmentation MCMC, spatio-temporal transmission]
 records: []
 datasets: []
-files: [adrakey_2022.pdf (the 2026-10-20 drop)]
+files: [adrakey_2022.pdf (the 2026-10-20 drop), adrakey_2023.pdf (the published version, the 2026-10-20 drop)]
 ---
 
 # Adrakey et al. 2022: Flavescence dorée dispersal with roguing (preprint)
@@ -31,3 +31,7 @@ A Bayesian spread model, fitted to two snapshot maps of three Bordeaux fields, g
 
 - Strand t6 (regional spread), and t7 for the vector context. A simulator could take the dispersal scale and kernel shape for Flavescence dorée with roguing. It comes from one vector-borne site and a preprint that has not been peer reviewed.
 - Not read in full.
+- The published version is Adrakey et al. 2023, PLOS Computational Biology, doi
+  10.1371/journal.pcbi.1011399 (a copy in the 2026-10-20 drop): same data and results
+  (half of new infections within 10.5 m, 80 % within 22.2 m), checked by a note writer.
+
