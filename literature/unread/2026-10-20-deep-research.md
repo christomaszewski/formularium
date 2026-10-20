@@ -1,17 +1,18 @@
 # Deep research (2026-10-20): shortlisted leads not obtained
 
-These are the papers the 2026-10-20 OpenAlex search (seven strands: fungicide protection, observation operators, powdery mildew, other bunch diseases, damage and economics, spread between vineyards, insect pests) shortlisted for reading and could not obtain from this VM: 139 in all. Nothing here was read; titles and classes come from a title screen by claude-haiku-5-5, unchecked, except the rows marked 'hand' (chosen by the main session) and those noted below.
+These are the papers the 2026-10-20 OpenAlex search (seven strands: fungicide protection, observation operators, powdery mildew, other bunch diseases, damage and economics, spread between vineyards, insect pests) shortlisted for reading and could not obtain from this VM: 142 in all. Nothing here was read; titles and classes come from a title screen by claude-haiku-5-5, unchecked, except the rows marked 'hand' (chosen by the main session).
 
-- **How they were tried:** each DOI through every OpenAlex location (PDF and landing pages, and PDF links found on landing pages); then publisher patterns, OJS galleys and headless Chromium (home page first); Europe PMC's full-text XML where it holds the article; and Wayback Machine captures of the publisher's PDF or web page. Do not retry these from this VM. 'oa' means OpenAlex lists an open copy the VM still could not reach (Cloudflare at Elsevier, Wiley, APS, ACS, SSRN and NZ Plant Protection, a 403 at MDPI, a robot check at HAL and Cornell).
-- **Key leads the pass found while reading:** Cabras et al. 2001, 'The effect of simulated rain on folpet and mancozeb residues on grapes and on vine leaves', J. Environ. Sci. Health B 36:609-618, doi 10.1081/PFC-100106189 (closed): the source of the PPDB's vine-leaf half-lives and the one direct study of rain on fungicide residues on vine leaves. Ebeling 2018 (foliar dissipation compilation) and Fantke et al. 2014 (half-life estimation) were refused by Cloudflare.
-- **Wrong files:** for some leads the fetched file was not the paper (a repository licence page, a variety list, a policy document, an ELISA kit protocol, a thesis on another subject); those leads are listed with 'wrong file fetched'. Two were later obtained correctly (Michael et al. 2020 through a Wayback capture, Wang et al. 2023 from Europe PMC) and are not listed.
+- **How they were tried:** each DOI through every OpenAlex location (PDF and landing pages, and PDF links found on landing pages); then publisher patterns, OJS galleys and headless Chromium (home page first); Europe PMC's full-text XML where it holds the article; and Wayback Machine captures of the publisher's PDF or web page (which recovered APS, ACS, MDPI and Wiley items the publishers refused). Do not retry these from this VM. 'oa' means OpenAlex lists an open copy the VM still could not reach (Cloudflare at Elsevier, Wiley, APS, ACS, SSRN and NZ Plant Protection, a 403 at MDPI, a robot check at HAL and Cornell).
+- **Key leads found while reading, not in the tables:** Cabras et al. 2001, 'The effect of simulated rain on folpet and mancozeb residues on grapes and on vine leaves', J. Environ. Sci. Health B 36:609-618, doi 10.1081/PFC-100106189 (closed): the source of the PPDB's vine-leaf half-lives and the one direct study of rain on fungicide residues on vine leaves found. Ebeling 2018 (foliar dissipation compilation, doi 10.1002/etc.4148) was refused by Cloudflare and has no Wayback copy.
+- **Wrong files:** for some leads the fetched file was not the paper (a repository licence page, a variety list, a policy document, an ELISA kit protocol, a thesis on another subject, a conference cancellation page, a supplement only); those leads are listed with 'wrong file fetched'. Michael et al. 2020 and Wang et al. 2023 were later obtained correctly and are not listed.
 
-## t1, fungicide protection (25)
+## t1, fungicide protection (26)
 
 | Year | First author | Title | DOI | Class | Open copy listed |
 |---|---|---|---|---|---|
 | 2005 | Jan-Cor Brink | Quantification of spray coverage on grape bunch parts and the incidence of Botrytis cinerea | none | A1 | no DOI |
 | 2006 | W. Siegfried | Dosage of plant protection products adapted to leaf area index in viticulture | 10.1016/j.cropro.2006.04.002 | A1 | closed |
+| 2009 | Emilio Gil Moya | Design of a Decision Support Method to Determine Volume Rate for Vineyard Spraying | 10.13031/2013.26323 | A1 | wrong file fetched |
 | 2013 | Paula Pérez Rodríguez | Modeling losses of copper-based fungicide foliar sprays in wash-off under simulated rain | 10.1007/s13762-013-0445-3 | A1 | oa |
 | 2014 | Emilio Gil Moya | Spray adjustments based on LWA concept in vineyard. Relationship between canopy and coverage for different application settings | none | A1 | no DOI |
 | 2016 | Giovanni Onesti | Production of Pycnidia and Conidia by Guignardia bidwellii, the Causal Agent of Grape Black Rot, as Affected by Temperature and Humidity | 10.1094/phyto-07-16-0255-r | A1 | oa |
@@ -123,7 +124,7 @@ These are the papers the 2026-10-20 OpenAlex search (seven strands: fungicide pr
 | 2024 | Valeria Altieri | Integration of mathematical modeling and target-based application of biocontrol agents for the control of Botrytis cinerea in vineyards | 10.1002/ps.8140 | A2 | oa |
 | 2017 | Odile Carisse | Association Between Weather Variables, Airborne Inoculum Concentration, and Raspberry Fruit Rot Caused by Botrytis cinerea | 10.1094/phyto-09-16-0350-r | A3 | oa |
 
-## t5, damage and economics (22)
+## t5, damage and economics (23)
 
 | Year | First author | Title | DOI | Class | Open copy listed |
 |---|---|---|---|---|---|
@@ -135,6 +136,7 @@ These are the papers the 2026-10-20 OpenAlex search (seven strands: fungicide pr
 | 2011 | Bénédicte Lorrain | Effect of Esca disease on the phenolic and sensory attributes of Cabernet Sauvignon grapes, musts and wines | 10.1111/j.1755-0238.2011.00172.x | A2 | oa |
 | 2017 | Yangxuan Liu | Economic Benefit Analysis of the Late Blight Forecasting Systems | none | A2 | no DOI |
 | 2021 | Xavier Poitou | Methyl salicylate, a grape and wine chemical marker and sensory contributor in wines elaborated from grapes affected or not by cryptogamic diseases | 10.1016/j.foodchem.2021.130120 | A2 | wrong file fetched |
+| 2022 | Jurrian Wilmink | Effects of grape phylloxera leaf infestation on grapevine growth and yield parameters in commercial vineyards: a pilot study | 10.20870/oeno-one.2022.56.1.4803 | A2 | wrong file fetched |
 | 2024 | Courtney Cameron Meeks | Evaluation of Reduced Fungicide Applications for Disease Management in Cold-Climate Wine Grapes in Wisconsin | 10.1094/pdis-05-24-1145-re | A2 | closed |
 | 2026 | Marina Anić | Timing of basal defoliation affects the yield, phenolic compounds and C6 aldehydes and alcohols in Cabernet Sauvignon grapes | 10.1016/j.jfca.2026.109387 | A2 | oa |
 | 2005 | Andrew G. Reynolds | Effects of Canola Oil and Jojoba Wax Sprays on Powdery Mildew, Bunch Rot, and Vine Performance of ‘Auxerrois’ and ‘Riesling’ Grapevines | 10.1300/j301v04n04_07 | A3 | oa |
@@ -168,7 +170,7 @@ These are the papers the 2026-10-20 OpenAlex search (seven strands: fungicide pr
 | 2020 | William A. Weldon | Transcriptome-Derived Amplicon Sequencing Markers Elucidate the U.S. Podosphaera macularis Population Structure Across Feral and Commercial Plantings of Humulus lupulus | 10.1094/phyto-07-20-0299-fi | B1 | oa |
 | 2026 | Benny Ordoñez | Global Patterns of Genetic Variation and Population Structure in Grapevine Powdery Mildew ( Erysiphe necator ) | 10.1094/phyto-02-26-0034-r | B1 | closed |
 
-## t7, insect pests (7)
+## t7, insect pests (8)
 
 | Year | First author | Title | DOI | Class | Open copy listed |
 |---|---|---|---|---|---|
@@ -178,4 +180,5 @@ These are the papers the 2026-10-20 OpenAlex search (seven strands: fungicide pr
 | 2014 | Vanesa Ortega‐López | Male flight phenology of the European grapevine moth Lobesia botrana (Lepidoptera: Tortricidae) in different wine-growing regions in Spain | 10.1017/s0007485314000339 | A | closed |
 | 2018 | Cristina C.R. Carlos | Is a biofix necessary for predicting the flight phenology of Lobesia botrana in Douro Demarcated Region vineyards? | 10.1016/j.cropro.2017.12.006 | A | closed |
 | 2020 | Victorine Castex | Assembling and testing a generic phenological model to predict Lobesia botrana voltinism for impact studies | 10.1016/j.ecolmodel.2020.108946 | A | oa |
+| 2021 | Samuel Reis | European grapevine moth in the Douro region: voltinism and climatic scenarios | 10.20870/oeno-one.2021.55.2.4595 | A | wrong file fetched |
 | 2021 | Sara Pasquali | Mortality estimate driven by population abundance field data in a stage-structured demographic model. The case of Lobesia botrana | 10.1016/j.ecolmodel.2021.109842 | A | oa |
