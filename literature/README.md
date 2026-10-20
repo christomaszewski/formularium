@@ -709,6 +709,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [redeacores2024](redeacores2024.md) | downy mildew | infection, oospores, primary infection, spray timing, seaso… | Azores Portugal | A field-scouting protocol and a statement of the 3-10 rule; the rule is on the engine's listed set, so the tr… |
 | [redeacores2025](redeacores2025.md) | downy mildew | primary infection, secondary infection, leaf wetness, spray… | Azores, Portugal | A field-scoring protocol (organ and plot scales, sampling design) for the observation operator of a downy mil… |
 | [redl2021](redl2021.md) | powdery mildew | ascospore release, chasmothecia maturation, primary inoculum | Austria | Austrian release runs autumn to June, 84-95 % of the trapped release between budbreak and flowering, tied to weekly rain; a check on Moyer's curve |
+| [redl2021b](redl2021b.md) | powdery mildew | chasmothecia survival, ascospore viability, primary inoculum | Austria | Viable overwintered ascospores sit on bark (up to 36.7 % of chasmothecia), hardly in litter; none viable after 30 weeks at 17 °C |
 | [regionelazio2024](regionelazio2024.md) | downy mildew | primary infection, secondary infection, incubation, oospore… | Lazio Italy, Italy | A regional advisory: the 3-10 rule, called superseded, is on the engine's list, so the truth must not take it… |
 | [reinehr2021](reinehr2021.md) | downy mildew, grey mould | season severity, host vigour | Santa Catarina | Less vigour, less downy mildew; no untreated plot |
 | [reis2013](reis2013.md) | downy mildew | spray timing, validation | Rio Grande do Sul | A Lalancette-based trigger; three seasons of untreated AUDPC |
@@ -837,6 +838,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [ticomaluquer2013](ticomaluquer2013.md) | downy mildew | infection, incubation, spray timing, season severity, leaf … | Catalonia, Penedès, Spain, Vilafranca, Sant Jaume… | A historic warning service whose daily incubation step (Bologna study, probably Goidanich 1957) is an engine-… |
 | [toffolatti2006](toffolatti2006.md) | downy mildew | oospore germination, primary infection | Veneto | Primary inoculum to late May or early June |
 | [toffolatti2024](toffolatti2024.md) | downy mildew | fungicide resistance | northern Italy | Resistance-allele monitoring in Italy |
+| [tofoli2014](tofoli2014.md) | late blight, early blight | rain wash-off, rainfastness, fungicide efficacy | Brazil | 20 mm of simulated rain 30 min to 4 h after spraying removes contact products' effect (mancozeb worst) far more than systemic ones; potato |
 | [tonle2024](tonle2024.md) | none | decision support | Africa | Off-topic |
 | [tor2023](tor2023.md) | downy mildews | host-pathogen biology | global | Molecular review; context |
 | [tranmanhsung1990](tranmanhsung1990.md) | downy mildew | oospore maturation, season severity | Bordeaux | Clear of the engine by every substantive test, and its author list is read |
