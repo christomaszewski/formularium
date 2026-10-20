@@ -6087,4 +6087,68 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="process",
     ),
+    "kast2010.oidiag": Formulation(
+        "OiDiag-2.2, Weinsberg's powdery mildew index: a daily index, an ontogenic term in days"
+        " since the three-leaf stage times a climatic term from daily mean temperature, hours"
+        " of humidity above 65 and 80 %, rain and leaf wetness, as a 7-day sliding mean that"
+        " sets the next spray interval by fungicide class",
+        "Kast & Bleyer 2010, Proc. 6th Int. Workshop on Grapevine Downy and Powdery Mildew,"
+        " Bordeaux, pp. 151-152 of the proceedings (Table 1 and the index equations)",
+        year=2010,
+        authors=("Kast, W. K.", "Bleyer, K."),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "gdpm2010_proceedings_6th_bordeaux.pdf (literature/kast2010); p. 152 read in the page"
+            " image 2026-10-20"
+        ),
+        structures=("daily-weather-risk-index", "age-resistance"),
+        structures_note=(
+            "Id = CL x ON, a 7-day mean in %. CL from T = ((0.11 TM - 0.0025 TM^2) - 0.6) x"
+            " 1.63, H = (H80 + 0.7 H65)/24 and a rain-and-wetness term R that counts against"
+            " the epidemic, bounded to 0-1.1. ON, a function of days since the three-leaf"
+            " stage that peaks about three weeks later and then falls: age resistance. Not the"
+            " UC Davis index's form (hours in a temperature band)."
+        ),
+        calibration_note=(
+            "Not recorded as datasets. T is 'a function developed that best fitted to the data"
+            " of Delp (1954) and Fessler and Kassemeyer (1995)' by multiple regression; ON"
+            " follows Stark-Urnau and Kast (1999) for Württemberg and Baden; H is OiDiag 1.0's"
+            " (Kast 1997). None of these is a record here; no model dated those data, as far as"
+            " the paper says."
+        ),
+        parameters=(
+            Published("t_a", 0.11, "1/°C", "p. 152, temperature index", "read"),
+            Published("t_b", -0.0025, "1/°C2", "p. 152, temperature index", "read"),
+            Published("t_c", -0.6, "1", "p. 152, temperature index", "read"),
+            Published("t_scale", 1.63, "1", "p. 152, temperature index", "read"),
+            Published("h_weight_65_80", 0.7, "1", "p. 152, H = (H80 + H65 x 0.7)/24", "read"),
+            Published("h_weight_80", 1.0, "1", "p. 152", "read"),
+            Published("r_rain_min", 2.5, "mm/d", "p. 152, rain below it neglected", "read"),
+            Published("r_rain_heavy", 10.0, "mm/d", "p. 152, LWET x 3 above it", "read"),
+            Published("r_weight", 1.5, "1/h", "p. 152, R1 = LWET x 1.5", "read"),
+            Published("r_weight_heavy", 3.0, "1/h", "p. 152, R = LWET x 3", "read"),
+            Published("cl_max", 1.1, "1", "p. 152, climatic index bounded to 0-1.1", "read"),
+            Published("on_d3", 0.0002, "1", "p. 152, ON's D^3 term", "read"),
+            Published("on_sqrt", 176.6, "1", "p. 152, ON's SQRT(D) term", "read"),
+            Published("on_ln", -114.9, "1", "p. 152, ON's LN(D) term (printed '114,9*')", "read"),
+            Published("on_d", -14.0, "1", "p. 152, ON's D term", "read"),
+            Published("on_c", -66.0, "1", "p. 152, ON's constant; all over 100", "read"),
+            Published("sliding_window", 7, "d", "p. 152, sliding mean", "read"),
+        ),
+        flags=(
+            "Cannot run as printed: how T, H and R combine into the climatic index CL is not"
+            " stated (p. 152 gives the three terms and the 0-1.1 bound only). ON is printed"
+            " with unbalanced parentheses and '114,9*'; read as (0.0002 D^3 + 176.6 sqrt(D) -"
+            " 114.9 ln(D) - 14.0 D - 66.0)/100 it gives 0.97 at day 1, 0.74 at day 5, 1.01 at"
+            " day 20, 0.58 at day 50 and turns negative after about day 76 (derived"
+            " 2026-10-20). T peaks at 0.99 near 22 °C and is negative below about 6 °C.",
+            "Table 1 maps the index (0-20, 21-40, 41-60, 61-80, >80 %) to the days until the next"
+            " spray for four fungicide classes, e.g. wettable sulfur 14, 12, 8, 7, 6 days and the"
+            " class-4 products 23, 18, 15, 12, 11 days.",
+            "The first-spray rule from 53 years of Weinsberg records (three-leaf date + (1.3T -"
+            " 5D + 12) days) gives -26 days for the paper's own example (literature/kast2010).",
+        ),
+        role="process",
+    ),
 }
