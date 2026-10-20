@@ -5952,4 +5952,67 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="process",
     ),
+    "calonnec2018.leaf_susceptibility": Formulation(
+        "Grapevine powdery mildew on leaves of known age: infection efficiency falling"
+        " exponentially with leaf age, colony diameter a logistic step down with age, and the"
+        " probability that a leaf is still susceptible (sporulating) a logistic in age",
+        "Calonnec et al. 2018, Front. Plant Sci. 9:1808, Tables 4 and 5 (p. 8) and Results (p. 9)",
+        year=2018,
+        authors=(
+            "Calonnec, Agnes",
+            "Jolivet, Jerome",
+            "Vivin, Philippe",
+            "Schnee, Sylvain",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "q186.pdf (literature/calonnec2018; the byline read in the text 2026-10-20); Tables"
+            " 4-5 and p. 9 read in the page images 2026-10-20"
+        ),
+        doi="10.3389/fpls.2018.01808",
+        structures=("age-resistance",),
+        structures_note=(
+            "Susceptibility of leaves falling with their age in days since tagging at 3 cm:"
+            " infection efficiency I0 exp(-k age), and a logistic probability of sporulating."
+        ),
+        calibrated_on=("calonnec2018.bordeaux",),
+        calibration_note=(
+            "Its own leaf-disc inoculations (22 mm discs, 22 °C, 12:12 h; literature/"
+            "calonnec2018) on leaves from two Bordeaux vineyards, Cabernet Sauvignon (2005) and"
+            " Merlot (2009-2010), sprayed 6-20 days before sampling. No model produced or dated"
+            " the data."
+        ),
+        parameters=(
+            Published("inf_i0_cabernet", 0.606, "1", "Table 4, Inf, model M1, exp. 2-3", "read"),
+            Published("inf_k_cabernet", 0.086, "1/d", "Table 4, Inf, M1 (R² 0.57)", "read"),
+            Published("inf_i0_merlot_exp4", 0.63, "1", "Table 5, Inf, M1, exp. 4", "read"),
+            Published(
+                "inf_k_merlot_exp4", 0.095, "1/d", "Table 5, Inf, M1, exp. 4 (R² 0.74)", "read"
+            ),
+            Published("inf_i0_merlot_exp5", 0.38, "1", "Table 5, Inf, M1, exp. 5", "read"),
+            Published(
+                "inf_k_merlot_exp5", 0.067, "1/d", "Table 5, Inf, M1, exp. 5 (R² 0.54)", "read"
+            ),
+            Published("diam_m_cabernet", 4.64, "mm", "Table 4, Diam, model M2", "read"),
+            Published("diam_big_m_cabernet", 6.86, "mm", "Table 4, Diam, M2", "read"),
+            Published("diam_a50_cabernet", 8.35, "d", "Table 4, Diam, M2 (R² 0.41)", "read"),
+            Published("logit_b0", 4.12, "1", "p. 9, logistic regression, beta0", "read"),
+            Published("logit_b1", -0.20, "1/d", "p. 9, logistic regression, beta1", "read"),
+        ),
+        flags=(
+            "Can it run: yes, for infection efficiency and the probability of sporulation, from"
+            " a leaf's age in days since it reached 3 cm; the age clock must come from a growth"
+            " model (the paper: about one leaf per 21 degree-days above 10 °C). At one point"
+            " (derived 2026-10-20): Cabernet's efficiency is 0.61 at age 0 and 0.18 at 14 days;"
+            " the logit gives P = 0.8 at 13.7 days and 0.5 at 20.6 days, against the printed"
+            " 13.3 [11.4; 14.9] and 20 [18.7; 21.4] (coefficients rounded in print).",
+            "Merlot exp. 6 is printed with I0 = 2243 and k = 0.615 (Table 5), impossible for a"
+            " proportion: not taken. Sporulation per colony (models M3, M4) is printed too,"
+            " with four-parameter fits per experiment; not taken here.",
+            "Leaves were sprayed 6-20 days before sampling, so not untreated. Laboratory discs"
+            " at one temperature; no weather in the equations.",
+        ),
+        role="process",
+    ),
 }

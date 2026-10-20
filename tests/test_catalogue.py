@@ -130,6 +130,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "puelles2024.ur": ("puelles2024.rioja",),
         "rosa1995.incubation": ("goidanich1957", "zachos1959", "orlandini1993.emergences"),
         "spotts1977.black_rot_wetness": ("spotts1977.ohio",),
+        "calonnec2018.leaf_susceptibility": ("calonnec2018.bordeaux",),
         "orlandini2008.plasmo": (
             "orlandini2008.mondeggi",
             "blaeser1978.survival",
