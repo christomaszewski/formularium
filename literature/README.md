@@ -610,6 +610,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [molitor2009](molitor2009.md) | black rot | biology, control | northern German wine regions | None from this page; the dissertation body, which is not in the folder, would hold the Spotts-modified black-… |
 | [molitor2014](molitor2014.md) | none | phenology | Germany, Austria | The engine's model |
 | [molitor2016](molitor2016.md) | black rot | infection, incubation | Europe, United States | VitiMeteo black rot, documented |
+| [molitor2016b](molitor2016b.md) | grey mould | epidemic progress, thermal time, bunch rot severity | Geisenheim | Untreated Riesling bunch rot reaches 5 % at 781-1105 degree-days after flowering, steadier in degree-days than days; prints a third form of the Bacchus index |
 | [molitor2020](molitor2020.md) | Botrytis bunch rot, downy mildew | phenology, season severity | Luxembourg, Germany | UniPhen and BotRisk are kin by a borrowed equation (the engine's degree-day function),… |
 | [molitor2025](molitor2025.md) | none | phenology | Central Europe | UniPhen's cumulative degree-days for 13 fungus-tolerant cultivars from eight sites: 5.5 d normalised error, 13 d at maturity; cultivar sums in a heat map |
 | [monteiro2012](monteiro2012.md) | downy mildew | infection, sporulation, climate change | Rio Grande do Sul | Lalancette copied with misprints; RH ≥ 90 % as wetness |

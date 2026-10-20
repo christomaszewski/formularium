@@ -5782,6 +5782,11 @@ FORMULATIONS: dict[str, Formulation] = {
             " lowest (13.8) at 19.5 °C and highest at 0 °C, so it reads as wet hours needed, near"
             " Broome's 10.5 h at 20 °C; with Hill's c, the reciprocal reaches 2.42 per wet hour"
             " at 23.2 °C, an infection in 0.41 wet hours. Which one Bacchus is, is not settled.",
+            "A third print: Molitor et al. 2016 (OENO One 50:231-244, eq. 2, p. 234, read in the"
+            " page image 2026-10-20; literature/molitor2016b) sum BI(h) = 1/(84.37 - 7.238 t +"
+            " 0.1856 t²) over a day's wet hours, citing Kim et al. 2007: Kim's c with a"
+            " reciprocal. At 19.5 °C that is 0.072 a wet hour, a sum of 1 after 13.8 wet hours,"
+            " which reads Kim's I as the wet hours an infection needs.",
         ),
     ),
     "gonzalezdominguez2015.botrytis": Formulation(
