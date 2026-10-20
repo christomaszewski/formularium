@@ -10,7 +10,7 @@ regions: [France, Bordeaux, Alsace, Languedoc, Corsica, Guadeloupe, French Guian
 processes: [leaf wetness duration, weather station network, solar radiation, measurement methods]
 records: []
 datasets: []
-files: [paper.xml (PMC JATS copy, open access, fetched 2026-10-19 for the W1 dataset search)]
+files: [furushopercot2025_PMC12266558.xml (PMC JATS copy, open access, fetched 2026-10-19 for the W1 dataset search; first saved as paper.xml)]
 ---
 
 # Furusho-Percot et al. 2025: the INRAE AgroClim network's hourly and daily data
