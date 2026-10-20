@@ -3967,8 +3967,28 @@ FORMULATIONS: dict[str, Formulation] = {
             " equation.",
             "Orographically shadowed hours (2,098 of 10,310) raise the mean diffuse bias of the 13"
             " models to 27 % against 7 % unshadowed; the sky view factor is 0.788.",
-            "Units of t and h are not stated in the equation's text; the validation excludes solar"
-            " elevations below 7 degrees.",
+            "Units of t and h, looked for at the source (2026-10-19): printed nowhere in the"
+            " paper. Eq 7 names t 'the apparent solar time' and h only by symbol (p. 6); Table 1"
+            " names them 'local apparent time' and 'solar elevation' (p. 5); Table 5 gives the"
+            " coefficients without units (p. 10); read on the page images. The BRL's sources,"
+            " Ridley, Boland & Lauret 2010 (Renew. Energy 35:478, the form) and Lauret, Boland"
+            " & Ridley 2013 (Renew. Energy 49:124, the brl.* values), were not obtained:"
+            " Elsevier, and HAL holds their records without files (hal-00919000,"
+            " hal-00917859). Papers restating the BRL disagree: Kathilankal et al. 2014 (GMD"
+            " 7:2477, p. 2479) print Ridley's coefficients on sin(beta); Pashiardis &"
+            " Kalogirou 2021 (Sol. Energy Sustain. Dev. 10(1), Eqs 4-5 and 31) take AST in"
+            " hours for their refit;"
+            " Boland 2025 (MODSIM, an author of the BRL) names 'Apparent Solar Time (AST), solar"
+            " altitude' without units. Own calculation at kt 0.7, Kt 0.65, psi 0.7, t 12: with"
+            " h = 60 degrees the original coefficients give kd 0.267 and the local ones 0.205;"
+            " with h in radians (1.047) 0.217 and 0.144. t in minutes drives kd to 1 or 0. The"
+            " validation excludes solar elevations below 7 degrees.",
+            "Can it run: not yet. The units of t and h decide kd by up to 0.06 (above), and"
+            " the local coefficients hold only in the units Laiti et al. fitted them in, which"
+            " the paper does not print. Ridley et al. 2010, Lauret et al. 2013, or the first"
+            " author (Lavinia Laiti, University of Trento) would settle it. Nothing else is"
+            " missing: the form, every coefficient and the persistence index (Eq 8) are"
+            " printed.",
         ),
         role="process",
     ),
@@ -4086,6 +4106,19 @@ FORMULATIONS: dict[str, Formulation] = {
             Published(
                 "wet_dew_threshold", 0.01, "mm", "text, l. 1374 (leaf wetness duration)", "read"
             ),
+            Published("wind.z_obs", 2.0, "m", "l. 288 (u_2m measured at 2 m)", "read"),
+            Published("wind.canopy_height", 1.0, "m", "l. 289 (h, rice)", "read"),
+            Published("wind.displacement_share", 0.67, "1", "l. 289 (d = 0.67 h)", "read"),
+            Published("wind.z0", 0.1, "m", "l. 290 (roughness length for momentum)", "read"),
+            Published(
+                "kl.nusselt_a",
+                0.8,
+                "1",
+                "Maruyama et al. 2023, Eq 1, p. 30 (the k_L equation Kuwagata cites)",
+                "read",
+            ),
+            Published("kl.nusselt_b", 0.6, "1", "Maruyama et al. 2023, Eq 1, p. 30", "read"),
+            Published("kl.sides", 2.0, "1", "Maruyama et al. 2023, Eq 1, p. 30 ('x 2')", "read"),
         ),
         flags=(
             "Dew forms below the engine's wetness rule: the paper derives a critical relative"
@@ -4101,12 +4134,42 @@ FORMULATIONS: dict[str, Formulation] = {
             " humid subtropical climate (l. 643-653). Leaf wetness is the time dew exceeds"
             " 0.01 mm, afternoon to 07:30 local time (l. 1374).",
             "Needs effective radiation (measured downward longwave here), air temperature,"
-            " humidity, wind (corrected from 2 m to canopy top) and canopy properties; the exchange"
-            " velocity kL is from an empirical equation (Watanabe and Mizutani 1996). Eqs 1-7 and"
-            " 21-24 were checked in page images, Eqs 8-20, 22-23, 27b and 28 from the text layer.",
+            " humidity, wind (corrected from 2 m to canopy top, l. 287-290) and canopy"
+            " properties. All of Eqs 1-28 were read on the page images (pp. 5-15, 2026-10-19);"
+            " formularium.equations.kuwagata2024 computes them as printed.",
+            "Two printing errors (own derivation, 2026-10-19): Eq 19's two forms differ in sign"
+            " (the second, k_L0 cp rho^2 (1 - rh) q / (4 sigma* T^3), is minus the first by"
+            " Eq 17); Eq 15 gives the positive maximum rate with the first, and then equals the"
+            " brute-force maximum of Eq 14 over k_L. Eq 21's numerator lacks k_Lm (l rho (1 - rh)"
+            " q is J m-3, not W m-2); Eq 12 at k_L = k_Lm is the consistent form.",
+            "The printed rates check (own calculation): solving Eqs 4-6 exactly at -100 W m-2,"
+            " 20 °C, with q_SAT from FAO-56's e° (allen1998.psychrometrics), p 101.3 kPa,"
+            " rho 1.2, cp 1005 and l 2.45e6 (the paper prints none of these), the maximum"
+            " condensation rate is 1.43, 0.378 and 0.060 mm per day at rh 0.9, 0.6 and 0.4,"
+            " against 1.42, 0.37 and 0.058 printed (l. 508-511). The approximate solution"
+            " (Eq 15) gives 1.55, 0.67 and 0.34: at rh 0.6 and 0.4 the canopy is 9-12 K below"
+            " the air, outside the |T_L - T| < 5 °C it assumes (l. 198).",
+            "k_L is not printed here: 'an empirical equation ... (Watanabe and Mizutani, 1996)"
+            " as in Maruyama et al. (2023)' (l. 263-266), with DL = 0.1 m. Maruyama et al. 2023"
+            " (Eqs 1-3, p. 30, page image) print g_a = (lambda/D_L)(0.8 + 0.6 Re'^0.5) x 2, Re' ="
+            " (Re^2 + Gr)^0.5, with lambda 'the thermal conductivity of the air (W m-1 K-1)' and"
+            " g_a in m/s: the units do not close (lambda/D_L is W m-2 K-1). Divided by rho cp it"
+            " gives about 0.02 m/s at 1 m/s and DL 0.1 m (own calculation), inside the 1e-3 to"
+            " 1e-1 m/s the paper gives for canopies (l. 521); as printed it gives about 25."
+            " Neither paper prints lambda, nu, g or T_0, nor whether Gr uses T_L - T in the"
+            " one-layer model; Watanabe & Mizutani 1996 (Agric. For. Meteorol. 80:195) is not"
+            " held.",
+            "Can it run: in part. Eqs 1-28 are printed and close except Eqs 19 and 21 (above),"
+            " and the exact solution reproduces the paper's own rates. A tool must choose q_SAT(T)"
+            " and Delta, cp, rho and l (none printed), and either a downward longwave input or"
+            " an estimate of it (flerchinger2009.dilley_unsworth is one, validated). W0 needs k_L"
+            " from the wind, whose equation is printed only in Maruyama et al. 2023 with units"
+            " that do not close and constants not given: until that is settled, only Wp (Eqs 26-27,"
+            " which do not use the wind) runs from the record.",
             "Data: DOI 10.17632/fmvr43csy3.3 (Mendeley Data); licence not printed.",
         ),
         role="process",
+        equations="kuwagata2024",
     ),
     "nakamura2005.radiative_error": Formulation(
         "Radiative error of a naturally ventilated shield's air temperature, RE = C0 + C1 X,"
@@ -4306,18 +4369,240 @@ FORMULATIONS: dict[str, Formulation] = {
             " Adelaide. The sign of the mean error is not printed (visual minus SWEB, from"
             " the means). The symbol whose value depends on crop type (l. 311) is missing in"
             " the text and the page image.",
-            "Can it run: yes, with stated choices. Every equation is printed and the units"
-            " close (above). A tool must set: Wmax 0.5 directly (as the authors did); a time"
-            " step of 10 min (the authors' sensitivity runs) or 1 h (their validation scoring"
-            " and every later use); Cl 0.02 cm (the 2006 papers) rather than 0.20 cm (the 2005"
-            " chapter's sensor); canopy net radiation at night, which SWEB takes as an input"
-            " and the paper measured, so a tool without it must estimate it; and the standard"
-            " constants (lambda, delta, rho, Cp, Delta(T)) at its own choice, since none is"
-            " printed. Not printed anywhere found: Wd, Wf, p; the symbol at l. 311."
-            " Pages 375-378 here, p. 206 and 219 of the chapter and p. 364-365 of the"
-            " validation were read on the page images (2026-10-19).",
+            "Eq 15 as printed is not dimensionally sound (p. 377, 300 dpi page image,"
+            " 2026-10-19): Uc = U_Z (ln[(Zc - D_Z)/Z0] / ln[(Z - D_Z)/Z0]) [1 + alpha ((1 -"
+            " Zc)/Z)]^-2, Zc and Z in cm, D_Z = 2/3 Zc and Z0 = Z/10 as stated. '1 - Zc' adds a"
+            " number to a height. At Zc 150 cm and Z 200 cm the factor is about 1000 and Uc 574"
+            " times U_Z; at Zc 50 cm the log ratio is negative. Amir 2016 (Eq 24) and Dhakar et al."
+            " 2025 (Eq 9) print the same form. The Landsberg & James 1971 profile it credits is not"
+            " held, and no source read prints another form, so none is recorded.",
+            "Fig. 1 checks the rest (own calculation with formularium.equations.magarey2006 and"
+            " FAO-56's constants, 2026-10-19): the sensitivity case of p. 378 (20 °C, 75 %, U_Z"
+            " 1.5 m/s, 2 mm of rain in the first 10 min, 10-min steps, Rn 0, Wth 0.1; LAI 1, Wmax"
+            " 0.5 and Cl 0.02 cm where not varied, read from where the panels meet) dries in 0"
+            " to 10 min with Eq 15 as printed, against 150 min in Fig. 1A. With the canopy wind"
+            " set to 0.3 U_Z (found by trial; not printed), Eqs 1-14 give 150, 320, 480 and"
+            " 650 min for LAI 1-4 (Fig. 1A about 150, 310, 480, 640) and 680, 350, 180, 110 and"
+            " 110 min for Wmax 0.1-1.0 (Fig. 1B about 670, 340, 180, 110, 110). Fig. 1C implies a"
+            " canopy wind about three times larger at Zc 2 m than at 0.1 m. Fig. 1D is not"
+            " reproduced at any wind: Eqs 3, 6 and 7 make the duration proportional to Cl (30"
+            " to 320 min over 0.005-0.04 cm), where the figure rises from about 60 to 190 min.",
+            "Can it run: not as printed. Eqs 1-14 are computed as printed and, with one canopy"
+            " wind, reproduce Fig. 1A and 1B; Eq 15, the canopy wind, cannot be used as printed,"
+            " and no printed alternative was found (above). A tool must also set: Wmax 0.5"
+            " directly (as the authors did); a time step of 10 min (the sensitivity runs) or 1 h"
+            " (the validation scoring and every later use); Cl 0.02 cm (the 2006 papers) rather"
+            " than 0.20 cm (the 2005 chapter's sensor); canopy net radiation at night, which"
+            " SWEB takes as an input and the paper measured (flerchinger2009.dilley_unsworth"
+            " and allen1998.net_longwave are recorded estimates); the standard constants"
+            " (lambda, delta, rho, Cp, Delta(T)), none printed here (allen1998.psychrometrics"
+            " prints one set); and the sign convention of Rnc in Eq 12, which the paper does"
+            " not state (the module adds condensation when Rnc < 0). Not printed anywhere"
+            " found: Wd, Wf, p; the symbol at l. 311; a canopy wind that closes. Pages 375-378"
+            " here, p. 206 and 219 of the chapter and p. 364-365 of the validation were read on"
+            " the page images (2026-10-19).",
         ),
         role="process",
+        equations="magarey2006",
+    ),
+    "flerchinger2009.dilley_unsworth": Formulation(
+        "Downward longwave radiation from air temperature, vapour pressure and cloud cover:"
+        " Dilley & O'Brien 1998's clear sky, back-calculated to an emissivity and corrected"
+        " for cloud by Unsworth & Monteith 1975, the pair with the lowest all-sky error at 14"
+        " North American and Chinese sites",
+        "Flerchinger, Xaio, Marks, Sauer & Yu 2009, Water Resour. Res. 45:W03423, Tables 1, 2,"
+        " 9, 10 and 12, with the 2017 erratum",
+        year=2009,
+        authors=(
+            "Flerchinger, G. N.",
+            "Xaio, Wei",
+            "Marks, Danny",
+            "Sauer, T. J.",
+            "Yu, Qiang",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="flerchinger2009.pdf (AGU open access, fetched 2026-10-19; the author line)",
+        doi="10.1029/2008WR007394",
+        structures=("sky-longwave-estimate",),
+        structures_note=(
+            "An effective emissivity times sigma T_o^4 with the near-surface air temperature;"
+            " cloud raises the emissivity towards 1 linearly in the cloud fraction."
+        ),
+        calibrated_on=("flerchinger2009.sites",),
+        calibration_note=(
+            "The two forms are borrowed and cited, not fitted here: Dilley & O'Brien 1998"
+            " (QJRMS) and Unsworth & Monteith 1975 (QJRMS); neither is held or a record, so the"
+            " data behind their coefficients are not recorded. Fitted here: the clearness-index"
+            " limits for complete cloud and clear sky (k_cld 0.15, k_clr 0.80 for this pair,"
+            " Table 9), chosen to minimise RMSD over the 14 initial sites (flerchinger2009.sites)"
+            " and then tested, with those limits, on 7 independent sites (Table 12)."
+        ),
+        parameters=(
+            Published("dilley.a", 59.38, "W m-2", "Table 1, p. 2 (and erratum, p. 14)", "read"),
+            Published("dilley.b", 113.7, "W m-2", "Table 1, p. 2", "read"),
+            Published("dilley.c", 96.96, "W m-2", "Table 1, p. 2", "read"),
+            Published("dilley.t_ref", 273.16, "K", "Table 1, p. 2", "read"),
+            Published(
+                "dilley.w_ref",
+                2.5,
+                "cm",
+                "erratum, p. 14 (Table 1 printed sqrt(w/25))",
+                "read",
+            ),
+            Published(
+                "prata.w_coefficient",
+                465,
+                "cm K kPa-1",
+                "erratum, p. 14 (Table 1, note c, printed 4650)",
+                "read",
+            ),
+            Published("unsworth.k", 0.84, "1", "Table 2, p. 3", "read"),
+            Published("k_cld", 0.15, "1", "Table 9, p. 8 (Dilley-Unsworth)", "read"),
+            Published("k_clr", 0.80, "1", "Table 9, p. 8 (Dilley-Unsworth)", "read"),
+            Published("rmsd.hourly", 24.5, "W m-2", "Table 10, p. 8 (14 sites)", "read"),
+            Published("rmsd.daily", 14.9, "W m-2", "Table 10, p. 8 (14 sites)", "read"),
+            Published("rmsd.independent", 26.9, "W m-2", "Table 12, p. 10 (7 sites)", "read"),
+        ),
+        flags=(
+            "Validated on measured downward longwave at 21 sites (14 for fitting the clearness"
+            " limits, 7 independent; Table 4): AmeriFlux sites in Arizona, British Columbia,"
+            " Colorado, Indiana, Mississippi, North Carolina, South Dakota, Washington and"
+            " Wisconsin, Reynolds Mountain (Idaho), Iowa, Yucheng, Ganzi and Nagqu (China),"
+            " mostly two years of 30-min data; radiometers at least 2 m above the vegetation."
+            " No vineyard and no Mediterranean lowland site; Idaho is called Mediterranean"
+            " rangeland at 2,097 m.",
+            "Night is the weaker half: midnight RMSD 25.0-25.6 W m-2 for the five best pairs,"
+            " noon 19.3-20.6 W m-2 with a 4-hour solar window (p. 10), because night cloud comes"
+            " from the 24 hours of sunshine around the hour, not from an observation. Unsworth"
+            " needs the cloud fraction c; where c is known directly (as in a simulation), the"
+            " clearness-index step is not needed, but its fitted limits were part of the"
+            " validated chain.",
+            "It estimates the downward flux only; the paper prints no net longwave. A canopy's"
+            " net at night needs its own emission, eps_s sigma T_s^4, and T_s is below the air"
+            " on clear nights. Kuwagata et al. 2024's effective radiation, R_d - sigma* T^4,"
+            " takes T_s = T (kuwagata2024.canopy_dew).",
+            "The published Table 1 has typos the 2017 erratum corrects (Dilley's sqrt(w/25) is"
+            " sqrt(w/2.5); w = 465 e_o/T_o, not 4650): read on the page image of the erratum;"
+            " the module uses the corrected forms. At 15 °C and 1.2 kPa the corrected Dilley"
+            " gives 301.4 W m-2 and eps_clr 0.771 (own calculation).",
+            "Can it run: yes. Every equation and coefficient is printed (Tables 1, 2 and 9, as"
+            " corrected); inputs are air temperature, vapour pressure and cloud fraction, all"
+            " in Agrarium's truth weather. The truth's cloud is its own draw, not a clearness"
+            " index, which is outside the chain the paper validated.",
+        ),
+        role="process",
+        equations="flerchinger2009",
+    ),
+    "allen1998.net_longwave": Formulation(
+        "Net outgoing longwave radiation of the reference surface, FAO-56 Eq 39, from air"
+        " temperature, vapour pressure and the relative shortwave radiation R_s/R_so; hourly"
+        " with R_s/R_so taken 2-3 h before sunset for the night",
+        "Allen, Pereira, Raes & Smith 1998, FAO Irrigation and Drainage Paper 56, ch. 3"
+        " (Eq 39) and ch. 4 ('Hourly time step', Example 19)",
+        year=1998,
+        authors=("Allen, Richard G.", "Pereira, Luis S.", "Raes, Dirk", "Smith, Martin"),
+        authors_complete=True,
+        authors_from="read",
+        checked="FAO's HTML edition, fao.org/4/x0490e/x0490e00.htm (title page), 2026-10-19",
+        structures=("sky-longwave-estimate",),
+        structures_note=(
+            "Stefan-Boltzmann at air temperature times a Brunt-type humidity factor (0.34 -"
+            " 0.14 sqrt(e_a)) and a cloudiness factor (1.35 R_s/R_so - 0.35): a net, not a"
+            " downward flux."
+        ),
+        calibration_note=(
+            "FAO-56 prints no source and no data for the coefficients 0.34, 0.14, 1.35 and 0.35"
+            " in the passages read (ch. 3, 'Net longwave radiation'), and no validation of"
+            " Eq 39; it says they can be calibrated where longwave is measured. Not recorded."
+        ),
+        parameters=(
+            Published("sigma.daily", 4.903e-9, "MJ K-4 m-2 day-1", "ch. 3, under Eq 39", "read"),
+            Published(
+                "sigma.hourly", 2.043e-10, "MJ m-2 hour-1 K-4", "ch. 4, hourly time step", "read"
+            ),
+            Published("humidity.a", 0.34, "1", "ch. 3, Eq 39 (image x0490e18)", "read"),
+            Published("humidity.b", 0.14, "kPa-0.5", "ch. 3, Eq 39", "read"),
+            Published("cloudiness.a", 1.35, "1", "ch. 3, Eq 39", "read"),
+            Published("cloudiness.b", 0.35, "1", "ch. 3, Eq 39", "read"),
+            Published("kelvin_offset", 273.16, "K", "ch. 3, under Eq 39", "read"),
+            Published(
+                "night.omega_early", 0.79, "rad", "ch. 4, hourly time step (omega_s - 0.79)", "read"
+            ),
+            Published(
+                "night.omega_late", 0.52, "rad", "ch. 4, hourly time step (omega_s - 0.52)", "read"
+            ),
+            Published("night.rs_rso_humid_low", 0.4, "1", "ch. 4 (humid, subhumid)", "read"),
+            Published("night.rs_rso_humid_high", 0.6, "1", "ch. 4 (humid, subhumid)", "read"),
+            Published("night.rs_rso_arid_low", 0.7, "1", "ch. 4 (arid, semiarid)", "read"),
+            Published("night.rs_rso_arid_high", 0.8, "1", "ch. 4 (arid, semiarid)", "read"),
+            Published("night.rs_rso_overcast", 0.3, "1", "ch. 4 ('total cloud cover')", "read"),
+            Published(
+                "example19.rnl_night",
+                0.100,
+                "MJ m-2 hour-1",
+                "ch. 4, Example 19 (02:00-03:00, 28 °C, e_a 3.402 kPa, R_s/R_so 0.8)",
+                "read",
+            ),
+        ),
+        flags=(
+            "No validation in the guideline: FAO-56 prints Eq 39 without a source for its"
+            " coefficients or a comparison with measured longwave in the chapters read."
+            " A validation of the hourly form in a semiarid region (Gavilán et al. 2007,"
+            " Agric. Water Manag., doi:10.1016/j.agwat.2007.01.014) was not obtained (Elsevier).",
+            "Night cloudiness is the afternoon's: R_s/R_so 2-3 h before sunset, or a fixed 0.4-0.6"
+            " (humid) or 0.7-0.8 (arid). It is a net for the reference grass at air temperature;"
+            " a canopy's own emissivity and temperature are folded into the factors.",
+            "Example 19 (N'Diaye, Senegal, 02:00-03:00): R_nl = 0.100 MJ m-2 hour-1, about 28 W"
+            " m-2 (own conversion), at 28 °C, RH 90 %, R_s/R_so 0.8 assumed. The module"
+            " reproduces it (tests).",
+            "The same document as the engine's fao56.eq47 (wind at 2 m), a reference piece"
+            " whose record names no author; a different equation, so no dependence, but a"
+            " flag that FAO-56 is shared ground.",
+            "Can it run: yes. Eq 39, its hourly substitution and the night rule are printed."
+            " In Agrarium's truth R_s/R_so would come from its own radiation, which is a clear"
+            " sky cut by cloud (Kasten & Czeplak's 1 - 0.75 c^3.4), so the cloud reaches Eq 39"
+            " through the afternoon's ratio.",
+        ),
+        role="process",
+        equations="allen1998",
+    ),
+    "allen1998.psychrometrics": Formulation(
+        "FAO-56's atmospheric parameters: pressure from elevation, the psychrometric constant,"
+        " saturation vapour pressure and its slope, and the density of air",
+        "Allen, Pereira, Raes & Smith 1998, FAO Irrigation and Drainage Paper 56, ch. 3 (Eqs"
+        " 7, 8, 11, 13), ch. 4 (Eq 54) and Annex 3 (Eqs 3-5 to 3-7)",
+        year=1998,
+        authors=("Allen, Richard G.", "Pereira, Luis S.", "Raes, Dirk", "Smith, Martin"),
+        authors_complete=True,
+        authors_from="read",
+        checked="FAO's HTML edition, fao.org/4/x0490e/x0490e00.htm (title page), 2026-10-19",
+        structures=("magnus-humidity",),
+        structures_note="e°(T) is the Magnus form with Tetens's coefficients",
+        parameters=(
+            Published("pressure.p0", 101.3, "kPa", "ch. 3, Eq 7 (image x0490e0c)", "read"),
+            Published("pressure.t0", 293, "K", "ch. 3, Eq 7", "read"),
+            Published("pressure.lapse", 0.0065, "K m-1", "ch. 3, Eq 7", "read"),
+            Published("pressure.power", 5.26, "1", "ch. 3, Eq 7", "read"),
+            Published("lambda", 2.45, "MJ kg-1", "ch. 3, Eq 8 and text", "read"),
+            Published("cp", 1.013e-3, "MJ kg-1 °C-1", "ch. 3, under Eq 8", "read"),
+            Published("epsilon", 0.622, "1", "ch. 3, under Eq 8", "read"),
+            Published("gamma_per_kpa", 0.665e-3, "°C-1", "ch. 3, Eq 8 (image x0490e0d)", "read"),
+            Published("esat.a", 0.6108, "kPa", "ch. 3, Eq 11 (image x0490e0g)", "read"),
+            Published("esat.b", 17.27, "1", "ch. 3, Eq 11", "read"),
+            Published("esat.c", 237.3, "°C", "ch. 3, Eq 11", "read"),
+            Published("slope.k", 4098, "°C", "ch. 3, Eq 13 (image x0490e0i)", "read"),
+            Published("density.r", 287, "J kg-1 K-1", "Annex 3, under Eq 3-5", "read"),
+            Published("density.virtual", 1.01, "1", "Annex 3, Eq 3-7", "read"),
+        ),
+        flags=(
+            "Supplies, from one published source, the constants SWEB (magarey2006.sweb) uses"
+            " and does not print: Delta(T), delta, lambda, rho and Cp. Kuwagata et al. 2024 need"
+            " q_SAT(T), which FAO-56 does not give as such; e° with q = epsilon e / p is the"
+            " usual step, not printed in either.",
+        ),
+        role="reference",
+        equations="allen1998_psychrometrics",
     ),
     "reuveni1998.leaf_age": Formulation(
         "Downy mildew severity and sporulation of grape leaf discs by leaf position on the"
@@ -4443,12 +4728,55 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("plate_length", 0.12, "m", "Table 2 (D, fixed)", "read"),
             Published("plate_width", 0.07, "m", "Table 2 (Wl, fixed)", "read"),
             Published("rain_cap", 0.6, "mm", "text, l. 233-234 (per event)", "read"),
+            Published("sigma", 5.67e-8, "W m-2 K-4", "text under Eq 3, p. 4", "read"),
+            Published(
+                "gamma_as_printed",
+                2.4567e-1,
+                "Pa K-1",
+                "text under Eq 3, p. 4 ('psychometric constant'; not one: see the flags)",
+                "read",
+            ),
+            Published("nu", 15.1e-6, "m2 s-1", "text under Eq 4, p. 4", "read"),
+            Published("rho_a", 1.293, "kg m-3", "text under Eq 4, p. 4", "read"),
+            Published("cp", 1005, "J kg-1 K-1", "text under Eq 4, p. 4", "read"),
+            Published("kappa", 2.15e-5, "m2 s-1", "text under Eq 4, p. 4", "read"),
+            Published("d_wv", 2.12e-5, "m2 s-1", "text under Eq 4, p. 4", "read"),
+            Published("nusselt_a", 0.72, "1", "Eq 4, p. 4 (Nu = 0.72 Re^0.6)", "read"),
+            Published("nusselt_b", 0.6, "1", "Eq 4, p. 4", "read"),
+            Published("sensor.dry_counts", 435, "counts", "Eq 1, p. 3", "read"),
+            Published("sensor.span_counts", 665, "counts", "Eq 1, p. 3 (1100 - 435)", "read"),
+            Published("sensor.wet_threshold", 0.4, "1", "p. 3 (701 counts)", "read"),
         ),
         flags=(
-            "Table 2 prints Cd = 4.23, outside its own bounds of 5-10, and DPDc = 1.85 °C where"
-            " the text sets 2.2 °C for M2 (l. 302); the paper does not say which value M2"
-            " used. The text says the fitted values are in Table 1 (l. 326); they are in"
-            " Table 2.",
+            "Cd outside its own bounds: Table 2 prints the Bayesian Cd = 4.23 cm^0.5 min^-0.5"
+            " with Morris bounds of 5 and 10 (p. 3, page image, 2026-10-19), and the"
+            " optimisation is said to explore 'the parameter space' (p. 5); a value below the"
+            " lower bound is either a printing error or a search outside the stated space. SWEB's"
+            " laboratory Cd is 8.7. The text says the fitted values are in Table 1 (p. 5); they"
+            " are in Table 2.",
+            "DPDc is ambiguous: Table 2 prints the Bayesian DPDc = 1.85 °C (bounds 1.5-5.0), and"
+            " the M2 text says 'In this study, DPDc was established as 2.2 °C (Sentelhas et al.,"
+            " 2008)' (p. 5, page image). The paper does not say which value M2's results used;"
+            " M3's own DPD threshold is also 2.2 °C, chosen from 1.8, 2.0 and 2.2 against the"
+            " sensor (p. 5).",
+            "As printed, M1's equations do not close (page images pp. 3-5, 2026-10-19; each"
+            " computed as printed in formularium.equations.dhakar2025): Eq 3 sums three heat"
+            " transfer coefficients times A times DPD, so dew grows with the dew-point depression"
+            " and never stops while DPD > 0; epsilon has no value, and T_air (°C in Table 2)"
+            " must be kelvin in 4 epsilon sigma T^3. Eq 6, Df = E_dew/A x 60 x 15, is J m-2"
+            " per 15 min, not mm: no latent heat divides it. gamma is printed as 2.4567e-1 Pa"
+            " K-1, about 270 times below the psychrometric constant at sea level; lambda (Eq 7)"
+            " has no value. Eq 7 mixes SI with SWEB's cm and min units. Eq 9 prints ln(Zc -"
+            " Zd/Z0) and SWEB's (1 - Zc)/Zref, and gives no rule for Zd and Z0 (Table 3 lists"
+            " them as outputs). Eq 8 weights Cf and Cd by Wmax, SWEB's Eq 14 by W. The text says"
+            " Df's detailed equations are in Appendix A (p. 3), in the online supplement, which"
+            " is not held.",
+            "Can it run: no, not from the article. Eqs 2-11 are computed as printed, but M1's"
+            " dewfall needs Appendix A (the supplement, not held) or a reading of Eqs 3 and 6;"
+            " the Zd and Z0 rules, epsilon and lambda are printed nowhere in the article; and"
+            " gamma as printed is not a psychrometric constant. Where to look next: the"
+            " supplement (doi:10.1016/j.agrformet.2025.110399, mmc1) and the authors (data and"
+            " code on request).",
             "The abstract gives M3 and M4 mean absolute errors of 10.16 and 7.03 h; the results"
             " give MAE 2.0-7.03 h and RMSE 4.53-10.16 h (l. 439-441), so the abstract's"
             " figures look like RMSE maxima. M2 daily: R2 0.84, RMSE 1.13 h and MAE 0.34 h"
@@ -4466,6 +4794,7 @@ FORMULATIONS: dict[str, Formulation] = {
             " no source; the text cites Eq 9 where Eq 8 is meant (l. 485-487).",
         ),
         role="process",
+        equations="dhakar2025",
     ),
     "molitor2014.shoots": Formulation(
         "Four leaves unfolded by the heat sum observed at that stage",

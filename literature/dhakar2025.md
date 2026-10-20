@@ -81,3 +81,18 @@ checked at ten.
   engine's dew needs a leaf cooled below the dew point (micro.leaf_cooling_c, 2.5 °C): different
   gates, and neither is tested here against a vine leaf (own reading).
 - **Can it run:** the equations and Table 2 are printed, with the Cd and DPDc conflicts.
+
+## Equations module (2026-10-19)
+
+- Eqs 1-11 and Table 2 re-read on the page images (pp. 3-5, 150 and 260 dpi) and computed as printed
+  in `formularium.equations.dhakar2025`.
+- **As printed, M1 does not close:** Eq 3 grows dew with the dew-point depression and never stops while
+  DPD > 0; ε has no value and T_air must be kelvin in its radiative term (Table 2 gives °C); Eq 6
+  yields J m⁻² per 15 min, not mm (no latent heat divides it); γ is printed as 2.4567 × 10⁻¹ Pa K⁻¹,
+  about 270 times below the psychrometric constant; λ has no value; Eq 9 prints ln(Zc − Zd/Z0) and
+  SWEB's (1 − Zc)/Zref, with no rule for Zd and Z0. Eq 8 weights by Wmax where SWEB's Eq 14 weights
+  by W. The detailed dewfall equations are in Appendix A, in the online supplement: not held.
+- **Cd and DPDc:** Table 2's Cd 4.23 is below its own bound of 5; Table 2's DPDc 1.85 °C and the
+  text's 2.2 °C (Sentelhas et al. 2008) are both printed for M2, and the paper does not say which
+  its results used. Both are now separate flags on the record.
+- **Can it run:** no, not from the article (the record's flag says what is missing).

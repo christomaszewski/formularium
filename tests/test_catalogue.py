@@ -45,6 +45,7 @@ def test_the_roles_judged_so_far() -> None:
         "noaa.solar_position": "reference",
         "alduchov1996.magnus": "reference",
         "fao56.eq47": "reference",
+        "allen1998.psychrometrics": "reference",
         "amerine1944.winkler_index": "reference",
         "hughes2017.scoring": "reference",
     }
@@ -109,6 +110,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "zhu2021.apsim_grapevine": ("zhu2021.marlborough",),
         "forster2016.melodist": ("forster2016.five_sites",),
         "kuwagata2024.canopy_dew": ("kuwagata2024.kumamoto",),
+        "flerchinger2009.dilley_unsworth": ("flerchinger2009.sites",),
         "nakamura2005.radiative_error": ("nakamura2005.corvallis",),
         "magarey2006.sweb": ("magarey2006.geneva_adelaide",),
         "reuveni1998.leaf_age": ("reuveni1998.golan",),

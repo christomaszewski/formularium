@@ -2,7 +2,7 @@
 id: kuwagata2024
 citation: Kuwagata, T., Maruyama, A., Kondo, J. & Watanabe, T. 2024. Theoretical study on dew formation in plant canopies based on a one-layer energy-balance model. Agricultural and Forest Meteorology 354:109911
 doi: 10.1016/j.agrformet.2024.109911
-read: 2026-10-18, in full, by a reading agent (claude-haiku-5-5) and a note writer (claude-sonnet-5-5); 59 of 59 quotes found at their lines by scripts/verify_quotes.py; Eqs 1-7 and 21-24 checked in the page images by the main session, Eqs 8-20, 22-23, 27b and 28 from the text layer
+read: 2026-10-18, in full, by a reading agent (claude-haiku-5-5) and a note writer (claude-sonnet-5-5); 59 of 59 quotes found at their lines by scripts/verify_quotes.py; Eqs 1-7 and 21-24 checked in the page images by the main session, Eqs 8-20, 22-23, 27b and 28 from the text layer; on 2026-10-19 every one of Eqs 1-28 read on the page images (pp. 5-15) by the main session for formularium.equations.kuwagata2024
 status: read
 diseases: []
 crops: [rice]
@@ -79,3 +79,19 @@ wetness stand-in:
   canopy constants (D_L, albedo, transmittance, LAI) are not given. Wetness here is dew
   amount over 0.01 mm, not rain wetness.
 - **Can it run:** the equations are printed; the solver and several constants are not.
+
+## Equations module (2026-10-19)
+
+- **All of Eqs 1-28 read on the page images** and computed as printed in
+  `formularium.equations.kuwagata2024`.
+- **Two printing errors** (own derivation): Eq 19's second form is minus its first (by Eq 17); Eq 15
+  gives the positive maximum rate with the first, and then equals the brute-force maximum of Eq 14.
+  Eq 21's numerator lacks k̂Lm: lρ(1 − rh)q is J m⁻³, not W m⁻².
+- **The printed rates check:** solving Eqs 4-6 exactly at −100 W m⁻² and 20 °C, with FAO-56's e° for
+  q_SAT and ρ 1.2, cp 1005, l 2.45e6 (none printed), gives 1.43, 0.378 and 0.060 mm/day at rh 0.9, 0.6
+  and 0.4, against the printed 1.42, 0.37 and 0.058 (l. 508-511). The approximate solution gives 1.55,
+  0.67 and 0.34: at rh 0.6 and 0.4 the canopy is 9-12 K below the air, outside its 5 °C.
+- **k_L is not printed here** (l. 263-266). Its equation is in `maruyama2023` (Eqs 1-3, p. 30), whose
+  units do not close as printed (λ a conductivity, g_a in m/s); divided by ρcp it lands inside the
+  1e-3 to 1e-1 m/s of l. 521. λ, ν, g and T_0 are printed in neither.
+- **Can it run:** in part: Wp runs; W0 waits on k_L. See the record.
