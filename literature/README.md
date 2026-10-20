@@ -622,6 +622,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [mosedale2015](mosedale2015.md) | none | phenology, frost risk, climate projection | Cornwall | Published spring-warming and chilling-forcing models run on generated weather: budbreak 45 d or 7 d earlier by 2080 depending on the family, frost risk up or down accordingly |
 | [mouafo2022](mouafo2022.md) | downy mildew | clade competition | Quebec | little for Europe |
 | [moyer2010](moyer2010.md) | powdery mildew | low temperature | New York | Leaves 4-8 °C below air on clear nights |
+| [moyer2010b](moyer2010b.md) | powdery mildew | infection, colony growth, latent period, temperature response | New York, South Australia | Cold events of 2-8 °C for 2-8 h cut infection and colony growth and lengthen latency (the full paper behind moyer2010) |
 | [moyer2014](moyer2014.md) | powdery mildew | ascospore release, primary inoculum, fruit infection | New York, New Jersey, Washington, North Carolina | A cloglog release curve in degree-days and 2.5 mm rain events (R² 0.96 in-sample, 0.75-0.87 elsewhere); kin to Thiessen's rule by form |
 | [moyer2016](moyer2016.md) | powdery mildew | season severity | New York | A flag now, not kin |
 | [muangprathub2019](muangprathub2019.md) | none | irrigation, sensing | Thailand | Off-topic |
