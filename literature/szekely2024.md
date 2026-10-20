@@ -25,7 +25,7 @@ test bed rather than a finished observation model.
   Romania, Hungary, Croatia and France (l. 50; Table 3). "10,000 images and more than
   100,000 annotated leaves" (l. 11).
 - Diseases in the images: downy mildew, powdery mildew, black rot, anthracnose and
-  excoriosis (l. 42). Mites and phylloxera are seen but not labelled (l. 43).
+  excoriosis (l. 42). Mites and phylloxera are seen but not labelled (l. 43; the dataset is for fungal and bacterial disease, l. 108).
 - Leaf detection (YOLOv8 nano, split by position): mAP50 0.477 (l. 81). YOLOv8 large
   reaches 0.540 (l. 83). Segmentation gives 0.49 (l. 81). Changing the train and test split
   changes the score (l. 84).
