@@ -302,6 +302,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [faretra1991](faretra1991.md) | downy mildew | cultivar susceptibility | Apulia | Cultivar ranks in a severe year |
 | [farina1976](farina1976.md) | downy mildew | infection anatomy | Italy | Anatomy only |
 | [fedele2020](fedele2020.md) | Botrytis bunch rot | biocontrol, infection | Piacenza | A flag, not kin |
+| [fedele2020b](fedele2020b.md) | grey mould | model validation, latent infection, bunch rot severity | Italy, France, Spain | The Piacenza Botrytis model gets 15 of 23 independent epidemics right (0.65), 0.87 when latent infections count |
 | [fedele2025](fedele2025.md) | downy mildew | oospore dose | Italy | the truth's dose; calibrated with Rossi 2008's model |
 | [fedele2026](fedele2026.md) | downy mildew | host susceptibility, canopy microclimate | Italy | Denser canopies had more susceptible leaves and longer wetness, yet epidemics did not… |
 | [felippeto2013](felippeto2013.md) | none | dormancy, chilling, budburst | Serra Gaúcha | Nine chilling methods ranked on ten years of Cabernet Sauvignon budburst at Bento Gonçalves: chill to a 4 August biofix explains R² 0.78, residual 2.4 d against 5.2 d for the date alone |

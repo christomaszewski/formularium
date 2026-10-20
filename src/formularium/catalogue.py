@@ -5894,6 +5894,11 @@ FORMULATIONS: dict[str, Formulation] = {
             "Latent infection and incubation are not modelled ('insufficient quantitative"
             " information', p. 5); outputs are severity indices, not diseased area.",
             "Rossi and Caffi are authors of engine models (Rossi 2008, Caffi 2013): a flag.",
+            "Tested on 23 untreated epidemics in Italy, France and Spain, 1997-2018, independent"
+            " of the 2015 data (Fedele et al. 2020, Plant Dis., literature/fedele2020b): 15 of 23"
+            " severity classes right (0.65), eight false alarms among 16 mild epidemics; 0.87"
+            " when latent infections, found by incubating symptomless berries, count in the"
+            " observed class. The model itself was run unchanged.",
         ),
         role="process",
     ),
