@@ -6283,4 +6283,76 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="process",
     ),
+    "lewis2017.residue_dt50": Formulation(
+        "Fungicide residue on grapevine leaves and berries falling first-order with time, R(t) ="
+        " R0 exp(-ln 2 t / DT50), with DT50 per active substance from the PPDB plant"
+        " dissipation data set",
+        "Lewis & Tzilivakis 2017, Data 2:28 (the method, l. 136-142) and its supplementary file"
+        " (the values; grape rows)",
+        year=2017,
+        authors=("Lewis, Kathleen", "Tzilivakis, John"),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "lewis_2017.pdf and its supplementary spreadsheet (the 2026-10-20 drop; literature/"
+            "lewis2017), grape rows read 2026-10-20"
+        ),
+        doi="10.3390/data2030028",
+        structures=("first-order-residue-decay",),
+        calibrated_on=("lewis2017.ppdb_dissipation",),
+        calibration_note=(
+            "The values are the cited studies' measurements, collated; where a study printed only"
+            " concentrations the half-life was computed by first-order kinetics, Ct = C0 e^(-kt),"
+            " DT50 = ln 2/k (l. 136-142; the file marks such rows 'Calculated'). The leaf values"
+            " for folpet and mancozeb come from Cabras et al. 2001 (J. Environ. Sci. Health B"
+            " 36:609-618, simulated rain on grapes and vine leaves, Sardinia; not held), those for"
+            " propiconazole and proquinazid from Mahmoud et al. (Egypt; not held). No model"
+            " produced the data."
+        ),
+        parameters=(
+            Published(
+                "dt50_folpet_leaves",
+                14.12,
+                "d",
+                "file row 1502 (PPDB 354), on leaves, Italy; range 9.5-18.73",
+                "read",
+            ),
+            Published(
+                "dt50_mancozeb_leaves",
+                7.51,
+                "d",
+                "file row 1839 (PPDB 424), on leaves, Italy; range 5.78-9.24",
+                "read",
+            ),
+            Published(
+                "dt50_propiconazole_leaves",
+                2.07,
+                "d",
+                "file row 2366 (PPDB 551), in and on leaves, Egypt",
+                "read",
+            ),
+            Published(
+                "dt50_proquinazid_leaves",
+                1.26,
+                "d",
+                "file row 2391 (PPDB 555), in and on leaves, Egypt",
+                "read",
+            ),
+        ),
+        flags=(
+            "Can it run: yes, given a deposit and an active substance with a value; the data hold"
+            " four grape-leaf half-lives and grape-fruit ones for about thirty fungicides. Means"
+            " of the fruit rows' means (derived 2026-10-20): azoxystrobin 13.0 d (4 rows),"
+            " boscalid 10.9, captan 12.8, chlorothalonil 12.5, cyprodinil 15.5 (3), dimethomorph"
+            " 14.8, famoxadone 15.2 (2), fenhexamid 14.8, fludioxonil 17.5 (3), fluopicolide 11.2,"
+            " folpet 4.9, iprodione 9.1, kresoxim-methyl 7.0, mancozeb 9.6 (3), mandipropamid 2.2,"
+            " metalaxyl 7.3 (2), metalaxyl-M 3.5, myclobutanil 51.5 (10.5 and 92.4),"
+            " penconazole 12.3 (3), pyraclostrobin 5.4, pyrimethanil 24.1 (5), tebuconazole 16.3"
+            " (4), trifloxystrobin 9.2 (2).",
+            "Dissipation, not loss of protection: it lumps degradation, wash-off by the studies'"
+            " own weather and growth dilution of fruit. Copper and sulfur are not in the grape"
+            " rows. Leaf half-lives exist for two downy mildew protectants only.",
+        ),
+        role="process",
+    ),
 }

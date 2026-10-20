@@ -140,6 +140,8 @@ STRUCTURES = {
     " temperature, humidity hours, rain and wetness",
     "thermal-time-release-curve": "the cumulative share of spores released or mature as a"
     " curve of a heat sum",
+    "first-order-residue-decay": "a deposit or residue falling exponentially with time, set by"
+    " a half-life",
     "minimum-wetness-table": "infection when leaf wetness exceeds a minimum read from a table by"
     " temperature (the Mills form; Agrarium's open D33 may fold it into Magarey's response)",
 }

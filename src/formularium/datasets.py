@@ -1227,4 +1227,12 @@ DATASETS: dict[str, Dataset] = {
         " logistic models are fitted to them",
         "read",
     ),
+    "lewis2017.ppdb_dissipation": Dataset(
+        "Measured dissipation half-lives (DT50, min, max and mean, days) of pesticides in and on"
+        " plant matrices, 2,782 rows from 1,390 studies (1980-2017), with plant, matrix, in or on,"
+        " field or covered, place and reference; 165 grape rows (139 fruit, 24 leaves)",
+        "Lewis & Tzilivakis 2017, Data 2:28, supplementary file (CC-BY), from a Wayback capture of"
+        " MDPI's file (read 2026-10-20); values from the cited studies, first-order where computed",
+        "read",
+    ),
 }

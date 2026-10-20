@@ -8,9 +8,9 @@ diseases: []
 crops: []
 regions: []
 processes: [fungicide residue, residue decay, dissipation half-life]
-records: []
-datasets: []
-files: [lewis_2017.pdf (the 2026-10-20 drop)]
+records: [lewis2017.residue_dt50]
+datasets: [lewis2017.ppdb_dissipation]
+files: [lewis_2017.pdf (the 2026-10-20 drop), lewis2017_s1.xlsx (the supplementary file, the 2026-10-20 drop)]
 ---
 
 # Lewis & Tzilivakis 2017: a data set of pesticide half-lives on plants
@@ -54,5 +54,12 @@ on leaves, fruits and other plant matrices from 1,390 studies, CC-BY, as one Exc
 
 - For Agrarium's grower and Cooptera's E6: the open source for first-order residue decay
   rates on leaves and fruit by active substance, to be filtered for grape and the fungicides
-  a vineyard uses. The spreadsheet itself was not obtained (MDPI refuses this VM); the paper
-  prints no fungicide medians or grape values.
+  a vineyard uses. The paper prints no fungicide medians or grape values; the
+  spreadsheet has them (below).
+- **The spreadsheet** (2026-10-20, from a Wayback capture of MDPI's supplementary file):
+  2,782 rows; 165 grape rows, 139 on fruit and 24 on leaves. Grape leaves hold fungicide
+  half-lives for folpet (14.12 d, 9.5-18.73) and mancozeb (7.51 d, 5.78-9.24), both from
+  Cabras et al. 2001's simulated-rain study on vine leaves (not held), and for
+  propiconazole (2.07 d) and proquinazid (1.26 d). Recorded as `lewis2017.residue_dt50` with
+  the dataset `lewis2017.ppdb_dissipation`; kin report: independent (the engine has no
+  residue piece).
