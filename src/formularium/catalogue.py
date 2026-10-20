@@ -6151,4 +6151,58 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="process",
     ),
+    "moyer2014.ascospore_release": Formulation(
+        "Grapevine powdery mildew: the season's cumulative share of ascospores released from"
+        " overwintered cleistothecia as a complementary log-log of degree-days (base 0 °C from"
+        " 1 January) and the count of putative discharge events (days with rain >= 2.5 mm and"
+        " a maximum above 0 °C)",
+        "Moyer et al. 2014, Am. J. Enol. Vitic. 65:315-324, Eq. 2 (p. 319)",
+        year=2014,
+        authors=(
+            "Moyer, Michelle M.",
+            "Gadoury, David M.",
+            "Wilcox, Wayne F.",
+            "Seem, Robert C.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="moyer_2014.pdf (the 2026-10-20 drop); Eq. 2 read in the page image (p. 319)",
+        doi="10.5344/ajev.2014.13111",
+        structures=("ascospore-release-rule", "thermal-time-release-curve"),
+        structures_note=(
+            "Release events are days with rain >= 2.5 mm and a maximum above 0 °C, a threshold"
+            " credited to Gadoury and Pearson 1990 (l. 169-170): a rain-temperature rule for"
+            " release, the form of Thiessen's (the engine's) rule, whose 2.5 mm it shares. Their"
+            " count and a heat sum enter a cumulative curve, 1 - exp(-exp(a + b DD0 + c PDE))."
+        ),
+        calibrated_on=("moyer2014.cleistothecia",),
+        calibration_note=(
+            "Fitted (JMP, complementary log-log link) to the New York populations overwintered"
+            " in New York (l. 185-187), R² 0.96, RMSE 0.08, in-sample; tested on the other"
+            " sites: NJ R² 0.87, WA 0.75, NC 0.80; NY with non-NY populations 0.71 (l. 340-343)."
+            " Release was assayed in a controlled environment from field-stored samples, so the"
+            " data are observations; no model dated them. The degree-day base and start and the"
+            " rain threshold were chosen by fit among Gadoury and Pearson 1990's candidates."
+        ),
+        parameters=(
+            Published("intercept", -3.335, "1", "Eq. 2, p. 319", "read"),
+            Published("dd0_coefficient", 0.00222, "1/°C d", "Eq. 2, p. 319", "read"),
+            Published("pde_coefficient", 0.150287, "1/event", "Eq. 2, p. 319", "read"),
+            Published("dd_base", 0.0, "°C", "p. 319, DD0 base 0 °C from 1 January", "read"),
+            Published("pde_rain", 2.5, "mm/d", "p. 319, rainfall >= 2.5 mm", "read"),
+            Published("pde_tmax", 0.0, "°C", "p. 319, daily maximum > 0 °C", "read"),
+        ),
+        flags=(
+            "Can it run: yes, from daily rain and temperature from 1 January; the degree-day"
+            " method (daily mean or max-min) is not stated. Eq. 2 is labelled '% Ascospore"
+            " release' but gives a fraction 0-1. At one point (derived 2026-10-20): DD0 500 with"
+            " 5 events gives 0.21, 800 with 8 gives 0.50, 1,000 with 10 gives 0.77.",
+            "Release is cumulative season-total, not a daily count: half the season's"
+            " ascospores came before budbreak in 85 % of site-years (l. 447-449), from 42 days"
+            " before to 9 days after Chardonnay budbreak in New York. An early (9 Sept) cohort"
+            " released 50 % up to 21 days before a late (20 Oct) one (l. 358-360).",
+            "Gadoury, Wilcox and Seem are authors of the engine's Kennelly pieces: a flag.",
+        ),
+        role="process",
+    ),
 }

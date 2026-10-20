@@ -1210,4 +1210,13 @@ DATASETS: dict[str, Dataset] = {
         " fitted to them",
         "read",
     ),
+    "moyer2014.cleistothecia": Dataset(
+        "Season-total ascospore release from Erysiphe necator cleistothecia collected in New"
+        " York and stored outdoors at Geneva NY, Chatsworth NJ, Prosser WA and North Carolina,"
+        " assayed through winter and spring, 2005-2009, with site weather; and Chardonnay fruit"
+        " severity against cleistothecia per vine at Geneva, 2002-2003",
+        "Moyer et al. 2014, Am. J. Enol. Vitic. 65:315-324 (read 2026-10-20): its release model"
+        " (Eq. 2) is fitted to the New York populations overwintered in New York",
+        "read",
+    ),
 }

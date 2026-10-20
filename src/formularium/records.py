@@ -138,6 +138,8 @@ STRUCTURES = {
     "shield-radiative-error": "a shielded air-temperature sensor's error from radiation and wind",
     "daily-weather-risk-index": "a daily risk index built from weighted terms of the day's"
     " temperature, humidity hours, rain and wetness",
+    "thermal-time-release-curve": "the cumulative share of spores released or mature as a"
+    " curve of a heat sum",
     "minimum-wetness-table": "infection when leaf wetness exceeds a minimum read from a table by"
     " temperature (the Mills form; Agrarium's open D33 may fold it into Magarey's response)",
 }
