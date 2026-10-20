@@ -185,6 +185,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [camargoalvarez2018](camargoalvarez2018.md) | none | dormancy, survival analysis, method | Prosser | Kaplan-Meier curves of forced single-bud cuttings date endodormancy: onset late August to early September, release 21 October to 5 November, 2013-2016; chilling not computed |
 | [cameron2021](cameron2021.md) | none | phenology | global | Clear |
 | [cammalleri2012](cammalleri2012.md) | none | evapotranspiration | Southern Sicily, Italy | TSEB run without in-situ air temperature (scene calibration or DisALEXI), over a… |
+| [campbell2007](campbell2007.md) | powdery mildew | cluster susceptibility, spray timing, risk index | Chile | A single spray at full flowering protects clusters best; the critical window runs from flowering to small berries; its risk index is the engine's UC Davis index |
 | [cannon2001](cannon2001.md) | none | sampling, detection | Australia | The engine's observation piece, confirmed |
 | [cano1942](cano1942.md) | downy mildew | fungicide efficacy | Italy | History of fungicides |
 | [cappelletti2016](cappelletti2016.md) | downy mildew | resistance induction, defence gene expression, phyllosphere… | Italy | Little for the truth or the engine: a controlled lab and greenhouse efficacy result for a protein inducer, wi… |
