@@ -128,6 +128,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [bleyer2020](bleyer2020.md) | downy mildew | spray timing, fungicide efficacy | Baden-Württemberg | States VitiMeteo's rule that one spray protects until 300-400 cm2 of new leaf has grown |
 | [bleyer2022](bleyer2022.md) | downy mildew | spray strategy, validation | Baden-Württemberg | Untreated severity at Freiburg and Ihringen (Table 1, mean 60.5%) is a severity… |
 | [bleyer2023](bleyer2023.md) | powdery mildew, downy mildew | ontogenic resistance, spray timing | Baden-Württemberg | The last spray on the upper canopy only costs fruit health in one of eight years; the UC Davis index's authors as printed |
+| [bock2021](bock2021.md) | none | rater error, visual assessment, standard area diagram | none (review) | Raters overestimate, most at low severity; aided raters reach Lin's 0.85-0.95, untrained 0.60 or less: the pattern behind a scout's severity error |
 | [bojkov2022](bojkov2022.md) | downy mildew | incubation | North Macedonia | One season, ten points, started by the 3-10 rule: not usable |
 | [bojkov2023](bojkov2023.md) | downy mildew | infection | North Macedonia | One season, inconsistent; not usable |
 | [bojkov2023yield](bojkov2023yield.md) | downy mildew | season severity, yield loss, spray timing, infection, sporu… | North Macedonia | A small one-vineyard severity and incidence series (2022) with a usable record of bunch-stage severity, but i… |
@@ -846,6 +847,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [tarara2007](tarara2007.md) | none | air temperature, radiation shield, radiative error | Prosser, Washington | Home-made shields against a Gill: a six-plate passive one within 1.5 °C for 89 % of daytime, a cone up to +5.4 °C, aspirated within ±0.5 °C; worst at wind under 1 m/s; no humidity error printed; 11 days, one site. |
 | [tarara2009](tarara2009.md) | none | vine growth, shoot elongation, canopy mass | Prosser | Logistic shoot length, leaf number and mass of Concord on degree-days above 10 °C, five seasons, parameters with errors; half the final length at 300 °C·d; on the engine's clock |
 | [taylor2018](taylor2018.md) | downy mildew | oospores, overwintering, flag shoots, primary inoculum | Western Australia | Oospores in all ten vineyards sampled in April 2015 (against one of 16 in Killigrew 2005, not held); no flag shoots, infected buds die: oospores start the season; no severity-to-oospore relation. |
+| [tello2018](tello2018.md) | none | bunch compactness, bunch development | Austria | Bunch compactness grows as a double sigmoid from berry set to harvest (R² 0.48); constants not printed |
 | [thibaut2022](thibaut2022.md) | none | experimental design, Bayesian evidential learning, temperature monitoring, ERT | synthetic case | Strands s5 and s6: a method for ranking sensor combinations with a small training set of 200; synthetic, an unreviewed preprint. |
 | [thiessen2018](thiessen2018.md) | powdery mildew | ascospore release | Oregon | The engine's record can become `read`, with initials L |
 | [thind1988](thind1988.md) | downy mildew | laboratory method | Punjab | Method only |
