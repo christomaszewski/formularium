@@ -1201,4 +1201,13 @@ DATASETS: dict[str, Dataset] = {
         " discriminant analysis of the model's outputs is fitted to them",
         "read",
     ),
+    "savary2009.bordeaux": Dataset(
+        "Downy and powdery mildew severity on leaves and clusters of Cabernet franc at seven"
+        " crop stages (53-89), unprotected, limited and continuous protection, six replicates,"
+        " at Couhins and Latresne (Bordeaux), 2006 and 2007, with on-site weather",
+        "Savary et al. 2009, Phytopathology 99:930-942 (read 2026-10-13; Tables 4-5 in the page"
+        " images 2026-10-20): its logistic leaf curves and cluster-transfer coefficients are"
+        " fitted to them",
+        "read",
+    ),
 }

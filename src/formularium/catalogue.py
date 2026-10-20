@@ -6015,4 +6015,76 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="process",
     ),
+    "savary2009.cluster_transfer": Formulation(
+        "Cluster disease driven by foliage disease: dx_C/dt = tc x_L (1 - x_C) between crop"
+        " stages 2 and 5 (BBCH 55-57 to 77-78), with leaf severity x_L a logistic curve in days;"
+        " fitted for downy and powdery mildew in Bordeaux",
+        "Savary et al. 2009, Phytopathology 99:930-942, Eqs 1-2 (p. 932) and Tables 4-5 (p. 937)",
+        year=2009,
+        authors=(
+            "Savary, Serge",
+            "Delbac, Lionel",
+            "Rochas, Amélie",
+            "Taisant, Guillaume",
+            "Willocquet, Laetitia",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "savary2009_phyto.pdf (literature/savary2009); Eqs 1-2 and Tables 4-5 read in the"
+            " page images 2026-10-20"
+        ),
+        doi="10.1094/PHYTO-99-8-0930",
+        structures=("bunch-susceptibility-window",),
+        structures_note=(
+            "tc is set to zero before crop stage 2 and after crop stage 5, 'due to decreasing"
+            " susceptibility of maturing clusters in both DM (21) and PM (6,8-10)' (p. 932), and"
+            " reference 21 is Kennelly et al. 2005, the source of the engine's bunch window;"
+            " the stage scale is Kennelly et al.'s too (Table 1). A fixed window of cluster"
+            " susceptibility is the engine's form, cited, not computed: kin by structure, not a"
+            " borrowed equation. Eq 1, a logistic in days, and Eq 2 have no weather in them."
+        ),
+        calibrated_on=("savary2009.bordeaux",),
+        calibration_note=(
+            "Fitted to the plot means of its own trials (savary2009.bordeaux), x_L from Eq 1's"
+            " fit to each site-year-management case (Table 4), then tc by nonlinear least"
+            " squares on the cluster severities (Table 5). Sprays in the limited and continuous"
+            " plots were at fixed crop stages, not timed by a model (literature/savary2009)."
+        ),
+        parameters=(
+            Published("tc_dm_couhins_2006_unprot", 0.029, "1/d", "Table 5", "read"),
+            Published("tc_dm_couhins_2006_limited", 0.007, "1/d", "Table 5", "read"),
+            Published("tc_dm_couhins_2007_unprot", 0.227, "1/d", "Table 5", "read"),
+            Published("tc_dm_couhins_2007_limited", 0.280, "1/d", "Table 5", "read"),
+            Published("tc_dm_latresne_2006_unprot", 0.008, "1/d", "Table 5", "read"),
+            Published("tc_dm_latresne_2007_unprot", 0.374, "1/d", "Table 5", "read"),
+            Published("tc_dm_latresne_2007_limited", 0.189, "1/d", "Table 5", "read"),
+            Published("tc_pm_couhins_2006_unprot", 0.538, "1/d", "Table 5", "read"),
+            Published("tc_pm_couhins_2006_limited", 0.039, "1/d", "Table 5", "read"),
+            Published("tc_pm_couhins_2007_unprot", 1.269, "1/d", "Table 5", "read"),
+            Published("tc_pm_couhins_2007_limited", 0.518, "1/d", "Table 5", "read"),
+            Published("tc_pm_latresne_2006_unprot", 0.050, "1/d", "Table 5", "read"),
+            Published("tc_pm_latresne_2007_unprot", 0.361, "1/d", "Table 5", "read"),
+            Published("tc_pm_latresne_2007_limited", 0.191, "1/d", "Table 5", "read"),
+            Published("r_dm_couhins_2006_unprot", 0.052, "1/d", "Table 4", "read"),
+            Published("r_dm_couhins_2007_unprot", 0.029, "1/d", "Table 4", "read"),
+            Published("r_dm_latresne_2006_unprot", 0.062, "1/d", "Table 4", "read"),
+            Published("r_dm_latresne_2007_unprot", 0.028, "1/d", "Table 4", "read"),
+            Published("r_pm_couhins_2006_unprot", 0.068, "1/d", "Table 4", "read"),
+            Published("r_pm_couhins_2007_unprot", 0.109, "1/d", "Table 4", "read"),
+            Published("r_pm_latresne_2006_unprot", 0.025, "1/d", "Table 4", "read"),
+            Published("r_pm_latresne_2007_unprot", 0.070, "1/d", "Table 4", "read"),
+        ),
+        flags=(
+            "Can it run: as a coupling, given a leaf-severity series from any model and the"
+            " dates of crop stages 2 (BBCH 55-57) and 5 (77-78); tc is per day per unit of leaf"
+            " severity, severities as proportions. It varies tenfold between years (downy"
+            " mildew at Couhins 0.029 in 2006, 0.227 in 2007), so it is a site-year parameter,"
+            " not a constant. Latresne 2006 limited did not converge (NC).",
+            "Not a weather model: the logistic leaf curve (Eq 1) and the transfer (Eq 2) are"
+            " fitted per case. The 70 logistic regressions of cluster thresholds on leaf"
+            " severity (Eq 3) are in literature/savary2009, not recorded here.",
+        ),
+        role="process",
+    ),
 }
