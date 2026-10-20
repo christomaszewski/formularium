@@ -45,6 +45,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 
 | Note | Disease | Process | Region | Bearing, in a line |
 |---|---|---|---|---|
+| [acimovic2016](acimovic2016.md) | none | defoliation, fruitset, bunch compactness, yield | Michigan | Removing eight or more basal leaves at flowering halves fruitset and cuts yield (10 leaves: 9.12 to 4.05 kg a vine); fewer do nothing |
 | [actahort1999](actahort1999.md) | downy mildew | epidemic progress, berry growth | Switzerland | Vinemild is clear of the engine, but these papers print too little to run it |
 | [agoston2020](agoston2020.md) | downy mildew | infection, primary infection, season severity, spray timing… | Hungary, Bács-Kiskun County | A two-season record of fruit-bunch severity by class in one Hungarian county (2009 and 2010, two dated counts… |
 | [aichiprefecture2019](aichiprefecture2019.md) | downy mildew | disease survey, incidence, season severity, forecast adviso… | Aichi prefecture, Japan, Nagoya | Offers a qualitative Japanese check: a June 2019 field incidence series with averages and a forecast-linked s… |
@@ -410,6 +411,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [hentosh2026](hentosh2026.md) | powdery mildew | forecasting, host resistance | Odesa | A temperature-sum forecast on the Black Sea steppe |
 | [hernandez2022](hernandez2022.md) | downy mildew | sporulation, severity assessment, leaf disc bioassay, image… | La Rioja (Spain), Milan (Italy) | A severity-reading method for sporulation on leaf discs: a possible observation operator for the truth's lab … |
 | [hernandez2024](hernandez2024.md) | downy mildew | symptom detection, image classification, disease localisati… | Spain (La Rioja) | Offers a field scouting observation method (symptom images classified with 91% accuracy) that a truth could u… |
+| [hernandez2024b](hernandez2024b.md) | downy mildew | image detection, early detection, deep learning | La Rioja | A network finds downy mildew on leaf discs from day 4 after inoculation (93-100 %), not at day 3: images see symptoms, not latent infection |
 | [hernandez2025](hernandez2025.md) | downy mildew | symptom detection, disease severity, canopy imaging, proxim… | northern Spain, La Rioja | Little for the truth or the engine: a symptom-detection vision method with no weather or epidemic component, … |
 | [heusinkveld2008](heusinkveld2008.md) | none | dew, surface wetness sensor, microlysimeter, surface energy balance, soil heat flux | NW Negev desert, Israel | Thesis on dew in the Negev: microlysimeter dew up to 0.4 mm a day, an optical wetness sensor, a dew-yield model; sensor design for wetness (s5, s4). |
 | [hill2019](hill2019.md) | Botrytis bunch rot | infection risk, season severity | New Zealand, south-east Australia | Bacchus is the Botrytis candidate, recorded in Formularium as `kim2007.bacchus` with |
