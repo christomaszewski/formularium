@@ -102,3 +102,21 @@ stand-in:
   humidity and temperature measured in the vineyard. A truth built on SWEB needs canopy net
   radiation at night, which a weather generator without longwave cannot give.
 - **Can it run:** from this paper with stated choices; see the record's flags (completed 2026-10-19 on branch ingest/sweb-complete: Wmax set directly, the units of Eqs 9-10 consistent at a second source, 10-min steps in the sensitivity runs, hourly in the validation and every later use).
+
+## Equations module (2026-10-19)
+
+- Eqs 1-15 re-read on the page images (pp. 375-377; Eq 15 at 300 dpi) and computed as printed in
+  `formularium.equations.magarey2006`, with Table 1's order for the budget.
+- **Eq 15 as printed is not dimensionally sound:** [1 + α((1 − Zc)/Z)]⁻² with Zc and Z in cm. At
+  Zc 150 cm and Z 200 cm it makes Uc 574 times U_Z; at Zc 50 cm the log ratio is negative. `amir2016`
+  (Eq 24) and `dhakar2025` (Eq 9) print the same form.
+- **Fig. 1 checks the rest** (own calculation, FAO-56's constants): the sensitivity case dries in one
+  10-min step with Eq 15 as printed, against about 150 min in Fig. 1A. With the canopy wind set to
+  0.3 U_Z (by trial), Eqs 1-14 give 150, 320, 480, 650 min for LAI 1-4 (Fig. 1A about 150, 310, 480,
+  640) and 680, 350, 180, 110, 110 min for Wmax 0.1-1.0 (Fig. 1B about 670, 340, 180, 110, 110).
+  Fig. 1C asks for a canopy wind about three times larger at Zc 2 m than at 0.1 m. Fig. 1D cannot be
+  reproduced: the printed budget makes the wet time proportional to Cl.
+- **Eq 12's sign:** Dp has Rnc's sign and Eq 7 adds it; no sign convention is printed. The module
+  adds condensation when Rnc < 0 (Eq 9's convention), a reading.
+- **Can it run:** not as printed: Eqs 1-14 run; the canopy wind does not, and no source read prints
+  one that closes. Net radiation at night now has recorded estimates (`flerchinger2009`, `allen1998`).

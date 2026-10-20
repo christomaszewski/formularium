@@ -2,7 +2,7 @@
 id: maruyama2023
 citation: Maruyama, A., Kuwagata, T. & Watanabe, T. 2023. Observations on dew formation in the rice canopy and its simulation using a multilayer microclimate model. Journal of Agricultural Meteorology 79(1):28-37
 doi: 10.2480/agrmet.D-22-00016
-read: 2026-10-18, in full (light reading), by a reading agent (claude-haiku-5-5) and a note writer (claude-sonnet-5-5); 25 of 25 quotes found at their lines by scripts/verify_quotes.py; Eqs 1-5 from the text layer, not checked against an image
+read: 2026-10-18, in full (light reading), by a reading agent (claude-haiku-5-5) and a note writer (claude-sonnet-5-5); 25 of 25 quotes found at their lines by scripts/verify_quotes.py; Eqs 1-5 from the text layer, not checked against an image; Eqs 1-3 read on the page image (p. 30) on 2026-10-19 by the main session
 status: read
 diseases: []
 crops: [rice]
@@ -59,3 +59,12 @@ For strand 3 and what Agrarium's truth can take:
   not a vineyard.
 - **Can it run:** not from the paper: MLC details are in Watanabe et al., and the data are by
   DOI in the companion paper.
+
+## The conductance Kuwagata 2024 uses (2026-10-19)
+
+- **Eqs 1-3, read on the page image (p. 30):** g_a = (λ/D_L)(0.8 + 0.6 Re′^0.5) × 2, Re′ = (Re² +
+  Gr)^0.5, Re = u D_L/ν, Gr = g D_L³|T_c − T_a|/(T_0 ν²), after Kondo (1982) and Watanabe & Mizutani
+  (1996). λ is "the thermal conductivity of the air (W m⁻¹ K⁻¹)" and g_a is in m s⁻¹: the units do
+  not close (λ/D_L is W m⁻² K⁻¹; m/s needs a division by ρcp). No value of λ, ν, g or T_0 is printed.
+- `kuwagata2024` cites this equation for its k_L (with D_L = 0.1 m there, 0.03 m here); the module
+  `formularium.equations.kuwagata2024` computes it as printed.

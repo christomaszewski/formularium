@@ -2,7 +2,7 @@
 id: laiti2018
 citation: Laiti, L., Giovannini, L., Zardi, D., Belluardo, G. & Moser, D. 2018. Estimating hourly beam and diffuse solar radiation in an Alpine valley: a critical assessment of decomposition models. Atmosphere 9:117
 doi: 10.3390/atmos9040117
-read: 2026-10-18, in full, by a reading agent (claude-haiku-5-5); 57 of 57 quotes found at their lines by the main session; Eqs 5-8 (p. 6) and Eq. 9 and Table 2 (p. 7) read in page images by the reading agent; Table 5 checked by the main session in the text layer
+read: 2026-10-18, in full, by a reading agent (claude-haiku-5-5); 57 of 57 quotes found at their lines by the main session; Eqs 5-8 (p. 6) and Eq. 9 and Table 2 (p. 7) read in page images by the reading agent; Table 5 checked by the main session in the text layer; Table 1, Eq 7 and Table 5 re-read on the page images (pp. 5, 6, 10) on 2026-10-19 for the units of t and h
 status: read
 diseases: []
 crops: []
@@ -64,3 +64,20 @@ For the sweep's radiation inputs and for valley sites:
 - **Limits:** one station and four years; the local fit is in-sample; no humidity or wetness.
 - **Take:** a site-level error band for the diffuse fraction on a hillside vineyard; the local
   coefficients are Bolzano's and not for other places.
+
+## The units of t and h (2026-10-19)
+
+- **Printed nowhere in the paper.** Eq 7 names t "the apparent solar time" and h only by symbol
+  (p. 6); Table 1's caption names them "local apparent time" and "solar elevation" (p. 5); Table 5
+  has no units (p. 10). The only degree sign in the methods is the horizon profile's 1° resolution.
+- **The sources were not obtained.** Ridley, Boland & Lauret 2010 (Renew. Energy 35:478, the BRL)
+  and Lauret, Boland & Ridley 2013 (Renew. Energy 49:124, the brl.* values) are Elsevier; HAL lists
+  both (hal-00919000, hal-00917859) without files.
+- **Citing papers disagree** (each read only for its BRL passage): `kathilankal2014` restates
+  Ridley's coefficients on sin β; `pashiardis2021` refits the BRL with AST in hours; `boland2025`, by
+  a BRL author, names "Apparent Solar Time (AST), solar altitude" without units; `malu2023`
+  (held) gives AST [h] and β [°] for a BRL-derived model.
+- **It matters** (own calculation, kt 0.7, Kt 0.65, ψ 0.7, t 12): h = 60° gives kd 0.267 with the
+  original coefficients and 0.205 with the local ones; h in radians gives 0.217 and 0.144.
+- **Can it run:** not until the units are read at Ridley 2010 or Lauret 2013, or asked of the
+  first author; the record's flag says so.

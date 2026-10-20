@@ -672,6 +672,19 @@ DATASETS: dict[str, Dataset] = {
         " (literature/maruyama2023); the multilayer reference was checked against them",
         "read",
     ),
+    "flerchinger2009.sites": Dataset(
+        "Measured downward longwave, solar radiation, air temperature and humidity, mostly two"
+        " years of 30-min data, at the 14 sites of Flerchinger et al. 2009's initial evaluation"
+        " (Table 4): nine AmeriFlux sites (Santa Rita AZ, Campbell River BC, Niwot Ridge CO,"
+        " Morgan Monroe IN, Goodwin Creek MS, Duke Forest NC, Black Hills SD, Wind River WA,"
+        " Willow Creek WI), Reynolds Mountain ID, Brooks field IA, Yucheng, Ganzi and Nagqu"
+        " (China), 1982-2006; observed",
+        "Flerchinger et al. 2009, Water Resour. Res. 45:W03423, Sect. 3 and 4.3, Tables 4, 8"
+        " and 9 (page images, 2026-10-19; literature/flerchinger2009): the clearness-index"
+        " limits for complete cloud and clear sky were optimised on these sites; seven more"
+        " AmeriFlux sites tested them independently",
+        "read",
+    ),
     "quenol2004.vinho_verde": Dataset(
         "Tiny Talk logger series in two Vinho Verde vineyards about 30 km apart, Arcos de"
         " Valdevez (Lima valley) and Moncao/Troviscoso (Minho valley), Portugal: 16 + 8 open-air"

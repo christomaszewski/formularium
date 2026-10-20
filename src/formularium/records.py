@@ -136,6 +136,8 @@ STRUCTURES = {
     "cold-air-pool": "night cooling in hollows and valleys from terrain",
     "dew-energy-balance": "dew and leaf drying from a surface energy balance",
     "shield-radiative-error": "a shielded air-temperature sensor's error from radiation and wind",
+    "sky-longwave-estimate": "downward or net longwave radiation from air temperature, humidity"
+    " and cloudiness, as an emissivity times sigma T^4",
     "daily-weather-risk-index": "a daily risk index built from weighted terms of the day's"
     " temperature, humidity hours, rain and wetness",
     "thermal-time-release-curve": "the cumulative share of spores released or mature as a"

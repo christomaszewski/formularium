@@ -165,3 +165,33 @@ Searched while completing `magarey2006.sweb`; not obtained from this VM:
   Agric. Meteorol. 58:1 (10.2480/agrmet.58.1). Open on J-STAGE; refused this VM.
 - Seem, R. C. et al. 2000. Environmental Pollution 108 (10.1016/S0269-7491(99)00218-3): an early
   SWEB version from microclimate data. Elsevier; not fetched.
+
+## Pilot-equation sources not obtained (2026-10-19, branch ingest/pilot-equations)
+
+Sought while writing the equations modules for `magarey2006.sweb`, `kuwagata2024.canopy_dew`,
+`dhakar2025.leaf_wetness`, `laiti2018.brl_bolzano` and a night net radiation; not obtained:
+- Ridley, B., Boland, J. & Lauret, P. 2010. Modelling of diffuse solar fraction with multiple
+  predictors. Renew. Energy 35:478 (10.1016/j.renene.2009.07.018). The BRL's form and the units of
+  AST and altitude. Elsevier; HAL record hal-00919000 has no file.
+- Lauret, P., Boland, J. & Ridley, B. 2013. Bayesian statistical analysis applied to solar radiation
+  modelling. Renew. Energy 49:124 (10.1016/j.renene.2012.01.049). The brl.* coefficients Laiti et al.
+  reprint. Elsevier; HAL record hal-00917859 has no file.
+- Dhakar et al. 2025's online supplement (Appendix A, the dewfall equations; 10.1016/
+  j.agrformet.2025.110399). Elsevier.
+- Watanabe, T. & Mizutani, K. 1996. Agric. For. Meteorol. 80:195-214 (10.1016/0168-1923(95)02301-1).
+  The k_L equation Kuwagata 2024 uses. Elsevier.
+- Landsberg, J. J. & James, G. B. 1971. Wind profiles in plant canopies (J. Appl. Ecol.; credited by
+  SWEB's Eq 15, not checked). Not searched further.
+- Sentelhas, P. C. & Gillespie, T. J. 2008 (online 2007). Estimating hourly net radiation for leaf
+  wetness duration using the Penman-Monteith equation. Theor. Appl. Climatol. 91:205-215
+  (10.1007/s00704-006-0290-0). Closed; its thesis precursor (`sentelhas2004`, ch. 7) is held.
+- Madeira, A. C., Kim, K. S., Taylor, S. E. & Gleason, M. L. 2002. A simple cloud-based energy balance
+  model to estimate dew. Agric. For. Meteorol. 111:55-63 (10.1016/s0168-1923(02)00004-7). Closed.
+- Gavilán, P. et al. 2007. Measuring versus estimating net radiation and soil heat flux: impact on
+  Penman-Monteith reference ET estimates in semiarid regions. Agric. Water Manag.
+  (10.1016/j.agwat.2007.01.014). Closed.
+- Dilley & O'Brien 1998 and Unsworth & Monteith 1975 (QJRMS), the forms
+  `flerchinger2009.dilley_unsworth` borrows. Wiley; not fetched (Flerchinger prints both forms).
+- Kuwagata et al. 1990 (J. Meteorol. Soc. Jpn 68:625) and 2011 (J. Agric. Meteorol. 67:297),
+  cited by Kuwagata 2024 (l. 562-563) for an empirical downward longwave formula. J-STAGE, open;
+  not fetched in this pass.
