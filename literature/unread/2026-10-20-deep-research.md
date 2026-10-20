@@ -1,6 +1,6 @@
 # Deep research (2026-10-20): shortlisted leads not obtained
 
-These are the papers the 2026-10-20 OpenAlex search (seven strands: fungicide protection, observation operators, powdery mildew, other bunch diseases, damage and economics, spread between vineyards, insect pests) shortlisted for reading and could not obtain from this VM: 142 in all. Nothing here was read; titles and classes come from a title screen by claude-haiku-5-5, unchecked, except the rows marked 'hand' (chosen by the main session).
+These are the papers the 2026-10-20 OpenAlex search (seven strands: fungicide protection, observation operators, powdery mildew, other bunch diseases, damage and economics, spread between vineyards, insect pests) shortlisted for reading and could not obtain from this VM: 165 in all. Nothing here was read; titles and classes come from a title screen by claude-haiku-5-5, unchecked, except the rows marked 'hand' (chosen by the main session).
 
 - **How they were tried:** each DOI through every OpenAlex location (PDF and landing pages, and PDF links found on landing pages); then publisher patterns, OJS galleys and headless Chromium (home page first); Europe PMC's full-text XML where it holds the article; and Wayback Machine captures of the publisher's PDF or web page (which recovered APS, ACS, MDPI and Wiley items the publishers refused). Do not retry these from this VM. 'oa' means OpenAlex lists an open copy the VM still could not reach (Cloudflare at Elsevier, Wiley, APS, ACS, SSRN and NZ Plant Protection, a 403 at MDPI, a robot check at HAL and Cornell).
 - **Key leads found while reading, not in the tables:** Cabras et al. 2001, 'The effect of simulated rain on folpet and mancozeb residues on grapes and on vine leaves', J. Environ. Sci. Health B 36:609-618, doi 10.1081/PFC-100106189 (closed): the source of the PPDB's vine-leaf half-lives and the one direct study of rain on fungicide residues on vine leaves found. Ebeling 2018 (foliar dissipation compilation, doi 10.1002/etc.4148) was refused by Cloudflare and has no Wayback copy.
@@ -54,7 +54,7 @@ These are the papers the 2026-10-20 OpenAlex search (seven strands: fungicide pr
 | 2015 | Anne‐Katrin Mahlein | Plant Disease Detection by Imaging Sensors – Parallels and Specific Demands for Precision Agriculture and Plant Phenotyping | 10.1094/pdis-03-15-0340-fe | B1 | oa |
 | 2017 | Emerson M. Del Ponte | Standard Area Diagrams for Aiding Severity Estimation: Scientometrics, Pathosystems, and Methodological Trends in the Last 25 Years | 10.1094/phyto-02-17-0069-fi | B1 | wrong file fetched |
 
-## t3, powdery mildew (32)
+## t3, powdery mildew (43)
 
 | Year | First author | Title | DOI | Class | Open copy listed |
 |---|---|---|---|---|---|
@@ -88,10 +88,21 @@ These are the papers the 2026-10-20 OpenAlex search (seven strands: fungicide pr
 | 2014 | Odile Carisse | Relationship of Airborne Botrytis cinerea Conidium Concentration to Tomato Flower and Stem Infections: A Threshold for De-leafing Operations | 10.1094/pdis-05-14-0490-re | A3 | oa |
 | 2024 | Clotilde Djuikem | Impact of ontogenic changes on the dynamics of a fungal crop disease model motivated by coffee leaf rust | 10.1007/s00285-024-02053-4 | A3 | oa |
 | 2002 | Andrea Ficke | New Frontiers in Plant Disease Losses and Disease Management Ontogenic Resistance and Plant Disease Management: A Case Study of Grape Powdery Mildew | none | B1 | no DOI |
+| 2002 | T. J. Wicks | Integration of strobilurins and other fungicides for the control of powdery mildew on grapes | 10.1111/j.1755-0238.2002.tb00222.x | B2 | oa |
+| 2005 | P. Cortesi | Genetic Similarity of Flag Shoot and Ascospore Subpopulations of Erysiphe necator in Italy | 10.1128/aem.71.12.7788-7791.2005 | B2 | oa |
+| 2010 | Travis J. Lybbert | POWDERY MILDEW RISK AND FORECASTING IN WINE GRAPES: DO GROWERS CHANGE RISK MANAGEMENT STRATEGIES IN RESPONSE TO DISEASE FORECASTS? | 10.22004/ag.econ.61745 | B2 | wrong file fetched |
+| 2012 | L. L. Granke | Factors Affecting Airborne Concentrations of Podosphaera xanthii Conidia and Severity of Gerbera Powdery Mildew | 10.21273/hortsci.47.8.1068 | B2 | oa |
+| 2012 | Marin T. Brewer | Linkage Disequilibrium and Spatial Aggregation of Genotypes in Sexually Reproducing Populations of Erysiphe necator | 10.1094/phyto-11-11-0321 | B2 | oa |
+| 2012 | Travis J. Lybbert | Multi-Dimensional Responses to Risk Information: How do Winegrape Growers Respond to Disease Forecasts and to What Environmental Effect? | 10.22004/ag.econ.162521 | B2 | oa |
+| 2014 | Belachew Asalf | Ontogenic Resistance of Leaves and Fruit, and How Leaf Folding Influences the Distribution of Powdery Mildew on Strawberry Plants Colonized by Podosphaera aphanis | 10.1094/phyto-12-13-0345-r | B2 | oa |
+| 2015 | Siegrid Steinkellner | Overwintering of Uncinula necator in Austrian vineyards | 10.5073/vitis.1998.37.193-194 | B2 | oa |
+| 2017 | Christian Kraus | Effects of canopy architecture and microclimate on grapevine health in two training systems | 10.5073/vitis.2018.57.53-60 | B2 | oa |
+| 2019 | David H. Gent | Prediction of Spread and Regional Development of Hop Powdery Mildew: A Network Analysis | 10.1094/phyto-12-18-0483-r | B2 | oa |
+| 2021 | Jonida Basha | Rapid Detection of Airborne Inocula of Grapevine Mildews Using PCR and LAMP Assay | 10.9734/ijpss/2021/v33i2230677 | B2 | oa |
 | 1998 | Laetitia Willocquet | An analysis of the effects of environmental factors on conidial dispersal of Uncinula necator (grape powdery mildew) in vineyards | 10.1046/j.1365-3059.1998.00244.x | hand | oa |
 | 2024 | Othmane Taibi | A qPCR Assay for the Quantification of the Overwintering Chasmothecia of Erysiphe necator in Grapevine Bark | 10.1094/phyto-04-24-0126-r | hand | oa |
 
-## t4, Botrytis, black rot and other bunch diseases (28)
+## t4, Botrytis, black rot and other bunch diseases (40)
 
 | Year | First author | Title | DOI | Class | Open copy listed |
 |---|---|---|---|---|---|
@@ -123,6 +134,18 @@ These are the papers the 2026-10-20 OpenAlex search (seven strands: fungicide pr
 | 2022 | J. Kelly | Impact of Botrytis cinerea-infected grapes on quality parameters of red wine made from withered grapes | 10.1111/ajgw.12545 | A2 | oa |
 | 2024 | Valeria Altieri | Integration of mathematical modeling and target-based application of biocontrol agents for the control of Botrytis cinerea in vineyards | 10.1002/ps.8140 | A2 | oa |
 | 2017 | Odile Carisse | Association Between Weather Variables, Airborne Inoculum Concentration, and Raspberry Fruit Rot Caused by Botrytis cinerea | 10.1094/phyto-09-16-0350-r | A3 | oa |
+| 2006 | Philip A. G. Elmer | Biosuppression of Botrytis cinerea in grapes | 10.1111/j.1365-3059.2006.01348.x | B2 | oa |
+| 2008 | D.C. Mundy | A review of the direct and indirect effects of nitrogen on botrytis bunch rot in wine grapes | 10.30843/nzpp.2008.61.6841 | B2 | oa |
+| 2012 | D.C. Mundy | Tendrils as a source of seasonal carryover of Botrytis cinerea in vineyards | 10.30843/nzpp.2012.65.5375 | B2 | oa |
+| 2013 | Sebastian A. Rivera | Infection Risk and Critical Period for the Postharvest Control of Gray Mold (Botrytis cinerea) on Blueberry in Chile | 10.1094/pdis-12-12-1112-re | B2 | oa |
+| 2014 | Gareth N. Hill | Comparison of methods for the quantification of botrytis bunch rot in white wine grapes | 10.1111/ajgw.12101 | B2 | oa |
+| 2014 | KJ Dunne | Novel application of methods to investigate epidemiology and management of botrytis bunch rot in wine grapes | 10.25959/23236418 | B2 | oa |
+| 2015 | Shiraishi, M. | Screening for resistance to ripe rot caused by Colletotrichum acutatum in grape germplasm | 10.5073/vitis.2007.46.196-200 | B2 | oa |
+| 2018 | Rachel P. Naegele | Evaluation of Host Resistance to Botrytis Bunch Rot in Vitis spp. and Its Correlation with Botrytis Leaf Spot | 10.21273/hortsci12655-17 | B2 | oa |
+| 2018 | Bryan Hed | Hand and Mechanical Fruit-zone Leaf Removal at Prebloom and Fruit-set Was More Effective in Reducing Crop Yield than Reducing Bunch Rot in 'Riesling' Grapevines | 10.21273/horttech03965-18 | B2 | oa |
+| 2019 | Mélissa Si Ammour | Quantification of Botrytis cinerea in Grapevine Bunch Trash by Real-Time PCR | 10.1094/phyto-11-18-0441-r | B2 | oa |
+| 2019 | Giorgia Fedele | Reduction of Botrytis cinerea Colonization of and Sporulation on Bunch Trash | 10.1094/pdis-08-19-1593-re | B2 | oa |
+| 2022 | Katja Herzog | Towards Sensor-Based Phenotyping of Physical Barriers of Grapes to Improve Resilience to Botrytis Bunch Rot | 10.3389/fpls.2021.808365 | B2 | wrong file fetched |
 
 ## t5, damage and economics (23)
 
