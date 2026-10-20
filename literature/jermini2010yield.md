@@ -10,7 +10,7 @@ regions: [Switzerland, Cadenazzo (Ticino)]
 processes: [compensation, carbohydrate reserves, reserve mobilisation, defoliation, leaf area, sugar accumulation, season severity, yield quality, spray timing]
 records: []
 datasets: []
-files: [quantification-of-the-influence-of-2015.pdf]
+files: [quantification-of-the-influence-of-2015.pdf, jermini_2015_2.pdf (the 2026-10-20 drop)]
 ---
 
 # Jermini et al. 2010: downy mildew and Merlot carbohydrate compensation
