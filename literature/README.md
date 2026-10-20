@@ -79,6 +79,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [ashraf2026](ashraf2026.md) | downy mildew | oospores, overwintering, primary infection, inoculum, incub… | Kashmir, India | Overwintering oospore counts and viability by month and depth from one site in two seasons (l. 215-221): a da… |
 | [aslanov2019](aslanov2019.md) | wheat yellow rust | season risk | Luxembourg | Another disease; a window-correlation method |
 | [austin2010](austin2010.md) | powdery mildew | latent period, radiation | New York | UV and sunlight slow powdery mildew; no equation |
+| [austin2011](austin2011.md) | powdery mildew | canopy density, cluster exposure, spray coverage | Washington, New York, South Australia | Each shading layer over a cluster raises powdery mildew severity and cuts spray deposit (about doubling per layer removed) |
 | [avesani2023](avesani2023.md) | downy mildew | induced resistance, volatiles, callose deposition, gene exp… | Italy (Trento Laimburg) | None for the truth's infection or weather models; the leaf-disk linalool study is a treatment-response result… |
 | [avila2010](avila2010.md) | powdery mildew | overwintering | Michigan | Chasmothecia traps and eradicants |
 | [bagnulo2025](bagnulo2025.md) | downy mildew, powdery mildew | season severity, infection, oospores, leaf wetness, spray t… | Montepulciano, Tuscany, Italy | A dated Tuscan 2025 record of day and night ranges with qualitative downy mildew status: at most a check that… |
