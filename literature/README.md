@@ -143,6 +143,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [bove2020](bove2020.md) | downy mildew | epidemic simulation | Italy (generic) | Values borrowed from Goidanich, Caffi, Rossi 2008, Lalancette; no validation |
 | [bove2020resistance](bove2020resistance.md) | downy mildew | latent period, host resistance | Emilia-Romagna, Veneto | Latent periods at 20 °C for 16 varieties and three leaf stages |
 | [bove2021](bove2021.md) | downy mildew | host resistance, epidemic simulation | Piacenza | The four resistance terms in the Bove 2020 simulator: infection efficiency cuts foliage disease most, latency least; no data fitted |
+| [bramley2011](bramley2011.md) | powdery mildew, grey mould | spray programme, spatial variation, season severity | Tasmania | Whole-block trials: disease and the response to spray programmes vary with topography and vigour; a pre-bunch-closure Botrytis spray beat capfall in only half the block |
 | [breen2026](breen2026.md) | downy mildew | oospores, management | Europe | A perspective |
 | [bregaglio2013](bregaglio2013.md) | downy mildew, Botrytis bunch rot | infection | Europe | Kin by a borrowed equation, as before, and now for that reason rather than its authors… |
 | [bregaglio2022](bregaglio2022.md) | downy mildew | primary infection, secondary infection | Italy | Kin by a borrowed equation, now recorded as such |
