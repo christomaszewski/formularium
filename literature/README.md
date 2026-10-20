@@ -239,6 +239,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [colombo2020](colombo2020.md) | downy mildew, late blight, powdery mildew | germ tube formation, sporulation, infection, fungicide effi… | Trentino, Italy | None. Recorded so that it is not read again: a peptide antifungal tested on leaf disks and greenhouse plants,… |
 | [colucci2026](colucci2026.md) | none | leaf wetness; wetness classification; machine learning; capacitive sensor | Italy, seven sites | Strands 2 and 5: open vineyard wetness dataset (CC BY-NC 4.0, Mendeley doi 10.17632/sd4b8vpvyb.1); random forest balanced accuracy 0.93 top and 0.95 bottom; the RH 90 % rule is not scored on the same data |
 | [comsa2023](comsa2023.md) | downy mildew | cultivar susceptibility, disease scoring | Târnave, Blaj, Romania | s4, weakly: monthly means only, no within-vineyard microclimate. A simulator could take nothing but the order of magnitude of attack degree under mean humidity 69 % to 74 %. Not read in full. |
+| [cornelissen2022](cornelissen2022.md) | grey mould, bunch rot | quality threshold, bunch rot severity, must chemistry | South Africa | Must markers (gluconic acid, glycerol) flag rot-affected loads; assessors agree at ICC 0.78-0.90 |
 | [coronelli2025](coronelli2025.md) | downy mildew | detection | Apulia | A qPCR test's detection limits |
 | [cortazar2006](cortazar2006.md) | none | phenology, budburst, dormancy, crop model | France | The thesis behind cortazar2009: Table 11 (p. 43) read in the page image, the GDD at 5 °C sums now Published; STICS's cultivar sets |
 | [cortazar2009](cortazar2009.md) | none | phenology, budburst, dormancy | France | GDD5 and BRIN as the catalogue records them; GDD5 beats BRIN for five of ten cultivars, and dormancy never matters |
@@ -447,6 +448,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [jensen2025](jensen2025.md) | none | modelling review | global | Review of 146 models |
 | [jermini2010](jermini2010.md) | downy mildew | damage, spray strategy | Ticino | A measured damage function for Merlot |
 | [jermini2010b](jermini2010b.md) | downy mildew | damage, leaf area loss, yield, sugar content | Ticino | Late leaf downy mildew (37-48 % severity) left yield unchanged in two of three years but cut sugar by up to 2 °Brix; the vine compensates from reserves |
+| [jermini2010c](jermini2010c.md) | downy mildew | damage, carry-over, yield, reserves | Ticino | A downy mildew year cut the next year's yield by 21-33 % and shoot length by 22 cm; one normal year rebuilt the reserves |
 | [jermini2010yield](jermini2010yield.md) | downy mildew | compensation, carbohydrate reserves, reserve mobilisation, … | Switzerland, Cadenazzo (Ticino) | A measured site dataset of reserve starch and sugars and of severity under downy mildew defoliation, usable a… |
 | [ji2021coniella](ji2021coniella.md) | white rot | infection, incubation | Emilia-Romagna | White rot infection; incubation by Magarey's f(T) |
 | [ji2021ripe](ji2021ripe.md) | ripe rot | infection, sporulation | China, Japan, United States | A ripe rot model on 19 epidemics |
