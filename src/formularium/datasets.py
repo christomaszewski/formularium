@@ -1252,4 +1252,11 @@ DATASETS: dict[str, Dataset] = {
         " models of its Table 1 are fitted to them; files on OSF (3zmv8), licence not printed",
         "read",
     ),
+    "fantke2013.halflives": Dataset(
+        "4,442 measured pesticide dissipation half-lives in plants (333 substances, 183 plants),"
+        " 1,030 of them with the study's mean air temperature, collated from the literature",
+        "Fantke & Juraske 2013, Environ. Sci. Technol. 47 (not held), as used by Fantke et al. 2014"
+        " (read 2026-10-20), whose temperature and half-life regressions are fitted to them",
+        "trail",
+    ),
 }

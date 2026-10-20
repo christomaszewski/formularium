@@ -6518,4 +6518,70 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="observation",
     ),
+    "fantke2014.plant_dissipation": Formulation(
+        "Pesticide dissipation half-life on plants at a temperature T: HL(T) = HL20 exp(beta (T -"
+        " 20 °C)), beta from 1,030 half-lives with reported air temperature, and HL20 per substance"
+        " for 333 pesticides (an average plant, field conditions)",
+        "Fantke et al. 2014, Environ. Sci. Technol. 48:8588-8602, Eqs 1-4 (p. 8589), Results 3.2"
+        " (p. 8591) and Table 1",
+        year=2014,
+        authors=("Fantke, Peter", "Gillespie, Brenda W.", "Juraske, Ronnie", "Jolliet, Olivier"),
+        authors_complete=True,
+        authors_from="read",
+        checked="fantke_2014.pdf (the 2026-10-20 drop, a Wayback capture); pp. 8589, 8591 and"
+        " 8595 read in the page images 2026-10-20",
+        doi="10.1021/es500434p",
+        structures=("first-order-residue-decay",),
+        structures_note=(
+            "Log half-life linear in substance, plant, cold storage and temperature (Eq 1); a"
+            " first-order decay whose rate rises with temperature (Q10 1.22)."
+        ),
+        calibrated_on=("fantke2013.halflives",),
+        calibration_note=(
+            "Model I (temperature) fitted to 1,030 half-lives with reported temperature (R²adj"
+            " 0.638, RMSE 0.27); Model II (HL20 per substance) to all 4,442, with missing"
+            " temperatures imputed (R²adj 0.458). The collated half-lives overlap the PPDB's"
+            " (`lewis2017.ppdb_dissipation`, which checked its set against them); both are"
+            " measured, not modelled."
+        ),
+        parameters=(
+            Published("beta_t", -0.01995, "1/K", "p. 8591, Model I (-1.995e-2 per K)", "read"),
+            Published("q10", 1.22, "1", "p. 8591", "read"),
+            Published("activation_energy", 14.25, "kJ/mol", "p. 8591", "read"),
+            Published("t_ref", 293.16, "K", "p. 8589, under Eq 1", "read"),
+            Published("hl20_azoxystrobin", 3.53, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_boscalid", 6.63, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_captan", 4.45, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_chlorothalonil", 5.02, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_cymoxanil", 1.61, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_dimethomorph", 5.14, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_famoxadone", 5.63, "d", "Table 1 (page image, p. 8595)", "read"),
+            Published("hl20_fenhexamid", 7.7, "d", "Table 1 (page image, p. 8595)", "read"),
+            Published("hl20_fludioxonil", 5.24, "d", "Table 1 (page image, p. 8595)", "read"),
+            Published("hl20_fluopicolide", 8.16, "d", "Table 1 (page image, p. 8595)", "read"),
+            Published("hl20_folpet", 5.19, "d", "Table 1 (page image, p. 8595)", "read"),
+            Published("hl20_iprodione", 6.92, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_mancozeb", 4.69, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_mandipropamid", 3.46, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_metalaxyl", 5.81, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_metalaxyl_m", 3.74, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_myclobutanil", 4.35, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_penconazole", 8.06, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_propiconazole", 5.44, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_tebuconazole", 7.67, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_tetraconazole", 5.27, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_trifloxystrobin", 3.72, "d", "Table 1 (text layer)", "read"),
+        ),
+        flags=(
+            "Can it run: yes, for any of 333 substances, from the day's air temperature; HL20 is"
+            " for an average plant, not grapevine, and plant-specific corrections are in its SI"
+            " (not held). The natural logarithm is meant: Q10 = exp(-10 beta) = 1.22 as printed,"
+            " which base 10 would not give (derived 2026-10-20). At 30 °C half-lives are 18 %"
+            " shorter than at 20 °C, at 10 °C 22 % longer.",
+            "Dissipation lumps degradation, wash-off and growth dilution in the source studies;"
+            " for vine leaves `lewis2017.residue_dt50` holds measured values (folpet 14.1 d,"
+            " mancozeb 7.5 d), longer than these average-plant HL20s (5.19, 4.69 d).",
+        ),
+        role="process",
+    ),
 }

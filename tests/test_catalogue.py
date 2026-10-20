@@ -138,6 +138,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "lewis2017.residue_dt50": ("lewis2017.ppdb_dissipation",),
         "erincik2003.phomopsis_infection": ("erincik2003.ohio",),
         "franceschi2020.rater_error": ("franceschi2020.soybean_raters",),
+        "fantke2014.plant_dissipation": ("fantke2013.halflives",),
         "orlandini2008.plasmo": (
             "orlandini2008.mondeggi",
             "blaeser1978.survival",
