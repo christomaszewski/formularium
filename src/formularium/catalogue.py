@@ -6447,4 +6447,75 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         role="process",
     ),
+    "franceschi2020.rater_error": Formulation(
+        "A rater's visual estimate of leaf disease severity: mean error linear and standard"
+        " deviation quadratic in the actual severity S (%), unaided and with a standard area"
+        " diagram (SAD) set, fitted on soybean rust",
+        "Franceschi et al. 2020, Plant Pathol. 69:495-505, Table 1 (p. 500)",
+        year=2020,
+        authors=(
+            "Franceschi, Vinicius T.",
+            "Alves, Kaique S.",
+            "Mazaro, Sergio M.",
+            "Godoy, Cláudia V.",
+            "Duarte, Henrique S. S.",
+            "Del Ponte, Emerson M.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "franceschi_2020.pdf (the 2026-10-20 drop); Table 1 read in the page image (p. 500)"
+        ),
+        doi="10.1111/ppa.13148",
+        structures=("rater-severity-error",),
+        structures_note=(
+            "Estimate = S + bias(S) with spread sd(S): how a scout's severity number departs from"
+            " the truth. Not detection: the engine's `cannon2001.sensitivity` is whether a scout"
+            " sees a lesion at all (detection-sensitivity)."
+        ),
+        calibrated_on=("franceschi2020.soybean_raters",),
+        calibration_note=(
+            "Fitted to 17-19 raters' estimates per condition on 50 leaflet images whose 'actual'"
+            " severity came from a discriminant function on RGB samples, 'assumed to best"
+            " represent' severity (l. 130-132): an image-analysis reference, not a model of the"
+            " disease. Soybean rust, inexperienced raters (students)."
+        ),
+        parameters=(
+            Published(
+                "unaided_bias_a", 1.145, "% points", "Table 1, unaided, mu = S + a + b S", "read"
+            ),
+            Published("unaided_bias_b", 0.1002, "1", "Table 1, unaided", "read"),
+            Published(
+                "unaided_sd_c",
+                -1.833,
+                "% points",
+                "Table 1, unaided, sigma = c + d S + e S²",
+                "read",
+            ),
+            Published("unaided_sd_d", 0.7794, "1", "Table 1, unaided", "read"),
+            Published("unaided_sd_e", -0.007155, "1/%", "Table 1, unaided", "read"),
+            Published("oldsad_bias_a", -1.039, "% points", "Table 1, Old SAD", "read"),
+            Published("oldsad_bias_b", -0.11694, "1", "Table 1, Old SAD", "read"),
+            Published("oldsad_sd_c", -0.114, "% points", "Table 1, Old SAD", "read"),
+            Published("oldsad_sd_d", 0.6151, "1", "Table 1, Old SAD", "read"),
+            Published("oldsad_sd_e", -0.006718, "1/%", "Table 1, Old SAD", "read"),
+            Published("newsad_bias_a", 1.411, "% points", "Table 1, New SAD", "read"),
+            Published("newsad_bias_b", -0.03738, "1", "Table 1, New SAD", "read"),
+            Published("newsad_sd_c", 1.061, "% points", "Table 1, New SAD", "read"),
+            Published("newsad_sd_d", 0.199, "1", "Table 1, New SAD", "read"),
+            Published("newsad_sd_e", -0.001925, "1/%", "Table 1, New SAD", "read"),
+        ),
+        flags=(
+            "Can it run: yes, as an observation operator drawing a severity estimate around the"
+            " truth. At one point (derived 2026-10-20): unaided at S = 20 % the mean estimate is"
+            " 23.1 % with sd 10.9; at 50 %, 56.2 % with sd 19.2. The unaided sd is negative"
+            " below about S = 2.4 % (the quadratic's root), so low severities need a floor; the"
+            " New SAD's sd stays positive (1.26 at 1 %).",
+            "Soybean leaflets, not vine leaves, and students, not trained scouts; the paper's"
+            " simulation shows aided raters need half as many leaflets for the same power"
+            " (literature/franceschi2020). The rater error of grapevine downy mildew estimates is"
+            " not measured in any held source.",
+        ),
+        role="observation",
+    ),
 }

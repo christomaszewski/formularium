@@ -1244,4 +1244,12 @@ DATASETS: dict[str, Dataset] = {
         " the chamber data and tested on the field inoculations",
         "read",
     ),
+    "franceschi2020.soybean_raters": Dataset(
+        "Visual severity estimates by 37 inexperienced raters (unaided, then aided by an old or"
+        " a new standard area diagram set) on 50 soybean rust leaflet images of 0.25-84 %"
+        " severity, against image-analysis severity",
+        "Franceschi et al. 2020, Plant Pathol. 69:495-505 (read 2026-10-20): the rater-error"
+        " models of its Table 1 are fitted to them; files on OSF (3zmv8), licence not printed",
+        "read",
+    ),
 }

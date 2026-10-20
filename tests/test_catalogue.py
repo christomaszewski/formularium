@@ -42,6 +42,7 @@ def test_the_roles_judged_so_far() -> None:
         "madden1999.detection_bound": "observation",
         "cannon2001.sensitivity": "observation",
         "nakamura2005.radiative_error": "observation",
+        "franceschi2020.rater_error": "observation",
         "noaa.solar_position": "reference",
         "alduchov1996.magnus": "reference",
         "fao56.eq47": "reference",
@@ -136,6 +137,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "oriolani2015.powdery_rate": ("oriolani2015.mendoza",),
         "lewis2017.residue_dt50": ("lewis2017.ppdb_dissipation",),
         "erincik2003.phomopsis_infection": ("erincik2003.ohio",),
+        "franceschi2020.rater_error": ("franceschi2020.soybean_raters",),
         "orlandini2008.plasmo": (
             "orlandini2008.mondeggi",
             "blaeser1978.survival",
