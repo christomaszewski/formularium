@@ -26,7 +26,7 @@ likely source for spread.
   in 9 of 13 (69%) (l. 208). Totals: 244 and 27 nymphs (l. 208 to 216); 1,088 S. titanus and
   324 O. ishidae adults (l. 216 to 221).
 - GWGV infection: 120 leaf samples, 36 from symptomatic vines and 84 from asymptomatic.
-  FDp in 91.7% of symptomatic and 7.1% of asymptomatic samples (l. 223 to 225).
+  FDp in 91.7% of symptomatic and 7.1% of asymptomatic samples (l. 216-221).
 - Vector infection: S. titanus infection rate of 14.9% to 49.6% in the southern area; none in
   the north (l. 233 to 234). Four O. ishidae carried FDp: three M54, one M50 (l. 252 to 253).
 - Genotype: the GWGV and vector sequences match M54 and M50, the genotypes of cultivated
