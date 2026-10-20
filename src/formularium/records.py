@@ -138,6 +138,19 @@ STRUCTURES = {
     "shield-radiative-error": "a shielded air-temperature sensor's error from radiation and wind",
     "sky-longwave-estimate": "downward or net longwave radiation from air temperature, humidity"
     " and cloudiness, as an emissivity times sigma T^4",
+    "daily-weather-risk-index": "a daily risk index built from weighted terms of the day's"
+    " temperature, humidity hours, rain and wetness",
+    "thermal-time-release-curve": "the cumulative share of spores released or mature as a"
+    " curve of a heat sum",
+    "first-order-residue-decay": "a deposit or residue falling exponentially with time, set by"
+    " a half-life",
+    "analytis-beta-wetness": "infection as a beta function of temperature times a power of"
+    " wetness duration (the generalized Analytis form; Agrarium's open D33 may fold it into"
+    " Magarey's response)",
+    "rater-severity-error": "a rater's estimate of disease severity, its bias and spread as"
+    " functions of the actual severity",
+    "minimum-wetness-table": "infection when leaf wetness exceeds a minimum read from a table by"
+    " temperature (the Mills form; Agrarium's open D33 may fold it into Magarey's response)",
 }
 
 

@@ -6111,6 +6111,806 @@ FORMULATIONS: dict[str, Formulation] = {
             " lowest (13.8) at 19.5 °C and highest at 0 °C, so it reads as wet hours needed, near"
             " Broome's 10.5 h at 20 °C; with Hill's c, the reciprocal reaches 2.42 per wet hour"
             " at 23.2 °C, an infection in 0.41 wet hours. Which one Bacchus is, is not settled.",
+            "A third print: Molitor et al. 2016 (OENO One 50:231-244, eq. 2, p. 234, read in the"
+            " page image 2026-10-20; literature/molitor2016b) sum BI(h) = 1/(84.37 - 7.238 t +"
+            " 0.1856 t²) over a day's wet hours, citing Kim et al. 2007: Kim's c with a"
+            " reciprocal. At 19.5 °C that is 0.072 a wet hour, a sum of 1 after 13.8 wet hours,"
+            " which reads Kim's I as the wet hours an infection needs.",
         ),
+    ),
+    "gonzalezdominguez2015.botrytis": Formulation(
+        "Botrytis bunch rot of grapevine, daily: conidia on inoculum sources from mycelial growth"
+        " and sporulation (temperature, moist hours, humidity), infection of inflorescences and"
+        " young clusters (stages 53-73) and of ripening berries by conidia and berry to berry"
+        " (stages 79-89), each scaled by a growth-stage susceptibility, summed into three"
+        " severity indices",
+        "González-Domínguez et al. 2015, PLoS ONE 10(10):e0140444, Eqs 1-12 (pp. 4-7) and Table 1",
+        year=2015,
+        authors=(
+            "González-Domínguez, Elisa",
+            "Caffi, Tito",
+            "Ciliberti, Nicola",
+            "Rossi, Vittorio",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "gonzalez2015_botrytis_plosone.pdf (literature/gonzalezdominguez2015); Eqs 1-12 read"
+            " in the page images 2026-10-20"
+        ),
+        doi="10.1371/journal.pone.0140444",
+        structures=("age-resistance",),
+        structures_note=(
+            "SUS1 (Eq 5), the inflorescences' and young clusters' susceptibility, is a cubic in"
+            " the growth stage that peaks near stage 65 and falls by stage 73: age resistance."
+            " SUS2 and SUS3 (Eqs 8, 11) rise with the stage as berries ripen. INF1 and INF2"
+            " (Eqs 4, 7) are a beta function of temperature times a function of wetness"
+            " duration (logistic; Gompertz), Ciliberti's form: the form of Agrarium's open"
+            " decision D33 (Magarey's structure), left untagged until it is decided, as"
+            " literature/ciliberti2015flowers leaves it. INF3 (Eq 10) is a beta in temperature"
+            " over a logistic in relative humidity; sporulation (Eq 3) a beta in temperature"
+            " times a quadratic in relative humidity. No rain or temperature threshold"
+            " triggers infection: the model assumes conidia disperse and land every day"
+            " (DISR = DEPR = 1, p. 4)."
+        ),
+        calibrated_on=(),
+        calibration_note=(
+            "Not fitted here. Eqs 2 and 4 are Ciliberti et al. 2015 (Phytopathology 105:325-333,"
+            " literature/ciliberti2015flowers), Eqs 7 and 10 Ciliberti et al. 2015"
+            " (Phytopathology 105:1090-1096, literature/ciliberti2015berries), Eq 3 Ciliberti et"
+            " al. 2015 (Aust. J. Grape Wine Res., 'accepted', not held), Eq 8 from"
+            " Deytieux-Belleau et al. 2009's data (Eur. J. Plant Pathol. 125:551-563, not held),"
+            " Eqs 5 and 11 from Ciliberti's data (S1 Appendix, not held): laboratory"
+            " inoculations, none dated by a model. None of these sources is a record here."
+            " Evaluated, not fitted, on 21 untreated epidemics in 12 vineyards, 2009-2014"
+            " (gonzalezdominguez2015.epidemics) by discriminant analysis of SEV1-SEV3 against"
+            " severity groups: 17 of 21 right, 15 of 21 cross-validated (literature/"
+            "gonzalezdominguez2015). The authors say the equations 'were not validated"
+            " against independent data'."
+        ),
+        parameters=(
+            Published("time_step", 1, "d", "p. 4", "read"),
+            Published("sporulation_window", 7, "d", "Eq 1 (the sum over i-6 to i, over 7)", "read"),
+            Published("mygr_a", 3.78, "1", "Eq 2", "read"),
+            Published("mygr_b", 0.9, "1", "Eq 2", "read"),
+            Published("mygr_c", 0.475, "1", "Eq 2", "read"),
+            Published("mygr_tmin", 0.0, "°C", "p. 4, under Eq 3", "read"),
+            Published("mygr_tmax", 40.0, "°C", "p. 4, under Eq 3", "read"),
+            Published("spor_a", 3.7, "1", "Eq 3", "read"),
+            Published("spor_b", 0.9, "1", "Eq 3", "read"),
+            Published("spor_c", 10.49, "1", "Eq 3", "read"),
+            Published("spor_rh0", -3.595, "1", "Eq 3", "read"),
+            Published("spor_rh1", 0.097, "1/%", "Eq 3", "read"),
+            Published("spor_rh2", -0.0005, "1/%2", "Eq 3", "read"),
+            Published("spor_tmax", 35.0, "°C", "p. 4, under Eq 3", "read"),
+            Published(
+                "moist_hour_rain", 0.2, "mm", "p. 4 (R >= 0.2 mm makes a moist hour)", "read"
+            ),
+            Published("moist_hour_wetness", 30, "min", "p. 4 (WD >= 30 min)", "read"),
+            Published("moist_hour_rh", 90, "%", "p. 4 (daily average RH >= 90 %)", "read"),
+            Published("inf1_a", 3.56, "1", "Eq 4", "read"),
+            Published("inf1_b", 0.99, "1", "Eq 4", "read"),
+            Published("inf1_c", 0.71, "1", "Eq 4", "read"),
+            Published("inf1_d", 1.85, "1", "Eq 4", "read"),
+            Published("inf1_e", 0.19, "1/h", "Eq 4", "read"),
+            Published("inf1_tmax", 35.0, "°C", "p. 6, under Eq 4", "read"),
+            Published("sus1_c3", -379.09, "1", "Eq 5, on GS/100", "read"),
+            Published("sus1_c2", 671.25, "1", "Eq 5", "read"),
+            Published("sus1_c1", -390.33, "1", "Eq 5", "read"),
+            Published("sus1_c0", 75.209, "1", "Eq 5", "read"),
+            Published("inf2_a", 6.416, "1", "Eq 7", "read"),
+            Published("inf2_b", 1.292, "1", "Eq 7", "read"),
+            Published("inf2_c", 0.469, "1", "Eq 7", "read"),
+            Published("inf2_gompertz_b", 2.3, "1", "Eq 7", "read"),
+            Published("inf2_gompertz_k", 0.048, "1/h", "Eq 7", "read"),
+            Published("inf2_tmax", 35.0, "°C", "p. 7, under Eq 7", "read"),
+            Published("sus2_a", 5e-17, "1", "Eq 8", "read"),
+            Published("sus2_b", 0.4219, "1", "Eq 8, per growth stage", "read"),
+            Published("inf3_a", 7.75, "1", "Eq 10", "read"),
+            Published("inf3_b", 2.14, "1", "Eq 10", "read"),
+            Published("inf3_c", 0.469, "1", "Eq 10", "read"),
+            Published("inf3_d", 35.36, "1", "Eq 10", "read"),
+            Published("inf3_e", 40.26, "1", "Eq 10, on RH/100", "read"),
+            Published("inf3_tmax", 30.0, "°C", "p. 7, under Eq 10", "read"),
+            Published("sus3_slope", 0.0546, "1", "Eq 11, per growth stage", "read"),
+            Published("sus3_intercept", -3.87, "1", "Eq 11 (capped at 1)", "read"),
+        ),
+        flags=(
+            "Can it run: yes, from daily mean temperature, mean relative humidity, rain, wetness"
+            " hours and the BBCH-like stage (Lorenz et al.); every coefficient is printed. Teq ="
+            " (T - Tmin)/(Tmax - Tmin), Tmin 0 °C throughout. Evaluated at one point each"
+            " (derived 2026-10-20): MYGR peaks at 1.01 near 19 °C, SPOR's temperature term at"
+            " 0.94 near 16.6 °C and its humidity term at 1.11 near 97 % (0.43 at 60 %); INF1"
+            " at 0.93 near 17.4 °C before the wetness term; INF2's temperature term reaches"
+            " 1.15 near 19.7 °C, above 1, and its wetness term is 0.10 at 0 h, 0.48 at 24 h;"
+            " INF3's humidity term is 0.52 at 88 % and 0.04 at 80 %; SUS1 is 0.45 at stage 53,"
+            " 1.0 at 65 and 0.5 at 73; SUS2 0.015 at 79 and 1.0 at 89; SUS3 0.44 at 79.",
+            "Latent infection and incubation are not modelled ('insufficient quantitative"
+            " information', p. 5); outputs are severity indices, not diseased area.",
+            "Rossi and Caffi are authors of engine models (Rossi 2008, Caffi 2013): a flag.",
+            "Tested on 23 untreated epidemics in Italy, France and Spain, 1997-2018, independent"
+            " of the 2015 data (Fedele et al. 2020, Plant Dis., literature/fedele2020b): 15 of 23"
+            " severity classes right (0.65), eight false alarms among 16 mild epidemics; 0.87"
+            " when latent infections, found by incubating symptomless berries, count in the"
+            " observed class. The model itself was run unchanged.",
+        ),
+        role="process",
+    ),
+    "spotts1977.black_rot_wetness": Formulation(
+        "Black rot (Guignardia bidwellii) leaf infection: the minimum leaf wetness for light"
+        " infection at each of nine constant temperatures, 10-32 °C",
+        "Spotts 1977, Phytopathology 67:1378-1381, Table 1 (p. 1379)",
+        year=1977,
+        authors=("Spotts, Robert A.",),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "spotts1977_phytopathology.pdf (literature/spotts1977); Table 1 read in the page"
+            " image 2026-10-10 and again 2026-10-20"
+        ),
+        structures=("minimum-wetness-table",),
+        structures_note=(
+            "A table of the minimum wetness for infection at each temperature: infection when"
+            " wetness exceeds a temperature-dependent minimum, the assumption Magarey's response"
+            " fits a curve to. That is the question of Agrarium's open decision D33, so it gets"
+            " a tag of its own, not Magarey's, until D33 is decided. No rain trigger."
+        ),
+        calibrated_on=("spotts1977.ohio",),
+        calibration_note=(
+            "Its own chamber inoculations: a compilation of several experiments on Concord,"
+            " Catawba, Aurore and Baco Noir, five replicates a cultivar an experiment (Table 1,"
+            " footnote a), conidia at constant temperature in a moisture chamber. No model"
+            " produced or dated the data. The dataset record also holds the vineyard studies at"
+            " Chesterville, Ohio, 1975-1976, which Table 1 was not made from."
+        ),
+        parameters=(
+            Published("min_wetness_10_0c", 24, "h", "Table 1 (p. 1379), 10.0 °C", "read"),
+            Published("min_wetness_13_0c", 12, "h", "Table 1 (p. 1379), 13.0 °C", "read"),
+            Published("min_wetness_15_5c", 9, "h", "Table 1 (p. 1379), 15.5 °C", "read"),
+            Published("min_wetness_18_5c", 8, "h", "Table 1 (p. 1379), 18.5 °C", "read"),
+            Published("min_wetness_21_0c", 7, "h", "Table 1 (p. 1379), 21.0 °C", "read"),
+            Published("min_wetness_24_0c", 7, "h", "Table 1 (p. 1379), 24.0 °C", "read"),
+            Published("min_wetness_26_5c", 6, "h", "Table 1 (p. 1379), 26.5 °C", "read"),
+            Published("min_wetness_29_0c", 9, "h", "Table 1 (p. 1379), 29.0 °C", "read"),
+            Published("min_wetness_32_0c", 12, "h", "Table 1 (p. 1379), 32.0 °C", "read"),
+            Published(
+                "no_infection_temperature", 7.0, "°C", "p. 1379, Results (none after 48 h)", "read"
+            ),
+        ),
+        flags=(
+            "Can it run: as a lookup, from hourly temperature and leaf wetness; between the"
+            " printed temperatures the table must be interpolated, which the paper does not"
+            " do. Above 32 °C nothing was tested; at 7 °C no infection after 48 h of wetness."
+            " Minimum near 26.5 °C (6 h), rising to 24 h at 10 °C and 12 h at 32 °C.",
+            "Light infection only; no severity response is printed. Plants under variable"
+            " temperature were infected significantly less than at constant temperature"
+            " (Table 2), and a 1-day dry period after inoculation reduced severity (Table 3).",
+            "The source of VitiMeteo black rot's thresholds, via Ellis et al. 1986"
+            " (literature/molitor2016); the reprint in literature/vazquezabal2019 is shifted one"
+            " row. The engine runs no black rot model.",
+        ),
+        role="process",
+    ),
+    "calonnec2018.leaf_susceptibility": Formulation(
+        "Grapevine powdery mildew on leaves of known age: infection efficiency falling"
+        " exponentially with leaf age, colony diameter a logistic step down with age, and the"
+        " probability that a leaf is still susceptible (sporulating) a logistic in age",
+        "Calonnec et al. 2018, Front. Plant Sci. 9:1808, Tables 4 and 5 (p. 8) and Results (p. 9)",
+        year=2018,
+        authors=(
+            "Calonnec, Agnes",
+            "Jolivet, Jerome",
+            "Vivin, Philippe",
+            "Schnee, Sylvain",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "q186.pdf (literature/calonnec2018; the byline read in the text 2026-10-20); Tables"
+            " 4-5 and p. 9 read in the page images 2026-10-20"
+        ),
+        doi="10.3389/fpls.2018.01808",
+        structures=("age-resistance",),
+        structures_note=(
+            "Susceptibility of leaves falling with their age in days since tagging at 3 cm:"
+            " infection efficiency I0 exp(-k age), and a logistic probability of sporulating."
+        ),
+        calibrated_on=("calonnec2018.bordeaux",),
+        calibration_note=(
+            "Its own leaf-disc inoculations (22 mm discs, 22 °C, 12:12 h; literature/"
+            "calonnec2018) on leaves from two Bordeaux vineyards, Cabernet Sauvignon (2005) and"
+            " Merlot (2009-2010), sprayed 6-20 days before sampling. No model produced or dated"
+            " the data."
+        ),
+        parameters=(
+            Published("inf_i0_cabernet", 0.606, "1", "Table 4, Inf, model M1, exp. 2-3", "read"),
+            Published("inf_k_cabernet", 0.086, "1/d", "Table 4, Inf, M1 (R² 0.57)", "read"),
+            Published("inf_i0_merlot_exp4", 0.63, "1", "Table 5, Inf, M1, exp. 4", "read"),
+            Published(
+                "inf_k_merlot_exp4", 0.095, "1/d", "Table 5, Inf, M1, exp. 4 (R² 0.74)", "read"
+            ),
+            Published("inf_i0_merlot_exp5", 0.38, "1", "Table 5, Inf, M1, exp. 5", "read"),
+            Published(
+                "inf_k_merlot_exp5", 0.067, "1/d", "Table 5, Inf, M1, exp. 5 (R² 0.54)", "read"
+            ),
+            Published("diam_m_cabernet", 4.64, "mm", "Table 4, Diam, model M2", "read"),
+            Published("diam_big_m_cabernet", 6.86, "mm", "Table 4, Diam, M2", "read"),
+            Published("diam_a50_cabernet", 8.35, "d", "Table 4, Diam, M2 (R² 0.41)", "read"),
+            Published("logit_b0", 4.12, "1", "p. 9, logistic regression, beta0", "read"),
+            Published("logit_b1", -0.20, "1/d", "p. 9, logistic regression, beta1", "read"),
+        ),
+        flags=(
+            "Can it run: yes, for infection efficiency and the probability of sporulation, from"
+            " a leaf's age in days since it reached 3 cm; the age clock must come from a growth"
+            " model (the paper: about one leaf per 21 degree-days above 10 °C). At one point"
+            " (derived 2026-10-20): Cabernet's efficiency is 0.61 at age 0 and 0.18 at 14 days;"
+            " the logit gives P = 0.8 at 13.7 days and 0.5 at 20.6 days, against the printed"
+            " 13.3 [11.4; 14.9] and 20 [18.7; 21.4] (coefficients rounded in print).",
+            "Merlot exp. 6 is printed with I0 = 2243 and k = 0.615 (Table 5), impossible for a"
+            " proportion: not taken. Sporulation per colony (models M3, M4) is printed too,"
+            " with four-parameter fits per experiment; not taken here.",
+            "Leaves were sprayed 6-20 days before sampling, so not untreated. Laboratory discs"
+            " at one temperature; no weather in the equations.",
+        ),
+        role="process",
+    ),
+    "savary2009.cluster_transfer": Formulation(
+        "Cluster disease driven by foliage disease: dx_C/dt = tc x_L (1 - x_C) between crop"
+        " stages 2 and 5 (BBCH 55-57 to 77-78), with leaf severity x_L a logistic curve in days;"
+        " fitted for downy and powdery mildew in Bordeaux",
+        "Savary et al. 2009, Phytopathology 99:930-942, Eqs 1-2 (p. 932) and Tables 4-5 (p. 937)",
+        year=2009,
+        authors=(
+            "Savary, Serge",
+            "Delbac, Lionel",
+            "Rochas, Amélie",
+            "Taisant, Guillaume",
+            "Willocquet, Laetitia",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "savary2009_phyto.pdf (literature/savary2009); Eqs 1-2 and Tables 4-5 read in the"
+            " page images 2026-10-20"
+        ),
+        doi="10.1094/PHYTO-99-8-0930",
+        structures=("bunch-susceptibility-window",),
+        structures_note=(
+            "tc is set to zero before crop stage 2 and after crop stage 5, 'due to decreasing"
+            " susceptibility of maturing clusters in both DM (21) and PM (6,8-10)' (p. 932), and"
+            " reference 21 is Kennelly et al. 2005, the source of the engine's bunch window;"
+            " the stage scale is Kennelly et al.'s too (Table 1). A fixed window of cluster"
+            " susceptibility is the engine's form, cited, not computed: kin by structure, not a"
+            " borrowed equation. Eq 1, a logistic in days, and Eq 2 have no weather in them."
+        ),
+        calibrated_on=("savary2009.bordeaux",),
+        calibration_note=(
+            "Fitted to the plot means of its own trials (savary2009.bordeaux), x_L from Eq 1's"
+            " fit to each site-year-management case (Table 4), then tc by nonlinear least"
+            " squares on the cluster severities (Table 5). Sprays in the limited and continuous"
+            " plots were at fixed crop stages, not timed by a model (literature/savary2009)."
+        ),
+        parameters=(
+            Published("tc_dm_couhins_2006_unprot", 0.029, "1/d", "Table 5", "read"),
+            Published("tc_dm_couhins_2006_limited", 0.007, "1/d", "Table 5", "read"),
+            Published("tc_dm_couhins_2007_unprot", 0.227, "1/d", "Table 5", "read"),
+            Published("tc_dm_couhins_2007_limited", 0.280, "1/d", "Table 5", "read"),
+            Published("tc_dm_latresne_2006_unprot", 0.008, "1/d", "Table 5", "read"),
+            Published("tc_dm_latresne_2007_unprot", 0.374, "1/d", "Table 5", "read"),
+            Published("tc_dm_latresne_2007_limited", 0.189, "1/d", "Table 5", "read"),
+            Published("tc_pm_couhins_2006_unprot", 0.538, "1/d", "Table 5", "read"),
+            Published("tc_pm_couhins_2006_limited", 0.039, "1/d", "Table 5", "read"),
+            Published("tc_pm_couhins_2007_unprot", 1.269, "1/d", "Table 5", "read"),
+            Published("tc_pm_couhins_2007_limited", 0.518, "1/d", "Table 5", "read"),
+            Published("tc_pm_latresne_2006_unprot", 0.050, "1/d", "Table 5", "read"),
+            Published("tc_pm_latresne_2007_unprot", 0.361, "1/d", "Table 5", "read"),
+            Published("tc_pm_latresne_2007_limited", 0.191, "1/d", "Table 5", "read"),
+            Published("r_dm_couhins_2006_unprot", 0.052, "1/d", "Table 4", "read"),
+            Published("r_dm_couhins_2007_unprot", 0.029, "1/d", "Table 4", "read"),
+            Published("r_dm_latresne_2006_unprot", 0.062, "1/d", "Table 4", "read"),
+            Published("r_dm_latresne_2007_unprot", 0.028, "1/d", "Table 4", "read"),
+            Published("r_pm_couhins_2006_unprot", 0.068, "1/d", "Table 4", "read"),
+            Published("r_pm_couhins_2007_unprot", 0.109, "1/d", "Table 4", "read"),
+            Published("r_pm_latresne_2006_unprot", 0.025, "1/d", "Table 4", "read"),
+            Published("r_pm_latresne_2007_unprot", 0.070, "1/d", "Table 4", "read"),
+        ),
+        flags=(
+            "Can it run: as a coupling, given a leaf-severity series from any model and the"
+            " dates of crop stages 2 (BBCH 55-57) and 5 (77-78); tc is per day per unit of leaf"
+            " severity, severities as proportions. It varies tenfold between years (downy"
+            " mildew at Couhins 0.029 in 2006, 0.227 in 2007), so it is a site-year parameter,"
+            " not a constant. Latresne 2006 limited did not converge (NC).",
+            "Not a weather model: the logistic leaf curve (Eq 1) and the transfer (Eq 2) are"
+            " fitted per case. The 70 logistic regressions of cluster thresholds on leaf"
+            " severity (Eq 3) are in literature/savary2009, not recorded here.",
+        ),
+        role="process",
+    ),
+    "kast2010.oidiag": Formulation(
+        "OiDiag-2.2, Weinsberg's powdery mildew index: a daily index, an ontogenic term in days"
+        " since the three-leaf stage times a climatic term from daily mean temperature, hours"
+        " of humidity above 65 and 80 %, rain and leaf wetness, as a 7-day sliding mean that"
+        " sets the next spray interval by fungicide class",
+        "Kast & Bleyer 2010, Proc. 6th Int. Workshop on Grapevine Downy and Powdery Mildew,"
+        " Bordeaux, pp. 151-152 of the proceedings (Table 1 and the index equations)",
+        year=2010,
+        authors=("Kast, W. K.", "Bleyer, K."),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "gdpm2010_proceedings_6th_bordeaux.pdf (literature/kast2010); p. 152 read in the page"
+            " image 2026-10-20"
+        ),
+        structures=("daily-weather-risk-index", "age-resistance"),
+        structures_note=(
+            "Id = CL x ON, a 7-day mean in %. CL from T = ((0.11 TM - 0.0025 TM^2) - 0.6) x"
+            " 1.63, H = (H80 + 0.7 H65)/24 and a rain-and-wetness term R that counts against"
+            " the epidemic, bounded to 0-1.1. ON, a function of days since the three-leaf"
+            " stage that peaks about three weeks later and then falls: age resistance. Not the"
+            " UC Davis index's form (hours in a temperature band)."
+        ),
+        calibration_note=(
+            "Not recorded as datasets. T is 'a function developed that best fitted to the data"
+            " of Delp (1954) and Fessler and Kassemeyer (1995)' by multiple regression; ON"
+            " follows Stark-Urnau and Kast (1999) for Württemberg and Baden; H is OiDiag 1.0's"
+            " (Kast 1997). None of these is a record here; no model dated those data, as far as"
+            " the paper says."
+        ),
+        parameters=(
+            Published("t_a", 0.11, "1/°C", "p. 152, temperature index", "read"),
+            Published("t_b", -0.0025, "1/°C2", "p. 152, temperature index", "read"),
+            Published("t_c", -0.6, "1", "p. 152, temperature index", "read"),
+            Published("t_scale", 1.63, "1", "p. 152, temperature index", "read"),
+            Published("h_weight_65_80", 0.7, "1", "p. 152, H = (H80 + H65 x 0.7)/24", "read"),
+            Published("h_weight_80", 1.0, "1", "p. 152", "read"),
+            Published("r_rain_min", 2.5, "mm/d", "p. 152, rain below it neglected", "read"),
+            Published("r_rain_heavy", 10.0, "mm/d", "p. 152, LWET x 3 above it", "read"),
+            Published("r_weight", 1.5, "1/h", "p. 152, R1 = LWET x 1.5", "read"),
+            Published("r_weight_heavy", 3.0, "1/h", "p. 152, R = LWET x 3", "read"),
+            Published("cl_max", 1.1, "1", "p. 152, climatic index bounded to 0-1.1", "read"),
+            Published("on_d3", 0.0002, "1", "p. 152, ON's D^3 term", "read"),
+            Published("on_sqrt", 176.6, "1", "p. 152, ON's SQRT(D) term", "read"),
+            Published("on_ln", -114.9, "1", "p. 152, ON's LN(D) term (printed '114,9*')", "read"),
+            Published("on_d", -14.0, "1", "p. 152, ON's D term", "read"),
+            Published("on_c", -66.0, "1", "p. 152, ON's constant; all over 100", "read"),
+            Published("sliding_window", 7, "d", "p. 152, sliding mean", "read"),
+        ),
+        flags=(
+            "Cannot run as printed: how T, H and R combine into the climatic index CL is not"
+            " stated (p. 152 gives the three terms and the 0-1.1 bound only). ON is printed"
+            " with unbalanced parentheses and '114,9*'; read as (0.0002 D^3 + 176.6 sqrt(D) -"
+            " 114.9 ln(D) - 14.0 D - 66.0)/100 it gives 0.97 at day 1, 0.74 at day 5, 1.01 at"
+            " day 20, 0.58 at day 50 and turns negative after about day 76 (derived"
+            " 2026-10-20). T peaks at 0.99 near 22 °C and is negative below about 6 °C.",
+            "Table 1 maps the index (0-20, 21-40, 41-60, 61-80, >80 %) to the days until the next"
+            " spray for four fungicide classes, e.g. wettable sulfur 14, 12, 8, 7, 6 days and the"
+            " class-4 products 23, 18, 15, 12, 11 days.",
+            "The first-spray rule from 53 years of Weinsberg records (three-leaf date + (1.3T -"
+            " 5D + 12) days) gives -26 days for the paper's own example (literature/kast2010).",
+        ),
+        role="process",
+    ),
+    "moyer2014.ascospore_release": Formulation(
+        "Grapevine powdery mildew: the season's cumulative share of ascospores released from"
+        " overwintered cleistothecia as a complementary log-log of degree-days (base 0 °C from"
+        " 1 January) and the count of putative discharge events (days with rain >= 2.5 mm and"
+        " a maximum above 0 °C)",
+        "Moyer et al. 2014, Am. J. Enol. Vitic. 65:315-324, Eq. 2 (p. 319)",
+        year=2014,
+        authors=(
+            "Moyer, Michelle M.",
+            "Gadoury, David M.",
+            "Wilcox, Wayne F.",
+            "Seem, Robert C.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="moyer_2014.pdf (the 2026-10-20 drop); Eq. 2 read in the page image (p. 319)",
+        doi="10.5344/ajev.2014.13111",
+        structures=("ascospore-release-rule", "thermal-time-release-curve"),
+        structures_note=(
+            "Release events are days with rain >= 2.5 mm and a maximum above 0 °C, a threshold"
+            " credited to Gadoury and Pearson 1990 (l. 169-170): a rain-temperature rule for"
+            " release, the form of Thiessen's (the engine's) rule, whose 2.5 mm it shares. Their"
+            " count and a heat sum enter a cumulative curve, 1 - exp(-exp(a + b DD0 + c PDE))."
+        ),
+        calibrated_on=("moyer2014.cleistothecia",),
+        calibration_note=(
+            "Fitted (JMP, complementary log-log link) to the New York populations overwintered"
+            " in New York (l. 185-187), R² 0.96, RMSE 0.08, in-sample; tested on the other"
+            " sites: NJ R² 0.87, WA 0.75, NC 0.80; NY with non-NY populations 0.71 (l. 340-343)."
+            " Release was assayed in a controlled environment from field-stored samples, so the"
+            " data are observations; no model dated them. The degree-day base and start and the"
+            " rain threshold were chosen by fit among Gadoury and Pearson 1990's candidates."
+        ),
+        parameters=(
+            Published("intercept", -3.335, "1", "Eq. 2, p. 319", "read"),
+            Published("dd0_coefficient", 0.00222, "1/°C d", "Eq. 2, p. 319", "read"),
+            Published("pde_coefficient", 0.150287, "1/event", "Eq. 2, p. 319", "read"),
+            Published("dd_base", 0.0, "°C", "p. 319, DD0 base 0 °C from 1 January", "read"),
+            Published("pde_rain", 2.5, "mm/d", "p. 319, rainfall >= 2.5 mm", "read"),
+            Published("pde_tmax", 0.0, "°C", "p. 319, daily maximum > 0 °C", "read"),
+        ),
+        flags=(
+            "Can it run: yes, from daily rain and temperature from 1 January; the degree-day"
+            " method (daily mean or max-min) is not stated. Eq. 2 is labelled '% Ascospore"
+            " release' but gives a fraction 0-1. At one point (derived 2026-10-20): DD0 500 with"
+            " 5 events gives 0.21, 800 with 8 gives 0.50, 1,000 with 10 gives 0.77.",
+            "Release is cumulative season-total, not a daily count: half the season's"
+            " ascospores came before budbreak in 85 % of site-years (l. 447-449), from 42 days"
+            " before to 9 days after Chardonnay budbreak in New York. An early (9 Sept) cohort"
+            " released 50 % up to 21 days before a late (20 Oct) one (l. 358-360).",
+            "Gadoury, Wilcox and Seem are authors of the engine's Kennelly pieces: a flag.",
+        ),
+        role="process",
+    ),
+    "oriolani2015.powdery_rate": Formulation(
+        "Grapevine powdery mildew on clusters, Mendoza: the probability that the daily"
+        " increase in incidence is severe, moderate or nil, an ordinal logistic of the 15 days"
+        " before: two-day spells with at least 9 h at 21.0-29.4 °C (and RH above 17 %) less"
+        " those with 9 h outside it and dry, plus hours of light rain",
+        "Oriolani et al. 2015, Rev. FCA UNCuyo 47(2):197-211, Table 3 (p. 204), models I-III",
+        year=2015,
+        authors=(
+            "Oriolani, Enrique J. A.",
+            "Moschini, Ricardo C.",
+            "Salas, Sergio",
+            "Martinez, Malvina I.",
+            "Banchero, Santiago",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="oriolani_2015.pdf (the 2026-10-20 drop); Table 3 and its definitions read in"
+        " the page image (p. 204)",
+        structures=("temperature-hours-mildew-index",),
+        structures_note=(
+            "Its predictor counts days with at least 9 h in a 21.0-29.4 °C band (NPp2) against"
+            " days with 9 h at or below 21.0 or at or above 32.5 °C and RH below 80 % (NPn2):"
+            " hours in a temperature band, the UC Davis index's form, with nearly its band"
+            " (21.1-29.4 °C; the paper compares, l. 605-612, and does not say it borrows)."
+        ),
+        calibrated_on=("oriolani2015.mendoza",),
+        calibration_note=(
+            "Stepwise ordinal logistic regression (SAS PROC LOGISTIC) on 40 daily increment"
+            " rates from six seasons at one untreated Chenin plot (oriolani2015.mendoza);"
+            " accuracy 87.5, 90.0 and 92.5 % for models I-III, in-sample. Classes cut at the"
+            " 25th and 50th percentiles (0 and 0.795 % a day). A 2000/01 season (11 dates) is"
+            " shown without an accuracy. Incidence was observed; no model dated it."
+        ),
+        parameters=(
+            Published("m1_b0_severe", -0.3378, "1", "Table 3, model I", "read"),
+            Published("m1_b0_moderate_or_more", 3.1954, "1", "Table 3, model I", "read"),
+            Published("m1_dif2", 0.6825, "1/period", "Table 3, model I", "read"),
+            Published("m3_b0_severe", -0.7944, "1", "Table 3, model III", "read"),
+            Published("m3_b0_moderate_or_more", 3.2169, "1", "Table 3, model III", "read"),
+            Published("m3_dif2", 0.7626, "1/period", "Table 3, model III", "read"),
+            Published("m3_fpr2", 0.2314, "1/h", "Table 3, model III (hours 1-6 mm)", "read"),
+            Published("band_low", 21.0, "°C", "Table 3 footnote, NPp2", "read"),
+            Published("band_high", 29.4, "°C", "Table 3 footnote, NPp2", "read"),
+            Published("hot_limit", 32.5, "°C", "Table 3 footnote, NPn2", "read"),
+            Published("rh_positive", 17, "%", "Table 3 footnote, NPp2 (HRh > 17 %)", "read"),
+            Published("rh_negative", 80, "%", "Table 3 footnote, NPn2 (HRh < 80 %)", "read"),
+            Published("hours_per_day", 9, "h", "Table 3 footnote", "read"),
+            Published(
+                "window", 15, "d", "text l. 31 and 254, the 15 days before each observation", "read"
+            ),
+            Published(
+                "severe_rate_cut",
+                0.795,
+                "%/d",
+                "text l. 186-192, the 50th percentile of 40 rates",
+                "read",
+            ),
+        ),
+        flags=(
+            "Can it run: yes, from hourly temperature, humidity and rain at the canopy; PrS from"
+            " the first equation, PrMac from the second, PrM = PrMac - PrS, PrN = 1 - PrMac; the"
+            " class with the largest probability is the prediction. Model III without its"
+            " humidity term fell to 80 % (l. 574-577). One plot, 40 points, in-sample.",
+            "The printed RH threshold for a positive hour is 17 % (Table 3 footnote, page"
+            " image), not a misprint the paper corrects; Mendoza is arid.",
+        ),
+        role="process",
+    ),
+    "lewis2017.residue_dt50": Formulation(
+        "Fungicide residue on grapevine leaves and berries falling first-order with time, R(t) ="
+        " R0 exp(-ln 2 t / DT50), with DT50 per active substance from the PPDB plant"
+        " dissipation data set",
+        "Lewis & Tzilivakis 2017, Data 2:28 (the method, l. 136-142) and its supplementary file"
+        " (the values; grape rows)",
+        year=2017,
+        authors=("Lewis, Kathleen", "Tzilivakis, John"),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "lewis_2017.pdf and its supplementary spreadsheet (the 2026-10-20 drop; literature/"
+            "lewis2017), grape rows read 2026-10-20"
+        ),
+        doi="10.3390/data2030028",
+        structures=("first-order-residue-decay",),
+        calibrated_on=("lewis2017.ppdb_dissipation",),
+        calibration_note=(
+            "The values are the cited studies' measurements, collated; where a study printed only"
+            " concentrations the half-life was computed by first-order kinetics, Ct = C0 e^(-kt),"
+            " DT50 = ln 2/k (l. 136-142; the file marks such rows 'Calculated'). The leaf values"
+            " for folpet and mancozeb come from Cabras et al. 2001 (J. Environ. Sci. Health B"
+            " 36:609-618, simulated rain on grapes and vine leaves, Sardinia; not held), those for"
+            " propiconazole and proquinazid from Mahmoud et al. (Egypt; not held). No model"
+            " produced the data."
+        ),
+        parameters=(
+            Published(
+                "dt50_folpet_leaves",
+                14.12,
+                "d",
+                "file row 1502 (PPDB 354), on leaves, Italy; range 9.5-18.73",
+                "read",
+            ),
+            Published(
+                "dt50_mancozeb_leaves",
+                7.51,
+                "d",
+                "file row 1839 (PPDB 424), on leaves, Italy; range 5.78-9.24",
+                "read",
+            ),
+            Published(
+                "dt50_propiconazole_leaves",
+                2.07,
+                "d",
+                "file row 2366 (PPDB 551), in and on leaves, Egypt",
+                "read",
+            ),
+            Published(
+                "dt50_proquinazid_leaves",
+                1.26,
+                "d",
+                "file row 2391 (PPDB 555), in and on leaves, Egypt",
+                "read",
+            ),
+        ),
+        flags=(
+            "Can it run: yes, given a deposit and an active substance with a value; the data hold"
+            " four grape-leaf half-lives and grape-fruit ones for about thirty fungicides. Means"
+            " of the fruit rows' means (derived 2026-10-20): azoxystrobin 13.0 d (4 rows),"
+            " boscalid 10.9, captan 12.8, chlorothalonil 12.5, cyprodinil 15.5 (3), dimethomorph"
+            " 14.8, famoxadone 15.2 (2), fenhexamid 14.8, fludioxonil 17.5 (3), fluopicolide 11.2,"
+            " folpet 4.9, iprodione 9.1, kresoxim-methyl 7.0, mancozeb 9.6 (3), mandipropamid 2.2,"
+            " metalaxyl 7.3 (2), metalaxyl-M 3.5, myclobutanil 51.5 (10.5 and 92.4),"
+            " penconazole 12.3 (3), pyraclostrobin 5.4, pyrimethanil 24.1 (5), tebuconazole 16.3"
+            " (4), trifloxystrobin 9.2 (2).",
+            "Dissipation, not loss of protection: it lumps degradation, wash-off by the studies'"
+            " own weather and growth dilution of fruit. Copper and sulfur are not in the grape"
+            " rows. Leaf half-lives exist for two downy mildew protectants only.",
+        ),
+        role="process",
+    ),
+    "erincik2003.phomopsis_infection": Formulation(
+        "Phomopsis cane and leaf spot of grapevine: lesions per leaf and internode severity after"
+        " a wet period, Y = alpha tau^beta (1 - tau)^gamma W^delta, tau = (T - Tmin)/(Tmax -"
+        " Tmin), fitted for Catawba and Seyval",
+        "Erincik et al. 2003, Plant Dis. 87:832-840, eq. 2 and Tables 1-2 (pp. 835-836)",
+        year=2003,
+        authors=("Erincik, O.", "Madden, L. V.", "Ferree, D. C.", "Ellis, M. A."),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "10-1094-pdis-2003-87-7-832.pdf (literature/erincik2003); Tables 1-2 and Fig. 3 read"
+            " in the page images 2026-10-20, and the same tables in Erincik's 2002 thesis"
+            " (literature/erincik2002, pp. 74-75)"
+        ),
+        doi="10.1094/PDIS.2003.87.7.832",
+        structures=("analytis-beta-wetness",),
+        structures_note=(
+            "The generalized Analytis Beta (cited to Grove et al. 1985 and Analytis 1977): a"
+            " single-peaked temperature response times a power of wetness duration. That is the"
+            " question of Agrarium's open D33 (it names Erincik 2003), so it has a tag of its own,"
+            " not Magarey's, until D33 is decided."
+        ),
+        calibrated_on=("erincik2003.ohio",),
+        calibration_note=(
+            "Fitted by least squares on log Y to the means across three replicate chamber runs"
+            " (Tables 1-2, 'Mean' rows), Tmin 4.95 and Tmax 35.5 °C set from Figs 1-2 before the"
+            " fit; tested against natural-rain field inoculations, 2000-2001 (17-19 per vineyard),"
+            " r above 0.71 in all but one case (the thesis: two). No model produced or dated the"
+            " data."
+        ),
+        parameters=(
+            Published(
+                "catawba_leaf_log10_alpha", 1.54, "1", "Table 1, leaf, Mean (R² 0.90)", "read"
+            ),
+            Published("catawba_leaf_beta", 1.84, "1", "Table 1, leaf, Mean (R² 0.90)", "read"),
+            Published("catawba_leaf_gamma", 2.58, "1", "Table 1, leaf, Mean (R² 0.90)", "read"),
+            Published("catawba_leaf_delta", 1.43, "1", "Table 1, leaf, Mean (R² 0.90)", "read"),
+            Published(
+                "catawba_internode_log10_alpha",
+                1.58,
+                "1",
+                "Table 1, internode, Mean (R² 0.85)",
+                "read",
+            ),
+            Published(
+                "catawba_internode_beta", 2.73, "1", "Table 1, internode, Mean (R² 0.85)", "read"
+            ),
+            Published(
+                "catawba_internode_gamma", 3.68, "1", "Table 1, internode, Mean (R² 0.85)", "read"
+            ),
+            Published(
+                "catawba_internode_delta", 1.5, "1", "Table 1, internode, Mean (R² 0.85)", "read"
+            ),
+            Published(
+                "seyval_leaf_log10_alpha", 1.79, "1", "Table 2, leaf, Mean (R² 0.88)", "read"
+            ),
+            Published("seyval_leaf_beta", 1.53, "1", "Table 2, leaf, Mean (R² 0.88)", "read"),
+            Published("seyval_leaf_gamma", 1.67, "1", "Table 2, leaf, Mean (R² 0.88)", "read"),
+            Published("seyval_leaf_delta", 1.04, "1", "Table 2, leaf, Mean (R² 0.88)", "read"),
+            Published(
+                "seyval_internode_log10_alpha",
+                2.12,
+                "1",
+                "Table 2, internode, Mean (R² 0.76)",
+                "read",
+            ),
+            Published(
+                "seyval_internode_beta", 3.13, "1", "Table 2, internode, Mean (R² 0.76)", "read"
+            ),
+            Published(
+                "seyval_internode_gamma", 5.31, "1", "Table 2, internode, Mean (R² 0.76)", "read"
+            ),
+            Published(
+                "seyval_internode_delta", 1.28, "1", "Table 2, internode, Mean (R² 0.76)", "read"
+            ),
+            Published("tmin", 4.95, "°C", "p. 835, text", "read"),
+            Published("tmax", 35.5, "°C", "p. 835, text", "read"),
+        ),
+        flags=(
+            "Can it run: yes, per wet period, from its mean temperature and duration. The"
+            " tabulated alpha is 'log-transformed' with no base printed; base 10 reproduces the"
+            " paper's own numbers (derived 2026-10-20): Catawba leaves at 18 °C, 30.1 lesions"
+            " after 7.4 h (printed: 30 needs 7.4 h) and 124.8 after 20 h (Fig. 3, about 125);"
+            " Seyval at 20 °C, 29.9 after 4.2 h. Optima 17.7 °C (Catawba leaf) and 19.6 °C"
+            " (Seyval leaf; printed 20).",
+            "Response is lesion count or internode severity, not an infection probability; Y is"
+            " unbounded above, so wetness beyond 20 h (the longest tested) extrapolates.",
+            "Madden and Ellis are authors of the engine's Lalancette bound, Madden of its"
+            " sampling bound: flags.",
+        ),
+        role="process",
+    ),
+    "franceschi2020.rater_error": Formulation(
+        "A rater's visual estimate of leaf disease severity: mean error linear and standard"
+        " deviation quadratic in the actual severity S (%), unaided and with a standard area"
+        " diagram (SAD) set, fitted on soybean rust",
+        "Franceschi et al. 2020, Plant Pathol. 69:495-505, Table 1 (p. 500)",
+        year=2020,
+        authors=(
+            "Franceschi, Vinicius T.",
+            "Alves, Kaique S.",
+            "Mazaro, Sergio M.",
+            "Godoy, Cláudia V.",
+            "Duarte, Henrique S. S.",
+            "Del Ponte, Emerson M.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked=(
+            "franceschi_2020.pdf (the 2026-10-20 drop); Table 1 read in the page image (p. 500)"
+        ),
+        doi="10.1111/ppa.13148",
+        structures=("rater-severity-error",),
+        structures_note=(
+            "Estimate = S + bias(S) with spread sd(S): how a scout's severity number departs from"
+            " the truth. Not detection: the engine's `cannon2001.sensitivity` is whether a scout"
+            " sees a lesion at all (detection-sensitivity)."
+        ),
+        calibrated_on=("franceschi2020.soybean_raters",),
+        calibration_note=(
+            "Fitted to 17-19 raters' estimates per condition on 50 leaflet images whose 'actual'"
+            " severity came from a discriminant function on RGB samples, 'assumed to best"
+            " represent' severity (l. 130-132): an image-analysis reference, not a model of the"
+            " disease. Soybean rust, inexperienced raters (students)."
+        ),
+        parameters=(
+            Published(
+                "unaided_bias_a", 1.145, "% points", "Table 1, unaided, mu = S + a + b S", "read"
+            ),
+            Published("unaided_bias_b", 0.1002, "1", "Table 1, unaided", "read"),
+            Published(
+                "unaided_sd_c",
+                -1.833,
+                "% points",
+                "Table 1, unaided, sigma = c + d S + e S²",
+                "read",
+            ),
+            Published("unaided_sd_d", 0.7794, "1", "Table 1, unaided", "read"),
+            Published("unaided_sd_e", -0.007155, "1/%", "Table 1, unaided", "read"),
+            Published("oldsad_bias_a", -1.039, "% points", "Table 1, Old SAD", "read"),
+            Published("oldsad_bias_b", -0.11694, "1", "Table 1, Old SAD", "read"),
+            Published("oldsad_sd_c", -0.114, "% points", "Table 1, Old SAD", "read"),
+            Published("oldsad_sd_d", 0.6151, "1", "Table 1, Old SAD", "read"),
+            Published("oldsad_sd_e", -0.006718, "1/%", "Table 1, Old SAD", "read"),
+            Published("newsad_bias_a", 1.411, "% points", "Table 1, New SAD", "read"),
+            Published("newsad_bias_b", -0.03738, "1", "Table 1, New SAD", "read"),
+            Published("newsad_sd_c", 1.061, "% points", "Table 1, New SAD", "read"),
+            Published("newsad_sd_d", 0.199, "1", "Table 1, New SAD", "read"),
+            Published("newsad_sd_e", -0.001925, "1/%", "Table 1, New SAD", "read"),
+        ),
+        flags=(
+            "Can it run: yes, as an observation operator drawing a severity estimate around the"
+            " truth. At one point (derived 2026-10-20): unaided at S = 20 % the mean estimate is"
+            " 23.1 % with sd 10.9; at 50 %, 56.2 % with sd 19.2. The unaided sd is negative"
+            " below about S = 2.4 % (the quadratic's root), so low severities need a floor; the"
+            " New SAD's sd stays positive (1.26 at 1 %).",
+            "Soybean leaflets, not vine leaves, and students, not trained scouts; the paper's"
+            " simulation shows aided raters need half as many leaflets for the same power"
+            " (literature/franceschi2020). The rater error of grapevine downy mildew estimates is"
+            " not measured in any held source.",
+        ),
+        role="observation",
+    ),
+    "fantke2014.plant_dissipation": Formulation(
+        "Pesticide dissipation half-life on plants at a temperature T: HL(T) = HL20 exp(beta (T -"
+        " 20 °C)), beta from 1,030 half-lives with reported air temperature, and HL20 per substance"
+        " for 333 pesticides (an average plant, field conditions)",
+        "Fantke et al. 2014, Environ. Sci. Technol. 48:8588-8602, Eqs 1-4 (p. 8589), Results 3.2"
+        " (p. 8591) and Table 1",
+        year=2014,
+        authors=("Fantke, Peter", "Gillespie, Brenda W.", "Juraske, Ronnie", "Jolliet, Olivier"),
+        authors_complete=True,
+        authors_from="read",
+        checked="fantke_2014.pdf (the 2026-10-20 drop, a Wayback capture); pp. 8589, 8591 and"
+        " 8595 read in the page images 2026-10-20",
+        doi="10.1021/es500434p",
+        structures=("first-order-residue-decay",),
+        structures_note=(
+            "Log half-life linear in substance, plant, cold storage and temperature (Eq 1); a"
+            " first-order decay whose rate rises with temperature (Q10 1.22)."
+        ),
+        calibrated_on=("fantke2013.halflives",),
+        calibration_note=(
+            "Model I (temperature) fitted to 1,030 half-lives with reported temperature (R²adj"
+            " 0.638, RMSE 0.27); Model II (HL20 per substance) to all 4,442, with missing"
+            " temperatures imputed (R²adj 0.458). The collated half-lives overlap the PPDB's"
+            " (`lewis2017.ppdb_dissipation`, which checked its set against them); both are"
+            " measured, not modelled."
+        ),
+        parameters=(
+            Published("beta_t", -0.01995, "1/K", "p. 8591, Model I (-1.995e-2 per K)", "read"),
+            Published("q10", 1.22, "1", "p. 8591", "read"),
+            Published("activation_energy", 14.25, "kJ/mol", "p. 8591", "read"),
+            Published("t_ref", 293.16, "K", "p. 8589, under Eq 1", "read"),
+            Published("hl20_azoxystrobin", 3.53, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_boscalid", 6.63, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_captan", 4.45, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_chlorothalonil", 5.02, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_cymoxanil", 1.61, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_dimethomorph", 5.14, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_famoxadone", 5.63, "d", "Table 1 (page image, p. 8595)", "read"),
+            Published("hl20_fenhexamid", 7.7, "d", "Table 1 (page image, p. 8595)", "read"),
+            Published("hl20_fludioxonil", 5.24, "d", "Table 1 (page image, p. 8595)", "read"),
+            Published("hl20_fluopicolide", 8.16, "d", "Table 1 (page image, p. 8595)", "read"),
+            Published("hl20_folpet", 5.19, "d", "Table 1 (page image, p. 8595)", "read"),
+            Published("hl20_iprodione", 6.92, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_mancozeb", 4.69, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_mandipropamid", 3.46, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_metalaxyl", 5.81, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_metalaxyl_m", 3.74, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_myclobutanil", 4.35, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_penconazole", 8.06, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_propiconazole", 5.44, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_tebuconazole", 7.67, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_tetraconazole", 5.27, "d", "Table 1 (text layer)", "read"),
+            Published("hl20_trifloxystrobin", 3.72, "d", "Table 1 (text layer)", "read"),
+        ),
+        flags=(
+            "Can it run: yes, for any of 333 substances, from the day's air temperature; HL20 is"
+            " for an average plant, not grapevine, and plant-specific corrections are in its SI"
+            " (not held). The natural logarithm is meant: Q10 = exp(-10 beta) = 1.22 as printed,"
+            " which base 10 would not give (derived 2026-10-20). At 30 °C half-lives are 18 %"
+            " shorter than at 20 °C, at 10 °C 22 % longer.",
+            "Dissipation lumps degradation, wash-off and growth dilution in the source studies;"
+            " for vine leaves `lewis2017.residue_dt50` holds measured values (folpet 14.1 d,"
+            " mancozeb 7.5 d), longer than these average-plant HL20s (5.19, 4.69 d).",
+        ),
+        role="process",
     ),
 }

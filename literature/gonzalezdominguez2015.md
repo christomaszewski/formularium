@@ -8,7 +8,7 @@ diseases: [grey mould]
 crops: [grapevine]
 regions: [Italy]
 processes: [infection, sporulation, host susceptibility]
-records: []
+records: [gonzalezdominguez2015.botrytis]
 datasets: [gonzalezdominguez2015.epidemics]
 files: [gonzalez2015_botrytis_plosone.pdf]
 ---
@@ -33,3 +33,16 @@ files: [gonzalez2015_botrytis_plosone.pdf]
 ## Bearing (2026-10-10)
 
 - For Cooptera: a Botrytis model independent of Broome's, with 21 epidemics of data.
+
+## Bearing (2026-10-20)
+
+- Recorded as `gonzalezdominguez2015.botrytis`, with Eqs 1-12 read in the page images and
+  each evaluated at one point (the record's first flag). It can run from daily weather and
+  the growth stage. INF2's temperature term reaches 1.15 at its optimum, above 1.
+- Kin report against the engine's list (Agrarium `engine_models.json`, cooptera@6f8d0a2):
+  no kin; flags for Rossi and Caffi. Expected: not kin to `broome1995.botrytis`, since its
+  beta-by-wetness infection terms wait on D33 untagged, as Ciliberti's do.
+- For Agrarium: a Botrytis truth candidate for M7 independent of the engine's Broome
+  index by every recorded link. If D33 is decided as recommended (Magarey's structure), it
+  becomes kin to the engine's Magarey and Brischetto pieces, not to Broome's.
+

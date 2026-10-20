@@ -8,8 +8,8 @@ diseases: [Phomopsis cane and leaf spot]
 crops: [grapevine]
 regions: [Ohio]
 processes: [infection]
-records: []
-datasets: []
+records: [erincik2003.phomopsis_infection]
+datasets: [erincik2003.ohio]
 files: [10-1094-pdis-2003-87-7-832.pdf]
 ---
 
@@ -38,3 +38,12 @@ From the Ohio State University (OARDC, Wooster). Phomopsis cane and leaf spot, n
 
 - **A flag now, not kin** (D27). Its form is the generalized Analytis Beta; Agrarium's D33 recommends tagging it with Magarey's structure, which would hold it out by form. Until decided it is clear of the engine.
 - It shows the Ohio laboratory's standard infection form, the one most of its later papers reuse.
+
+## Bearing (2026-10-20)
+
+- Recorded as `erincik2003.phomopsis_infection` with the dataset `erincik2003.ohio`; Tables
+  1-2 and Fig. 3 read in the page images. The log base of alpha, unprinted, is 10: it
+  reproduces the paper's 30 lesions after 7.4 h at 18 °C and Fig. 3's 125 after 20 h. New
+  tag `analytis-beta-wetness`, kept apart from Magarey's until D33 is decided. Kin report
+  (cooptera@6f8d0a2): no kin, Madden flags, as expected.
+

@@ -1214,4 +1214,62 @@ DATASETS: dict[str, Dataset] = {
         " discriminant analysis of the model's outputs is fitted to them",
         "read",
     ),
+    "savary2009.bordeaux": Dataset(
+        "Downy and powdery mildew severity on leaves and clusters of Cabernet franc at seven"
+        " crop stages (53-89), unprotected, limited and continuous protection, six replicates,"
+        " at Couhins and Latresne (Bordeaux), 2006 and 2007, with on-site weather",
+        "Savary et al. 2009, Phytopathology 99:930-942 (read 2026-10-13; Tables 4-5 in the page"
+        " images 2026-10-20): its logistic leaf curves and cluster-transfer coefficients are"
+        " fitted to them",
+        "read",
+    ),
+    "moyer2014.cleistothecia": Dataset(
+        "Season-total ascospore release from Erysiphe necator cleistothecia collected in New"
+        " York and stored outdoors at Geneva NY, Chatsworth NJ, Prosser WA and North Carolina,"
+        " assayed through winter and spring, 2005-2009, with site weather; and Chardonnay fruit"
+        " severity against cleistothecia per vine at Geneva, 2002-2003",
+        "Moyer et al. 2014, Am. J. Enol. Vitic. 65:315-324 (read 2026-10-20): its release model"
+        " (Eq. 2) is fitted to the New York populations overwintered in New York",
+        "read",
+    ),
+    "oriolani2015.mendoza": Dataset(
+        "Weekly powdery mildew incidence on Chenin clusters from flowering to veraison in one"
+        " untreated plot at EEA INTA Mendoza, six seasons (2001/02-2009/10), with hourly canopy"
+        " weather; 40 daily increment rates classed nil, moderate or severe",
+        "Oriolani et al. 2015, Rev. FCA UNCuyo 47(2):197-211 (read 2026-10-20): its ordinal"
+        " logistic models are fitted to them",
+        "read",
+    ),
+    "lewis2017.ppdb_dissipation": Dataset(
+        "Measured dissipation half-lives (DT50, min, max and mean, days) of pesticides in and on"
+        " plant matrices, 2,782 rows from 1,390 studies (1980-2017), with plant, matrix, in or on,"
+        " field or covered, place and reference; 165 grape rows (139 fruit, 24 leaves)",
+        "Lewis & Tzilivakis 2017, Data 2:28, supplementary file (CC-BY), from a Wayback capture of"
+        " MDPI's file (read 2026-10-20); values from the cited studies, first-order where computed",
+        "read",
+    ),
+    "erincik2003.ohio": Dataset(
+        "Phomopsis viticola lesions per leaf and internode severity on potted Catawba and Seyval"
+        " after inoculation at 5-35 °C and 5-20 h of wetness, three replicate runs, 1998-1999;"
+        " and natural-rain field inoculations in two Ohio vineyards, 2000-2001",
+        "Erincik et al. 2003, Plant Dis. 87:832-840 (read 2026-10-08; Tables 1-2 in the page"
+        " images 2026-10-20), and Erincik's 2002 thesis: the generalized Beta model is fitted to"
+        " the chamber data and tested on the field inoculations",
+        "read",
+    ),
+    "franceschi2020.soybean_raters": Dataset(
+        "Visual severity estimates by 37 inexperienced raters (unaided, then aided by an old or"
+        " a new standard area diagram set) on 50 soybean rust leaflet images of 0.25-84 %"
+        " severity, against image-analysis severity",
+        "Franceschi et al. 2020, Plant Pathol. 69:495-505 (read 2026-10-20): the rater-error"
+        " models of its Table 1 are fitted to them; files on OSF (3zmv8), licence not printed",
+        "read",
+    ),
+    "fantke2013.halflives": Dataset(
+        "4,442 measured pesticide dissipation half-lives in plants (333 substances, 183 plants),"
+        " 1,030 of them with the study's mean air temperature, collated from the literature",
+        "Fantke & Juraske 2013, Environ. Sci. Technol. 47 (not held), as used by Fantke et al. 2014"
+        " (read 2026-10-20), whose temperature and half-life regressions are fitted to them",
+        "trail",
+    ),
 }
