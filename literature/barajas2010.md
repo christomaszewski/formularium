@@ -146,3 +146,23 @@ dates and its leaf area at veraison, not for the yield or grape quality.
   not judged against any assumption.
 - **Allometry only:** the shoot-length lines and the midrib equation are leaf-area-from-size
   fits with no time term, so no record.
+
+## Bearing (2026-10-20, vine leaf area)
+
+Re-read by the main session for the vine-leaf-area search (l. 1547, 4040-4090, 5303-5316,
+6636-6680):
+
+- **Frame and canopy** (l. 1547, 4046-4049, 5303-5316): rows 3 m in all four vineyards,
+  so 3.6, 4.5 and 5.4 m² of ground a vine at 1.2, 1.5 and 1.8 m; one shoot every 10 cm of
+  row (12, 15 and 18 a vine); VSP rising to about 180 cm above the ground; short spur
+  pruning.
+- **Water** (Tabla II.1, l. 4067-4085): nearly rainfed. Rodilana got no irrigation;
+  Castrillo 30 to 40 mm a year in one July or August application; Pollos 51 to 75 mm in two
+  or three; Toro 70 mm on 10 May 2005 only.
+- **Per vine at veraison** (my calculation, LAI × ground): at 1.2 m, 5.5 to 11.7 m² (LAI
+  1.54 to 3.24 over the four vineyards, 2005-2007), so 0.46 to 0.97 m² a shoot; laterals 38 to 62 % of it at
+  Castrillo (Tabla III.5).
+- **Season at Castrillo 2006** (Tabla III.5, l. 6655-6665; bloom 10 June, budburst 14 April):
+  LAI 1.70 on 22 June (69 days after budburst), 2.43 on 26 July (103 days) and 2.38 on
+  4 September; so 70 % of the season's maximum 12 days after bloom, main leaves 0.89 of
+  1.27 (70 %).
