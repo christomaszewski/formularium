@@ -117,6 +117,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [benavente2010](benavente2010.md) | none | wireless sensor network, vineyard microclimate, canopy-height gradient | Bento Gonçalves, Brazil | Night and day RH offsets between cluster, canopy and above-canopy heights over 40 h; no leaf wetness measured, so wetness at several positions stays open. |
 | [bendek2007](bendek2007.md) | powdery mildew | risk assessment index, conidial germination, temperature response, humidity response, leaf wetness | Chile | The Californian risk index tested in Chile, with an in-vitro germination curve (optimum 25 °C, 47 to 90 % RH) and a five-to-three spray cut, a timing rule and a laboratory shape for a powdery-mildew term; not read in full. |
 | [bendel2020](bendel2020.md) | esca | symptom detection, imaging | Palatinate | Hyperspectral imaging of Esca, accuracy up to 95 %; another disease |
+| [benetporta2025](benetporta2025.md) | none | training system, varietal characterisation | Costers del Segre | No leaf area measured. |
 | [bennett2019](bennett2019.md) | none | disaggregation, hourly weather, relative humidity | Stehekin, Washington, USA | MetSim: open MTCLIM-based estimator, tested only against VIC 4.2 output for one cell; no humidity check against observations. |
 | [benninga2019](benninga2019.md) | none | sensor error | Netherlands | A generic radar error law |
 | [benseddik2026](benseddik2026.md) | none | disaggregation, analogue day, hourly wind, weather generator | United Kingdom (twelve NUTS1 regions) | Multi-site analogue-day disaggregation of daily wind to hourly, ERA5 UK test, autocorrelation up to 0.95 across the midnight join; a continuity rule for analogue disaggregation (s2, s6). |
@@ -218,6 +219,8 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [cameron2021](cameron2021.md) | none | phenology | global | Clear |
 | [cammalleri2012](cammalleri2012.md) | none | evapotranspiration | Southern Sicily, Italy | TSEB run without in-situ air temperature (scene calibration or DisALEXI), over a… |
 | [campbell2007](campbell2007.md) | powdery mildew | cluster susceptibility, spray timing, risk index | Chile | A single spray at full flowering protects clusters best; the critical window runs from flowering to small berries; its risk index is the engine's UC Davis index |
+| [campos2019](campos2019.md) | none | canopy height and width, leaf wall area, tree row volume, UAV NDVI | Penedès | A 2.8 x 1.2 m double-Royat Cabernet Sauvignon in Penedès: canopy 0.32 m high at flowering, about 1.0 m high and 0.5-0.7 m wide from pea size; no leaf area. |
+| [campos2021](campos2021.md) | none | canopy height and width, leaf wall area, UAV and satellite NDVI | Penedès | Five unirrigated Alt Penedès vineyards stop growing in canopy size after pea size; plotted heights and leaf wall areas disagree; no leaf area. |
 | [cannon2001](cannon2001.md) | none | sampling, detection | Australia | The engine's observation piece, confirmed |
 | [cano1942](cano1942.md) | downy mildew | fungicide efficacy | Italy | History of fungicides |
 | [cao2015](cao2015.md) | powdery mildew (wheat) | airborne conidia, weather variables, cumulative logit model, disease severity scale | China (Hebei) | Wheat, not grape: the spore-trap and weather logit form is a method a grape powdery mildew forecast could copy; off the vineyard point; not read in full. |
@@ -242,6 +245,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [cavalcanti2025](cavalcanti2025.md) | downy mildew, mycosphaerella leaf spot | symptom classification, image classification, diagnosis, tr… | Brazil (Embrapa Uva e Vinho Bento Gonçalves RS) | None. Recorded so that it is not read again: a leaf-image classifier with no weather, incidence or model cont… |
 | [cawsenicholson2021](cawsenicholson2021.md) | none | evapotranspiration | Contiguous United States | TSEB equations and inputs as an operational product |
 | [celotti2023](celotti2023.md) | downy mildew | copper deposition, copper accumulation, copper application,… | Friuli-Venezia Giulia (North-East Italy) | Gives the truth an observed field record of copper deposition on leaves against downy mildew incidence on fiv… |
+| [cendros2025](cendros2025.md) | none | shoot thinning, shoots per vine | Alt Camp | Young rainfed Macabeu on double Royat at 2.9 x 1.2 m carries 16-20 shoots and 11-13 bunches a vine; no leaf area. |
 | [chabrolin1931](chabrolin1931.md) | downy mildew | season severity, rainfall, winter spores, spray need | Tunisia, Cap Bon | Abstract only: 30 years, generalised mildew in 2 (1915, 1921) with many rains March-June; few winter eggs or no early rain to germinate them may hold back later invasions (reported inference, no oospore data). |
 | [chacon2021](chacon2021.md) | none | phenology, climate projection | La Mancha | Tempranillo and Chardonnay stages 2000-2019 by Ramos 2017's degree-day method (bases driven to 0 °C for Chardonnay), projected to 2070 |
 | [chauvin2025](chauvin2025.md) | virus yellows | risk prediction | France | Method only |
@@ -299,6 +303,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [dagostin2010](dagostin2010.md) | downy mildew | spray efficacy, biocontrol, sporangia inoculation, incidenc… | Italy, Trentino, Switzerland | None. Recorded so that it is not read again. |
 | [dallamarta2006](dallamarta2006.md) | downy mildew | leaf wetness | Tuscany | Modelled wetness serves PLASMO as well as sensors |
 | [dallamarta2008](dallamarta2008.md) | downy mildew | sporulation, infection, resistance, leaf wetness, season se… | Tuscany, Chianti, Italy | A single-season field observation that more sunlight means more leaf polyphenols and less downy mildew, with … |
+| [darouich2022](darouich2022.md) | none | evapotranspiration, ground cover, canopy height | Monferrato, Portugal | No leaf area; spontaneous grass cut vine ground cover by about a quarter against tillage. |
 | [daux2012](daux2012.md) | none | harvest date, reference data | France | The open database of 380 grape harvest-date series from 1354; the 10 d per °C sensitivity is Menzel 2005's, cited |
 | [davy2010](davy2010.md) | downy mildew, powdery mildew | fungicide dose, decision rule, spray frequency, severity, d… | France, Bordeaux, Gironde, Dordogne, Charente | A dose-adjustment rule set and trial summary: a reference for how the simulator's spray decisions might scale… |
 | [debei2016](debei2016.md) | none | canopy porosity, leaf area index, cover photography | South Australia | A one-photograph method for LAI and porosity by Beer's law and clumping, sharing its algorithm with Fuentes 2014; no seasonal series, nothing to run. |
@@ -323,6 +328,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [dong2020](dong2020.md) | none | remote-sensing monitoring, disease forecasting, web GIS, regression forecast | China (national) | National web GIS forecasting wheat yellow rust and locust areas from remote sensing and weather, R-square above 0.87; system context, nothing to run (s1, s6). |
 | [douillet2022](douillet2022.md) | downy mildew | airborne inoculum, detection | Bordeaux | Clear |
 | [douillet2023](douillet2023.md) | downy mildew | airborne inoculum, sporangia survival, forecasting | Bordeaux | Three years of LAMP sporangia counts at Grande Ferrade against epidemics; counts alone do not forecast, their product with a weather window does (R² 0.73 before symptoms); Blaeser & Weltzien's survival curve transcribed a third way |
+| [douthe2018](douthe2018.md) | none | whole-plant gas exchange | Mallorca | Whole-vine chambers on Grenache; leaf area per vine measured but not printed. |
 | [doutreloup2022](doutreloup2022.md) | downy mildew, powdery mildew | bud break, flowering, veraison, spray timing, season severi… | Belgium, Champagne, Alsace, Jura, Bourgogne, Arde… | A source of 2000-2020 daily station data for Belgium and north-east France (observed, l. 167-179) and a frost… |
 | [dry2004](dry2004.md) | none | growth stages, reference | none | The modified E-L scale on one page: budburst E-L 4, shoots 10 cm E-L 12, flowering E-L 23, veraison E-L 35, harvest E-L 38 |
 | [dubuis2012](dubuis2012.md) | downy mildew | oospore maturation, primary infection, sporulation, validation | Switzerland | The VitiMeteo rules in full (oospores 140 from 1 January; 5 mm in 48 h, 3 mm/h, 50 degree-hours), and nine years at Changins: six hits, two too early |
@@ -341,6 +347,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [emmett2010](emmett2010.md) | powdery mildew, downy mildew | spray timing, spray programme, primary infection, secondary… | south eastern Australia, Victoria, Sunraysia, Riv… | A dated Australian record of spray practice and a named downy mildew simulation model (DModel, not in the tex… |
 | [erincik2002](erincik2002.md) | Phomopsis cane and leaf spot | infection, berry susceptibility, rachis susceptibility | Ohio | The thesis behind erincik2003: fruit and rachis stay susceptible from stage 12 to about 33; its worked example fixes alpha's log base at 10 |
 | [erincik2003](erincik2003.md) | Phomopsis cane and leaf spot | infection | Ohio | A flag now, not kin (D27) |
+| [escalona2003](escalona2003.md) | none | leaf area per vine, drought, canopy photosynthesis | Mallorca | Rainfed Tempranillo on a two-wire bilateral cordon at 2.5 x 1.4 m carried 2.6-4.1 m2 of leaf a vine at harvest (irrigated 4.2-4.8), the nearest measured match to Agrarium's vineyards. |
 | [esteban2012](esteban2012.md) | none | climatology | Catalonia | Off-topic for the disease truth |
 | [eswari2021](eswari2021.md) | downy mildew | forecasting | Tamil Nadu | A regression with one residual df: not usable |
 | [eswari2022](eswari2022.md) | downy mildew | yield | Tamil Nadu | A mass-action model with no data fit; not usable |
@@ -444,6 +451,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [gonzalezdominguez2022](gonzalezdominguez2022.md) | Phomopsis cane and leaf spot | infection, validation | Italy, Montenegro | A Phomopsis model, for Cooptera |
 | [gonzalezdominguez2023](gonzalezdominguez2023.md) | none | modelling history | general | Review by the Piacenza group |
 | [gonzalezfernandez2021](gonzalezfernandez2021.md) | grey mould | aerobiology | Galicia | Botrytis conidia viability by immunoassay |
+| [gonzalezflor2014](gonzalezflor2014.md) | none | light interception, water status, reflectance indices | Alt Penedès, Anoia | Rainfed double-Royat Chardonnay for cava intercepts about two thirds of PAR at veraison; no leaf area. |
 | [gonzalezrivero2023](gonzalezrivero2023.md) | none | low-cost sensor calibration, temperature, relative humidity, CO2 | Santa Clara, Cuba | s5 (sensor error): a recipe for calibrating cheap RH and temperature sensors in a box, relevant to how much sensor error a vineyard network starts with. No error numbers extracted, so nothing quantitative for a simulator. Not read in full. |
 | [gorner2021](gorner2021.md) | none | disaggregation, hourly weather, relative humidity, wind | Saxony, Germany, De Bilt, Netherlands | Analogue-day hourly resampling keeping rain, humidity and wind together; RH 95th percentile matches, Fichtelberg high end 2.8 points low; no code. |
 | [grant2016](grant2016.md) | none | canopy flow; complex terrain; flow separation; lee slope | Scotland, Arran | Strand 3: 3-D canopy flow model over a forested ridge; no simple wind factor, no error figure; roughness-length treatment misses lee-slope separation; a 15 m forest, not vines |
@@ -629,6 +637,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [liu2026robot](liu2026robot.md) | downy mildew, grapevine leafroll | detection, scouting | New York, California | Clear, and the closest thing to a rover operator's numbers |
 | [liu2026tarag](liu2026tarag.md) | none | decision support | China | Off-topic |
 | [lixandru2021](lixandru2021.md) | downy mildew, grey mould | infection, primary infection, season severity, fertilisatio… | Romania, Giurgiu County (Hotarele), Muntenia | None. Recorded so that it is not read again: a single-season fertiliser trial with no spray schedule, conflic… |
+| [llorens2011](llorens2011.md) | none | destructive LAI, canopy height and width, LiDAR, ultrasonic | Penedès, Costers del Segre | Hand-measured LAI 0.6-1.8 at BBCH 65-85 in Catalan vineyards, canopies about 1.0 m high and 0.5-0.8 m wide. |
 | [lloret2011](lloret2011.md) | none | wireless sensor network, image processing | Spain | Sensor-node design for leaf-status images; no weather or wetness data, context only (s6), not read in full. |
 | [locci1969](locci1969.md) | downy mildew | infection anatomy | Lombardy | Morphology only |
 | [locci1974](locci1974.md) | powdery mildew | infection anatomy | Lombardy | Morphology only |
@@ -788,6 +797,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [orlandini2003](orlandini2003.md) | downy mildew | disease severity, model evaluation | Tuscany | A fuzzy-logic PLASMO; prints no equations |
 | [orlandini2008](orlandini2008.md) | downy mildew | survival, sporulation, infection, incubation | Tuscany | PLASMO's later form: bounds printed, coefficients not; kin in every process |
 | [orlandini2008b](orlandini2008b.md) | none | carbon balance, trellis, leaf area, light interception | Tuscany, Montalcino | A daily carbon-balance model of Sangiovese on two trellis systems with no printed equations or coefficients; the measured leaf area, light interception and yield are the usable part, and the form is not the engine's thermal time |
+| [orlando2016](orlando2016.md) | none | LAI measurement, smartphone app | Pavia | Rainfed Guyot LAI rose from about 0.2 in early May to 1.4 in late June 2015 (figure); budburst not printed. |
 | [orth1937](orth1937.md) | potato late blight | sporangia survival | Germany | Another oomycete; humidity and sporangia |
 | [ouyang2021](ouyang2021.md) | Eutypa dieback | UAV RGB point cloud, canopy decline mapping, k-means clustering, E-L stage 15 | Australia (South Australia) | A drone point cloud maps Eutypa-like canopy decline at 87.4 % accuracy in one block, an observation layer for remedial planning; not read in full. |
 | [pabuayon2024](pabuayon2024.md) | none | spray droplets, canopy deposition, hail netting | Texas, USA | Water-only spray cards show netting evens cluster-zone coverage, which is context for canopy deposition and not a usable dataset. |
@@ -973,6 +983,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [simonato2019](simonato2019.md) | noble rot (Botrytis cinerea) | withering, passito winemaking, volatile compounds, sensory profile | Soave-Gambellara, Italy | Noble rot on withered grapes changes passito aroma and value after harvest; wine chemistry, off the point for a vineyard simulator; not read in full. |
 | [skahill2024](skahill2024.md) | none | frost risk | Oregon | Off-topic for the disease truth |
 | [skakun2022](skakun2022.md) | none | remote sensing, cloud masking | Global | Cloud masks miss thin cloud, and the scores depend on the reference set |
+| [smart1990](smart1990.md) | none | canopy ideotype, leaf layer number, canopy gaps | New Zealand | The canopy ideotype: 15 shoots/m, wall 0.3-0.4 m wide, 1-1.5 leaf layers, 20-40 % gaps, leaf area/SA under 1.5. |
 | [smith1892](smith1892.md) | downy mildews | cytology | France | Off-topic |
 | [smith2010](smith2010.md) | powdery mildew | ontogenic resistance | Tasmania | Severity peaks at the sink-to-source leaf |
 | [smith2022](smith2022.md) | none | sensor calibration, Gaussian process, variational inference, low-cost sensor network | Kampala, Uganda | s5 (sensor error): a way to carry drift and calibration uncertainty through many cheap sensors with a few roving ones; a simulator of a vineyard sensor network could borrow the structure, not the numbers (PM2.5). Not read in full. |
@@ -1021,6 +1032,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [tofoli2014](tofoli2014.md) | late blight, early blight | rain wash-off, rainfastness, fungicide efficacy | Brazil | 20 mm of simulated rain 30 min to 4 h after spraying removes contact products' effect (mancozeb worst) far more than systemic ones; potato |
 | [tonle2024](tonle2024.md) | none | decision support | Africa | Off-topic |
 | [tor2023](tor2023.md) | downy mildews | host-pathogen biology | global | Molecular review; context |
+| [towers2019](towers2019.md) | none | LAI, vegetation indices, hail net | Mendoza | No LAI values printed. |
 | [tranmanhsung1990](tranmanhsung1990.md) | downy mildew | oospore maturation, season severity | Bordeaux | Clear of the engine by every substantive test, and its author list is read |
 | [trefilova2026](trefilova2026.md) | Pseudoperonospora humuli (hops) | spore trapping,qRT-PCR detection,short-term forecasting,airborne inoculum | Czech Republic | Off the point: a hop pathogen, so only the trap-plus-qPCR method could be borrowed by a grape tool. |
 | [trillesoliver2019](trillesoliver2019.md) | downy mildew,powdery mildew,black rot,Botrytis | IoT weather,warning models,hourly updating,alerts | Castellon, Spain | Serves t4 and the mildew warnings of t1 and t3: hourly alert levels of 50, 75 and 100 per cent are a template, but the alerts were not checked against infections. |
@@ -1106,3 +1118,4 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [zipse2010](zipse2010.md) | downy mildew | infection, incubation, sporulation, sporangia density, leaf… | Mosel, Bernkastel-Kues, Germany, Baden (WBI Freib… | Offers the truth a description of the VitiMeteo incubation and sporangia-density outputs, but no printed oosp… |
 | [zorman2008](zorman2008.md) | downy mildew, powdery mildew | incidence, season severity | Terceira, Azores | Two Azorean seasons of fortnightly incidence: first infections early May, peak mid-July, 48 % of plants in 2006; no weather |
 | [zorrilla2024](zorrilla2024.md) | downy mildew | biofungicide, allelopathy, leaf disc bioassay, disease seve… | Italy, Trentino, San Michele all'Adige | A lab leaf-disc record of an extract whose severity (11.4 %) the authors call similar to copper hydroxide (2.… |
+| [zufferey2012](zufferey2012.md) | none | leaf area per vine, leaf to fruit ratio, topping | Switzerland | Topped VSP Chasselas with six shoots carried 2.5 or 4.5 m2 a vine by canopy height; plateau about 90-110 days after budburst (figure). |
