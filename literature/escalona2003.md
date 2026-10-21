@@ -63,3 +63,7 @@ Read for its whole-vine leaf area, measured destructively.
   bilateral cordon with two wires, about 3.5 m² of ground a vine. Rainfed Tempranillo
   carried 2.6 to 4.1 m² a vine at harvest, after summer leaf loss; the season's maximum is
   not printed and is at least that. Used in Agrarium's research_notes/vine-leaf-area.
+- **Later the same day:** `perezalvarez2021` measured rainfed Bobal on the same 2.5 × 1.4 m
+  frame and bilateral cordon at Requena at 0.48 to 1.47 m² a vine after veraison (272-345
+  mm of rain, trimmed). Escalona's values are the wetter end of rainfed Mediterranean vines,
+  not their middle; the Agrarium recommendation was revised to match.
