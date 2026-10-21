@@ -9,7 +9,7 @@ and read or noted. Nothing below was read; titles come from OpenAlex, unchecked.
 - **How they were tried:** the open-access link once; then every OpenAlex location and any PDF
   link on a landing page (`fetch_locations.py`); MIT DSpace and UBC cIRcle in headless Chromium
   (both refused: HTTP error and a browser-verification page). The Wayback Machine was offline
-  on 2026-10-21 from about 02:00 EDT, so no Wayback capture was tried: retry those first.
+  during this search (night of 2026-10-20 to 21, EDT), so no Wayback capture was tried: retry those first.
   Elsevier, IEEE, ACM and APS pages refuse this VM; list them for Chris rather than retrying.
 - **Scite's MCP tools need a paid plan** on this account (2026-10-21), so no Scite excerpts
   were used.
