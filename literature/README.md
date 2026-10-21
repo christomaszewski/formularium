@@ -50,6 +50,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [abuamsha2014](abuamsha2014.md) | powdery mildew | overwintering,flag shoots,cleistothecia,PCR biotyping | Palestine | Serves t3: no flag-shoot biotype or flag shoots were found, so early primary inoculum cannot be set from this survey. |
 | [acimovic2016](acimovic2016.md) | none | defoliation, fruitset, bunch compactness, yield | Michigan | Removing eight or more basal leaves at flowering halves fruitset and cuts yield (10 leaves: 9.12 to 4.05 kg a vine); fewer do nothing |
 | [actahort1999](actahort1999.md) | downy mildew | epidemic progress, berry growth | Switzerland | Vinemild is clear of the engine, but these papers print too little to run it |
+| [adhikary2014](adhikary2014.md) | none | rain gauge network design; kriging variance | Australia, Victoria, Yarra | D48: network redesign by kriging standard error over trial layouts; two years, no held-out or random comparison |
 | [adrakey2022](adrakey2022.md) | Flavescence dorée | dispersal kernel, roguing, data augmentation MCMC | Bordeaux, France | A dispersal scale of 22.9 m with roguing built in, the vector-borne spread value a simulator needs, from one preprint and one site. |
 | [agoston2020](agoston2020.md) | downy mildew | infection, primary infection, season severity, spray timing… | Hungary, Bács-Kiskun County | A two-season record of fruit-bunch severity by class in one Hungarian county (2009 and 2010, two dated counts… |
 | [aichiprefecture2019](aichiprefecture2019.md) | downy mildew | disease survey, incidence, season severity, forecast adviso… | Aichi prefecture, Japan, Nagoya | Offers a qualitative Japanese check: a June 2019 field incidence series with averages and a forecast-linked s… |
@@ -515,6 +516,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [hoppmann1997](hoppmann1997.md) | downy mildew | oospores, infection, leaf wetness | Rheingau | VitiMeteo's oospore form at 170 °C·days; modelled wetness r² 0.91 |
 | [housmans2017](housmans2017.md) | none | inverse transposition, tilted pyranometer, global horizontal irradiance, sensor error | Uccle, Belgium | Inverse transposition from tilted pyranometers to horizontal irradiance at Uccle; one tilted sensor can err by 7 to 31 percent RMSE, more sensors help (s5, s3). |
 | [hu2023](hu2023.md) | none | wind downscaling, reanalysis, machine learning regression, topographic metrics | Germany | ML downscaling of ERA5 wind from 31 km to 1 km using station data and terrain metrics in Germany; a terrain-conditioned wind route (s3, s2). |
+| [huang2019](huang2019.md) | none | rain gauge network design; entropy; discretisation | China, Chaobai basin | D48: entropy objectives compared (joint entropy, transinformation, MIMR) by greedy ranking; MIMR most accurate by kriging error |
 | [hubbard2021](hubbard2021.md) | none | soil, vigour | Bordeaux | Soil and vigour mapping |
 | [huber1956](huber1956.md) | none | plant physiology | Germany | Off-topic |
 | [huerga2010](huerga2010.md) | downy mildew, powdery mildew, grey mould | airborne spores, spore monitoring, detection, sporulation, … | laboratory (Vitoria-Gasteiz Spain), vineyard air … | None for the truth or the engine: a laboratory spore-identification method with no field, weather or model co… |
@@ -552,6 +554,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [juroszek2015](juroszek2015.md) | many, incl. downy mildew | climate change projections | global | Context for climate scenarios |
 | [kabela2006](kabela2006.md) | none | dew, leaf wetness | Iowa | Clear |
 | [kabela2009](kabela2009.md) | none | dew, leaf wetness | Iowa | Clear |
+| [kalinic2022](kalinic2022.md) | none | sensor placement; K-means; self-organising map; wind reconstruction | Mediterranean (ERA5) | D48 representative sites: K-means sites beat one random layout at every size (2.72 against 3.33 m/s at 10 sensors); no MI comparison |
 | [kamimori2025](kamimori2025.md) | none | phenology, dormancy, review | Osaka | A review of 48 years of Delaware budbreak and bloom (−0.15 d/yr) and the model forms used in Japan; parameters in the cited papers |
 | [kanaley2024](kanaley2024.md) | downy mildew | remote sensing, detection | New York | Clear |
 | [kandel2019](kandel2019.md) | none | primary inoculum, oospore, spore trapping, sporangia survival | coastal California, USA | s1 (autumn inoculum), as a comparison: primary inoculum of a non-vine downy mildew, with oospore and seed routes. A simulator can take the qualitative point that airborne sporangia are present all season, so primary inoculum is not the limit there. s6: spore trapping with qPCR. Not read in full. |
@@ -825,6 +828,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [orlando2016](orlando2016.md) | none | LAI measurement, smartphone app | Pavia | Rainfed Guyot LAI rose from about 0.2 in early May to 1.4 in late June 2015 (figure); budburst not printed. |
 | [ortega2024](ortega2024.md) | downy mildew | fungicide fate, copper deposition | Catalonia | A fungicide-fate thesis; no canopy or leaf-area values. |
 | [orth1937](orth1937.md) | potato late blight | sporangia survival | Germany | Another oomycete; humidity and sporangia |
+| [oteros2019](oteros2019.md) | none | monitoring network design; clustering; pollen | Germany, Bavaria | D48 representative sites: Ward clustering of pollen-correlation vectors, one site per cluster by population; not validated |
 | [ouyang2021](ouyang2021.md) | Eutypa dieback | UAV RGB point cloud, canopy decline mapping, k-means clustering, E-L stage 15 | Australia (South Australia) | A drone point cloud maps Eutypa-like canopy decline at 87.4 % accuracy in one block, an observation layer for remedial planning; not read in full. |
 | [pabuayon2024](pabuayon2024.md) | none | spray droplets, canopy deposition, hail netting | Texas, USA | Water-only spray cards show netting evens cluster-zone coverage, which is context for canopy deposition and not a usable dataset. |
 | [padro2019](padro2019.md) | none | remote sensing | Catalonia | Positional error of UAV images by method (raw GNSS about 1 m |
@@ -906,6 +910,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [redeacores2025](redeacores2025.md) | downy mildew | primary infection, secondary infection, leaf wetness, spray… | Azores, Portugal | A field-scoring protocol (organ and plot scales, sampling design) for the observation operator of a downy mil… |
 | [redl2021](redl2021.md) | powdery mildew | ascospore release, chasmothecia maturation, primary inoculum | Austria | Austrian release runs autumn to June, 84-95 % of the trapped release between budbreak and flowering, tied to weekly rain; a check on Moyer's curve |
 | [redl2021b](redl2021b.md) | powdery mildew | chasmothecia survival, ascospore viability, primary inoculum | Austria | Viable overwintered ascospores sit on bark (up to 36.7 % of chasmothecia), hardly in litter; none viable after 30 weeks at 17 °C |
+| [reed2025](reed2025.md) | none | time-series clustering; network representativeness; eddy covariance | the Americas (AmeriFlux) | D48 representative sites: DTW clustering of diel-seasonal curves with k from validity indices; a uniqueness score, not a placement |
 | [regionelazio2024](regionelazio2024.md) | downy mildew | primary infection, secondary infection, incubation, oospore… | Lazio Italy, Italy | A regional advisory: the 3-10 rule, called superseded, is on the engine's list, so the truth must not take it… |
 | [reinehr2021](reinehr2021.md) | downy mildew, grey mould | season severity, host vigour | Santa Catarina | Less vigour, less downy mildew; no untreated plot |
 | [reis2013](reis2013.md) | downy mildew | spray timing, validation | Rio Grande do Sul | A Lalancette-based trigger; three seasons of untreated AUDPC |
@@ -1017,6 +1022,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [smith1892](smith1892.md) | downy mildews | cytology | France | Off-topic |
 | [smith2010](smith2010.md) | powdery mildew | ontogenic resistance | Tasmania | Severity peaks at the sink-to-source leaf |
 | [smith2022](smith2022.md) | none | sensor calibration, Gaussian process, variational inference, low-cost sensor network | Kampala, Uganda | s5 (sensor error): a way to carry drift and calibration uncertainty through many cheap sensors with a few roving ones; a simulator of a vineyard sensor network could borrow the structure, not the numbers (PM2.5). Not read in full. |
+| [soares2018](soares2018.md) | none | monitoring network design; hierarchical clustering; air quality | Canada, Alberta, Saskatchewan | D48 representative sites: hierarchical clustering of modelled and observed series groups stations; no representative chosen and no held-out test |
 | [solla1906](solla1906.md) | downy mildew | host physiology | Italy | Off-topic |
 | [sommer2025](sommer2025.md) | sour rot and grey mould | FT-MIR spectroscopy,chemometric model,spoilage index | California | A post-harvest spoilage index with an RPD of 1.04 and no external check, too weak to act on yet; not read in full. |
 | [spencerphillips2002](spencerphillips2002.md) | downy mildews | book: control, host biology, epidemiology | global | Mostly control; Vercesi's oospore data noted apart |
