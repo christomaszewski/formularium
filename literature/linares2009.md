@@ -106,3 +106,26 @@ crops (Cent3, CNA).
   `linares2009.el_socorro`.
 - **Thermal-time quantity, nothing fitted:** shoot velocity per °Cd is a heat-sum ratio,
   but no curve or parameter is fitted. No record.
+
+## Bearing (2026-10-20, vine leaf area)
+
+Re-read by the main session for the vine-leaf-area search (l. 5366-5392, 5970-6010,
+13110-13141):
+
+- **Frames** (l. 5371, 5380): Syrah at 2.4 × 1.1 m (2.64 m² a vine), unilateral Royat
+  cordon, 14 buds a vine; Merlot at 2.2 × 1.5 m (3.30 m²), bilateral Royat, 18 buds in
+  2006 and 16 in 2007 (l. 5375-5386); shoots vertical on a trellis; both 0.8 m trunks.
+- **Water** (l. 5972-6002): regulated deficit irrigation, started only once the main shoot
+  stopped growing and midday leaf water potential reached -1 to -1.2 MPa; Ki 0.3 to 0.4 of
+  ET0, 165 to 248 mm (Syrah 2005 from 30 May; Merlot 2006 and 2007 from 12 and 23 June).
+  Canopy management was only shoot thinning at 15-20 cm (l. 6008): no trimming recorded.
+- **CNA is a spontaneous (self-seeded) cover** (l. 99). Its LAI (Tabla 50, l. 13128,
+  13134, 13140) at flowering / veraison / harvest: 1.58 / 1.78 / 1.70 (Syrah 2005), 1.08 /
+  1.77 / 2.00 (Merlot 2006), 1.92 / 2.79 / 2.60 (Merlot 2007); laterals 20 to 45 %.
+- **Per vine** (my calculation, LAI × frame): herbicide Syrah 2005 6.5 / 7.0 / 7.0 m²;
+  CNA Syrah 4.2 / 4.7 / 4.5 m²; herbicide Merlot 2006 4.7 / 7.1 / 8.1 m² and 2007 9.4 /
+  13.2 / 13.5 m²; CNA Merlot 2006 3.6 / 5.8 / 6.6 m² and 2007 6.3 / 9.2 / 8.6 m².
+- **Timing:** the share of veraison LAI already present at flowering is 0.89 to 0.93 (Syrah
+  2005), 0.61 to 0.66 (Merlot 2006) and 0.69 to 0.71 (Merlot 2007), herbicide and CNA;
+  main leaves are 72 to 92 % of their veraison value at flowering, laterals 40 to 97 %. The flowering dates are
+  not in the sections read.

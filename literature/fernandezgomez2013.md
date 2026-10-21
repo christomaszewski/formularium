@@ -74,3 +74,9 @@ lengths and leaf area, not for the deficit effects on wine.
 - **A deficit-irrigated vine:** LAI 1.2 and external leaf area 0.8 m²/m² under deficit
   (1.0 with a pre-veraison deficit, 1.4 without). Reported, not judged against any
   assumption.
+
+## Bearing (2026-10-20, vine leaf area)
+
+- **Per vine** (frame 3 m × 1 m with vertical positioning, l. 1292): LAI 1.2 is about
+  3.6 m² a vine (1.0 to 1.4, so 3.0 to 4.2 m², with and without a pre-veraison deficit),
+  my calculation. Deficit-irrigated; the LAI date is not printed.
