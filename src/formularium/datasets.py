@@ -1272,4 +1272,27 @@ DATASETS: dict[str, Dataset] = {
         " (read 2026-10-20), whose temperature and half-life regressions are fitted to them",
         "trail",
     ),
+    "delbac2026.grades": Dataset(
+        "Yearly grades 0-6 (0 none; 1-3 local epidemics; 4-6 general) of downy and powdery"
+        " mildew, black rot, grey mould, rotbrenner and two grape moths, read from the French"
+        " agricultural warning service's bulletins and yearly summaries: Bordeaux 1941-2023,"
+        " Champagne and Vaucluse; Recherche Data Gouv 10.57745/HM3HBE, Etalab 2.0",
+        "Delbac et al. 2026, Data in Brief 64:112397 (read 2026-10-22, Europe PMC full text;"
+        " the grade table and scale opened). No formulation is recorded as fitted to them;"
+        " Agrarium could history-match season-level severity against them (its TRUTH-METHOD"
+        " part 2)",
+        "read",
+    ),
+    "bregaglio2022.bulletins": Dataset(
+        "8,816 weekly downy mildew infection-risk classes (1-5) read by six evaluators from the"
+        " bulletins of eight Italian regional plant protection services, 31 provinces,"
+        " 2012-2017, and 1,689 BBCH observations; Mendeley Data 10.17632/3jsh4y2bw4.1, CC BY"
+        " 4.0. The classes were set partly from the bulletins' own model-based indications",
+        "Bregaglio et al. 2022, Data in Brief 43:108409 (read 2026-10-22, Europe PMC full"
+        " text, l. 78): 'This dataset has been used to calibrate and evaluate the MISFITS-DSS'"
+        " (Bregaglio et al. 2022, J. Environ. Manage. 317:115365, note `bregaglio2022`), whose"
+        " infection parameters were chosen by accuracy against these classes. MISFITS has no"
+        " record here",
+        "read",
+    ),
 }
