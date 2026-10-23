@@ -1295,4 +1295,17 @@ DATASETS: dict[str, Dataset] = {
         " record here",
         "read",
     ),
+    "sanitatvegetal.penedes_avisos": Dataset(
+        "The weekly plant-health warning bulletins for the Penedès (Servei de Sanitat Vegetal,"
+        " Generalitat de Catalunya, relayed by the ADV of Cellers Domenys), February 2015 to"
+        " September 2026: where and when the first downy mildew oil spots were found each season"
+        " (first reports 29 April to 4 June; none in 2019), with spray advice, model notes and"
+        " other pests. Posted at www.cellersdomenys.com/uploads/advs/penedes/; no licence stated",
+        "Read 2026-10-22 by the main session in all 139 files (ten 2018 scans OCR'd), the"
+        " first-spot sentences checked at their lines; the season table is in Agrarium's"
+        " research note gaps-and-datasets (retry section). No formulation is recorded as fitted"
+        " to them. The spots are found in treated vineyards under a first-spot prize, so the"
+        " dates are of detection",
+        "read",
+    ),
 }

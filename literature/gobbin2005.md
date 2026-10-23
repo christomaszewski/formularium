@@ -10,7 +10,7 @@ regions: [Germany, Switzerland, Italy, France]
 processes: [epidemic structure, dispersal, secondary infection]
 records: []
 datasets: [gobbin2006.europe]
-files: []
+files: [gd1021_gobbin2005.pdf (the 2026-10-22 drop)]
 ---
 
 # Gobbin et al. 2005: how much of an epidemic is secondary spread
