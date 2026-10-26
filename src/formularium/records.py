@@ -155,6 +155,8 @@ STRUCTURES = {
     " (leaf wall area, or height, width and beam interception)",
     "photoperiod-gate": "development forcing switched on or scaled by day length between two"
     " thresholds",
+    "row-view-factor-interception": "the radiation a vine row intercepts over a season from the"
+    " view factor between rows (height over spacing), row azimuth, shape and albedo",
 }
 
 

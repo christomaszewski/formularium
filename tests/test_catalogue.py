@@ -178,4 +178,6 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "cheraiet2021.deposit_deciles": ("cheraiet2021.herault",),
         "castex2020.lgm": ("castex2020.traps",),
         "mariani2007.bbch_nhh": ("mariani2007.alghero",),
+        "phinopoulos2015.shoot_leaf_area": ("phinopoulos2015.lisbon",),
+        "pieri2003.row_interception": ("pieri2003.bordeaux_diffuse",),
     }

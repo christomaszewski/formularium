@@ -7572,4 +7572,195 @@ FORMULATIONS: dict[str, Formulation] = {
             " beside castex2020.lgm, which shares neither data nor equations with it."
         ),
     ),
+    "phinopoulos2015.shoot_leaf_area": Formulation(
+        "Single Syrah leaf area from the sum of its two lateral veins, and primary and lateral"
+        " leaf area per shoot from the leaf count and the largest and smallest leaf, log-log"
+        " forms (Lopes & Pinto 2005's variables refitted)",
+        "Phinopoulos, Cadima & Lopes 2015, Proceedings of the 19th GiESCO meeting, pp. 385-388,"
+        " Eqs 3-5 (pp. 387-388)",
+        year=2015,
+        authors=("Phinopoulos, Victoras", "Cadima, Jorge", "Lopes, Carlos M."),
+        authors_complete=True,
+        authors_from="read",
+        checked="phinopoulos2014.pdf (the 2026-10-25 other-sources drop); Eqs 3-5 and Fig. 1"
+        " read in the page images; the year is not printed (the reference list cites 2013"
+        " work and the author's 2013 thesis)",
+        structures=("allometry",),
+        structures_note=(
+            "The form of lopes2005.shoot_leaf_area with new coefficients, plus a single-leaf"
+            " vein allometry."
+        ),
+        calibrated_on=("phinopoulos2015.lisbon",),
+        calibration_note=(
+            "Least squares with forward stepwise selection (F 0.05) in R 3.0.0 on 210 Syrah"
+            " shoots (2518 primary leaves; 120 shoots with laterals) at Lisbon in 2013; no"
+            " independent validation. Observed areas; nothing model-dated. Read 2026-10-26"
+            " (literature/phinopoulos2015)."
+        ),
+        parameters=(
+            Published(
+                "leaf.a", -6.436, "ln cm²", "Eq. 3, p. 387, R² 0.97, n 2518, MSE 13.6 cm²", "read"
+            ),
+            Published("leaf.b", 2.167, "1 (power of V2S in mm)", "Eq. 3, p. 387", "read"),
+            Published(
+                "primary.a",
+                -0.067,
+                "ln cm²",
+                "Eq. 4, p. 387, R² 0.98, n 210, MSE 121.9 cm²",
+                "read",
+            ),
+            Published("primary.b", 1.018, "1 (power of MSLA1)", "Eq. 4, p. 387", "read"),
+            Published(
+                "lateral.a", 0.491, "ln cm²", "Eq. 5, p. 388, R² 0.98, n 120, MSE 104.9 cm²", "read"
+            ),
+            Published("lateral.b_msla2", 0.802, "1", "Eq. 5, p. 388", "read"),
+            Published("lateral.c_nl2", 0.207, "1", "Eq. 5, p. 388", "read"),
+            Published("lateral.d_s2", 0.048, "1", "Eq. 5, p. 388", "read"),
+        ),
+        flags=(
+            "One cultivar, one site, one season, no validation set; coefficient errors not"
+            " printed. The single-leaf relation needs both lateral vein lengths in mm. Lopes is"
+            " an author of the form it refits."
+        ),
+    ),
+    "pieri2003.row_interception": Formulation(
+        "A vine row's seasonal solar interception ratio as a line in the square root of the"
+        " view factor between rows, with a sinusoidal azimuth term and a factor for row shape"
+        " and soil albedo, and the diffuse fraction as a cubic in the clearness index, at"
+        " Bordeaux",
+        "Pieri & Gaudillère 2003, Vitis 42(2):77-82, Eqs 1-7 (pp. 78-81) and the Fig. 4 inset"
+        " (p. 80)",
+        year=2003,
+        authors=("Pieri, P.", "Gaudillère, J. P."),
+        authors_complete=True,
+        authors_from="read",
+        checked="pieri2003.pdf (the 2026-10-25 other-sources drop); Eqs 3-7 and the Fig. 4"
+        " inset read in the page images",
+        doi="10.5073/vitis.2003.42.77-82",
+        structures=("row-view-factor-interception", "clearness-index-partition"),
+        structures_note=(
+            "Eq. 3 is the diffuse fraction from the clearness index Rg/Rg0; Eqs 4-7 summarise"
+            " Riou et al. 1989's geometric row model by the view factor f, a form of its own."
+        ),
+        calibrated_on=("pieri2003.bordeaux_diffuse",),
+        calibration_note=(
+            "Eq. 3 fitted to 121 daily Bordeaux pairs (r² 0.93). Eqs 4-7 are fitted to 200"
+            " runs of Riou et al. 1989's interception model (D/Hf 0.5-10, azimuth 0-90°) over"
+            " an average Bordeaux year of 1961-1990 10-day radiation means: fitted with a model"
+            " that has no record here, so calibrated_with is empty. Read 2026-10-26"
+            " (literature/pieri2003)."
+        ),
+        parameters=(
+            Published("diffuse.a", 1.09, "1", "Eq. 3, p. 79, r² 0.93, n 121", "read"),
+            Published("diffuse.b", -2.69, "1 (on (Rg/Rg0)²)", "Eq. 3, p. 79", "read"),
+            Published("diffuse.c", 1.28, "1 (on (Rg/Rg0)³)", "Eq. 3, p. 79", "read"),
+            Published("eq4.a", -0.16, "1", "Eq. 4, p. 80, r² 0.999, n 200", "read"),
+            Published("eq4.b", 1.17, "1 (on √f)", "Eq. 4, p. 80", "read"),
+            Published(
+                "af.k",
+                0.0246,
+                "1",
+                "Fig. 4 inset, p. 80: A(f) = k f/b² exp(-f²/2b²), r² 0.998, n 10",
+                "read",
+            ),
+            Published("af.b", 0.274, "1", "Fig. 4 inset, p. 80", "read"),
+            Published(
+                "c.intercept",
+                0.544,
+                "1",
+                "Eq. 6 and p. 80: C = 0.544 + 1.04 (as - 0.18) + 1.209 √fs",
+                "read",
+            ),
+            Published(
+                "c.albedo", 1.04, "1 (per unit soil albedo above 0.18)", "Eq. 6, p. 80", "read"
+            ),
+            Published("c.shape", 1.209, "1 (on √fs)", "Eq. 6, p. 80", "read"),
+            Published(
+                "eq6.b", 0.17, "1 (on √f), printed; 1.17 in Eqs 4 and 7", "Eq. 6, p. 80", "read"
+            ),
+            Published("eq7.a", 0.54, "1", "Eq. 7, p. 81, r² > 0.98", "read"),
+            Published("eq7.b_albedo", -0.6, "1 (per unit of al - as)", "Eq. 7, p. 81", "read"),
+            Published("eq7.c", 0.8, "1 (on √f)", "Eq. 7, p. 81", "read"),
+            Published("ref.w", 0.35, "m", "p. 78 (l. 106), reference row width", "read"),
+            Published("ref.hf", 1.2, "m", "p. 78, reference foliage height", "read"),
+            Published("ref.leaf_albedo", 0.25, "1", "p. 78", "read"),
+            Published("ref.soil_albedo", 0.18, "1", "p. 78", "read"),
+            Published("ref.porosity", 0.33, "1", "p. 78 (l. 126)", "read"),
+            Published("latitude", 44.67, "° N", "p. 78, 44°40' N", "read"),
+        ),
+        flags=(
+            "Equations for an average Bordeaux year: the constants are latitude- and"
+            " climate-dependent (p. 81). Eq. 6 prints 0.17 where Eqs 4 and 7 print 1.17. The"
+            " sinusoidal azimuth coefficients and Riou's model itself are not printed. Eq. 1:"
+            " f = tan(atan(Hf/(D - w))/2); Eq. 5: fs = tan(atan(w/Hf)/2)."
+        ),
+    ),
+    "camposarguedas2026.budbreak_hardiness": Formulation(
+        "Budbreak as the day a cold-hardiness model's projected 50 % hardiness reaches a"
+        " cultivar threshold (+10 °C vinifera, +5 °C Concord), with freeze damage read off"
+        " the hardiness curves",
+        "Campos-Arguedas et al. 2026, New Phytologist 250(4):2203-2220, Materials and Methods"
+        " and Eqns 1-7",
+        year=2026,
+        authors=(
+            "Campos-Arguedas, Francisco",
+            "Kirchhof, Erica",
+            "North, Michael G.",
+            "Londo, Jason P.",
+            "Bates, Terry",
+            "van Leeuwen, Cornelis",
+            "Destrac-Irvine, Agnès",
+            "Bois, Benjamin",
+            "Kovaleski, Al P.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="camposarguedas2026.xml (Europe PMC JATS text, the 2026-10-25 other-sources"
+        " drop); no page image held",
+        doi="10.1111/nph.71074",
+        structures=("cold-hardiness", "chilling-dormancy"),
+        structures_note=(
+            "A threshold on modelled bud hardiness, which NYUS.1 acclimates and deacclimates"
+            " with temperature and chill (the Dynamic Model's)."
+        ),
+        calibration_note=(
+            "Not fitted to the 329 budbreak records: the thresholds are chosen from Kovaleski"
+            " et al. 2018's data and NYUS.1 was fitted to Geneva NY hardiness (Kovaleski et al."
+            " 2023, not held); its 10th and 90th percentile parameters were fitted here on data"
+            " not described. Validation: RMSE 7.3 d, bias -0.8 d, r² 0.88 on 329 records at"
+            " eight sites, 68 seasons; 7.2 d freeze-corrected. Read 2026-10-26"
+            " (literature/camposarguedas2026)."
+        ),
+        parameters=(
+            Published(
+                "threshold.vinifera",
+                10,
+                "°C",
+                "Methods (l. 55): CH50 reaches +10 °C, Cabernet-Sauvignon and Riesling",
+                "read",
+            ),
+            Published("threshold.concord", 5, "°C", "Methods (l. 55)", "read"),
+            Published(
+                "threshold.bordeaux_1981_2008",
+                0,
+                "°C",
+                "Methods (l. 56), that series' stage",
+                "read",
+            ),
+            Published("threshold.bbch05", 5, "°C", "Methods (l. 56), for BBCH 05 records", "read"),
+            Published(
+                "sensitivity.mdst",
+                -5.8,
+                "d per °C of mean dormant-season temperature",
+                "Results (l. 104)",
+                "read",
+            ),
+        ),
+        flags=(
+            "Cannot run as printed: needs NYUS.1 (Kovaleski et al. 2023), not held, with its"
+            " coefficients in that paper's supplement. Read from the JATS text only. Kin to"
+            " the engine's Ferguson hardiness records and to kovaleski2018.deacclimation by"
+            " form; a budbreak rule with no heat sum, the form the 10-14 search asked about."
+        ),
+    ),
 }

@@ -1348,4 +1348,19 @@ DATASETS: dict[str, Dataset] = {
         " the four BBCH-on-NHH regressions are fitted to the 2006 data",
         "read",
     ),
+    "phinopoulos2015.lisbon": Dataset(
+        "Areas of every leaf, vein lengths and leaf counts of 210 fruiting Syrah shoots (laterals"
+        " from the fourth date, n 120) sampled on seven dates from April to July 2013 at the ISA"
+        " vineyard, Tapada da Ajuda, Lisbon",
+        "Phinopoulos, Cadima & Lopes 2015, GiESCO proceedings pp. 385-388 (read 2026-10-26):"
+        " Eqs 3-5 are fitted to them by least squares",
+        "read",
+    ),
+    "pieri2003.bordeaux_diffuse": Dataset(
+        "Daily diffuse and global radiation measured at Bordeaux over two years, 121 days, source"
+        " not named",
+        "Pieri & Gaudillère 2003, Vitis 42:77-82 (read 2026-10-26): Eq. 3, the diffuse fraction"
+        " on the clearness index, is fitted to them (r² 0.93)",
+        "read",
+    ),
 }
