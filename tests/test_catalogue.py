@@ -171,4 +171,11 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "orlandini1993.survival": ("blaeser1978.survival",),
         "rouzet2003.cold_days": ("rouzet2003.balma",),
         "kennelly2007.trigger": ("kennelly2006.chancellor",),
+        "schultz1993.plastochron": ("schultz1993.geisenheim",),
+        "lopes2005.shoot_leaf_area": ("lopes2005.estremoz",),
+        "wermelinger1990.leaf_growth": ("wermelinger1990.waedenswil",),
+        "kovaleski2018.deacclimation": ("kovaleski2018.geneva",),
+        "cheraiet2021.deposit_deciles": ("cheraiet2021.herault",),
+        "castex2020.lgm": ("castex2020.traps",),
+        "mariani2007.bbch_nhh": ("mariani2007.alghero",),
     }

@@ -2687,7 +2687,8 @@ FORMULATIONS: dict[str, Formulation] = {
         structures=("allometry",),
         calibrated_on=("sanchezdemiguel2011.madrid_toledo",),
         calibration_note=(
-            "Lopes & Pinto 2005's form refitted: log10 of leaf area per shoot on log10 of"
+            "Lopes & Pinto 2005's log-log form refitted (they print natural logs, read 2026-10-26;"
+            " this paper base-10 powers): log10 of leaf area per shoot on log10 of"
             " leaves per shoot times the mean of the largest and smallest leaf (MLA), primary"
             " and lateral shoots apart, on the Syrah Toledo matrix (n 1,229) and applied to all"
             " six cultivar-sites; the reference areas are sums of one leaf in three through the"
@@ -6912,5 +6913,663 @@ FORMULATIONS: dict[str, Formulation] = {
             " mancozeb 7.5 d), longer than these average-plant HL20s (5.19, 4.69 d).",
         ),
         role="process",
+    ),
+    "schultz1993.plastochron": Formulation(
+        "Plastochron duration of a Riesling primary shoot, in days, as an exponential decline"
+        " with thermal time per day to a floor, fitted for three periods of the season; also on"
+        " mean daily temperature with no threshold",
+        "Schultz 1993, Vitis 32:197-205, Eq. 3 (p. 199) and the Fig. 1 caption (p. 200)",
+        year=1993,
+        authors=("Schultz, H. R.",),
+        authors_complete=True,
+        authors_from="read",
+        checked="schultz1993.pdf (the 2026-10-25 other-sources drop); Eq. 3 and the Fig. 1"
+        " caption read in the page images",
+        doi="10.5073/vitis.1993.32.197",
+        structures=("rate-temperature-response",),
+        structures_note=(
+            "A daily development rate (days per leaf) as a function of that day's heat: the"
+            " engine's rate-temperature form. The base of 10 °C (TT = 0 at MDT 10 °C) is"
+            " Winkler & Williams 1939's and Gutierrez et al. 1985's, cited; the fit is the"
+            " paper's own."
+        ),
+        calibrated_on=("schultz1993.geisenheim",),
+        calibration_note=(
+            "PROC NLIN on the PI and LPI of 5-10 sun and shade shoots of White Riesling 198 Gm"
+            " on 5 C at Geisenheim, recorded every 1-3 d in 1988, in three periods of thermal"
+            " time (100-240, 240-670, 670-980 °C d from stage 05). Points per fit, residuals and"
+            " the pooling of sun and shade are not printed. Observed temperatures; nothing"
+            " model-dated. Read 2026-10-26 (literature/schultz1993)."
+        ),
+        parameters=(
+            Published("t_base", 10, "°C", "p. 200, TT = 0 at MDT 10 °C (l. 113-115, 187)", "read"),
+            Published("a.pd_max", 14.4, "d", "Fig. 1 caption, TT 100-240 °C d, R² 0.91", "read"),
+            Published("a.pd_min", 2.2, "d", "Fig. 1 caption, TT 100-240", "read"),
+            Published(
+                "a.k", 0.33, "per °C d/d (unit not printed)", "Fig. 1 caption, TT 100-240", "read"
+            ),
+            Published("b.pd_max", 65.7, "d", "Fig. 1 caption, TT 240-670 °C d, R² 0.95", "read"),
+            Published("b.pd_min", 3.3, "d", "Fig. 1 caption, TT 240-670", "read"),
+            Published(
+                "b.k", 0.74, "per °C d/d (unit not printed)", "Fig. 1 caption, TT 240-670", "read"
+            ),
+            Published("c.pd_max", 107.6, "d", "Fig. 1 caption, TT 670-980 °C d, R² 0.87", "read"),
+            Published("c.pd_min", 4.0, "d", "Fig. 1 caption, TT 670-980", "read"),
+            Published(
+                "c.k", 0.58, "per °C d/d (unit not printed)", "Fig. 1 caption, TT 670-980", "read"
+            ),
+            Published("mdt.a.pd_max", 415.8, "d", "Fig. 1 caption, inset A, R² 0.88", "read"),
+            Published("mdt.a.pd_min", 1.8, "d", "Fig. 1 caption, inset A", "read"),
+            Published("mdt.a.k", 0.33, "per °C", "Fig. 1 caption, inset A", "read"),
+            Published("mdt.b.pd_max", 15350.9, "d", "Fig. 1 caption, inset B, R² 0.95", "read"),
+            Published("mdt.b.pd_min", 3.2, "d", "Fig. 1 caption, inset B", "read"),
+            Published("mdt.b.k", 0.63, "per °C", "Fig. 1 caption, inset B", "read"),
+            Published("mdt.c.pd_max", 2104.4, "d", "Fig. 1 caption, inset C, R² 0.83", "read"),
+            Published("mdt.c.pd_min", 3.4, "d", "Fig. 1 caption, inset C", "read"),
+            Published("mdt.c.k", 0.39, "per °C", "Fig. 1 caption, inset C", "read"),
+            Published(
+                "pd_floor.tt",
+                8,
+                "°C d/d",
+                "p. 200 (l. 187-188): PD near its minimum from about 8 °C d/d",
+                "read",
+            ),
+            Published("pd_floor.mdt", 17, "°C", "p. 200 (l. 188)", "read"),
+        ),
+        flags=(
+            "A daily leaf rate for one cultivar and one year, piecewise by season: the base"
+            " temperature rises after June (14 and 4 d per leaf at TT 4 and 12 °C d/d in"
+            " August-September against 6 and 2 d in May-June, l. 202). k's unit and n are not"
+            " printed. The Schultz 1992 model VitiMeteo runs is cited, not printed; this paper"
+            " is kin to lebon2004.leaf_development by form, not by data."
+        ),
+    ),
+    "lopes2005.shoot_leaf_area": Formulation(
+        "Primary and lateral leaf area per shoot from the leaf count and the areas of the"
+        " largest and smallest leaf (their mean times the count, MLA), linear and log-log forms,"
+        " cv. Aragonez",
+        "Lopes & Pinto 2005, Vitis 44(2):55-61, Eqs 8-11 (pp. 57-58), Tables 3-4 (p. 59)",
+        year=2005,
+        authors=("Lopes, C.", "Pinto, P. A."),
+        authors_complete=True,
+        authors_from="read",
+        checked="lopes2005.pdf (the 2026-10-25 other-sources drop); Eqs 8-11 and Tables 1-4"
+        " read in the page images",
+        doi="10.5073/vitis.2005.44.55-61",
+        structures=("allometry",),
+        structures_note=(
+            "Shoot leaf area from a leaf count and two leaf areas: the allometry form"
+            " sanchezdemiguel2011.leaf_area refits (natural logs here, base-10 powers there)."
+        ),
+        calibrated_on=("lopes2005.estremoz",),
+        calibration_note=(
+            "Forward stepwise regression (entry F 0.15) on 180 Aragonez shoots (107 with"
+            " laterals) sampled on six dates at Estremoz in 1997, areas by a Delta-T meter;"
+            " the log forms stabilise the variance. Validated on 608 shoots of four cultivars"
+            " (Évora 1997, 2002, and the Dão 1994 and 2001): primary MA%E 7.1-8.8 %, EF 0.97,"
+            " slopes above 1; lateral MA%E 6.1-15.5 %. Observed areas, no model in the data."
+            " Read 2026-10-26 (literature/lopes2005)."
+        ),
+        parameters=(
+            Published(
+                "eq8.a", 49.1936, "cm²", "Eq. 8, p. 57, R² 0.97, n 180, RMSE 150.6 cm²", "read"
+            ),
+            Published("eq8.b", 0.9958, "cm² per cm² of MLA1", "Eq. 8, p. 57", "read"),
+            Published(
+                "eq9.a", 0.0835, "ln cm²", "Eq. 9, p. 58, R² 0.99, n 180, RMSE 152.7 cm²", "read"
+            ),
+            Published("eq9.b", 0.992, "1 (power of MLA1)", "Eq. 9, p. 58", "read"),
+            Published(
+                "eq10.a", 78.01726, "cm²", "Eq. 10, p. 58, R² 0.97, n 107, RMSE 97.9 cm²", "read"
+            ),
+            Published("eq10.b_l2", -1.16773, "cm² per cm² of L2", "Eq. 10, p. 58", "read"),
+            Published("eq10.c_mla2", 1.00848, "cm² per cm² of MLA2", "Eq. 10, p. 58", "read"),
+            Published(
+                "eq11.a",
+                0.346,
+                "ln cm²",
+                "Eq. 11, p. 58, adjusted R² 0.98, n 107, RMSE 93.2 cm²",
+                "read",
+            ),
+            Published("eq11.b_mla2", 1.029, "1 (power of MLA2)", "Eq. 11, p. 58", "read"),
+            Published("eq11.c_l2", -0.125, "1 (power of L2)", "Eq. 11, p. 58", "read"),
+        ),
+        flags=(
+            "Needs a leaf count and the largest and smallest leaf area of the shoot: an"
+            " allometry for measured shoots, not a growth rule. Coefficient standard errors"
+            " are not printed; Table 4's Aragonez n (156) disagrees with Table 3's (130)."
+        ),
+    ),
+    "wermelinger1990.leaf_growth": Formulation(
+        "Primary-leaf water content, nitrogen concentration and nitrogen content as"
+        " polynomials of leaf age in degree-days above 10 °C, shoot dry mass as a line in leaf"
+        " dry mass per vine, and the leaf mass growth rates, Pinot noir",
+        "Wermelinger & Koblet 1990, Vitis 29:15-26, Figs 2 B, 3 A-B and 5 (pp. 18-21) and"
+        " pp. 16-17",
+        year=1990,
+        authors=("Wermelinger, B.", "Koblet, W."),
+        authors_complete=True,
+        authors_from="read",
+        checked="wermelinger1990.pdf (the 2026-10-25 other-sources drop); the Fig. 2, 3 and 5"
+        " regressions read in the page images",
+        doi="10.5073/vitis.1990.29.15-26",
+        structures=("growth-on-thermal-time", "allometry"),
+        structures_note=(
+            "Leaf measures as curves of a 10 °C degree-day sum (the engine's clock), and shoot"
+            " mass from leaf mass: one plant measure from another."
+        ),
+        calibrated_on=("wermelinger1990.waedenswil",),
+        calibration_note=(
+            "Least-squares polynomials on individual primary leaves and a line on per-vine"
+            " totals of six shoots a date, Blauburgunder Mariafeld on 5 C at Wädenswil, 1988;"
+            " n is not printed for any fit. Degree-days by sine integration of the station's"
+            " daily extremes (1155.3 dd in 1988). Observed; nothing model-dated. Read 2026-10-26"
+            " (literature/wermelinger1990)."
+        ),
+        parameters=(
+            Published("t_base", 10, "°C", "p. 16 (l. 83-85), degree-days above 10 °C", "read"),
+            Published("water.a", 79.56, "%", "Fig. 2 B caption, p. 18, r² 0.71", "read"),
+            Published("water.b", -0.0404, "% per dd", "Fig. 2 B caption", "read"),
+            Published("water.c", 6.73e-05, "% per dd²", "Fig. 2 B caption", "read"),
+            Published("water.d", -3.89e-08, "% per dd³", "Fig. 2 B caption", "read"),
+            Published("n_conc.a", 6.45, "%", "Fig. 3 A caption, p. 19, r² 0.95", "read"),
+            Published("n_conc.b", -0.0169, "% per dd", "Fig. 3 A caption", "read"),
+            Published("n_conc.c", 2.48e-05, "% per dd²", "Fig. 3 A caption", "read"),
+            Published(
+                "n_conc.d",
+                -1.28e-08,
+                "% per dd³",
+                "Fig. 3 A caption, printed as 128E-8 (read as 1.28E-8 from the curve)",
+                "read",
+            ),
+            Published("n_leaf.a", -15.17, "mg", "Fig. 3 B caption, p. 19, r² 0.75", "read"),
+            Published("n_leaf.b", 0.33, "mg per dd", "Fig. 3 B caption", "read"),
+            Published("n_leaf.c", -0.000856, "mg per dd²", "Fig. 3 B caption", "read"),
+            Published("n_leaf.d", 9.19e-07, "mg per dd³", "Fig. 3 B caption", "read"),
+            Published("n_leaf.e", -3.59e-10, "mg per dd⁴", "Fig. 3 B caption", "read"),
+            Published("shoot_vs_leaf.a", -20.29, "g", "Fig. 5 caption, p. 21, r² 0.98", "read"),
+            Published("shoot_vs_leaf.b", 1.64, "g per g", "Fig. 5 caption, p. 21", "read"),
+            Published(
+                "leaf_mass_rate.early",
+                0.0043,
+                "g per dd",
+                "p. 16 (l. 110-113), below 250 dd of leaf age",
+                "read",
+            ),
+            Published(
+                "leaf_mass_rate.late",
+                0.0006,
+                "g per dd",
+                "p. 16 (l. 110-113), after 250 dd",
+                "read",
+            ),
+            Published("leaf_mass_rate.break", 250, "dd", "p. 16 (l. 110-113)", "read"),
+            Published("sla.peak", 0.022, "m² per g", "p. 17 (l. 121), at about 150 dd", "read"),
+            Published("leaf.longevity", 900, "dd", "p. 18 (l. 166), about 120 d", "read"),
+            Published("leaf_area_per_vine", 6.4, "m²", "p. 24 (l. 496), at 845 dd", "read"),
+        ),
+        flags=(
+            "One cultivar, one site, one season (1988), six shoots a date; n not printed. The"
+            " leaf-area curve itself is a Lowess smoother (Fig. 1), not a printed fit: the"
+            " record holds the rates the text gives and the printed polynomials. Degree-days"
+            " are credited to Frazer & Gilbert 1976, an insect paper: a flag, not decided."
+        ),
+    ),
+    "kovaleski2018.deacclimation": Formulation(
+        "Bud cold-hardiness loss per unit time as a temperature rate (exponential below 12 °C,"
+        " logarithmic above) scaled by a logistic deacclimation potential in accumulated chill,"
+        " and budbreak stage as a line in the summed rate, eleven Vitis genotypes",
+        "Kovaleski, Reisch & Londo 2018, AoB PLANTS 10:ply066, Methods and Results (the"
+        " equations in the article text)",
+        year=2018,
+        authors=("Kovaleski, A. P.", "Reisch, B. I.", "Londo, J. P."),
+        authors_complete=True,
+        authors_from="read",
+        checked="kovaleski2018.xml (Europe PMC JATS text, the 2026-10-25 other-sources drop);"
+        " no page image held",
+        doi="10.1093/aobpla/ply066",
+        structures=("cold-hardiness", "chilling-dormancy", "rate-temperature-response"),
+        structures_note=(
+            "Hardiness that deacclimates with temperature (the Ferguson records' form), the"
+            " deacclimation potential rising with accumulated chill (dormancy broken by chill),"
+            " and a rate as a function of the day's temperature."
+        ),
+        calibrated_on=("kovaleski2018.geneva",),
+        calibration_note=(
+            "nls (port) and drc logistic fits on chamber series of LTE against time, temperature"
+            " and chill, 2014/15-2016/17 at Geneva NY, outliers at a studentized residual of"
+            " 2.5; budbreak by forward selection on BIC (adjusted R² 0.66). The chill axis and"
+            " the season start dates are the North Carolina chill model's output (Shaltout &"
+            " Unrath 1983) on NEWA hourly weather: a model shaped the data, with no record of"
+            " that model to name in calibrated_with. Read 2026-10-26 (literature/kovaleski2018)."
+        ),
+        parameters=(
+            Published("psi.b.riesling", -7.23, "1", "Results (l. 41), pseudo-R² 0.87", "read"),
+            Published(
+                "psi.c.riesling",
+                6.88,
+                "ln chill units (North Carolina model)",
+                "Results (l. 41)",
+                "read",
+            ),
+            Published(
+                "psi.c.sauvignonblanc",
+                6.77,
+                "ln chill units (North Carolina model)",
+                "Results (l. 36)",
+                "read",
+            ),
+            Published(
+                "t_switch",
+                12,
+                "°C",
+                "Methods (l. 30-32): exponential below, logarithmic from 12 °C; the text puts"
+                " the join at 10-11 °C (l. 43)",
+                "read",
+            ),
+            Published(
+                "chill.full",
+                1440,
+                "chill units (North Carolina model)",
+                "Methods (l. 24), after Londo & Johnson 2014",
+                "read",
+            ),
+        ),
+        flags=(
+            "Cannot run as printed: m, n, q, r of kdeacc, a and b of the budbreak line and the"
+            " fitted beta are only in Table S2, not held; the logistic's b and c are printed"
+            " for Riesling (and c for Sauvignon blanc) only. Read from the JATS text, no page"
+            " image: the equations are the publisher's MathML. Kin to ferguson2014 and"
+            " ferguson2011 by form; Campos-Arguedas 2026 applies its successor NYUS.1."
+        ),
+    ),
+    "cheraiet2021.deposit_deciles": Formulation(
+        "Deciles D1-D9 of the spray deposit distribution on vine leaves (ng dm⁻² per 1 g ha⁻¹"
+        " sprayed) as exponential declines in leaf wall area (univariate) or in LiDAR canopy"
+        " height, width and intercepted beam rate (multivariate), 150 L/ha",
+        "Cheraïet et al. 2021, Comput. Electron. Agric. 189:106402, Eqs 5-6 (manuscript"
+        " pp. 13-14), Tables 4 and 6 (pp. 19, 22)",
+        year=2021,
+        authors=(
+            "Cheraïet, Anice",
+            "Naud, Olivier",
+            "Carra, Mathilde",
+            "Codis, Sébastien",
+            "Lebeau, Frédéric",
+            "Taylor, James",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="cheraiet2021.pdf (the HAL author manuscript, the 2026-10-25 other-sources"
+        " drop); Eqs 3-9 and Tables 4 and 6 read in the page images",
+        doi="10.1016/j.compag.2021.106402",
+        structures=("canopy-deposition-decay",),
+        structures_note=(
+            "Deposit falling exponentially with canopy size, one curve per decile of the"
+            " distribution: a form of its own, with no record in the catalogue before it."
+        ),
+        calibrated_on=("cheraiet2021.herault",),
+        calibration_note=(
+            "Calibrated on 2017 (five plots at Villeneuve-lès-Maguelone, n 40 sampling units)"
+            " and validated on 2016 (four plots at Grabels, n 16), four stages a year from BBCH"
+            " 14 to 85, seven varieties, one Precijet sprayer at 150 L/ha; tartrazine deposits"
+            " on PVC collectors, canopy by a SICK LMS100 LiDAR. Fitting method not stated;"
+            " variables chosen stepwise by AICc with VIF below 5. Univariate R² 0.69-0.82"
+            " (calibration) and 0.66-0.85 (validation); multivariate 0.81-0.93, validation nRMSEp"
+            " 10-24 %, bias -1.5 to -3.2 %. Observed; no model in the data. Read 2026-10-26"
+            " (literature/cheraiet2021)."
+        ),
+        parameters=(
+            Published("uni.d1.u", 740.6, "ng dm⁻² per 1 g ha⁻¹", "Table 4, D1, R² 0.69", "read"),
+            Published("uni.d1.lambda", 0.000235, "per m² ha⁻¹ of LWA", "Table 4, D1", "read"),
+            Published("uni.d2.u", 935.39, "ng dm⁻² per 1 g ha⁻¹", "Table 4, D2, R² 0.75", "read"),
+            Published("uni.d2.lambda", 0.000254, "per m² ha⁻¹ of LWA", "Table 4, D2", "read"),
+            Published("uni.d3.u", 1282.13, "ng dm⁻² per 1 g ha⁻¹", "Table 4, D3, R² 0.79", "read"),
+            Published("uni.d3.lambda", 0.000261, "per m² ha⁻¹ of LWA", "Table 4, D3", "read"),
+            Published("uni.d4.u", 1524.34, "ng dm⁻² per 1 g ha⁻¹", "Table 4, D4, R² 0.81", "read"),
+            Published("uni.d4.lambda", 0.000258, "per m² ha⁻¹ of LWA", "Table 4, D4", "read"),
+            Published("uni.d5.u", 1702.88, "ng dm⁻² per 1 g ha⁻¹", "Table 4, D5, R² 0.81", "read"),
+            Published("uni.d5.lambda", 0.000247, "per m² ha⁻¹ of LWA", "Table 4, D5", "read"),
+            Published("uni.d6.u", 1820.63, "ng dm⁻² per 1 g ha⁻¹", "Table 4, D6, R² 0.78", "read"),
+            Published("uni.d6.lambda", 0.000235, "per m² ha⁻¹ of LWA", "Table 4, D6", "read"),
+            Published("uni.d7.u", 2100.3, "ng dm⁻² per 1 g ha⁻¹", "Table 4, D7, R² 0.8", "read"),
+            Published("uni.d7.lambda", 0.00023, "per m² ha⁻¹ of LWA", "Table 4, D7", "read"),
+            Published("uni.d8.u", 2474.84, "ng dm⁻² per 1 g ha⁻¹", "Table 4, D8, R² 0.79", "read"),
+            Published("uni.d8.lambda", 0.000225, "per m² ha⁻¹ of LWA", "Table 4, D8", "read"),
+            Published("uni.d9.u", 3045.88, "ng dm⁻² per 1 g ha⁻¹", "Table 4, D9, R² 0.82", "read"),
+            Published("uni.d9.lambda", 0.000219, "per m² ha⁻¹ of LWA", "Table 4, D9", "read"),
+            Published(
+                "uni.mean.u",
+                1789.88,
+                "ng dm⁻² per 1 g ha⁻¹",
+                "Table 4, mean model, R² 0.80",
+                "read",
+            ),
+            Published(
+                "uni.mean.lambda", 0.00024, "per m² ha⁻¹ of LWA", "Table 4, mean model", "read"
+            ),
+            Published("multi.d1.m", 847.32, "ng dm⁻² per 1 g ha⁻¹", "Table 6, D1, R² 0.81", "read"),
+            Published("multi.d1.alpha", 1.06, "per m of height", "Table 6, D1", "read"),
+            Published("multi.d1.beta", 0.3, "per m of width", "Table 6, D1", "read"),
+            Published("multi.d1.gamma", 1.28, "per unit IBR (fraction)", "Table 6, D1", "read"),
+            Published(
+                "multi.d2.m", 1057.31, "ng dm⁻² per 1 g ha⁻¹", "Table 6, D2, R² 0.83", "read"
+            ),
+            Published("multi.d2.alpha", 0.97, "per m of height", "Table 6, D2", "read"),
+            Published("multi.d2.beta", 0.48, "per m of width", "Table 6, D2", "read"),
+            Published("multi.d2.gamma", 1.13, "per unit IBR (fraction)", "Table 6, D2", "read"),
+            Published(
+                "multi.d3.m", 1506.97, "ng dm⁻² per 1 g ha⁻¹", "Table 6, D3, R² 0.88", "read"
+            ),
+            Published("multi.d3.alpha", 0.82, "per m of height", "Table 6, D3", "read"),
+            Published("multi.d3.beta", 0.37, "per m of width", "Table 6, D3", "read"),
+            Published("multi.d3.gamma", 1.54, "per unit IBR (fraction)", "Table 6, D3", "read"),
+            Published("multi.d4.m", 1819.9, "ng dm⁻² per 1 g ha⁻¹", "Table 6, D4, R² 0.92", "read"),
+            Published("multi.d4.alpha", 0.7, "per m of height", "Table 6, D4", "read"),
+            Published("multi.d4.beta", 0.36, "per m of width", "Table 6, D4", "read"),
+            Published("multi.d4.gamma", 1.69, "per unit IBR (fraction)", "Table 6, D4", "read"),
+            Published(
+                "multi.d5.m", 2055.62, "ng dm⁻² per 1 g ha⁻¹", "Table 6, D5, R² 0.93", "read"
+            ),
+            Published("multi.d5.alpha", 0.55, "per m of height", "Table 6, D5", "read"),
+            Published("multi.d5.beta", 0.34, "per m of width", "Table 6, D5", "read"),
+            Published("multi.d5.gamma", 1.81, "per unit IBR (fraction)", "Table 6, D5", "read"),
+            Published(
+                "multi.d6.m", 2154.46, "ng dm⁻² per 1 g ha⁻¹", "Table 6, D6, R² 0.88", "read"
+            ),
+            Published("multi.d6.alpha", 0.52, "per m of height", "Table 6, D6", "read"),
+            Published("multi.d6.beta", 0.47, "per m of width", "Table 6, D6", "read"),
+            Published("multi.d6.gamma", 1.59, "per unit IBR (fraction)", "Table 6, D6", "read"),
+            Published(
+                "multi.d7.m", 2530.31, "ng dm⁻² per 1 g ha⁻¹", "Table 6, D7, R² 0.91", "read"
+            ),
+            Published("multi.d7.alpha", 0.38, "per m of height", "Table 6, D7", "read"),
+            Published("multi.d7.beta", 0.43, "per m of width", "Table 6, D7", "read"),
+            Published("multi.d7.gamma", 1.77, "per unit IBR (fraction)", "Table 6, D7", "read"),
+            Published("multi.d8.m", 2976.56, "ng dm⁻² per 1 g ha⁻¹", "Table 6, D8, R² 0.9", "read"),
+            Published("multi.d8.alpha", 0.34, "per m of height", "Table 6, D8", "read"),
+            Published("multi.d8.beta", 0.46, "per m of width", "Table 6, D8", "read"),
+            Published("multi.d8.gamma", 1.75, "per unit IBR (fraction)", "Table 6, D8", "read"),
+            Published(
+                "multi.d9.m", 3578.82, "ng dm⁻² per 1 g ha⁻¹", "Table 6, D9, R² 0.91", "read"
+            ),
+            Published("multi.d9.alpha", 0.39, "per m of height", "Table 6, D9", "read"),
+            Published("multi.d9.beta", 0.55, "per m of width", "Table 6, D9", "read"),
+            Published("multi.d9.gamma", 1.5, "per unit IBR (fraction)", "Table 6, D9", "read"),
+        ),
+        flags=(
+            "One sprayer, one volume rate and one region: the coefficients carry the Precijet at"
+            " 150 L/ha. IBR's unit in Eq. 6 (a percentage by Eq. 3) is not restated beside the"
+            " gamma values. Eq. 5 is called log-linear but printed as an exponential; the"
+            " abstract's R² (0.76) and Fig. 3's (0.79) differ from the tables (0.79, 0.80)."
+        ),
+    ),
+    "castex2020.lgm": Formulation(
+        "Lobesia botrana overwintering in three phases (prediapause, diapause gated by day"
+        " length, post-diapause) and adult flights, the 10 % and 50 % of each generation, as"
+        " Wang-Engel beta forcing summed to thresholds: the Lobesia Generic Model",
+        "Castex et al. 2020, Ecol. Model. 420:108946 (author manuscript), Eqs 1-3 and 6-7"
+        " (pp. 10-11), Table 9 (p. 23)",
+        year=2020,
+        authors=(
+            "Castex, V.",
+            "García de Cortázar-Atauri, I.",
+            "Calanca, P.",
+            "Beniston, M.",
+            "Moreau, J.",
+        ),
+        authors_complete=True,
+        authors_from="read",
+        checked="castex2020.pdf (the HAL author manuscript, the 2026-10-25 other-sources"
+        " drop); Eqs 1-7 and Tables 3-5 and 9 read in the page images",
+        doi="10.1016/j.ecolmodel.2020.108946",
+        structures=("rate-temperature-response", "degree-day-phenology", "photoperiod-gate"),
+        structures_note=(
+            "A daily forcing rate from a beta of the day's temperature, summed to a threshold"
+            " for each phase and flight point (a heat-sum phenology with a beta weight), and"
+            " the diapause sum switched on by day length between Plow and Phigh."
+        ),
+        calibrated_on=("castex2020.traps",),
+        calibration_note=(
+            "Calibrated on a random 75 % of the 10 % and 50 % flight dates from 12 sites"
+            " (1997-2016) and validated on 25 %, then refitted on all with cross-validation."
+            " Adults between generations: CAL RMSE 6.93 d, EFF 0.95, n 140; VAL 11.15 d, 0.84,"
+            " n 46. Within a generation: CAL 5.94 d, 0.98, 107; VAL 9.84 d, 0.96, 37."
+            " Overwintering (to the first 10 % flight): CAL EFF 0.74, n 39; VAL RMSE 9.07 d,"
+            " EFF 0.08, n 12. Observed catches and station weather; no model dated them."
+            " Read 2026-10-26 (literature/castex2020)."
+        ),
+        parameters=(
+            Published("predia.tmin", 2.45, "°C", "Table 9, WAllp, prediapause", "read"),
+            Published("predia.topt", 14.36, "°C", "Table 9, WAllp, prediapause", "read"),
+            Published("predia.tmax", 27.69, "°C", "Table 9, WAllp, prediapause", "read"),
+            Published(
+                "predia.f",
+                40.74,
+                "forcing units (daily beta, 0-1, summed)",
+                "Table 9, WAllp, prediapause",
+                "read",
+            ),
+            Published("dia.tmin", 7.66, "°C", "Table 9, WAllp, diapause", "read"),
+            Published("dia.topt", 15.04, "°C", "Table 9, WAllp, diapause", "read"),
+            Published("dia.tmax", 22.87, "°C", "Table 9, WAllp, diapause", "read"),
+            Published(
+                "dia.plow", 9.17, "h of day length", "Table 9, WAllp, diapause (Eq. 3)", "read"
+            ),
+            Published(
+                "dia.phigh", 14.25, "h of day length", "Table 9, WAllp, diapause (Eq. 3)", "read"
+            ),
+            Published("dia.f", 28.35, "forcing units", "Table 9, WAllp, diapause", "read"),
+            Published("postdia.tmin", 11.39, "°C", "Table 9, WAllp, post-diapause", "read"),
+            Published(
+                "postdia.topt",
+                11.42,
+                "°C",
+                "Table 9, WAllp, post-diapause (0.03 °C above Tmin, as printed)",
+                "read",
+            ),
+            Published("postdia.tmax", 20.0, "°C", "Table 9, WAllp, post-diapause", "read"),
+            Published("postdia.f", 1.47, "forcing units", "Table 9, WAllp, post-diapause", "read"),
+            Published(
+                "adult.tmin", 2.38, "°C", "Table 9, adult flights (text l. 785: 2.4)", "read"
+            ),
+            Published("adult.topt", 23.13, "°C", "Table 9, adult flights (text: 23.12)", "read"),
+            Published("adult.tmax", 32.31, "°C", "Table 9, adult flights (text: 32.13)", "read"),
+            Published(
+                "adult.f_between",
+                45.61,
+                "forcing units",
+                "Table 9, 10-10 and 50-50 between generations",
+                "read",
+            ),
+            Published(
+                "adult.f_within",
+                7.76,
+                "forcing units",
+                "Table 9, 10-50 within a generation",
+                "read",
+            ),
+            Published(
+                "photoperiod.stop",
+                12,
+                "h",
+                "p. 10 (l. 232-233): day length below 12 h stops the last generation",
+                "read",
+            ),
+        ),
+        flags=(
+            "Runnable from Table 9 with Eqs 1-3 and 6-7 (alpha = ln 2 / ln((Tmax - Tmin)/(Topt"
+            " - Tmin))); the supplements ESM2-ESM7 (the simplified overwintering equations and"
+            " the site table) are not held, and dt0 is 15 July. The post-diapause optimum lies"
+            " 0.03 °C above its minimum as printed. Table 9's adult temperatures differ in the"
+            " second decimal from the text's. The manuscript prints no year, volume or DOI."
+            " No tool runs a berry-moth model yet: kin to the engine by form only."
+        ),
+    ),
+    "mariani2007.bbch_nhh": Formulation(
+        "Grapevine BBCH stage as a power (vegetative stages) or a log (reproductive) of Normal"
+        " Heat Hours, hourly beta-weighted heat summed from 1 January, Cabernet Sauvignon and"
+        " Chardonnay at Alghero",
+        "Mariani, Failla & Capece 2007, Ital. J. Agrometeorol. 2007(3):39-44, Eq. 1 (p. 40),"
+        " Tables 1-2 (p. 41)",
+        year=2007,
+        authors=("Mariani, Luigi", "Failla, Osvaldo", "Capece, Paolo"),
+        authors_complete=True,
+        authors_from="read",
+        checked="mariani2007.pdf (the 2026-10-25 other-sources drop); Eq. 1 and Tables 1-3"
+        " read in the page images",
+        structures=("degree-day-phenology", "rate-temperature-response"),
+        structures_note=(
+            "A stage from a heat sum (the engine's degree-day phenology form), the hourly heat"
+            " weighted by a beta of the hour's temperature (Wang & Engel 1998, cited)."
+        ),
+        calibrated_on=("mariani2007.alghero",),
+        calibration_note=(
+            "Regressions of BBCH stage on NHH for Olmedo's 2006 stage dates, linear or"
+            " logarithmic by best correlation, n not printed; validated on stages 71 and 77 of"
+            " 2000-2004 at Alghero vineyards: Cabernet MAE 7.35, RMSE 5.80 d, EF 0.60, r² 0.73;"
+            " Chardonnay MAE 6.59, RMSE 5.60 d, EF 0.52, r² 0.54 (Table 2). Hourly temperatures"
+            " are the Parton-Logan algorithm's, cited to Mariani 2002 and not printed: a method"
+            " shaped the clock, not the stage dates. Read 2026-10-26 (literature/mariani2007)."
+        ),
+        parameters=(
+            Published("nhh.tmin", 7, "°C", "p. 40 (l. 104), Eq. 1; Fig. 1 label C_min 7", "read"),
+            Published(
+                "nhh.topt",
+                26,
+                "°C",
+                "p. 40 (l. 105), Eq. 1; Fig. 1 labels the optimum 22-28 °C",
+                "read",
+            ),
+            Published("nhh.tmax", 35, "°C", "p. 40 (l. 104), Eq. 1", "read"),
+            Published(
+                "cs.veg.a",
+                1e-24,
+                "BBCH per NHH^b",
+                "Table 1, Cabernet S vegetative, r² 0.9167",
+                "read",
+            ),
+            Published("cs.veg.b", 9.5639, "1", "Table 1, Cabernet S vegetative", "read"),
+            Published(
+                "cs.rep.a",
+                27.28,
+                "BBCH per ln NHH",
+                "Table 1, Cabernet S reproductive, r² 0.9707",
+                "read",
+            ),
+            Published("cs.rep.b", -123.27, "BBCH", "Table 1, Cabernet S reproductive", "read"),
+            Published(
+                "ch.veg.a",
+                8e-15,
+                "BBCH per NHH^b",
+                "Table 1, Chardonnay vegetative, r² 0.8111",
+                "read",
+            ),
+            Published("ch.veg.b", 5.9521, "1", "Table 1, Chardonnay vegetative", "read"),
+            Published(
+                "ch.rep.a",
+                29.77,
+                "BBCH per ln NHH",
+                "Table 1, Chardonnay reproductive, r² 0.9614",
+                "read",
+            ),
+            Published("ch.rep.b", -138.03, "BBCH", "Table 1, Chardonnay reproductive", "read"),
+        ),
+        flags=(
+            "Fitted to one year (2006) at one vineyard; the vegetative powers (NHH^9.56 and"
+            " NHH^5.95 with 1e-24 and 8e-15 in front) are numerically fragile. The printed"
+            " alpha, ln[2/ln(...)], misplaces a bracket against Wang & Engel's ln 2/ln(...);"
+            " which the code used is not said. The journal volume prints as 'xx xxx'."
+        ),
+    ),
+    "mariani2007.lobesia_flights": Formulation(
+        "Beginning and end of four Lobesia botrana adult flights as sums of thermal units"
+        " above 8 °C: Arca et al. 1993's thresholds adjusted on 1993 observations (the LBfm)",
+        "Mariani, Failla & Capece 2007, Ital. J. Agrometeorol. 2007(3):39-44, Table 3 and the"
+        " text (p. 41)",
+        year=2007,
+        authors=("Mariani, Luigi", "Failla, Osvaldo", "Capece, Paolo"),
+        authors_complete=True,
+        authors_from="read",
+        checked="mariani2007.pdf (the 2026-10-25 other-sources drop); Table 3 read in the page"
+        " image",
+        structures=("degree-day-phenology",),
+        structures_note="Flight stages from a heat sum above a base to printed thresholds.",
+        calibration_note=(
+            "Thresholds deduced from Arca, Cossu et al. 1993's observations and adjusted on"
+            " 1993 data (p. 41), neither printed here: fitted to Arca et al. 1993's data,"
+            " inferred. The time step of the sum and the unit (hourly or daily degrees) are"
+            " not stated. Read 2026-10-26 (literature/mariani2007)."
+        ),
+        parameters=(
+            Published(
+                "t_base",
+                8,
+                "°C",
+                "p. 41, text: thermal units above a threshold of 8 °C (Arca et al. 1993)",
+                "read",
+            ),
+            Published(
+                "flight1.begin",
+                270,
+                "thermal units above 8 °C (step not stated)",
+                "Table 3, first flight",
+                "read",
+            ),
+            Published(
+                "flight1.end",
+                470,
+                "thermal units above 8 °C (step not stated)",
+                "Table 3, first flight",
+                "read",
+            ),
+            Published(
+                "flight2.begin",
+                825,
+                "thermal units above 8 °C (step not stated)",
+                "Table 3, second flight",
+                "read",
+            ),
+            Published(
+                "flight2.end",
+                1070,
+                "thermal units above 8 °C (step not stated)",
+                "Table 3, second flight",
+                "read",
+            ),
+            Published(
+                "flight3.begin",
+                1510,
+                "thermal units above 8 °C (step not stated)",
+                "Table 3, third flight",
+                "read",
+            ),
+            Published(
+                "flight3.end",
+                1990,
+                "thermal units above 8 °C (step not stated)",
+                "Table 3, third flight",
+                "read",
+            ),
+            Published(
+                "flight4.begin",
+                2035,
+                "thermal units above 8 °C (step not stated)",
+                "Table 3, fourth flight",
+                "read",
+            ),
+            Published(
+                "flight4.end",
+                2530,
+                "thermal units above 8 °C (step not stated)",
+                "Table 3, fourth flight",
+                "read",
+            ),
+        ),
+        flags=(
+            "Table 3 gives four flights; the text speaks of three. The unit of the sum, the"
+            " time step and the 1993 adjustment data are not printed. A plain heat-sum model"
+            " beside castex2020.lgm, which shares neither data nor equations with it."
+        ),
     ),
 }

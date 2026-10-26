@@ -1272,4 +1272,80 @@ DATASETS: dict[str, Dataset] = {
         " (read 2026-10-20), whose temperature and half-life regressions are fitted to them",
         "trail",
     ),
+    "schultz1993.geisenheim": Dataset(
+        "Plastochron index and leaf plastochron index of 5-10 sun and shade White Riesling"
+        " shoots recorded every 1-3 d from bud break to harvest at Geisenheim, 1988, with daily"
+        " maximum and minimum air temperature",
+        "Schultz 1993, Vitis 32:197-205 (read 2026-10-26): Eq. 3 is fitted to them by PROC"
+        " NLIN in three periods of thermal time, and again on mean daily temperature",
+        "read",
+    ),
+    "lopes2005.estremoz": Dataset(
+        "Primary and lateral leaf areas, leaf counts and the areas of the largest and smallest"
+        " leaf of 180 Aragonez shoots (107 with laterals) on six dates from April to August at"
+        " Estremoz, Alentejo, 1997",
+        "Lopes & Pinto 2005, Vitis 44:55-61 (read 2026-10-26): Eqs 8-11 are fitted to them;"
+        " validated on four independent sets (Aragonez at Évora 1997, Cabernet-Sauvignon 2002,"
+        " Touriga Nacional 1994 and Jaen 2001)",
+        "read",
+    ),
+    "wermelinger1990.waedenswil": Dataset(
+        "Leaf area, dry mass, water and nitrogen of primary leaves, laterals, shoots and grapes"
+        " from six Pinot noir shoots sampled weekly to mid June and then every 3-5 weeks at"
+        " Wädenswil, 1988, against degree-days above 10 °C",
+        "Wermelinger & Koblet 1990, Vitis 29:15-26 (read 2026-10-26): its polynomials for water"
+        " and nitrogen on leaf age and its shoot-against-leaf line are fitted to them; the data"
+        " behind the closed Wermelinger et al. 1991 demographic model",
+        "read",
+    ),
+    "weyand2006.geisenheim": Dataset(
+        "Leaf area per vine and canopy segment, light interception grids, leaf gas exchange,"
+        " night respiration, pre-dawn water potential, yield and sugar of minimal and"
+        " cane-pruned Riesling at Geisenheim, 2002 and 2003",
+        "Weyand & Schultz 2006, Vitis 45:105-114 (read 2026-10-26): a measurement paper; its"
+        " per-zone polynomials and leaf-weight regressions are fitted to them, coefficients not"
+        " printed",
+        "read",
+    ),
+    "kovaleski2018.geneva": Dataset(
+        "Low-temperature exotherms of dormant buds of eleven Vitis genotypes sampled through"
+        " the 2014/15-2016/17 winters at Geneva NY and held at 2-30 °C, and budbreak stage of"
+        " fully chilled buds at 2-22 °C; the chill axis is the North Carolina chill model's"
+        " output on NEWA hourly weather, not an observation",
+        "Kovaleski, Reisch & Londo 2018, AoB PLANTS 10:ply066 (read 2026-10-26 from the JATS"
+        " text): the deacclimation rate, potential and budbreak relations are fitted to them",
+        "read",
+    ),
+    "coertze2002.wound_infection": Dataset(
+        "Wounds infected out of 120 on Dauphine berry cheeks at bunch closure, harvest and after"
+        " cold storage, by freshly or previously deposited dry airborne Botrytis conidia under"
+        " dry, moist and wet regimes for 24 h at 22 °C, two runs, Stellenbosch",
+        "Coertze & Holz 2002, S. Afr. J. Enol. Vitic. 23:72-77 (read 2026-10-26): analysed by"
+        " ANOVA only; no formulation is fitted to them",
+        "read",
+    ),
+    "cheraiet2021.herault": Dataset(
+        "Tracer spray deposits on PVC collectors through nine vineyard plots at Grabels (2016)"
+        " and Villeneuve-lès-Maguelone (2017), Hérault, four stages a year from BBCH 14 to 85,"
+        " with 2D LiDAR canopy height, width and beam interception",
+        "Cheraïet et al. 2021, Comput. Electron. Agric. 189:106402 (read 2026-10-26): the decile"
+        " models are calibrated on 2017 (n 40) and validated on 2016 (n 16)",
+        "read",
+    ),
+    "castex2020.traps": Dataset(
+        "Weekly male Lobesia botrana pheromone-trap catches at 12 sites from Andalusia to"
+        " Alsace, 1997-2016 (51 of 90 site-years kept), their 10 % and 50 % flight dates by"
+        " cumulative sum, and daily temperatures from stations within 10-15 km",
+        "Castex et al. 2020, Ecol. Model. 420:108946 (read 2026-10-26): the Lobesia Generic"
+        " Model is calibrated on a random 75 % and validated on 25 %, then refitted on all",
+        "read",
+    ),
+    "mariani2007.alghero": Dataset(
+        "BBCH stage dates of Cabernet Sauvignon and Chardonnay at Olmedo (Alghero), 2006, with"
+        " hourly temperatures made from Alghero's daily maxima and minima; stages 71 and 77 of"
+        " 2000-2004 for validation",
+        "Mariani, Failla & Capece 2007, Ital. J. Agrometeorol. 2007(3):39-44 (read 2026-10-26):"
+        " the four BBCH-on-NHH regressions are fitted to the 2006 data",
+        "read",
+    ),
 }

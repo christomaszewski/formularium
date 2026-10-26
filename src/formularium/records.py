@@ -151,6 +151,10 @@ STRUCTURES = {
     " functions of the actual severity",
     "minimum-wetness-table": "infection when leaf wetness exceeds a minimum read from a table by"
     " temperature (the Mills form; Agrarium's open D33 may fold it into Magarey's response)",
+    "canopy-deposition-decay": "spray deposit on leaves falling exponentially with canopy size"
+    " (leaf wall area, or height, width and beam interception)",
+    "photoperiod-gate": "development forcing switched on or scaled by day length between two"
+    " thresholds",
 }
 
 

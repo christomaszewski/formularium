@@ -47,7 +47,8 @@ shoot at flowering and ripening that the truth's susceptible-tissue piece can us
 
 ## Dependence
 
-- **Borrows** the form of Lopes & Pinto 2005 (Vitis 44:55-61, cited) and refits it;
+- **Borrows** the form of Lopes & Pinto 2005 (Vitis 44:55-61, cited; read 2026-10-26 as
+  `lopes2005.shoot_leaf_area`: natural logs there, base-10 powers here) and refits it;
   the reference areas come from this paper's own Eqs 1-5. Four authors (Baeza, Linares,
   Junquera, Lissarrague) recur in the Madrid theses read the same day. Nothing
   engine-related.
