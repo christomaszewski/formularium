@@ -2,7 +2,7 @@
 id: brook1992
 citation: Brook, P. J. 1992. Epidemiology of grapevine anthracnose and downy mildew in an Auckland, New Zealand vineyard. New Zealand Journal of Crop and Horticultural Science 20(1):37-49
 doi: 10.1080/01140671.1992.10422324
-read: 2026-10-13, in full, by a reading agent (claude-haiku-5-5) on a pdftotext conversion (text/brook1992_tf in the drop); 60 of 60 quotes found at their lines by scripts/verify_quotes.py; the rules (p. 38), Table 7 (p. 44) and Table 10 (p. 47) read in the page images by the main session
+read: 2026-10-13, in full, by a reading agent (claude-haiku-5-5) on a pdftotext conversion (text/brook1992_tf in the drop); 60 of 60 quotes found at their lines by scripts/verify_quotes.py; the rules (p. 38), Table 7 (p. 44) and Table 10 (p. 47) read in the page images by the main session; 2026-10-25, re-read for primary inoculum and dispersal by a reading agent (claude-sonnet-5-5), every quote found at its line by scripts/verify_quotes.py
 status: read
 diseases: [downy mildew, anthracnose]
 crops: [grapevine]
@@ -69,3 +69,11 @@ Auckland is too rare for forecasting models to pay. From DSIR Plant Protection.
   warning that Galet's two-wet-days and 10 mm rules are not universal.
 - Evidence that under 1 mm of rain can infect once lesions are present, the point
   `barrios2004` makes for 3-5 mm springs.
+
+## Bearing (2026-10-25)
+
+Re-read for primary infection counts. In an isolated Auckland vineyard (42 vines, about
+300 m²), primary infection was "invariably one or two lesions" a season, about 0.005 per m²
+(arithmetic, not printed), and there was no disease at the end of December in 8 of 11
+seasons. The lowest count found by Agrarium's 2026-10-25 pass: a low-inoculum case, against
+0.07-3.5 per m² in untreated European and Chinese plots (`gobbin2005`, `yu2022`).

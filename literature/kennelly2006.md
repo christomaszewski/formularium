@@ -1,7 +1,7 @@
 ---
 id: kennelly2006
 citation: Kennelly, M. M., Gadoury, D. M., Seem, R. C., Wilcox, W. & Magarey, P. 2006. Recent investigations of the biology of Plasmopara viticola: considerations for forecasting and management of grapevine downy mildew. Proceedings of the Fifth International Workshop on Grapevine Downy and Powdery Mildew, San Michele all'Adige, Italy, 2006 (eds not printed; preface by C. Gessler and I. Pertot)
-read: 2026-10-09, in full by a reading agent (claude-haiku-5-5); every quote checked at its line by verify_quotes.py, key numbers checked by the main session
+read: 2026-10-09, in full by a reading agent (claude-haiku-5-5); every quote checked at its line by verify_quotes.py, key numbers checked by the main session; 2026-10-25, re-read for when organs become susceptible by a reading agent (claude-sonnet-5-5), every quote found at its line by scripts/verify_quotes.py, the early-shoot passage checked by the main session
 status: read
 diseases: [downy mildew]
 crops: [grapevine]
@@ -42,3 +42,12 @@ files: [PDMildew_Proceedings_ALL.pdf]
   `kennelly2006.chancellor`, its development data (Kennelly et al. 2007, p. 513, read). The
   berry curve is the data behind `kennelly2005.bunch_window`'s source (Gadoury's model;
   gadoury2006). Survival observations as in kennelly2007php.
+
+## Bearing (2026-10-25)
+
+Re-read for when shoots and bunches become susceptible. Field inoculations found shoot tissue
+susceptible from E&L stage 5, and a shoot inoculated at E&L 7 (one leaf unfolded) sporulated two
+weeks later (Fig. 3). Berries sporulate until about 2 weeks after bloom; early berry infections
+later fail to sporulate as functional stomata turn to lenticels; Chardonnay and Riesling
+rachises rarely supported sporulation, and only at prebloom and bloom. For Cooptera's open
+decision 19 and Agrarium's bunch windows.
