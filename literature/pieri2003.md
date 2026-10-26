@@ -53,7 +53,9 @@ and soil albedo. A diffuse-fraction fit on Bordeaux data drives it.
   re-derived here, and Riou et al. 1994's transpiration formula; Eqs 4-7 are fitted to that
   model's outputs: fitted with a model, which has no record to name.
 - **Eq. 3 fitted to** `pieri2003.bordeaux_diffuse`, observed daily pairs.
-- Same group as `lebon2004.leaf_development` (Lebon et al. 1995 is cited): a flag only.
+- Same group as `lebon2004.leaf_development` (Lebon et al. 1995 is cited), and Gaudillère
+  is an author of the engine's `cortazar2009.brin` and `cortazar2009.budburst` (kin report
+  2026-10-26): flags only, no shared equation or data.
 
 ## Bearing (2026-10-26)
 

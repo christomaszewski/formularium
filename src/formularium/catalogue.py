@@ -7763,4 +7763,69 @@ FORMULATIONS: dict[str, Formulation] = {
             " form; a budbreak rule with no heat sum, the form the 10-14 search asked about."
         ),
     ),
+    "kuwagata1990.downward_longwave": Formulation(
+        "Daytime downward longwave radiation from the screen temperature, the dew point (as"
+        " effective precipitable water) and the ratio of measured to clear-sky solar radiation"
+        " as the cloud term: Kondo, Nakamura & Yamazaki 1990's formula as Kuwagata et al."
+        " 1990 print it",
+        "Kuwagata, Sumioka, Masuko & Kondo 1990, J. Meteor. Soc. Japan 68(6):625-638,"
+        " Appendix D, Eqs A5-A6 (p. 636)",
+        year=1990,
+        authors=("Kuwagata, T.", "Sumioka, M.", "Masuko, N.", "Kondo, J."),
+        authors_complete=True,
+        authors_from="read",
+        checked="kuwagata1990.pdf (the 2026-10-25 other-sources drop); Appendix C-D read in the"
+        " page image (printed p. 636)",
+        doi="10.2151/jmsj1965.68.6_625",
+        structures=("sky-longwave-estimate",),
+        structures_note=(
+            "Downward longwave as sigma T^4 times an emissivity-like factor of humidity and"
+            " cloudiness, the cloud term from the sunshine ratio X_n."
+        ),
+        calibration_note=(
+            "Credited to Kondo, Nakamura & Yamazaki 1990 (Tenki, in Japanese, then to be"
+            " published, not held): fitted to that paper's data, inferred; nothing is fitted"
+            " here. Applied in this paper to 55 JMA stations on eight spring days of 1986-87."
+            " Read 2026-10-26 (literature/kuwagata1990)."
+        ),
+        parameters=(
+            Published(
+                "clear.a",
+                0.74,
+                "1",
+                "Eq. A5, p. 636: L_f/(sigma Ta^4) = a + b x' + c x'^2, x' = log10 of effective precipitable water (cm)",
+                "read",
+            ),
+            Published("clear.b", 0.19, "1", "Eq. A5, p. 636", "read"),
+            Published("clear.c", 0.07, "1", "Eq. A5, p. 636", "read"),
+            Published(
+                "cloud.a3",
+                0.03,
+                "1 (on X_n^3)",
+                "Eq. A5, p. 636: c_d = 0.03 X_n^3 - 0.30 X_n^2 + 1.25 X_n - 0.04, X_n the"
+                " measured over the clear-sky solar total",
+                "read",
+            ),
+            Published("cloud.a2", -0.3, "1 (on X_n^2)", "Eq. A5, p. 636", "read"),
+            Published("cloud.a1", 1.25, "1 (on X_n)", "Eq. A5, p. 636", "read"),
+            Published("cloud.a0", -0.04, "1", "Eq. A5, p. 636", "read"),
+            Published(
+                "water.slope",
+                0.0315,
+                "log10 cm per °C of dew point",
+                "Eq. A6, p. 636: log10 of the effective precipitable water = 0.0315 Td - 0.1836",
+                "read",
+            ),
+            Published("water.intercept", -0.1836, "log10 cm", "Eq. A6, p. 636", "read"),
+            Published("sigma", 5.67e-08, "W m^-2 K^-4", "p. 634 (l. 569)", "read"),
+        ),
+        flags=(
+            "A daytime formula: Ta is the mean of the 06 and 15 JST screen temperatures and"
+            " X_n needs the day's solar total against the clear-sky total (Eq. A3, which needs"
+            " the solar constant, not printed). Its use for the night-time effective radiation"
+            " of kuwagata2024.canopy_dew is an inference. The source formula's data and fit"
+            " statistics are in a Japanese paper not held. Kin by form to"
+            " flerchinger2009.dilley_unsworth."
+        ),
+    ),
 }
