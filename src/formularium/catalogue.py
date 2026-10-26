@@ -5901,6 +5901,32 @@ FORMULATIONS: dict[str, Formulation] = {
             "read 2026-10-08 in the paper (Frontiers, open access), sections 2.5 and 3.4"
         ),
         structures=("oospore-dose-response",),
+        # ln(lesions per plant) = a + b ln(N), N oospores per g of dry leaf litter, over a
+        # whole primary season: Figure 6A's axes (page 12, page image) and section 3.4's
+        # "natural logarithm of oospore (x) and DM lesion (y) numbers". Read 2026-10-25.
+        parameters=(
+            Published(
+                "a",
+                -5.386,
+                "ln(lesions per plant per season)",
+                "section 3.4 (P = 0.044) and Figure 6A, total oospores",
+                "read",
+            ),
+            Published(
+                "b",
+                0.786,
+                "ln(lesions per plant) per ln(oospores per g of dry leaf litter)",
+                "section 3.4 (P = 0.012, R2adj 0.910) and Figure 6A",
+                "read",
+            ),
+        ),
+        flags=(
+            "A power law, lesions per plant per season = exp(a) N^b, fitted on the five litter"
+            " means pooled over 2021-2023 (Table 1's p-values fit n = 5; inferred). Read as"
+            " lesions = a + b ln(N) it gives about 3.7 lesions at 1e5 oospores per g, where the"
+            " plants carried 21-69 (literature/fedele2025, 2026-10-25). The dose did not"
+            " predict the year: 2023 had the most oospores and the fewest lesions.",
+        ),
     ),
     "kernel.mixture": Formulation(
         "dispersal: splash plus an anisotropic exponential-power wind kernel",
