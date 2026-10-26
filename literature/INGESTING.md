@@ -48,6 +48,31 @@ first fifteen papers ingested, for sessions that arrive without that history; re
     CloudFront block that two other searches had reported as a dead end.
   - **The Wayback Machine's raw captures:** `https://web.archive.org/web/<date>id_/<url>`.
     Its CDX API lists the captures there are.
+  - **Routes that worked on 2026-10-26** (`literature/unread/2026-10-26-other-sources.md`),
+    when the publisher refuses this machine:
+    - the free aggregator APIs for finding open copies: Europe PMC (`ebi.ac.uk/europepmc/
+      webservices/rest/search?query=DOI:...`), OpenAIRE (`api.openaire.eu/search/publications?
+      doi=`), CORE (`api.core.ac.uk/v3/search/works/?q=doi:"..."`, with a cookie jar and `-L`)
+      and HAL (`api.archives-ouvertes.fr/search/?q=doiId_s:"..."&fl=files_s`);
+    - Europe PMC's full-text XML (`.../rest/PMCxxxx/fullTextXML`) for OUP, Wiley and Elsevier
+      articles in PMC's open-access subset; its PDF render and PMC's own PDFs refuse scripts;
+    - repository files through the DSpace 7 REST API (`/server/api/discover/search/objects?
+      query=`, then the item's ORIGINAL bundle and `/server/api/core/bitstreams/<uuid>/content`)
+      where the HTML site shows a bot check: RiuNet, SUNScholar, ULisboa, MIT, UPCommons, UNESP;
+    - journal sites that serve scripts: Vitis on OpenAgrar (OJS galleys), J-STAGE (`_pdf`),
+      SciELO (`?format=pdf&lang=en`), SAJEV on journals.assaf.org.za, OhioLINK's
+      `send_file/send?accession=`, figshare's API, Zenodo's API;
+    - Wayback captures of HAL deposits (HAL itself shows a robot check to every request) and of
+      bepress repositories behind Cloudflare (Open PRAIRIE, TopSCHOLAR);
+    - OpenAlex's `filter=display_name.search:<title>` finds theses by exact title when
+      `search=` does not, and theses.fr's API (`theses.fr/api/v1/theses/recherche/?q=`) gives a
+      French thesis's id, whose HAL record the HAL API then finds by title.
+    - **Dead ends from this VM:** `core.ac.uk/download` (Cloudflare) and CORE's API download
+      (404); every HAL file URL; `europepmc.org` renders; PMC's PDF interstitial; Semantic Scholar
+      without a key (429 on every call); Scite's tools (paid plan); fatcat; Canterbury's and
+      Iowa State's repositories; TU Delft's; bepress sites behind Cloudflare (Open PRAIRIE,
+      TopSCHOLAR, CSU, Bearworks) except through the Wayback Machine; eCommons (human
+      verification). The Wayback Machine itself goes offline for stretches: retry.
 - **Grey literature is not in the indexes.** Scite and Crossref hold journal articles with
   DOIs. Proceedings, theses and reports are found elsewhere:
   - German dissertations: the German National Library's contents scans

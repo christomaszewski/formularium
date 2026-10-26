@@ -126,3 +126,8 @@ study in place of Reuveni 1998, and Dong et al. 2008's GreenLab tomato paper. Sc
 is still unobtained.
 - **Reuveni 1998** (leaf age and resistance) was supplied by Chris on 2026-10-19 and read
   (`reuveni1998`, with the record `reuveni1998.leaf_age`).
+
+## Obtained since (2026-10-26, other sources)
+
+Fetched through sources the search had not used (`2026-10-26-other-sources.md`, Table 1), not yet read; their rows above no longer apply: albasha2019 (Albasha 2019), atauri2017 (Ata 2017), bourgeon2015 (Bourgeon 2015), buesa2018thesis (PUEYO 2018), camposarguedas2026 (Campos‐Arguedas 2026), chalfant2012 (Chalfant 2012), dasilva2024 (de 2024), garin2015 (Garin 2015), gladstone2003 (Gladstone 2003), jofre2016 (Jofré 2016), kovaleski2018 (Kovaleski 2018), koyama2022 (Koyama 2022), leolini2022 (Leolini 2022), lopes2005 (Lopes 2005), mariani2007 (Mariani 2007), nonnecke1980 (Nonnecke 1980), phinopoulos2014 (Phinopoulo 2014), ramos2022 (Ramos 2022), schultz1993 (Schultz 1993), steyn2016 (Steyn 2016), vivin2017 (Vivin 2017), wermelinger1990 (Wermelinger 1990), weyand2006 (Weyand 2006), yang2021 (Yang 2021), yang2023 (Yang 2023).
+Open copies this VM could not download are in that file's Table 2.
