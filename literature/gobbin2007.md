@@ -10,7 +10,7 @@ regions: [Germany]
 processes: [dispersal, secondary infection, epidemic structure]
 records: []
 datasets: []
-files: []
+files: [gd1021_gobbin2007.pdf (the 2026-10-22 drop)]
 ---
 
 # Gobbin et al. 2007: one infection event, 130 m

@@ -30,3 +30,7 @@ Research article, Not stated in the lines read; authors at the University of Mil
 ## Bearing (2026-10-08)
 
 - About 8% of single sporangia infected on leaf discs at 22 °C: a bound on infection efficiency, from Toffolatti's laboratory (a flag through Fedele 2025).
+
+## Bearing (2026-10-22)
+
+- The one per-sporangium infection efficiency the gaps pass found: 8.3 % of single sporangia gave a sporulating lesion (Pinot noir discs, 22 °C, 100 % RH; l. 238). Agrarium's `dm.infection_efficiency` is per viable sporangium. Its registry note bounds it above at Lalancette's ~0.06, but that 0.06 is per zoospore (`lalancette1988infection`, l. 146-147). Re-read 2026-10-22 by a strand agent (claude-sonnet-5-5); quotes checked by script.

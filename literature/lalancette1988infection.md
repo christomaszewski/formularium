@@ -59,3 +59,7 @@ sporulation model is [lalancette1988sporulation](lalancette1988sporulation.md).
 - A candidate infection formulation for a truth family, with three caveats: an American
   grape (*V. labrusca*), chamber data from one place, and Magarey 2005's P. viticola row
   fitted to the same data (a truth using both would not be two witnesses).
+
+## Bearing (2026-10-22)
+
+- **The unit, for Agrarium:** "Infection efficiency (IE), defined as the number of lesions produced per zoospore" (l. 146). The 0.06 that Agrarium's `dm.infection_efficiency` note cites as an upper bound per viable sporangium is per zoospore; Rossi et al. 2009 quote it the same way (`rossi2009`, l. 333-335). Per sporangium, the one direct measurement found is `massi2022`'s 8.3 % on discs.
