@@ -10,7 +10,7 @@ regions: [Prosser, Washington]
 processes: [budburst, flowering, fruit set, bud temperature]
 records: []
 datasets: []
-files: ["Aust J Grape and Wine Res - 2010 - KELLER - Spring temperatures alter reproductive development in grapevines.pdf"]
+files: [Aust J Grape and Wine Res - 2010 - KELLER - Spring temperatures alter reproductive development in grapevines.pdf]
 ---
 
 # Keller, Tarara & Mills 2010: spring temperatures and reproductive development
