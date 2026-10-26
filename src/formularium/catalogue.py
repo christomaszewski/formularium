@@ -7793,7 +7793,8 @@ FORMULATIONS: dict[str, Formulation] = {
                 "clear.a",
                 0.74,
                 "1",
-                "Eq. A5, p. 636: L_f/(sigma Ta^4) = a + b x' + c x'^2, x' = log10 of effective precipitable water (cm)",
+                "Eq. A5, p. 636: L_f/(sigma Ta^4) = a + b x' + c x'^2, x' = log10 of the"
+                " effective precipitable water (cm)",
                 "read",
             ),
             Published("clear.b", 0.19, "1", "Eq. A5, p. 636", "read"),
