@@ -2,7 +2,7 @@
 id: kennelly2007
 citation: Kennelly, M. M., Gadoury, D. M., Wilcox, W. F., Magarey, P. A. & Seem, R. C. 2007. Primary infection, lesion productivity, and survival of sporangia in the grapevine downy mildew pathogen Plasmopara viticola. Phytopathology 97(4):512-522
 doi: 10.1094/PHYTO-97-4-0512
-read: 2026-10-09, by the main session, the survival, lesion-productivity, heat and soil-trial sections in full (an Internet Archive capture of the publisher's PDF, 11 pages); the trigger section skimmed
+read: 2026-10-09, by the main session, the survival, lesion-productivity, heat and soil-trial sections in full (an Internet Archive capture of the publisher's PDF, 11 pages); the trigger section skimmed; 2026-10-25, re-read for primary inoculum and dispersal by a reading agent (claude-sonnet-5-5), every quote found at its line by scripts/verify_quotes.py
 status: read
 diseases: [downy mildew]
 crops: [grapevine]
@@ -77,3 +77,13 @@ South Australia.
   (Agrarium's `dm.sporulating_days`, assumed).
 - **Oospores germinate from May to October and survive more than a season in soil,**
   agreeing with Gobbin and Koopman.
+
+## Bearing (2026-10-25)
+
+Re-read for when the primary season ends (Cooptera's open decision 17). Seedlings set over
+relocated vineyard topsoil were infected from 20 May to 4 October 2004; over 30 % of them
+commonly through mid-September, 83-89 % at the peak (26 August to 15 September), 0.7 % in the
+last week. The authors: oospores "may continue to germinate and cause infections throughout
+the growing season, in contrast to the widely-held assumption that the supply of oospores is
+depleted shortly after bloom". The soil came from a heavily defoliated vineyard, a dense
+source.
