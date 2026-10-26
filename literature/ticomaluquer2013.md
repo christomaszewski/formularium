@@ -2,7 +2,7 @@
 id: ticomaluquer2013
 citation: Ticó Maluquer, Jordi. 2013. Cinquanta anys de la primera xarxa de prevenció contra el míldiu de l'Estat espanyol. El Penedès (1961-2011) [Fifty years of the first downy mildew warning network in the Spanish State: the Penedès, 1961-2011]. Dossiers Agraris 16:41-52
 doi: 10.2436/20.1503.02.42
-read: 2026-10-10, a light read (methods, results and conclusions), by a reading agent (claude-haiku-5-5); 23 of 23 quotes found at their lines by scripts/verify_quotes.py
+read: 2026-10-10, a light read (methods, results and conclusions), by a reading agent (claude-haiku-5-5); 23 of 23 quotes found at their lines by scripts/verify_quotes.py; 2026-10-25, read again in full for spray counts and the bulletin by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5), 9 of 9 quotes found at their lines by scripts/verify_quotes.py
 status: read
 diseases: [downy mildew]
 crops: [grapevine, wine]
@@ -32,3 +32,21 @@ A light read (the deep-research B list).
 ## Bearing (2026-10-10)
 
 - A historic warning service whose daily incubation step (Bologna study, probably Goidanich 1957) is an engine-list form, so the truth must not reuse it; its 1960 check against weather is the only season it verifies (l. 431-437).
+
+## Read again (2026-10-25): spray counts and the bulletin
+
+Line numbers in this section are those of the 2026-10-25 text extraction. The spray figures are the author's recollection and his citations of Vives and Giné 1994 and Giralt 1997, neither obtained; the paper has no table of sprays. The "28 sprays" is an anecdote about some growers in 1960, and "seven sprays" the author's reconstruction with 1960 weather.
+
+- **1960 and the late sprays:** in the wet 1960 season in the Penedès some growers sprayed more than 28 times, after the disease had appeared, that is, late and curative (l. 360); not the author's own measurement.
+- **Reconstruction:** with the daily-state method applied to 1960 weather, the author finds that seven well-timed sprays would have saved the whole crop (l. 452).
+- **Calendar spraying before the network:** growers in high-pressure zones sprayed systematically by calendar, for example weekly in dangerous periods, and so used more sprays than needed (l. 314).
+- **The 1961 network:** a daily radio bulletin per zone on the state of the disease and whether to spray, issued by a technician on site from the end of April to September (l. 468); volunteer observers took weather readings twice a day and sent them each morning to the Vilafranca office (l. 477).
+- **Savings:** in years of little downy mildew, following the network's information can mean 2 to 3 fewer sprays (an extension estimate, cited to Vives and Giné 1994) (l. 518); the saving in Catalonia, on products only, is of the order of 3.5 million euros (cited, footnote 21; the year of the value is not clear from the line) (l. 520).
+- **The Penedès:** vineyard area 26,000 ha as printed in 2013 (l. 321); farms are mostly small and medium, and most cellars make wine from their own vines (l. 344).
+
+## Bearing (2026-10-25)
+
+- **Sprays and interval before warnings (spray.per_season, spray.interval_days):** weekly calendar sprays in dangerous periods and, in the 1960 disaster, more than 28 late sprays by some growers against seven well-timed ones (l. 314, 360, 452). Historical (1960), Penedès; not a current count. Kind: author's recollection and one reconstruction.
+- **Savings from the warning (grower.dss_saving):** 2 to 3 fewer sprays a year in low-pressure years (l. 518). Extension estimate cited from 1994, not a trial.
+- **Delay and channel (grower.delay_warning_to_spray):** no delay is stated. The bulletin was daily and the weather readings reached the office each morning (l. 468, 477), so a warning reached growers at best the same day or the next (inference, not printed).
+- **Not shown:** compliance, trafficability, wind or labour limits, sprayer capacity, cost per pass.
