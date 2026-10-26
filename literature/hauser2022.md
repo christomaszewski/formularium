@@ -10,7 +10,7 @@ regions: [Alpine National Park, Australia]
 processes: [detection rate, visual search, observer experience, survey design]
 records: []
 datasets: []
-files: [hauser_2022 (Europe PMC XML, the 2026-10-20 drop)]
+files: [hauser_2022.xml (Europe PMC XML, the 2026-10-20 drop; held as paper.xml in its key folder)]
 ---
 
 # Hauser et al. 2022: how fast searchers find a target plant, by plant, background and experience

@@ -10,7 +10,7 @@ regions: [Emilia-Romagna]
 processes: [incubation, primary infection, oospores, forecasting]
 records: [rossi2002.onset, rossi2008.primary, rossi2008.incubation]
 datasets: [rossi2002.emilia, goidanich1957]
-files: [rossi2002.pdf]
+files: [Influenza-delle-condizioni-meteorologiche-sulle-infezioni-primarie-di-Plasmopara-viticola-in-Emilia-Romagna-_2026-10-09_11-17-13.pdf (the name it was downloaded under; the codex-search drop holds it as rossi2002.pdf)]
 ---
 
 # Rossi et al. 2002: weather and the timing of primary infections in Emilia-Romagna
