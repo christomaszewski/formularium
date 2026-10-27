@@ -5668,8 +5668,8 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         structures=("sporulation-temperature-bounds",),
         structures_note=(
-            "positive only between about 13.5 and 31 °C (arithmetic): a temperature band read"
-            " strictly, with a shape inside it"
+            "positive only between 14.8 and 29.9 °C, its roots (arithmetic): a temperature band"
+            " read strictly, with a shape inside it"
         ),
         parameters=(
             Published("a", -747.5, "sporangia/cm² per °C²", "p. 53", "read"),
@@ -5950,6 +5950,45 @@ FORMULATIONS: dict[str, Formulation] = {
         made_by="agrarium",
         structures=("drawn-stage-dates",),
     ),
+    # Agrarium's family F3 (its PLAN 15, D59, decided by Chris 2026-10-26): downy mildew outside
+    # Rossi's lineage. Where Formularium had no record outside it, Agrarium made one up, its
+    # values `assumed` in Agrarium's registry (params/biology/downy_mildew_f3.yaml) and swept.
+    "agrarium.oospores_ripe": Formulation(
+        "oospores: ripe whenever Orlandini et al. 1993's trigger fires (no oospore model)",
+        "assumed (D59: F3 has no oospore model; its primary infections start on the trigger alone)",
+        made_by="agrarium",
+        structures=("no-oospore-model",),
+        structures_note=(
+            "it models nothing, and says so, so that a family naming it is read as having no"
+            " oospore model rather than as Orlandini's trigger counted twice"
+        ),
+    ),
+    "agrarium.dose_per_event": Formulation(
+        "primary dose: a set number of lesions per trigger, scaled by each vine's inoculum,"
+        " susceptibility and low leaf area",
+        "assumed (D59, Chris 2026-10-26: 'use a made-up dose'; not Fedele 2025's power law)",
+        made_by="agrarium",
+        structures=("lesions-per-trigger",),
+    ),
+    "agrarium.sporulation_night": Formulation(
+        "sporulation: a vine sporulates once a night after enough dark hours with wet leaves;"
+        " how much by Keil 2007's quadratic in the night's temperature, falling with each event"
+        " by Kennelly et al. 2007",
+        "assumed for which nights (D59, Chris 2026-10-26); Keil's and Kennelly's for how much",
+        made_by="agrarium",
+        borrows=("keil2007.sporulation", "kennelly2007.lesion_decline"),
+        structures=(
+            "dark-moist-hours-sporulation",
+            "sporulation-temperature-bounds",
+            "sporulation-decline-by-event",
+        ),
+        structures_note=(
+            "dark, wet hours: Caffi 2013's form, which the engine runs, so a joint run holds it out"
+            " (D59 accepted that); and the forms of the two it borrows, Keil's band (none outside"
+            " 14.8-29.9 °C) and Kennelly's decline, since a record's own tags are what the hold-out"
+            " compares"
+        ),
+    ),
     "erbs1982.partition": Formulation(
         "direct and diffuse light from the clearness index",
         "Erbs, Klein & Duffie 1982, Solar Energy 28(4):293-302, eq. 1, as pvlib writes it",
@@ -6025,7 +6064,11 @@ FORMULATIONS: dict[str, Formulation] = {
             " Rodrigues et al. 2019 and Alves et al. 2015 that, with T² for T and no WT² term."
             " Take the equation from eq. 5, not a copy (literature/hamada2008, reis2013,"
             " monteiro2012, monteiro2015, monteiro2015bol, rodrigues2019, alves2015).",
+            "Equation 5 read again in the page image (p. 798) on 2026-10-27: IE = k (1 +"
+            " e^-rho)^(1/(1 - m)). The printed coefficients are rounded: k peaks at 0.091 at"
+            " 18.0 °C with them, where the text prints 0.083 at 17.5 °C (pp. 795-796).",
         ),
+        equations="lalancette1988",
     ),
     "tranmanhsung1990.pom": Formulation(
         "POM: the date oospores mature, from a rain index since 21 September",
@@ -6053,8 +6096,23 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("b", 117.9, "d from 1 January", "Results, T = A*IJ + B", "read"),
             Published("severity.intercept", 1.7, "class", "Results, S = 1.7 + 0.012 IJ", "read"),
             Published("severity.slope", 0.012, "class per index unit", "Results", "read"),
+            Published(
+                "ronzon.upper_limit",
+                9.0,
+                "mm/day",
+                "Ronzon 1987, p. 93 (ESP_M = 18 / NJM = 9, from the EPI model; page image)",
+                "read",
+            ),
         ),
+        equations="tranmanhsung1990",
         flags=(
+            "How IJ is computed (p. 122, page image, read 2026-10-27): daily rain counts positive"
+            " between Hm and HM, a lack below Hm (Hm - Rd, so a dry day lacks the whole Hm), an"
+            " excess above HM; Im(M) = POS - |EXC - LAC| + Im(M-1) from 21 September; IJ is"
+            " January's. Hm = RM / the month's average rainy days; HM 'RM + the standard deviation"
+            " of RM divided by the number of rainy days' reads as (RM + SD)/n or RM + SD/n, no"
+            " brackets printed. The 42-year normals (1946-1987) are not printed; Ronzon 1987 took"
+            " 1951-1985 normals for Hm and a fixed 9 mm for HM.",
             "Fitted to three maturity dates; validated on the twelve years it was fitted to"
             " (a posteriori, as the paper says). It gives one date, not a cohort curve.",
             "DMCast (Park et al. 1997) computes POM's index (read in Caffi et al. 2007).",
