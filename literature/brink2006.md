@@ -27,6 +27,9 @@ A controlled study of spray cover on Botrytis infection of table-grape bunches. 
 ## Dependence
 
 - Fluorescent-pigment coverage protocol of Brink et al. 2004 (l. 79-80).
+- The thesis behind it, `brink2005` (read 2026-10-26), prints the same regressions
+  (its Chapter 2 Tables 1-2) and gives the incubation as 24 h at 93 % RH or more in its
+  methods, 98 % in its summary; it develops the pigment protocol itself.
 - Infection biology cited as Holz et al. 2003 (introduction).
 
 ## Bearing (2026-10-20)

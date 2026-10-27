@@ -2,38 +2,52 @@
 id: ramos2022b
 citation: Ramos, M. C. & Martínez de Toda, F. 2022. Macabeo (Viura) grape response to climate variability in areas located at different elevations in the Rioja Designation of Origin. Journal of the Science of Food and Agriculture 102(13):5670-5679
 doi: 10.1002/jsfa.11914
-read: 2026-10-22, lightly: the phenology and discussion text (Europe PMC full text PMC9544767, an XML flattened to one paragraph per line, so line numbers refer to that flattened text; tables lose their layout), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 4 of 4 quotes found at their lines by scripts/verify_quotes.py
+read: 2026-10-26, a light reading from Europe PMC's JATS XML (no PDF held), by a reading agent (claude-haiku-5-5); 30 of 30 quotes found at their lines by scripts/verify_quotes.py; tables as rows, no page image
 status: read
 diseases: []
 crops: [grapevine]
-regions: [Spain, La Rioja, Rioja DOCa]
-processes: [phenology, budburst, flowering, harvest, elevation, grape composition]
+regions: [Rioja]
+processes: [phenology, stage dates, climate response, grape composition]
 records: []
 datasets: []
-files: [PMC9544767.xml (the 2026-10-22 drop)]
+files: [ramos2022.xml (the 2026-10-25 other-sources drop)]
 ---
 
-# Ramos & Martínez de Toda 2022: Macabeo (Viura) in five Rioja plots at 457 to 650 m, 2008 to 2020
+# Ramos & Martínez de Toda 2022: Macabeo stages and composition against weather at five elevations
 
-The only Macabeo phenology in this batch from outside the Penedès: five unirrigated Rioja plots, with a mean budbreak date and the spread of the flowering stage between extreme years.
-
-**Read this first.** This is a different paper from `ramos2022` (Carignan). Rioja is a cooler, higher, inland region, so its dates are a contrast to the Penedès, not a value for it. The budbreak date is "an average of what was available", not recorded for all plots and years, and the paper gives no flowering date in its text (the stage H dates are in a figure).
+Thirteen seasons (2008-2020) of stage H (the Baggiolini stage) and harvest dates and of
+grape composition at five Macabeo plots from 457 to 650 m in Rioja, regressed on
+growing-season maximum temperature and on the water balance. The Carignan companion
+(`ramos2022`) has records; this one prints slopes without intercepts.
 
 ## What it holds
 
-- **Plots:** five Macabeo plots in Rioja DOCa at 457 to 650 m a.s.l. (lowest SA 457 m, highest S 650 m; l. 148-149), 2008 to 2020, vines averaging 2.8 m × 1.1 m and not irrigated (l. 134). Phenology is the date when 50 % of the plants in the plots reached the stage (l. 136).
-- **Budbreak and veraison:** stage C, budbreak, on 15 April on average (day of year 105) and stage M, veraison, on 15 August; the other stage dates "were not available for all plots and years" (l. 136). The paper's introduction says Macabeo "has a late budbreak and late harvest" (l. 79).
-- **Stage H:** the flowering stage scored is Baillod-Baggiolini's H, "flowers separated" (l. 134, 148); the paper prints no BBCH number for it.
-- **Year-to-year range:** between the coolest and the hottest year (maximum temperature 3.1 to 3.4 °C apart, by location) stage H differed by 13 and 23 d in the two zones, and harvest by 19 to 24 d (l. 245).
-- **Cited elsewhere:** Macabeo flowered in La Mancha on 2 June ± 6 d, which the authors call "similar dates" to Rioja's, and was harvested on 3 September ± 5 d (l. 241); at Raïmat (Costers del Segre) harvest was on 5 September ± 8 d, an 11-year average given as a personal communication (l. 243). In the Penedès, 9° potential alcohol was reached on 28 August on average (cited to Ramos 2017, reference 35), against 8 September in the earliest Rioja plots (31 August to 23 September) (l. 239-241).
+- **Plots** (l. 14, 44): five Macabeo plots at Haro, San Asensio, Cenicero, Alesanco and
+  Sotés, 457-650 m, planted 1972-1990; 2008-2020.
+- **Climate** (l. 53): growing-season Tmax 23.7-25.6 °C; precipitation below 225 mm on
+  average; ETo by Penman-Monteith and ETc with Allen & Pereira 2009 coefficients (l. 46).
+- **Stage dates** (l. 58): stage H on average between 24 May ± 6 d and 1 June ± 8 d, no
+  significant trend; harvest 21-30 September, advancing significantly only at San Asensio
+  and Cenicero (Mann-Kendall, l. 48).
+- **Responses** (l. 80-86): stage H advances 1.57-3.95 d per °C of Tmax from budbreak to H;
+  harvest advances 5.2-8.7 d per °C of growing-season Tmax, and up to 6.9 d per 100 mm more
+  water deficit at the higher plots; probable alcohol +0.69 degrees per °C at Haro; total
+  acidity falls 0.7-1.3 g/L per 100 mm of deficit.
+- **Composition** (l. 63, Table 2): 199-260 g per 100 berries, total acidity 5.1-6.6 g/L;
+  the text's ranges for probable alcohol and malic acid do not match Table 2's means.
+- **Not printed:** per-plot stage dates, the intercepts and statistics of the Fig. 4-5
+  regressions, the projection values.
 
 ## Dependence
 
-Own data; the grape parameters were supplied by the Consejo Regulador of Rioja DOCa (l. 136), and the sentence does not name a source for the phenology dates. The Penedès, La Mancha and Raïmat figures are cited. Shares its first author with `ramos2017` and both authors with `martinezdetoda2019`: flags, not dependencies.
+- **Fitted to** its own plot records (observed stages and composition, station weather with
+  a computed water balance). Mann-Kendall for trends, Ward clustering and a factor analysis.
+- Same authors and method as `ramos2022` (Carignan) and the Rueda and Ribera papers: flags,
+  and the same monthly-temperature-regression form where coefficients are printed.
 
-## Bearing (2026-10-22)
+## Bearing (2026-10-26)
 
-- **host.budburst_doy:** Macabeo budbreak 15 April (day 105) in Rioja against 6 April (day 96) for Macabeo in `ramos2017`'s Penedès vineyard: about 9 d later in the cooler, higher region. It supports a Macabeo budbreak in the first half of April for the Penedès (as `ramos2017` measured) and not a Penedès value of its own; Xarel·lo, Parellada and Chardonnay are not covered.
-- **host.budburst_sd_days:** no value. The 13 to 23 d range is for the flowering stage between the two most extreme years, not for budbreak and not a standard deviation.
-- **host.flowering_after_budburst_days:** no Rioja flowering date is printed in the text. Taking La Mancha's 2 June (a proxy the authors call similar) against the 15 April budbreak would give an interval near 48 d (my arithmetic, through another region); treat it as a loose cross-check only.
-- **host.vine_sd_days and cultivar susceptibility:** nothing; no vine-to-vine spread is given and no disease is studied.
+- For Agrarium's phenology truth (the 10-14 search): the slopes of stage H and harvest on
+  temperature for a Catalan-adjacent white variety, 2-4 d per °C for stage H. No record:
+  the regressions' intercepts are in figures the XML does not carry; the publisher's PDF
+  would let them be read.

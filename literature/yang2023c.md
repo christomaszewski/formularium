@@ -1,0 +1,50 @@
+---
+id: yang2023c
+citation: Yang, W., Zhu, J., van Leeuwen, C., Dai, Z. & Gambetta, G. A. 2023. GrapevineXL reliably predicts multi-annual dynamics of vine water status, berry growth, and sugar accumulation in vineyards. Horticulture Research 10(6):uhad071
+doi: 10.1093/hr/uhad071
+read: 2026-10-26, a light reading from Europe PMC's JATS XML (no PDF held), by a reading agent (claude-haiku-5-5); 30 of 30 quotes found at their lines by scripts/verify_quotes.py; the text carries about 85 lines of related-article titles before the article and duplicated captions
+status: read
+diseases: []
+crops: [grapevine]
+regions: [Saint-Émilion]
+processes: [whole-vine model, water status, berry growth, sugar accumulation]
+records: []
+datasets: []
+files: [yang2023.xml (the 2026-10-25 other-sources drop)]
+---
+
+# Yang et al. 2023: GrapevineXL against thirteen Bordeaux vintages
+
+The functional-structural model GrapevineXL, calibrated on four vintages of rainfed
+Cabernet Franc at Saint-Émilion and validated on nine, reproduces midday xylem potential,
+berry mass and sugar; virtual earlier veraison then shows smaller berries and more sugar. A
+reference piece: the tools run no whole-vine model, and the fitted values sit in a supplement.
+
+## What it holds
+
+- **Plot** (l. 127, 155-156): commercial rainfed Cabernet Franc at Saint-Émilion, planted
+  1998, 5950 vines/ha, rooting depth 1.3 m, water-holding capacity 168 mm; 2004-2016.
+- **Calibration** (l. 101, 131, 170): vintages 2005, 2009, 2011 and 2013; leaf Ψ50 fitted
+  to -1.80 MPa against -1.52 in the greenhouse original; Eq. 1 soil-to-root resistance and
+  Eq. 2 van Genuchten conductivity with Duursma et al.'s coefficients.
+- **Validation** (l. 99, 106): midday xylem potential RMSE 0.25 MPa (RRMSE 25.6 %) in
+  calibration and 0.29 MPa (28.4 %) in validation; berry dry mass, fresh mass and sugar RRMSE
+  8.89, 9.19 and 13.71 %; predawn leaf potential explains 29 % of xylem potential variance
+  (l. 132).
+- **Scenarios** (l. 117-122): veraison 14 and 28 d earlier lowers fresh mass in 11 and 12 of
+  13 years and raises sugar in 10 and 11; degree-days rise 2.4-111.4 and 32.2-139.6 °C d;
+  ripening shortens in 8 of 13 years.
+- **Not printed:** the fitted values (RSC, Vmax, Km, Lp; Table S3), whether any model dated
+  the observations; the text's sugar and parameter counts disagree (l. 118/137, 142/166).
+
+## Dependence
+
+- **Computes** GrapevineXL (Zhu et al.), with an extended Farquhar-von Caemmerer-Berry leaf
+  model, the Tardieu-Davies hydraulic method, van Genuchten soil conductivity and a Gardner
+  root resistance; fitted to the plot's own measurements, data otherwise unnamed. Van
+  Leeuwen again (Campos-Arguedas 2026): a flag.
+
+## Bearing (2026-10-26)
+
+- For Agrarium's growth truth (the 10-14 search): a validation yardstick for vine water
+  status and berry growth in Bordeaux, not a formulation to record.
