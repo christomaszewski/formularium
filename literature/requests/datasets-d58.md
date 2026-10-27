@@ -28,6 +28,26 @@ weather (`haasbroek2006.westerncape` at Nietvoorbij first; also `puelles2024.rio
   paper, the authors on request) and under what licence or terms;
 - how you checked (`read`, `trail`, `snippet`).
 
+## Already known (Cooptera's session, 2026-10-27, from its docs/test-datasets.md)
+
+Not to search for again, but to check and record in `datasets.py` where missing:
+- **MIRA** (Del Cavallo, Bregaglio et al. 2026, Zenodo doi:10.5281/zenodo.21534581, CC BY 4.0):
+  77 vineyards in 9 Italian regions, 2020-2025; BBCH, disease by visit with incidence and
+  severity, 101 downy mildew first-symptom dates, treatments for 62 of 186 vineyard-years; no
+  weather (Cooptera pairs it with Open-Meteo's reanalysis). Cooptera already holds and scores it.
+- Italian weekly downy mildew risk, 2012-2017 (Mendeley doi:10.17632/3jsh4y2bw4.1, CC BY):
+  experts' readings of bulletins, no weather.
+- French yearly intensity grades, 1941-2023, Bordeaux, Champagne and Vaucluse (Recherche Data
+  Gouv doi:10.57745/HM3HBE, CC BY).
+- BASF fungicide trials with untreated plots, 2012-2019, 36 trials (Zenodo
+  doi:10.5281/zenodo.6353533): files restricted.
+- In papers: Kennelly et al. 2007, Table 1 (29 dated site-years, New York); Chen et al. 2020,
+  S1 Data (156 untreated plot-years near Bordeaux, monthly weather, no places); Barrios & Reyes
+  2004 (Vilafranca del Penedès, 1984-2004, one class a year).
+
+The gap they leave: dated first symptoms or incidence with daily or hourly weather measured at
+the plots, outside Italy and Catalonia.
+
 ## 2. Then search further
 
 Open data repositories (Zenodo, Dryad, Mendeley Data, Recherche Data Gouv, national
