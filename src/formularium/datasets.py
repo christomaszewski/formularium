@@ -1407,4 +1407,231 @@ DATASETS: dict[str, Dataset] = {
         " dates are of detection",
         "read",
     ),
+    "kennelly2007.geneva": Dataset(
+        (
+            "Date of first symptoms of downy mildew in unsprayed Chancellor vines (240-300 "
+            "flower clusters examined every 1-5 days from three weeks before bloom), with the "
+            "rain and temperature of the infection event judged responsible (Table 1); USA, "
+            "New York: Geneva (NYSAES) 1981, 1983, 1985-1997, 2001-2004; also Watkins Glen, "
+            "Wayne, Ovid, Dundee in 2001-2003; 1981-2004 (29 dated site-years in Table 1; one "
+            "'No disease', Dundee 2003); plots: unsprayed vines, 12-15 vines (Geneva) or 9-11 "
+            "contiguous vines (commercial sites); weather: Rainfall and temperature from the "
+            "nearest available station, 2 to 20 km away; Table 1 prints only the rain (mm) "
+            "and temperature during the attributed infection event, incubation days and "
+            "degree-days; access: Table 1 printed in the paper; station records not given; "
+            "licence: not stated (Phytopathology, APS); downloadable now: no"
+        ),
+        (
+            "Kennelly, Gadoury, Wilcox, Magarey, Seem 2007. Phytopathology 97:512-522.. Found "
+            "for Agrarium D58 (literature/requests/datasets-d58.md), 2026-10-27; how checked: "
+            "read"
+        ),
+        "read",
+    ),
+    "caffi2009.italy100": Dataset(
+        (
+            "Date of first downy mildew oil spots (window between last negative and first "
+            "positive visit) in unsprayed plots; Italy: Piedmont, Lombardy (Oltrepo Pavese), "
+            "Emilia-Romagna, Marche, Basilicata, Sardinia (100 vineyards); 1995-2007 (1-6 "
+            "vineyards a year); plots: unsprayed plot of at least 500 m2 inspected at least "
+            "weekly from budburst; 9 vineyards had no disease; weather: hourly T, RH, rain, "
+            "wetness: stations in the vineyards in Piedmont and Lombardy; otherwise the "
+            "nearest regional station within 15 km; interpolated 5x5 km grids in Emilia- "
+            "Romagna from 2001; access: Table 1 of the paper (vineyards by region/year, "
+            "onsets); not deposited; Rossi group (Univ. Cattolica Piacenza); licence: not "
+            "stated (J. Plant Pathol.); downloadable now: no"
+        ),
+        (
+            "Caffi, Rossi, Bugiani, Spanna, Flamini, Cossu, Nigro 2009. J. Plant Pathol. "
+            "91:535-548.. Found for Agrarium D58 (literature/requests/datasets-d58.md), "
+            "2026-10-27; how checked: read"
+        ),
+        "read",
+    ),
+    "fedele2025.piacenza_litters": Dataset(
+        (
+            "Primary lesions per plant (weekly or twice weekly counts from 1 April) on potted "
+            "Merlot over five experimental leaf litters; oospores per g litter; Italy, "
+            "Piacenza, Univ. Cattolica campus; 2021, 2022, 2023; plots: potted/experimental "
+            "plants over litter of five infestation levels; this is a controlled inoculum- "
+            "dose experiment, not a natural epidemic; weather: iMetos station in the "
+            "experimental vineyard: hourly T, RH, rain, leaf wetness, wind (Table of seasonal "
+            "values, figures); access: 'raw data ... made available by the authors, without "
+            "undue reservation'; no repository; licence: article CC BY; data on request; "
+            "downloadable now: no"
+        ),
+        (
+            "Fedele, Maddalena, Furiosi, Rossi, Toffolatti, Caffi 2025. Front. Plant Sci. "
+            "16:1524959.. Found for Agrarium D58 (literature/requests/datasets-d58.md), "
+            "2026-10-27; how checked: read"
+        ),
+        "read",
+    ),
+    "taibi2023.castellarquato": Dataset(
+        (
+            "Disease incidence and severity (%) of downy and powdery mildew on leaves and "
+            "bunches in untreated and treated plots at four stages per year (BBCH 69, 75, 83, "
+            "89); AUDPC; Italy, Emilia-Romagna, Castell'Arquato vineyard (44.857 N, 9.856 E); "
+            "2020, 2021, 2022; plots: untreated control plus 6 resistance inducers and a "
+            "copper+sulfur reference; 48 untreated records (disease x portion x stage x year) "
+            "and 32 treatment means; weather: Daily weather per season (Apr-Sep, 184 days a "
+            "year): leaf wetness (hours), rain (mm), temperature, relative humidity; station "
+            "location presumably the vineyard (README does not say); access: Zenodo "
+            "10.5281/zenodo.15077508, six small CSVs "
+            "(NT_UCSC_RIs_DiseaseIncidenceSeverity.csv untreated, ...Treatment.csv, "
+            "...AUDPC.csv, ...WeatherdataYear1-3.csv) plus a Readme with a data dictionary; "
+            "files about 1-7 KB each; licence: CC BY 4.0 (README 2.1 and Zenodo record); "
+            "downloadable now: yes"
+        ),
+        (
+            "Fedele & Rossi 2025, Zenodo; for Taibi, Fedele, Salotti, Rossi 2023, Agronomy "
+            "13(12):2959.. Found for Agrarium D58 (literature/requests/datasets-d58.md), "
+            "2026-10-27; how checked: read"
+        ),
+        "read",
+    ),
+    "dina2023.murfatlar": Dataset(
+        (
+            "Downy mildew frequency, intensity and degree of attack (G.A. %, Buffara/Caffi "
+            "scales) on leaves and bunches, twice-weekly, untreated vs treated Sauvignon "
+            "blanc; first-spot dates 17.05.2021 (BBCH 15) and 14.06.2022; stomatal "
+            "conductance after first spots; Romania, Murfatlar (Black Sea coast), one "
+            "vineyard (ERA-Net MERIAVINO project); 2021, 2022 (one wet, one dry); plots: "
+            "untreated vs treated variant, n=1 plantation; caveat: leaves in the untreated "
+            "variant were moistened artificially and the ground flooded to stimulate "
+            "infection; weather: iMetos 3.3 station in the vineyard centre; leaf-wetness "
+            "sensor (minutes of wetness, humidity); only in figures (Fig 1) and text means, "
+            "no table; access: table/figures in the paper (Figs 1-4); raw numbers on request "
+            "to authors; no repository seen; licence: not stated (Univ. Agron. Sci. Bucharest "
+            "Scientific Papers Series B 67(2):231-?, open PDF); downloadable now: no"
+        ),
+        (
+            "Dina, Ene, Artem, Ranca & Hnatiuc 2023, The influence of the climate on the "
+            "evolution of diseases in the Sauvignon Blanc variety in the conditions of the "
+            "years 2021-2022 in Murfatlar, Sci. Pap. Ser. B Hort. 67(2). Found for Agrarium "
+            "D58 (literature/requests/datasets-d58.md), 2026-10-27; how checked: read "
+            "(abstract, methods, results text; figures not digitised)"
+        ),
+        "read",
+    ),
+    "reis2013.bentogoncalves": Dataset(
+        (
+            "Weekly (2000/01) or per-visit leaf severity, incidence on 100 leaves and bunch "
+            "severity (0-5), untreated control vs conventional vs warning-timed; first- "
+            "symptom dates 19 Oct 2000, 14 Oct 2002, 10 Oct 2003; Brazil, Bento Gonçalves RS, "
+            "Embrapa Uva e Vinho, cv. Isabel (V. labrusca); seasons 2000/01, 2002/03, "
+            "2003/04; plots: control without fungicide, 4 replicates, 3 rows x 3 vines per "
+            "plot; weather: Colpam-40 logger with leaf wetness and mean air temperature in a "
+            "control plot, daily DDSV; values mostly in figures/tables of critical periods, "
+            "not a raw series; access: table/figures in the paper; held as PDF in the library "
+            "(reis2013); raw series would be on request; licence: not stated (Summa "
+            "Phytopathologica; check SciELO page); downloadable now: no"
+        ),
+        (
+            "Reis, Sônego & Mendes 2013, Summa Phytopathol. 39:10-15. Found for Agrarium D58 "
+            "(literature/requests/datasets-d58.md), 2026-10-27; how checked: read (this "
+            "session's fetch of the open PDF); a note reis2013.md also exists in literature/"
+        ),
+        "read",
+    ),
+    "sendhilvel2020.coimbatore": Dataset(
+        (
+            "Disease incidence (PDI) in an unsprayed plot against weather, Muscat; logistic "
+            "fit; India, Mathampatti, Coimbatore, Tamil Nadu; 2014-2017; plots: unsprayed "
+            "control plus spray treatments, 3-4 replicates; weather: automatic station on "
+            "site, RH, temperatures, rain, leaf wetness, dew, radiation every 10 min; access: "
+            "paper tables only (PDI 78.83 control); raw station files not offered; licence: "
+            "not stated; downloadable now: no"
+        ),
+        (
+            "Sendhilvel, Marimuthu & Geethalakshmi 2020, Madras Agric. J. 107(10-12):422-428. "
+            "Found for Agrarium D58 (literature/requests/datasets-d58.md), 2026-10-27; how "
+            "checked: trail (note sendhilvel2020.md, read in full 2026-10-09) plus the "
+            "abstract in the library text"
+        ),
+        "trail",
+    ),
+    "agoston2020.bacskiskun": Dataset(
+        (
+            "Fruit-bunch downy mildew occurrence (%) by severity class, two dated counts a "
+            "year; Hungary, Bács-Kiskun County; 2009 (average), 2010 (epidemic); plots: "
+            "commercial; inspectors' reports via the NIR system; weather: none printed (a "
+            "cited 10:10 rain rule only); access: table/figures in the paper; NIR records not "
+            "open; licence: not stated; downloadable now: no"
+        ),
+        (
+            "Ágoston 2020, Gradus 7(1):12-15. Found for Agrarium D58 "
+            "(literature/requests/datasets-d58.md), 2026-10-27; how checked: trail (note "
+            "agoston2020.md) and library text"
+        ),
+        "trail",
+    ),
+    "fournier2025.epicure_ifv": Dataset(
+        (
+            "IFV EPIcure network: about 1200 untreated controls (2x5 vines), weekly visual "
+            "incidence and severity of downy mildew on leaves and bunches since 2002; France "
+            "(the paper uses Nouvelle-Aquitaine / Bordeaux; the network is national); "
+            "2002-2022 and later; plots: untreated controls, about 1200; weather: none in "
+            "EPIcure's observations (the web page links Météo-France forecasts); weather "
+            "would be added from a station or reanalysis; access: vignevin-epicure.com (login "
+            "form; the paper says its records were 'downloaded from' it); not open; licence: "
+            "not stated; 'Tous droits réservés'; downloadable now: no"
+        ),
+        (
+            "Fournier et al. 2025, Environ. Microbiome 20 (doi 10.1186/s40793-025-00691-9); "
+            "EPIcure web page. Found for Agrarium D58 (literature/requests/datasets-d58.md), "
+            "2026-10-27; how checked: read (paper full text via Europe PMC, saved; web page "
+            "saved as text)"
+        ),
+        "read",
+    ),
+    "margaritis2019.spata": Dataset(
+        (
+            "Downy, powdery mildew and bunch rots observed against gaiasense and vite.net DSS "
+            "outputs; 2017-2018 Agricultural Warnings of seven Greek regional centres; "
+            "Greece, Spata (Attica) AUA experimental vineyard, cvs Malagouzia and Savvatiano; "
+            "Nemea (Argolida) for gaiasense; 2018 (vineyard), 2017-2018 (warnings); plots: "
+            "one experimental vineyard, two cultivars; weather: DSS station data 2018 "
+            "(interval not stated in abstract); access: MSc thesis PDF Margaritis_E.pdf, 9.35 "
+            "MB, at kalligeneia.aua.gr/handle/10329/6933; not fetched; licence: not stated on "
+            "the landing page; downloadable now: yes"
+        ),
+        (
+            "Margaritis E. 2019, MSc thesis, Agricultural University of Athens (supervisor "
+            "Tsitsigiannis). Found for Agrarium D58 (literature/requests/datasets-d58.md), "
+            "2026-10-27; how checked: snippet (abstract only; thesis not read)"
+        ),
+        "snippet",
+    ),
+    "leoni2026.geneva_thesis": Dataset(
+        (
+            "Thesis on spore monitoring and oospore maturation modelled from more than twenty "
+            "years of climatic observations; Switzerland (Geneva / Changins area); 20+ years "
+            "of climate; plots: spore traps; weather: station climate; access: archive- "
+            "ouverte.unige.ch/unige:193385 (thesis PDF); licence: not stated on the DataCite "
+            "record; check landing page; downloadable now: yes"
+        ),
+        (
+            "Université de Genève thesis 2026 (author not read). Found for Agrarium D58 "
+            "(literature/requests/datasets-d58.md), 2026-10-27; how checked: snippet "
+            "(abstract only)"
+        ),
+        "snippet",
+    ),
+    "kleb2026.hohenheim_thesis": Dataset(
+        (
+            "Thesis combining Kleb et al. 2022 and 2026: canopy microclimate against station "
+            "weather, disease scores; Germany, Hohenheim; 2021 and others; plots: Pinot "
+            "Meunier canopy sites; weather: leaf wetness, T, RH inside canopy and at a "
+            "station; access: hohpublica handle 123456789/19105, PDF "
+            "Dissertation_MelissaKleb_2026.pdf; licence: CC BY-NC-SA 4.0; downloadable now: "
+            "yes"
+        ),
+        (
+            "Kleb 2026, PhD thesis, Univ. Hohenheim. Found for Agrarium D58 "
+            "(literature/requests/datasets-d58.md), 2026-10-27; how checked: read (landing "
+            "page only)"
+        ),
+        "read",
+    ),
 }
