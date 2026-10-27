@@ -53,3 +53,19 @@ The oospore chapter shares data, authors and form with `leoni2026` (the engine's
 - For D58: the 20-year primary-infection days (Table 3.3) with the Agrometeo station's daily
   weather are the thesis's best record, at one plot with concentrated inoculum. The data are
   not deposited; the thesis is "protected by copyright".
+
+## Tables 3.2-3.3 transcribed (2026-10-27)
+
+For Cooptera (literature/requests/leoni2026-changins.md): both tables, read in the page images
+of pp. 182-183, are in `leoni2026_changins_primary.csv`, one row per year 2004-2025.
+- 2011 and 2022 are not printed; the published paper (p. 11) says no symptom was seen then.
+- Table 3.2's columns "GLM-based − TDD > 140" and "VM based on GLM − VM based on TDD > 140"
+  carry the opposite sign in every row: they are TDD minus GLM. Three cells of the second
+  (2004, 2005, 2006) also disagree with Table 3.3's days, by 1, 5 and 2 days. Left as printed.
+- "Observed primary infection" is not defined in the oospore chapter; the outdoor laboratory's
+  leaves were assessed weekly from May to June for the first symptoms (p. 61).
+- The plot is at 46°23'47.7"N 6°13'54.0"E (p. 158); the Agrometeo station at 46°23'53.4"N
+  6°13'50.4"E (p. 160), about 190 m away (arithmetic).
+- The GLM was fitted on germination observations of 2004-2024, so only 2025 lies outside its
+  fitting years.
+

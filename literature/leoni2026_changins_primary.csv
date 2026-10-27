@@ -1,0 +1,24 @@
+# Leoni, S. 2026, PhD thesis, Université de Genève (doi 10.13097/archive-ouverte/unige:193385), Tables 3.3 (p. 183) and 3.2 (p. 182), transcribed 2026-10-27 from the page images by an ingest session. Outdoor laboratory (LEX), Agroscope Changins, 46°23'47.7"N 6°13'54.0"E (p. 158); Agrometeo Campbell station 46°23'53.4"N 6°13'50.4"E (p. 160). Julian day = day of year; dates computed here (calendar of the year). Literature note: leoni2026thesis. diff_* are Table 3.2 as printed; Columns 1, 2, 4 and 5 of Table 3.2 equal the differences of Table 3.3's days; columns 3 and 6 (headed 'GLM-based - TDD > 140' and 'VM based on GLM - VM based on TDD > 140') carry the opposite sign in every row, so they are printed as TDD minus GLM. `check` lists what still differs after that.
+year,maturity_observed_doy,maturity_tdd140_doy,maturity_glm_doy,primary_infection_observed_doy,primary_infection_observed_date,primary_vm_tdd140_doy,primary_vm_glm_doy,diff_maturity_obs_minus_tdd140,diff_maturity_obs_minus_glm,diff_maturity_glm_minus_tdd140,diff_primary_obs_minus_vm_tdd140,diff_primary_obs_minus_vm_glm,diff_primary_vm_glm_minus_vm_tdd140,check,note
+2025,97,116,118,132,2025-05-12,123,123,-19,-21,-2,9,9,0,,
+2024,85,106,95,127,2024-05-06,119,119,-21,-10,11,8,8,0,,
+2023,88,124,110,121,2023-05-01,129,114,-36,-22,14,-8,7,15,,
+2022,,,,,,,,,,,,,,,not printed: excluded as no symptom observed at the site (stated in the published paper leoni2026 p. 11; the thesis omits the two years without saying why)
+2021,123,130,127,136,2021-05-16,136,130,-7,-4,3,0,6,6,,
+2020,128,109,118,159,2020-06-07,121,120,19,10,-9,38,39,1,,
+2019,113,133,131,171,2019-06-20,145,145,-20,-18,2,26,26,0,,
+2018,121,115,113,135,2018-05-15,129,129,6,8,2,6,6,0,,
+2017,128,105,126,133,2017-05-13,115,131,23,2,-21,18,2,-16,,
+2016,110,130,113,121,2016-04-30,132,132,-20,-3,17,-11,-11,0,,
+2015,124,121,116,124,2015-05-04,123,117,3,8,5,1,7,6,,
+2014,129,113,117,117,2014-04-27,117,142,16,12,-4,0,-25,-25,,
+2013,115,130,123,129,2013-05-09,137,130,-15,-8,7,-8,-1,7,,
+2012,116,121,115,123,2012-05-02,123,122,-5,1,6,0,1,1,,
+2011,,,,,,,,,,,,,,,not printed: excluded as no symptom observed at the site (stated in the published paper leoni2026 p. 11; the thesis omits the two years without saying why)
+2010,102,120,130,122,2010-05-02,122,147,-18,-28,-10,0,-25,-25,,
+2009,131,120,127,135,2009-05-15,147,147,11,4,-7,-12,-12,0,,
+2008,98,132,128,137,2008-05-16,137,137,-34,-30,4,0,0,0,,
+2007,120,112,118,137,2007-05-17,120,120,8,2,-6,17,17,0,,
+2006,131,127,116,133,2006-05-13,138,125,4,15,11,-5,8,15,col6 printed 15 where Table 3.3 gives 13,
+2005,122,123,122,143,2005-05-23,134,123,-1,0,1,9,20,6,col6 printed 6 where Table 3.3 gives 11,
+2004,106,136,126,153,2004-06-01,153,153,-30,-20,10,0,0,1,col6 printed 1 where Table 3.3 gives 0,
