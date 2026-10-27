@@ -5950,6 +5950,45 @@ FORMULATIONS: dict[str, Formulation] = {
         made_by="agrarium",
         structures=("drawn-stage-dates",),
     ),
+    # Agrarium's family F3 (its PLAN 15, D59, decided by Chris 2026-10-26): downy mildew outside
+    # Rossi's lineage. Where Formularium had no record outside it, Agrarium made one up, its
+    # values `assumed` in Agrarium's registry (params/biology/downy_mildew_f3.yaml) and swept.
+    "agrarium.oospores_ripe": Formulation(
+        "oospores: ripe whenever Orlandini et al. 1993's trigger fires (no oospore model)",
+        "assumed (D59: F3 has no oospore model; its primary infections start on the trigger alone)",
+        made_by="agrarium",
+        structures=("no-oospore-model",),
+        structures_note=(
+            "it models nothing, and says so, so that a family naming it is read as having no"
+            " oospore model rather than as Orlandini's trigger counted twice"
+        ),
+    ),
+    "agrarium.dose_per_event": Formulation(
+        "primary dose: a set number of lesions per trigger, scaled by each vine's inoculum,"
+        " susceptibility and low leaf area",
+        "assumed (D59, Chris 2026-10-26: 'use a made-up dose'; not Fedele 2025's power law)",
+        made_by="agrarium",
+        structures=("lesions-per-trigger",),
+    ),
+    "agrarium.sporulation_night": Formulation(
+        "sporulation: a vine sporulates once a night after enough dark hours with wet leaves;"
+        " how much by Keil 2007's quadratic in the night's temperature, falling with each event"
+        " by Kennelly et al. 2007",
+        "assumed for which nights (D59, Chris 2026-10-26); Keil's and Kennelly's for how much",
+        made_by="agrarium",
+        borrows=("keil2007.sporulation", "kennelly2007.lesion_decline"),
+        structures=(
+            "dark-moist-hours-sporulation",
+            "sporulation-temperature-bounds",
+            "sporulation-decline-by-event",
+        ),
+        structures_note=(
+            "dark, wet hours: Caffi 2013's form, which the engine runs, so a joint run holds it out"
+            " (D59 accepted that); and the forms of the two it borrows, Keil's band (none outside"
+            " 14.8-29.9 °C) and Kennelly's decline, since a record's own tags are what the hold-out"
+            " compares"
+        ),
+    ),
     "erbs1982.partition": Formulation(
         "direct and diffuse light from the clearness index",
         "Erbs, Klein & Duffie 1982, Solar Energy 28(4):293-302, eq. 1, as pvlib writes it",
