@@ -10,7 +10,7 @@ regions: [New York, South Australia]
 processes: [sporangia survival, sporulation, oospores, primary infection]
 records: [kennelly2007.trigger, kennelly2007.lesion_decline]
 datasets: [kennelly2007.loxton]
-files: []
+files: [2007-kennelly-10-1094-phyto-97-4-0512.pdf (held in the library's inbound since an earlier drop)]
 ---
 
 # Kennelly et al. 2007: primary infection, lesion productivity and sporangia survival
@@ -87,3 +87,16 @@ last week. The authors: oospores "may continue to germinate and cause infections
 the growing season, in contrast to the widely-held assumption that the supply of oospores is
 depleted shortly after bloom". The soil came from a heavily defoliated vineyard, a dense
 source.
+
+## Table 1 transcribed (2026-10-27)
+
+For Cooptera's scoring (literature/requests/kennelly2007-table1.md): all 29 rows of Table 1
+(p. 513) are in `kennelly2007_table1.csv`, read from the page image. The criteria were developed
+on the Geneva rows of 1981, 1983 and 1985-1997 (p. 514); 2001-2004 are the evaluation. Stations
+were about 2, 20, 4, 16 and 13 km from Geneva, Watkins Glen, Wayne, Ovid and Dundee; the paper
+gives no coordinates. First symptoms are the day epinasty was seen (clusters examined every 1-5
+days at Geneva, 2-7 days elsewhere), and the infection event was attributed from weather,
+vineyard observations and a "probable incubation period", no model named. Three printed
+incubations are one day more than their dates give (Wayne and Dundee 2001, Geneva 2002): left as
+printed and marked.
+

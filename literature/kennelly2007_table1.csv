@@ -1,0 +1,31 @@
+# Kennelly, Gadoury, Wilcox, Magarey & Seem 2007, Phytopathology 97:512-522, Table 1 (p. 513), transcribed 2026-10-27 from the page image by an ingest session; dates ISO (the year is the row's). Literature note: kennelly2007. trigger_fit: rows whose data developed the criteria (Geneva 1981, 1983, 1985-1997, p. 514), the others the paper's evaluation (2001-2004).
+year,site,first_symptoms_date,first_symptoms_growth_stage,infection_date,infection_growth_stage_el,rain_mm,temperature_during_rain_c,incubation_days,degree_days_base0_infection_to_detection,trigger_fit,note
+1981,Geneva,1981-06-17,2 d postbloom,1981-06-11,19,2.5,16.7,6,196,yes,
+1983,Geneva,1983-06-15,Bloom,1983-06-07,15,8.1,12.2,8,151,yes,
+1985,Geneva,1985-06-18,Bloom,1985-06-12,19,30.2,12.8,6,115,yes,
+1986,Geneva,1986-06-06,Bloom,1986-06-01,12,3.8,18.3,5,93,yes,
+1987,Geneva,1987-06-23,10 d postbloom,1987-06-13,21,8.9,20.0,10,211,yes,
+1988,Geneva,1988-06-16,1 d prebloom,1988-06-02,12,7.6,15.0,14,252,yes,
+1989,Geneva,1989-06-14,7 d prebloom,1989-06-06,12,4.3,15.0,8,143,yes,
+1990,Geneva,1990-06-14,6 d prebloom,1990-06-09,12,6.4,17.8,5,92,yes,
+1991,Geneva,1991-06-04,3 d prebloom,1991-05-31,19,10.4,25.0,4,76,yes,
+1992,Geneva,1992-06-14,7 d prebloom,1992-06-08,12,3.6,21.1,6,120,yes,
+1993,Geneva,1993-06-21,Bloom,1993-06-10,15,4.3,22.2,11,224,yes,
+1994,Geneva,1994-06-14,3 d prebloom,1994-06-01,12,27.7,21.7,13,221,yes,
+1995,Geneva,1995-06-13,7 d prebloom,1995-06-03,12,13.5,22.2,10,175,yes,
+1996,Geneva,1996-06-09,10 d prebloom,1996-05-24,12,9.1,15.6,16,272,yes,
+1997,Geneva,1997-06-16,12 d prebloom,1997-06-07,12,3.0,18.9,9,177,yes,
+2001,Geneva,2001-06-11,17,2001-06-01,12,3.3,13.4,10,166,no,
+2001,Wayne,2001-06-12,17,2001-06-01,12,2.5,13.1,12,185,no,printed incubation 12 d; the dates give 11
+2001,Dundee,2001-06-12,17,2001-06-01,12,2.5,13.1,12,185,no,printed incubation 12 d; the dates give 11
+2001,Ovid,2001-06-12,17,2001-06-01,12,3.3,11.8,11,168,no,
+2001,Watkins,2001-06-20,Bloom,2001-06-01,12,2.5,13.1,19,371,no,
+2002,Geneva,2002-06-10,15-17,2002-05-29,12,19.1,20.6,13,209,no,printed incubation 13 d; the dates give 12
+2002,Watkins,2002-06-12,17,2002-05-29,12,17.8,11.2,14,253,no,
+2002,Dundee,2002-06-14,17,2002-05-29,12,17.8,11.2,16,286,no,
+2002,Wayne,2002-06-14,17,2002-05-29,12,14.2,21.7,16,286,no,
+2003,Geneva,2003-06-09,12-15,2003-05-31,9,19.6,11.4,9,122,no,
+2003,Wayne,2003-06-09,12-15,2003-05-31,9,18.3,11.9,9,121,no,
+2003,Watkins,2003-06-12,15-17,2003-05-31,9,15.0,11.4,12,193,no,
+2003,Dundee,,,,,,,,,no,No disease: symptoms had not appeared as of 20 June and monitoring was discontinued (footnote z)
+2004,Geneva,2004-05-27,15-17,2004-05-21,12,4.1,15.8,6,90,no,
