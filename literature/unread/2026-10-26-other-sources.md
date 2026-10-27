@@ -201,3 +201,20 @@ repository timed out), Douillet 2023 (HAL tel-04970525, no Wayback capture), Bes
 (HAL tel-01079520, no capture), Campos-Arguedas 2026 (obtained as XML), Fernández-González
 2012 (obtained). For the closed journal articles the remaining routes are a library, Article
 Galaxy through Scite, or the authors.
+
+## Read since (2026-10-26, branch ingest/other-sources-reading)
+
+Every paper in Table 1 was triaged (claude-haiku-5-5, re-classed by the main session into
+9 full reads, 21 light reads, 22 B notes and 4 C notes) and now has a note; the rows of
+Table 1 no longer apply. Note ids differ from the drop keys where an id was taken or a key
+was wrong: vanrooi2002sajev is `coertze2002` (its printed authors), phinopoulos2014 is
+`phinopoulos2015`, buesa2018thesis `buesa2018`, dasilva2024 `dasilva2025`, jin2026
+`jin2026b`, ramos2022 `ramos2022b`, yang2021 `yang2021b`, krause2008jmlr `krause2008d`,
+atauri2017 `garciadecortazar2017`, vanrooi2003sajev `vanrooi2003`, brink2005thesis
+`brink2005`. Records added: schultz1993.plastochron, lopes2005.shoot_leaf_area,
+wermelinger1990.leaf_growth, kovaleski2018.deacclimation, cheraiet2021.deposit_deciles,
+castex2020.lgm, mariani2007.bbch_nhh, mariani2007.lobesia_flights,
+phinopoulos2015.shoot_leaf_area, pieri2003.row_interception,
+camposarguedas2026.budbreak_hardiness, kuwagata1990.downward_longwave,
+rossouw2016.mancozeb_washoff. The papers are still in the drop, not yet filed in the
+library (`scripts/library.py build` after the merge).
