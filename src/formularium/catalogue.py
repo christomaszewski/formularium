@@ -55,6 +55,11 @@ FORMULATIONS: dict[str, Formulation] = {
             " those data. Evaluated in four Finger Lakes Chancellor vineyards, 2001-2003"
         ),
         flags=(
+            "Fitted on the Geneva Chancellor rows of Kennelly et al. 2007's Table 1, 1981, 1983"
+            " and 1985-1997: 'the Chancellor vineyard in Geneva where the original data used to"
+            " develop the criteria were collected' (p. 514). The rows of 2001-2004 (Geneva and the"
+            " four Finger Lakes vineyards) are the paper's evaluation (literature/"
+            "kennelly2007_table1.csv, column trigger_fit; read 2026-10-27 in the page image).",
             "First printed by Gadoury, Seem & Wilcox 1997 (NYS IPM Project Reports; read"
             " 2026-10-09, literature/gadoury1997), from fifteen years of weather, vine growth and"
             " first disease: 5-6 flat leaves with clusters visible, 0.10 in (2.5 mm) of rain or"

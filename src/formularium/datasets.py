@@ -1409,22 +1409,25 @@ DATASETS: dict[str, Dataset] = {
     ),
     "kennelly2007.geneva": Dataset(
         (
-            "Date of first symptoms of downy mildew in unsprayed Chancellor vines (240-300 "
-            "flower clusters examined every 1-5 days from three weeks before bloom), with the "
-            "rain and temperature of the infection event judged responsible (Table 1); USA, "
-            "New York: Geneva (NYSAES) 1981, 1983, 1985-1997, 2001-2004; also Watkins Glen, "
-            "Wayne, Ovid, Dundee in 2001-2003; 1981-2004 (29 dated site-years in Table 1; one "
-            "'No disease', Dundee 2003); plots: unsprayed vines, 12-15 vines (Geneva) or 9-11 "
-            "contiguous vines (commercial sites); weather: Rainfall and temperature from the "
-            "nearest available station, 2 to 20 km away; Table 1 prints only the rain (mm) "
-            "and temperature during the attributed infection event, incubation days and "
-            "degree-days; access: Table 1 printed in the paper; station records not given; "
-            "licence: not stated (Phytopathology, APS); downloadable now: no"
+            "First symptoms (cluster epinasty, confirmed by sporulation in the laboratory) in "
+            "unsprayed Chancellor vines, New York, with the infection event the authors "
+            "attributed to each (weather records, vineyard observations and a probable "
+            "incubation period; no model named): 29 site-years, Geneva (NYSAES) 1981, 1983, "
+            "1985-1997, 2001-2004 (clusters examined every 1-5 days from about 3 weeks before "
+            "bloom, 240-300 clusters on 12-15 vines) and four commercial vineyards near "
+            "Watkins Glen, Wayne, Ovid and Dundee 2001-2003 (every 2-7 days, 9-11 vines), one "
+            "row 'No disease' (Dundee 2003). Columns: dates and growth stages of symptoms and "
+            "infection, rain (mm) and temperature during the rain (°C), incubation (d), "
+            "degree-days base 0 °C. Weather from the nearest stations, about 2, 20, 4, 16 and "
+            "13 km from Geneva, Watkins Glen, Wayne, Ovid and Dundee; no coordinates printed. "
+            "Transcribed in literature/kennelly2007_table1.csv. Three printed incubations are "
+            "one day more than their dates give (Wayne and Dundee 2001, Geneva 2002)."
         ),
         (
-            "Kennelly, Gadoury, Wilcox, Magarey, Seem 2007. Phytopathology 97:512-522.. Found "
-            "for Agrarium D58 (literature/requests/datasets-d58.md), 2026-10-27; how checked: "
-            "read"
+            "Kennelly, Gadoury, Wilcox, Magarey & Seem 2007, Phytopathology 97:512-522, Table "
+            "1 (p. 513) and Materials and methods (pp. 513-514), transcribed 2026-10-27 from "
+            "the page image (300 dpi crops of the rows that did not add up) for Cooptera "
+            "(literature/requests/kennelly2007-table1.md)"
         ),
         "read",
     ),
