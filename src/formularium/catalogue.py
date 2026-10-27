@@ -6025,7 +6025,11 @@ FORMULATIONS: dict[str, Formulation] = {
             " Rodrigues et al. 2019 and Alves et al. 2015 that, with T² for T and no WT² term."
             " Take the equation from eq. 5, not a copy (literature/hamada2008, reis2013,"
             " monteiro2012, monteiro2015, monteiro2015bol, rodrigues2019, alves2015).",
+            "Equation 5 read again in the page image (p. 798) on 2026-10-27: IE = k (1 +"
+            " e^-rho)^(1/(1 - m)). The printed coefficients are rounded: k peaks at 0.091 at"
+            " 18.0 °C with them, where the text prints 0.083 at 17.5 °C (pp. 795-796).",
         ),
+        equations="lalancette1988",
     ),
     "tranmanhsung1990.pom": Formulation(
         "POM: the date oospores mature, from a rain index since 21 September",
@@ -6053,8 +6057,23 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("b", 117.9, "d from 1 January", "Results, T = A*IJ + B", "read"),
             Published("severity.intercept", 1.7, "class", "Results, S = 1.7 + 0.012 IJ", "read"),
             Published("severity.slope", 0.012, "class per index unit", "Results", "read"),
+            Published(
+                "ronzon.upper_limit",
+                9.0,
+                "mm/day",
+                "Ronzon 1987, p. 93 (ESP_M = 18 / NJM = 9, from the EPI model; page image)",
+                "read",
+            ),
         ),
+        equations="tranmanhsung1990",
         flags=(
+            "How IJ is computed (p. 122, page image, read 2026-10-27): daily rain counts positive"
+            " between Hm and HM, a lack below Hm (Hm - Rd, so a dry day lacks the whole Hm), an"
+            " excess above HM; Im(M) = POS - |EXC - LAC| + Im(M-1) from 21 September; IJ is"
+            " January's. Hm = RM / the month's average rainy days; HM 'RM + the standard deviation"
+            " of RM divided by the number of rainy days' reads as (RM + SD)/n or RM + SD/n, no"
+            " brackets printed. The 42-year normals (1946-1987) are not printed; Ronzon 1987 took"
+            " 1951-1985 normals for Hm and a fixed 9 mm for HM.",
             "Fitted to three maturity dates; validated on the twelve years it was fitted to"
             " (a posteriori, as the paper says). It gives one date, not a cohort curve.",
             "DMCast (Park et al. 1997) computes POM's index (read in Caffi et al. 2007).",
