@@ -92,6 +92,9 @@ STRUCTURES = {
     "wetness-temperature-infection-index": "an infection index from wetness and temperature",
     "cold-hardiness": "bud hardiness acclimating and deacclimating with temperature",
     "oospore-dose-response": "primary lesions from the oospore dose",
+    # Agrarium D59 (2026-10-26): F3's absent oospore model, and its made-up dose
+    "no-oospore-model": "no oospore maturation model: ripe whenever primary infection is triggered",
+    "lesions-per-trigger": "primary lesions a set number per triggered infection, scaled per vine",
     "dispersal-kernel": "spores spread by a distance kernel",
     "canopy-water-balance": "leaf wetness as a water budget on the canopy",
     "drawn-stage-dates": "stage dates drawn around an average",
