@@ -115,7 +115,7 @@ def test_fig_1d_is_not_reproduced() -> None:
     assert abs(high - 190) > 100
 
 
-def test_fig_1c_is_not_reproduced_by_any_reading_of_eq_15() -> None:
+def test_two_readings_of_eq_15_do_not_reproduce_fig_1c() -> None:
     # Fig. 1C (p. 378, read by eye, about +/- 10 min): wetness against canopy height Zc, the
     # reference height not printed. It asks for a canopy wind rising about 2.5-fold, 0.13 to
     # 0.33 U_Z, from Zc 0.1 to 2 m. Two readings of Eq 15 (2026-10-27, for Agrarium D56; not
@@ -138,3 +138,22 @@ def test_fig_1c_is_not_reproduced_by_any_reading_of_eq_15() -> None:
         b = log_ratio(10.0, z) * (1 + alpha * 0.5) ** -2
         assert abs(_wet_minutes(a * U_Z) - fig_c[10]) > 50
         assert abs(_wet_minutes(b * U_Z) - fig_c[10]) > 50
+
+
+def test_a_literal_reading_of_eq_15_reproduces_fig_1c_and_fig_1a() -> None:
+    # Eq 15 read with '(1 - Zc)/Z' as 1 - Zc/Z and 'Z0 = 1/10Z' literally as 1/(10 Z) cm, with
+    # a reference height of 400 cm (not printed; inferred, 2026-10-27). Fig. 1C read by eye
+    # (about +/- 10 min); Fig. 1A's 150 min at LAI 1 with the canopy wind at Zc 180 cm (the
+    # validation sites' canopy height, magarey2006b). A reconstruction, not a print.
+    import math
+
+    z, alpha = 400.0, SWEB.published("alpha")
+
+    def ratio(zc: float) -> float:
+        d, z0 = 2.0 / 3.0 * zc, 1.0 / (10.0 * z)
+        return math.log((zc - d) / z0) / math.log((z - d) / z0) * (1 + alpha * (1 - zc / z)) ** -2
+
+    for zc, minutes in {10: 240, 20: 230, 50: 200, 100: 185, 200: 140}.items():
+        assert _wet_minutes(ratio(zc) * U_Z) == pytest.approx(minutes, abs=15), zc
+    assert ratio(180.0) == pytest.approx(0.30, abs=0.01)
+    assert _wet_minutes(ratio(180.0) * U_Z) == pytest.approx(150, abs=20)

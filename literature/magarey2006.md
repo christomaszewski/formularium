@@ -135,15 +135,21 @@ pp. 377-378.
   U_Z 1.5 m/s, 2 mm of rain; the reference height Z is not printed.
 - **What Fig. 1C asks of the canopy wind:** run through Eqs 1-14 (Formularium's module), 0.13,
   0.14, 0.18, 0.19 and 0.33 U_Z at those heights, about 2.5-fold.
-- **No reading reproduces it within 20 min.** `1 − Zc/Z` gives 430, 390, 330, 260 and 160 min
-  (Z0 = Zc/10, Z 3 m); with Z0 = Z/10, as printed, the wind of canopies below about 0.6 m is
-  negative. Landsberg & James's form [1 + α(1 − z/Zc)]^−2, at mid-canopy, gives 300, 280,
-  240, 210 and 140 min (Z 2 m). The test `test_fig_1c_is_not_reproduced_by_any_reading_of_eq_15`
-  keeps the check. Landsberg & James 1971 was not obtained.
+- **Two readings fail.** `1 − Zc/Z` with Z0 = Zc/10 gives 430 to 160 min (Z 3 m); with Z0 =
+  Z/10 the wind of low canopies is negative. Landsberg & James's [1 + α(1 − z/Zc)]^−2 at
+  mid-canopy gives 300 to 140 min.
+- **A literal reading reproduces Fig. 1A, 1B and 1C together:** `1 − Zc/Z`, with "Z0 = 1/10Z"
+  taken as printed, 1/(10·Z) in cm, and a reference height of 400 cm gives 240, 230, 210, 180
+  and 140 min, and a canopy wind of 0.30 U_Z at Zc 180 cm (the validation sites' canopy,
+  `magarey2006b`), the value that reproduces Fig. 1A-1B. Z = 350 cm fits within 10 min too.
+  This is a reconstruction: 1/(10·Z) is not dimensionally sound, and the reference height of the
+  sensitivity runs is not printed (the validation measured wind at 3 m). Landsberg & James 1971
+  was not obtained. Both checks are tests in `tests/test_magarey2006.py`.
 
 ## Bearing (2026-10-27)
 
-- As D56 says for this case: Agrarium takes the canopy wind from measurements (0.35-0.5 of the
-  wind above in three vineyards), registered `estimate`. Fig. 1C's own runs imply a lower wind,
-  0.13-0.33 U_Z.
+- For D56: Eq 15 can be run as the authors appear to have run it (the reading above), so SWEB's
+  own sensitivity results can be reproduced; it is a reading, to be registered as such. At a
+  1.8 m canopy and 3-4 m reference height it gives 0.30-0.40 U_Z, overlapping the lower end of
+  the 0.35-0.5 measured in three vineyards.
 

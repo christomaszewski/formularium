@@ -4320,15 +4320,17 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("alpha", 1.3, "1", "p. 377, Eq 15 (wind profile shape, assumed)", "read"),
         ),
         flags=(
-            "Eq 15 against Fig. 1C (2026-10-27, Agrarium D56; tests/test_magarey2006.py). Fig. 1C"
+            "Eq 15 against Fig. 1 (2026-10-27, Agrarium D56; tests/test_magarey2006.py). Fig. 1C"
             " plots wetness duration against canopy height (about 240, 230, 200, 185 and 140 min at"
             " Zc 0.1, 0.2, 0.5, 1 and 2 m, read by eye); the reference height Z of the sensitivity"
-            " runs is not printed. It asks for a canopy wind rising about 2.5-fold, 0.13 to 0.33"
-            " U_Z."
-            " No reading reproduces it within 20 min: '(1 - Zc)/Z' read as 1 - Zc/Z gives 430-160"
-            " min (Z0 = Zc/10, Z 3 m; with Z0 = Z/10, as printed, low canopies' wind is negative);"
-            " Landsberg & James's [1 + alpha(1 - z/Zc)]^-2 at mid-canopy gives 300-140 min (Z 2 m)."
-            " Both are readings, not prints; Landsberg & James 1971 was not obtained.",
+            " runs is not printed (the validation's wind was at 3 m over canopies about 1.8 m, in"
+            " magarey2006b). A reading that reproduces Fig. 1A, 1B and 1C together: '(1 - Zc)/Z'"
+            " as 1 - Zc/Z and 'Z0 = 1/10Z' taken literally as 1/(10 Z) in cm, with Z = 400 cm:"
+            " 240, 230, 210, 180 and 140 min, and Uc = 0.30 U_Z at Zc 180 cm, the canopy wind"
+            " that reproduces Fig. 1A-1B. Z = 350 cm fits within 10 min too. A reconstruction,"
+            " not a print: 1/(10 Z) is not dimensionally sound, Z is inferred, and Landsberg &"
+            " James 1971 was not obtained. Other readings fail (1 - Zc/Z with Z0 = Zc/10 or Z/10;"
+            " Landsberg & James's [1 + alpha(1 - z/Zc)]^-2 at mid-canopy).",
             "Wetness is the wet-area index above 0.1 (a fraction of leaves, l. 148-153), not a"
             " humidity and not an amount of water, and no comparison with a relative-humidity"
             " rule is printed. Turned into stored water, S/C > 0.1^(1/0.67) = 0.032, which is"
