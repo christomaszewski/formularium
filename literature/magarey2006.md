@@ -120,3 +120,30 @@ stand-in:
   adds condensation when Rnc < 0 (Eq 9's convention), a reading.
 - **Can it run:** not as printed: Eqs 1-14 run; the canopy wind does not, and no source read prints
   one that closes. Net radiation at night now has recorded estimates (`flerchinger2009`, `allen1998`).
+
+## Eq 15 against Fig. 1C (2026-10-27)
+
+For Agrarium D56 (literature/requests/sweb-canopy-wind-d56.md), read in the page images of
+pp. 377-378.
+- **Eq 15 as printed:** Uc = U_Z (ln[(Zc − D_Z)/Z0] / ln[(Z − D_Z)/Z0]) [1 + α ((1 − Zc)/Z)]^−2,
+  with Uc the wind at the canopy's average height, Zc the canopy height, U_Z the wind at the
+  reference height Z (cm, cm/min), D_Z = 2/3 Zc, Z0 "1/10Z", α = 1.3, chosen as intermediate
+  between wind along and across the rows (Heilman et al. 1994) and "also dependent upon crop
+  type".
+- **Fig. 1C** is not a wind curve: it plots the simulated wetness duration against Zc (0.1 to
+  2 m): about 240, 230, 200, 185 and 140 min, read by eye. The sensitivity case is 20 °C, 75 %,
+  U_Z 1.5 m/s, 2 mm of rain; the reference height Z is not printed.
+- **What Fig. 1C asks of the canopy wind:** run through Eqs 1-14 (Formularium's module), 0.13,
+  0.14, 0.18, 0.19 and 0.33 U_Z at those heights, about 2.5-fold.
+- **No reading reproduces it within 20 min.** `1 − Zc/Z` gives 430, 390, 330, 260 and 160 min
+  (Z0 = Zc/10, Z 3 m); with Z0 = Z/10, as printed, the wind of canopies below about 0.6 m is
+  negative. Landsberg & James's form [1 + α(1 − z/Zc)]^−2, at mid-canopy, gives 300, 280,
+  240, 210 and 140 min (Z 2 m). The test `test_fig_1c_is_not_reproduced_by_any_reading_of_eq_15`
+  keeps the check. Landsberg & James 1971 was not obtained.
+
+## Bearing (2026-10-27)
+
+- As D56 says for this case: Agrarium takes the canopy wind from measurements (0.35-0.5 of the
+  wind above in three vineyards), registered `estimate`. Fig. 1C's own runs imply a lower wind,
+  0.13-0.33 U_Z.
+

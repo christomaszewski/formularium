@@ -113,3 +113,28 @@ def test_fig_1d_is_not_reproduced() -> None:
     low, high = _wet_minutes(u_c, c_l=0.005), _wet_minutes(u_c, c_l=0.04)
     assert high / low > 6
     assert abs(high - 190) > 100
+
+
+def test_fig_1c_is_not_reproduced_by_any_reading_of_eq_15() -> None:
+    # Fig. 1C (p. 378, read by eye, about +/- 10 min): wetness against canopy height Zc, the
+    # reference height not printed. It asks for a canopy wind rising about 2.5-fold, 0.13 to
+    # 0.33 U_Z, from Zc 0.1 to 2 m. Two readings of Eq 15 (2026-10-27, for Agrarium D56; not
+    # prints): (a) '(1 - Zc)/Z' as 1 - Zc/Z; (b) Landsberg & James's [1 + a(1 - z/Zc)]^-2 at
+    # mid-canopy, z = Zc/2. With Z0 = Zc/10 (Z/10 as printed makes low canopies' wind
+    # negative) neither comes within 20 min at Zc 0.1 m.
+    import math
+
+    fig_c = {10: 240, 200: 140}
+    assert _wet_minutes(0.13 * U_Z) == pytest.approx(240, abs=10)
+    assert _wet_minutes(0.33 * U_Z) == pytest.approx(140, abs=10)
+
+    def log_ratio(zc: float, z: float) -> float:
+        d, z0 = 2.0 / 3.0 * zc, zc / 10.0
+        return math.log((zc - d) / z0) / math.log((z - d) / z0)
+
+    alpha = SWEB.published("alpha")
+    for z in (200.0, 300.0):
+        a = log_ratio(10.0, z) * (1 + alpha * (1 - 10.0 / z)) ** -2
+        b = log_ratio(10.0, z) * (1 + alpha * 0.5) ** -2
+        assert abs(_wet_minutes(a * U_Z) - fig_c[10]) > 50
+        assert abs(_wet_minutes(b * U_Z) - fig_c[10]) > 50

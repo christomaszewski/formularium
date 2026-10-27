@@ -4267,6 +4267,7 @@ FORMULATIONS: dict[str, Formulation] = {
             " (Eq 15), assumed. Code on request from the first author; no licence printed."
         ),
         parameters=(
+            Published("alpha", 1.3, "-", "Eq 15 and p. 377 ('alpha = 1.3')", "read"),
             Published(
                 "canopy_storage_per_leaf_area",
                 0.02,
@@ -4319,6 +4320,15 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("alpha", 1.3, "1", "p. 377, Eq 15 (wind profile shape, assumed)", "read"),
         ),
         flags=(
+            "Eq 15 against Fig. 1C (2026-10-27, Agrarium D56; tests/test_magarey2006.py). Fig. 1C"
+            " plots wetness duration against canopy height (about 240, 230, 200, 185 and 140 min at"
+            " Zc 0.1, 0.2, 0.5, 1 and 2 m, read by eye); the reference height Z of the sensitivity"
+            " runs is not printed. It asks for a canopy wind rising about 2.5-fold, 0.13 to 0.33"
+            " U_Z."
+            " No reading reproduces it within 20 min: '(1 - Zc)/Z' read as 1 - Zc/Z gives 430-160"
+            " min (Z0 = Zc/10, Z 3 m; with Z0 = Z/10, as printed, low canopies' wind is negative);"
+            " Landsberg & James's [1 + alpha(1 - z/Zc)]^-2 at mid-canopy gives 300-140 min (Z 2 m)."
+            " Both are readings, not prints; Landsberg & James 1971 was not obtained.",
             "Wetness is the wet-area index above 0.1 (a fraction of leaves, l. 148-153), not a"
             " humidity and not an amount of water, and no comparison with a relative-humidity"
             " rule is printed. Turned into stored water, S/C > 0.1^(1/0.67) = 0.032, which is"
