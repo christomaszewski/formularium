@@ -5668,8 +5668,8 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         structures=("sporulation-temperature-bounds",),
         structures_note=(
-            "positive only between about 13.5 and 31 °C (arithmetic): a temperature band read"
-            " strictly, with a shape inside it"
+            "positive only between 14.8 and 29.9 °C, its roots (arithmetic): a temperature band"
+            " read strictly, with a shape inside it"
         ),
         parameters=(
             Published("a", -747.5, "sporangia/cm² per °C²", "p. 53", "read"),
