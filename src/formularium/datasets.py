@@ -1587,50 +1587,99 @@ DATASETS: dict[str, Dataset] = {
     ),
     "margaritis2019.spata": Dataset(
         (
-            "Downy, powdery mildew and bunch rots observed against gaiasense and vite.net DSS "
-            "outputs; 2017-2018 Agricultural Warnings of seven Greek regional centres; "
-            "Greece, Spata (Attica) AUA experimental vineyard, cvs Malagouzia and Savvatiano; "
-            "Nemea (Argolida) for gaiasense; 2018 (vineyard), 2017-2018 (warnings); plots: "
-            "one experimental vineyard, two cultivars; weather: DSS station data 2018 "
-            "(interval not stated in abstract); access: MSc thesis PDF Margaritis_E.pdf, 9.35 "
-            "MB, at kalligeneia.aua.gr/handle/10329/6933; not fetched; licence: not stated on "
-            "the landing page; downloadable now: yes"
+            "Downy mildew (and powdery mildew, grey mould) at the end of the 2018 season in "
+            "copper-sprayed Malagouzia and Savvatiano at Spata, Attica, Greece: 'actual "
+            "presence' 0-5 % and 0-3 % (printed pp. 120, 139), no unit, no dates, no "
+            "interval; one passage (p. 101) calls the vines unprotected, against the copper "
+            "record. Weather: a gaiasense station in the vineyard (T, RH, rain, leaf wetness "
+            "at canopy height) and a vite.net station, March-September 2018, in graphs only; "
+            "step not printed. No weather or disease numbers in the appendix; no licence or "
+            "data offer printed. Not usable for scoring."
         ),
         (
-            "Margaritis E. 2019, MSc thesis, Agricultural University of Athens (supervisor "
-            "Tsitsigiannis). Found for Agrarium D58 (literature/requests/datasets-d58.md), "
-            "2026-10-27; how checked: snippet (abstract only; thesis not read)"
+            "Margaritis, E. 2019, MSc thesis, Agricultural University of Athens "
+            "(kalligeneia.aua.gr handle 10329/6933), in Greek. Read 2026-10-27 for Agrarium "
+            "and Cooptera D58 (literature/requests/theses-d58.md) from an OCR of the PDF (its "
+            "text layer is garbled), pp. 77-79, 85, 101, 117-120, 131-132, 139; the 0-5/0-3 % "
+            "and the step read in the page images"
         ),
-        "snippet",
+        "read",
     ),
     "leoni2026.geneva_thesis": Dataset(
         (
-            "Thesis on spore monitoring and oospore maturation modelled from more than twenty "
-            "years of climatic observations; Switzerland (Geneva / Changins area); 20+ years "
-            "of climate; plots: spore traps; weather: station climate; access: archive- "
-            "ouverte.unige.ch/unige:193385 (thesis PDF); licence: not stated on the DataCite "
-            "record; check landing page; downloadable now: yes"
+            "Leoni's thesis records, all at Agroscope Changins (Nyon, Vaud) with the "
+            "Agrometeo station beside the plots (daily T at 2 m, RH, rain, leaf wetness, dew "
+            "point, radiation; wind from MeteoSwiss 390-500 m away): first oil spots in a "
+            "never-sprayed outdoor laboratory (25 May 2021, 11 May 2023, 16 May 2024); 2024 "
+            "incidence and severity per block, about 7 dates, in sprayed plots with one "
+            "untreated control (Tables 2.7-2.8); Chasselas phenology 2021-2024 (Table 1.1); "
+            "spore catches 2021-2024 in figures only; the oospore germination series of "
+            "leoni2026.changins (pp. 154-182). Printed tables only; no repository for the "
+            "disease or oospore data; the thesis 'protected by copyright'. Rainwater fungal "
+            "taxa 2018-2022 are on Zenodo 10.5281/zenodo.18745101 (not disease data)."
         ),
         (
-            "Université de Genève thesis 2026 (author not read). Found for Agrarium D58 "
-            "(literature/requests/datasets-d58.md), 2026-10-27; how checked: snippet "
-            "(abstract only)"
+            "Leoni, S. 2026, PhD thesis, Université de Genève (Sc. 5993, doi "
+            "10.13097/archive-ouverte/unige:193385). Read 2026-10-27 for D58 "
+            "(literature/requests/theses-d58.md) from the PDF Chris supplied; 54 quotes "
+            "checked at their lines; Tables 3.1-3.3 read in the page images"
         ),
-        "snippet",
+        "read",
     ),
     "kleb2026.hohenheim_thesis": Dataset(
         (
-            "Thesis combining Kleb et al. 2022 and 2026: canopy microclimate against station "
-            "weather, disease scores; Germany, Hohenheim; 2021 and others; plots: Pinot "
-            "Meunier canopy sites; weather: leaf wetness, T, RH inside canopy and at a "
-            "station; access: hohpublica handle 123456789/19105, PDF "
-            "Dissertation_MelissaKleb_2026.pdf; licence: CC BY-NC-SA 4.0; downloadable now: "
-            "yes"
+            "Kleb's thesis combines Kleb et al. 2022 (ch. 4) and the 2026 preprint (ch. 5) "
+            "word for word, with a 2020 plot (ch. 6, record kleb2026.hohenheim2020) and an "
+            "inoculation method (ch. 7). 2021, Hohenheim, Pinot Meunier: infected leaf area "
+            "by eye every 3 days in three canopy zones of three plots, each unsprayed for "
+            "downy mildew only in its own three-week period (BBCH 75-79, 79-83, 83-87). "
+            "Weather: T, RH (Testo 174H) and leaf wetness (PHYTOS 31, counts) every 10 min at "
+            "100, 130, 160 cm, against a station 75 m away (180 cm; ch. 5: a border station "
+            "at 200 cm, wetness at 160 cm) and one 23 km away. Data in figures only; the data "
+            "statements say 'Not applicable'; no repository. Thesis CC BY-NC-SA 4.0 (landing "
+            "page; not printed in the PDF)."
         ),
         (
-            "Kleb 2026, PhD thesis, Univ. Hohenheim. Found for Agrarium D58 "
-            "(literature/requests/datasets-d58.md), 2026-10-27; how checked: read (landing "
-            "page only)"
+            "Kleb, M. 2026, PhD thesis, Universität Hohenheim (hohPublica handle "
+            "123456789/19105), 'Site-specific forecasting and early detection of Plasmopara "
+            "viticola in Vitis vinifera'. Read 2026-10-27 for D58 "
+            "(literature/requests/theses-d58.md): chapters 1-3 and 8 in the text layer, "
+            "chapters 4-7 (page images) by OCR of PDF pp. 26-78, Tables 2-4 in the page "
+            "images; 23 quotes checked at their lines"
+        ),
+        "read",
+    ),
+    "kleb2026.hohenheim2020": Dataset(
+        (
+            "Downy mildew in an unsprayed 250 m2 plot of 33-year-old Pinot Meunier at "
+            "Hohenheim, Stuttgart, 2020: visible damage every 3rd day, first symptoms at the "
+            "end of July, 30-40 % incidence a month later; T and RH (Testo 174H) and leaf "
+            "wetness (PHYTOS 31; wet above 435 counts, a period wet if mean RH above 85 % "
+            "when they conflicted, not validated) every 10 min at 1.3 m, a station 75 m away; "
+            "thermal images 22 July to 8 September 2020. Figures only (Figs 5-8); not "
+            "obtainable."
+        ),
+        (
+            "Kleb 2026, PhD thesis, Universität Hohenheim, chapter 6 (pp. 55-60), read "
+            "2026-10-27 by OCR of the page images for D58; not in the held notes kleb2022 and "
+            "kleb2026"
+        ),
+        "read",
+    ),
+    "leoni2026.changins_primary": Dataset(
+        (
+            "Julian day of the observed primary infection in the never-sprayed outdoor "
+            "laboratory at Agroscope Changins, and of laboratory-observed oospore maturity, "
+            "for 20 years 2004-2025 (no 2011 or 2022, without symptoms), with the differences "
+            "(Tables 3.2-3.3, pp. 182-183); weather from the Agrometeo station beside the "
+            "plot, daily. One small plot with oospore-rich litter laid each autumn since "
+            "2003, so the inoculum is concentrated; 'observed primary infection' is not "
+            "defined in print. Printed; no licence stated."
+        ),
+        (
+            "Leoni 2026, PhD thesis, Université de Genève, Tables 3.2-3.3, read 2026-10-27 "
+            "for D58 (the tables in the text layer, checked at their lines); also the data "
+            "behind the published paper's Fig. 8 (leoni2026)"
         ),
         "read",
     ),
