@@ -1363,4 +1363,12 @@ DATASETS: dict[str, Dataset] = {
         " on the clearness index, is fitted to them (r² 0.93)",
         "read",
     ),
+    "rossouw2016.stellenbosch": Dataset(
+        "Manganese residue and fluorescent-pigment coverage on apple seedling leaves sprayed with"
+        " mancozeb and rained on at 5 mm/h for 0, 1, 5, 10 and 15 mm, five trees and four"
+        " repeats, Stellenbosch; and coverage against spray volume and concentration",
+        "Rossouw 2016, MSc thesis, Stellenbosch University (read 2026-10-26): the exponential"
+        " wash-off curves and the Hoerl deposition curves are fitted to them",
+        "read",
+    ),
 }

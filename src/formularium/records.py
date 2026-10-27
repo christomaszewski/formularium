@@ -157,6 +157,8 @@ STRUCTURES = {
     " thresholds",
     "row-view-factor-interception": "the radiation a vine row intercepts over a season from the"
     " view factor between rows (height over spacing), row azimuth, shape and albedo",
+    "rain-wash-off": "the share of a fungicide deposit lost as a saturating function of the"
+    " rain amount since application",
 }
 
 

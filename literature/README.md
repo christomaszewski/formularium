@@ -463,6 +463,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [ghiani2025](ghiani2025.md) | downy mildew, powdery mildew | detection, observation | Sardinia | Clear |
 | [ghule2015](ghule2015.md) | anthracnose | forecasting | Maharashtra | An in-sample weekly regression |
 | [gijzen1989](gijzen1989.md) | none | row-crop light model, diffuse and direct light, canopy light interception, photosynthesis | not stated | Row-crop light model for any row geometry, diffuse light little reduced when path width is under 30 percent of row height, validated on young maize; vine-row light interception (s3). |
+| [gil2014](gil2014.md) | none | spray coverage, spray volume, leaf wall area, canopy size, LiDAR | Lleida | Coverage of 34, 42 and 47 % on water-sensitive paper at 250, 350 and 500 L per 10,000 m² of leaf wall on a 0.8 m Merlot canopy, uniformity unchanged; LiDAR LAI 1.9-2.1 |
 | [gil2015](gil2015.md) | none | leaf wetness duration; SWEB; energy balance; greenhouse | Colombia, Boyaca | Strands 2 and 3: SWEB adapted to greenhouse tomato, error 0.8 and about 4 h per day; equations not printed; RH thresholds beat it in an earlier rose study (cited, not read) |
 | [gil2021](gil2021.md) | none | spray deposition,leaf wall area dose,spray volume,sprayer comparison | Barcelona, Spain | Serves t1: device-by-volume efficiency per leaf wall area could set a spray-volume input, but the trial is at one site and needs deposit fractions. |
 | [gilmoya2014](gilmoya2014.md) | none | canopy characterisation, LiDAR, spraying | Catalonia | A review restating Arno et al. 2013 and Llorens et al. 2011; nothing new on leaf area. |
@@ -988,6 +989,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [rossi2013](rossi2013.md) | downy mildew | epidemic structure | Europe | Gobbin's genotype patterns, for history matching |
 | [rossi2025](rossi2025.md) | downy mildew | host susceptibility, spray efficacy | Piacenza | Efficacy rises with cluster stage, interacting with ontogenic resistance |
 | [rossini2021](rossini2021.md) | none | soil moisture sensors; management zones; fuzzy C-means | USA, Kansas | D48 representative sites: fuzzy C-means zones, one sensor per zone; within-zone SD halved; no held-out sensor |
+| [rossouw2016](rossouw2016.md) | apple scab | rain wash-off, fungicide residue, spray deposition, mancozeb | Stellenbosch | Mancozeb loss from apple seedling leaves as a saturating function of rain, plateaus of 32 % (residue) and 61 % (coverage) with printed coefficients; the one wash-off fit held, on apple |
 | [rotem1969](rotem1969.md) | many | irrigation | Israel | drip adds no leaf wetness; sprinkling does |
 | [roubal2013](roubal2013.md) | olive scab | infection, latent period | Provence | Held out by structure through its RH-threshold wetness (Agrarium's candidates) |
 | [rouxel2014](rouxel2014.md) | downy mildew | population genetics | Eastern North America | Population genetics |

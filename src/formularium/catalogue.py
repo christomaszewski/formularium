@@ -7829,4 +7829,60 @@ FORMULATIONS: dict[str, Formulation] = {
             " flerchinger2009.dilley_unsworth."
         ),
     ),
+    "rossouw2016.mancozeb_washoff": Formulation(
+        "The share of a mancozeb deposit (manganese residue, or fluorescent-pigment coverage)"
+        " lost from apple seedling leaves as y = A exp(B x) + C in the rain amount x since"
+        " application, at 5 mm/h",
+        "Rossouw 2016, MSc thesis, Stellenbosch University, Fig. 5 caption (printed p. 53) and"
+        " Chapter 2 results",
+        year=2016,
+        authors=("Rossouw, Cornelis Johannes",),
+        authors_complete=True,
+        authors_from="read",
+        checked="rossouw2016.pdf (the 2026-10-25 other-sources drop); the Fig. 5 caption read in"
+        " the page image",
+        structures=("rain-wash-off",),
+        structures_note=(
+            "Loss rising to a plateau with the rain amount: a form of its own, beside the"
+            " first-order decay in time of first-order-residue-decay."
+        ),
+        calibrated_on=("rossouw2016.stellenbosch",),
+        calibration_note=(
+            "Exponential regressions on treatment means of five trees and four repeats at 0,"
+            " 1, 5, 10 and 15 mm of simulated rain at 5 mm/h on apple seedlings; n per fit and"
+            " standard errors not printed. Observed; no model in the data. Read 2026-10-26"
+            " (literature/rossouw2016)."
+        ),
+        parameters=(
+            Published(
+                "mn_loss.a", -31.886, "%", "Fig. 5 caption, p. 53, %Mn-loss, R² 0.722", "read"
+            ),
+            Published("mn_loss.b", -0.181, "per mm", "Fig. 5 caption, p. 53", "read"),
+            Published("mn_loss.c", 32.236, "%", "Fig. 5 caption, p. 53 (the plateau loss)", "read"),
+            Published(
+                "fpc_loss.a", -67.073, "%", "Fig. 5 caption, p. 53, %FPC-loss, R² 0.849", "read"
+            ),
+            Published("fpc_loss.b", -0.118, "per mm", "Fig. 5 caption, p. 53", "read"),
+            Published(
+                "fpc_loss.c", 61.401, "%", "Fig. 5 caption, p. 53 (the plateau loss)", "read"
+            ),
+            Published(
+                "mn.a", 90.095, "mg/kg", "Fig. 5 caption, p. 53, Mn residue, R² 0.651", "read"
+            ),
+            Published("mn.b", -0.456, "per mm", "Fig. 5 caption, p. 53", "read"),
+            Published("mn.c", 196.521, "mg/kg", "Fig. 5 caption, p. 53", "read"),
+            Published(
+                "fpc.a", 3.472, "% coverage", "Fig. 5 caption, p. 53, FPC%, R² 0.660", "read"
+            ),
+            Published("fpc.b", -0.301, "per mm", "Fig. 5 caption, p. 53", "read"),
+            Published("fpc.c", 3.211, "% coverage", "Fig. 5 caption, p. 53", "read"),
+            Published("rain_intensity", 5, "mm/h", "p. 53 and l. 1804", "read"),
+        ),
+        flags=(
+            "Apple seedlings, not vine; mancozeb only; one rain intensity; losses as a share"
+            " of the unrained deposit. The 1 mm treatment was 15 min at 5 mm/h (1.25 mm by"
+            " arithmetic). The Discussion's losses at 1 and 5 mm disagree with the Results."
+            " The vine wash-off study, Cabras et al. 2001, is not held."
+        ),
+    ),
 }
