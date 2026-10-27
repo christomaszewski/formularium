@@ -4943,6 +4943,13 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("mature_mtg_d", 1.5, "d", "maturity when MTG < 1.5 d", "read"),
         ),
         flags=(
+            "Two fits of one dataset (read 2026-10-27 in the page images). The paper's Table 1"
+            " (p. 11) counts rainy days 'since 1 January' (2.36, +0.00076, -0.034, -0.0046;"
+            " residual deviance 40.44, AIC 307.68), but its methods define the variable as days"
+            " with rain 'in the 30 days prior to sampling'. Leoni's thesis (Geneva 2026, Table 3.1,"
+            " p. 170; literature/leoni2026thesis) fits the same 96 observations with rainy days in"
+            " the last 30 days: 2.23, -0.00092, -0.056, -0.0068; residual deviance 34.68, AIC"
+            " 301.91. Which window the published coefficients belong to is for the authors.",
             "Read 2026-10-09 (literature/leoni2026): a Poisson GLM, log link, of the mean time"
             " to germination (MTG) before BBCH 13, n = 96; the precipitation term's unit is not"
             " printed and its p is 0.53. Predictors, the BBCH 13 split and the MTG < 1.5 d"

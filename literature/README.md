@@ -752,6 +752,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [leolini2020](leolini2020.md) | none | phenology, budburst, model comparison | France, Luxembourg, Portugal | Six budbreak models for eight varieties: Unified best (RMSE 4-5 d), 8-10 d transferred; parameter tables printed, not transcribed |
 | [leolini2022](leolini2022.md) | none | whole-vine model, leaf area index, fPAR, NDVI, yield | Tuscany | UNIFI.GrapeML forced by fPAR from LAI (fPAR = 0.149 LAI + 0.0585, r² 0.94) or Sentinel-2 NDVI on two Sangiovese vineyards: LAI r² 0.96, yield r² 0.47; the model's equations are elsewhere |
 | [leoni2026](leoni2026.md) | downy mildew | oospore maturation | Switzerland | The engine's GLM; coefficients recorded; fitted and scored on the same data |
+| [leoni2026thesis](leoni2026thesis.md) | downy mildew | oospores, primary infection, spore trapping | Switzerland (Changins) | The thesis behind leoni2026: its GLM counts rainy days over 30 days with other coefficients than the paper (which the engine runs); 20 years of observed primary-infection days at Changins |
 | [lepik1931](lepik1931.md) | downy mildew | host resistance | Estonia | Historical anatomy |
 | [leroy2010](leroy2010.md) | downy mildew, powdery mildew | economics | Bordeaux | A bio-economic model of strategies |
 | [leroy2013](leroy2013.md) | downy mildew | damage, economics, spray protection | France, Bordeaux | Bioeconomic downy mildew model: no severity-loss curve; spray protection 90 % for 16 d; 70 EUR/spray, 600 EUR/t |

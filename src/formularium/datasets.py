@@ -1607,20 +1607,24 @@ DATASETS: dict[str, Dataset] = {
     ),
     "leoni2026.geneva_thesis": Dataset(
         (
-            "Leoni, S. 2026, PhD thesis, Université de Genève (Sc. 5993, 315 pp., directors "
-            "Kasparian and Dubuis): spore trapping, multiplex qPCR, real-time holographic "
-            "detection and modelling of downy mildew, powdery mildew and grey mould; oospore "
-            "maturation modelled 'from more than twenty years of climatic observations' "
-            "(abstract). What disease and weather records it holds, and on what terms, not "
-            "read: the PDF did not come through a script."
+            "Leoni's thesis records, all at Agroscope Changins (Nyon, Vaud) with the "
+            "Agrometeo station beside the plots (daily T at 2 m, RH, rain, leaf wetness, dew "
+            "point, radiation; wind from MeteoSwiss 390-500 m away): first oil spots in a "
+            "never-sprayed outdoor laboratory (25 May 2021, 11 May 2023, 16 May 2024); 2024 "
+            "incidence and severity per block, about 7 dates, in sprayed plots with one "
+            "untreated control (Tables 2.7-2.8); Chasselas phenology 2021-2024 (Table 1.1); "
+            "spore catches 2021-2024 in figures only; the oospore germination series of "
+            "leoni2026.changins (pp. 154-182). Printed tables only; no repository for the "
+            "disease or oospore data; the thesis 'protected by copyright'. Rainwater fungal "
+            "taxa 2018-2022 are on Zenodo 10.5281/zenodo.18745101 (not disease data)."
         ),
         (
-            "Archive ouverte UNIGE, unige:193385, doi 10.13097/archive-ouverte/unige:193385; "
-            "the landing page read 2026-10-27 (rendered: authors, pages, abstract, a "
-            "downloadable main file; no licence shown) for D58. Not fetched: for Chris to "
-            "download from the page"
+            "Leoni, S. 2026, PhD thesis, Université de Genève (Sc. 5993, doi "
+            "10.13097/archive-ouverte/unige:193385). Read 2026-10-27 for D58 "
+            "(literature/requests/theses-d58.md) from the PDF Chris supplied; 54 quotes "
+            "checked at their lines; Tables 3.1-3.3 read in the page images"
         ),
-        "snippet",
+        "read",
     ),
     "kleb2026.hohenheim_thesis": Dataset(
         (
@@ -1659,6 +1663,23 @@ DATASETS: dict[str, Dataset] = {
             "Kleb 2026, PhD thesis, Universität Hohenheim, chapter 6 (pp. 55-60), read "
             "2026-10-27 by OCR of the page images for D58; not in the held notes kleb2022 and "
             "kleb2026"
+        ),
+        "read",
+    ),
+    "leoni2026.changins_primary": Dataset(
+        (
+            "Julian day of the observed primary infection in the never-sprayed outdoor "
+            "laboratory at Agroscope Changins, and of laboratory-observed oospore maturity, "
+            "for 20 years 2004-2025 (no 2011 or 2022, without symptoms), with the differences "
+            "(Tables 3.2-3.3, pp. 182-183); weather from the Agrometeo station beside the "
+            "plot, daily. One small plot with oospore-rich litter laid each autumn since "
+            "2003, so the inoculum is concentrated; 'observed primary infection' is not "
+            "defined in print. Printed; no licence stated."
+        ),
+        (
+            "Leoni 2026, PhD thesis, Université de Genève, Tables 3.2-3.3, read 2026-10-27 "
+            "for D58 (the tables in the text layer, checked at their lines); also the data "
+            "behind the published paper's Fig. 8 (leoni2026)"
         ),
         "read",
     ),
