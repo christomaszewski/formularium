@@ -6041,11 +6041,12 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="PlantDisease74n02_120.PDF (Chris's drop), read 2026-10-08",
         calibrated_on=("tranmanhsung1990.bordeaux",),
         calibration_note="read 2026-10-08 (literature/tranmanhsung1990)",
-        structures=("oospore-glm",),
+        structures=("rain-index-oospore-date",),
         structures_note=(
-            "a regression of the maturity date on a rain index is 'a fitted statistical model"
-            " of weather' as the vocabulary reads; Agrarium recommends a tag of its own (its"
-            " PLAN 15), which would clear it of Leoni 2026's"
+            "a tag of its own (Agrarium D32, decided by Chris 2026-10-26): POM counts rain only,"
+            " between limits set from climatic normals, and maps January's index to one date by"
+            " a line; Leoni 2026's GLM models germination from daily weather. They share neither"
+            " inputs nor form, so POM no longer shares oospore-glm with Leoni's"
         ),
         parameters=(
             Published("a", -0.21, "d per index unit", "Results, T = A*IJ + B", "read"),

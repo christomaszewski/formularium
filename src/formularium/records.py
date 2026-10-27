@@ -71,6 +71,8 @@ STRUCTURES = {
     "daily-incubation-table": "incubation as daily fractions from a temperature table",
     "thermal-time-oospore-threshold": "oospores mature when a heat sum passes a threshold",
     "oospore-glm": "oospore maturity from a fitted statistical model of weather",
+    # Agrarium D32, decided 2026-10-26: POM's own, apart from Leoni 2026's GLM
+    "rain-index-oospore-date": "oospore maturity date from a rain index against climatic normals",
     "hydro-thermal-oospore-cohorts": "oospore cohorts ripening on hydro-thermal time",
     "wet-degree-hours-infection": "infection when wet degree-hours pass a threshold",
     "incubation-window": "incubation as a window of temperature sums",
