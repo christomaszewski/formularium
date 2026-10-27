@@ -2,7 +2,7 @@
 id: orlandini1993
 citation: Orlandini, S., Gozzini, B., Rosa, M., Egger, E., Storchi, P., Maracchi, G. & Miglietta, F. 1993. PLASMO: a simulation model for control of Plasmopara viticola on grapevine. Bulletin OEPP/EPPO Bulletin 23:619-626
 doi: 10.1111/j.1365-2338.1993.tb00559.x
-read: 2026-10-09, in full by the main session; equations read in the page images
+read: 2026-10-27, p. 620 again in the page image for the primary-infection trigger (Agrarium request orlandini1993-trigger), with Rosa et al. 1993 p. 208, by the main session; 2026-10-09, in full by the main session; equations read in the page images
 status: read
 diseases: [downy mildew]
 crops: [grapevine]
@@ -81,3 +81,26 @@ The publisher's PDF carries a download stamp on every page; it is not copied her
     Weltzien 1978, with no parameters, as Brischetto 2020 say.
   - Rosa 1995's incubation is m = 0.082 on √(RH - 30).
   - Franche's 2.616 is in neither.
+
+## Read again (2026-10-27): the primary-infection trigger
+
+Read in the page image of p. 620 for Agrarium's family F3 (D59), with Rosa et al. 1993, p. 208.
+- **Temperature:** "initiated by rainfall ≥8 mm within any 24-h period after the minimum
+  temperature is consistently higher than 10°C (Goidanich, 1959)" (p. 620): a season's start,
+  not the minimum during the rain. The run of days that makes "consistently", and whether the
+  minimum is daily, are not printed. Rosa et al. 1993 (p. 208) print the same clause.
+- **Rain:** a running 24-h window ("any 24-h period"); whether one spell can trigger twice is
+  not said.
+- **Shoots:** "Data input must be started when the grapevine shoots have reached 100 mm in
+  length" (Rosa et al. 1993, p. 208): observed, by whoever runs the model; Orlandini et al. say a
+  growth model "can usefully replace the empirical rule (Miglietta et al., 1992)".
+- **End:** none; primary infections "can occur at any time during the growing season".
+- **Source:** Goidanich 1959 (not held). Kin by form to the engine's rule_3_10 through the shared
+  tag rain-temperature-trigger; no equation borrowed.
+
+## Bearing (2026-10-27)
+
+- For Agrarium's F3: reading (b) of its request, a seasonal start. Once the minimum has stayed
+  above 10 °C, any 8 mm in a running 24 h triggers; the run length is Agrarium's to choose and
+  should be recorded as assumed.
+

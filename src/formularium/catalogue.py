@@ -5496,6 +5496,27 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("t_min_c", 10.0, "°C", "p. 620", "read"),
             Published("shoot_mm", 100.0, "mm", "p. 620", "read"),
         ),
+        flags=(
+            "The temperature clause is a season's start, not the rain's 24 h (read 2026-10-27 in"
+            " the page image of p. 620): primary infections 'can occur at any time during the"
+            " growing season, initiated by rainfall >= 8 mm within any 24-h period after the"
+            " minimum temperature is consistently higher than 10°C (Goidanich, 1959)'. How many"
+            " days make 'consistently' is not printed, nor whether the minimum is daily. Rosa et"
+            " al. 1993 (p. 208, page image) print the same words: 'started by a rainfall > 8 mm"
+            " after the minimum temperature is consistently higher than 10 °C'.",
+            "The rain clause is a running window ('within any 24-h period', p. 620); neither paper"
+            " says whether one rain spell can trigger more than once.",
+            "The shoot clause is observed, not computed: 'Data input must be started when the"
+            " grapevine shoots have reached 100 mm in length' (Rosa et al. 1993, p. 208); Orlandini"
+            " et al. add that 'A growth simulation model can usefully replace the empirical rule"
+            " (Miglietta et al., 1992)' (p. 620).",
+            "No end to the primary season is printed: infections 'can occur at any time during the"
+            " growing season' (p. 620).",
+            "Credited to Goidanich 1959 (not held), not to Baldacci's 3-10 rule; its numbers differ"
+            " (8 mm, a seasonal minimum above 10 °C). It already shares the structure tag"
+            " rain-temperature-trigger with rule_3_10 and kennelly2007.trigger, so it is kin by"
+            " form (kin_report, 2026-10-27); no borrowed equation is printed, so no `borrows`.",
+        ),
     ),
     "rosa1995.incubation": Formulation(
         "Incubation progress per hour: a parabola in temperature times a square root of humidity",
