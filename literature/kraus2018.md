@@ -10,7 +10,7 @@ regions: [Geilweilerhof]
 processes: [canopy architecture, canopy microclimate, humidity, leaf wetness, disease incidence, training system]
 records: []
 datasets: []
-files: [kraus2018.pdf (the 2026-10-25 other-sources drop, from Vitis on OpenAgrar)]
+files: [dr1025_kraus2018.pdf (the 2026-10-25 deep-research drop, the copy the library holds; byte-identical to kraus2018.pdf of the 2026-10-25 other-sources drop, from Vitis on OpenAgrar)]
 ---
 
 # Kraus et al. 2018: a semi-minimal pruned hedge is denser, damper and more mildewed than VSP
