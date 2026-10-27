@@ -1671,18 +1671,24 @@ DATASETS: dict[str, Dataset] = {
     ),
     "leoni2026.changins_primary": Dataset(
         (
-            "Julian day of the observed primary infection in the never-sprayed outdoor "
-            "laboratory at Agroscope Changins, and of laboratory-observed oospore maturity, "
-            "for 20 years 2004-2025 (no 2011 or 2022, without symptoms), with the differences "
-            "(Tables 3.2-3.3, pp. 182-183); weather from the Agrometeo station beside the "
-            "plot, daily. One small plot with oospore-rich litter laid each autumn since "
-            "2003, so the inoculum is concentrated; 'observed primary infection' is not "
-            "defined in print. Printed; no licence stated."
+            "Day of year of the observed primary infection in Agroscope Changins' never- "
+            "sprayed outdoor laboratory (46°23'47.7\"N 6°13'54.0\"E; three rows of five vines, "
+            "Pinot noir, Gamay and Chasselas, oospore-rich leaves laid each autumn, canes "
+            "bent to the ground), with laboratory-observed oospore maturity and the dates "
+            "VitiMeteo-Plasmopara gives with its 140 °C·day rule and with Leoni's GLM, 20 "
+            "years 2004-2025 (2011 and 2022 not printed: no symptoms, per the paper). "
+            "'Observed primary infection' is not defined in the oospore chapter; chapter 2 "
+            "says the leaves were assessed weekly from May to June to detect the first "
+            "symptoms. Weather: the Agrometeo Campbell station at 46°23'53.4\"N 6°13'50.4\"E, "
+            "about 190 m away (arithmetic), daily. Transcribed in "
+            "literature/leoni2026_changins_primary.csv."
         ),
         (
-            "Leoni 2026, PhD thesis, Université de Genève, Tables 3.2-3.3, read 2026-10-27 "
-            "for D58 (the tables in the text layer, checked at their lines); also the data "
-            "behind the published paper's Fig. 8 (leoni2026)"
+            "Leoni 2026, PhD thesis, Université de Genève, Tables 3.2-3.3 (pp. 182-183), the "
+            "site (pp. 61, 158) and station (p. 160), read 2026-10-27 in the page images for "
+            "Cooptera (literature/requests/leoni2026-changins.md). Table 3.2's columns 3 and "
+            "6 carry the sign opposite to their headers; three cells of column 6 (2004-2006) "
+            "disagree with Table 3.3 (marked in the CSV)"
         ),
         "read",
     ),

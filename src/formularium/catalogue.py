@@ -4905,6 +4905,10 @@ FORMULATIONS: dict[str, Formulation] = {
             " inferred, not stated"
         ),
         flags=(
+            "Leoni's thesis (2026, p. 171) applies the 140 °C·day rule at Changins and sets its"
+            " dates beside 20 years of observed primary infections (literature/"
+            "leoni2026_changins_primary.csv); it cites Siegfried et al. 2004 for the rule and does"
+            " not say where the threshold was set.",
             "Hoppmann & Wittich 1997 (Z. PflKrankh. PflSchutz 104:533-544, p. 536; read"
             " 2026-10-09) print the same form for the Geisenheim (DWD) model with 170"
             " degree-days above a daily mean of 8 °C 'during spring', not 140. Gessler et al."
@@ -4948,6 +4952,12 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("mature_mtg_d", 1.5, "d", "maturity when MTG < 1.5 d", "read"),
         ),
         flags=(
+            "Fitted on oospore germination observations at Changins: the full GLM on 175 from"
+            " 2004-2024 (the historical series, taken mostly after rain, and 2022-2024 weekly), the"
+            " recent analysis on 2022-2024 (Leoni's thesis, pp. 160-162). Its maturity dates were"
+            " then set beside the observed primary infections of 2004-2025 (thesis Tables 3.2-3.3;"
+            " literature/leoni2026_changins_primary.csv), so those years overlap its fitting data:"
+            " only 2025 is outside it.",
             "Two fits of one dataset (read 2026-10-27 in the page images). The paper's Table 1"
             " (p. 11) counts rainy days 'since 1 January' (2.36, +0.00076, -0.034, -0.0046;"
             " residual deviance 40.44, AIC 307.68), but its methods define the variable as days"
