@@ -10,7 +10,7 @@ regions: [Spain, Europe]
 processes: [airborne inoculum, spore trapping, molecular detection, pcr, lamp, machine learning, decision support, spray timing, season severity]
 records: []
 datasets: []
-files: [itea_balduque_2026_modelos_vid.pdf, 2026-balduque-gil-10-12706-itea-2026-001.pdf]
+files: [itea_balduque_2026_modelos_vid.pdf (also dropped as 2026-balduque-gil-10-12706-itea-2026-001.pdf, the same file by checksum)]
 ---
 
 # Balduque-Gil et al. 2026: review of new methods for grapevine models

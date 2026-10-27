@@ -81,3 +81,7 @@ and its printed accuracy.
   calls a third of the dry nights sporulating, which is the error a truth must not share.
   The per-lesion production curve and the 6.7 d infectious period are independent
   quantities a truth could draw from, since no tool runs them.
+
+## Bearing (2026-10-22)
+
+- For Agrarium's `dm.sporulating_days` (14 d, assumed): one uninterrupted infectious period lasts 6.7 ± 0.6 d (range 2-10 d, 227 lesions; l. 304-306). A washed-off lesion's second and third periods last as long as the first (l. 153, 297), and within a period about 76 % of the sporangia come by day 3 (arithmetic on the l. 286 curve). Release has "inconsistent diurnal patterns" (l. 553), so no study read gives a sun height for `dm.release_sun_elevation_deg`. Re-read 2026-10-22 by a strand agent; quotes checked by script.

@@ -2,7 +2,7 @@
 id: caffi2009
 citation: Caffi, T., Rossi, V., Bugiani, R., Spanna, F., Flamini, L., Cossu, A. & Nigro, C. 2009. A model predicting primary infections of Plasmopara viticola in different grapevine-growing areas of Italy. Journal of Plant Pathology 91(3):535-548
 doi:
-read: 2026-10-08, pages 1-14 in full, from an OCR (the byline confirmed in Carisse et al. 2021's references), by a reading agent (claude-sonnet-5-5); 30 quotes checked by scripts/verify_quotes.py, dependence by the main session
+read: 2026-10-08, pages 1-14 in full, from an OCR (the byline confirmed in Carisse et al. 2021's references), by a reading agent (claude-sonnet-5-5); 30 quotes checked by scripts/verify_quotes.py, dependence by the main session; 2026-10-25, re-read for primary inoculum and dispersal by a reading agent (claude-sonnet-5-5), every quote found at its line by scripts/verify_quotes.py
 status: read
 diseases: [downy mildew]
 crops: [grapevine]
@@ -38,3 +38,13 @@ From the Università Cattolica, Piacenza, with regional plant protection and agr
 ## Bearing (2026-10-08)
 
 - **Its observed onsets are data** a truth could be matched to: 100 vineyards in six regions, 1995-2007, first onsets 7 May to 11 July (l. 407-412), weekly windows (l. 377). The scores are the engine model's, and say how well the engine's primary infection did in Italy (sensitivity 0.99, specificity 0.87 combined, l. 1002).
+
+## Bearing (2026-10-25)
+
+Re-read in full from an OCR of the scan (the library's text copy is a stub). First onset in
+100 untreated Italian vineyard-seasons (1995-2007): 7 May to 11 July, mean 26 May; nine had
+no disease all season, six of them in 2003. It defines Rossi et al. 2008's primary season as
+"the time from the first to the last oospore able to germinate in the current year", cohorts
+started by each rain of 0.2 mm/h or more on wet litter. For Cooptera's open decision 17: an
+end to the primary season is a model's statement; the field data here give years with no
+disease, not a date.

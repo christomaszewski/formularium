@@ -36,3 +36,7 @@ From the Università Cattolica, Piacenza.
 ## Bearing (2026-10-08)
 
 - Its splash data (4.4 drops/cm² at 40 cm, 0.03 at 80 cm, 0.003 at 140 cm; l. 24) are clear and fit Agrarium's splash dispersal. The rule that any rain splashes viable inoculum rests partly on experiment 3, whose windows a Rossi-group incubation dated: Agrarium's candidates record it as calibrated with `rossi2008.primary` (inferred).
+
+## Bearing (2026-10-22)
+
+- For Agrarium's `host.lower_canopy_fraction` and `dm.splash_*`: splash from soil falls about 150-fold from 40 to 80 cm and 10-fold more to 140 cm (l. 24, 161-170). 69 % of drops at 40 cm came from within-row soil (l. 166). Lesion counts on potted vines were not related to rain amount: 10 lesions after 0.2 mm in 1 h, 2 after 23.6 mm/h (l. 244, 261). No paper read counts the height of first lesions in a vineyard.

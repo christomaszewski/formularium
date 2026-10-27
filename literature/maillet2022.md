@@ -10,7 +10,7 @@ regions: [Loire]
 processes: [detection, remote sensing]
 records: []
 datasets: []
-files: [p51.pdf, 2023-maillet-10-1109-access-2023-3237082.pdf]
+files: [p51.pdf (also dropped as 2023-maillet-10-1109-access-2023-3237082.pdf, the same file by checksum)]
 ---
 
 # Maillet et al. 2022: Sentinel-2 and weather to detect downy mildew at Amboise

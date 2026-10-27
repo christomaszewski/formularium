@@ -10,7 +10,7 @@ regions: [France, Centre-Val de Loire]
 processes: [symptom detection, image registration, segmentation, disease mapping, leaf wetness]
 records: []
 datasets: []
-files: [q219.pdf, 2020-kerkech-10-1016-j-compag-2020-105446.pdf, kerkech_2020.pdf (the 2026-10-20 drop)]
+files: [q219.pdf (the arXiv preprint; the 2026-10-20 drop's 2020-kerkech-10-1016-j-compag-2020-105446.pdf and kerkech_2020.pdf are the same file, by checksum)]
 ---
 
 # Kerkech et al. 2019: deep-learning mapping of vine disease from UAV images

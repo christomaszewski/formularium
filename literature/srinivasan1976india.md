@@ -2,7 +2,7 @@
 id: srinivasan1976india
 citation: Srinivasan, N. & Jeyarajan, R. 1976. Grape downy mildew in India. I. Foliar, floral and fruit infections. Vitis 15:113-120
 doi: 
-read: 2026-10-10, a light read (methods, results and conclusions), by a reading agent (claude-haiku-5-5); 21 of 21 quotes found at their lines by scripts/verify_quotes.py
+read: 2026-10-10, a light read (methods, results and conclusions), by a reading agent (claude-haiku-5-5); 21 of 21 quotes found at their lines by scripts/verify_quotes.py; 2026-10-25, re-read for when organs become susceptible by a reading agent (claude-sonnet-5-5), every quote found at its line by scripts/verify_quotes.py, the early-shoot passage checked by the main session
 status: read
 diseases: [downy mildew]
 crops: [grapevine]
@@ -32,3 +32,13 @@ A light read (the deep-research B list).
 ## Bearing (2026-10-10)
 
 - Observed incubation, leaf-age and berry-stage data for a warm-climate cultivar; no model is computed here, and the Table 1 denominator and the 53.1 per cent statement need correcting before any use.
+
+## Bearing (2026-10-25)
+
+Re-read for leaf age, the one source found with leaf age in days (colour classes tracked every
+4 days on 25 shoots of Anab-e-Shahi, Tamil Nadu). All five inoculated leaves of the youngest
+classes (red, at least 14 d; green-with-orange, 18 d) were infected, with incubation 18 and 14
+days against 10 on older leaves; the stomatal pore was wider than the zoospore germ tube at
+every age. In the field the two youngest classes showed no symptoms (confounded with their longer incubation); Table 1 prints 49.9-63.5 % diseased for the classes of 24-65 days, a column whose denominator the reading agent could not reconcile. Flowers 82.9 %,
+2 mm berries 79.6 %, 6.5 mm berries 49.8 % and 12.5 mm berries 0 % infected after spray
+inoculation. A warm climate and a table grape.

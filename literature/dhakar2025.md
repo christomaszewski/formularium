@@ -10,7 +10,7 @@ regions: [Washington]
 processes: [leaf wetness duration, dew, rain interception, evaporation, wetness sensor]
 records: [dhakar2025.leaf_wetness]
 datasets: [dhakar2025.awn]
-files: [1-s2.0-S016819232500019X-main.pdf (the 2026-10-19 drop, supplied by Chris 2026-10-19)]
+files: [1-s2.0-S016819232500019X-main.pdf (the 2026-10-19 drop, supplied by Chris 2026-10-19), gd1021_dhakar2025_mmc1.docx (the supplement, the 2026-10-22 drop)]
 ---
 
 # Dhakar et al. 2025: a simplified mechanistic leaf wetness model for a sensor plate
@@ -96,3 +96,36 @@ checked at ten.
   text's 2.2 °C (Sentelhas et al. 2008) are both printed for M2, and the paper does not say which
   its results used. Both are now separate flags on the record.
 - **Can it run:** no, not from the article (the record's flag says what is missing).
+
+## Appendix A, the supplement (read 2026-10-22)
+
+The online supplement (a Word file, `mmc1.docx`) was fetched on 2026-10-22. A reading agent
+(claude-sonnet-5-5) read it, rebuilding each equation from the Word equation objects because
+the text layer flattens fractions. All 26 quotes were found at their lines by
+scripts/verify_quotes.py, and the main session re-read the γ and A13 lines.
+- **What it holds:** the detailed dewfall chain, after Albrecht et al. 2020.
+  - A1: E_dew = h_T · A · DPD.
+  - A2: h_T = h_LW + h_H + h_ET.
+  - A3: h_LW = 4 ε σ T³; ε has no value.
+  - A4-A6: r_B = d / (Nu κ), Nu = 0.72 Re^0.6, Re = WS · d / ν. Here d is the sensor's
+    dimension, not printed.
+  - A7: h_H = ρ_a C_p / r_B.
+  - A8: r_S from stomatal number, pore diameter and length.
+  - A9: h_ET = ρ_a C_p Δ / (γ (r_B + r_S)).
+  - A10-A12: Tetens SVP and its slope.
+  - A13: Df = (E_dew / A) · 60 · 15.
+  - Constants: κ 2.15e-5 and ν 15.1e-6 m² s⁻¹; ρ_a 1.293 kg m⁻³; C_p 1005 J kg⁻¹ K⁻¹;
+    D_wv 2.12e-5 m² s⁻¹ (l. 11-16).
+- **The supplement repeats the article's slips:**
+  - γ is "2.4567 × 10-1 Pa K-1" (l. 19), about 270 times below the psychrometric constant,
+    and in Pa K⁻¹ where A12's Δ is in kPa per degree;
+  - A13 calls Df "measured in millimeters" (l. 23-24) but divides by no latent heat or water
+    density, so it is J m⁻² per 15 min;
+  - no aerodynamic resistance appears, and none of Cd, Cf or DPDc is defined there.
+- **Bearing (2026-10-22):**
+  - The supplement settles the dewfall equations' form.
+  - It does not make M1 runnable: ε, d and a working γ and latent-heat step must still be
+    chosen. The record's "Can it run" flag stands.
+  - A runnable version would take γ ≈ 66 Pa K⁻¹ and divide E_dew by λ ≈ 2.45 MJ kg⁻¹. That
+    would be a correction of the source, so it is the tool's choice and is not recorded here.
+

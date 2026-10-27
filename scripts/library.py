@@ -348,6 +348,8 @@ def main() -> int:
 
     if args.command == "build":
         copies, problems = plan(notes, args.drops)
+        if args.add:  # prints its own plan and only the problems that remain
+            return add(copies, problems, notes, args.library, args.go)
         filed = [c for c in copies if c.note]
         print(
             f"{len(notes)} notes; {sum(1 for c in filed if not c.dest.endswith('.txt'))} "
@@ -358,8 +360,6 @@ def main() -> int:
         )
         for problem in problems:
             print("problem:", problem)
-        if args.add:
-            return add(copies, problems, notes, args.library, args.go)
         if not args.go or problems:
             return 1 if problems else 0
         if read_manifest(args.library):

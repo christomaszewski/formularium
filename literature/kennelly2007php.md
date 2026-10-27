@@ -2,7 +2,7 @@
 id: kennelly2007php
 citation: Kennelly, M. M., Gadoury, D. M., Wilcox, W. F., Magarey, P. A. & Seem, R. C. 2007. Addressing the gaps in our knowledge of grapevine downy mildew for improved forecasting and management. Plant Health Progress, 26 July 2007 (5th I. E. Melhus Graduate Student Symposium)
 doi: 10.1094/PHP-2007-0726-03-RV
-read: 2026-10-08, in full by a reading agent; the trigger record, sporangia survival and fruit resistance checked in the extracted text
+read: 2026-10-08, in full by a reading agent; the trigger record, sporangia survival and fruit resistance checked in the extracted text; 2026-10-25, re-read for when organs become susceptible by a reading agent (claude-sonnet-5-5), every quote found at its line by scripts/verify_quotes.py, the early-shoot passage checked by the main session
 status: read
 diseases: [downy mildew]
 crops: [grapevine]
@@ -59,3 +59,13 @@ A symposium summary of Kennelly's Phytopathology papers (95:1445-1452, 2005;
   1/24 cap on the hourly rate leaves at least 71 % whatever its coefficients. It fails this
   observation (Agrarium `scripts/diagnostics/sporangia_survival.py`; the flag on
   `brischetto2020.survival`).
+
+## Bearing (2026-10-25)
+
+Re-read for Cooptera's open decision 19 (its engine counts vines susceptible from four unfolded
+leaves). Shoots were inoculated "at various stages as early as bud break" and found
+"susceptible almost as soon as they begin to grow". The authors read the usual first infection
+at E&L stage 12 as "the usually coincident timing of oospore maturity with this host
+phenological stage": "host susceptibility, per se, does not limit infection before E&L stage
+12", and in 2003 infection came 7 days before it. So the trigger's leaf-stage gate stands for
+oospore maturity, not for the host.

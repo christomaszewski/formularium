@@ -209,7 +209,7 @@ Every paper in Table 1 was triaged (claude-haiku-5-5, re-classed by the main ses
 Table 1 no longer apply. Note ids differ from the drop keys where an id was taken or a key
 was wrong: vanrooi2002sajev is `coertze2002` (its printed authors), phinopoulos2014 is
 `phinopoulos2015`, buesa2018thesis `buesa2018`, dasilva2024 `dasilva2025`, jin2026
-`jin2026b`, ramos2022 `ramos2022b`, yang2021 `yang2021b`, krause2008jmlr `krause2008d`,
+`jin2026b`, ramos2022 `ramos2022b`, yang2021 `yang2021b`, krause2008jmlr `krause2008d`, yang2023 `yang2023c` (yang2023 and yang2023b are other Yang 2023 papers),
 atauri2017 `garciadecortazar2017`, vanrooi2003sajev `vanrooi2003`, brink2005thesis
 `brink2005`. Records added: schultz1993.plastochron, lopes2005.shoot_leaf_area,
 wermelinger1990.leaf_growth, kovaleski2018.deacclimation, cheraiet2021.deposit_deciles,

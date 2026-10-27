@@ -2,7 +2,7 @@
 id: gobbin2005
 citation: Gobbin, D., Jermini, M., Loskill, B., Pertot, I., Raynal, M. & Gessler, C. 2005. Importance of secondary inoculum of Plasmopara viticola to epidemics of grapevine downy mildew. Plant Pathology 54(4):522-534
 doi: 10.1111/j.1365-3059.2005.01208.x
-read: 2026-10-09, by the main session, the abstract, sampling, results on genotype frequencies and dispersal patterns, and discussion of colonization rates (the British Society for Plant Pathology's free archive copy); the case studies skimmed
+read: 2026-10-09, by the main session, the abstract, sampling, results on genotype frequencies and dispersal patterns, and discussion of colonization rates (the British Society for Plant Pathology's free archive copy); the case studies skimmed; 2026-10-25, re-read for primary inoculum and dispersal by a reading agent (claude-sonnet-5-5), every quote found at its line by scripts/verify_quotes.py
 status: read
 diseases: [downy mildew]
 crops: [grapevine]
@@ -10,7 +10,7 @@ regions: [Germany, Switzerland, Italy, France]
 processes: [epidemic structure, dispersal, secondary infection]
 records: []
 datasets: [gobbin2006.europe]
-files: []
+files: [gd1021_gobbin2005.pdf (the 2026-10-22 drop)]
 ---
 
 # Gobbin et al. 2005: how much of an epidemic is secondary spread
@@ -69,3 +69,19 @@ The primary source for the epidemic-structure numbers Agrarium's TRUTH-METHOD qu
   - Spread under 20 m per cycle, and plot colonization of 1-2 m² a day.
 - **Comparing them needs lesion-level origin in the truth** (each primary infection its own
   genotype). The truth keeps only each vine's first focus.
+
+## Bearing (2026-10-25)
+
+Re-read for how much primary infection there is and how far it spreads (Agrarium's
+deep-research pass of 2026-10-25).
+- **Primary infections per area, from Table 1's genotype counts, plot sizes and vines**
+  (arithmetic, not printed): Nac 1.25 per m² (370 genotypes, 132 vines, 2.8 a vine), Erb 2.4
+  (5.3 a vine), Lor 2.5 (6.3), Vic 0.63 (0.84), Car 0.24 (1.5), Bom 0.07 (0.10). Genotypes are
+  a lower bound on primary lesions: one oospore can make several.
+- **No end at bloom:** new genotypes were still over 40 % of lesions at the last samples, up
+  to late August, in 7 of 18 plots.
+- **Distances per cycle,** from the assumed source vine: means 1.37 m (Bommes), 6.41 m
+  (Tesero), 4.97 m and 0.44 m (Geisenheim, two genotypes); clonal spread within 1 m of the
+  primary lesion in six plots; plot colonisation about 1-2 m² a day.
+- For Agrarium's `dm.primary_dose_scale` check and `dm.splash_scale_m`, and Cooptera's open
+  decision 17.

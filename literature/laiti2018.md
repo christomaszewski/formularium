@@ -81,3 +81,30 @@ For the sweep's radiation inputs and for valley sites:
   original coefficients and 0.205 with the local ones; h in radians gives 0.217 and 0.144.
 - **Can it run:** not until the units are read at Ridley 2010 or Lauret 2013, or asked of the
   first author; the record's flag says so.
+
+## The BRL's sources read (2026-10-22)
+
+- **Ridley, Boland & Lauret 2010** (`ridley2010`, the in-press proof) states only the solar
+  altitude's unit, degrees (l. 243). It does not state AST's (l. 246).
+- **Lauret, Boland & Ridley 2010** (`lauret2010`, CS-BIGS 3:108-117, the BRL's earlier fit)
+  does not state AST's unit in its text either. But its Fig. 1 (p. 114, read by the main
+  session in the page image at 300 dpi) plots the model for "AST=8.5", "AST=12.5" and
+  "AST=16.5", beside solar elevations α = 20, 40, 60.
+  - **AST is in hours of the day,** centred near noon. The solar elevation is in degrees.
+  - This is the authors' own figure, so the unit is inferred from their legend, not printed
+    in words.
+- **The coefficients are that fit's.** Laiti's "original" set (a0 -5.32, a1 7.28, a2 -0.03, a3
+  -0.0047, a4 1.72, a5 1.08; Table 5) is printed as Lauret 2010's Eq. 10 on the same page as the
+  figure: -5.32 + 7.28 kt - 0.03 AST - 0.0047 α + 1.72 KT + 1.08 φ, read in the page image.
+  Ridley et al. 2010's least-squares set differs: -5.38, 6.63, +0.006, -0.007, 1.75, 1.31, with
+  the signs read from its page image by the reader.
+  - The record credits Lauret 2013, which was not read; it may reprint the 2010 fit.
+  - Either way, the coefficients Laiti calls original are the ones whose authors plot AST in
+    hours and α in degrees.
+- **What it settles here:** Laiti's t in hours and h in degrees is the reading the BRL's
+  authors use. Of the 2026-10-19 calculation, h = 60° with the original coefficients gives
+  kd 0.267 and with the local ones 0.205.
+  - Lauret 2013, with the brl.* values Laiti cites, is still not obtained.
+  - Before clearing the record's flag, confirm that Laiti fitted with the same convention.
+    Pashiardis 2021 and Malu 2023 also take AST in hours.
+
