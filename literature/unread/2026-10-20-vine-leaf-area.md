@@ -19,3 +19,7 @@ bernizzoni2011, escalona2012, perezalvarez2021, serrano2012.
 | 2012 | González-Flor, C. | Predicting berry quality attributes in cv. Xarel·lo rain-fed vineyards using narrow-band reflectance-based indices (Am. J. Enol. Vitic., 10.5344/ajev.2012.11124) | rainfed Xarel·lo canopy | closed |
 | 2015 | de la Fuente, M. | Canopy management and water use efficiency in vineyards under Mediterranean semiarid conditions (BIO Web Conf. 5:01005, 10.1051/bioconf/20150501005) | Madrid LAI by canopy management | site refused the browser |
 | 2019 | Baeza, P. | Effects of vine water status on yield components, vegetative response and must and wine composition (IntechOpen, 10.5772/intechopen.87042) | review of vegetative response to water status | the page fetched was another chapter (phosphate glasses) |
+
+## Tried again (2026-10-26, other sources)
+
+All nine rows were asked of Europe PMC, OpenAIRE, CORE and HAL (`2026-10-26-other-sources.md`): no open copy anywhere except Pou 2022, which CORE holds (its Table 2). The rest stay closed.

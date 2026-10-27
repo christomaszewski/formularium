@@ -195,3 +195,9 @@ Sought while writing the equations modules for `magarey2006.sweb`, `kuwagata2024
 - Kuwagata et al. 1990 (J. Meteorol. Soc. Jpn 68:625) and 2011 (J. Agric. Meteorol. 67:297),
   cited by Kuwagata 2024 (l. 562-563) for an empirical downward longwave formula. J-STAGE, open;
   not fetched in this pass.
+
+## Obtained since (2026-10-26, other sources)
+
+Fetched through sources the search had not used (`2026-10-26-other-sources.md`, Table 1), not yet read; their rows above no longer apply: binks2021 (Binks 2021), jin2026 (Jin 2026), kalt2026 (Kalt 2026), kuwagata1990 (Kuwagata 1990), kuwagata2011 (Kuwagata 2011), laurenson2002 (Laurenson 2002), mondet2023 (Mondet 2023), pieri2003 (Pieri 2003), vialetchabrand2019 (Vialet‐Chabrand 2019).
+Rows that already had notes when this pass ran: Annamaria Vercesi 1999 (vercesi1999); Andrew S. Taylor 2018 (taylor2018); Michael Thomas Smith 2023 (smith2022).
+Open copies this VM could not download are in that file's Table 2.

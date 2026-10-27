@@ -61,3 +61,9 @@ and read or noted. Nothing below was read; titles come from OpenAlex, unchecked.
 | 2025 | Hamed Mokhtarzadeh | Design, development and evaluation of a low-cost smart solar-powered weather station | 10.1016/j.rineng.2025.104848 | closed |
 | 2006 | Nithya Ramanathan | Rapid deployment with confidence: calibration and fault detection in environmental sensor networks | — | not fetched |
 | 2026 | Abel Quevedo-Nolasco | One-year field evaluation of a low-cost Arduino-based tipping-bucket rain gauge | 10.38032/jea.2026.02.004 | **obtained, not read** (drop `text/quevedonolasco2026/`) |
+
+## Obtained since (2026-10-26, other sources)
+
+Fetched through sources the search had not used (`2026-10-26-other-sources.md`, Table 1), not yet read; their rows above no longer apply: binks2021 (Binks 2021), krause2008jmlr (Krause 2008), mainini2017 (Mainini 2017), ramanathan2006 (Ramanathan 2006).
+Rows that already had notes when this pass ran: Andreas Krause 2008 (krause2008c).
+Open copies this VM could not download are in that file's Table 2.

@@ -205,3 +205,9 @@ These are the papers the 2026-10-20 OpenAlex search (seven strands: fungicide pr
 | 2020 | Victorine Castex | Assembling and testing a generic phenological model to predict Lobesia botrana voltinism for impact studies | 10.1016/j.ecolmodel.2020.108946 | A | oa |
 | 2021 | Samuel Reis | European grapevine moth in the Douro region: voltinism and climatic scenarios | 10.20870/oeno-one.2021.55.2.4595 | A | wrong file fetched |
 | 2021 | Sara Pasquali | Mortality estimate driven by population abundance field data in a stage-structured demographic model. The case of Lobesia botrana | 10.1016/j.ecolmodel.2021.109842 | A | oa |
+
+## Obtained since (2026-10-26, other sources)
+
+Fetched through sources the search had not used (`2026-10-26-other-sources.md`, Table 1), not yet read; their rows above no longer apply: alimad2016 (Alimad 2016), brink2005thesis (Brink 2005), castex2020 (Castex 2020), cheraiet2021 (Cheraïet 2021), djuikem2024 (Djuikem 2024), dunne2014 (Dunne 2014), fernandezgonzalez2012 (Fernández-González 2012), gegoutpetit2019 (Gégout‐Petit 2019), gil2014 (Moya 2014), herzog2022 (Herzog 2022), kraus2018 (Kraus 2018), liu2017 (Liu 2017), mairs2018 (Mairs 2018), poitou2021 (Poitou 2021), rossouw2016 (Rossouw 2016), shiraishi2007 (M. 2007), steinkellner1998 (Steinkellner 1998), vanrooi2002 (Rooi 2002), vanrooi2002sajev (Rooi 2002), vanrooi2003sajev (Rooi 2003), yang2023 (Yang 2023).
+Rows that already had notes when this pass ran: Ömer Erincik 2002 (erincik2002); Mizuho Nita 2005 (nita2005); Enrique J. A. Oriolani 2015 (oriolani2015).
+Open copies this VM could not download are in that file's Table 2.
