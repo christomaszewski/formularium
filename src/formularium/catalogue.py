@@ -5985,11 +5985,19 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
     ),
     "agrarium.dose_per_event": Formulation(
-        "primary dose: a set number of lesions per trigger, scaled by each vine's inoculum,"
-        " susceptibility and low leaf area",
-        "assumed (D59, Chris 2026-10-26: 'use a made-up dose'; not Fedele 2025's power law)",
+        "primary dose: lesions in proportion to the rain of each triggered infection, scaled by"
+        " each vine's inoculum, susceptibility and low leaf area",
+        (
+            "assumed (D59, Chris 2026-10-26: 'use a made-up dose'; 2026-10-27: 'rain-scaled');"
+            " not Fedele 2025's power law"
+        ),
         made_by="agrarium",
-        structures=("lesions-per-trigger",),
+        structures=("lesions-per-rain",),
+        structures_note=(
+            "the rain counted from the trigger's 24 h when it fires, then each later half-hour's"
+            " while those 24 h stay at 8 mm or more. Until 2026-10-27 it was a set number per"
+            " trigger, which left Agrarium's F3 blind to how much it rained"
+        ),
     ),
     "agrarium.sporulation_night": Formulation(
         "sporulation: a vine sporulates once a night after enough dark hours with wet leaves;"
