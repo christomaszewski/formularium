@@ -10,7 +10,7 @@ regions: []
 processes: [crop model ensembles, model relatedness, model dependence, model-as-truth, ensemble spread, multi-model ensemble]
 records: []
 datasets: []
-files: [wallach_2016.pdf (the 2026-10-18 drop), syn1027_wallach2016.pdf (the 2026-10-27 drop)]
+files: [wallach_2016.pdf (the 2026-10-18 drop; the 2026-10-27 drop fetched the same file)]
 ---
 
 # Wallach et al. 2016: relatedness and truth-versus-ensemble questions for crop model ensembles
