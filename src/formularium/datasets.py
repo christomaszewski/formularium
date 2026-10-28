@@ -243,6 +243,21 @@ DATASETS: dict[str, Dataset] = {
         " section 1, gave 2022-2024)",
         "read",
     ),
+    "leoni2026.changins_stages": Dataset(
+        "Chasselas stages at Changins (Agroscope observations), 2021-2024: BBCH 09, 11, 53, 61,"
+        " 71 and 81, with a 10-year mean; literature/pipeline_stage_dates.csv. Agroscope Pully"
+        " holds the Changins series from 1958 (used, not printed, by an Int. J. Biometeorol."
+        " 2018 study, PMC5966476); no open release found",
+        "Leoni's thesis (Geneva 2026), Table 1.1, p. 24 (read 2026-10-28)",
+        "read",
+    ),
+    "proconseil2021.vaud_phenology": Dataset(
+        "Chasselas budburst (BBCH 09), full flowering (BBCH 65) and harvest start, canton of"
+        " Vaud, site not named, 2011-2021; literature/pipeline_stage_dates.csv. Licence not"
+        " stated",
+        "Proconseil 2021, Rapport phytosanitaire viticole, section 1 (read 2026-10-28)",
+        "read",
+    ),
     "madden1995": Dataset(
         "Madden, Hughes & Ellis 1995, Phytopathology 85:269-275: incidence of grape downy"
         " mildew in Ohio, 18 plots at two times in three years (108 plot-dates), 15 shoots of"
@@ -1480,7 +1495,9 @@ DATASETS: dict[str, Dataset] = {
             "89); AUDPC; Italy, Emilia-Romagna, Castell'Arquato vineyard (44.857 N, 9.856 E); "
             "2020, 2021, 2022; plots: untreated control plus 6 resistance inducers and a "
             "copper+sulfur reference; 48 untreated records (disease x portion x stage x year) "
-            "and 32 treatment means; weather: Daily weather per season (Apr-Sep, 184 days a "
+            "and 32 treatment means; cultivar Barbera (literature/taibi2023inducers); stage dates "
+            "only as bars in Fig. 1, not printed (2026-10-28); weather: Daily weather per "
+            "season (Apr-Sep, 184 days a "
             "year): leaf wetness (hours), rain (mm), temperature, relative humidity; station "
             "location presumably the vineyard (README does not say); access: Zenodo "
             "10.5281/zenodo.15077508, six small CSVs "

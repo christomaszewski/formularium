@@ -76,3 +76,12 @@ of pp. 182-183, are in `leoni2026_changins_primary.csv`, one row per year 2004-2
   below 1.5) is not stated in the passages read. Through the threshold, which was chosen to
   fit these dates (p. 172), 2025 also bears on the model.
 
+## Stage dates (2026-10-28, for Agrarium D62)
+
+- Table 1.1 (p. 24) gives Chasselas stages at Changins, "Agroscope observations", for 2021-2024
+  with a 10-year mean: BBCH 09, 11, 53, 61, 71 and 81. For example, budburst on 20, 19 and 18
+  April and 8 April; flowering (BBCH 61) on 18 June, 30 May, 10 June and 12 June. Transcribed
+  in `pipeline_stage_dates.csv`.
+- No stage dates for 2004-2020 or 2025, and none for BBCH 12-15.
+- Pinot noir 2023 (powdery mildew chapter, p. 129): BBCH 59 on 8 June, 63 on 12 June and 71 on
+  19 June.

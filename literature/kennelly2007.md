@@ -100,3 +100,9 @@ vineyard observations and a "probable incubation period", no model named. Three 
 incubations are one day more than their dates give (Wayne and Dundee 2001, Geneva 2002): left as
 printed and marked.
 
+## Stage dates (2026-10-28, for Agrarium D62)
+
+- The cultivar is Chancellor at every site and year (Methods, "Evaluation of predictive model").
+- The paper prints no budburst or bloom dates, only the stage at first symptoms and at the
+  infection it assigns (`kennelly2007_table1.csv`). No year-by-year series for Geneva was found
+  in Cornell sources; the records are the authors'.
