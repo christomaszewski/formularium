@@ -25,9 +25,23 @@ branch; the request allowed parts.
   2500 m site); night cloud interpolation (`gubler2012`, abstract only).
 - **Not covered:** in-canopy temperature, humidity and wind from the station's, and rain splash,
   beyond what is held (`kleb2022`, `kleb2026thesis`, the canopy-flow and canopy-water notes of
-  `research_notes/deep-research-10-25` in Agrarium). Seven papers were not obtained (Park 2019,
-  Gama 2022, Gillespie 2021, Wang 2019, Solis 2021, Lee 2014, Savage 2012); a permission check
-  refused one archive fetch, which was not worked round.
+  `research_notes/deep-research-10-25` in Agrarium). Not obtained: Gama et al. 2022
+  (10.1007/s00704-022-04036-1) and Pieri 2010's two papers on a row crop's radiative balance
+  (10.1016/j.ecolmodel.2009.11.019 and 10.1016/j.ecolmodel.2009.07.028); paywalled, no open copy.
+- **What an RH threshold costs, read in a second pass** (six papers, none on vines in the open):
+  - RH > 90 % against sensors scored 76.7 % accuracy per 15-min record at UK stations, and the
+    best classifier 80.0 % (`gillespie2021`).
+  - At nine Korean farms, one of them grapes, the existing models (CART, RH > 90 %,
+    Penman-Monteith) erred by more than 3.0 h a day, and a random forest by about 2.3 h
+    (`park2019`).
+  - Over short grass, an RH > 87 % rule gave 45 % more wetness than sensors at 0.1 m in a
+    winter month (`savage2012`).
+  - In greenhouses a re-fitted 80-85 % threshold beat 90 % (`wang2019`).
+  - Under a ginseng shade net a station-driven model erred by 3.3-3.9 h a day (`lee2016`).
+  - In coffee, 15-min inputs gave daily errors of about an hour (`solis2021`).
+
+  None is kin to the engine's models beyond the humidity stand-in's form. No paper gives a
+  threshold measured in a vine canopy.
 
 ## Part 2: measurements to weigh the models by
 
