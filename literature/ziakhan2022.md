@@ -47,3 +47,7 @@ in 2020, against disease levels.
   disease (R² 0.76) but mean canopy temperature did not; the '3.2 °C long before visible
   symptoms' of the abstract is a canopy value on an undated last day, and imaging stopped
   once symptoms were clear, so no presymptomatic lead time is shown.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add: Hohenheim 2020 plot 48 42 37.1 N 9 12 45.6 E, Pinot Meunier, first symptoms end of July (Fig. 5B), no fungicide; station 75 m away. 4 of 4 quotes found.

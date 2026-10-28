@@ -85,3 +85,7 @@ deep-research pass of 2026-10-25).
   primary lesion in six plots; plot colonisation about 1-2 m² a day.
 - For Agrarium's `dm.primary_dose_scale` check and `dm.splash_scale_m`, and Cooptera's open
   decision 17.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add: Table 1 (pp. 524-526) gives first sampling dates, which start as soon as first lesions were noticed; 17 plots untreated, only Cum treated. Germany/France: Erbach 2000 Riesling 18 May (pooled to 6 July), Geisenheim 2000 26 May, Lorch 2000 Riesling 5 June, Blanquefort 2000 Merlot 10 May, Gaillac 2000 Duras 5 June, Bommes 2001 Semillon 27 June (one earlier undated lesion). No weather printed. 17 of 17 quotes found.

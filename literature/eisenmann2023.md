@@ -36,3 +36,7 @@ files: [q242.pdf]
 
 - Two dry seasons without downy mildew and one severe, at one Palatinate site: a
   which-seasons pattern.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add: Neustadt 2021 (49.37194 N, 8.18254 E): primary infection marked in Fig. 2C about 20 June, first oil spots about 30 June, first sporulation about 5 July (read by eye, +/- 2 d); no downy mildew in 2019 and 2020. Station: Agrarmeteorologie RLP within 1 km (Sect. 4.5). 6 of 6 quotes found.

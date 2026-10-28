@@ -46,3 +46,7 @@ files: [p22.pdf]
 
 - Seven seasons of first symptoms in a continental Pannonian vineyard, with the date shoots
   reached 10 cm: a season-timing pattern outside the Mediterranean.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add: Table 2 dates are in rows.csv (Vrsac station VV 45.1052 N 21.3168 E, in a vineyard); the paper hypothesizes the observed symptoms are the first secondary infection. 2013 plot (Burgundac) treated. 9 of 9 quotes found.

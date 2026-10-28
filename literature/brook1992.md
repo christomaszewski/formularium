@@ -77,3 +77,7 @@ Re-read for primary infection counts. In an isolated Auckland vineyard (42 vines
 (arithmetic, not printed), and there was no disease at the end of December in 8 of 11
 seasons. The lowest count found by Agrarium's 2026-10-25 pass: a low-inoculum case, against
 0.07-3.5 per m² in untreated European and Chinese plots (`gobbin2005`, `yu2022`).
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add to brook1992 (2026-10-28): Table 7 first-lesion dates, read in the page image (p. 44): 5 Dec 1971, none 1972/73, 19 Nov 1973, 3 Feb 1975, 5 Dec 1975, 28 Jan 1977, 2 Feb 1978, 4 Jan 1979, 6 Dec 1979, 23 Jan 1981, 30 Dec 1981. Vines were sprayed with sulphur and carbaryl only (l. 128), so no downy mildew fungicide. Weather: NZ Meteorological Service station 450 m away (l. 182-183).

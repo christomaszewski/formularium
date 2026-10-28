@@ -68,3 +68,7 @@ fitting a new one.
   pattern for history matching (`haasbroek2006.westerncape`). The 2002-03 season is the
   one with weekly data.
 - Shows what the METOS rules ([metos2026](metos2026.md)) looked like in 2006.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add to haasbroek2006 (2026-10-28): two dated onsets in untreated blocks within 1-50 m of the automatic stations (l. 3195): Nietvoorbij (SA Riesling and Merlot) and Môrewag, Paarl (Waltham Cross); both 0 % on 30 Oct 2002 and 1 % on 6 Nov 2002 (Tables 3.17-3.18, l. 4198-4201, 4251-4252), so onset in 2002-10-30/2002-11-06. Station coordinates printed (Table 3.1, l. 3269, 3273). Table 3.16 (l. 3913) holds 1992/93-1998/99 end-of-season outbreak in the Nietvoorbij control (87, <1, 11, 64, 72, 5, 35 %), undated.

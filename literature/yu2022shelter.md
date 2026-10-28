@@ -30,3 +30,7 @@ Research article, Liaoning Province, China (Shenyang).
 ## Bearing (2026-10-08)
 
 - Rain shelters cut leaf wetness and slowed epidemics (Shenyang): a check on how Agrarium's wetness drives disease, made outside the engine's lineage.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+- Dated seasons (2026-10-28, reread for D64): Table 1 (l.151-153) gives first visibility of downy mildew, Shenyang (41 deg 49' N, 123 deg 32' E, 50 m, printed l.568), cultivar Centennial Seedless: open field 2016-07-01, 2017-07-07; rain shelter 2016-07-29, 2017-07-28; fungicide plot 2016-07-15, 2017-07-21. Weather: vineyard TRM-ZS3 station plus HOBO H8 Pro loggers (l.588). CC BY. The note's earlier "light read" of 2026-10-08 did not cover these.

@@ -39,3 +39,7 @@ files: [chrelashvili1993_bioecology.pdf]
   incubation calendar a month early every year: a season-timing pattern, and a warning that
   incubation calendars alone place onset too early where primary infection waits on
   something else.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add: the 16 actual first-appearance dates of Table 1 (read in the page image at 260 dpi): 1971 2 Jun, 1972 20 May, 1973 5 Jun, 1974 6 Jun, 1975 26 May, 1976 30 May, 1977 31 May, 1978 5 Jun, 1979 2 Jul, 1980 18 Jun, 1981 17 May, 1982 2 Jul, 1983 5 Jul, 1984 2 Jul, 1985 18 Jun, 1986 25 Jun. Treatment, cultivar and weather not printed.

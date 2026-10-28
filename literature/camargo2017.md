@@ -36,3 +36,7 @@ A light read (the deep-research B list).
 ## Bearing (2026-10-10)
 
 - The richest downy mildew data in the set for a truth: three seasons of weekly incidence and severity with sensor leaf wetness and station weather, at Piracicaba; its primary-infection thresholds are cited, not computed, so they are not a model.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add to camargo2017 (2026-10-28): untreated downy mildew plots of Niagara Rosada at ESALQ Piracicaba (22°42'34"S 47°37'38"W; l. 2283, 2300). Pruning 13 Aug 2014, 12 Aug 2015, 10 Aug 2016 (l. 2305-2306). First symptomatic plants: 50 DAP (2014/15), 51-54 DAP (2015/16, uncovered systems), 55 DAP trellis and 72 DAP open Y (2016/17) (l. 2634, 2647, 2663); dates 2014-10-02, 2015-10-02/05, 2016-10-04 (arithmetic, not printed). Weather from the ESALQ campus station plus five Campbell leaf-wetness sensors per system (l. 2461); no wetness before 70 DAP in 2014/15.

@@ -40,3 +40,7 @@ files: [embrapa_539115_2004.pdf]
 
 - Two seasons of untreated incidence by date in the Serra Gaúcha, with first symptoms in
   early October: a southern-hemisphere season-timing and severity pattern.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add to czermainski2004 (2026-10-28): the first symptoms are those seen in any cultivar of Embrapa's Bento Gonçalves vineyards (l. 121), after which sprays began; the control was never sprayed in the trial (l. 160). 1995: leaves 20/10/95 (l. 277; 24/10/95 at l. 284); 1996: 07/10/96 (l. 284). A rain or high-RH window of 23 September to 5 October 1995, 9.4-24.7 °C (l. 271), is given as the likely primary infection. Weather source not printed; Figures 1-2 plot daily T, rain and nights above 95 % RH.

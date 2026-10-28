@@ -38,3 +38,7 @@ From the Agricultural University of Athens. Run for the 2024 season around Kaval
 ## Bearing (2026-10-08)
 
 - **Kin**, for borrowed equations and four shared forms (Agrarium's candidates). Its interpolation of a station to a sensor grid (regression plus radial basis functions) is a method a virtual-station operator could use.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add: Kavala bulletin of 23 May 2024 reported first oil spots in sporadic outbreaks (Sect. 3.4); reference station 40 48 28.6 N 24 11 43.5 E. 2 of 2 quotes found.
