@@ -243,6 +243,16 @@ DATASETS: dict[str, Dataset] = {
         " section 1, gave 2022-2024)",
         "read",
     ),
+    "riou1989.latresne": Dataset(
+        "Absorbed and reflected solar radiation of a north-south vine row at Latresne"
+        " (Bordeaux), four pyranometers near the soil between two rows, 15-min means, six days"
+        " of late September (1986 or 1987: text and Table I differ); row spacing 1.8 m,"
+        " foliage 0.9 m high and 0.3 m wide; wall porosity 1/3 from digitised photographs."
+        " Printed only as daily means (Table I) and Figs 3-4",
+        "Riou, Valancogne & Pieri 1989, Agronomie 9:441-450, pp. 442, 445-446 and Table I (read"
+        " 2026-10-28 in the page images)",
+        "read",
+    ),
     "madden1995": Dataset(
         "Madden, Hughes & Ellis 1995, Phytopathology 85:269-275: incidence of grape downy"
         " mildew in Ohio, 18 plots at two times in three years (108 plot-dates), 15 shoots of"
@@ -1700,10 +1710,12 @@ DATASETS: dict[str, Dataset] = {
             "ICOS station IT-Lsn, Bosco del Merlo, Lison, Veneto (45.74 N, 12.75 E), a 33 ha "
             "Sauvignon blanc and Glera vineyard: half-hourly four-component radiation (SW_IN, "
             "SW_OUT, LW_IN, LW_OUT), air temperature, humidity, wind, rain, soil temperature "
-            "and moisture from the flux tower, Meteosens L2 2015-12-31 to 2024-12-31 (FLUXNET "
-            "half-hourly L2 to 2023). No leaf wetness and no in-canopy sensors; sensor "
-            "heights are in the product documents, not read. CC BY 4.0, free download at "
-            "data.icos-cp.eu."
+            "and moisture from the flux tower, Meteosens L2 and FLUXNET half-hourly L2 both "
+            "2015-12-31 to 2025-12-31 (the data objects' metadata, read 2026-10-28). Radiation "
+            "is SW_IN, SW_OUT and LW only: no PAR, no diffuse, no below-canopy sensor. Rows "
+            "2.2 m apart, 0.5 m wide, 2 m high, vines 0.9 m apart (station page). No leaf "
+            "wetness and no in-canopy sensors; sensor heights not on the landing pages. CC BY "
+            "4.0, free download at data.icos-cp.eu."
         ),
         (
             "ICOS Carbon Portal metadata and the OENO One 2026 review of vineyard flux "

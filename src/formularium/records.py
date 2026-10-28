@@ -162,6 +162,9 @@ STRUCTURES = {
     " thresholds",
     "row-view-factor-interception": "the radiation a vine row intercepts over a season from the"
     " view factor between rows (height over spacing), row azimuth, shape and albedo",
+    "porous-hedgerow-interception": "direct and diffuse radiation intercepted by rows as porous"
+    " boxes (height, width, spacing, porosity), with the shadow of the next row, by sun"
+    " position and row azimuth",
     "rain-wash-off": "the share of a fungicide deposit lost as a saturating function of the"
     " rain amount since application",
 }
