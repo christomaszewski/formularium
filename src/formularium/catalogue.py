@@ -6187,6 +6187,24 @@ FORMULATIONS: dict[str, Formulation] = {
             " of RM divided by the number of rainy days' reads as (RM + SD)/n or RM + SD/n, no"
             " brackets printed. The 42-year normals (1946-1987) are not printed; Ronzon 1987 took"
             " 1951-1985 normals for Hm and a fixed 9 mm for HM.",
+            "Hm as printed does not reproduce the printed indices; Hm as the month's mean daily"
+            " rain does (checked 2026-10-27 for Cooptera's request, literature/requests/"
+            "pom-limits-answer.md). Both sources print Hm = RM / the mean number of rainy days"
+            " (paper p. 122; Ronzon p. 93, page image), and neither defines a rainy day. On"
+            " Bordeaux-Merignac's own daily rain (Meteo-France, station 33281001), with normals"
+            " from the same years, Hm = RM / rainy days (at least 0.1 or 1 mm) makes January's"
+            " index -37 to -668 against the printed -71 to 189 (MAE 228-416 over Table 1's 84"
+            " values). Hm = RM / days in the month (2.3-3.5 mm), a lack on every day below it,"
+            " and HM = 9 mm give MAE 17 and January r = 0.98 for Table 1 (1946-1987 normals),"
+            " MAE 17 for Ronzon's Tableau 25 (1951-1985), and -26 for each wholly dry 21-30"
+            " September (1980, 1983, 1985; printed -24, -26, -26). A constant HM of 8-9 mm fits"
+            " best; (RM + SD) / rainy days (0.1 mm) gives MAE 22. Not exact to the unit, perhaps"
+            " because the station series has been revised since. scripts/pom_limits_check.py gives"
+            " these numbers; tests/test_tranmanhsung1990.py"
+            " reproduces 1983-84 within 6.",
+            "Ronzon 1987's Tableau 25 (p. 150, page image) gives the monthly indices, September"
+            " to March, for 1977-1986 with 1951-1985 normals: literature/ronzon1987_tableau25.csv."
+            " The paper's Table 1 (p. 123): literature/tranmanhsung1990_table1.csv.",
             "Fitted to three maturity dates; validated on the twelve years it was fitted to"
             " (a posteriori, as the paper says). It gives one date, not a cohort curve.",
             "DMCast (Park et al. 1997) computes POM's index (read in Caffi et al. 2007).",
