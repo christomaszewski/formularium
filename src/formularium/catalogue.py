@@ -4267,7 +4267,6 @@ FORMULATIONS: dict[str, Formulation] = {
             " (Eq 15), assumed. Code on request from the first author; no licence printed."
         ),
         parameters=(
-            Published("alpha", 1.3, "-", "Eq 15 and p. 377 ('alpha = 1.3')", "read"),
             Published(
                 "canopy_storage_per_leaf_area",
                 0.02,
@@ -4317,7 +4316,13 @@ FORMULATIONS: dict[str, Formulation] = {
                 "p. 377, l. 284 (films; from Magarey et al. 2005a)",
                 "read",
             ),
-            Published("alpha", 1.3, "1", "p. 377, Eq 15 (wind profile shape, assumed)", "read"),
+            Published(
+                "alpha",
+                1.3,
+                "1",
+                "Eq 15 and p. 377 ('alpha = 1.3'; the wind profile's shape, assumed)",
+                "read",
+            ),
         ),
         flags=(
             "Eq 15 against Fig. 1C (2026-10-27, Agrarium D56; tests/test_magarey2006.py). Fig. 1C"
@@ -4329,6 +4334,14 @@ FORMULATIONS: dict[str, Formulation] = {
             " min (Z0 = Zc/10, Z 3 m; with Z0 = Z/10, as printed, low canopies' wind is negative);"
             " Landsberg & James's [1 + alpha(1 - z/Zc)]^-2 at mid-canopy gives 300-140 min (Z 2 m)."
             " Both are readings, not prints; Landsberg & James 1971 was not obtained.",
+            "What Agrarium uses instead (D56, Chris 2026-10-27, as recommended, since no reading"
+            " reproduces Fig. 1C): canopy wind 0.35-0.5 of the wind above, from measurements in"
+            " three vineyards (vendrame2017, about 0.35-0.4 of the wind at twice the canopy height"
+            " in full leaf, read from a figure; everard2020, about 0.56 at night; hunter2016, about"
+            " 0.5 of the wind 1 m above, as murakami2024 cites it). An estimate registered in"
+            " Agrarium, not SWEB's: Fig. 1C asks for 0.13-0.33 U_Z, below every measurement, so"
+            " canopies with it should dry faster than in the paper's sensitivity runs (h grows"
+            " as Uc^0.5, Eq 13; reasoning, not run).",
             "Wetness is the wet-area index above 0.1 (a fraction of leaves, l. 148-153), not a"
             " humidity and not an amount of water, and no comparison with a relative-humidity"
             " rule is printed. Turned into stored water, S/C > 0.1^(1/0.67) = 0.032, which is"
