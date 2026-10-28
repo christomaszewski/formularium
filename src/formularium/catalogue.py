@@ -7805,6 +7805,56 @@ FORMULATIONS: dict[str, Formulation] = {
             " an author of the form it refits."
         ),
     ),
+    "riou1989.row_interception": Formulation(
+        "Direct and diffuse solar radiation intercepted, absorbed and reflected by vine rows as"
+        " porous boxes, with the next row's shadow, by sun position and row azimuth",
+        (
+            "Riou, Valancogne & Pieri 1989, Un modèle simple d'interception du rayonnement"
+            " solaire par la vigne - vérification expérimentale, Agronomie 9:441-450, Eqs 1-29"
+            " (pp. 443-445)"
+        ),
+        year=1989,
+        authors=("Riou, C.", "Valancogne, C.", "Pieri, P."),
+        authors_complete=True,
+        authors_from="read",
+        checked="riou1989 (HAL hal-00885213, the 2026-10-28 requests drop); Eqs read in the page"
+        " images",
+        doi="10.1051/agro:19890502",
+        structures=("porous-hedgerow-interception",),
+        calibrated_on=("riou1989.latresne",),
+        calibration_note=(
+            "Porosity 1/3 from digitised photographs of the Latresne rows; albedos measured"
+            " (soil) or taken from the literature (leaf); the model was then checked on the same"
+            " plot. Read 2026-10-28 (literature/riou1989)."
+        ),
+        parameters=(
+            Published("porosity", 1 / 3, "1", "p. 442, digitised photographs", "read"),
+            Published("leaf_albedo", 0.20, "1", "p. 446, all wavelengths", "read"),
+            Published("soil_albedo", 0.18, "1", "p. 446, dry soil, measured", "read"),
+            Published("test.row_spacing", 1.8, "m", "p. 445, Latresne", "read"),
+            Published("test.foliage_height", 0.9, "m", "p. 445", "read"),
+            Published("test.foliage_width", 0.3, "m", "p. 445", "read"),
+        ),
+        equations="riou1989",
+        flags=(
+            "Two equations are not as printed in formularium.equations.riou1989 (read"
+            " 2026-10-28 in the page images): Eq 17 lacks a 1/pi, so an open lower face would"
+            " take pi L/D of the diffuse light and Eq 20 does not follow from it; the module"
+            " normalises Eq 17 and integrates it in closed form. Eq 27 does not join Eq 26 at"
+            " lambda H = 2D - L; the module uses Eq 27 beyond, as printed, step and all.",
+            "Validated on one north-south plot over six September days: daily absorbed 27-180"
+            " W/m2 calculated against 29-180 measured (Table I); the printed 'écart moyen' is a"
+            " mean square, not a root mean square. East-west rows and other seasons are only"
+            " simulated (Table II).",
+            "Gives the row's interception and the lit height of its walls, not leaf area by"
+            " depth or a sunlit leaf fraction. Pieri & Gaudillère 2003 (pieri2003.row_interception)"
+            " fit closed forms to runs of it.",
+            "Kinship: shares no equation, implementation or data with the engine's models. Its"
+            " sun position (Eqs 3-4) is standard astronomy, as in noaa.solar_position. Pieri is"
+            " an author; Gaudillère, Pieri's co-author in 2003, is an author of cortazar2009's"
+            " records: authors only, a flag.",
+        ),
+    ),
     "pieri2003.row_interception": Formulation(
         "A vine row's seasonal solar interception ratio as a line in the square root of the"
         " view factor between rows, with a sinusoidal azimuth term and a factor for row shape"
@@ -7825,12 +7875,13 @@ FORMULATIONS: dict[str, Formulation] = {
             " Riou et al. 1989's geometric row model by the view factor f, a form of its own."
         ),
         calibrated_on=("pieri2003.bordeaux_diffuse",),
+        calibrated_with=("riou1989.row_interception",),
         calibration_note=(
             "Eq. 3 fitted to 121 daily Bordeaux pairs (r² 0.93). Eqs 4-7 are fitted to 200"
             " runs of Riou et al. 1989's interception model (D/Hf 0.5-10, azimuth 0-90°) over"
-            " an average Bordeaux year of 1961-1990 10-day radiation means: fitted with a model"
-            " that has no record here, so calibrated_with is empty. Read 2026-10-26"
-            " (literature/pieri2003)."
+            " an average Bordeaux year of 1961-1990 10-day radiation means: fitted with"
+            " riou1989.row_interception (read 2026-10-28; until then it had no record). Read"
+            " 2026-10-26 (literature/pieri2003)."
         ),
         parameters=(
             Published("diffuse.a", 1.09, "1", "Eq. 3, p. 79, r² 0.93, n 121", "read"),

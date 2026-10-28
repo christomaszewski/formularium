@@ -64,6 +64,12 @@ run or cite. Its companion, `magarey2006b`, holds the vineyard comparison.
   (an earlier version also listed "consistent units for Eqs 9-10"; the units are consistent:
   see the record, checked 2026-10-19 against magarey2005chapter).
 
+## The 94 % (2026-10-28, for Agrarium D61)
+
+- The "94 %" is on printed page 375 (the left-hand text under the page header "375"), not 377: "the first sunlit leaf layer in a grape canopy absorbs 94% of the incoming solar radiation (Smart and Robinson, 1991)". It is the stated reason for ignoring net radiation by day (third assumption). No number or figure of the SWEB paper tests it.
+- Smart & Robinson 1991 is the handbook "Sunlight into Wine" (Hyde Park Press, Adelaide, 88 pp as the reference list prints it); no open copy found, so what it says is not read. A web search found no passage with 94 %.
+- A likely origin, my inference and not read: `smart1990` (l. 98-101) says only about 6 % of PAR (400-700 nm) is transmitted by a leaf (Smart 1987b), so 94 % of PAR is not transmitted. That is not-transmitted, not absorbed (reflectance of the leaf is in it), and it is PAR, not total solar radiation. Measured leaf PAR reflectance and transmittance in `mabrouk1997` Table 1 are 12.2 % and 8.1 % (absorbed about 80 %); Riou et al. 1989 use 0.20 reflection for all wavelengths (5 % visible, 40 % near infrared).
+
 ## Dependence
 
 - **Borrowed, none in the catalogue:** Tanner & Fuchs 1968 (energy balance), Bird et al. 1960
