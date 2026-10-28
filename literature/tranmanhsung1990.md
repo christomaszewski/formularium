@@ -43,6 +43,27 @@ From INRA Bordeaux (Villenave d'Ornon; Tran Manh Sung, Clerjeau) and SESMA, Pari
 - **Garbled in the text copy:** Table 1's December 1979 value (-111 on the page image);
   Table 3's severity columns (read on the image).
 
+## The limits, checked against the station (2026-10-27)
+
+Cooptera could not reproduce the index at Changins with Hm read as printed (a request,
+`literature/requests/pom-limits.md`; the answer beside it). Read in the page images and
+checked on Bordeaux-Mérignac's daily rain (Météo-France, Licence Ouverte 2.0), with
+`scripts/pom_limits_check.py`:
+- **As printed,** Hm = RM / the mean number of rainy days (p. 122; Ronzon p. 93). Neither
+  source says what a rainy day is.
+- **That reading does not give the printed size.** A dry day then lacks 5-9 mm and January's
+  index falls to -37 to -668, against the printed -71 to 189 (MAE 228-416 over Table 1).
+- **Hm as the month's mean daily rain does.** With RM / days in the month (2.3-3.5 mm), a lack
+  on every day below it and HM = 9 mm:
+  - Table 1 is reproduced within MAE 17, January r = 0.98.
+  - Ronzon's Tableau 25 is reproduced within MAE 17.
+  - Each wholly dry 21-30 September (1980, 1983, 1985) gives -26; the printed values are -24,
+    -26 and -26.
+  - A constant HM of 8-9 mm fits best.
+- **Not exact to the unit,** perhaps because the station's series was revised after 1987.
+- Table 1 is transcribed in `tranmanhsung1990_table1.csv`, checked against the page image
+  (p. 123).
+
 ## Dependence
 
 - It takes EPI's idea, that rain counts only between limits set from climatic normals

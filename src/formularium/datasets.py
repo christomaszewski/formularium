@@ -235,9 +235,37 @@ DATASETS: dict[str, Dataset] = {
         "read",
     ),
     "leoni2026.changins": Dataset(
-        "Oospore germination observed at Changins, Switzerland (a Chasselas plot), 2022-2024",
-        "Leoni et al. 2026, OENO One 60(3), abstract and section 1 (read 2026-10-08 in the copy"
-        " Cooptera holds)",
+        "Oospore germination observed at Changins, Switzerland (a Chasselas plot), 2004-2024:"
+        " 175 observations, 120 historical from 2004-2021 (taken mostly after rain) and 55"
+        " weekly from 2022-2024; the GLM is fitted on the 96 before BBCH 13",
+        "Leoni et al. 2026, OENO One 60(3), pp. 5 and 8, and Leoni's thesis (Geneva 2026),"
+        " pp. 162 and 166 (read 2026-10-27; the 2026-10-08 record, from the abstract and"
+        " section 1, gave 2022-2024)",
+        "read",
+    ),
+    "riou1989.latresne": Dataset(
+        "Absorbed and reflected solar radiation of a north-south vine row at Latresne"
+        " (Bordeaux), four pyranometers near the soil between two rows, 15-min means, six days"
+        " of late September (1986 or 1987: text and Table I differ); row spacing 1.8 m,"
+        " foliage 0.9 m high and 0.3 m wide; wall porosity 1/3 from digitised photographs."
+        " Printed only as daily means (Table I) and Figs 3-4",
+        "Riou, Valancogne & Pieri 1989, Agronomie 9:441-450, pp. 442, 445-446 and Table I (read"
+        " 2026-10-28 in the page images)",
+        "read",
+    ),
+    "leoni2026.changins_stages": Dataset(
+        "Chasselas stages at Changins (Agroscope observations), 2021-2024: BBCH 09, 11, 53, 61,"
+        " 71 and 81, with a 10-year mean; literature/pipeline_stage_dates.csv. Agroscope Pully"
+        " holds the Changins series from 1958 (used, not printed, by an Int. J. Biometeorol."
+        " 2018 study, PMC5966476); no open release found",
+        "Leoni's thesis (Geneva 2026), Table 1.1, p. 24 (read 2026-10-28)",
+        "read",
+    ),
+    "proconseil2021.vaud_phenology": Dataset(
+        "Chasselas budburst (BBCH 09), full flowering (BBCH 65) and harvest start, canton of"
+        " Vaud, site not named, 2011-2021; literature/pipeline_stage_dates.csv. Licence not"
+        " stated",
+        "Proconseil 2021, Rapport phytosanitaire viticole, section 1 (read 2026-10-28)",
         "read",
     ),
     "madden1995": Dataset(
@@ -1477,7 +1505,9 @@ DATASETS: dict[str, Dataset] = {
             "89); AUDPC; Italy, Emilia-Romagna, Castell'Arquato vineyard (44.857 N, 9.856 E); "
             "2020, 2021, 2022; plots: untreated control plus 6 resistance inducers and a "
             "copper+sulfur reference; 48 untreated records (disease x portion x stage x year) "
-            "and 32 treatment means; weather: Daily weather per season (Apr-Sep, 184 days a "
+            "and 32 treatment means; cultivar Barbera (literature/taibi2023inducers); stage dates "
+            "only as bars in Fig. 1, not printed (2026-10-28); weather: Daily weather per "
+            "season (Apr-Sep, 184 days a "
             "year): leaf wetness (hours), rain (mm), temperature, relative humidity; station "
             "location presumably the vineyard (README does not say); access: Zenodo "
             "10.5281/zenodo.15077508, six small CSVs "
@@ -1697,10 +1727,12 @@ DATASETS: dict[str, Dataset] = {
             "ICOS station IT-Lsn, Bosco del Merlo, Lison, Veneto (45.74 N, 12.75 E), a 33 ha "
             "Sauvignon blanc and Glera vineyard: half-hourly four-component radiation (SW_IN, "
             "SW_OUT, LW_IN, LW_OUT), air temperature, humidity, wind, rain, soil temperature "
-            "and moisture from the flux tower, Meteosens L2 2015-12-31 to 2024-12-31 (FLUXNET "
-            "half-hourly L2 to 2023). No leaf wetness and no in-canopy sensors; sensor "
-            "heights are in the product documents, not read. CC BY 4.0, free download at "
-            "data.icos-cp.eu."
+            "and moisture from the flux tower, Meteosens L2 and FLUXNET half-hourly L2 both "
+            "2015-12-31 to 2025-12-31 (the data objects' metadata, read 2026-10-28). Radiation "
+            "is SW_IN, SW_OUT and LW only: no PAR, no diffuse, no below-canopy sensor. Rows "
+            "2.2 m apart, 0.5 m wide, 2 m high, vines 0.9 m apart (station page). No leaf "
+            "wetness and no in-canopy sensors; sensor heights not on the landing pages. CC BY "
+            "4.0, free download at data.icos-cp.eu."
         ),
         (
             "ICOS Carbon Portal metadata and the OENO One 2026 review of vineyard flux "

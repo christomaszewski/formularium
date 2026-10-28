@@ -191,5 +191,6 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "mariani2007.bbch_nhh": ("mariani2007.alghero",),
         "phinopoulos2015.shoot_leaf_area": ("phinopoulos2015.lisbon",),
         "pieri2003.row_interception": ("pieri2003.bordeaux_diffuse",),
+        "riou1989.row_interception": ("riou1989.latresne",),
         "rossouw2016.mancozeb_washoff": ("rossouw2016.stellenbosch",),
     }

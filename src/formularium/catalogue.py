@@ -4975,12 +4975,17 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("mature_mtg_d", 1.5, "d", "maturity when MTG < 1.5 d", "read"),
         ),
         flags=(
-            "Fitted on oospore germination observations at Changins: the full GLM on 175 from"
-            " 2004-2024 (the historical series, taken mostly after rain, and 2022-2024 weekly), the"
-            " recent analysis on 2022-2024 (Leoni's thesis, pp. 160-162). Its maturity dates were"
-            " then set beside the observed primary infections of 2004-2025 (thesis Tables 3.2-3.3;"
-            " literature/leoni2026_changins_primary.csv), so those years overlap its fitting data:"
-            " only 2025 is outside it.",
+            "Fitted on 2004-2024 (confirmed 2026-10-27 in the paper and the thesis): the GLM's 96"
+            " observations are the full dataset's before BBCH 13, 'the complete dataset (n = 96)'"
+            " (paper p. 8; thesis p. 166), not the 2022-2024 series alone, which has 24 before"
+            " BBCH 13. The full dataset is 175 observations, 120 historical from 2004-2021, taken"
+            " mostly after rain, and 55 weekly from 2022-2024 (paper p. 5; thesis p. 162). The"
+            " years of each of the 96 are not printed. Its maturity dates were then set beside"
+            " the observed primary infections of 2004-2025 (thesis Tables 3.2-3.3; paper Tables"
+            " S1-S2; literature/leoni2026_changins_primary.csv), and the MTG < 1.5 d threshold"
+            " was chosen because it 'aligns most closely with the observed maturity date' on that"
+            " comparison (paper p. 13; thesis p. 172). So only 2025 is outside the fitting data,"
+            " and 2025 entered the choice of the threshold.",
             "Two fits of one dataset (read 2026-10-27 in the page images). The paper's Table 1"
             " (p. 11) counts rainy days 'since 1 January' (2.36, +0.00076, -0.034, -0.0046;"
             " residual deviance 40.44, AIC 307.68), but its methods define the variable as days"
@@ -6187,6 +6192,24 @@ FORMULATIONS: dict[str, Formulation] = {
             " of RM divided by the number of rainy days' reads as (RM + SD)/n or RM + SD/n, no"
             " brackets printed. The 42-year normals (1946-1987) are not printed; Ronzon 1987 took"
             " 1951-1985 normals for Hm and a fixed 9 mm for HM.",
+            "Hm as printed does not reproduce the printed indices; Hm as the month's mean daily"
+            " rain does (checked 2026-10-27 for Cooptera's request, literature/requests/"
+            "pom-limits-answer.md). Both sources print Hm = RM / the mean number of rainy days"
+            " (paper p. 122; Ronzon p. 93, page image), and neither defines a rainy day. On"
+            " Bordeaux-Merignac's own daily rain (Meteo-France, station 33281001), with normals"
+            " from the same years, Hm = RM / rainy days (at least 0.1 or 1 mm) makes January's"
+            " index -37 to -668 against the printed -71 to 189 (MAE 228-416 over Table 1's 84"
+            " values). Hm = RM / days in the month (2.3-3.5 mm), a lack on every day below it,"
+            " and HM = 9 mm give MAE 17 and January r = 0.98 for Table 1 (1946-1987 normals),"
+            " MAE 17 for Ronzon's Tableau 25 (1951-1985), and -26 for each wholly dry 21-30"
+            " September (1980, 1983, 1985; printed -24, -26, -26). A constant HM of 8-9 mm fits"
+            " best; (RM + SD) / rainy days (0.1 mm) gives MAE 22. Not exact to the unit, perhaps"
+            " because the station series has been revised since. scripts/pom_limits_check.py gives"
+            " these numbers; tests/test_tranmanhsung1990.py"
+            " reproduces 1983-84 within 6.",
+            "Ronzon 1987's Tableau 25 (p. 150, page image) gives the monthly indices, September"
+            " to March, for 1977-1986 with 1951-1985 normals: literature/ronzon1987_tableau25.csv."
+            " The paper's Table 1 (p. 123): literature/tranmanhsung1990_table1.csv.",
             "Fitted to three maturity dates; validated on the twelve years it was fitted to"
             " (a posteriori, as the paper says). It gives one date, not a cohort curve.",
             "DMCast (Park et al. 1997) computes POM's index (read in Caffi et al. 2007).",
@@ -7782,6 +7805,56 @@ FORMULATIONS: dict[str, Formulation] = {
             " an author of the form it refits."
         ),
     ),
+    "riou1989.row_interception": Formulation(
+        "Direct and diffuse solar radiation intercepted, absorbed and reflected by vine rows as"
+        " porous boxes, with the next row's shadow, by sun position and row azimuth",
+        (
+            "Riou, Valancogne & Pieri 1989, Un modèle simple d'interception du rayonnement"
+            " solaire par la vigne - vérification expérimentale, Agronomie 9:441-450, Eqs 1-29"
+            " (pp. 443-445)"
+        ),
+        year=1989,
+        authors=("Riou, C.", "Valancogne, C.", "Pieri, P."),
+        authors_complete=True,
+        authors_from="read",
+        checked="riou1989 (HAL hal-00885213, the 2026-10-28 requests drop); Eqs read in the page"
+        " images",
+        doi="10.1051/agro:19890502",
+        structures=("porous-hedgerow-interception",),
+        calibrated_on=("riou1989.latresne",),
+        calibration_note=(
+            "Porosity 1/3 from digitised photographs of the Latresne rows; albedos measured"
+            " (soil) or taken from the literature (leaf); the model was then checked on the same"
+            " plot. Read 2026-10-28 (literature/riou1989)."
+        ),
+        parameters=(
+            Published("porosity", 1 / 3, "1", "p. 442, digitised photographs", "read"),
+            Published("leaf_albedo", 0.20, "1", "p. 446, all wavelengths", "read"),
+            Published("soil_albedo", 0.18, "1", "p. 446, dry soil, measured", "read"),
+            Published("test.row_spacing", 1.8, "m", "p. 445, Latresne", "read"),
+            Published("test.foliage_height", 0.9, "m", "p. 445", "read"),
+            Published("test.foliage_width", 0.3, "m", "p. 445", "read"),
+        ),
+        equations="riou1989",
+        flags=(
+            "Two equations are not as printed in formularium.equations.riou1989 (read"
+            " 2026-10-28 in the page images): Eq 17 lacks a 1/pi, so an open lower face would"
+            " take pi L/D of the diffuse light and Eq 20 does not follow from it; the module"
+            " normalises Eq 17 and integrates it in closed form. Eq 27 does not join Eq 26 at"
+            " lambda H = 2D - L; the module uses Eq 27 beyond, as printed, step and all.",
+            "Validated on one north-south plot over six September days: daily absorbed 27-180"
+            " W/m2 calculated against 29-180 measured (Table I); the printed 'écart moyen' is a"
+            " mean square, not a root mean square. East-west rows and other seasons are only"
+            " simulated (Table II).",
+            "Gives the row's interception and the lit height of its walls, not leaf area by"
+            " depth or a sunlit leaf fraction. Pieri & Gaudillère 2003 (pieri2003.row_interception)"
+            " fit closed forms to runs of it.",
+            "Kinship: shares no equation, implementation or data with the engine's models. Its"
+            " sun position (Eqs 3-4) is standard astronomy, as in noaa.solar_position. Pieri is"
+            " an author; Gaudillère, Pieri's co-author in 2003, is an author of cortazar2009's"
+            " records: authors only, a flag.",
+        ),
+    ),
     "pieri2003.row_interception": Formulation(
         "A vine row's seasonal solar interception ratio as a line in the square root of the"
         " view factor between rows, with a sinusoidal azimuth term and a factor for row shape"
@@ -7802,12 +7875,13 @@ FORMULATIONS: dict[str, Formulation] = {
             " Riou et al. 1989's geometric row model by the view factor f, a form of its own."
         ),
         calibrated_on=("pieri2003.bordeaux_diffuse",),
+        calibrated_with=("riou1989.row_interception",),
         calibration_note=(
             "Eq. 3 fitted to 121 daily Bordeaux pairs (r² 0.93). Eqs 4-7 are fitted to 200"
             " runs of Riou et al. 1989's interception model (D/Hf 0.5-10, azimuth 0-90°) over"
-            " an average Bordeaux year of 1961-1990 10-day radiation means: fitted with a model"
-            " that has no record here, so calibrated_with is empty. Read 2026-10-26"
-            " (literature/pieri2003)."
+            " an average Bordeaux year of 1961-1990 10-day radiation means: fitted with"
+            " riou1989.row_interception (read 2026-10-28; until then it had no record). Read"
+            " 2026-10-26 (literature/pieri2003)."
         ),
         parameters=(
             Published("diffuse.a", 1.09, "1", "Eq. 3, p. 79, r² 0.93, n 121", "read"),

@@ -71,3 +71,170 @@ def test_a_month_by_the_rules() -> None:
     assert pom.month_terms(rain, 4.0, 10.0) == (16.0, 5.0, 6.0)
     assert pom.month_index(rain, 4.0, 10.0, previous=3.0) == pytest.approx(18.0)
     assert pom.maturation_indices([rain, rain], [(4.0, 10.0)] * 2) == pytest.approx([15.0, 30.0])
+
+
+# Bordeaux-Mérignac (Météo-France station 33281001), daily rain in mm, 21 September 1983 to
+# 31 January 1984, from Météo-France's "données climatologiques de base quotidiennes" (Licence
+# Ouverte 2.0, read 2026-10-27). Monthly normals 1946-1987 from the same series: RM (mm) and
+# the mean number of days with rain >= 0.1 mm.
+MERIGNAC_1983_84 = [
+    [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+    [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.3,
+        0.0,
+        0.0,
+        0.0,
+        0.2,
+        0.0,
+        1.5,
+        2.3,
+        2.4,
+        14.8,
+        1.2,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.6,
+        3.4,
+        0.0,
+        0.0,
+    ],
+    [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.8,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.1,
+        0.0,
+        1.7,
+        24.8,
+        6.8,
+        2.4,
+        1.7,
+        0.0,
+    ],
+    [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        12.4,
+        0.3,
+        3.0,
+        6.6,
+        0.0,
+        0.1,
+        0.0,
+        11.0,
+        21.9,
+        9.5,
+        12.5,
+        3.4,
+        11.8,
+        39.3,
+        1.1,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.2,
+        0.0,
+    ],
+    [
+        0.0,
+        0.0,
+        7.9,
+        0.8,
+        2.2,
+        7.7,
+        1.7,
+        1.1,
+        0.0,
+        0.0,
+        6.5,
+        6.5,
+        4.9,
+        10.3,
+        3.9,
+        0.5,
+        3.0,
+        14.2,
+        5.4,
+        5.2,
+        6.9,
+        13.6,
+        36.5,
+        6.0,
+        0.4,
+        15.1,
+        8.4,
+        1.7,
+        5.6,
+        8.1,
+        6.4,
+    ],
+]
+RM = {9: 77.13, 10: 84.8, 11: 96.31, 12: 109.3, 1: 96.6}
+RAINY_DAYS = {9: 12.74, 10: 13.24, 11: 15.38, 12: 17.14, 1: 16.69}
+DAYS = {9: 30, 10: 31, 11: 30, 12: 31, 1: 31}
+TABLE1_1984 = [-26, -75, -126, -79, 33]  # September 1983 to January 1984 (p. 123)
+
+
+def test_the_station_reproduces_table_1_with_hm_the_mean_daily_rain() -> None:
+    """Hm = RM / days in the month and HM = 9 mm (Ronzon p. 93) give 1984's column within 6.
+
+    The paper and Ronzon print Hm = RM / the mean number of rainy days; read so, the same days
+    give indices of a different size (the next test). See the record's flag.
+    """
+    assert all(
+        len(m) == DAYS[k] - (20 if k == 9 else 0)
+        for m, k in zip(MERIGNAC_1983_84, DAYS, strict=True)
+    )
+    limits = [(RM[m] / DAYS[m], 9.0) for m in DAYS]
+    got = pom.maturation_indices([np.array(m) for m in MERIGNAC_1983_84], limits)
+    assert [round(x) for x in got] == [-26, -77, -129, -77, 39]
+    assert max(abs(round(g) - p) for g, p in zip(got, TABLE1_1984, strict=True)) <= 6
+
+
+def test_hm_over_rainy_days_does_not_give_the_printed_size() -> None:
+    limits = [(RM[m] / RAINY_DAYS[m], 9.0) for m in DAYS]
+    got = pom.maturation_indices([np.array(m) for m in MERIGNAC_1983_84], limits)
+    assert got[0] == pytest.approx(-60.5, abs=0.5)  # ten dry days at Hm = 6.05; printed -26
+    assert got[-1] < -250  # printed 33

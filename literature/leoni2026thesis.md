@@ -67,5 +67,21 @@ of pp. 182-183, are in `leoni2026_changins_primary.csv`, one row per year 2004-2
 - The plot is at 46°23'47.7"N 6°13'54.0"E (p. 158); the Agrometeo station at 46°23'53.4"N
   6°13'50.4"E (p. 160), about 190 m away (arithmetic).
 - The GLM was fitted on germination observations of 2004-2024, so only 2025 lies outside its
-  fitting years.
+  fitting years. Confirmed 2026-10-27: Table 3.1's n = 96 is "the complete dataset (n = 96)"
+  before BBCH 13, against "recent observations (n = 24)" (p. 166); the full set is 175
+  observations (p. 162). Which year each of the 96 is from is not printed.
+- Table 3.3's observed oospore maturity is "the laboratory-observed maturity date" (p. 172):
+  the same germination tests, by the same method, in the years they share. That is how the
+  thesis names it; the rule that turns a year's tests into one date (the first MTG at 1, or
+  below 1.5) is not stated in the passages read. Through the threshold, which was chosen to
+  fit these dates (p. 172), 2025 also bears on the model.
 
+## Stage dates (2026-10-28, for Agrarium D62)
+
+- Table 1.1 (p. 24) gives Chasselas stages at Changins, "Agroscope observations", for 2021-2024
+  with a 10-year mean: BBCH 09, 11, 53, 61, 71 and 81. For example, budburst on 20, 19 and 18
+  April and 8 April; flowering (BBCH 61) on 18 June, 30 May, 10 June and 12 June. Transcribed
+  in `pipeline_stage_dates.csv`.
+- No stage dates for 2004-2020 or 2025, and none for BBCH 12-15.
+- Pinot noir 2023 (powdery mildew chapter, p. 129): BBCH 59 on 8 June, 63 on 12 June and 71 on
+  19 June.
