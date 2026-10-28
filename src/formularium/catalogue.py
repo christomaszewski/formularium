@@ -4975,12 +4975,17 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("mature_mtg_d", 1.5, "d", "maturity when MTG < 1.5 d", "read"),
         ),
         flags=(
-            "Fitted on oospore germination observations at Changins: the full GLM on 175 from"
-            " 2004-2024 (the historical series, taken mostly after rain, and 2022-2024 weekly), the"
-            " recent analysis on 2022-2024 (Leoni's thesis, pp. 160-162). Its maturity dates were"
-            " then set beside the observed primary infections of 2004-2025 (thesis Tables 3.2-3.3;"
-            " literature/leoni2026_changins_primary.csv), so those years overlap its fitting data:"
-            " only 2025 is outside it.",
+            "Fitted on 2004-2024 (confirmed 2026-10-27 in the paper and the thesis): the GLM's 96"
+            " observations are the full dataset's before BBCH 13, 'the complete dataset (n = 96)'"
+            " (paper p. 8; thesis p. 166), not the 2022-2024 series alone, which has 24 before"
+            " BBCH 13. The full dataset is 175 observations, 120 historical from 2004-2021, taken"
+            " mostly after rain, and 55 weekly from 2022-2024 (paper p. 5; thesis p. 162). The"
+            " years of each of the 96 are not printed. Its maturity dates were then set beside"
+            " the observed primary infections of 2004-2025 (thesis Tables 3.2-3.3; paper Tables"
+            " S1-S2; literature/leoni2026_changins_primary.csv), and the MTG < 1.5 d threshold"
+            " was chosen because it 'aligns most closely with the observed maturity date' on that"
+            " comparison (paper p. 13; thesis p. 172). So only 2025 is outside the fitting data,"
+            " and 2025 entered the choice of the threshold.",
             "Two fits of one dataset (read 2026-10-27 in the page images). The paper's Table 1"
             " (p. 11) counts rainy days 'since 1 January' (2.36, +0.00076, -0.034, -0.0046;"
             " residual deviance 40.44, AIC 307.68), but its methods define the variable as days"

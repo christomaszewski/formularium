@@ -235,9 +235,12 @@ DATASETS: dict[str, Dataset] = {
         "read",
     ),
     "leoni2026.changins": Dataset(
-        "Oospore germination observed at Changins, Switzerland (a Chasselas plot), 2022-2024",
-        "Leoni et al. 2026, OENO One 60(3), abstract and section 1 (read 2026-10-08 in the copy"
-        " Cooptera holds)",
+        "Oospore germination observed at Changins, Switzerland (a Chasselas plot), 2004-2024:"
+        " 175 observations, 120 historical from 2004-2021 (taken mostly after rain) and 55"
+        " weekly from 2022-2024; the GLM is fitted on the 96 before BBCH 13",
+        "Leoni et al. 2026, OENO One 60(3), pp. 5 and 8, and Leoni's thesis (Geneva 2026),"
+        " pp. 162 and 166 (read 2026-10-27; the 2026-10-08 record, from the abstract and"
+        " section 1, gave 2022-2024)",
         "read",
     ),
     "madden1995": Dataset(
