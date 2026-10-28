@@ -1692,4 +1692,231 @@ DATASETS: dict[str, Dataset] = {
         ),
         "read",
     ),
+    "icos2024.lison": Dataset(
+        (
+            "ICOS station IT-Lsn, Bosco del Merlo, Lison, Veneto (45.74 N, 12.75 E), a 33 ha "
+            "Sauvignon blanc and Glera vineyard: half-hourly four-component radiation (SW_IN, "
+            "SW_OUT, LW_IN, LW_OUT), air temperature, humidity, wind, rain, soil temperature "
+            "and moisture from the flux tower, Meteosens L2 2015-12-31 to 2024-12-31 (FLUXNET "
+            "half-hourly L2 to 2023). No leaf wetness and no in-canopy sensors; sensor "
+            "heights are in the product documents, not read. CC BY 4.0, free download at "
+            "data.icos-cp.eu."
+        ),
+        (
+            "ICOS Carbon Portal metadata and the OENO One 2026 review of vineyard flux "
+            "stations, read 2026-10-27 (landing pages saved as text). Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "read",
+    ),
+    "icos2016.arzelle": Dataset(
+        (
+            "ICOS station IT-Arz, Erbusco, Franciacorta (45.619 N, 10.002 E, 217 m), 17 ha "
+            "organic rainfed VSP vineyard with north-south rows: half-hourly FLUXNET archive "
+            "product 2016-2024 (v1.3, 92.7 MB). Its variable list was not read; whether it "
+            "has four-component radiation as IT-Lsn does is not checked. CC BY 4.0."
+        ),
+        (
+            "ICOS Carbon Portal metadata, read 2026-10-27. Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "read",
+    ),
+    "callesen2026.southtyrol": Dataset(
+        (
+            "Half-hourly eddy-covariance fluxes and 'ancilliary meteorological data' in a "
+            "grassed organic vineyard in South Tyrol (Chardonnay, Sauvignon blanc), a 33 MB "
+            "CSV with a Variables.xlsx: whether it holds radiation, humidity or wetness is "
+            "not checked (the variable list was not opened). Years not stated in the record "
+            "read. CC BY 4.0, Zenodo 10.5281/zenodo.19725764."
+        ),
+        (
+            "Zenodo record, read 2026-10-27. Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "read",
+    ),
+    "bastos2024.vineyard": Dataset(
+        (
+            "Hourly vineyard water-vapour loss and water-use efficiency, 2022 (CSV, 0.68 MB), "
+            "probably the South Tyrol site of callesen2026.southtyrol; variables not stated. "
+            "CC BY 4.0, Zenodo 10.5281/zenodo.12688311; its paper (IEEE TAFE, "
+            "10.1109/TAFE.2024.3466552) not read."
+        ),
+        (
+            "DataCite/Zenodo metadata as catalogued 2026-10-22 (research_notes/gaps-and- "
+            "datasets), not read again. Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "snippet",
+    ),
+    "jenkins2023.yolo": Dataset(
+        (
+            "Wind (needle anemometer), temperature and humidity (HMP60L) inside and outside "
+            "the canopy of one potted Zinfandel vine, with a load cell, Yolo County, "
+            "California, August 2020, every 2 min (a 3 h moving average applied). No station "
+            "in the record (CIMIS is near). CC BY 4.0, a 0.36 MB CSV."
+        ),
+        (
+            "Repository landing page, read 2026-10-27. Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "read",
+    ),
+    "divine2024.diezma": Dataset(
+        (
+            "A Davis Vantage Pro2 Plus station (radiation, UV, aspirated temperature and "
+            "humidity) and IoT nodes with leaf wetness and soil probes on an experimental "
+            "farm at Diezma, Granada, June 2023 to May 2024, hourly; the wetness probe's "
+            "placement and the crop are not stated. CC BY 4.0, downloadable."
+        ),
+        (
+            "Repository landing page, read 2026-10-27. Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "read",
+    ),
+    "leeson2025.whim": Dataset(
+        (
+            "Leaf wetness, net radiation, solar radiation, PAR, temperature, humidity, rain "
+            "and wind on a mast 2 m above a heather bog at Whim Bog near Edinburgh, "
+            "2003-2023, every 15 min (20 s samples). Not a crop canopy: a long wetness and "
+            "net-radiation series for weighting models. Open Government Licence v3."
+        ),
+        (
+            "UKCEH data catalogue landing page, read 2026-10-27. Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "read",
+    ),
+    "vonderwaydbrink2020.quillow": Dataset(
+        (
+            "Temperature, humidity, leaf wetness and soil moisture at 1, 5, 20 and 50 m from "
+            "kettle holes into winter wheat, Quillow (Uckermark), 17 March to 13 July 2020; "
+            "step and placement not stated; no radiation. CC BY 4.0."
+        ),
+        (
+            "Repository landing page, read 2026-10-27. Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "read",
+    ),
+    "gagliardi2022.turrialba": Dataset(
+        (
+            "Temperature, humidity and leaf wetness under shade-tree canopies in coffee plots "
+            "at CATIE, Turrialba, Costa Rica, May-July 2017, logged every 5 min by HOBO "
+            "sensors but published as plot means; no station. CC0."
+        ),
+        (
+            "Repository landing page, read 2026-10-27. Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "read",
+    ),
+    "mathieu2025.rully": Dataset(
+        (
+            "A vineyard flux tower at Rully, Saône-et-Loire (46.87 N, 4.75 E, 230 m): eddy "
+            "covariance, solar, infrared and net radiation, wind, air and soil humidity, rain "
+            "and a phenocam, from 24 June 2024, ongoing. Restricted: 'To access the data, "
+            "please contact the scientific data manager.'"
+        ),
+        (
+            "Repository landing page, read 2026-10-27. Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "read",
+    ),
+    "ameriflux2023.usnsa": Dataset(
+        (
+            "AmeriFlux US-NSa, San Joaquin Valley East, California (36.60 N, 119.51 W), a "
+            "drip-irrigated vineyard of about 200 by 300 m: half-hourly eddy covariance "
+            "2023-2025 (BASE 10.17190/AMF/2574379; FLUXNET-1F 10.17190/AMF/3027367); "
+            "variables and radiometer heights not on the page read; the OENO One 2026 review "
+            "dropped it for many missing values. CC BY 4.0."
+        ),
+        (
+            "AmeriFlux site page, read 2026-10-27. Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "read",
+    ),
+    "tasmania2024.botrytis": Dataset(
+        (
+            "Temperature and humidity (Tiny Tag in a mini Stevenson screen), Campbell leaf "
+            "wetness at 10 degrees and rain, all 1.2 m above ground on a headland outside the "
+            "canopy, every 10-15 min, at eight Riesling sites in the Tamar and Coal River "
+            "valleys 2009-2014 and Sauvignon blanc 2018-2019, Tasmania, with Botrytis "
+            "records. 'Requests for these data will be considered by the corresponding "
+            "author.'"
+        ),
+        (
+            "Aust. J. Grape Wine Res. 2024, article 6630039, read 2026-10-27 from a Wayback "
+            "copy (methods and data statement). Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "read",
+    ),
+    "grapex2018.lodi": Dataset(
+        (
+            "The GRAPEX vineyard flux experiment, Borden Ranch, Lodi, California (38.29 N, "
+            "121.12 W), two Pinot noir blocks, 2013-2017: four-component radiation (CNR-1 at "
+            "6 m), PAR, temperature and humidity, sonic anemometers at 2.5, 3.75 and 8 m, a "
+            "surface-renewal station with a net radiometer at 2.5 m, some in-canopy and "
+            "inter-row measurements in intensive periods; leaf wetness not mentioned. No data "
+            "repository found, only a HydroShare footprint listing (CC BY)."
+        ),
+        (
+            "The GRAPEX overview paper (Kustas et al. 2018), read 2026-10-27 from a Wayback "
+            "copy. Found for Agrarium D60 (literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "read",
+    ),
+    "arpav.veneto": Dataset(
+        (
+            "Binary electronic-leaf wetness, global radiation, temperature, humidity, rain "
+            "and wind at agrometeorological stations in Veneto's vineyard districts, hourly, "
+            "2010-2025. CC BY 4.0, downloadable."
+        ),
+        (
+            "As the pilot-equations research note (Agrarium, 2026-10-20, section 6) read it. "
+            "Found for Agrarium D60 (literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "trail",
+    ),
+    "meteogalicia.galicia": Dataset(
+        (
+            "Hours wet per hour, global radiation, temperature, humidity, rain and wind at "
+            "MeteoGalicia stations, hourly, 2024-2026. Free with attribution."
+        ),
+        (
+            "As the pilot-equations research note (Agrarium, 2026-10-20) read it. Found for "
+            "Agrarium D60 (literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "trail",
+    ),
+    "agroclim.inrae": Dataset(
+        (
+            "Leaf wetness, global radiation, temperature, humidity, rain and wind at INRAE's "
+            "AgroClim stations, hourly, 1983-2025. Etalab 2.0."
+        ),
+        (
+            "As the pilot-equations research note (Agrarium, 2026-10-20) read it; see also "
+            "literature/furushopercot2025. Found for Agrarium D60 "
+            "(literature/requests/inputs-d60.md), 2026-10-27"
+        ),
+        "trail",
+    ),
+    "colucci2026.italy": Dataset(
+        (
+            "Capacitive double-sided leaf wetness with temperature, humidity, wind, rain and "
+            "soil sensors at seven Italian sites, a 2025 release on Mendeley Data. CC BY-NC "
+            "4.0, downloadable."
+        ),
+        (
+            "As literature/colucci2026 records it; the Mendeley landing page read again "
+            "2026-10-27. Found for Agrarium D60 (literature/requests/inputs-d60.md), "
+            "2026-10-27"
+        ),
+        "trail",
+    ),
 }

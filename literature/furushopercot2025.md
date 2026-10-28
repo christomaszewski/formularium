@@ -2,7 +2,7 @@
 id: furushopercot2025
 citation: Furusho-Percot, C., Maury, O., Minet, V., De Decker, T., Roux, D., Beauvois, C., Le Roux, R., Décome, J., Launay, M. & García de Cortázar-Atauri, I. 2025. French agroclimatic research network dataset. Data in Brief 61:111809
 doi: 10.1016/j.dib.2025.111809
-read: 2026-10-20, in full (a short data paper), by the main session in the PubMed Central JATS copy (PMC12266558); the dataset's README, variables file and station list (10.57745/BQ0BWB, version 4.0) and two station sheets (10.57745/PXJBH4) read beside it; three stations' hourly files checked
+read: 2026-10-20, in full (a short data paper), by the main session in the PubMed Central JATS copy (PMC12266558); the dataset's README, variables file and station list (10.57745/BQ0BWB, version 4.0) and two station sheets (10.57745/PXJBH4) read beside it; three stations' hourly files checked; 2026-10-27, read again for Agrarium D60 by a reading agent and a note writer (claude-sonnet-5-5), quotes found at their lines by scripts/verify_quotes.py
 status: read
 diseases: []
 crops: []
@@ -62,3 +62,12 @@ Own checks, Apr-Sep, scripts in the W1 drop:
 - **For W1:** ranked third, behind ARPAV Veneto and MeteoGalicia
   (Agrarium research_notes/pilot-equations, section 6). It is open and complete, but its sensor
   is at 50 cm in a station enclosure, not in the vines.
+
+## Read again (2026-10-27), for Agrarium D60
+
+- **Network:** the same twelve instruments at 54 sites, hourly and daily series (l. 104); one of the largest networks of leaf wetness duration measured with one sensor type (l. 125).
+- **Instruments (Table 2, l. 211-232):** leaf wetness Cimel HU 1871 (weekly check, bi-annual replacement); humidity Vaisala HMP110 (annual calibration); global radiation Kipp & Zonen CMP6 pyranometer (annual calibration); PAR Lite (annual calibration); tipping rain gauge 0.5 mm (annual calibration); cup anemometer Cimel CE 155 N; air temperature at 2 m, 50 cm and 10 cm and soil temperature at 10 and 50 cm by Pt100 probes.
+
+## Bearing (2026-10-27)
+
+- **Tier:** common to research. A network with one wetness sensor type and a stated replacement cycle is the kind of series that can validate a wetness fill. Sensor height for wetness: not read here (see the held note). Kind of result: network description.
