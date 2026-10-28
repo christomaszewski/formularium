@@ -1047,6 +1047,7 @@ Numbers garbled by text extraction are marked as such, never guessed.
 | [prieto2020](prieto2020.md) | none | 3D radiosity, canopy gas exchange | France (Montpellier) | A 3D radiosity model of vine light (daily intercepted fraction RMSE 4 %); no equations printed |
 | [prillieux1883](prillieux1883.md) | downy mildew | oospores, germination, overwintering, primary infection | France (Nérac) | Offers the truth a dated 1883 observation that oospores germinate by a germ tube, which supports the spring-i… |
 | [prillieux1887](prillieux1887.md) | downy mildew | oospores, soil infection, germination, primary infection, o… | France, Indre-et-Loire, Isère valley, Gard, Neufc… | None. Recorded so that it is not read again. |
+| [proconseil2021](proconseil2021.md) | downy mildew | phenology, budburst, flowering | Switzerland (Vaud) | Chasselas budburst and full flowering in Vaud, 2011-2021 (site not named; not Changins) |
 | [prodorutti2006](prodorutti2006.md) | downy mildew | oospore germination | Trentino | Seven seasons of germination delay |
 | [puelles2020](puelles2020.md) | downy mildew | spray timing | La Rioja | A bachelor's thesis with the UR model's first rules |
 | [puelles2024](puelles2024.md) | downy mildew | oospores, infection, sporulation, validation | La Rioja | The engine's UR rules: Goidanich plus the 3-10 rule, Gehmann's oospores, 50 °C·h |
