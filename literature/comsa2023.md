@@ -36,3 +36,7 @@ Two years of field scoring (2021, 2022) of downy and powdery mildew on five new 
 - s4, weakly: monthly means only, no within-vineyard microclimate. A simulator could take
   nothing but the order of magnitude of attack degree under mean humidity 69 % to 74 %. Not
   read in full.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add: Blaj 2021 first symptoms of primary infection on leaves 2 June 2021; plots sprayed 8 times for downy mildew; Adcon station; printed longitude minutes (93) invalid. 5 of 5 quotes found.

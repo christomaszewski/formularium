@@ -58,3 +58,7 @@ Seven pages from Bonn, in German with an English summary: the laboratory data be
 - Sporulation needs at least 4 h of darkness at 98 % RH or more: the conditions behind
   later "moist dark hours" rules, though the engine's Caffi 2013 rule was fitted to its own
   data.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add: first infection (Erstbefall) 1977: Bad Neuenahr (Ahr) 11 July, Deidesheim (Pfalz) 5 August, Oberdollendorf (Siebengebirge) 12 August (p. 160, section 4; day of the Ahr date read in the page image, the text layer is cut off). Cultivar and treatment not stated.

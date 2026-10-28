@@ -35,3 +35,7 @@ files: [q203.pdf]
 
 - Less vegetative vigour, less downy mildew, under sprays: context for a truth's host
   susceptibility. No untreated data.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add to reinehr2021 (2026-10-28): site 28°17'39"S 49°55'56"W, 1,430 m (l. 89); first symptoms "beginning of November 2017 and the middle of November 2018" (l. 275-276); daily rain, RH and hourly temperature from Epagri (l. 102), September to February.

@@ -36,3 +36,7 @@ files: [br_brs_vitoria_temporal_2018.pdf]
 
 - A subtropical double-cropping case: one crop escapes, the other has an epidemic. A
   season-timing pattern far outside the engine's calibration.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+Add to pereira2018 (2026-10-28): site 23°29'06"S 51°47'30"W, 602 m (l. 179); first symptoms 25 Feb 2014 (33 days after pruning) and 20 Feb 2015 (30 days) in the untreated control (l. 260-261); pruning therefore about 2014-01-23 and 2015-01-21 (arithmetic, not printed). uMETOS station in the vineyard: daily Tmin, Tmax, rain (l. 263-264).

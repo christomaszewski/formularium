@@ -41,3 +41,7 @@ In Korean, with an English abstract. Author romanisations are the main session's
 
 - Context: a humid East Asian monsoon setting where first symptoms come in late July. No
   usable model.
+
+## Dated seasons (2026-10-28, for Agrarium D64)
+
+- Dated seasons (2026-10-28, reread for D64): first found in an unsprayed Kyoho plot on 2009-07-22 and 2010-08-03 (l.96-97); survey every 1-2 d before onset (l.68-69); station: Campbell CR10 in the institute grounds, hourly T, RH, rain, wetness 2008-2010 (l.64). Rows in real_outcomes_d64.csv. Position is not printed.
