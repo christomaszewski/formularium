@@ -58,6 +58,21 @@ files: [ronzon1987_these.pdf]
 - **Not legible:** tables 11-22 and 24-26 were not read from the page images; OCR-garbled
   values are marked in the reading, not used.
 
+## The compensation indices (read 2026-10-27)
+
+- p. 93 (page image): ESPm = the monthly mean rain over at least 20 years (1951-1985) divided
+  by the "nombre de jours de pluie"; ESPM = 18 / NJM = 9 mm, from the EPI model. NJM is
+  defined on p. 31 as the mean number of rainy days in the month over at least 20 years, with
+  no rain threshold given.
+- p. 94: the daily rules, as the paper prints them later. MAN(J) = ESPm - PL(J) whenever
+  PL(J) < ESPm, so a dry day lacks the whole ESPm; the count runs daily from 21 September of
+  year n-1 to 31 March, 1977-1986.
+- **Tableau 25** (p. 150, printed sideways; read in the rotated page image): the monthly
+  compensation indices, September to March, 1977-1986. Transcribed in
+  `ronzon1987_tableau25.csv`.
+- On Bordeaux-Mérignac's daily rain, Tableau 25 is reproduced (MAE 17) only with ESPm taken as
+  the month's mean daily rain, not over rainy days (see [tranmanhsung1990](tranmanhsung1990.md)).
+
 ## Dependence
 
 - **EPI:** Strizyk's own model, with no engine model computed. Its form (a potential index

@@ -24,6 +24,14 @@ it counts as LAC = 0 (no effect). With T rounded to the nearest day on a 365-day
 January's indices in Table 1 give 11 of Table 3's 12 dates exactly and 1982 a day late, and the
 three limit indices give the printed 1 May, 14 April and 27 March.
 
+**What the printed tables need (checked 2026-10-27 on Bordeaux-Merignac's daily rain).** Hm as
+printed, RM over the rainy days, does not give indices of the printed size: a dry day then lacks
+5-9 mm and January falls to -37 to -668. Hm as the month's mean daily rain, RM over the days in
+the month, with HM = 9 mm, gives Table 1 within MAE 17 (January r = 0.98) and Ronzon's Tableau
+25 within MAE 17. So pass rainy_days = the days in the month to lower_limit to reproduce the
+paper; the record's flag gives the numbers. The rules themselves (a dry day lacks the whole Hm,
+the count from 21 September) are as Ronzon prints them (p. 94).
+
 Parameters are arguments, never defaults: each tool passes its own.
 """
 
