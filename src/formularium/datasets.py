@@ -1919,4 +1919,263 @@ DATASETS: dict[str, Dataset] = {
         ),
         "trail",
     ),
+    "lacuevaperez2026.aragon_phenology": Dataset(
+        (
+            "Weekly grapevine stage calls (Baggiolini, translated to BBCH 0-81; no ripening "
+            "stages) by field technicians of Aragon's plant-health network in three PDOs "
+            "(Calatayud, Campo de Borja, Carinena), 2016-2022, joined to 30-minute station "
+            "weather (gaps filled from ERA5 by Open-Meteo), heat and chill sums and "
+            "Sentinel-2 NDVI; 18,231 registry samples; six varieties. Weather columns include "
+            "days after each record's date. CC BY 4.0 (the preprint), Zenodo "
+            "10.5281/zenodo.20124340; the source registry (Red FARA) is restricted"
+        ),
+        (
+            "literature/lacuevaperez2026 (the data note, a preprint) and lacuevaperez2026dif "
+            "(the deposit's description), read 2026-10-27; they disagree on the heat-sum cap "
+            "and stage list, as the notes say. Found for training plant models on real, "
+            "synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "labbe2019.beaune": Dataset(
+        (
+            "Start of the grape harvest at Beaune, Burgundy, one date a year 1354-2018 from "
+            "archives and newspapers, with the Paris April-July temperature series it was "
+            "fitted to; a grower's decision, not a ripeness measurement. On the Euro-Climhist "
+            "platform (Bern); its licence is not stated in the paper (CC BY 4.0)"
+        ),
+        (
+            "literature/labbe2019, read 2026-10-27. Found for training plant models on real, "
+            "synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "wolkovich2017.davis": Dataset(
+        (
+            "Day of budburst (E-L 4), 50 % flowering, 50 % veraison and of 22 degrees Brix "
+            "for 70 varieties in one common garden at Davis, California, in 2015, observed; "
+            "KNB 10.5063/f1rf5s05 ('Variety phenology'), deposit not opened, licence not read"
+        ),
+        (
+            "literature/wolkovich2017, read 2026-10-27. Found for training plant models on "
+            "real, synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "gras2023.estate": Dataset(
+        (
+            "One 30 ha rain-fed estate at Villeneuve-les-Maguelone (Herault), 68 blocks: 2022 "
+            "harvest mass, yield and must sugar, acidity, pH and nitrogen per 0.3 ha "
+            "harvester sector (potential alcohol computed from sugar), and 15-minute "
+            "temperature, humidity and rain from one station 2020-2022. Zenodo "
+            "10.5281/zenodo.8328384; the article is CC BY (the record's CC BY 4.0 not in the "
+            "paper)"
+        ),
+        (
+            "literature/gras2023, read 2026-10-27. Found for training plant models on real, "
+            "synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "oger2023.yield_components": Dataset(
+        (
+            "Per-vine status, inflorescence counts, and (Field 1, half the rows) bunch "
+            "weights and yield for two Syrah fields in southern France, Field 1 in 2022 "
+            "(2,614 vines) and Field 2 in 2008 (1,030), with soil resistivity and satellite "
+            "FCover/NDVI. Zenodo 10.5281/zenodo.8318944 (not 8171030); the article is CC BY"
+        ),
+        (
+            "literature/oger2023, read 2026-10-27. Found for training plant models on real, "
+            "synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "zhang2025water.villeneuve": Dataset(
+        (
+            "Vine water status in 2022 at the same estate as gras2023.estate: weekly "
+            "shoot-growth index (761 values, 70 plots), predawn leaf water potential (720, "
+            "weekly in 12 plots), berry d13C (70, one date) and daily station weather. Zenodo "
+            "10.5281/zenodo.13992359; the article is CC BY"
+        ),
+        (
+            "literature/zhang2025water, read 2026-10-27. Found for training plant models on "
+            "real, synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "santos2020wgisd.wgisd": Dataset(
+        (
+            "Embrapa WGISD: 300 RGB images of trellised vines at one Brazilian winery "
+            "(2017-04, 2018-04), 4,432 bunch boxes and 2,020 masks, five varieties, "
+            "hand-labelled. Zenodo 10.5281/zenodo.3361736; CC BY-NC 4.0 in the paper (the "
+            "record is read as CC BY-NC-SA 4.0)"
+        ),
+        (
+            "literature/santos2020wgisd, read 2026-10-27. Found for training plant models on "
+            "real, synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "blekos2023.certh": Dataset(
+        (
+            "2,502 smartphone images of 'Crimson Seedless' table grapes in one Greek vineyard "
+            "(2022-2023), 9,832 bunch masks labelled with an interactive segmentation tool, "
+            "three maturity classes by colour (not Brix), split 2,000/251/251. Zenodo "
+            "10.5281/zenodo.10777647, about 20 GB, CC BY 4.0 (the record, not the paper)"
+        ),
+        (
+            "literature/blekos2023, read 2026-10-27. Found for training plant models on real, "
+            "synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "hughes2015.plantvillage_grape": Dataset(
+        (
+            "PlantVillage's grape classes: 4,063 leaf images (black rot 1,180; Phaeomoniella "
+            "1,384; leaf blight 1,076; healthy 423) from US land-grant stations before 2016, "
+            "mostly detached leaves on a plain background; no downy or powdery mildew. CC "
+            "BY-SA 3.0, share-alike extended to trained algorithms; www.plantvillage.org"
+        ),
+        (
+            "literature/hughes2015, read 2026-10-27. Found for training plant models on real, "
+            "synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "gayakwad2026.gvlid": Dataset(
+        (
+            "GVLiD: 3,477 smartphone images of grape leaves from 34 vineyards at Tasgaon, "
+            "Maharashtra, July-November 2023 (black rot 809, esca 888, leaf blight 672, "
+            "healthy 1,109), one expert labeller; no mildew class. Mendeley "
+            "10.17632/wkymf8bhcg.5; the article is CC BY 4.0"
+        ),
+        (
+            "literature/gayakwad2026, read 2026-10-27. Found for training plant models on "
+            "real, synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "portela2026leaves.portugal": Dataset(
+        (
+            "5,267 smartphone images of grapevine leaves at four sites in northern Portugal, "
+            "2024-2025: healthy 1,122, downy mildew 1,006, powdery mildew 1,126, esca 1,000, "
+            "erineum mite 1,013, classed visually; class is confounded with date (2024 holds "
+            "only healthy and downy mildew). Zenodo 10.5281/zenodo.17343473, CC BY 4.0 (the "
+            "record)"
+        ),
+        (
+            "literature/portela2026leaves, read 2026-10-27. Found for training plant models "
+            "on real, synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "abdelghafour2021.merlot": Dataset(
+        (
+            "99 field RGB images of Merlot with downy mildew at Grande Ferrade, Bordeaux "
+            "(2018), 95 with pixel annotations in seven classes (more than 5 million pixels), "
+            "by photo-interpretation. With the article (Data in Brief 37:107250), CC BY-NC-ND "
+            "4.0"
+        ),
+        (
+            "literature/abdelghafour2021, read 2026-10-27. Found for training plant models on "
+            "real, synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "ryckewaert2023.leaves": Dataset(
+        (
+            "Laboratory hyperspectral cubes (400-900 nm, 204 bands, about 214 MB each) of "
+            "about 204 grape leaves from southern France, September 2020, with Dualex "
+            "readings: flavescence doree 80, healthy 40, downy mildew 2, other symptoms the "
+            "rest. Recherche Data Gouv 10.57745/WW7TY7; the article is CC BY 4.0"
+        ),
+        (
+            "literature/ryckewaert2023, read 2026-10-27. Found for training plant models on "
+            "real, synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "velez2024escayard.tomino": Dataset(
+        (
+            "EscaYard: 253 geotagged plant photos with esca presence, bunch counts, point "
+            "clouds and two UAV multispectral orthomosaics of two vineyards at Tomino, "
+            "Galicia, one flight on 2022-07-14. Zenodo 10.5281/zenodo.10362567, about 8 GB; "
+            "the article is CC BY"
+        ),
+        (
+            "literature/velez2024escayard, read 2026-10-27. Found for training plant models "
+            "on real, synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "velez2023lidar.tomino": Dataset(
+        (
+            "VineLiDAR: ten UAV LiDAR point clouds (RGB per point) of the same two Tomino "
+            "vineyards on 2021-09-16, 2022-07-14 and 2022-09-08 at 20-50 m above ground. "
+            "Zenodo 10.5281/zenodo.8113105, about 2.8 GB; the article is CC BY"
+        ),
+        (
+            "literature/velez2023lidar, read 2026-10-27. Found for training plant models on "
+            "real, synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "ferreira2026.vilareal": Dataset(
+        (
+            "Terrestrial laser scans of 52 vines at one vineyard near Vila Real, Portugal, at "
+            "nine BBCH stages 2024-04 to 2025-01, with measured LAI, yield and pruning "
+            "weight. Zenodo 10.5281/zenodo.16751663; the article is CC BY-NC, the record's "
+            "licence unchecked"
+        ),
+        (
+            "literature/ferreira2026, read 2026-10-27. Found for training plant models on "
+            "real, synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "saccuti2025.correggio": Dataset(
+        (
+            "172 six-band multispectral captures (MicaSense RedEdge-P) of Lambrusco vines "
+            "with flavescence doree, esca or none at two vineyards at Correggio, Emilia, "
+            "labelled per plant by agronomists. Zenodo 10.5281/zenodo.14936376, 4.8 GB, CC BY "
+            "4.0 (the record)"
+        ),
+        (
+            "literature/saccuti2025, read 2026-10-27. Found for training plant models on "
+            "real, synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
+    "parker2024.california_modelled": Dataset(
+        (
+            "Stage dates (chill completion, budburst, flowering, veraison, maturity) for six "
+            "varieties in 12 California AVAs, 1991-2020 and 2040-2069: model output of "
+            "threshold phenology models on gridMET and 20 downscaled climate models, not "
+            "observations, though one data note tabulates them as observed. USDA Ag Data "
+            "Commons record, licence not read"
+        ),
+        (
+            "literature/parker2024, read 2026-10-27. Found for training plant models on real, "
+            "synthetic and augmented data (the 2026-10-27 pass, "
+            "literature/unread/2026-10-27-synthetic-training.md)"
+        ),
+        "read",
+    ),
 }
