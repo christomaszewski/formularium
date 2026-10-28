@@ -52,6 +52,11 @@ something a tool runs.
 - **Garbles:** drop volumes printed as ml where ul is meant (l. 325-326); Eq 3 and Eq 7 units are
   not reconciled with cm/min in Eqs 4-5; powers of ten are lost in the text layer.
 
+## Eq 7: drying in still air (2026-10-28, for Agrarium D60)
+
+- **Eq 7 (page image):** SWD = 19.6 + 37.0 x 0.34^U, SWD in min, U in m/s, for 5 ul drops at the standard conditions; the fit that gave cd = 8.7. It is finite at U = 0 (56.6 min; 41.2 min at 0.5 m/s; 32.2 at 1; 23.9 at 2; arithmetic, not printed). The wind experiments ran from 0 to 5.0 m/s in a laboratory with a fan (Table 1, l. 254; wind by Kurz 490 mini-anemometer). So the data behind h = c U^0.5 contain a still-air drying time, which h = c U^0.5 cannot give.
+- **Caveat:** whether the U = 0 runs were truly still is not stated in the lines read.
+
 ## Dependence
 
 - **Borrowed:** Tanner & Fuchs 1968 and Bird et al. 1960 (not in the catalogue).
