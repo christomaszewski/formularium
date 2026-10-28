@@ -52,6 +52,17 @@ def test_the_roles_judged_so_far() -> None:
     }
 
 
+def test_no_record_lists_a_parameter_twice() -> None:
+    # `published(name)` returns the first; a second entry under the same name is never read
+    twice = {
+        fid: sorted(
+            {q.name for q in f.parameters if [p.name for p in f.parameters].count(q.name) > 1}
+        )
+        for fid, f in FORMULATIONS.items()
+    }
+    assert {fid: names for fid, names in twice.items() if names} == {}
+
+
 def test_ids_are_lower_case_ascii() -> None:
     for name in FORMULATIONS:
         assert re.fullmatch(r"[a-z0-9][a-z0-9._\-]*", name), name
