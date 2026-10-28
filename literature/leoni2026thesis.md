@@ -67,5 +67,12 @@ of pp. 182-183, are in `leoni2026_changins_primary.csv`, one row per year 2004-2
 - The plot is at 46°23'47.7"N 6°13'54.0"E (p. 158); the Agrometeo station at 46°23'53.4"N
   6°13'50.4"E (p. 160), about 190 m away (arithmetic).
 - The GLM was fitted on germination observations of 2004-2024, so only 2025 lies outside its
-  fitting years.
+  fitting years. Confirmed 2026-10-27: Table 3.1's n = 96 is "the complete dataset (n = 96)"
+  before BBCH 13, against "recent observations (n = 24)" (p. 166); the full set is 175
+  observations (p. 162). Which year each of the 96 is from is not printed.
+- Table 3.3's observed oospore maturity is "the laboratory-observed maturity date" (p. 172):
+  the same germination tests, by the same method, in the years they share. That is how the
+  thesis names it; the rule that turns a year's tests into one date (the first MTG at 1, or
+  below 1.5) is not stated in the passages read. Through the threshold, which was chosen to
+  fit these dates (p. 172), 2025 also bears on the model.
 

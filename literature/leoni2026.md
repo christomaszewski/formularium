@@ -19,6 +19,12 @@ files: [9963_Leoni_article_.pdf]
 
 - **Data:** oospore germination tests on Chasselas leaves at Changins (Nyon), systematic in
   2022-2024 (60 observations, 55 kept), plus 120 historical ones from 2004-2021: 175 in all.
+- **Fitting years (read 2026-10-27, for Cooptera's request):** the GLM's n = 96 is "the
+  complete dataset (n = 96)" before BBCH 13, against "recent observations (n = 24)" (p. 8),
+  so it is fitted on 2004-2024, not 2022-2024. The 2004-2025 series is where the GLM's dates
+  were set beside VitiMeteo's and the observed primary infections (p. 11, Tables S1-S2),
+  and where MTG < 1.5 d was chosen as the one that "aligns most closely with the observed
+  maturity date" (p. 13).
 - **Response:** MTG, the mean time to germination of a sample in the laboratory; oospores
   count as mature when MTG < 1.5 days, a threshold chosen against observed primary-infection
   dates in the field.
