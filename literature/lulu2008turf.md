@@ -27,6 +27,12 @@ Chapter 3 of [lulu2008thesis](lulu2008thesis.md).
 - Vineyard top (south-west): CART R² 0.87, d 0.96, mean error 0.65 h; the printed c
   (0.9332) does not follow from d and R².
 - CART was adapted to 20-min data here (Sentelhas 2004's note says 15).
+- Vineyard top (south-west), each model run on the turf station's weather against sensors in
+  the canopy (Table 3, l. 363-372; read 2026-10-27): mean error and MAE, Penman-Monteith -2.74
+  and 2.93 h, RH > 90 % 2.34 and 2.42 h, dew-point depression 1.60 and 1.94 h, CART 0.65 and
+  1.61 h. Table 3's mean error is measured minus estimated (its header), the reverse of Eq. 12
+  (l. 188): the text says Penman-Monteith overestimated the vineyard's wetness, by about 2.9 h,
+  and the other models underestimated it (l. 315-319).
 
 ## Dependence
 
@@ -37,3 +43,6 @@ Chapter 3 of [lulu2008thesis](lulu2008thesis.md).
 
 - Errors of RH-threshold wetness in a subtropical vineyard: hours above 90 % RH
   under-count wetness by about 2.8 h a day on turf.
+- (2026-10-27) The one vineyard figure found for the RH > 90 % rule in hours a day: from a
+  station over turf it under-counts the wetness at a vine canopy's top by 2.3 h a day (MAE
+  2.4 h), one cultivar, one subtropical summer. Humidity was not measured in the canopy.
