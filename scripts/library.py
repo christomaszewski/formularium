@@ -3,6 +3,7 @@
     python scripts/library.py build DROP [DROP ...] [--library LIB] [--go]
     python scripts/library.py check [--library LIB]
     python scripts/library.py file ID PAPER [--text TXT] [--library LIB]
+    python scripts/library.py text ID TXT [--library LIB]
 
 Papers stay out of every repository, so the library lives on the machines that hold the
 papers; LIB defaults to `$FORMULARIUM_LIBRARY`. Its layout:
@@ -20,7 +21,8 @@ notes are not yet filed, a note's paper found in `inbound/` (moved to its id), a
 papers without notes (to `inbound/`); anything already held, by checksum, is left alone.
 `check` finds notes whose files are not in the library, files not in the manifest,
 and copies whose checksum changed. `file` moves a paper from `inbound/` (or copies one from
-elsewhere) to its note's id once the note names it. Standard library only.
+elsewhere) to its note's id once the note names it. `text` adds the text copy of a paper
+already filed, as `<id>.txt`, when `file` was run without `--text`. Standard library only.
 
 A note's `files` may annotate a name, as `paper.pdf (the 2026-10-18 drop, supplied by
 Chris)`: the annotation is dropped, commas inside it do not split the list.
@@ -327,6 +329,19 @@ def file_paper(note: str, paper: Path, text: Path | None, notes: dict, library: 
     return new
 
 
+def file_text(note: str, text: Path, library: Path) -> dict:
+    """Add `<id>.txt` beside a paper already filed under `note`; refuse if it has one."""
+    rows = read_manifest(library)
+    if not any(r["note"] == note and not r["path"].endswith(".txt") for r in rows):
+        sys.exit(f"{note} has no paper in the library: file the paper first")
+    dest = note + ".txt"
+    if any(r["path"] == dest for r in rows):
+        sys.exit(f"{dest} is already in the library")
+    row = _place(text, library, dest, note, text.name, move=False)
+    write_manifest(library, [*rows, row])
+    return row
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("--library", type=Path, default=os.environ.get("FORMULARIUM_LIBRARY"))
@@ -341,6 +356,9 @@ def main() -> int:
     f.add_argument("note")
     f.add_argument("paper", type=Path)
     f.add_argument("--text", type=Path)
+    t = sub.add_parser("text")
+    t.add_argument("note")
+    t.add_argument("text", type=Path)
     args = parser.parse_args()
     if args.library is None:
         parser.error("give --library or set FORMULARIUM_LIBRARY")
@@ -377,6 +395,10 @@ def main() -> int:
             print(problem)
         print(f"{len(problems)} problems")
         return 1 if problems else 0
+    if args.command == "text":
+        row = file_text(args.note, args.text, args.library)
+        print("filed", row["path"])
+        return 0
     for row in file_paper(args.note, args.paper, args.text, notes, args.library):
         print("filed", row["path"])
     return 0
