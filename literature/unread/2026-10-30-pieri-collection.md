@@ -42,7 +42,7 @@ Candidate formulations, with their equations and pages, are in the drop
 
 From the inventory's Crossref, OpenAlex or HAL records. None is in the collection.
 
-**Microclimate and wetness**
+**Microclimate and wetness** (the two Pieri 2010 papers were obtained on 2026-10-30, from Chris: notes `pieri2010`, `pieri2010b`)
 - Pieri, P. 2010. Modelling radiative balance in a row-crop canopy: Row–soil surface net
   radiation partition. Ecol. Model. 221(5):791-801. doi:10.1016/j.ecolmodel.2009.11.019
 - Pieri, P. 2010. Modelling radiative balance in a row-crop canopy: Cross-row distribution of
