@@ -10,7 +10,7 @@ regions: [France]
 processes: [climate change, phenology, water balance, leaf wetness, Botrytis, fungicide sprays, downscaling]
 records: []
 datasets: []
-files: [dr1030_brisson2010.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2010-brisson-url-pieri-climator-book.pdf)]
+files: [dr1030_brisson2010.pdf (from Chris's Pieri collection, the inbound folder: 2010-brisson-url-pieri-climator-book.pdf)]
 ---
 
 # Brisson and Levrault (eds) 2010: the CLIMATOR green book, French edition

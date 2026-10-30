@@ -10,7 +10,7 @@ regions: [France, Bordeaux]
 processes: [cluster microclimate, light exposure, cluster compactness, Botrytis cinerea, growth chamber bioassay, lesion spread]
 records: []
 datasets: []
-files: [dr1030_fermaud2001.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2001-fermaud-url-pieri-fermaud-2001-cluster.pdf)]
+files: [dr1030_fermaud2001.pdf (from Chris's Pieri collection, the inbound folder: 2001-fermaud-url-pieri-fermaud-2001-cluster.pdf)]
 ---
 
 # Fermaud et al. 2001: light and cluster compactness change how far Botrytis spreads in ripening clusters (growth chamber, 3 trials)

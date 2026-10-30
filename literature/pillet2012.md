@@ -10,7 +10,7 @@ regions: [France, Bordeaux]
 processes: [berry temperature, heat stress, fruiting cutting, local heating, thermocouple]
 records: []
 datasets: []
-files: [dr1030_pillet2012.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2012-pillet-10-1093-pcp-pcs121.pdf)]
+files: [dr1030_pillet2012.pdf (from Chris's Pieri collection, the inbound folder: 2012-pillet-10-1093-pcp-pcs121.pdf)]
 ---
 
 # Pillet et al. 2012: heating only the bunch of potted Cabernet Sauvignon cuttings by 6 and 9 C, and what it did to galactinol genes

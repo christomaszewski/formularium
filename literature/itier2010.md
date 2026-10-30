@@ -10,7 +10,7 @@ regions: [France]
 processes: [aquifer recharge, water balance, climate change, cropping systems, irrigation, STICS, Biljou]
 records: []
 datasets: []
-files: [dr1030_itier2010.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2010-itier-url-pieri-hal-01192205.pdf)]
+files: [dr1030_itier2010.pdf (from Chris's Pieri collection, the inbound folder: 2010-itier-url-pieri-hal-01192205.pdf)]
 ---
 
 # Itier et al. 2010: how much rain becomes aquifer recharge under different crops, and how that falls with climate change

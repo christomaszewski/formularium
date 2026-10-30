@@ -10,7 +10,7 @@ regions: [France, Bordeaux, Medoc, Saint-Julien]
 processes: [vine water balance, sap flow, evapotranspiration, predawn leaf water potential, cover crop, grass competition, drought]
 records: []
 datasets: []
-files: [dr1030_pieri1996.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/1996-pieri-url-pieri-hal-02770470.pdf)]
+files: [dr1030_pieri1996.pdf (from Chris's Pieri collection, the inbound folder: 1996-pieri-url-pieri-hal-02770470.pdf)]
 ---
 
 # Pieri et al. 1996: water balance of grassed and tilled vines in the 1995 Bordeaux drought

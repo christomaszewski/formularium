@@ -10,7 +10,7 @@ regions: [France, Bordeaux, Avignon]
 processes: [water balance, fraction of transpirable soil water, planting density, row spacing, canopy geometry, yield, production cost, climate change]
 records: []
 datasets: []
-files: [dr1030_vanleeuwen2019.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2019-leeuwen-10-20870-oeno-one-2019-53-2-2420.pdf)]
+files: [dr1030_vanleeuwen2019.pdf (from Chris's Pieri collection, the inbound folder: 2019-leeuwen-10-20870-oeno-one-2019-53-2-2420.pdf)]
 ---
 
 # van Leeuwen, Pieri, Gowdy, Ollat and Roby 2019: wide rows and the vine water balance, Bordeaux and Avignon, now and 2041-2070

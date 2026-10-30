@@ -10,7 +10,7 @@ regions: [France]
 processes: [climate change, leaf wetness duration, wet degree-days, Botrytis, fungicide sprays, downscaling uncertainty]
 records: []
 datasets: []
-files: [dr1030_gouache2011.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2011-gouache-url-pieri-hal-01192329.pdf)]
+files: [dr1030_gouache2011.pdf (from Chris's Pieri collection, the inbound folder: 2011-gouache-url-pieri-hal-01192329.pdf)]
 ---
 
 # Gouache, Roche, Pieri and Bancal 2011: climate change and three fungal pathosystems (English chapter)

@@ -10,7 +10,7 @@ regions: [France, Bordeaux]
 processes: [berry temperature, local heating, fruiting cutting, veraison onset, thermocouple]
 records: []
 datasets: []
-files: [dr1030_ouakedlecourieux2017.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2017-ouaked-lecourieux-10-3389-fpls-2017-00053.pdf)]
+files: [dr1030_ouakedlecourieux2017.pdf (from Chris's Pieri collection, the inbound folder: 2017-ouaked-lecourieux-10-3389-fpls-2017-00053.pdf)]
 ---
 
 # Ouaked-Lecourieux et al. 2017: a local +8 C on Cabernet Sauvignon clusters at three stages delays veraison and cuts anthocyanin

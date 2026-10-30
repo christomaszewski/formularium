@@ -10,7 +10,7 @@ regions: [France, Charentes, Gironde]
 processes: [trunk disease incidence, drought, temperature sum]
 records: []
 datasets: []
-files: [dr1030_lecomte2012.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2012-lecomte-url-pieri-hal-02749248.pdf)]
+files: [dr1030_lecomte2012.pdf (from Chris's Pieri collection, the inbound folder: 2012-lecomte-url-pieri-hal-02749248.pdf)]
 ---
 
 # Lecomte et al. 2012: esca in France, slides on incidence and probable causes

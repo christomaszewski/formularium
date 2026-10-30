@@ -10,7 +10,7 @@ regions: [France, Montpellier, Bordeaux]
 processes: [temperature response, whole-plant gas exchange, bunch heating, breeding, photosynthesis optimum]
 records: []
 datasets: []
-files: [dr1030_torregrosa2017.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2017-torregrosa-10-20870-oeno-one-2016-0-0-1587.pdf)]
+files: [dr1030_torregrosa2017.pdf (from Chris's Pieri collection, the inbound folder: 2017-torregrosa-10-20870-oeno-one-2016-0-0-1587.pdf)]
 ---
 
 # Torregrosa et al. 2017: grapevine response to temperature, from whole-plant chambers (microvine) to heated bunches, as a breeding programme

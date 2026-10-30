@@ -10,7 +10,7 @@ regions: [Bordeaux, Alsace, Saint-Émilion, France]
 processes: [climate change, phenology, sugar ripeness model, trunk height, canopy temperature, leaf area to fruit weight, row spacing, drought]
 records: []
 datasets: []
-files: [dr1030_vanleeuwen2019b.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2019-leeuwen-10-3390-agronomy9090514.pdf)]
+files: [dr1030_vanleeuwen2019b.pdf (from Chris's Pieri collection, the inbound folder: 2019-leeuwen-10-3390-agronomy9090514.pdf)]
 ---
 
 # van Leeuwen et al. 2019: a review of climate change impacts on viticulture and adaptations

@@ -10,7 +10,7 @@ regions: [Europe]
 processes: [climate projection, bias adjustment, phenology, suitability index, hydrothermic index, dryness index, varietal turnover]
 records: []
 datasets: []
-files: [dr1030_sgubin2023.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2023-sgubin-10-1111-gcb-16493.pdf)]
+files: [dr1030_sgubin2023.pdf (from Chris's Pieri collection, the inbound folder: 2023-sgubin-10-1111-gcb-16493.pdf)]
 ---
 
 # Sgubin et al. 2023: a fuzzy suitability index for European wine regions under warming, with a seasonal precipitation-temperature term for disease risk

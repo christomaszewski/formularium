@@ -10,7 +10,7 @@ regions: [France]
 processes: [climate change, phenology, water balance, leaf wetness duration, wet degree-days, Botrytis, fungicide sprays]
 records: []
 datasets: []
-files: [dr1030_gouache2010.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2010-gouache-url-pieri-climator-proceedings.pdf)]
+files: [dr1030_gouache2010.pdf (from Chris's Pieri collection, the inbound folder: 2010-gouache-url-pieri-climator-proceedings.pdf)]
 ---
 
 # CLIMATOR proceedings 2010: the vine summary (Pieri and Lebon) and the fungicide summary (Gouache et al.)

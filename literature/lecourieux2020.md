@@ -10,7 +10,7 @@ regions: [France, Bordeaux]
 processes: [berry heat stress, proteomics, metabolomics, local heating]
 records: []
 datasets: []
-files: [dr1030_lecourieux2020.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2020-lecourieux-10-1111-jipb-12894.pdf)]
+files: [dr1030_lecourieux2020.pdf (from Chris's Pieri collection, the inbound folder: 2020-lecourieux-10-1111-jipb-12894.pdf)]
 ---
 
 # Lecourieux et al. 2020: proteins and metabolites of Cabernet Sauvignon berries heated by 8 C at three stages

@@ -10,7 +10,7 @@ regions: [France, Bordeaux, Gironde]
 processes: [agroclimatic zoning, temperature interpolation, residual kriging, rainfall kriging, growing degree days, reference evapotranspiration, Turc, satellite radiation]
 records: []
 datasets: []
-files: [dr1030_bois2008c.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2008-bois-url-pieri-hal-00719903.pdf)]
+files: [dr1030_bois2008c.pdf (from Chris's Pieri collection, the inbound folder: 2008-bois-url-pieri-hal-00719903.pdf)]
 ---
 
 # Bois et al. 2008: mesoscale climate maps of Bordeaux (rain, temperature, radiation, ET0) and their errors

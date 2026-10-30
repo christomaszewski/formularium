@@ -10,7 +10,7 @@ regions: [France, Bordeaux, Pessac-Leognan]
 processes: [bulk stomatal conductance, Shuttleworth-Wallace, two-source energy balance, sap flow, vapour pressure deficit, in-canopy temperature and humidity, net radiation absorbed by the canopy, sensitivity analysis]
 records: []
 datasets: []
-files: [dr1030_gowdy2022b.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2022-gowdy-10-3389-fpls-2022-839378.pdf)]
+files: [dr1030_gowdy2022b.pdf (from Chris's Pieri collection, the inbound folder: 2022-gowdy-10-3389-fpls-2022-839378.pdf)]
 ---
 
 # Gowdy et al. 2022: a two-source method for whole-vine stomatal conductance from sap flow and in-canopy air

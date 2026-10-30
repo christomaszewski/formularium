@@ -10,7 +10,7 @@ regions: [France, Bordeaux]
 processes: [soil water deficit, fraction of transpirable soil water, predawn leaf water potential, carbon isotope discrimination, stomatal closure, varietal response, hydroscape, water balance model]
 records: []
 datasets: []
-files: [dr1030_gowdy2018.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2018-gowdy-10-1051-e3sconf-20185001043.pdf)]
+files: [dr1030_gowdy2018.pdf (from Chris's Pieri collection, the inbound folder: 2018-gowdy-10-1051-e3sconf-20185001043.pdf)]
 ---
 
 # Gowdy et al. 2018: predawn potential and berry delta13C against modelled soil water, in a 52-variety garden

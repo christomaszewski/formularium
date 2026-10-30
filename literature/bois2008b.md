@@ -10,7 +10,7 @@ regions: [France, Bordeaux, Gironde]
 processes: [solar radiation, satellite irradiation, HelioClim-1, kriging, terrain, slope and aspect, r.sun, diffuse fraction, clearness index, zoning]
 records: []
 datasets: []
-files: [dr1030_bois2008b.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2008-bois-10-20870-oeno-one-2008-42-1-829.pdf)]
+files: [dr1030_bois2008b.pdf (from Chris's Pieri collection, the inbound folder: 2008-bois-10-20870-oeno-one-2008-42-1-829.pdf)]
 ---
 
 # Bois et al. 2008: daily solar radiation maps of Bordeaux from satellite data, with terrain

@@ -10,7 +10,7 @@ regions: [France, Centre-Nord, Sud-Ouest, Sud-Est]
 processes: [climate change, feasibility, phenology, water balance, irrigation need]
 records: []
 datasets: []
-files: [dr1030_levrault2010.pdf (from Chris's Pieri collection, library/inbound/pieri-2026-10-27/2010-levrault-url-pieri-hal-02814478.pdf)]
+files: [dr1030_levrault2010.pdf (from Chris's Pieri collection, the inbound folder: 2010-levrault-url-pieri-hal-02814478.pdf)]
 ---
 
 # Levrault, Brisson, Pieri and Bosc 2010: regional summaries of the CLIMATOR vine runs (French)
