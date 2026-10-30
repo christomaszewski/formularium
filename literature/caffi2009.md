@@ -48,3 +48,7 @@ no disease all season, six of them in 2003. It defines Rossi et al. 2008's prima
 started by each rain of 0.2 mm/h or more on wet litter. For Cooptera's open decision 17: an
 end to the primary season is a model's statement; the field data here give years with no
 disease, not a date.
+
+## Outside Italy (2026-10-29, for Agrarium D67)
+
+Add to caffi2009 (2026-10-29, 13 of 13 quotes found in the OCR): sites are Piedmont, Lombardy (Oltrepo Pavese), Emilia-Romagna, Marche, Basilicata, Sardinia (p. 537); the model is run from 1 January (p. 537); false-positive proportion Sardinia 0.31, Marche 0.23, Basilicata 0.16, others 0.05-0.08, sensitivity 1 in every region (p. 542); the authors say the sites represent Koeppen-Geiger Cfb, Cfc, Csa, Csb and that these "also cover all the grape-growing areas of Europe and of the Mediterranean Basin" (p. 545).

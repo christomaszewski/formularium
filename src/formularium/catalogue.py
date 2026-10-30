@@ -150,6 +150,17 @@ FORMULATIONS: dict[str, Formulation] = {
             " (2026-10-09): eq. 5's germination time, credited to Laviola et al. 1986 (p. 482),"
             " was fitted to their data (datasets.laviola1986); the fit is not stated"
         ),
+        flags=(
+            "Early infections often come to nothing: in 30 validation cases (FPP 0.08) the model"
+            " predicted an infection with no disease onset, 85 % of them within the first week"
+            " of May (Rossi et al. 2008, p. 488), put down to little susceptible host before"
+            " 5-6 leaves and low-density early cohorts (p. 489; read 2026-10-29). Caffi et al."
+            " 2009 (p. 542) found false alarms most often in the warmest, driest regions: 0.31"
+            " Sardinia, 0.23 Marche, 0.16 Basilicata.",
+            "The seasonal oospore dose is one: the model cannot say when the first of one or two"
+            " lesions appears in a vineyard with little inoculum (Agrarium D67; Brook 1992's"
+            " Auckland vineyard had one or two primary lesions a season).",
+        ),
     ),
     "rossi2008pp.dormancy": Formulation(
         "Oospore dormancy: the vapour-pressure-deficit moisture rule",
@@ -5893,6 +5904,18 @@ FORMULATIONS: dict[str, Formulation] = {
         authors_from="trail",
         part_of=("rossi2008.primary", "rossi2008pp.dormancy"),
         structures=("hydro-thermal-oospore-cohorts",),
+        flags=(
+            "Starts on 1 January in every climate, with no winter-cold term: cold breaking"
+            " dormancy 'is not included in the model because it is assumed that oospores must"
+            " experience such a low temperature in the winter of temperate climates' (Rossi et"
+            " al. 2008, p. 482; read 2026-10-29). No southern-hemisphere start is given. Rouzet &"
+            " Jacquin 2003 (pp. 440-441, one southern French site) say dormancy 'seems to be"
+            " lifted by low temperatures in autumn and early winter' (rouzet2003.cold_days).",
+            "Built on Emilia-Romagna (43 vineyards, 1995-2006) and validated in Italy only (Caffi"
+            " et al. 2009: 100 vineyards in six regions, 1995-2007). No test outside Italy was"
+            " found (Agrarium D67, literature/requests/rossi-climate-d67-answer.md); Caffi 2009's"
+            " claim that its sites' climate classes cover Europe's grape areas is not a test.",
+        ),
     ),
     "rossi2008.incubation": Formulation(
         "incubation window",

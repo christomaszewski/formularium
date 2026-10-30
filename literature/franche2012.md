@@ -56,3 +56,7 @@ Système, EPI, MILVIT) described but not used.
   doi:10.1111/j.1365-2338.2003.00670.x, closed access. Its abstract states no cold-day rule
   and doubts that maturation can yet be modelled, so the rule may be Franche's or ITK's
   reading. Not for a tool until the paper is read.
+
+## Outside Italy (2026-10-29, for Agrarium D67)
+
+Add to franche2012 (2026-10-29, 8 of 8 quotes found): Table 1 gives the date the 60-cold-day count (Tmax 7-15 °C) was reached in Aquitaine: 21 January 2002, 24 January 2003, 31 December 2004; in 2002 the primary inoculum season came out as 23 February-8 June. Report pp. 15-16 and 25.

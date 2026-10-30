@@ -46,3 +46,10 @@ uses. Only the incubation is noted here.
   record instead.
 - A truth using these curves holds Goidanich's table out of the engine. See
   [zachos1959](zachos1959.md) and [rafaila1968](rafaila1968.md) for incubations that stay.
+
+## Outside Italy (2026-10-29, for Agrarium D67)
+
+- Validation (p. 485-486): 43 natural epidemics in Emilia-Romagna, 1995-2006, 2-5 vineyards a year, first onset 11 May-29 June (median 25 May); 411 simulations, 79 % aborted; 57 accurate successful, 324 accurate aborted, 30 wrong successful, 0 wrong aborted; TPP 1, TNP 0.92.
+- p. 482: the count starts on 1 January 01:00 for every year. "exposure to low temperature during winter seems to play an important role in breaking dormancy (Galbiati and Longhin, 1984), but this effect is not included in the model because it is assumed that oospores must experience such a low temperature in the winter of temperate climates". Dormancy break DOR = exp(-15.891 exp(-0.653(HT+1))); primary season starts at HT 1.3 (3 %), ends 8.6 (97 %).
+- p. 487-489: 85 % of the 30 false alarms fell in the first week of May or earlier; early cohorts were of low density and plants had under 5-6 leaves.
+- No site outside Emilia-Romagna, none in Germany or a mild oceanic climate; no southern-hemisphere start.
