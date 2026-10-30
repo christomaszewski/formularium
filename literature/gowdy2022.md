@@ -48,3 +48,10 @@ Sap flow on 10 vines in a Bordeaux common garden gives canopy conductance by inv
 - **Canopy transpiration for the truth:** gbs by variety from Rc, Dc and predawn potential, then Eq. 1 for latent heat, gives vine transpiration with a published form and coefficients for five varieties in Bordeaux, VSP, 1.8 m by 1.0 m. It needs a soil water state to supply predawn potential, which the paper takes from a water balance model. Kind of result: a regression on one season, two vines per variety, checked only against another model.
 - **Canopy humidity:** Dc is an input here, not an output; the paper gives no equation that returns canopy VPD or humidity from transpiration. Agrarium would have to close the loop itself, and the paper notes that different transpiration changes FTSW and Psi (l. 802-806, grep). Not shown: leaf wetness, dew, or any disease link.
 - **Limits:** one summer, one dry-farmed plot, two vines per variety; no variety result outside Bordeaux; Eq. 1 with n = 2 and the Riou Rc are for open row canopies. The variety differences are small (Rc coefficient 0.161 to 0.303 standardized) and the authors say further study may be needed to separate them.
+
+## From the Pieri collection (2026-10-30)
+
+Lines to add to the note gowdy2022:
+
+- **Method paper:** the method gowdy2022 uses (Shuttleworth-Wallace big-leaf inversion on sap flow, in-canopy T and RH at 1.15 m, Riou 1989 absorbed radiation, rbl = 25 s per m) is set out in gowdy2022b (Frontiers in Plant Science 13:839378). It prints the constants (lambda 2257 J per g, gamma 65.8 Pa per C, Delta 145 Pa per C, rho Cp 1212 Pa per C) and the in-canopy sensor placement.
+- **Equation sign:** Eq. 2 of the method paper prints rbh (Delta/gamma - n); inverting its Eq. 1 gives (Delta/gamma + n) (arithmetic, not printed). Check this against the page image (gowdy2022b) before coding the gowdy2022 conductance.
