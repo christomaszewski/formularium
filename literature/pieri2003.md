@@ -63,3 +63,9 @@ and soil albedo. A diffuse-fraction fit on Bordeaux data drives it.
   form for a row's seasonal interception from spacing, height, width, azimuth and albedo,
   and a Bordeaux diffuse-fraction fit of the clearness-index form. Kin by form to the
   engine's clearness-index partition if one is listed; the row form is new.
+
+## From the Pieri collection (2026-10-30)
+
+- **Where it is used:** CLIMATOR's vine water balance model BHV cites Pieri and Gaudillère 2003 as its reference and computes interception from the shape of the canopy (brisson2010, l. 1867, 1958-1961).
+- **The albedo carried forward:** vanleeuwen2019 fixes soil albedo at 0.18 "consistent with Pieri and Gaudillère (2003)" in its conceptual vineyards (l. 286), with trunk 0.7 m, trellis 2.0 m, canopy 1.3 m by 0.45 m and porosity 10 to 15 %.
+- (main session, 2026-10-30) Eq. 3's diffuse fraction is the one Bois et al. print with more digits, kdh = min(1.09 - 2.6896 K^2 + 1.2843 K^3, 1) (`bois2008b`, Eqs 2-4), credited there to an unpublished Pieri and Valancogne fit: one fit, printed twice.
