@@ -71,3 +71,7 @@ conference, York, October 2002. Franche 2012's "60 cold days" rule cites this pa
   `rouzet2003.cold_days` is corrected to say so; it should not run as a maturation start.
 - Balma's 23-30 maturity dates and the primary-foci scores are data a truth's oospore and
   season-severity patterns could be compared with (sent to Agrarium 2026-10-09).
+
+## Outside Italy (2026-10-29, for Agrarium D67)
+
+Add to rouzet2003 (2026-10-29, reread in full, 14 of 14 quotes found): the paper does print the cold-day rule, as a correlation device at Balma, not a model: "If the calculation was started after the oospores had undergone 60 'cold' days, the correlation coefficients increased" (p. 440) and "the calculation was started when 60 'cold' days had passed (with maximum temperature between 7 and 15 °C)" (p. 440). It also says "Dormancy seems to be lifted by low temperatures in autumn and early winter" (p. 441) and that constant 25, 17, 4 and -5 °C storage gave no germination (cited earlier work, p. 441). Weber, quoted p. 441: the germination date seems programmed long beforehand. Primary foci were early and massive in 1977 and 1988 (p. 437). So `rouzet2003.cold_days` can be recorded as read, with the caveat "seems", stored samples, one maturity site.
