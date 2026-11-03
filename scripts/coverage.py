@@ -1,10 +1,12 @@
 """Which papers in a drop already have a literature note, and which still need one.
 
-    python scripts/coverage.py DIR [DIR ...] [--notes literature]
+    python scripts/coverage.py DIR [DIR ...] [--notes literature] [--library LIB]
 
 For every PDF under the directories it prints the note that covers it, matched by the
-note's `files` (the names the paper was dropped under) or its `doi`, against the DOIs on
-the paper's first two pages and the DOI a publisher's file name often carries. It also
+note's `files` (the names the paper was dropped under, read as `library.py` reads them) or
+its `doi`, against the DOIs on the paper's first two pages and the DOI a publisher's file
+name often carries; and, given the library (`--library`, default `$FORMULARIUM_LIBRARY`),
+by checksum against the papers filed there under a note. It also
 prints the page count, characters per page (under about 500 means a scan: OCR it first),
 the first DOI found, and a copy that duplicates another byte for byte.
 
@@ -18,6 +20,8 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.util
+import os
 import re
 import subprocess
 import sys
@@ -35,6 +39,24 @@ class Note:
     files: tuple[str, ...]
 
 
+def _library():
+    """scripts/library.py, for its reading of a note's `files` and of the manifest."""
+    if "library" in sys.modules:
+        return sys.modules["library"]
+    spec = importlib.util.spec_from_file_location("library", Path(__file__).with_name("library.py"))
+    module = importlib.util.module_from_spec(spec)
+    sys.modules["library"] = module  # a dataclass looks its module up there
+    spec.loader.exec_module(module)
+    return module
+
+
+def held_by_checksum(library: Path | None) -> dict[str, str]:
+    """The note each paper filed in the library is held under, by sha256 (none without one)."""
+    if library is None:
+        return {}
+    return {row["sha256"]: row["note"] for row in _library().read_manifest(library) if row["note"]}
+
+
 def normalise(text: str) -> str:
     return re.sub(r"[^a-z0-9]", "", text.lower())
 
@@ -46,12 +68,11 @@ def read_notes(directory: Path) -> list[Note]:
         if not match:
             continue
         header = dict(line.partition(":")[::2] for line in match.group(1).splitlines())
-        files = header.get("files", "").strip().strip("[]")
         notes.append(
             Note(
                 id=path.stem,
                 doi=header.get("doi", "").strip(),
-                files=tuple(f.strip() for f in files.split(",") if f.strip()),
+                files=tuple(_library().file_names(header.get("files", ""))),
             )
         )
     return notes
@@ -84,8 +105,12 @@ def main() -> int:
     parser.add_argument(
         "--notes", type=Path, default=Path(__file__).resolve().parent.parent / "literature"
     )
+    parser.add_argument(
+        "--library", type=Path, default=os.environ.get("FORMULARIUM_LIBRARY") or None
+    )
     args = parser.parse_args()
     notes = read_notes(args.notes)
+    held = held_by_checksum(args.library)
     seen: dict[str, Path] = {}
     rows = []
     for pdf in sorted(p for d in args.dirs for p in d.rglob("*") if p.suffix.lower() == ".pdf"):
@@ -99,7 +124,10 @@ def main() -> int:
             continue
         dois = sorted({d.rstrip(".)") for d in DOI.findall(text)})
         per_page = len(text) / min(pages, 2) if pages else 0
-        covered = ", ".join(match(pdf.name, dois, notes)) or "-"
+        ids = match(pdf.name, dois, notes)
+        if digest in held and held[digest] not in ids:
+            ids.append(held[digest])
+        covered = ", ".join(ids) or "-"
         same = f"same as {duplicate.name}" if duplicate != pdf else ""
         rows.append((covered, pdf, pages, per_page, dois[0] if dois else "", same))
     rows.sort(key=lambda r: (r[0] != "-", str(r[1])))
