@@ -1473,6 +1473,31 @@ DATASETS: dict[str, Dataset] = {
         " formulation is recorded as fitted to them",
         "read",
     ),
+    "vaud.rapports_phytosanitaires": Dataset(
+        "The canton of Vaud's annual Rapport phytosanitaire viticole, 2015-2025 (vd.ch): the"
+        " season's first downy mildew oil spots by area (12-21 May 2015 from Lavaux to"
+        " Bonvillars; 25 May 2016; the week of 4 June 2018; the week of 14 June 2021; hardly"
+        " any in 2022, untreated controls clean; from 20 May 2023; mid-May 2024; early May 2025"
+        " in the Chablais) and Agroscope Changins's oospore maturity: the first week of May"
+        " 2021, 2 May 2022 ('equal to the 10-year mean'), 29 March 2023, 25 March 2024 (a"
+        " germination test within 24 h on overwintered leaves), 8 April 2025. No licence"
+        " stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); each row's sentence found in its"
+        " report by script; rows in literature/real_outcomes_2026-11-03.csv (month-only phrases"
+        " as date ranges, said in date_how). Only 2024's maturity is stated to be a laboratory"
+        " test. Changins is where leoni2026 measured primary infections",
+        "read",
+    ),
+    "aargau.weinjahr": Dataset(
+        "The Liebegg Fachstelle Weinbau's annual 'Bericht Weinjahr' for the canton of Aargau"
+        " (2022-2024): first downy mildew symptoms at the end of May 2023 and 2024; oospores"
+        " judged germination-ready on 7 May 2023 from a temperature sum at Frick (a model), and"
+        " ripe on 13 April 2024 'after monitoring', earlier than the temperature sum. No"
+        " licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); rows in"
+        " literature/real_outcomes_2026-11-03.csv",
+        "read",
+    ),
     "geneve.bulletin_viticole": Dataset(
         "Bulletin phytosanitaire viticole of the canton of Geneva (OCAN with AgriGenève), 2026"
         " season: first downy mildew oil spots discovered on Tuesday 2 June 2026 in the"
