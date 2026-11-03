@@ -82,3 +82,14 @@ For the autumn before a season:
   after detection found oospores in 10 of 10 vineyards, so the earlier absence reflects time since
   introduction or detection method, not a feature of WA climate; the thesis proposes the former.
 - **Autumn incidence and next season:** only cited (Carisse 2016), not measured.
+
+## Bearing (2026-11-03): a dated first lesion, for Agrarium's real outcomes
+
+- **Swan Valley, 2015** (library text l. 3414-3420, read by the main session): the unpruned
+  vines burst variably from August; "the first observation of downy mildew infection occurred
+  on the 30th of August" on the older leaves of a shoot at E-L 13 (six leaves separated), a shoot
+  from an untagged node with no visible symptoms the year before. Of the tagged nodes, 154 gave
+  healthy shoots and 87 none. A row in `literature/real_outcomes_2026-11-03.csv` (southern
+  season 2015). With `killigrew2006`, it is the evidence that Western Australian epidemics may
+  start from infected buds, not oospores; the thesis also found oospores in all ten vineyards
+  sampled that year.

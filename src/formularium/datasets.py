@@ -1540,6 +1540,20 @@ DATASETS: dict[str, Dataset] = {
         " 2024 Arezzo row is not shown to be the season's first report",
         "read",
     ),
+    "australia.dm_alerts": Dataset(
+        "Australian downy mildew alerts and reports dated by season, read 2026-11-03: AWRI's"
+        " alerts for South Australia and Victoria (21 December 2017, 7 November 2018, 18 November"
+        " 2021, 27 October 2022; the 2017 and 2018 pages carry the same paragraph), Winetitles'"
+        " report of 4 November 2022 (Riverland oil spots and a Riverina 'primary outbreak'),"
+        " Langhorne Creek's 2022-23 season report (oil spots photographed 30 November 2022), ABC"
+        " Rural on Sunraysia (12 January 2015). Alert and article dates, so upper bounds on the"
+        " first lesion. No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); quotes found at their lines and"
+        " each row's sentence in its page; rows in literature/real_outcomes_2026-11-03.csv with"
+        " taylor2018's Swan Valley 2015 first lesion. No New Zealand or South African dated"
+        " detection was found beyond brook1992 and haasbroek2006",
+        "read",
+    ),
     "bsv.france_viticulture": Dataset(
         "France's Bulletins de santé du végétal, viticulture, 2019-2026 as read (Grand Est:"
         " Alsace, Champagne, Lorraine; Bourgogne-Franche-Comté; Nouvelle-Aquitaine: Nord"
