@@ -1696,12 +1696,16 @@ DATASETS: dict[str, Dataset] = {
         " Generalitat de Catalunya, relayed by the ADV of Cellers Domenys), February 2015 to"
         " September 2026: where and when the first downy mildew oil spots were found each season"
         " (first reports 29 April to 4 June; none in 2019), with spray advice, model notes and"
-        " other pests. Posted at www.cellersdomenys.com/uploads/advs/penedes/; no licence stated",
+        " other pests; and the vines' stages as the technicians saw them (shoots of 10-15 cm,"
+        " flowering, pea size, by variety and coast or interior where printed). Posted at"
+        " www.cellersdomenys.com/uploads/advs/penedes/; no licence stated",
         "Read 2026-10-22 by the main session in all 139 files (ten 2018 scans OCR'd), the"
         " first-spot sentences checked at their lines; the season table is in Agrarium's"
         " research note gaps-and-datasets (retry section). No formulation is recorded as fitted"
         " to them. The spots are found in treated vineyards under a first-spot prize, so the"
-        " dates are of detection",
+        " dates are of detection. Stages read 2026-11-03 (image pages by OCR) and checked at"
+        " their lines with each bulletin's printed date: literature/penedes_phenology_2026-11-03"
+        ".csv, 39 rows 2015-2026, each date an upper bound",
         "read",
     ),
     "kennelly2007.geneva": Dataset(
