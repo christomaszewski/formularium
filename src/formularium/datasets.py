@@ -1491,6 +1491,34 @@ DATASETS: dict[str, Dataset] = {
         " formulation is recorded as fitted to them",
         "read",
     ),
+    "agroscope.changins_oospores": Dataset(
+        "Agroscope Changins's downy mildew monitoring, as its reports and the Revue suisse's"
+        " season reviews print it: the date overwintered oospores (leaf pieces kept outdoors in"
+        " soil, then incubated at 100 % RH) first germinate within 24 hours, 2003-2013 (23"
+        " April 2003 to 30 April 2013; not reached in 2011; Table 12 of Agroscope Transfer"
+        " 29/2014) and 2017-2021 (8 May 2017, 1 May 2018, 23 April 2019, 7 May 2020, 3 May"
+        " 2021), beside VitiMeteo's 140 or 160 degree-day date; the first oil spot in the"
+        " untreated control, 2003-2021 (14 May to 11 June in 2003-2013; in the field"
+        " laboratory 5 May 2014 and 9 May 2016, dubuis2019; none before mid-August in 2019);"
+        " and station tables for 2008 (10 stations) and 2019 (13). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5), 102 quotes found at their"
+        " lines; Table 12 read in the page image by the main session. Rows in"
+        " literature/oospore_maturity_2026-11-03.csv and literature/real_outcomes_2026-11-03.csv"
+        " (notes viret2014, viret2009, viret2017-2021 and others). Dubuis et al. 2012 say these"
+        " tests serve to validate VitiMeteo: observations used in a model's validation, not"
+        " independent of it; independent of Rossi's lineage",
+        "read",
+    ),
+    "vs.communiques_viticoles": Dataset(
+        "The canton of Valais's Service de l'agriculture viticulture communiqués, 2022-2026"
+        " (vs.ch): oospore maturity at Châteauneuf (Sion) and Changins as the weekly tests find"
+        " it (about 20 April 2026), and first oil spots in Valais (Sierre and Leytron, 1 June"
+        " 2026). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5), quotes found at their lines;"
+        " rows in literature/oospore_maturity_2026-11-03.csv and"
+        " literature/real_outcomes_2026-11-03.csv",
+        "read",
+    ),
     "vaud.rapports_phytosanitaires": Dataset(
         "The canton of Vaud's annual Rapport phytosanitaire viticole, 2015-2025 (vd.ch): the"
         " season's first downy mildew oil spots by area (12-21 May 2015 from Lavaux to"
