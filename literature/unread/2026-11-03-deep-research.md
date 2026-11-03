@@ -86,6 +86,18 @@ reference lists, OpenAlex or Crossref, unchecked unless said.
 | 2026 | M. Furiosi et al. | Pest Manag. Sci. (meta-analysis of decision tools) | 10.1002/ps.71434 | sprays saved | Wiley; abstract on PubMed |
 | 2009 | Kuflik et al. | copper parameters of vite.net's protection model | - | E6 | still not obtained (also 2026-10-25) |
 
+## Penedès and Catalonia
+
+| Year | Author | Title / venue | DOI or URL | Settles | Tried |
+|---|---|---|---|---|---|
+| 2020 | E. González-Domínguez, S. E. Legler, J. Reyes-Aybar, L. Giralt, C. Val, C. Fregoni, V. Rossi | IOBC-WPRS Bull. 154:88-92 (vite.net's Penedès pilot) | iobc-wprs.org | dates and sprays per vineyard, 2016-17 | sold by IOBC; abstract held as `gonzalezdominguez2019` |
+| 2022 | M. Otero et al. | FAIA 356:164-167 (machine-learning risk at L'Aranyó) | 10.3233/FAIA220333 | the sites and models of `otero2023` | IOS Press returns HTML |
+| 2025 and earlier | M. Galimany Vives | "Balanç fitosanitari" season reviews of the Estació d'Avisos del Penedès (December technical days, Escola Mercè Rossell, Sant Sadurní) | - | first spots and spray counts by season | programme leaflet only (`escolamerce2025`) |
+| 2012-2016 | Sanitat Vegetal, Tarragona | avisos for Alt Camp and Baix Penedès (laselvadelcamp.cat) | - | Baix Penedès first spots | 404; no Wayback captures |
+| 1997 | E. Giralt | Míldiu: 1960-1995 (ICEA) | - | Penedès first spots over 35 years | print only |
+| 2014 | S. Boso et al. | Crop Prot. 63 (field susceptibility of Vitis varieties) | - | cultivar susceptibility | Elsevier |
+| 2004 | - | Horticultura 178:36-41 (the Catalan warning networks) | mapa.gob.es | how the networks work | the server did not answer |
+
 ## Closed by this pass
 
 Leads of earlier lists now held: Bonnardot et al. 2012 (`bonnardot2012`; 2026-10-18 list),
