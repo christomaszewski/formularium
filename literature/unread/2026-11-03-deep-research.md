@@ -104,6 +104,8 @@ The bulletin strands' `ARCHIVES.md` files in the drop give URL patterns and ever
 
 | Source | Years | Settles | Tried |
 |---|---|---|---|
+| IFV Sud-Ouest, "La Grappe d'Autan" (spring issues) | 2006-2012 | South-West French oospore maturity before the BSV | URL list in the drop's scratch (`s23_fr_maturity`); not fetched |
+| IFV, national downy and powdery mildew notes ("note nationale mildiou-oïdium") | 2005-2015 | French maturity dates by region before 2016 | 2011's Wayback capture is a 404 |
 | Regione Piemonte, Settore Fitosanitario, "Bollettino vite" | 2010-2026 | Italian laboratory oospore tests (the one Italian series said to run them) | regione.piemonte.it, sistemapiemonte.it time out; Wayback offline |
 | Emilia-Romagna, "Bollettino modelli previsionali patogeni" | 2021-2026 | daily model oospore maturity by area | 14 of 2021's files fetched; the rest listed |
 | Emilia-Romagna bulletins 2012-2020; Trentino FEM; Alto Adige Beratungsring; ERSA 2008-2009 | - | Italian first spots | not reached |
