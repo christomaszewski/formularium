@@ -71,6 +71,27 @@ def _script(name: str):
     return module
 
 
+def test_coverage_reads_files_as_the_library_does_and_matches_by_checksum(tmp_path) -> None:
+    coverage = _script("coverage")
+    notes = tmp_path / "notes"
+    notes.mkdir()
+    (notes / "pieri2003.md").write_text(
+        "---\nid: pieri2003\ndoi:\nfiles: [pieri2003.pdf (the 10-25 drop, a copy), b.pdf]\n---\n",
+        encoding="utf-8",
+    )
+    assert coverage.read_notes(notes)[0].files == ("pieri2003.pdf", "b.pdf")
+    library = tmp_path / "library"
+    library.mkdir()
+    (library / "manifest.tsv").write_text(
+        "note\tpath\toriginal_name\tsha256\tbytes\tcopied_from\n"
+        "pieri2003\tpieri2003.pdf\tpaper.pdf\tabc\t1\tx\n"
+        "\tinbound/y.pdf\ty.pdf\tdef\t1\ty\n",
+        encoding="utf-8",
+    )
+    assert coverage.held_by_checksum(library) == {"abc": "pieri2003"}
+    assert coverage.held_by_checksum(None) == {}
+
+
 def test_coverage_matches_a_paper_by_its_file_name_or_doi() -> None:
     coverage = _script("coverage")
     notes = [
