@@ -24,13 +24,13 @@ Slides of the Wädenswiler Weintage of 13 January 2022 (Agroscope), with the 202
 
 ## What it holds
 
-- **Oospore maturity, 2021:** primary infection on 26 May 2021, with a temperature sum of 160 degree-days (l. 360). Model date, Wädenswil.
+- **Oospore maturity, 2021:** 26 May 2021 is the 160 degree-day sum on the slide (the marker labelled 'Σ T°C = 160'); the 'Primärinfektion' label points to the next marker (l. 360; slide image read by the second reviewer) (corrected 2026-11-03 after a second independent review). Model date, Wädenswil.
 - **First oil spot, 2021:** 14 June 2021, with the infection on 7 June, in the untreated plot (l. 355).
 - **Interval:** 19 days from the model date to the first spot, and 7 days from the infection to the spot (arithmetic from l. 355, 360, not printed).
 
 ## Dependence
 
-- Model dates come from VitiMeteo-Plasmopara/Agrometeo, the model of Dubuis et al. 2012 (a temperature sum above 8 C from 1 January, 140 or 160 degree-days). The first oil spots are field observations in an untreated plot. Dubuis et al. 2012 say Changins observations serve to validate that model and let experts adjust it, so Changins dates are not independent of VitiMeteo (see dubuis2012). Nothing else is recorded.
+- Model dates are Agrometeo's (VitiMeteo, Dubuis et al. 2012), computed for Wädenswil; first spots are the Wädenswil plots' own observations. No Changins data are used here.
 
 ## Bearing (2026-11-03)
 

@@ -18,7 +18,7 @@ files: [dr1103_viret2014.pdf (the 2026-11-03 drop)]
 An Agroscope activity report whose Table 12 (p. 37) gives, for each year at Changins, the date oospores germinated within 24 h in the outdoor laboratory test, the date the 140 C temperature sum was reached, and the date of the first oil spot in the untreated control.
 
 **Read this first.**
-- The three rows are three kinds of evidence. The germination row and the first-spot row are observations by the Changins group (their own). The 140 C row is VitiMeteo's model, not an observation.
+- The three rows are three kinds of evidence. The germination row and the first-spot row are observations by the Changins group (their own). The 140 C row is a model, not an observation: VitiMeteo's, except 2003-2004 (SmartGraph, the caption says).
 - The table prints 11 values under 10 year headers; the eleventh column is unlabelled. It is read as 2013 because the text says "pour les années 2003 à 2013" (for the years 2003 to 2013). The leads file reports that the 2011 report prints 2003 to 2011 identically and that a 2013 review gives full maturity on 30 April 2013.
 - The values below are as the main session read them in the page image; the script-checked quotes are the text-layer lines of the same rows.
 - Not independent of VitiMeteo (see Dependence). Cover authors as the reading JSON gives them ("authors as listed on the cover").
@@ -35,7 +35,7 @@ An Agroscope activity report whose Table 12 (p. 37) gives, for each year at Chan
 ## Dependence
 
 - **Own observations** of the Changins group (Agroscope), Table 12 marked as such by the reading agent.
-- **A model dated one row:** the 140 C row is VitiMeteo's temperature-sum rule. Dubuis et al. 2012 say the yearly Changins oospore test, the outdoor laboratory and the untreated control serve to validate VitiMeteo and let experts adjust it, so these observations were used in a model's validation. Leoni et al. 2026 also calibrate at Changins; a shared site is a flag, not a dependency.
+- **A model dated one row:** the 140 C row is a temperature-sum rule (VitiMeteo's; SmartGraph's for 2003-2004). Dubuis et al. 2012 say the yearly Changins oospore test, the outdoor laboratory and the untreated control serve to validate VitiMeteo and let experts adjust it, so these observations were used in a model's validation. Leoni et al. 2026 also calibrate at Changins; a shared site is a flag, not a dependency.
 
 ## Bearing (2026-11-03)
 

@@ -1497,7 +1497,8 @@ DATASETS: dict[str, Dataset] = {
         " soil, then incubated at 100 % RH) first germinate within 24 hours, 2003-2013 (23"
         " April 2003 to 30 April 2013; not reached in 2011; Table 12 of Agroscope Transfer"
         " 29/2014) and 2017-2021 (8 May 2017, 1 May 2018, 23 April 2019, 7 May 2020, 3 May"
-        " 2021), beside VitiMeteo's 140 or 160 degree-day date; the first oil spot in the"
+        " 2021), beside a 140 or 160 degree-day date (VitiMeteo's; SmartGraph's for 2003-2004);"
+        " the first oil spot in the"
         " untreated control, 2003-2021 (14 May to 11 June in 2003-2013; in the field"
         " laboratory 5 May 2014 and 9 May 2016, dubuis2019; none before mid-August in 2019);"
         " and station tables for 2008 (10 stations) and 2019 (13). No licence stated",

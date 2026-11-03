@@ -1,6 +1,6 @@
 ---
 id: kuenzler2021
-citation: Kuenzler, L. et al. 2021. Pflanzenschutz aktuell - Rebbau - Januar 2021 (Jahresrückblick 2020) [Plant protection today - viticulture - January 2021 (year review 2020)]. Agroscope, Wädenswil
+citation: Künzler, L., Mackie-Haas, K., Werder, M., Linder, Ch., Dubuis, P.-H. & Gfeller, A. 2021. Pflanzenschutz aktuell 2021 Weinbau - Januar 2021 (Jahresrückblick 2020) [Plant protection today - viticulture - January 2021 (year review 2020)]. Agroscope, Wädenswil
 doi:
 read: 2026-11-03, only the summary lines on oospore maturity and first oil spots (a light reading of 3 facts), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 3 of 3 quotes found at their lines by scripts/verify_quotes.py
 status: read
@@ -19,7 +19,7 @@ A January 2021 bulletin of Agroscope Wädenswil (German-speaking Switzerland) th
 
 **Read this first.**
 - Only the lines on oospore maturity and first oil spots were read. The oospore dates are model dates (Agrometeo temperature sum), not germination tests.
-- The first-spot date of 4 June 2020 conflicts with the 12 June of the season review (see agroscope2021). Both are kept.
+- The first-spot date of 4 June 2020 conflicts with the 12 June of the season review (see kuenzler2021b). Both are kept.
 - The author list is printed as "Kuenzler, L. et al."; the other authors were not read.
 
 ## What it holds
@@ -31,7 +31,7 @@ A January 2021 bulletin of Agroscope Wädenswil (German-speaking Switzerland) th
 
 ## Dependence
 
-- Model dates come from VitiMeteo-Plasmopara/Agrometeo, the model of Dubuis et al. 2012 (a temperature sum above 8 C from 1 January, 140 or 160 degree-days). The first oil spots are field observations in an untreated plot. Dubuis et al. 2012 say Changins observations serve to validate that model and let experts adjust it, so Changins dates are not independent of VitiMeteo (see dubuis2012). Nothing else is recorded.
+- Model dates are Agrometeo's (VitiMeteo, Dubuis et al. 2012), computed for Wädenswil; first spots are the Wädenswil plots' own observations. No Changins data are used here.
 
 ## Bearing (2026-11-03)
 

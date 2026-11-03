@@ -18,7 +18,7 @@ files: [dr1103_viret2021.pdf (the 2026-11-03 drop)]
 A Swiss vintage review giving the 2021 laboratory maturity date at Changins and the first oil spots at Changins, Pully and in four regions.
 
 **Read this first.**
-- The text layer is garbled (accents, and words lost in the paragraph). The maturity line is only "3 mai." (l. 1143): the sentence around it is missing. The reading agent attributed it to the germination test within 24 h, as in the same authors' other reviews; the date stands on that reading and the method is not confirmed by the text.
+- The text layer is two-column and garbled in its accents. The maturity sentence is split: "La germination en 24 h a ëtë atteinte ä Changins le" (l. 1113-1114) ends "3 mai." at l. 1143. So the 3 May date is the 24 h germination test (corrected 2026-11-03 after a second independent review).
 - The Changins first spot was one spot near the ground close to the infected-leaf stock of 2020, not an untreated control or a general first spot.
 
 ## What it holds

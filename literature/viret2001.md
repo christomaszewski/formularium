@@ -19,8 +19,8 @@ A Swiss review article on trials of the Lufft HP-100 warning station at four sit
 
 **Read this first.**
 - The text is an OCR of a scan. The reading JSON took its authors (Viret, Siegfried) from the in-text citation; the first page of the scan text lists five (Viret, Bloesch, Taillens, Siegfried, Dupuis). The header uses the first-page list.
-- The 1998 value is not a date of first spot: the plot was "exempte de mildiou jusqu'au 26 juin" (free of mildew until 26 June, l. 519), so the first spots were on or after 26 June. Treat it as a bound.
-- Table 2 (primary infections, incubation, first spots at Walenstadt, Wädenswil, Changins and Perroy, 1998 to 2000) is a graphic; the text layer does not carry its dates and they were not read.
+- **Corrected after a second independent review:** Table 3 (l. 425-445, in the text layer) prints the first oil spots by year: Perroy 20 June 1995, 3 June 1996, 30 June 1997, 26 June 1998, 8 June 1999, 26 May 2000; Wädenswil end of June 1995, early June 1996, end of June 1997, mid-June 1998, end of May 1999, mid-June 2000. Its plots were sprayed on the station's advice (6-8 sprays a season); the untreated control is named only for the end-of-season intensity. So 26 June 1998 is a printed date. The earlier reading took the 1998 value as a bound.
+- Table 2 (primary infections, incubation, first spots at Walenstadt, Wädenswil, Changins and Perroy, 1998 to 2000) is a graphic and was not read; Table 3, in the text, gives Perroy's and Wädenswil's first spots for 1995-2000.
 - Which plot treatment the Perroy sentences refer to is not stated in the facts; the passage follows one on untreated plots.
 
 ## What it holds
@@ -37,6 +37,6 @@ A Swiss review article on trials of the Lufft HP-100 warning station at four sit
 
 ## Bearing (2026-11-03)
 
-- **literature/real_outcomes_2026-11-03.csv (Agrarium D67):** adds Perroy 1999-06-08 (first oil spot, a plot whose treatment is not stated in the facts) and Perroy 1998 as "none before 1998-06-26" (a lower bound). These are the earliest years in the strand, before Changins's 2003 series.
+- **literature/real_outcomes_2026-11-03.csv (Agrarium D67):** adds Perroy 1995-2000 and Wädenswil 1995-2000 from Table 3 (treated 'unknown': the plots were sprayed on the station's advice).
 - **literature/oospore_maturity_2026-11-03.csv:** adds nothing observed. It supports the 160 C rule the station used before VitiMeteo lowered it to 140 C (see viret2009).
 - **Kind of evidence:** field observation in one plot, scan OCR; a model (station) dates the infection counts, not the first spot.
