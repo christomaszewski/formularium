@@ -311,6 +311,37 @@ OpenAlex and Scite showed as new since. What it taught:
   decimal (Fraga's tables, Ruml's Table 8, Didevarasl's Table 4) become records with the
   page image behind each.
 
+## The 2026-11-03 search's lessons: bulletins as data
+
+A night pass that found its best material outside the journals: regional warning bulletins and
+annual reports, which date first symptoms and laboratory oospore maturity year by year
+(`real_outcomes_2026-11-03.csv`, `oospore_maturity_2026-11-03.csv`).
+
+- **Bulletins are data, not papers.** A series gets a dataset record (`bsv.france_viticulture`,
+  `wbi.jahresberichte`, `agroscope.changins_oospores`) and its rows go in a CSV; an annual report
+  or a season review read for its tables gets a note. Many bulletins allow reproduction only in
+  full: the public CSV keeps dates, places and short translated phrases, and the quotes, files and
+  lines stay in the drop, reached by a `drop_row` column.
+- **A bulletin's file name is not its date.** French BSV files carry the posting date, one or two
+  days after the printed one, and one Champagne file held the previous bulletin. Take the date
+  from the bulletin's own header (`pdftotext -l 1`), and check a strand's rows with a script that
+  compares the two.
+- **Say what each date is.** A sighting printed in the text, a bulletin's date (an upper bound),
+  a range read from "end of May" or "the turn of the month" (say it is the session's reading),
+  a laboratory test, a model's date or an adviser's judgement. Keep tests apart from models:
+  Changins's tests also validated VitiMeteo; Emilia-Romagna's maturity is its own oospore model.
+- **Text layers drop fraction slashes**: WMO's (G − D)/cos ζ came out as a product. Every
+  equation that a note states, not only those that become records, is read in the page image.
+- **Routes that worked this time:** Agroscope's repository search (ira.agroscope.ch, a GET list
+  without login) for Changins's reports back to 2001; the WBI Freiburg's annual reports
+  (wbi.landwirtschaft-bw.de); the DRAAF regional BSV archives; DLR and LWG bulletins; Areeiro's
+  avisos; IVDP's Douro circulars; the Catalan open-data portal's API for the farm declarations;
+  EUR-Lex through the Wayback Machine. Wayback PDF captures over 1 MiB come back cut at
+  1,048,576 bytes: use the live file.
+- **An independent review pays.** A reviewer agent given the branch, not the session's reasoning,
+  checked a random sample against the sources and found 11 errors in 70 checked items, the
+  file-name dates and the WMO equation among them (`2026-11-03-deep-research/review/REVIEW.md`).
+
 ## Judging dependence
 
 From Agrarium's decisions D27 to D29 (its PLAN section 15, and `src/formularium/stemma.py`):
