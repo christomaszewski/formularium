@@ -50,7 +50,7 @@ Charentes,France,2026,2026-04-14,model,"2026-04-14 bulletin: MODEL estimate (pot
 Franche-Comté,France,2010,2010-04-13,laboratory test,early sectors; late site (Montaigu) not yet,bsv.france_viticulture,reading/s12_bsv_early/oospore_maturity.csv row 27
 Franche-Comté,France,2011,by 2011-04-19,laboratory test,bulletin date 'by',bsv.france_viticulture,reading/s12_bsv_early/oospore_maturity.csv row 28
 Franche-Comté,France,2012,2012-04-06,laboratory test,early site 06 April; late site 14 April,bsv.france_viticulture,reading/s12_bsv_early/oospore_maturity.csv row 29
-Franche-Comté,France,2013,by 2013-04-23,laboratory test,bulletin date 'by'; the 2013-04-30 bulletin prints 'depuis le 23 avril' for early and late sectors,bsv.france_viticulture,reading/s12_bsv_early/oospore_maturity.csv row 30
+Franche-Comté,France,2013,by 2013-04-24,laboratory test,bulletin date 'by'; the 2013-04-30 bulletin prints 'depuis le 23 avril' for early and late sectors (corrected 2026-11-03: printed 'N° 3 – 24 avril 2013'; the file name says 23),bsv.france_viticulture,reading/s12_bsv_early/oospore_maturity.csv row 30
 Franche-Comté,France,2014,2014-04-07,laboratory test,late site (Montaigu) 20 April; the bulletin of 2014-04-08 prints 'acquise en secteurs précoces depuis hier (07/04)',bsv.france_viticulture,reading/s12_bsv_early/oospore_maturity.csv row 31
 Franche-Comté,France,2015,by 2015-05-05,laboratory test,bulletin date 'by'; the Jura sites were still not mature on 2015-04-28,bsv.france_viticulture,reading/s12_bsv_early/oospore_maturity.csv row 32
 Franche-Comté,France,2016,2016-04-15,laboratory test,2 Jura follow-up sites,bsv.france_viticulture,reading/s12_bsv_early/oospore_maturity.csv row 33
