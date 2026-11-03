@@ -1462,6 +1462,24 @@ DATASETS: dict[str, Dataset] = {
         " as fitted to them",
         "read",
     ),
+    "wbi.jahresberichte": Dataset(
+        "The Staatliches Weinbauinstitut Freiburg's annual reports (Jahresberichte 1996-2009,"
+        " 2011, 2012; Tätigkeitsberichte 2013-2015; wbi.landwirtschaft-bw.de), section"
+        " 'Monitoring auf Primärinfektionen': first downy mildew oil spots on the WBI's"
+        " unsprayed monitoring plot at Freiburg (19 May to 15 June over 1996-2015), first"
+        " reports from practice vineyards (from 12 May), the WBI's judged infection days, and"
+        " VitiMeteo Plasmopara's validation against the plot: the first soil infection computed"
+        " too early in 2007, 2009, 2013, 2014 and 2015, exactly in 2008, too late in 2005."
+        " 1996's ring test led by G. Hill (SLFA Oppenheim): oospores buried at Freiburg, tested"
+        " weekly, germination readiness very high from early April to early July. No licence"
+        " stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5): 51 quotes found at their lines"
+        " by scripts/verify_quotes.py and each row's sentence in its report; rows in"
+        " literature/real_outcomes_2026-11-03.csv and literature/oospore_maturity_2026-11-03.csv."
+        " Infection days are the WBI's judgements from rain and temperature. Reports for 2010"
+        " and 2016-2024 were not found. No formulation is recorded as fitted to them",
+        "read",
+    ),
     "dlr.rlp_rebschutz": Dataset(
         "Rebschutz bulletins of the DLR Rheinpfalz (Mitteilungen) and DLR Mosel"
         " (Rebschutzmitteilungen Mosel und Ahr), Rhineland-Palatinate, 2023-2025 as found: first"
