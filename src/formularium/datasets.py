@@ -1498,6 +1498,33 @@ DATASETS: dict[str, Dataset] = {
         " literature/real_outcomes_2026-11-03.csv",
         "read",
     ),
+    "ersa.fvg_notiziario": Dataset(
+        "ERSA Friuli Venezia Giulia's vine bulletins, 2010-2025 (none found for 2013), with 2009"
+        " recalled later: the first downy mildew oil spots each season, mostly on untreated"
+        " controls of the regional monitoring network (earliest 24 April in 2024 and 2025; 2009"
+        " after mid-June), and oospore maturity by the Gehmann index at Codroipo, 2005-2014 (a"
+        " model). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); each row's sentence found in its"
+        " bulletin by script; rows in literature/real_outcomes_2026-11-03.csv and"
+        " literature/oospore_maturity_2026-11-03.csv. No formulation is recorded as fitted to"
+        " them",
+        "read",
+    ),
+    "italy.regional_bulletins": Dataset(
+        "Italian vine bulletins with first downy mildew spots, read 2026-11-03: Emilia-Romagna's"
+        " regional production bulletins by province group (2021-2026), the Consorzio"
+        " Fitosanitario of Reggio Emilia (2016-2019, 2023-2026), Cantina Negrar in Valpolicella"
+        " (2018-2026), Abruzzo (2023-2026), Veneto (2024, 2026) and a Piemonte season summary"
+        " (2024-2025). Their oospore statements are models or judgements; Emilia-Romagna's come"
+        " from the region's own oospore model, so they are not independent of Rossi's lineage."
+        " No laboratory test was found printed (Piemonte's service, said to run them, timed"
+        " out). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); 120 quotes found at their lines"
+        " and each row's sentence in its bulletin (Emilia-Romagna's text layers lose the"
+        " ligatures ti, tt and fi); rows in literature/real_outcomes_2026-11-03.csv and"
+        " literature/oospore_maturity_2026-11-03.csv",
+        "read",
+    ),
     "geneve.bulletin_viticole": Dataset(
         "Bulletin phytosanitaire viticole of the canton of Geneva (OCAN with AgriGenève), 2026"
         " season: first downy mildew oil spots discovered on Tuesday 2 June 2026 in the"
@@ -1580,20 +1607,22 @@ DATASETS: dict[str, Dataset] = {
         "read",
     ),
     "bsv.france_viticulture": Dataset(
-        "France's Bulletins de santé du végétal, viticulture, 2019-2026 as read (Grand Est:"
-        " Alsace, Champagne, Lorraine; Bourgogne-Franche-Comté; Nouvelle-Aquitaine: Nord"
-        " Aquitaine, Sud Aquitaine, Charentes; PACA; Occitanie; Centre-Val de Loire;"
-        " Auvergne-Rhône-Alpes): the first downy mildew symptoms each season by area and the"
-        " plots they were seen on (untreated controls or network plots), and the date the"
-        " regional laboratory test first found overwintered oospores germinating in under 24"
-        " hours ('maturité des œufs d'hiver'): Alsace 26 April 2023, 29 April 2025, 13 April"
-        " 2026, not by 18 May 2022; Champagne 27 April 2021, 9 April 2026, not by 11 May 2022."
-        " Several bulletins allow reproduction only in full or with permission",
-        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5): 41 region-years, 71 quotes"
+        "France's Bulletins de santé du végétal, viticulture, 2010-2026 as read (Grand Est:"
+        " Alsace, Champagne, Lorraine; Bourgogne and Franche-Comté, then Bourgogne-Franche-Comté;"
+        " Nouvelle-Aquitaine: Nord Aquitaine, Sud Aquitaine, Charentes, Haut-Poitou; PACA;"
+        " Occitanie; Centre-Val de Loire; Auvergne-Rhône-Alpes), with the yearly reviews"
+        " ('bilans'): the first downy mildew symptoms each season by area and the plots they were"
+        " seen on (untreated controls or network plots), and the date the regional laboratory"
+        " follow-up first found overwintered oospores germinating in under 24 hours ('maturité"
+        " des œufs d'hiver'), e.g. Alsace 19 April 2016, 26 April 2023, 13 April 2026, not by 18"
+        " May 2022; Champagne 27 April 2021, 9 April 2026, not by 11 May 2022; Gironde 3 March"
+        " 2024. Several bulletins allow reproduction only in full or with permission",
+        "Read 2026-11-03 by two reading agents (claude-sonnet-5-5): 137 region-years; 167 quotes"
         " found at their lines by scripts/verify_quotes.py and each row's sentence found in its"
         " bulletin; rows (dates, places, translated phrases; no quotes) in"
-        " literature/real_outcomes_2026-11-03.csv. Charentes 2026's maturity is a model's"
-        " estimate, not a test. No formulation is recorded as fitted to them",
+        " literature/real_outcomes_2026-11-03.csv and literature/oospore_maturity_2026-11-03.csv."
+        " Charentes 2026's maturity is a model's estimate, not a test. No formulation is"
+        " recorded as fitted to them",
         "read",
     ),
     "sanitatvegetal.penedes_avisos": Dataset(
