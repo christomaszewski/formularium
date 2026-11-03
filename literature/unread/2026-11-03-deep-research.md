@@ -98,6 +98,40 @@ reference lists, OpenAlex or Crossref, unchecked unless said.
 | 2014 | S. Boso et al. | Crop Prot. 63 (field susceptibility of Vitis varieties) | - | cultivar susceptibility | Elsevier |
 | 2004 | - | Horticultura 178:36-41 (the Catalan warning networks) | mapa.gob.es | how the networks work | the server did not answer |
 
+## Bulletins and season reviews not reached
+
+The bulletin strands' `ARCHIVES.md` files in the drop give URL patterns and every route tried.
+
+| Source | Years | Settles | Tried |
+|---|---|---|---|
+| Regione Piemonte, Settore Fitosanitario, "Bollettino vite" | 2010-2026 | Italian laboratory oospore tests (the one Italian series said to run them) | regione.piemonte.it, sistemapiemonte.it time out; Wayback offline |
+| Emilia-Romagna, "Bollettino modelli previsionali patogeni" | 2021-2026 | daily model oospore maturity by area | 14 of 2021's files fetched; the rest listed |
+| Emilia-Romagna bulletins 2012-2020; Trentino FEM; Alto Adige Beratungsring; ERSA 2008-2009 | - | Italian first spots | not reached |
+| BSV Champagne, Alsace, Lorraine 2010-2015; Bourgogne 2010; Aquitaine before 2019; Pays de la Loire; Limousin; Occitanie 2024; Centre-Val de Loire 2019, 2021-2024 | - | French laboratory maturity and first spots | old regional sites gone; Wayback captures truncated at 1 MiB or missing |
+| DLR Rheinhessen-Nahe-Hunsrück 2019-2025; DLR Pfalz 2022-2024; Mosel 2023 | - | German first spots | dead links, no captures |
+| Ticino's Bolfito; Valais and Neuchâtel annual reports; Wädenswil Winzerinfo 2024 Nr. 6 | - | Swiss first spots | www4.ti.ch refuses this VM; PDFs gone |
+| Austria (LK Steiermark, Burgenland), Luxembourg (IVV) | - | first spots | logins, bot checks |
+| La Rioja's bulletin PDFs 2008-2016; INTIA Navarra; DRAP Norte Entre Douro e Minho 2022, 2025 | - | Iberian first spots | larioja.org unreachable; INTIA for subscribers |
+| Grapegrower & Winemaker 659 (Dec 2018) and 660 (Jan 2019); Magarey, Wachtel, Emmett & Magarey 1993, "Downy mildew season 1992/93", Aust. NZ Wine Ind. J. 8(3):234 | - | Australian seasons | paywalled |
+| NSW DPI, Agriculture Victoria, SARDI, Bragato, NZ Winegrowers alerts | - | Australian and New Zealand first detections | bot checks or nothing dated |
+
+## The newest literature (2025-07 to 2026-11) not obtained
+
+| Year | First author | Title / venue | DOI | Tried |
+|---|---|---|---|---|
+| 2026 | H. Wang | A user-friendly decision support system for supporting grape downy mildew control. Smart Agric. Technol. | 10.1016/j.atech.2026.102109 | Elsevier |
+| 2026 | M. Kotaidou | Grapevine disease risk assessment through multi-modal data analysis. Smart Agric. Technol. | 10.1016/j.atech.2026.102040 | Elsevier |
+| 2026 | Hjelkrem et al. | A mathematical model for estimation of leaf wetness for use in European agricultural DSSs. Smart Agric. Technol. | 10.1016/j.atech.2025.101723 | Elsevier |
+| 2026 | S. Leoni | Quadruplex real-time PCR targeting airborne spores of grapevine pathogens. Crop Prot. | 10.1016/j.cropro.2026.107925 | Elsevier |
+| 2025 | C. Poblete-Echeverría | AI detection of downy mildew. Eur. J. Agron. | 10.1016/j.eja.2025.127755 | Elsevier |
+| 2026 | D. Kapetas | Multispectral imaging for downy mildew and grey mould. Smart Agric. Technol. | 10.1016/j.atech.2026.101990 | Elsevier |
+| 2026 | H. Huitu | Crop protection models for decision support: web infrastructure. in silico Plants | 10.1093/insilicoplants/diag006 | OUP |
+| 2026 | Pippi et al. | Hyperspectral early detection of grapevine downy mildew. Plant Dis. (AgriRxiv 10.31220/agrirxiv.2026.00411, free) | 10.1094/pdis-03-26-0540-sr | AgriRxiv hung in the headless browser: try by hand |
+| 2026 | Mendes et al. | High spring rainfall, downy mildew and yield in France. SSRN | 10.2139/ssrn.7346698 | SSRN |
+| 2026 | Yang et al. | Stage-aware early warning of grapevine downy mildew, qPCR-constrained. SSRN | 10.2139/ssrn.7328849 | SSRN |
+| 2026 | Xu et al. | Temperature, wetness duration and wetness interruption on grapevine infection. Plant Dis. | 10.1094/pdis-03-26-0456-re | APS |
+| 2025 | de Rességuier et al. | Modeling grapevine phenology at local scale. Agric. For. Meteorol. | 10.1016/j.agrformet.2025.110831 | Elsevier |
+
 ## Closed by this pass
 
 Leads of earlier lists now held: Bonnardot et al. 2012 (`bonnardot2012`; 2026-10-18 list),
