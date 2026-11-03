@@ -339,7 +339,8 @@ annual reports, which date first symptoms and laboratory oospore maturity year b
   EUR-Lex through the Wayback Machine. Wayback PDF captures over 1 MiB come back cut at
   1,048,576 bytes: use the live file.
 - **An independent review pays.** A reviewer agent given the branch, not the session's reasoning,
-  checked a random sample against the sources and found 11 errors in 70 checked items, the
+  checked a random sample (61 items, and two scans of the French dates) against the sources and
+  found 11 errors, the
   file-name dates and the WMO equation among them (`2026-11-03-deep-research/review/REVIEW.md`).
 
 ## Judging dependence
