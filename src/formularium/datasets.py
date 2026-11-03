@@ -1697,7 +1697,10 @@ DATASETS: dict[str, Dataset] = {
         " September 2026: where and when the first downy mildew oil spots were found each season"
         " (first reports 29 April to 4 June; none in 2019), with spray advice, model notes and"
         " other pests; and the vines' stages as the technicians saw them (shoots of 10-15 cm,"
-        " flowering, pea size, by variety and coast or interior where printed). Posted at"
+        " flowering, pea size, by variety and coast or interior where printed); from 2020 and"
+        " 2025 some station output (oospore-germination model plots for Els Clots and Sumoll,"
+        " leaf-wetness hours, a winter EPI index), and the products' persistence in days."
+        " 2021's first spot was at La Múnia by 19 May, printed only in an image page. Posted at"
         " www.cellersdomenys.com/uploads/advs/penedes/; no licence stated",
         "Read 2026-10-22 by the main session in all 139 files (ten 2018 scans OCR'd), the"
         " first-spot sentences checked at their lines; the season table is in Agrarium's"
@@ -1705,7 +1708,9 @@ DATASETS: dict[str, Dataset] = {
         " to them. The spots are found in treated vineyards under a first-spot prize, so the"
         " dates are of detection. Stages read 2026-11-03 (image pages by OCR) and checked at"
         " their lines with each bulletin's printed date: literature/penedes_phenology_2026-11-03"
-        ".csv, 39 rows 2015-2026, each date an upper bound",
+        ".csv, 39 rows 2015-2026, each date an upper bound. The downy and powdery mildew"
+        " advice of every bulletin read the same day, each quoted sentence found in its"
+        " bulletin by script: literature/penedes_advice_2026-11-03.csv, 264 rows",
         "read",
     ),
     "kennelly2007.geneva": Dataset(

@@ -315,8 +315,8 @@ OpenAlex and Scite showed as new since. What it taught:
 
 A night pass that found its best material outside the journals: regional warning bulletins and
 annual reports, which date first symptoms and laboratory oospore maturity year by year
-(`real_outcomes_2026-11-03.csv`, `oospore_maturity_2026-11-03.csv`), and the vines' stages
-(`penedes_phenology_2026-11-03.csv`).
+(`real_outcomes_2026-11-03.csv`, `oospore_maturity_2026-11-03.csv`), the vines' stages and
+the spray advice (`penedes_phenology_2026-11-03.csv`, `penedes_advice_2026-11-03.csv`).
 
 - **Bulletins are data, not papers.** A series gets a dataset record (`bsv.france_viticulture`,
   `wbi.jahresberichte`, `agroscope.changins_oospores`) and its rows go in a CSV; an annual report
