@@ -1610,7 +1610,8 @@ DATASETS: dict[str, Dataset] = {
         " station's monitoring plots (O Salnés, O Rosal, O Condado) and in its own untreated"
         " vineyard (19 April 2021, 11 May 2026), and the laboratory's first mature oospores"
         " (13 April 2018, 'almost a month later than in 2017'; 28 March 2019; the week of 17"
-        " March 2021; 21 March 2022). Pages at areeiro.depo.gal; 2021 from Wayback captures;"
+        " March 2021; 21 March 2022; 20 February 2026 by its vineyard method; models only in"
+        " 2024 and 2025). Pages at areeiro.depo.gal; 2021 from Wayback captures;"
         " licence not read",
         "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); quotes found at their lines"
         " and each row's sentence in its page; rows in literature/real_outcomes_2026-11-03.csv."
@@ -1634,9 +1635,10 @@ DATASETS: dict[str, Dataset] = {
         "Circulars of DRAP Norte's Estação de Avisos do Douro (2005-2026, 16 seasons, from"
         " ivdp.pt) and Estação de Avisos de Entre Douro e Minho (2021, 2023, 2024): when the"
         " first downy mildew spots were reported in the Douro (Baixo and Cima Corgo) and Entre"
-        " Douro e Minho, and the stations' oospore tests (germination within 24 h by mid-March"
-        " 2020 and 2022, early April 2023). Some circulars mention disease already present, not"
-        " the first spot (2005, 2010, 2011, 2025). No licence stated",
+        " Douro e Minho, and the stations' oospore tests (germination within 24 h in the last"
+        " week of March 2017, by mid-March 2020 and 2022, early April 2023). Some circulars"
+        " mention disease already present, not the first spot (2005, 2010, 2011, 2025). No"
+        " licence stated",
         "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); each row's sentence found in its"
         " circular; rows in literature/real_outcomes_2026-11-03.csv. No formulation is recorded"
         " as fitted to them",
@@ -1677,8 +1679,9 @@ DATASETS: dict[str, Dataset] = {
         " seen on (untreated controls or network plots), and the date the regional laboratory"
         " follow-up first found overwintered oospores germinating in under 24 hours ('maturité"
         " des œufs d'hiver'), e.g. Alsace 19 April 2016, 26 April 2023, 13 April 2026, not by 18"
-        " May 2022; Champagne 27 April 2021, 7 April 2026, not by 3 May 2022; Gironde 3 March"
-        " 2024 (in a bilan sentence that contradicts itself). Several bulletins allow"
+        " May 2022; Champagne 27 April 2021, 7 April 2026, not by 3 May 2022; Gironde 3 April"
+        " 2024 (the 2025 bilan's '3 mars' is a slip: the 29 March FLASH says not yet). Several"
+        " bulletins allow"
         " reproduction only in full or with permission",
         "Read 2026-11-03 by two reading agents (claude-sonnet-5-5): 137 region-years; 167 quotes"
         " found at their lines by scripts/verify_quotes.py and each row's sentence found in its"
