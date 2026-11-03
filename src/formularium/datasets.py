@@ -2001,6 +2001,23 @@ DATASETS: dict[str, Dataset] = {
         " as fitted to it",
         "read",
     ),
+    "meteocat.xema": Dataset(
+        "Dades meteorològiques de la XEMA, the Servei Meteorològic de Catalunya's automatic"
+        " stations on the Generalitat's open-data portal (Socrata nzvn-apee; variables in"
+        " 4fb2-n3yi): generally half-hourly readings (some variables hourly, `codi_base` HO or"
+        " SH), stamped with the start of the reading interval in UTC; temperature to 0.1 °C,"
+        " humidity in whole per cent, rain to 0.1 mm, a 1-minute maximum rain; no leaf"
+        " wetness among the variables. `codi_estat` blank (not yet validated), T (in"
+        " validation) or V (valid); invalid values are not shown",
+        "The portal's metadata, read 2026-11-03 by a reading agent (claude-sonnet-5-5; 9 of 9"
+        " quotes found by scripts/verify_quotes.py) and literature/meteocat2021 (press notes:"
+        " sampling every second, a record every 30 minutes sent by GPRS). On 2026-11-03 the"
+        " 05:30 UTC half-hour first appeared 47 minutes after its start (a reading agent's"
+        " poll, once a minute; one sample). Cooptera reads it (Agrarium D58: its readings,"
+        " and scores resting on them, stay in Cooptera). No formulation in this catalogue is"
+        " recorded as fitted to it",
+        "read",
+    ),
     "calvet2022.altpenedes": Dataset(
         "Alt Penedès environmental data collected between 2017 and 2021 (Calvet i Mirabent &"
         " Estadella Valls; Zenodo, doi:10.5281/zenodo.6435640, CC BY 4.0): daily mean,"
