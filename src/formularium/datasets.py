@@ -1434,18 +1434,78 @@ DATASETS: dict[str, Dataset] = {
     ),
     "lwg.franken_weinbaufax": Dataset(
         "Weinbaufax Franken, the weekly vine-protection bulletins of LWG Bayern's"
-        " Rebschutzdienst (Veitshöchheim) with Weinbauring Franken, April to July of 2024, 2025"
-        " and 2026 (44 issues; earlier years not found at the same address): growers' first"
-        " downy mildew oil spots in Franconia, as reported to the service and to Vitimonitoring,"
-        " and the service's rain-based judgements of primary infection days. First reports:"
-        " between 16 and 21 May 2024 (one spot in the whole region by 21 May, widespread by"
-        " 17 June); 27 May 2025 (on a stem shoot near the ground, put down to an early-May"
-        " infection); between 26 May and 3 June 2026 (from a mid-May infection with 'a very long"
-        " incubation'). Published at www.lwg.bayern.de as PDFs; no licence stated",
-        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5) in the issues' text, 23 quotes"
-        " found at their lines by scripts/verify_quotes.py; working files in the 2026-11-03"
-        " drop. No formulation is recorded as fitted to them. Infection days are the service's"
-        " judgements from rain, not observations; the spots are detections",
+        " Rebschutzdienst (Veitshöchheim) with Weinbauring Franken: growers' first downy mildew"
+        " oil spots in Franconia, as reported to the service and to Vitimonitoring, and the"
+        " service's judgements of oospore germination and infection days from rain and"
+        " degree-days. First reports: 27 May 2019; 8 June 2021; 25 May 2022 (Würzburg);"
+        " 25 May 2023 (Stetten); between 16 and 21 May 2024 (one spot in the region by 21"
+        " May); 27 May 2025; between 26 May and 3 June 2026 ('a very long incubation'). 2024-2026"
+        " from www.lwg.bayern.de, 2019 and 2021-2023 through the Wayback Machine; no 2020 or"
+        " earlier early-season issue found; no licence stated",
+        "Read 2026-11-03 by two reading agents (claude-sonnet-5-5), every quote found at its"
+        " line by scripts/verify_quotes.py; rows in literature/real_outcomes_2026-11-03.csv. No"
+        " formulation is recorded as fitted to them. Infection and germination days are the"
+        " service's judgements, not observations; the spots are detections",
+        "read",
+    ),
+    "wbi.baden_rebschutzhinweise": Dataset(
+        "Rebschutzhinweise of the Staatliches Weinbauinstitut Freiburg (WBI) for Baden,"
+        " 2014-2025: when and where the first downy mildew oil spots were found or reported"
+        " (11 May 2025 at Herbolzheim, 13 May on the WBI's untreated control plot; mid-May to"
+        " mid-June in other years), and in 2024 and 2025 the WBI's climate-cabinet test of"
+        " overwintered oospores (first ripe oospores at the end of March 2024 and in mid-April"
+        " 2025). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5) in the bulletins' text; quotes"
+        " found at their lines by scripts/verify_quotes.py; rows in"
+        " literature/real_outcomes_2026-11-03.csv. Germination statements other than the"
+        " climate-cabinet test are advisers' judgements from rain. No formulation is recorded"
+        " as fitted to them",
+        "read",
+    ),
+    "dlr.rlp_rebschutz": Dataset(
+        "Rebschutz bulletins of the DLR Rheinpfalz (Mitteilungen) and DLR Mosel"
+        " (Rebschutzmitteilungen Mosel und Ahr), Rhineland-Palatinate, 2023-2025 as found: first"
+        " oil spots reported from Hergersweiler (Pfalz) at the start of the week of 18 June"
+        " 2025; on 11 June 2025 none in properly sprayed vineyards of the Mosel and Ahr, single"
+        " finds in neglected ones; germination readiness judged from models. Older issues are"
+        " dead links. No licence stated",
+        "Read 2026-11-03 by reading agents (claude-sonnet-5-5), quotes found at their lines. No"
+        " formulation is recorded as fitted to them",
+        "read",
+    ),
+    "geneve.bulletin_viticole": Dataset(
+        "Bulletin phytosanitaire viticole of the canton of Geneva (OCAN with AgriGenève), 2026"
+        " season: first downy mildew oil spots discovered on Tuesday 2 June 2026 in the"
+        " Mandement; the rain of 28-29 April judged to have triggered primary infection at all"
+        " Agrométéo stations. No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5), quotes found at their lines;"
+        " the row is in literature/real_outcomes_2026-11-03.csv. Other years not reached",
+        "read",
+    ),
+    "lfulg.sachsen_warndienst": Dataset(
+        "Pflanzenschutz-Warndienst Weinbau of Saxony's LfULG (Elbe valley), 2025 and 2026"
+        " issues: oil spots described conditionally ('where ..., single oil spots are to be"
+        " found'), not as reported finds; germination judged from rain and soil temperature."
+        " The bulletin forbids passing it on to third parties, in extract or whole, without"
+        " consent, so no row is published here",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); kept in the drop only",
+        "read",
+    ),
+    "bsv.france_viticulture": Dataset(
+        "France's Bulletins de santé du végétal, viticulture, 2019-2026 as read (Grand Est:"
+        " Alsace, Champagne, Lorraine; Bourgogne-Franche-Comté; Nouvelle-Aquitaine: Nord"
+        " Aquitaine, Sud Aquitaine, Charentes; PACA; Occitanie; Centre-Val de Loire;"
+        " Auvergne-Rhône-Alpes): the first downy mildew symptoms each season by area and the"
+        " plots they were seen on (untreated controls or network plots), and the date the"
+        " regional laboratory test first found overwintered oospores germinating in under 24"
+        " hours ('maturité des œufs d'hiver'): Alsace 26 April 2023, 29 April 2025, 13 April"
+        " 2026, not by 18 May 2022; Champagne 27 April 2021, 9 April 2026, not by 11 May 2022."
+        " Several bulletins allow reproduction only in full or with permission",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5): 41 region-years, 71 quotes"
+        " found at their lines by scripts/verify_quotes.py and each row's sentence found in its"
+        " bulletin; rows (dates, places, translated phrases; no quotes) in"
+        " literature/real_outcomes_2026-11-03.csv. Charentes 2026's maturity is a model's"
+        " estimate, not a test. No formulation is recorded as fitted to them",
         "read",
     ),
     "sanitatvegetal.penedes_avisos": Dataset(
