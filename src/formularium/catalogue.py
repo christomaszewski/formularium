@@ -4927,15 +4927,39 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("t_th_endo.concord", 12.5, "°C", "Table 2, p. 392", "read"),
             Published("t_th_endo.chardonnay", 11.75, "°C", "Table 2, p. 392", "read"),
             Published("t_th_endo.cabernet_sauvignon", 11.75, "°C", "Table 2, p. 392", "read"),
-            Published("ka_endo.concord", 0.13, "°C (as printed)", "Table 2, p. 392", "read"),
-            Published("ka_endo.chardonnay", 0.14, "°C (as printed)", "Table 2, p. 392", "read"),
             Published(
-                "ka_endo.cabernet_sauvignon", 0.14, "°C (as printed)", "Table 2, p. 392", "read"
+                "ka_endo.concord", 0.13, "°C (Table 2; °C/°C in Table 1)", "Table 2, p. 392", "read"
             ),
-            Published("kd_endo.concord", 0.01, "°C (as printed)", "Table 2, p. 392", "read"),
-            Published("kd_endo.chardonnay", 0.01, "°C (as printed)", "Table 2, p. 392", "read"),
             Published(
-                "kd_endo.cabernet_sauvignon", 0.01, "°C (as printed)", "Table 2, p. 392", "read"
+                "ka_endo.chardonnay",
+                0.14,
+                "°C (Table 2; °C/°C in Table 1)",
+                "Table 2, p. 392",
+                "read",
+            ),
+            Published(
+                "ka_endo.cabernet_sauvignon",
+                0.14,
+                "°C (Table 2; °C/°C in Table 1)",
+                "Table 2, p. 392",
+                "read",
+            ),
+            Published(
+                "kd_endo.concord", 0.01, "°C (Table 2; °C/°C in Table 1)", "Table 2, p. 392", "read"
+            ),
+            Published(
+                "kd_endo.chardonnay",
+                0.01,
+                "°C (Table 2; °C/°C in Table 1)",
+                "Table 2, p. 392",
+                "read",
+            ),
+            Published(
+                "kd_endo.cabernet_sauvignon",
+                0.01,
+                "°C (Table 2; °C/°C in Table 1)",
+                "Table 2, p. 392",
+                "read",
             ),
             Published("edb.concord", -700.0, "°C DDc (negative)", "Table 2, p. 392", "read"),
             Published("edb.chardonnay", -750.0, "°C DDc (negative)", "Table 2, p. 392", "read"),
@@ -4957,9 +4981,10 @@ FORMULATIONS: dict[str, Formulation] = {
             " printed are J. C. Ferguson, J. M. Tarara, L. J. Mills, G. G. Grove and M. Keller;"
             " Eqs 1-6 and Table 2 read in the page images. Cooptera's list, which this record"
             " must match, still says not held.",
-            "Table 2 prints the units of ka,endo and kd,endo as °C, and those of ka,eco and"
-            " kd,eco as °C per °C; RMSE on the optimisation set 2.05, 1.40 and 1.47 °C"
-            " (Concord, Chardonnay, Cabernet Sauvignon).",
+            "Table 2 prints the units of ka,endo and kd,endo as °C and those of ka,eco and"
+            " kd,eco as °C per °C, but the paper's Table 1 (p. 391) gives all four rates in °C"
+            " per °C: Table 2's endo units look like a misprint. RMSE on the optimisation set"
+            " 2.05, 1.40 and 1.47 °C (Concord, Chardonnay, Cabernet Sauvignon).",
         ),
     ),
     "vitimeteo.oospores": Formulation(
@@ -5119,12 +5144,22 @@ FORMULATIONS: dict[str, Formulation] = {
         ),
         doi="10.1094/APSnetFeature-1999-0199",
         structures=("temperature-hours-mildew-index",),
+        added_authors=(
+            Added(
+                ("Leavitt",),
+                "trail",
+                "co-author of the index's field test (Thomas, Gubler & Leavitt 1994), as"
+                " literature/elbailemur2016 cites it; not on the 1999 page",
+            ),
+        ),
         flags=(
             "Held since 2026-11-03 (literature/gubler1999, the APSnet Features page): its"
             " Authors field prints W. D. Gubler, M. R. Rademacher and S. J. Vasquez; its"
             " Affiliations field adds 'C. S. Thomas, Western Farm Service, Santa Maria', with an"
             " affiliation of his own, as a fourth author would be printed. Leavitt, whom a search"
-            " summary added to this record, is nowhere on the page: removed 2026-11-03."
+            " summary added, is not on the page; he is kept as an added author for the index's"
+            " field test (Thomas, Gubler & Leavitt 1994), since matching people leans to"
+            " linking."
             " Cooptera's list, which this record must match, still gives the trail.",
             "The page states the high-temperature rule twice, differently: its rules list takes"
             " 10 points off 'on any day with a minimum temperature above 35°C', its prose 'if at"
@@ -5132,8 +5167,9 @@ FORMULATIONS: dict[str, Formulation] = {
             " rest as printed: the index starts after 3 consecutive days with at least 6 h at"
             " 21-30 °C, gains 20 points a day with 6 h there, loses 10 a day without, runs"
             " 0-100; above 60 shortens and below 30 lengthens the spray interval. No data, sites"
-            " or years are printed; the one epidemiological source cited is Ypema & Gubler"
-            " 1997 (Plant Dis. 81:1187-1192).",
+            " or years are printed; the temperature work cited is Ypema & Gubler 1997 (Plant Dis."
+            " 81:1187-1192), beside Pearson & Gadoury 1987 and Sall & Wyrinski 1982 on primary"
+            " inoculum.",
             "Casanova-Gascón et al. 2019 (Agronomy 9:738, Somontano, read 2026-10-10;"
             " literature/casanovagascon2019): 'Thomas and Gubler's model was found to be very"
             " accurate' there, within a week of observed powdery mildew, 2016-2018. No numbers"

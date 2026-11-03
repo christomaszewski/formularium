@@ -26,7 +26,7 @@ A bioRxiv preprint on leaf-disc tests of a strain from the 2023 Cilaos outbreak 
 - **First evidence (l. 36):** breakdown of Rpv1, previously effective, by the Cilaos strain; the outbreak was spotted in 2023 (l. 138, personal communication).
 - **Three loci (l. 38):** one strain overcomes Rpv1, Rpv3.1 and Rpv10 at once, the first such case.
 - **Rpv10 (l. 47):** complete loss with the Cilaos strain, whereas European strains only partly overcome it; a novel homozygous deletion in an avirulence locus is reported.
-- **Assay (l. 347, 402):** 1x10^5 sporangia/mL; sporulation and necrosis read at 6 days after inoculation; 240 inoculated discs and 30 mock.
+- **Assay (l. 347, 402):** 1x10^5 sporangia/mL; sporulation and necrosis read at 6 days after inoculation; 240 inoculated discs and 30 mock-inoculated (l. 375).
 - **Spread concern (l. 51):** the abstract raises concern about emergence and spread, and the strain shares a genetic background with mainland French populations (the claim as recorded by the reader).
 
 ## Dependence

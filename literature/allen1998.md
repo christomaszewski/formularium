@@ -2,7 +2,7 @@
 id: allen1998
 citation: Allen, R. G., Pereira, L. S., Raes, D. & Smith, M. 1998. Crop evapotranspiration: guidelines for computing crop water requirements. FAO Irrigation and Drainage Paper 56. FAO, Rome
 doi:
-read: 2026-10-19, ch. 3 (atmospheric parameters, air humidity, radiation; Eq. 47 on 2026-11-03), ch. 4 (hourly time step, Example 19) and Annex 3 (atmospheric density), by the main session in FAO's HTML edition; Eqs 7, 8, 11, 13, 39, 3-5 and the hourly substitution read in their images
+read: 2026-10-19, ch. 3 (atmospheric parameters, air humidity, radiation; Eq. 47 on 2026-11-03 by a reading agent, claude-sonnet-5-5, in its image), ch. 4 (hourly time step, Example 19) and Annex 3 (atmospheric density), by the main session in FAO's HTML edition; Eqs 7, 8, 11, 13, 39, 3-5 and the hourly substitution read in their images
 status: read
 diseases: []
 crops: []

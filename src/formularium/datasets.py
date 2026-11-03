@@ -1536,7 +1536,8 @@ DATASETS: dict[str, Dataset] = {
     ),
     "aargau.weinjahr": Dataset(
         "The Liebegg Fachstelle Weinbau's annual 'Bericht Weinjahr' for the canton of Aargau"
-        " (2022-2024): first downy mildew symptoms at the end of May 2023 and 2024; oospores"
+        " (2022-2024): first downy mildew symptoms at the end of May 2023 and 2024 (the two"
+        " reports print the identical sentence, so 2024's may be reused text); oospores"
         " judged germination-ready on 7 May 2023 from a temperature sum at Frick (a model), and"
         " ripe on 13 April 2024 'after monitoring', earlier than the temperature sum. No"
         " licence stated",
@@ -1610,8 +1611,9 @@ DATASETS: dict[str, Dataset] = {
         " May 2025 (Alfaro), with the place (paraje). The 2018 date is recalled in a 2020 article"
         " without a place; 2019's place and date come from two articles. No licence stated",
         "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); each row's sentence found in its"
-        " page; rows in literature/real_outcomes_2026-11-03.csv. Detections under a prize, in"
-        " treated vineyards. No formulation is recorded as fitted to them",
+        " page; rows in literature/real_outcomes_2026-11-03.csv. Detections under a prize;"
+        " whether the vineyards were treated is not printed (2026's finder had sprayed three"
+        " times). No formulation is recorded as fitted to them",
         "read",
     ),
     "drapn.avisos_douro": Dataset(
@@ -1661,8 +1663,9 @@ DATASETS: dict[str, Dataset] = {
         " seen on (untreated controls or network plots), and the date the regional laboratory"
         " follow-up first found overwintered oospores germinating in under 24 hours ('maturité"
         " des œufs d'hiver'), e.g. Alsace 19 April 2016, 26 April 2023, 13 April 2026, not by 18"
-        " May 2022; Champagne 27 April 2021, 9 April 2026, not by 11 May 2022; Gironde 3 March"
-        " 2024. Several bulletins allow reproduction only in full or with permission",
+        " May 2022; Champagne 27 April 2021, 7 April 2026, not by 3 May 2022; Gironde 3 March"
+        " 2024 (in a bilan sentence that contradicts itself). Several bulletins allow"
+        " reproduction only in full or with permission",
         "Read 2026-11-03 by two reading agents (claude-sonnet-5-5): 137 region-years; 167 quotes"
         " found at their lines by scripts/verify_quotes.py and each row's sentence found in its"
         " bulletin; rows (dates, places, translated phrases; no quotes) in"
@@ -2178,7 +2181,8 @@ DATASETS: dict[str, Dataset] = {
     "agroclim.inrae": Dataset(
         (
             "Leaf wetness, global radiation, temperature, humidity, rain and wind at INRAE's "
-            "AgroClim stations, hourly, 1983-2025. Etalab 2.0."
+            "AgroClim stations, hourly (the Grande Ferrade file opened runs 1993-2025; the "
+            "1983 start and Etalab 2.0 are as the pilot-equations note read them)."
         ),
         (
             "As the pilot-equations research note (Agrarium, 2026-10-20) read it; see also "
@@ -2237,10 +2241,13 @@ DATASETS: dict[str, Dataset] = {
         " sampling every second, a record every 30 minutes sent by GPRS). On 2026-11-03 the"
         " 05:30 UTC half-hour first appeared 47 minutes after its start (a reading agent's"
         " poll, once a minute; one sample). Cooptera reads it (Agrarium D58: its readings,"
-        " and scores resting on them, stay in Cooptera). The portal tags both XEMA datasets"
-        " 'Dades d'Alt Valor: Meteorologia' (an EU high-value dataset, literature/eu2023hvd)"
-        " and links their attribution to the Generalitat's open licence (its metadata, read"
-        " 2026-11-03). No formulation in this catalogue is recorded as fitted to it",
+        " and scores resting on them, stay in Cooptera). The portal's metadata (read"
+        " 2026-11-03): the licence field says 'See Terms of Use'; the hourly dataset's own"
+        " description ends 'Tipus de Llicència: Propietat intel·lectual i industrial de"
+        " METEOCAT', pointing to Meteocat's legal notice; the attribution links of both go to"
+        " the Generalitat's page of open licences; both are tagged 'Dades d'Alt Valor:"
+        " Meteorologia' (an EU high-value dataset, literature/eu2023hvd). No formulation in"
+        " this catalogue is recorded as fitted to it",
         "read",
     ),
     "calvet2022.altpenedes": Dataset(

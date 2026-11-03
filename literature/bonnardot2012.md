@@ -18,7 +18,7 @@ files: [dr1103_bonnardot2012.pdf (the 2026-11-03 drop)]
 A South African study of January-March 2009 night minima at 40 vineyard loggers, with a radiative and an advective case night and a mesoscale model run (not read).
 
 **Read this first.**
-- The gradients are district-scale (6 to 12 km, 135 to 418 m of elevation), not hollow-scale. They are per-metre values 10 to 50 times below the 0.6 °C/m assumed in Agrarium; they do not test it for a 5 to 100 m hollow.
+- The gradients are district-scale (6 to 12 km, 135 to 418 m of elevation), not hollow-scale. They are per-metre values 14 to 20 times below the 0.6 °C/m assumed in Agrarium; they do not test it for a 5 to 100 m hollow.
 - The PDF is a Wayback capture of the OENO One file. The text runs to page 13 and the reference list, so it is not truncated. The two-column layout interleaves lines in the extraction.
 - This closes the 2026-10-18 lead.
 

@@ -1,6 +1,6 @@
 ---
 id: nzwinegrowers2023
-citation: New Zealand Winegrowers 2023. Biosecurity: pest and disease identification guide. Pests and diseases present in New Zealand vineyards
+citation: New Zealand Winegrowers 2023 (no year printed; the PDF's creation date, 2023-05-23). Biosecurity: pest and disease identification guide. Pests and diseases present in New Zealand vineyards
 doi:
 read: 2026-11-03, the downy mildew entry only, by a reading agent (claude-sonnet-5-5) and the main session; 1 of 1 quotes found at its line by scripts/verify_quotes.py
 status: read

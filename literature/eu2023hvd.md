@@ -46,9 +46,10 @@ not settled here.
 ## Bearing (2026-11-03)
 
 - **Agrarium D53 and Cooptera's Meteocat rule (D58):** the Generalitat's open-data portal tags
-  the XEMA datasets (`nzvn-apee`, `7bvh-jvq2`) "Dades d'Alt Valor: Meteorologia" and links their
-  attribution to the Generalitat's open licence (Llicència oberta d'ús d'informació - Catalunya),
-  as it does for the farm declarations (`darp.dun_vineyards`). If XEMA is a high-value dataset
+  the XEMA datasets (`nzvn-apee`, `7bvh-jvq2`) "Dades d'Alt Valor: Meteorologia". Their licence
+  field says "See Terms of Use"; the hourly dataset's description ends "Tipus de Llicència:
+  Propietat intel·lectual i industrial de METEOCAT" with a link to Meteocat's legal notice; their
+  attribution links go to the Generalitat's page of open licences, not to one licence. If XEMA is a high-value dataset
   under this regulation, its station observations are to be reusable under CC BY 4.0 or an
   equivalent licence. That bears on whether numbers fitted from them may leave Chris's machines;
   the decision stays Chris's.
