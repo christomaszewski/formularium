@@ -1708,7 +1708,7 @@ DATASETS: dict[str, Dataset] = {
         " to them. The spots are found in treated vineyards under a first-spot prize, so the"
         " dates are of detection. Stages read 2026-11-03 (image pages by OCR) and checked at"
         " their lines with each bulletin's printed date: literature/penedes_phenology_2026-11-03"
-        ".csv, 39 rows 2015-2026, each date an upper bound. The downy and powdery mildew"
+        ".csv, 38 rows 2015-2026, each date an upper bound. The downy and powdery mildew"
         " advice of every bulletin read the same day, each quoted sentence found in its"
         " bulletin by script: literature/penedes_advice_2026-11-03.csv, 264 rows",
         "read",
