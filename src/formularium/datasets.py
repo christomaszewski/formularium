@@ -875,6 +875,16 @@ DATASETS: dict[str, Dataset] = {
         " literature/garciatejera2022); observed, no model",
         "read",
     ),
+    "ferguson2011.prosser": Dataset(
+        "Cold hardiness (LTE50 by differential thermal analysis) of dormant primary buds of"
+        " Cabernet Sauvignon (22 seasons), Chardonnay (14) and Concord (15) at WSU IAREC,"
+        " Prosser, Washington (46.30 N, 119.75 W), 1988-2010, with the on-site station's air"
+        " temperature; split into optimisation and evaluation sets",
+        "Ferguson, Tarara, Mills, Grove & Keller 2011, Ann. Bot. 107:389-396, Materials and"
+        " methods (read 2026-11-03 in the PMC PDF; literature/ferguson2011): the model's"
+        " parameters were fitted to it",
+        "read",
+    ),
     "ferguson2014.prosser": Dataset(
         "Cold hardiness (differential thermal analysis) of primary buds of 23 Vitis genotypes"
         " at Prosser and Paterson, Washington, since 1988, with budbreak dates since 1988",
@@ -1420,6 +1430,22 @@ DATASETS: dict[str, Dataset] = {
         " (Bregaglio et al. 2022, J. Environ. Manage. 317:115365, note `bregaglio2022`), whose"
         " infection parameters were chosen by accuracy against these classes. MISFITS has no"
         " record here",
+        "read",
+    ),
+    "lwg.franken_weinbaufax": Dataset(
+        "Weinbaufax Franken, the weekly vine-protection bulletins of LWG Bayern's"
+        " Rebschutzdienst (Veitshöchheim) with Weinbauring Franken, April to July of 2024, 2025"
+        " and 2026 (44 issues; earlier years not found at the same address): growers' first"
+        " downy mildew oil spots in Franconia, as reported to the service and to Vitimonitoring,"
+        " and the service's rain-based judgements of primary infection days. First reports:"
+        " between 16 and 21 May 2024 (one spot in the whole region by 21 May, widespread by"
+        " 17 June); 27 May 2025 (on a stem shoot near the ground, put down to an early-May"
+        " infection); between 26 May and 3 June 2026 (from a mid-May infection with 'a very long"
+        " incubation'). Published at www.lwg.bayern.de as PDFs; no licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5) in the issues' text, 23 quotes"
+        " found at their lines by scripts/verify_quotes.py; working files in the 2026-11-03"
+        " drop. No formulation is recorded as fitted to them. Infection days are the service's"
+        " judgements from rain, not observations; the spots are detections",
         "read",
     ),
     "sanitatvegetal.penedes_avisos": Dataset(

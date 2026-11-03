@@ -167,6 +167,7 @@ def test_the_calibration_data_recorded_so_far() -> None:
         "ramos2017.budburst": ("ramos2017.penedes",),
         "molitor2014.shoots": ("molitor2014.mt60",),
         "ferguson2014.cold_hardiness": ("ferguson2014.prosser",),
+        "ferguson2011.hardiness": ("ferguson2011.prosser",),
         "leoni2026.oospores": ("leoni2026.changins",),
         "zachos1959.incubation": ("zachos1959",),
         "zachos1959.sporangia_survival": ("zachos1959.conidia",),
