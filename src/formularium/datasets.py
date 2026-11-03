@@ -1572,6 +1572,19 @@ DATASETS: dict[str, Dataset] = {
         " literature/oospore_maturity_2026-11-03.csv",
         "read",
     ),
+    "bsv.sudouest_bilans": Dataset(
+        "The BSV viticulture season reviews ('bilans') of the IFV Sud-Ouest for Gaillac, Cahors"
+        " and Gascogne (Saint-Mont, Madiran), 2013-2015, through Wayback captures: oospore"
+        " maturity by the laboratory follow-ups about 5 May 2013 (Gaillac, Cahors) and about 28"
+        " April 2015 (Gaillac, with the Potentiel Système model at 29-30 April); first downy"
+        " mildew spots 28 May 2013 on Gaillac's 'parcelles flottantes' and 28 April 2014 at"
+        " Corneillan (Gers). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5), quotes found at their lines;"
+        " the main session checked that each first-spot line sits in the downy mildew section"
+        " (two that sat under powdery mildew were dropped). Rows in"
+        " literature/real_outcomes_2026-11-03.csv and literature/oospore_maturity_2026-11-03.csv",
+        "read",
+    ),
     "geneve.bulletin_viticole": Dataset(
         "Bulletin phytosanitaire viticole of the canton of Geneva (OCAN with AgriGenève), 2026"
         " season: first downy mildew oil spots discovered on Tuesday 2 June 2026 in the"
