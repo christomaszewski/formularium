@@ -1960,9 +1960,58 @@ DATASETS: dict[str, Dataset] = {
         (
             "As the pilot-equations research note (Agrarium, 2026-10-20) read it; see also "
             "literature/furushopercot2025. Found for Agrarium D60 "
-            "(literature/requests/inputs-d60.md), 2026-10-27"
+            "(literature/requests/inputs-d60.md), 2026-10-27. Opened 2026-11-03 (doi:"
+            "10.57745/BQ0BWB): the Grande Ferrade station (33550003, beside the vineyards of"
+            " douillet2023.grandeferrade) has hourly leaf wetness `h` from 1993 to 2025, with"
+            " temperature, humidity, rain, radiation and wind; the share of wet hours is"
+            " 0.30-0.49 a year in 2018-2025 except 2020, 0.13 (a sensor to check before use)"
         ),
-        "trail",
+        "read",
+    ),
+    "darp.dun_vineyards": Dataset(
+        "Catalonia's farm declarations (DUN), 'Parcel·les i cultius de les explotacions',"
+        " Departament d'Agricultura, Socrata id uwe8-jqcu on analisi.transparenciacatalunya.cat:"
+        " every declared vineyard polygon with variety, planting year and planting frame"
+        " (rows x vines), 2023-2026. Licence: Llicència oberta d'ús d'informació - Catalunya"
+        " (reuse with attribution)",
+        "Read 2026-11-03 by the main session: the 2025 vineyard polygons of Alt Penedès, Baix"
+        " Penedès and Garraf (41,524; 21,873 ha), measured for Agrarium's site values (its"
+        " research note deep-research-11-03, site.md): row spacing median 2.8 m by area"
+        " (p10-p90 2.6-3.0), vine spacing 1.2 m (1.1-1.5). No formulation is fitted to it",
+        "read",
+    ),
+    "inrae.biospraytech2023": Dataset(
+        "BioSprayTech: whole-of-block spraying experiment for vine crop protection, 2023"
+        " (Verges, Naud, Bellone & Codis; Recherche Data Gouv, doi:10.57745/WT6JS9; Etalab 2.0"
+        " as its page states): powdery mildew on 171 geo-referenced plots of 20 vines under"
+        " seven spray modalities near Montpellier, scored by the EPPO protocol (bunches) and"
+        " a fast protocol, with the dated spray programme (BBCH stage) and daily weather",
+        "Opened 2026-11-03 by a strand agent (claude-sonnet-5-5): the design, EPPO data,"
+        " spray programme and weather files. Powdery, not downy, mildew. No formulation is"
+        " fitted to it",
+        "read",
+    ),
+    "inrae.riesling_bergheim": Dataset(
+        "Vitis vinifera cv. Riesling developmental stages (Duchêne; Recherche Data Gouv,"
+        " doi:10.15454/GYSGNR, updated 2026-09-08; Etalab 2.0 as its page states): budbreak,"
+        " 50 % flowering and 50 % veraison dates at INRA's Bergheim collection (Haut-Rhin),"
+        " 1958-2026, not every stage every year",
+        "Opened 2026-11-03 by a strand agent (claude-sonnet-5-5) and checked by the main"
+        " session (the 1958 row: budbreak 4 May). No formulation in this catalogue is recorded"
+        " as fitted to it",
+        "read",
+    ),
+    "calvet2022.altpenedes": Dataset(
+        "Alt Penedès environmental data collected between 2017 and 2021 (Calvet i Mirabent &"
+        " Estadella Valls; Zenodo, doi:10.5281/zenodo.6435640, CC BY 4.0): daily mean,"
+        " maximum and minimum temperature with their times, mean humidity, rain, maximum gust"
+        " and solar irradiation at five Meteocat XEMA stations (Font-rubí, la Granada,"
+        " Canaletes, Sant Martí Sarroca, Sant Sadurní d'Anoia), as text with units",
+        "Opened 2026-11-03 by the main session. Its description says the values were"
+        " 'extracted from the website meteo.cat' of the Servei Meteorològic de Catalunya: a"
+        " third party's CC BY 4.0 does not settle Meteocat's own terms (Agrarium D53). No"
+        " formulation is fitted to it",
+        "read",
     ),
     "colucci2026.italy": Dataset(
         (
