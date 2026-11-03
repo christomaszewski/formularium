@@ -341,7 +341,9 @@ annual reports, which date first symptoms and laboratory oospore maturity year b
 - **An independent review pays.** A reviewer agent given the branch, not the session's reasoning,
   checked a random sample (61 items, and two scans of the French dates) against the sources and
   found 11 errors, the file-name dates and the WMO equation among them
-  (`2026-11-03-deep-research/review/REVIEW.md`).
+  (`2026-11-03-deep-research/review/REVIEW.md`). A second review of the later work found ten more,
+  among them weather stations paired by distance alone: a vineyard paired with a station 800 m
+  above it. Pair by distance and height, and give the station's height in the row.
 
 ## Judging dependence
 
