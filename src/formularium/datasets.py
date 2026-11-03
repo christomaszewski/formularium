@@ -2191,8 +2191,10 @@ DATASETS: dict[str, Dataset] = {
         " sampling every second, a record every 30 minutes sent by GPRS). On 2026-11-03 the"
         " 05:30 UTC half-hour first appeared 47 minutes after its start (a reading agent's"
         " poll, once a minute; one sample). Cooptera reads it (Agrarium D58: its readings,"
-        " and scores resting on them, stay in Cooptera). No formulation in this catalogue is"
-        " recorded as fitted to it",
+        " and scores resting on them, stay in Cooptera). The portal tags both XEMA datasets"
+        " 'Dades d'Alt Valor: Meteorologia' (an EU high-value dataset, literature/eu2023hvd)"
+        " and links their attribution to the Generalitat's open licence (its metadata, read"
+        " 2026-11-03). No formulation in this catalogue is recorded as fitted to it",
         "read",
     ),
     "calvet2022.altpenedes": Dataset(
