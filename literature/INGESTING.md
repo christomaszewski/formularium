@@ -345,6 +345,10 @@ the spray advice (`penedes_phenology_2026-11-03.csv`, `penedes_advice_2026-11-03
   (`2026-11-03-deep-research/review/REVIEW.md`). A second review of the later work found ten more,
   among them weather stations paired by distance alone: a vineyard paired with a station 800 m
   above it. Pair by distance and height, and give the station's height in the row.
+- **Check positions typed from memory against a geocoder,** and the geocoder against the row.
+  Of 93 places reading agents placed from memory, four communes were 4-11 km off (San
+  Asensio, Arenzana de Abajo, Aldeanueva de Ebro, Perroy: now corrected), while Nominatim's
+  first hit for an ambiguous name (Klingenberg, Opfingen, Stetten) was 90-330 km off.
 
 ## Judging dependence
 
