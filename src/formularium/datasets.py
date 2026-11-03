@@ -1491,6 +1491,55 @@ DATASETS: dict[str, Dataset] = {
         "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); kept in the drop only",
         "read",
     ),
+    "areeiro.avisos": Dataset(
+        "Avisos fitosanitarios of the Estación Fitopatolóxica de Areeiro (Deputación de"
+        " Pontevedra, Galicia), 2018-2026: the day the first downy mildew spot was found in the"
+        " station's monitoring plots (O Salnés, O Rosal, O Condado) and in its own untreated"
+        " vineyard (19 April 2021, 11 May 2026), and the laboratory's first mature oospores"
+        " (13 April 2018, 'almost a month later than in 2017'; 28 March 2019; the week of 17"
+        " March 2021; 21 March 2022). Pages at areeiro.depo.gal; 2021 from Wayback captures;"
+        " licence not read",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); quotes found at their lines"
+        " and each row's sentence in its page; rows in literature/real_outcomes_2026-11-03.csv."
+        " No formulation is recorded as fitted to them",
+        "read",
+    ),
+    "larioja.premios_mildiu": Dataset(
+        "La Rioja's first downy mildew spot each year, from the Gobierno de La Rioja's prize for"
+        " the first spot found in the province ('Premios Mildiu', a table read through Wayback"
+        " captures for 2020, 2022, 2024 and 2025) and press reports for the other years,"
+        " 2018-2026: 3 May 2020 (Alfaro), 20 May 2022 (Fuenmayor), 18 May 2024 (San Asensio), 5"
+        " May 2025 (Alfaro), with the place (paraje). The 2018 date is recalled in a 2020 article"
+        " without a place; 2019's place and date come from two articles. No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); each row's sentence found in its"
+        " page; rows in literature/real_outcomes_2026-11-03.csv. Detections under a prize, in"
+        " treated vineyards. No formulation is recorded as fitted to them",
+        "read",
+    ),
+    "drapn.avisos_douro": Dataset(
+        "Circulars of DRAP Norte's Estação de Avisos do Douro (2005-2026, 16 seasons, from"
+        " ivdp.pt) and Estação de Avisos de Entre Douro e Minho (2021, 2023, 2024): when the"
+        " first downy mildew spots were reported in the Douro (Baixo and Cima Corgo) and Entre"
+        " Douro e Minho, and the stations' oospore tests (germination within 24 h by mid-March"
+        " 2020 and 2022, early April 2023). Some circulars mention disease already present, not"
+        " the first spot (2005, 2010, 2011, 2025). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); each row's sentence found in its"
+        " circular; rows in literature/real_outcomes_2026-11-03.csv. No formulation is recorded"
+        " as fitted to them",
+        "read",
+    ),
+    "iberia_italy.alerts": Dataset(
+        "Single-season first downy mildew reports read on 2026-11-03: Castilla-La Mancha's"
+        " Hoja informativa of June 2025 as relayed (Iniesta, Daimiel, 5 June 2025), Andalucía's"
+        " RAIF alert as relayed by the press (Condado de Huelva the week of 6 April 2026; Jerez"
+        " and Montilla-Moriles about 20 April 2026), Arezzo's provincial bulletins (2021, 2024,"
+        " 2025) and the Consorzio del Vino Nobile di Montepulciano (9 May 2025). No licence"
+        " stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); each row's sentence found in its"
+        " source; rows in literature/real_outcomes_2026-11-03.csv. Relays are second-hand; the"
+        " 2024 Arezzo row is not shown to be the season's first report",
+        "read",
+    ),
     "bsv.france_viticulture": Dataset(
         "France's Bulletins de santé du végétal, viticulture, 2019-2026 as read (Grand Est:"
         " Alsace, Champagne, Lorraine; Bourgogne-Franche-Comté; Nouvelle-Aquitaine: Nord"
