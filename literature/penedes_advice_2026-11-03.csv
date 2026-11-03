@@ -1,0 +1,266 @@
+# Downy and powdery mildew advice in the Penedès plant-health bulletins (dataset sanitatvegetal.penedes_avisos), 2015-2026: one row per bulletin and disease, 132 bulletins. advice is one of: treat now; treat at a stage; repeat after N days or after rain; wait, no treatment yet; protection can stop; no advice. trigger, stage and products are the reader's short English paraphrase of what the bulletin prints (product names as printed); template = the sentence repeats an earlier year's word for word. The advice is for treated commercial vineyards, and some spray days went out by phone or message, not in these files. Read 2026-11-03 by a strand agent (claude-sonnet-5-5) in both the text layers and the OCR of image pages; every quoted sentence found in its bulletin by the main session's script. bulletin = file in the dataset's fetch folder; line = T (text layer) or O (OCR text kept with the 2026-11-03 search, text/s25_ocr).
+bulletin_date,year,disease,advice,trigger,stage,products,template,bulletin,line
+2015-02-06,2015,downy mildew,no advice,,,,,01-penedes.pdf,
+2015-02-06,2015,powdery mildew,no advice,,,,,01-penedes.pdf,
+2015-04-23,2015,downy mildew,"wait, no treatment yet",no notable rain this spring; Xarxa d'Avisos Antimildiu about to start,,,,02-penedes.pdf,T32-36
+2015-04-23,2015,powdery mildew,treat at a stage,shoot length,shoots 10-12 cm,"Massocur, Vivando or similar (liquid)",,02-penedes.pdf,T28-31
+2015-05-15,2015,downy mildew,treat now,spots found in many places + very sensitive stage + rain forecast for mid next week,sensitive stage (flowering approaching),"sistemic (PEARZE TRIPLE, POMBAL PLUS 300 g/hl) rather than contacte (oxiclorur de coure 50%, 4 kg/ha)",,03-penedes.pdf,T9-15; T17-19
+2015-05-15,2015,powdery mildew,treat at a stage,flowering,start of flowering (liquid) or full flowering (sulphur dust),sofre en pols / liquid,,03-penedes.pdf,T23-25
+2015-06-04,2015,downy mildew,"wait, no treatment yet","spots only in Priorat, Baix Penedes, one in Camp de Tarragona; watch weather",,,,04-penedes.pdf,T9-13
+2015-06-04,2015,powdery mildew,treat at a stage,berry size,berry pea size (grape pepper size in sensitive varieties),sofre pols 40-45 kg/ha; liquid products (not same active more than twice in a row),,04-penedes.pdf,T17-24
+2015-06-17,2015,downy mildew,treat now,recent important rains,,"treatment may be combined with the grape-moth one, wetting bunches and foliage",,05-penedes.pdf,T13-17
+2015-06-17,2015,powdery mildew,treat at a stage,berry size,pea size,sofre pols,,05-penedes.pdf,T49-50
+2015-06-19,2015,downy mildew,treat now,recent important rains,,as in 05,yes,06-penedes.pdf,T13-17
+2015-06-19,2015,powdery mildew,treat at a stage,berry size,pea size,sofre pols,yes,06-penedes.pdf,T51-52
+2015-06-25,2015,downy mildew,no advice,,,,,07-penedes.pdf,
+2015-06-25,2015,powdery mildew,treat now,incidence found,,sofre pols,,07-penedes.pdf,T16-17
+2015-07-23,2015,downy mildew,no advice,,,,,08-penedes.pdf,
+2015-07-23,2015,powdery mildew,treat at a stage,incidence found; protect bunches,until veraison complete (black) or ripening clearly started (white),,,08-penedes.pdf,T25-27
+2015-08-06,2015,downy mildew,treat at a stage,two rain episodes in 10 days may trigger autumn mildew,vines more than 3 weeks from harvest,coure (preventive),,09-penedes.pdf,T31-33
+2015-08-06,2015,powdery mildew,treat at a stage,incidence found; protect bunches,until veraison complete / ripening started,,yes,09-penedes.pdf,T26-28
+2015-09-05,2015,downy mildew,no advice,,,,,010-penedes.pdf,
+2015-09-05,2015,powdery mildew,no advice,,,,,010-penedes.pdf,
+2015-10-06,2015,downy mildew,no advice,,,,,011-penedes.pdf,
+2015-10-06,2015,powdery mildew,no advice,,,,,011-penedes.pdf,
+2016-01-14,2016,downy mildew,no advice,,,,,13-penedes.pdf,
+2016-01-14,2016,powdery mildew,no advice,,,,,13-penedes.pdf,
+2016-04-11,2016,downy mildew,"wait, no treatment yet",anti-mildew network running; treatments to begin when indicated after first spot,,,,02-penedes16.pdf,T13-14
+2016-04-11,2016,powdery mildew,no advice,,,,,02-penedes16.pdf,
+2016-04-18,2016,downy mildew,"wait, no treatment yet",network running; will warn when to treat,,,,16-penedes.pdf,T7
+2016-04-18,2016,powdery mildew,treat at a stage,shoot length,"shoots 10-12 cm (Chardonnay, Xarel.lo, Merlot, Ull de llebre, some Macabeu already)","liquid: Vivando, Talendo, Bayfidan",,16-penedes.pdf,T9-12
+2016-05-10,2016,downy mildew,treat now,spots found at many places + rainy period,before flowering; late zones can wait,"contacte oxiclorur de coure 50% 3-4 kg/ha; penetrants cimoxanil+sulfat cupro (Curzate C, Festival); sistemics cimoxanil+folpet+fosetil-Al (Triceratox), metalaxil+folpet (Armetil 50)",,17-penedes.pdf,T10-14; T23-26
+2016-05-10,2016,powdery mildew,treat at a stage,flowering,second treatment at start of flowering (liquid) or full flowering (sulphur dust),sofre en pols,,17-penedes.pdf,T32-34
+2016-05-26,2016,downy mildew,treat at a stage,spots continue in Baix Penedes,flowering,"sistemics or penetrants now; contacte/penetrant/sistemic list (cimoxanil, folpet, fosetil-Al, metalaxil)",,18-penedes.pdf,T7-8; T12-13
+2016-05-26,2016,powdery mildew,treat at a stage,flowering,second treatment at start of flowering / full flowering,sofre en pols,yes,18-penedes.pdf,T23-25
+2016-06-08,2016,downy mildew,treat now,"spots appearing in many places although no new infective rain; treat if spots found, even dispersed",,sistemics or penetrants,,19-penedes.pdf,T9-13; T18-19
+2016-06-08,2016,powdery mildew,treat at a stage,berry size,third treatment at pea size,sofre pols / liquid,,19-penedes.pdf,T34-37
+2016-06-20,2016,downy mildew,treat now,"spots in many places; treat if found, even dispersed",,sistemics or penetrants,yes,20-penedes.pdf,T21-23; T26-27
+2016-06-20,2016,powdery mildew,treat at a stage,berry size,third treatment at pea size,,yes,20-penedes.pdf,T42-45
+2016-06-27,2016,downy mildew,"wait, no treatment yet",current weather: infection risk nil,,,,21-penedes.pdf,T24-25
+2016-06-27,2016,powdery mildew,treat at a stage,berry size,third treatment at pea size,,,21-penedes.pdf,T28-29
+2016-07-22,2016,downy mildew,no advice,,,,,22-penedes.pdf,
+2016-07-22,2016,powdery mildew,treat at a stage,incidence found,protect bunches until veraison complete / ripening started,,,22-penedes.pdf,T28-30
+2016-07-27,2016,downy mildew,treat now,important rain overnight (with hail in Baix Penedes and Conca de Barbera),,compostos cuprics; add penetrant or sistemic where spots present,,23-penedes.pdf,T43-45
+2016-07-27,2016,powdery mildew,treat now,considerable incidence,sensitive varieties/zones,,,23-penedes.pdf,T49-50
+2016-08-01,2016,downy mildew,no advice,"recap of advice after the rain of Friday 22 July (Conca de Barbera, Alt Camp, Baix Penedes)",,,,24-penedes.pdf,T29-31
+2016-08-01,2016,powdery mildew,treat now,considerable incidence,sensitive varieties/zones,,yes,24-penedes.pdf,T33-34
+2016-08-31,2016,downy mildew,no advice,,,,,25-penedes.pdf,
+2016-08-31,2016,powdery mildew,no advice,,,,,25-penedes.pdf,
+2016-09-21,2016,downy mildew,no advice,,,,,26-penedes.pdf,
+2016-09-21,2016,powdery mildew,no advice,,,,,26-penedes.pdf,
+2016-10-18,2016,downy mildew,no advice,,,,,27-penedes.pdf,
+2016-10-18,2016,powdery mildew,no advice,,,,,27-penedes.pdf,
+2017-04-06,2017,downy mildew,no advice,,,,,28-penedes.pdf,
+2017-04-06,2017,powdery mildew,treat at a stage,shoot length,first treatment at 10 cm shoots,"liquid: Vivando, Talendo, Bayfidan",,28-penedes.pdf,T16-18
+2017-05-15,2017,downy mildew,treat now,first spot found in Camp de Tarragona and Conca; Baix Penedes in several places; flowering beginning; rain forecast from Thursday,flowering,sistemics or penetrants; organic: cuprics,,29-penedes.pdf,T5-14
+2017-05-15,2017,powdery mildew,treat at a stage,flowering,second treatment at start of flowering (liquid) or full flowering (dust); may be combined with the mildew one,,,29-penedes.pdf,T16-18
+2017-06-07,2017,downy mildew,treat now,"rain of 3, 4, 5 June general, 10-30 l",,"penetrants or sistemics (Triceratox, Ridomil); organic: cuprics",,30-penedes.pdf,T17-24
+2017-06-07,2017,powdery mildew,treat at a stage,important incidence; berry size,third treatment at pea size,,,30-penedes.pdf,T29-30
+2017-06-15,2017,downy mildew,"wait, no treatment yet",no new rain; vines considered covered after last treatment,,,,31-penedes.pdf,T20-21
+2017-06-15,2017,powdery mildew,treat at a stage,important incidence; berry size,third treatment at pea size,,yes,31-penedes.pdf,T23-24
+2017-06-19,2017,downy mildew,no advice,,,,,32-penedes.pdf,
+2017-06-19,2017,powdery mildew,treat at a stage,important incidence; berry size,third treatment at pea size,,yes,32-penedes.pdf,T25-26
+2017-07-17,2017,downy mildew,"wait, no treatment yet",watch for new spots on affected farms,,,,33-penedes.pdf,T22
+2017-07-17,2017,powdery mildew,no advice,important incidence; vigilance only,,,,33-penedes.pdf,T20
+2017-07-24,2017,downy mildew,treat now,"rain of 21 and 23 July general, 10-33 l",,compostos cuprics (below 10 l); add penetrant where spots or over 10 l,,34-penedes.pdf,T19-24
+2017-07-24,2017,powdery mildew,no advice,important incidence; vigilance only,,,,34-penedes.pdf,T17
+2017-09-15,2017,downy mildew,no advice,,,,,35-penedes.pdf,
+2017-09-15,2017,powdery mildew,no advice,,,,,35-penedes.pdf,
+2018-03-19,2018,downy mildew,no advice,,,,,36-penedes.pdf,
+2018-03-19,2018,powdery mildew,no advice,,,,,36-penedes.pdf,
+2018-04-17,2018,downy mildew,no advice,,,,,37-penedes.pdf,
+2018-04-17,2018,powdery mildew,treat at a stage,shoot length,first treatment at 10-15 cm shoots,"liquid: Vivando, Talendo Extra, Centinela",,37-penedes.pdf,T27-30
+2018-05-10,2018,downy mildew,treat now,continuous rain periods and forecast; before flowering; vigorous growth,before flowering,sistemics (not washed off by rain),,38-penedes.pdf,T13-18
+2018-05-10,2018,powdery mildew,treat at a stage,shoot length,first treatment at 10-15 cm shoots,,,38-penedes.pdf,T26-28
+2018-05-24,2018,downy mildew,no advice,recap: general protective treatment already advised; spots now in all Tarragona comarques except 2nd in Conca,,organic: keep protected with coure,,39-penedes.pdf,T17-18; T26-27
+2018-05-24,2018,powdery mildew,treat at a stage,flowering,second treatment at start of flowering (liquid) or full flowering (dust),,,39-penedes.pdf,T30-34
+2018-06-01,2018,downy mildew,treat now,spots and affected bunches in all comarques; rain Monday and Wednesday; flowering,flowering,sistemics; organic: keep copper from being washed off,,40-penedes.pdf,T15-26
+2018-06-01,2018,powdery mildew,treat at a stage,humidity favours disease; incidence in many places,second treatment at start of flowering / full flowering,,,40-penedes.pdf,T29-34
+2018-07-04,2018,downy mildew,treat now,important repicats (secondary spots) in many places; if new spots or bunches affected,,"penetrants or sistemics, wetting both sides",,41-penedes.pdf,T52-55
+2018-07-04,2018,powdery mildew,treat at a stage,incidence in many places,third treatment at pea size,,,41-penedes.pdf,T58-59
+2018-07-04,2018,downy mildew,treat now,important repicats; if new spots or bunches affected,,penetrants or sistemics,yes,42-penedes.pdf,T54-57
+2018-07-04,2018,powdery mildew,treat at a stage,incidence in many places,third treatment at pea size,,yes,42-penedes.pdf,T60-61
+2018-07-10,2018,downy mildew,no advice,,,,,43-penedes.pdf,
+2018-07-10,2018,powdery mildew,no advice,,,,,43-penedes.pdf,
+2018-07-25,2018,downy mildew,protection can stop,from start of veraison bunches little sensitive; keep protecting only where active mildew at the shoot tips; young vines until end of cycle; not where mildew absent or dry,veraison,,,44-penedes.pdf,T36-41
+2018-07-25,2018,powdery mildew,no advice,,,,,44-penedes.pdf,
+2018-07-30,2018,downy mildew,no advice,,,,,45-penedes.pdf,
+2018-07-30,2018,powdery mildew,no advice,,,,,45-penedes.pdf,
+2018-09-18,2018,downy mildew,no advice,,,,,46-penedes.pdf,
+2018-09-18,2018,powdery mildew,no advice,,,,,46-penedes.pdf,
+2018-10-10,2018,downy mildew,no advice,,,,,47-penedes.pdf,
+2018-10-10,2018,powdery mildew,no advice,,,,,47-penedes.pdf,
+2019-03-28,2019,downy mildew,no advice,,,,,49-penedes.pdf,
+2019-03-28,2019,powdery mildew,no advice,,,,,49-penedes.pdf,
+2019-04-08,2019,downy mildew,"wait, no treatment yet","early vines >10 cm shoots, last rains could cause first primary infections",shoots >10 cm,,,50-penedes.pdf,T29-33
+2019-04-08,2019,powdery mildew,treat at a stage,shoot length,first treatment at 10-15 cm; important in farms with last year's attack and sensitive varieties,,,50-penedes.pdf,T19-24
+2019-05-15,2019,downy mildew,treat now,no spot detected in Tarragona; rain forecast end of week; littoral vines near flowering and organic growers,"near flowering (littoral zones, organic); late zones: not necessary",preventive products,,51-penedes.pdf,T22-28
+2019-05-15,2019,powdery mildew,treat at a stage,shoot length,first at 10-15 cm; renew after 15 days in sensitive farms,,,51-penedes.pdf,T14-18
+2019-05-27,2019,downy mildew,treat now,"rain of last Friday 25-40 l, general; first spot only in Priorat; near/at flowering",flowering,sistemic product; organic: cuprics; both faces,,52-penedes.pdf,T20-29
+2019-05-27,2019,powdery mildew,treat at a stage,flowering,second treatment at start of flowering (liquid) or full flowering (dust),,,52-penedes.pdf,T15-16
+2019-06-11,2019,downy mildew,"wait, no treatment yet",rain today in almost all comarques; spots only in Priorat; watch for spots,,,,53-penedes.pdf,T15-20
+2019-06-11,2019,powdery mildew,treat at a stage,flowering,second treatment at start of flowering / full flowering,,,53-penedes.pdf,T22-23
+2019-06-14,2019,downy mildew,repeat after N days or after rain,rain of Tuesday 11 June 10-20 l in Camp de Tarragona and Alt/Baix Penedes only,,contacte products; window Mon 17 to Wed 19 June,,54-penedes.pdf,T28-32
+2019-06-14,2019,powdery mildew,treat at a stage,berry size,third treatment at pea size,,,54-penedes.pdf,T34-35
+2019-06-23,2019,downy mildew,"wait, no treatment yet",humidity conditions not met to recommend any treatment,,,,55-penedes.pdf,T46
+2019-06-23,2019,powdery mildew,treat at a stage,berry size,third treatment at pea size; change active each treatment; reduce dust dose 30% from 25 June,sofre pols,,55-penedes.pdf,T38-42
+2019-06-28,2019,downy mildew,"wait, no treatment yet",humidity conditions not met; spots only in Priorat and first in Camp de Tarragona,,,,56-penedes.pdf,T83-85
+2019-06-28,2019,powdery mildew,treat now,attacks seen on bunches; very high temperatures: avoid dust,,,,56-penedes.pdf,T76-78
+2019-07-12,2019,downy mildew,"wait, no treatment yet",rain of 9 July over 10 l only in Priorat and Conca; high temperature low humidity not favourable,,,,57-penedes.pdf,T61-65
+2019-07-12,2019,powdery mildew,no advice,very high temperatures: avoid dust if any treatment is made,,,,57-penedes.pdf,T55-57
+2019-07-31,2019,downy mildew,treat at a stage,to protect foliage against autumn mildew and premature leaf fall,during August; late harvest and young vines,coure,,58-penedes.pdf,T66-70
+2019-07-31,2019,powdery mildew,treat at a stage,veraison start,preventive treatment at start of veraison,,,58-penedes.pdf,T61-62
+2019-08-16,2019,downy mildew,treat at a stage,to protect foliage against autumn mildew,during August; late harvest and young vines,coure,yes,59-penedes.pdf,T24-28
+2019-08-16,2019,powdery mildew,treat at a stage,"veraison start, mostly late varieties",preventive treatment at start of veraison,,yes,59-penedes.pdf,T19-20
+2019-09-16,2019,downy mildew,no advice,,,,,60-penedes.pdf,
+2019-09-16,2019,powdery mildew,no advice,,,,,60-penedes.pdf,
+2019-10-14,2019,downy mildew,no advice,young vines keep protection to end of cycle (disease not named),,,,62-penedes.pdf,T10-11
+2019-10-14,2019,powdery mildew,no advice,,,,,62-penedes.pdf,
+2020-02-03,2020,downy mildew,no advice,,,,,63-penedes.pdf,
+2020-02-03,2020,powdery mildew,no advice,,,,,63-penedes.pdf,
+2020-03-18,2020,downy mildew,no advice,,,,,64-penedes.pdf,
+2020-03-18,2020,powdery mildew,no advice,,,,,64-penedes.pdf,
+2020-04-08,2020,downy mildew,"wait, no treatment yet",network of 18 observatories starts next week; oospores matured well in rainy mild autumn-winter; early primary infections only in the few vines already in leaf,,,,65-penedes.pdf,O81-89
+2020-04-08,2020,powdery mildew,treat at a stage,shoot length,first treatment at 10-15 cm; important after last year's attacks,,,65-penedes.pdf,O44-48
+2020-04-30,2020,downy mildew,"wait, no treatment yet",spots found at La Munia and other Alt Penedes towns; no rain expected; vines under 20 cm shoots need no treatment,,,,66-penedes.pdf,T10-16
+2020-04-30,2020,powdery mildew,treat now,early attacks seen: renew treatments where symptoms are seen and where usually a problem,late zones: first preventive at about 15 cm shoots,,,66-penedes.pdf,T21-25
+2020-05-04,2020,downy mildew,treat now,rain forecast Sunday 10 and Monday 11 May; always treat before rain; optimal days being decided,,contacte or sistemics,,67-penedes.pdf,T10-14
+2020-05-04,2020,powdery mildew,treat now,early attacks seen: renew treatments where symptoms and usual problem farms,late zones first at 15 cm,,,67-penedes.pdf,T19-23
+2020-05-20,2020,downy mildew,repeat after N days or after rain,"stations El Vendrell, La Bisbal, Vila-rodona RH>90% and T>10 C at dawn; start of flowering; renew as persistence ends","start of flowering (Chardonnay, Xarel.lo)","persistence 7 d contacte (coure), 10 d penetrants, 12 d sistemics",,68-penedes.pdf,T10-15; T23-24
+2020-05-20,2020,powdery mildew,treat at a stage,flowering,second treatment at start of flowering (liquid) or full flowering (dust),,,68-penedes.pdf,O31-33
+2020-06-04,2020,downy mildew,repeat after N days or after rain,many spots on leaves and bunches; rain and humidity now and forecast: very high risk of secondary infection,,renew as persistence ends; curative product of 2 penetrants for sporulating bunches,,69-penedes.pdf,O45-49; T34-37
+2020-06-04,2020,powdery mildew,treat at a stage,berry size,second at flowering; next at pea size,,,69-penedes.pdf,O90-94
+2020-06-09,2020,downy mildew,repeat after N days or after rain,rain of Sunday 7 June 10-15 l washed contact products/copper; rain and humidity continuous: pressure very high,,penetrants or contacte; curative product (2 penetrants) for sporulating bunches,,70-penedes.pdf,T21-24; O70-71
+2020-06-09,2020,powdery mildew,treat at a stage,berry size,third treatment at pea size,,,70-penedes.pdf,O90-91
+2020-06-12,2020,downy mildew,repeat after N days or after rain,"mildew pressure high: keep protection, esp. active mildew and less advanced vines; where bunches developed and disease controlled renewing may be skipped",,,,71-penedes.pdf,T36-41
+2020-06-12,2020,powdery mildew,treat at a stage,berry size,third treatment at pea size,,,71-penedes.pdf,O111-112
+2020-06-19,2020,downy mildew,repeat after N days or after rain,"pressure high; organic: rain this week washed copper, over 30 mm after treatment means over 50% lost",,coure; sistemics if spots on mallols,yes,72-penedes.pdf,T36-46; T51-53
+2020-06-19,2020,powdery mildew,treat now,"attacks in bunches, some important",,sofre pols or curatius,,72-penedes.pdf,T59-60
+2020-06-29,2020,downy mildew,protection can stop,no rain since 18 June; keep protecting vines with active mildew; where no mildew seen and bunches advanced one may choose not to treat,,copper for organic; fila si fila no,,73-penedes.pdf,T25-27; T33-34
+2020-06-29,2020,powdery mildew,treat now,"attacks in bunches, some important; beware dust above 30 C",,sofre pols or curatius,,73-penedes.pdf,T66-68
+2020-07-09,2020,downy mildew,protection can stop,until veraison mildew can affect bunches; may stop treating if no active mildew on bunches,veraison,new spots on leaves: contacte (coures) every 15 days,,74-penedes.pdf,T10-16
+2020-07-09,2020,powdery mildew,treat now,"bunch damage, in some cases very important",,sofre pols or assecant,,74-penedes.pdf,T24-25
+2020-07-20,2020,downy mildew,protection can stop,weather of last weeks and advanced vines: mildew risk fell a lot; no renewal; only late zones with active mildew,,,,75-penedes.pdf,T36-41
+2020-07-20,2020,powdery mildew,treat now,"bunch damage, some very important",,"sofre pols preventive, or assecant or penetrant",,75-penedes.pdf,T52-54
+2020-07-30,2020,downy mildew,protection can stop,risk fell a lot; no renewal; only late zones with active mildew,,copper pre-harvest interval 15-21 d,yes,76-penedes.pdf,T12-16
+2020-07-30,2020,powdery mildew,treat now,"bunch damage, some very important",,"sofre pols preventive, or assecant or penetrant; PHI meptildinocap 21 d, triazols 14 d, sofre mullable 5 d",yes,76-penedes.pdf,T23-25; T30-35
+2020-11-27,2020,downy mildew,no advice,,,,,77-penedes.pdf,
+2020-11-27,2020,powdery mildew,no advice,,,,,77-penedes.pdf,
+2021-03-09,2021,downy mildew,no advice,,,,,78-penedes.pdf,
+2021-03-09,2021,powdery mildew,no advice,,,,,78-penedes.pdf,
+2021-04-07,2021,downy mildew,"wait, no treatment yet","oospore winter conditions not met (10 mm rain in 24-48 h, 10 C mean, 10 cm shoots)",,,,79-penedes.pdf,T42-44
+2021-04-07,2021,powdery mildew,treat at a stage,shoot length,"first treatment at 10-15 cm; Chardonnay, Xarel.lo at this stage","conventional: metrafenona, miclobutanil, proquinazid+tetraconazol; organic: sofre mullable/liquid, oli de taronja",,79-penedes.pdf,O22-26; T17-22
+2021-04-23,2021,downy mildew,"wait, no treatment yet",no spot in the comarca; EPI winter model: germination risk moderately low,,,,80-penedes.pdf,T46-53
+2021-04-23,2021,powdery mildew,treat at a stage,shoot length,"first treatment: Macabeu, Parellada, Ull de llebre, Merlot at recommended stage; Chardonnay treated 15 d ago repeat with a different active",,,80-penedes.pdf,T10-14
+2021-05-05,2021,downy mildew,treat now,forecast rain 9-11 May; monitoring of infection evolution predicts possible spots in that period; no spot yet,first preventive; next at start of flowering in 10-15 d,copper (esp. organic): min 750-800 g Cu metal/ha,,81-penedes.pdf,T9-14
+2021-05-05,2021,powdery mildew,treat at a stage,shoot length,first treatment at 10-15 cm,,,81-penedes.pdf,O73-77
+2021-05-19,2021,downy mildew,treat at a stage,"flowering start for Chardonnay, Xarel.lo, Ull de llebre in coming days; first spot found at La Munia; theoretical spots from rain of Thursday 13 expected by weekend",first general preventive only for varieties at start of flowering,copper; sistemics (10-12 d protection),,82-penedes.pdf,T10-13; O14-19
+2021-05-19,2021,powdery mildew,treat at a stage,flowering; important attacks this year,third preventive at start of flowering (dust: full flowering); second preventive 2-3 weeks after first in late varieties,,,82-penedes.pdf,T64-69
+2021-06-14,2021,downy mildew,"wait, no treatment yet","isolated repicat only, risk low",,,,83-penedes.pdf,T17
+2021-06-14,2021,powdery mildew,treat at a stage,infections in just-set fruit and bunches; do not use dust: heat wave forecast,pea size / bunch closure,"MEPTILDINOCAP, PROQUINAZID, KRESOXIM-METIL, METRAFENONA, TRIFLOXISTROBIN",,83-penedes.pdf,T22-27; T31-33
+2021-06-25,2021,downy mildew,"wait, no treatment yet",no new spots or repicats,,,,84-penedes.pdf,T32
+2021-06-25,2021,powdery mildew,treat now,damage found; watch high temperatures,,sofre pols,,84-penedes.pdf,T37-40
+2021-07-29,2021,downy mildew,no advice,,,,,85-penedes.pdf,
+2021-07-29,2021,powdery mildew,repeat after N days or after rain,important attacks in some vines; renew as persistence ends until veraison; avoid dust above 30 C,until veraison,MEPTILDINOCAP (21 d PHI) and others,,85-penedes.pdf,T30-36
+2021-11-24,2021,downy mildew,no advice,,,,,86-penedes.pdf,
+2021-11-24,2021,powdery mildew,no advice,,,,,86-penedes.pdf,
+2022-04-12,2022,downy mildew,"wait, no treatment yet","oospore winter conditions not met (10 mm in 24-48 h, 10 C, 10 cm shoots)",,,,87-penedes.pdf,T21-23
+2022-04-12,2022,powdery mildew,treat at a stage,shoot length,first treatment at 10-15 cm,,,87-penedes.pdf,O38-42
+2022-05-13,2022,downy mildew,"wait, no treatment yet",first spot of Tarragona demarcation at Albinyana; no rain forecast; may advise before important rain or at flowering start,,,,88-penedes.pdf,T10-12; O13-18
+2022-05-13,2022,powdery mildew,treat at a stage,spots of powdery mildew found in sensitive varieties; first treatments,first treatments,curative+systemic: MEPTILDINOCAP+TRIAZOL or PROQUINAZID+TETRACONAZOL; organic: reduce sulphur dose above 30 C,,88-penedes.pdf,T17-22; T25-26
+2022-05-20,2022,downy mildew,treat now,"spots at L'Arboc, Albinyana, Vallmoll, Salomo, Rodonya; models predict rain Tue/Wed","before rains (organic); conventional can wait for flowering start, risk low",first treatment; copper,,89-penedes.pdf,T10-13; T18-22
+2022-05-20,2022,powdery mildew,treat at a stage,flowering,at start of flowering (liquid) or full flowering (dust),,,89-penedes.pdf,O29-31
+2022-05-26,2022,downy mildew,treat now,"rain 22.9-36.2 mm in 48 h (Sant Jaume, Bisbal, Castellvi); flowering; theoretical spots next week",start of flowering,"organic: second treatment as soon as possible (30 mm washes 50% of copper, INCAVI); conventional: systemic at flowering start",,90-penedes.pdf,T10-28; O21-24
+2022-05-26,2022,powdery mildew,treat at a stage,flowering; conditions of last days optimal for the disease,start of flowering (liquid) / full flowering (dust); treat especially if damage,,,90-penedes.pdf,T31-33; T48-49
+2022-06-20,2022,downy mildew,"wait, no treatment yet",spots found are isolated and not virulent; rain announced Wednesday,,,,91-penedes.pdf,T25-26; O63-66
+2022-06-20,2022,powdery mildew,treat now,attacks seen on bunches,,"conventional: MEPTILDINOCAP, BOSCALIDA+KRESOXIM-METIL, PROQUINAZID; organic: HIDROGENOCARBONAT DE POTASSI + SOFRE LIQUID",,91-penedes.pdf,T31-40; T44-45
+2022-07-28,2022,downy mildew,treat now,35-42 l rain today across the comarca; to reduce inoculum for next year,late varieties before veraison,preventive; mind PHI,,92-penedes.pdf,T29-32
+2022-07-28,2022,powdery mildew,protection can stop,from veraison risk of new infection drops a lot; renew only if damage; avoid dust above 30 C,veraison,,,92-penedes.pdf,T25-27; O60-62
+2022-09-09,2022,downy mildew,no advice,,,,,94-penedes.pdf,
+2022-09-09,2022,powdery mildew,no advice,,,,,94-penedes.pdf,
+2022-10-05,2022,downy mildew,no advice,,,,,95-penedes.pdf,
+2022-10-05,2022,powdery mildew,no advice,,,,,95-penedes.pdf,
+2022-12-13,2022,downy mildew,no advice,,,,,96-penedes.pdf,
+2022-12-13,2022,powdery mildew,no advice,,,,,96-penedes.pdf,
+2023-04-19,2023,downy mildew,"wait, no treatment yet","oospore winter conditions not met (10 mm in 24-48 h, 10 C, 10 cm shoots)",,,,98-penedes.pdf,T35-37
+2023-04-19,2023,powdery mildew,treat at a stage,shoot length,first treatment at 10-15 cm; first treatments are fundamental,new triazols (sistemics),,98-penedes.pdf,O56-60; T26-30
+2023-05-12,2023,downy mildew,no advice,EPI winter model below -15 (this year),,,,100-penedes.pdf,T16-18
+2023-05-12,2023,powdery mildew,treat at a stage,flowering,second treatment at start of flowering (liquid) or full flowering (dust); late vines first at 10-15 cm,,,100-penedes.pdf,O15-20
+2023-06-04,2023,downy mildew,"wait, no treatment yet",no spot in Tarragona demarcation; drought winter makes general mildew unlikely; one spot in Alt Penedes; last rains may bring first spots,,,,101-penedes.pdf,O60-71
+2023-06-04,2023,powdery mildew,treat at a stage,important leaf attacks (ascospore primary infections) can reinfect forming bunches,pea size and bunch closure,organic: VITISAN + THIOPRON (5 g/l + 3 g/l in 1000 l),,101-penedes.pdf,T10-16; T19-21
+2023-06-19,2023,downy mildew,no advice,first spot of Camp de Tarragona and two in Conca; first-spot prizes remaining,,,,102-penedes.pdf,O98-105
+2023-06-19,2023,powdery mildew,treat at a stage,berry size,third treatment at pea size; second at flowering,,yes,102-penedes.pdf,O56-61
+2023-07-19,2023,downy mildew,no advice,,,,,103-penedes.pdf,
+2023-07-19,2023,powdery mildew,protection can stop,from veraison risk of new infection drops; renew only if damage; 33 C stops the fungus; no dust above 30 C,veraison,VITISAN (organic),,103-penedes.pdf,T25-28
+2023-08-04,2023,downy mildew,no advice,,,,,104-penedes.pdf,
+2023-08-04,2023,powdery mildew,no advice,,,,,104-penedes.pdf,
+2023-09-25,2023,downy mildew,treat at a stage,last rains may cause autumn mildew,,copper (sulfat tribasic de coure) with foliar N fertiliser,,105-penedes.pdf,T10-12
+2023-09-25,2023,powdery mildew,no advice,,,,,105-penedes.pdf,
+2024-04-05,2024,downy mildew,"wait, no treatment yet","oospore winter conditions not met (10 mm in 24-48 h, 10 C, 10 cm shoots)",,,,108-penedes.pdf,T40-42
+2024-04-05,2024,powdery mildew,treat at a stage,shoot length,first treatment at 10-15 cm; important after last year's attacks,mind triazol resistance,,108-penedes.pdf,O55-60; T35
+2024-05-02,2024,downy mildew,"wait, no treatment yet",no spot in Tarragona; generalised rain >10 l early in week; wait for first spots and weather,,,,109-penedes.pdf,T29-32; O36-46
+2024-05-02,2024,powdery mildew,treat at a stage,shoot length,first at 10-15 cm; repeat after 15 days in sensitive varieties and farms,,,109-penedes.pdf,T17-21; O21-23
+2024-05-16,2024,downy mildew,treat now,"two first spots in Penedes (Castellet, Sant Jaume Sesoliveres) and Camp de Tarragona; continued rain; flowering near",as flowering of each variety approaches; Baix Penedes coastal in flowering now,conventional and organic strategies listed; copper,,110-penedes.pdf,T17-24
+2024-05-16,2024,powdery mildew,repeat after N days or after rain,flowering; damage found on old leaves and inflorescences,protect flowering; late varieties renew 2-3 weeks after last treatment,do not repeat actives (triazol resistance),,110-penedes.pdf,T34-38; O57-59
+2024-06-05,2024,downy mildew,repeat after N days or after rain,"repicats general in Banyeres, L'Arboc, Sant Jaume, Rodonya; climate models: RH up and rain next week; 4 h of wet leaf favour spread",renew as persistence ends: copper 8-10 d,"conv: sistemic ditianona + fosfat potassic; penetrant cimoxanil, zoxamida, dimetomorf; organic: coure + mullant",,111-penedes.pdf,T17-31
+2024-06-05,2024,powdery mildew,treat at a stage,flowering of late vines; pea size in advanced Chardonnay,protect flowering; pea size before bunch closure,,,111-penedes.pdf,O49-54
+2024-07-02,2024,downy mildew,repeat after N days or after rain,storms; keep protection; >25 mm rain partly washed copper: repeat as soon as vineyards can be entered,,coure,,112-penedes.pdf,O20-24; T17-20
+2024-07-02,2024,powdery mildew,treat now,attacks seen on bunches; bunch closure stage,bunch closure,,,112-penedes.pdf,O33-35
+2024-07-29,2024,downy mildew,repeat after N days or after rain,"active mildew at shoot tips: keep protection to avoid premature defoliation; space out treatments, focus on growing tips; young vines to end of cycle",,,,113-penedes.pdf,O18-22; T17-18
+2024-07-29,2024,powdery mildew,repeat after N days or after rain,disease pressure very high; do not stretch periods between treatments; no dust above 30 C,,"PHI: metrafenona and proquinazid 28 d, meptildinocap 21 d, triazols 14 d",,113-penedes.pdf,O29-30; T23-25
+2024-08-30,2024,downy mildew,no advice,,,,,114-penedes.pdf,
+2024-08-30,2024,powdery mildew,no advice,,,,,114-penedes.pdf,
+2024-10-08,2024,downy mildew,no advice,,,,,115-penedes.pdf,
+2024-10-08,2024,powdery mildew,no advice,,,,,115-penedes.pdf,
+2024-11-29,2024,downy mildew,no advice,,,,,116-penedes.pdf,
+2024-11-29,2024,powdery mildew,no advice,,,,,116-penedes.pdf,
+2025-03-31,2025,downy mildew,no advice,EPI model high (+5 to +10) because favourable conditions for oospore germination in autumn-winter-spring,,,,117-penedes.pdf,T67-69
+2025-03-31,2025,powdery mildew,treat at a stage,"before budburst: winter clean-up of cleistothecia; first preventive in littoral advanced varieties (Chardonnay, Pinot noir) at 10-15 cm",between swollen bud and leaf emergence (winter); 10-15 cm,polisulfur de calci 38% (4 l/100 l at swollen bud; 2 l/100 l at leaf emergence),,117-penedes.pdf,T49-55; T62-63
+2025-04-14,2025,downy mildew,treat at a stage,autumn and spring conditions: infection risk high although no spot found; rain forecast next week,"only earliest varieties with 10-15 cm shoots, esp. organic; others wait; Alt Camp: no treatment",preventive,,118-penedes.pdf,T53-58
+2025-04-14,2025,powdery mildew,treat at a stage,shoot length,"first treatment at 10-15 cm (Chardonnay, Xarel.lo early zones)",organic list; polisulfur de calci 38% max 1.5 l/100 l,,118-penedes.pdf,T25-27; T39-42
+2025-04-29,2025,downy mildew,"wait, no treatment yet",first Penedes spot at Gelida (from 30 l rain of 2 April); none in Baix Penedes; climate models show no rain,,,,119-penedes.pdf,T13-17
+2025-04-29,2025,powdery mildew,treat at a stage,shoot length,first treatment at 10-15 cm,organic list,,119-penedes.pdf,O49-51
+2025-05-02,2025,downy mildew,treat now,second spot at St Pau d'Ordal; models show rain next week coinciding with spots from rain of 26 April,,"copper optimal days 3, 4, 5 May (organic); systemics/penetrants after rains; Alt Camp: no treatment",,120-penedes.pdf,T14-17; T28-31
+2025-05-02,2025,powdery mildew,repeat after N days or after rain,primary infection spots found,first at 10-15 cm; repeat about 15 days later in sensitive Chardonnay and Macabeu,organic: drying agent + liquid sulphur,yes,120-penedes.pdf,T36-42
+2025-05-09,2025,downy mildew,treat now,no spots in Baix Penedes; flowering; recent rain; Alt Camp: model says theoretical spots 14-16 May,"flowering (start in Chardonnay and Xarel.lo, coastal)","sistemic during next days (interior); copper optimal 12, 13, 14 May (Alt Camp organic)",,121-penedes.pdf,T14-19; T29-33
+2025-05-09,2025,powdery mildew,repeat after N days or after rain,primary infection spots found,first at 10-15 cm; repeat about 15 days later in sensitive Chardonnay and Macabeu,,yes,121-penedes.pdf,T67-69
+2025-05-16,2025,downy mildew,treat now,"first Baix Penedes spots (L'Arboc, Castellet); flowering; some models give rain mid-week",flowering,copper before rain (organic); copper persistence 7-8 d,,122-penedes.pdf,T14-21
+2025-05-16,2025,powdery mildew,treat at a stage,symptoms found in sensitive varieties,protect flowering,"liquid at start, dust in full flowering",,122-penedes.pdf,T56-57
+2025-05-23,2025,downy mildew,treat now,flowering in most areas; scattered spots; protect to avoid repicats if morning dew; Blaesser model: 2-3 h wet leaf at 17-22 C,flowering,,,123-penedes.pdf,T14-19; T25-26
+2025-05-23,2025,powdery mildew,treat at a stage,symptoms found in sensitive varieties,protect flowering,"liquid at start, dust in full flowering",yes,123-penedes.pdf,T67-68
+2025-06-05,2025,downy mildew,"wait, no treatment yet",current humidity and temperature: risk of new infections and repicats low; watch vines with active foci and dew,,,,124-penedes.pdf,T14-16
+2025-06-05,2025,powdery mildew,treat at a stage,attacks on leaf and bunch in sensitive varieties,next at pea size (coastal varieties there now),sofre pols optimal now,,124-penedes.pdf,T28-30
+2025-06-17,2025,downy mildew,no advice,description of mildew damage on flowering/set (no treatment advice),,,,125-penedes.pdf,T51-52
+2025-06-17,2025,powdery mildew,repeat after N days or after rain,bunches affected,renew as persistence of last product ends until bunch closure,sofres 3-5 d; penetrants and sistemics 10-12 d,,125-penedes.pdf,T58-60
+2025-07-19,2025,downy mildew,no advice,,,,,126-penedes.pdf,
+2025-07-19,2025,powdery mildew,repeat after N days or after rain,bunches affected,renew as persistence ends until bunch closure; no dust above 32 C,sofres 3-5 d; penetrants and sistemics 10-12 d,yes,126-penedes.pdf,T65-69
+2025-08-07,2025,downy mildew,no advice,,,,,127-penedes.pdf,
+2025-08-07,2025,powdery mildew,no advice,,,,,127-penedes.pdf,
+2025-09-04,2025,downy mildew,no advice,,,,,128-penedes.pdf,
+2025-09-04,2025,powdery mildew,no advice,,,,,128-penedes.pdf,
+2025-09-30,2025,downy mildew,no advice,,,,,129-penedes.pdf,
+2025-09-30,2025,powdery mildew,no advice,,,,,129-penedes.pdf,
+2026-01-07,2026,downy mildew,no advice,,,,,130-penedes.pdf,
+2026-01-07,2026,powdery mildew,no advice,,,,,130-penedes.pdf,
+2026-03-10,2026,downy mildew,no advice,,,,,131-penedes.pdf,
+2026-03-10,2026,powdery mildew,treat at a stage,before budburst: winter clean-up,between swollen buds and leaf emergence,"polisulfur de calci 38% (3 l/100 l at swollen bud, 1.5 l/100 l at leaf emergence); meptildinocap no longer authorised",yes,131-penedes.pdf,T14-24
+2026-03-20,2026,downy mildew,no advice,,,,,132-penedes.pdf,
+2026-03-20,2026,powdery mildew,no advice,,,,,132-penedes.pdf,
+2026-04-08,2026,downy mildew,"wait, no treatment yet",EPI winter model medium-low (-5 to +5),,,,133-penedes.pdf,T78-81
+2026-04-08,2026,powdery mildew,treat at a stage,first stages up to flowering; winter clean-up,10-15 cm; alternate actives,"MEFENTRIFLUCONAZOL 7.5%, PROQUINAZID 16% + TETRACONAZOL 8% (meptildinocap withdrawn: use allowed to 2026-09-30)",,133-penedes.pdf,O120-122; T70-77
+2026-04-29,2026,downy mildew,"wait, no treatment yet",no spot found; rain announced next week but risk low; no pre-rain treatment for organic growers,,,,134-penedes.pdf,T29-35
+2026-04-29,2026,powdery mildew,repeat after N days or after rain,"humidity rising, possible rain, more leaf-wet hours: favourable to disease","renew protection esp. sensitive varieties; next treatment at start of flowering (coast next week, interior in 10-12 d)",alternate actives,,134-penedes.pdf,T13-18
+2026-05-06,2026,downy mildew,treat now,"no spot from rains of 12-13 April; possible new infectious cycle where >8-10 mm rain (Bellvei, L'Arboc, Rodonya); rain forecast with flowering",before rains (organic); flowering start on coast,,,135-penedes.pdf,T14-23
+2026-05-06,2026,powdery mildew,treat at a stage,humidity and rain favour disease; flowering max sensitivity,"protect flowering: liquid at start, dust in full flowering; alternate actives",,,135-penedes.pdf,T29-33
+2026-05-22,2026,downy mildew,protection can stop,"isolated spots (L'Arborcar, Ordal, Castellet, Vilafranca) no repicats; weather expected not to renew; flowering passed",Penedes: after flowering; Camp de Tarragona: keep flowering protection,,,136-penedes.pdf,T14-21
+2026-05-22,2026,powdery mildew,treat at a stage,flowering; conditions optimal for dust,protect flowering; keep protection until veraison,sofre pols,,136-penedes.pdf,T25-27
+2026-06-03,2026,downy mildew,"wait, no treatment yet","new isolated spots in Penedes, first spots Camp de Tarragona and Conca; risk of new infections low despite possible rain",after flowering,,,137-penedes.pdf,T14-22
+2026-06-03,2026,powdery mildew,treat at a stage,phenology very advanced (heat and soil water),next treatment at pea size; conditions optimal for sulphur dust,sofre pols,,137-penedes.pdf,T29-32
+2026-06-16,2026,downy mildew,no advice,,,,,138-penedes.pdf,
+2026-06-16,2026,powdery mildew,repeat after N days or after rain,disease pressure high esp. sensitive varieties; do not stretch periods between treatments,,"sistemic, penetrants 12-14 d; sofres and assecants 5-7 d",,138-penedes.pdf,T64-66
+2026-06-30,2026,downy mildew,no advice,,,,,139-penedes.pdf,
+2026-06-30,2026,powdery mildew,treat now,foci of malura in organic farms; pressure high; heat forecast: do not exceed doses,visible bunches,assecants d'hifes: HIDROGENOCARBONAT DE POTASSI 1.5 kg/100 l,,139-penedes.pdf,T33-38
+2026-07-21,2026,downy mildew,no advice,,,,,140-penedes.pdf,
+2026-07-21,2026,powdery mildew,protection can stop,after veraison bunch less susceptible; risk low across comarca; renew only if active foci,veraison,HIDROGENOCARBONAT DE POTASSI 1.5 kg/100 l; POLISULFUR DE CALCI 2 l/100 l; OLI DE TARONJA 0.3 l/100 l,,140-penedes.pdf,T61-68
+2026-09-25,2026,downy mildew,no advice,,,,,141-penedes.pdf,
+2026-09-25,2026,powdery mildew,no advice,,,,,141-penedes.pdf,

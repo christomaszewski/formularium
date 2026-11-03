@@ -2,7 +2,7 @@
 id: allen1998
 citation: Allen, R. G., Pereira, L. S., Raes, D. & Smith, M. 1998. Crop evapotranspiration: guidelines for computing crop water requirements. FAO Irrigation and Drainage Paper 56. FAO, Rome
 doi:
-read: 2026-10-19, ch. 3 (atmospheric parameters, air humidity, radiation), ch. 4 (hourly time step, Example 19) and Annex 3 (atmospheric density), by the main session in FAO's HTML edition; Eqs 7, 8, 11, 13, 39, 3-5 and the hourly substitution read in their images
+read: 2026-10-19, ch. 3 (atmospheric parameters, air humidity, radiation; Eq. 47 on 2026-11-03 by a reading agent, claude-sonnet-5-5, in its image), ch. 4 (hourly time step, Example 19) and Annex 3 (atmospheric density), by the main session in FAO's HTML edition; Eqs 7, 8, 11, 13, 39, 3-5 and the hourly substitution read in their images
 status: read
 diseases: []
 crops: []
@@ -51,3 +51,10 @@ The lead Chris gave from memory for night net radiation, read at the source. The
 - **Psychrometrics:** recorded as `allen1998.psychrometrics` (reference) with
   `formularium.equations.allen1998_psychrometrics`: one published source for the Δ, δ, λ, ρ and Cp
   that SWEB does not print. With them, SWEB's Eqs 1-14 reproduce its Fig. 1A and 1B.
+
+## Bearing (2026-11-03)
+
+- **Eq. 47, the engine's `fao56.eq47`:** read by a reading agent (claude-sonnet-5-5) in FAO's HTML
+  edition, chapter 3, in its image: u2 = uz 4.87 / ln(67.8 z - 5.42), z in m, for "measurements
+  above a short grassed surface"; Example 14 gives a factor of 0.75 at 10 m. No source or
+  derivation is printed with it. The record carries this as a flag.

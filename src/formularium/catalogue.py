@@ -4866,8 +4866,18 @@ FORMULATIONS: dict[str, Formulation] = {
         authors=("Amerine, M.A.", "Winkler, A.J."),
         authors_from="trail",
         checked="Molitor et al. 2014's reference list (held)",
+        doi="10.3733/hilg.v15n06p493",
         structures=("degree-day-climate-index",),
         role="reference",
+        flags=(
+            "Held since 2026-11-03 (literature/amerine1944, Hilgardia 15(6):493-675): the"
+            " summation is 'degree-days above 50° F for the period April to October"
+            " inclusive' (p. 504), a degree-day being the period's mean temperature less 50 °F"
+            " times its days (Table 4's footnote); regions I to V at under 2,500, 2,501-3,000,"
+            " 3,001-3,500, 3,501-4,000 and 4,001 or more °F degree-days (p. 505). The 10 °C"
+            " and the Celsius bounds are later conversions, not printed. Cooptera's list,"
+            " which this record must match, still cites Wikipedia.",
+        ),
     ),
     "ferguson2014.cold_hardiness": Formulation(
         "Bud cold hardiness and budbreak, 23 cultivars",
@@ -4894,7 +4904,88 @@ FORMULATIONS: dict[str, Formulation] = {
         authors=("Ferguson", "Tarara", "Mills", "Grove", "Keller"),
         authors_from="trail",
         checked="cold_hardiness.py's docstring",
+        doi="10.1093/aob/mcq263",
+        calibrated_on=("ferguson2011.prosser",),
+        calibration_note=(
+            "Read 2026-11-03 (literature/ferguson2011): parameters fitted by iteration to"
+            " minimise RMSE on measured LTE50 (differential thermal analysis) at WSU IAREC,"
+            " Prosser, WA, 1988-2010, against the station's daily mean temperature; no model"
+            " computed or dated the observations. The same laboratory's series as"
+            " ferguson2014.prosser (since 1988), so the two overlap: inferred, not stated"
+        ),
         structures=("cold-hardiness",),
+        parameters=(
+            Published("hc_initial.concord", -11.94, "°C", "Table 2, p. 392", "read"),
+            Published("hc_initial.chardonnay", -10.55, "°C", "Table 2, p. 392", "read"),
+            Published("hc_initial.cabernet_sauvignon", -9.99, "°C", "Table 2, p. 392", "read"),
+            Published("hc_max.concord", -29.73, "°C", "Table 2, p. 392", "read"),
+            Published("hc_max.chardonnay", -25.24, "°C", "Table 2, p. 392", "read"),
+            Published("hc_max.cabernet_sauvignon", -24.63, "°C", "Table 2, p. 392", "read"),
+            Published("hc_min.concord", -3.0, "°C", "Table 2, p. 392", "read"),
+            Published("hc_min.chardonnay", -3.0, "°C", "Table 2, p. 392", "read"),
+            Published("hc_min.cabernet_sauvignon", -3.0, "°C", "Table 2, p. 392", "read"),
+            Published("t_th_endo.concord", 12.5, "°C", "Table 2, p. 392", "read"),
+            Published("t_th_endo.chardonnay", 11.75, "°C", "Table 2, p. 392", "read"),
+            Published("t_th_endo.cabernet_sauvignon", 11.75, "°C", "Table 2, p. 392", "read"),
+            Published(
+                "ka_endo.concord", 0.13, "°C (Table 2; °C/°C in Table 1)", "Table 2, p. 392", "read"
+            ),
+            Published(
+                "ka_endo.chardonnay",
+                0.14,
+                "°C (Table 2; °C/°C in Table 1)",
+                "Table 2, p. 392",
+                "read",
+            ),
+            Published(
+                "ka_endo.cabernet_sauvignon",
+                0.14,
+                "°C (Table 2; °C/°C in Table 1)",
+                "Table 2, p. 392",
+                "read",
+            ),
+            Published(
+                "kd_endo.concord", 0.01, "°C (Table 2; °C/°C in Table 1)", "Table 2, p. 392", "read"
+            ),
+            Published(
+                "kd_endo.chardonnay",
+                0.01,
+                "°C (Table 2; °C/°C in Table 1)",
+                "Table 2, p. 392",
+                "read",
+            ),
+            Published(
+                "kd_endo.cabernet_sauvignon",
+                0.01,
+                "°C (Table 2; °C/°C in Table 1)",
+                "Table 2, p. 392",
+                "read",
+            ),
+            Published("edb.concord", -700.0, "°C DDc (negative)", "Table 2, p. 392", "read"),
+            Published("edb.chardonnay", -750.0, "°C DDc (negative)", "Table 2, p. 392", "read"),
+            Published(
+                "edb.cabernet_sauvignon", -850.0, "°C DDc (negative)", "Table 2, p. 392", "read"
+            ),
+            Published("t_th_eco.concord", 4.25, "°C", "Table 2, p. 392", "read"),
+            Published("t_th_eco.chardonnay", 3.75, "°C", "Table 2, p. 392", "read"),
+            Published("t_th_eco.cabernet_sauvignon", 5.75, "°C", "Table 2, p. 392", "read"),
+            Published("ka_eco.concord", 0.01, "°C/°C", "Table 2, p. 392", "read"),
+            Published("ka_eco.chardonnay", 0.07, "°C/°C", "Table 2, p. 392", "read"),
+            Published("ka_eco.cabernet_sauvignon", 0.01, "°C/°C", "Table 2, p. 392", "read"),
+            Published("kd_eco.concord", 0.16, "°C/°C", "Table 2, p. 392", "read"),
+            Published("kd_eco.chardonnay", 0.13, "°C/°C", "Table 2, p. 392", "read"),
+            Published("kd_eco.cabernet_sauvignon", 0.12, "°C/°C", "Table 2, p. 392", "read"),
+        ),
+        flags=(
+            "Held since 2026-11-03 (literature/ferguson2011, the PMC PDF): the five authors as"
+            " printed are J. C. Ferguson, J. M. Tarara, L. J. Mills, G. G. Grove and M. Keller;"
+            " Eqs 1-6 and Table 2 read in the page images. Cooptera's list, which this record"
+            " must match, still says not held.",
+            "Table 2 prints the units of ka,endo and kd,endo as °C and those of ka,eco and"
+            " kd,eco as °C per °C, but the paper's Table 1 (p. 391) gives all four rates in °C"
+            " per °C: Table 2's endo units look like a misprint. RMSE on the optimisation set"
+            " 2.05, 1.40 and 1.47 °C (Concord, Chardonnay, Cabernet Sauvignon).",
+        ),
     ),
     "vitimeteo.oospores": Formulation(
         "Oospore maturity at 140 degree-days above 8 °C",
@@ -5051,15 +5142,34 @@ FORMULATIONS: dict[str, Formulation] = {
             "literature survey (02-other-diseases-and-pests.md, row 24, from a snippet) "
             "adds Thomas"
         ),
+        doi="10.1094/APSnetFeature-1999-0199",
         structures=("temperature-hours-mildew-index",),
         added_authors=(
             Added(
                 ("Leavitt",),
-                "snippet",
-                "a search summary's author list",
+                "trail",
+                "co-author of the index's field test (Thomas, Gubler & Leavitt 1994), as"
+                " literature/elbailemur2016 cites it; not on the 1999 page",
             ),
         ),
         flags=(
+            "Held since 2026-11-03 (literature/gubler1999, the APSnet Features page): its"
+            " Authors field prints W. D. Gubler, M. R. Rademacher and S. J. Vasquez; its"
+            " Affiliations field adds 'C. S. Thomas, Western Farm Service, Santa Maria', with an"
+            " affiliation of his own, as a fourth author would be printed. Leavitt, whom a search"
+            " summary added, is not on the page; he is kept as an added author for the index's"
+            " field test (Thomas, Gubler & Leavitt 1994), since matching people leans to"
+            " linking."
+            " Cooptera's list, which this record must match, still gives the trail.",
+            "The page states the high-temperature rule twice, differently: its rules list takes"
+            " 10 points off 'on any day with a minimum temperature above 35°C', its prose 'if at"
+            " any time during the day, the temperature rose to 35°C for at least 15 min'. The"
+            " rest as printed: the index starts after 3 consecutive days with at least 6 h at"
+            " 21-30 °C, gains 20 points a day with 6 h there, loses 10 a day without, runs"
+            " 0-100; above 60 shortens and below 30 lengthens the spray interval. No data, sites"
+            " or years are printed; the temperature work cited is Ypema & Gubler 1997 (Plant Dis."
+            " 81:1187-1192), beside Pearson & Gadoury 1987 and Sall & Wyrinski 1982 on primary"
+            " inoculum.",
             "Casanova-Gascón et al. 2019 (Agronomy 9:738, Somontano, read 2026-10-10;"
             " literature/casanovagascon2019): 'Thomas and Gubler's model was found to be very"
             " accurate' there, within a week of observed powdery mildew, 2016-2018. No numbers"
@@ -5119,8 +5229,22 @@ FORMULATIONS: dict[str, Formulation] = {
         authors=("Alduchov, O. A.", "Eskridge, R. E."),
         authors_from="trail",
         checked="Daly et al. 2015's reference list (held)",
+        doi="10.1175/1520-0450(1996)035<0601:IMFAOS>2.0.CO;2",
         structures=("magnus-humidity",),
         role="reference",
+        parameters=(
+            Published("a_hpa", 6.1094, "hPa", "Eq. 21, p. 608 (AERK)", "read"),
+            Published("b", 17.625, "-", "Eq. 21, p. 608 (AERK)", "read"),
+            Published("c_c", 243.04, "°C", "Eq. 21, p. 608 (AERK)", "read"),
+        ),
+        flags=(
+            "Held since 2026-11-03 (literature/alduchov1996; authors as printed Oleg A."
+            " Alduchov and Robert E. Eskridge, NCDC): AERK, e_w(t) = 6.1094 exp(17.625 t /"
+            " (243.04 + t)) in hPa with t in °C, is recommended over water for -40 to 50 °C,"
+            " with a maximum relative error under 0.384 % against Goff-Gratch 1946, Wexler 1976"
+            " and Sonntag 1990 (Eq. 21 read in the page image). Cooptera's list, which this"
+            " record must match, still says not held.",
+        ),
     ),
     "noaa.solar_position": Formulation(
         "The sun's elevation (night hours for sporulation)",
@@ -5143,6 +5267,12 @@ FORMULATIONS: dict[str, Formulation] = {
         checked="wetness_model.py, SOURCES.md",
         structures=("log-wind-profile",),
         role="reference",
+        flags=(
+            "Read 2026-11-03 in FAO's HTML edition (literature/allen1998; Allen, Pereira, Raes &"
+            " Smith 1998): Eq. 47, u2 = uz 4.87 / ln(67.8 z - 5.42), z in m, 'for measurements"
+            " above a short grassed surface' (chapter 3, read in its image); Example 14 gives"
+            " 0.75 at 10 m. No source or derivation is printed with it.",
+        ),
     ),
     # -- Candidates: published, independent of the incubation lineage, run by neither tool ----
     "zachos1959.incubation": Formulation(

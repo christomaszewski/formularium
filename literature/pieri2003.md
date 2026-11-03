@@ -10,7 +10,7 @@ regions: [Bordeaux]
 processes: [radiation interception, row geometry, diffuse radiation, albedo, transpiration]
 records: [pieri2003.row_interception]
 datasets: [pieri2003.bordeaux_diffuse]
-files: [pieri2003.pdf (the 2026-10-25 other-sources drop)]
+files: [pieri2003.pdf (the 2026-10-25 other-sources drop), Sensitivity_to_training_system_parameters_and_soil.pdf]
 ---
 
 # Pieri & Gaudillère 2003: the radiation a vine row catches, from its view factor

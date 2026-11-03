@@ -875,6 +875,16 @@ DATASETS: dict[str, Dataset] = {
         " literature/garciatejera2022); observed, no model",
         "read",
     ),
+    "ferguson2011.prosser": Dataset(
+        "Cold hardiness (LTE50 by differential thermal analysis) of dormant primary buds of"
+        " Cabernet Sauvignon (22 seasons), Chardonnay (14) and Concord (15) at WSU IAREC,"
+        " Prosser, Washington (46.30 N, 119.75 W), 1988-2010, with the on-site station's air"
+        " temperature; split into optimisation and evaluation sets",
+        "Ferguson, Tarara, Mills, Grove & Keller 2011, Ann. Bot. 107:389-396, Materials and"
+        " methods (read 2026-11-03 in the PMC PDF; literature/ferguson2011): the model's"
+        " parameters were fitted to it",
+        "read",
+    ),
     "ferguson2014.prosser": Dataset(
         "Cold hardiness (differential thermal analysis) of primary buds of 23 Vitis genotypes"
         " at Prosser and Paterson, Washington, since 1988, with budbreak dates since 1988",
@@ -1422,17 +1432,285 @@ DATASETS: dict[str, Dataset] = {
         " record here",
         "read",
     ),
+    "lwg.franken_weinbaufax": Dataset(
+        "Weinbaufax Franken, the weekly vine-protection bulletins of LWG Bayern's"
+        " Rebschutzdienst (Veitshöchheim) with Weinbauring Franken: growers' first downy mildew"
+        " oil spots in Franconia, as reported to the service and to Vitimonitoring, and the"
+        " service's judgements of oospore germination and infection days from rain and"
+        " degree-days. First reports: 27 May 2019; 8 June 2021; 25 May 2022 (Würzburg);"
+        " 25 May 2023 (Stetten); between 16 and 21 May 2024 (one spot in the region by 21"
+        " May); 27 May 2025; between 26 May and 3 June 2026 ('a very long incubation'). 2024-2026"
+        " from www.lwg.bayern.de, 2019 and 2021-2023 through the Wayback Machine; no 2020 or"
+        " earlier early-season issue found; no licence stated",
+        "Read 2026-11-03 by two reading agents (claude-sonnet-5-5), every quote found at its"
+        " line by scripts/verify_quotes.py; rows in literature/real_outcomes_2026-11-03.csv. No"
+        " formulation is recorded as fitted to them. Infection and germination days are the"
+        " service's judgements, not observations; the spots are detections",
+        "read",
+    ),
+    "wbi.baden_rebschutzhinweise": Dataset(
+        "Rebschutzhinweise of the Staatliches Weinbauinstitut Freiburg (WBI) for Baden,"
+        " 2014-2025: when and where the first downy mildew oil spots were found or reported"
+        " (11 May 2025 at Herbolzheim, 13 May on the WBI's untreated control plot; mid-May to"
+        " mid-June in other years), and in 2024 and 2025 the WBI's climate-cabinet test of"
+        " overwintered oospores (first ripe oospores at the end of March 2024 and in mid-April"
+        " 2025). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5) in the bulletins' text; quotes"
+        " found at their lines by scripts/verify_quotes.py; rows in"
+        " literature/real_outcomes_2026-11-03.csv. Germination statements other than the"
+        " climate-cabinet test are advisers' judgements from rain. No formulation is recorded"
+        " as fitted to them",
+        "read",
+    ),
+    "wbi.jahresberichte": Dataset(
+        "The Staatliches Weinbauinstitut Freiburg's annual reports (Jahresberichte 1996-2009,"
+        " 2011, 2012; Tätigkeitsberichte 2013-2015; wbi.landwirtschaft-bw.de), section"
+        " 'Monitoring auf Primärinfektionen': first downy mildew oil spots on the WBI's"
+        " unsprayed monitoring plot at Freiburg (19 May to 15 June over 1996-2015), first"
+        " reports from practice vineyards (from 12 May), the WBI's judged infection days, and"
+        " VitiMeteo Plasmopara's validation against the plot: the first soil infection computed"
+        " too early in 2007, 2009, 2013, 2014 and 2015, exactly in 2008, too late in 2005."
+        " 1996's ring test led by G. Hill (SLFA Oppenheim): oospores buried at Freiburg, tested"
+        " weekly, germination readiness very high from early April to early July. No licence"
+        " stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5): 51 quotes found at their lines"
+        " by scripts/verify_quotes.py and each row's sentence in its report; rows in"
+        " literature/real_outcomes_2026-11-03.csv and literature/oospore_maturity_2026-11-03.csv."
+        " Infection days are the WBI's judgements from rain and temperature. Reports for 2010"
+        " and 2016-2024 were not found. No formulation is recorded as fitted to them",
+        "read",
+    ),
+    "dlr.rlp_rebschutz": Dataset(
+        "Rebschutz bulletins of the DLR Rheinpfalz (Mitteilungen) and DLR Mosel"
+        " (Rebschutzmitteilungen Mosel und Ahr), Rhineland-Palatinate, 2023-2025 as found: first"
+        " oil spots reported from Hergersweiler (Pfalz) at the start of the week of 18 June"
+        " 2025; on 11 June 2025 none in properly sprayed vineyards of the Mosel and Ahr, single"
+        " finds in neglected ones; germination readiness judged from models. Older issues are"
+        " dead links. No licence stated",
+        "Read 2026-11-03 by reading agents (claude-sonnet-5-5), quotes found at their lines. No"
+        " formulation is recorded as fitted to them",
+        "read",
+    ),
+    "agroscope.changins_oospores": Dataset(
+        "Agroscope Changins's downy mildew monitoring, as its reports and the Revue suisse's"
+        " season reviews print it: the date overwintered oospores (leaf pieces kept outdoors in"
+        " soil, then incubated at 100 % RH) first germinate within 24 hours, 2003-2013 (23"
+        " April 2003 to 30 April 2013; not reached in 2011; Table 12 of Agroscope Transfer"
+        " 29/2014) and 2017-2021 (8 May 2017, 1 May 2018, 23 April 2019, 7 May 2020, 3 May"
+        " 2021), beside a 140 or 160 degree-day date (VitiMeteo's; SmartGraph's for 2003-2004);"
+        " the first oil spot in the"
+        " untreated control, 2003-2021 (14 May to 11 June in 2003-2013; in the field"
+        " laboratory 5 May 2014 and 9 May 2016, dubuis2019; none before mid-August in 2019);"
+        " and station tables for 2008 (10 stations) and 2019 (13). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5), 102 quotes found at their"
+        " lines; Table 12 read in the page image by the main session. Rows in"
+        " literature/oospore_maturity_2026-11-03.csv and literature/real_outcomes_2026-11-03.csv"
+        " (notes viret2014, viret2009, viret2017-2021 and others). Dubuis et al. 2012 say these"
+        " tests serve to validate VitiMeteo: observations used in a model's validation, not"
+        " independent of it; independent of Rossi's lineage",
+        "read",
+    ),
+    "vs.communiques_viticoles": Dataset(
+        "The canton of Valais's Service de l'agriculture viticulture communiqués, 2022-2026"
+        " (vs.ch): oospore maturity at Châteauneuf (Sion) and Changins as the weekly tests find"
+        " it (about 20 April 2026), and first oil spots in Valais (Sierre and Leytron, 1 June"
+        " 2026). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5), quotes found at their lines;"
+        " rows in literature/oospore_maturity_2026-11-03.csv and"
+        " literature/real_outcomes_2026-11-03.csv",
+        "read",
+    ),
+    "vaud.rapports_phytosanitaires": Dataset(
+        "The canton of Vaud's annual Rapport phytosanitaire viticole, 2015-2025 (vd.ch): the"
+        " season's first downy mildew oil spots by area (12-21 May 2015 from Lavaux to"
+        " Bonvillars; 25 May 2016; the week of 4 June 2018; the week of 14 June 2021; hardly"
+        " any in 2022, untreated controls clean; from 20 May 2023; mid-May 2024; early May 2025"
+        " in the Chablais) and Agroscope Changins's oospore maturity: the first week of May"
+        " 2021, 2 May 2022 ('equal to the 10-year mean'), 29 March 2023, 25 March 2024 (a"
+        " germination test within 24 h on overwintered leaves), 8 April 2025. No licence"
+        " stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); each row's sentence found in its"
+        " report by script; rows in literature/real_outcomes_2026-11-03.csv (month-only phrases"
+        " as date ranges, said in date_how). Only 2024's maturity is stated to be a laboratory"
+        " test. Changins is where leoni2026 measured primary infections",
+        "read",
+    ),
+    "aargau.weinjahr": Dataset(
+        "The Liebegg Fachstelle Weinbau's annual 'Bericht Weinjahr' for the canton of Aargau"
+        " (2022-2024): first downy mildew symptoms at the end of May 2023 and 2024 (the two"
+        " reports print the identical sentence, so 2024's may be reused text); oospores"
+        " judged germination-ready on 7 May 2023 from a temperature sum at Frick (a model), and"
+        " ripe on 13 April 2024 'after monitoring', earlier than the temperature sum. No"
+        " licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); rows in"
+        " literature/real_outcomes_2026-11-03.csv",
+        "read",
+    ),
+    "ersa.fvg_notiziario": Dataset(
+        "ERSA Friuli Venezia Giulia's vine bulletins, 2010-2025 (none found for 2013), with 2009"
+        " recalled later: the first downy mildew oil spots each season, mostly on untreated"
+        " controls of the regional monitoring network (earliest 24 April in 2024 and 2025; 2009"
+        " after mid-June), and oospore maturity by the Gehmann index at Codroipo, 2005-2014 (a"
+        " model). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); each row's sentence found in its"
+        " bulletin by script; rows in literature/real_outcomes_2026-11-03.csv and"
+        " literature/oospore_maturity_2026-11-03.csv. No formulation is recorded as fitted to"
+        " them",
+        "read",
+    ),
+    "italy.regional_bulletins": Dataset(
+        "Italian vine bulletins with first downy mildew spots, read 2026-11-03: Emilia-Romagna's"
+        " regional production bulletins by province group (2021-2026), the Consorzio"
+        " Fitosanitario of Reggio Emilia (2016-2019, 2023-2026), Cantina Negrar in Valpolicella"
+        " (2018-2026), Abruzzo (2023-2026), Veneto (2024, 2026) and a Piemonte season summary"
+        " (2024-2025). Their oospore statements are models or judgements; Emilia-Romagna's come"
+        " from the region's own oospore model, so they are not independent of Rossi's lineage."
+        " No laboratory test was found printed (Piemonte's service, said to run them, timed"
+        " out). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); 120 quotes found at their lines"
+        " and each row's sentence in its bulletin (Emilia-Romagna's text layers lose the"
+        " ligatures ti, tt and fi); rows in literature/real_outcomes_2026-11-03.csv and"
+        " literature/oospore_maturity_2026-11-03.csv",
+        "read",
+    ),
+    "bsv.sudouest_bilans": Dataset(
+        "The BSV viticulture season reviews ('bilans') of the IFV Sud-Ouest for Gaillac, Cahors"
+        " and Gascogne (Saint-Mont, Madiran), 2013-2015, through Wayback captures: oospore"
+        " maturity by the laboratory follow-ups about 5 May 2013 (Gaillac, Cahors) and about 28"
+        " April 2015 (Gaillac, with the Potentiel Système model at 29-30 April); first downy"
+        " mildew spots 28 May 2013 on Gaillac's 'parcelles flottantes' and 28 April 2014 at"
+        " Corneillan (Gers). No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5), quotes found at their lines;"
+        " the main session checked that each first-spot line sits in the downy mildew section"
+        " (two that sat under powdery mildew were dropped). Rows in"
+        " literature/real_outcomes_2026-11-03.csv and literature/oospore_maturity_2026-11-03.csv",
+        "read",
+    ),
+    "geneve.bulletin_viticole": Dataset(
+        "Bulletin phytosanitaire viticole of the canton of Geneva (OCAN with AgriGenève), 2026"
+        " season: first downy mildew oil spots discovered on Tuesday 2 June 2026 in the"
+        " Mandement; the rain of 28-29 April judged to have triggered primary infection at all"
+        " Agrométéo stations. No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5), quotes found at their lines;"
+        " the row is in literature/real_outcomes_2026-11-03.csv. Other years not reached",
+        "read",
+    ),
+    "lfulg.sachsen_warndienst": Dataset(
+        "Pflanzenschutz-Warndienst Weinbau of Saxony's LfULG (Elbe valley), 2025 and 2026"
+        " issues: oil spots described conditionally ('where ..., single oil spots are to be"
+        " found'), not as reported finds; germination judged from rain and soil temperature."
+        " The bulletin forbids passing it on to third parties, in extract or whole, without"
+        " consent, so no row is published here",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); kept in the drop only",
+        "read",
+    ),
+    "areeiro.avisos": Dataset(
+        "Avisos fitosanitarios of the Estación Fitopatolóxica de Areeiro (Deputación de"
+        " Pontevedra, Galicia), 2018-2026: the day the first downy mildew spot was found in the"
+        " station's monitoring plots (O Salnés, O Rosal, O Condado) and in its own untreated"
+        " vineyard (19 April 2021, 11 May 2026), and the laboratory's first mature oospores"
+        " (13 April 2018, 'almost a month later than in 2017'; 28 March 2019; the week of 17"
+        " March 2021; 21 March 2022; 20 February 2026 by its vineyard method; models only in"
+        " 2024 and 2025). Pages at areeiro.depo.gal; 2021 from Wayback captures;"
+        " licence not read",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); quotes found at their lines"
+        " and each row's sentence in its page; rows in literature/real_outcomes_2026-11-03.csv."
+        " No formulation is recorded as fitted to them",
+        "read",
+    ),
+    "larioja.premios_mildiu": Dataset(
+        "La Rioja's first downy mildew spot each year, from the Gobierno de La Rioja's prize for"
+        " the first spot found in the province ('Premios Mildiu', a table read through Wayback"
+        " captures for 2020, 2022, 2024 and 2025) and press reports for the other years,"
+        " 2018-2026: 3 May 2020 (Alfaro), 20 May 2022 (Fuenmayor), 18 May 2024 (San Asensio), 5"
+        " May 2025 (Alfaro), with the place (paraje). The 2018 date is recalled in a 2020 article"
+        " without a place; 2019's place and date come from two articles. No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); each row's sentence found in its"
+        " page; rows in literature/real_outcomes_2026-11-03.csv. Detections under a prize;"
+        " whether the vineyards were treated is not printed (2026's finder had sprayed three"
+        " times). No formulation is recorded as fitted to them",
+        "read",
+    ),
+    "drapn.avisos_douro": Dataset(
+        "Circulars of DRAP Norte's Estação de Avisos do Douro (2005-2026, 16 seasons, from"
+        " ivdp.pt) and Estação de Avisos de Entre Douro e Minho (2021, 2023, 2024): when the"
+        " first downy mildew spots were reported in the Douro (Baixo and Cima Corgo) and Entre"
+        " Douro e Minho, and the stations' oospore tests (germination within 24 h in the last"
+        " week of March 2017, by mid-March 2020 and 2022, early April 2023). Some circulars"
+        " mention disease already present, not the first spot (2005, 2010, 2011, 2025). No"
+        " licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); each row's sentence found in its"
+        " circular; rows in literature/real_outcomes_2026-11-03.csv. No formulation is recorded"
+        " as fitted to them",
+        "read",
+    ),
+    "iberia_italy.alerts": Dataset(
+        "Single-season first downy mildew reports read on 2026-11-03: Castilla-La Mancha's"
+        " Hoja informativa of June 2025 as relayed (Iniesta, Daimiel, 5 June 2025), Andalucía's"
+        " RAIF alert as relayed by the press (Condado de Huelva the week of 6 April 2026; Jerez"
+        " and Montilla-Moriles about 20 April 2026), Arezzo's provincial bulletins (2021, 2024,"
+        " 2025) and the Consorzio del Vino Nobile di Montepulciano (9 May 2025). No licence"
+        " stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); each row's sentence found in its"
+        " source; rows in literature/real_outcomes_2026-11-03.csv. Relays are second-hand; the"
+        " 2024 Arezzo row is not shown to be the season's first report",
+        "read",
+    ),
+    "australia.dm_alerts": Dataset(
+        "Australian downy mildew alerts and reports dated by season, read 2026-11-03: AWRI's"
+        " alerts for South Australia and Victoria (21 December 2017, 7 November 2018, 18 November"
+        " 2021, 27 October 2022; the 2017 and 2018 pages carry the same paragraph), Winetitles'"
+        " report of 4 November 2022 (Riverland oil spots and a Riverina 'primary outbreak'),"
+        " Langhorne Creek's 2022-23 season report (oil spots photographed 30 November 2022), ABC"
+        " Rural on Sunraysia (12 January 2015). Alert and article dates, so upper bounds on the"
+        " first lesion. No licence stated",
+        "Read 2026-11-03 by a reading agent (claude-sonnet-5-5); quotes found at their lines and"
+        " each row's sentence in its page; rows in literature/real_outcomes_2026-11-03.csv with"
+        " taylor2018's Swan Valley 2015 first lesion. No New Zealand or South African dated"
+        " detection was found beyond brook1992 and haasbroek2006",
+        "read",
+    ),
+    "bsv.france_viticulture": Dataset(
+        "France's Bulletins de santé du végétal, viticulture, 2010-2026 as read (Grand Est:"
+        " Alsace, Champagne, Lorraine; Bourgogne and Franche-Comté, then Bourgogne-Franche-Comté;"
+        " Nouvelle-Aquitaine: Nord Aquitaine, Sud Aquitaine, Charentes, Haut-Poitou; PACA;"
+        " Occitanie; Centre-Val de Loire; Auvergne-Rhône-Alpes), with the yearly reviews"
+        " ('bilans'): the first downy mildew symptoms each season by area and the plots they were"
+        " seen on (untreated controls or network plots), and the date the regional laboratory"
+        " follow-up first found overwintered oospores germinating in under 24 hours ('maturité"
+        " des œufs d'hiver'), e.g. Alsace 19 April 2016, 26 April 2023, 13 April 2026, not by 18"
+        " May 2022; Champagne 27 April 2021, 7 April 2026, not by 3 May 2022; Gironde 3 April"
+        " 2024 (the 2025 bilan's '3 mars' is a slip: the 29 March FLASH says not yet). Several"
+        " bulletins allow"
+        " reproduction only in full or with permission",
+        "Read 2026-11-03 by two reading agents (claude-sonnet-5-5): 137 region-years; 167 quotes"
+        " found at their lines by scripts/verify_quotes.py and each row's sentence found in its"
+        " bulletin; rows (dates, places, translated phrases; no quotes) in"
+        " literature/real_outcomes_2026-11-03.csv and literature/oospore_maturity_2026-11-03.csv."
+        " Charentes 2026's maturity is a model's estimate, not a test. No formulation is"
+        " recorded as fitted to them",
+        "read",
+    ),
     "sanitatvegetal.penedes_avisos": Dataset(
         "The weekly plant-health warning bulletins for the Penedès (Servei de Sanitat Vegetal,"
         " Generalitat de Catalunya, relayed by the ADV of Cellers Domenys), February 2015 to"
         " September 2026: where and when the first downy mildew oil spots were found each season"
         " (first reports 29 April to 4 June; none in 2019), with spray advice, model notes and"
-        " other pests. Posted at www.cellersdomenys.com/uploads/advs/penedes/; no licence stated",
+        " other pests; and the vines' stages as the technicians saw them (shoots of 10-15 cm,"
+        " flowering, pea size, by variety and coast or interior where printed); from 2020 and"
+        " 2025 some station output (oospore-germination model plots for Els Clots and Sumoll,"
+        " leaf-wetness hours, a winter EPI index), and the products' persistence in days."
+        " 2021's first spot was at La Múnia by 19 May, printed only in an image page. Posted at"
+        " www.cellersdomenys.com/uploads/advs/penedes/; no licence stated",
         "Read 2026-10-22 by the main session in all 139 files (ten 2018 scans OCR'd), the"
         " first-spot sentences checked at their lines; the season table is in Agrarium's"
         " research note gaps-and-datasets (retry section). No formulation is recorded as fitted"
         " to them. The spots are found in treated vineyards under a first-spot prize, so the"
-        " dates are of detection",
+        " dates are of detection. Stages read 2026-11-03 (image pages by OCR) and checked at"
+        " their lines with each bulletin's printed date: literature/penedes_phenology_2026-11-03"
+        ".csv, 38 rows 2015-2026, each date an upper bound. The downy and powdery mildew"
+        " advice of every bulletin read the same day, each quoted sentence found in its"
+        " bulletin by script: literature/penedes_advice_2026-11-03.csv, 264 rows",
         "read",
     ),
     "kennelly2007.geneva": Dataset(
@@ -1929,14 +2207,86 @@ DATASETS: dict[str, Dataset] = {
     "agroclim.inrae": Dataset(
         (
             "Leaf wetness, global radiation, temperature, humidity, rain and wind at INRAE's "
-            "AgroClim stations, hourly, 1983-2025. Etalab 2.0."
+            "AgroClim stations, hourly (the Grande Ferrade file opened runs 1993-2025; the "
+            "1983 start and Etalab 2.0 are as the pilot-equations note read them)."
         ),
         (
             "As the pilot-equations research note (Agrarium, 2026-10-20) read it; see also "
             "literature/furushopercot2025. Found for Agrarium D60 "
-            "(literature/requests/inputs-d60.md), 2026-10-27"
+            "(literature/requests/inputs-d60.md), 2026-10-27. Opened 2026-11-03 (doi:"
+            "10.57745/BQ0BWB): the Grande Ferrade station (33550003, beside the vineyards of"
+            " douillet2023.grandeferrade) has hourly leaf wetness `h` from 1993 to 2025, with"
+            " temperature, humidity, rain, radiation and wind; the share of wet hours is"
+            " 0.30-0.49 a year in 2018-2025 except 2020, 0.13 (a sensor to check before use)"
         ),
-        "trail",
+        "read",
+    ),
+    "darp.dun_vineyards": Dataset(
+        "Catalonia's farm declarations (DUN), 'Parcel·les i cultius de les explotacions',"
+        " Departament d'Agricultura, Socrata id uwe8-jqcu on analisi.transparenciacatalunya.cat:"
+        " every declared vineyard polygon with variety, planting year and planting frame"
+        " (rows x vines), 2023-2026. Licence: Llicència oberta d'ús d'informació - Catalunya"
+        " (reuse with attribution)",
+        "Read 2026-11-03 by the main session: the 2025 vineyard polygons of Alt Penedès, Baix"
+        " Penedès and Garraf (41,524; 21,873 ha), measured for Agrarium's site values (its"
+        " research note deep-research-11-03, site.md): row spacing median 2.8 m by area"
+        " (p10-p90 2.6-3.0), vine spacing 1.2 m (1.1-1.5). No formulation is fitted to it",
+        "read",
+    ),
+    "inrae.biospraytech2023": Dataset(
+        "BioSprayTech: whole-of-block spraying experiment for vine crop protection, 2023"
+        " (Verges, Naud, Bellone & Codis; Recherche Data Gouv, doi:10.57745/WT6JS9; Etalab 2.0"
+        " as its page states): powdery mildew on 171 geo-referenced plots of 20 vines under"
+        " seven spray modalities near Montpellier, scored by the EPPO protocol (bunches) and"
+        " a fast protocol, with the dated spray programme (BBCH stage) and daily weather",
+        "Opened 2026-11-03 by a strand agent (claude-sonnet-5-5): the design, EPPO data,"
+        " spray programme and weather files. Powdery, not downy, mildew. No formulation is"
+        " fitted to it",
+        "read",
+    ),
+    "inrae.riesling_bergheim": Dataset(
+        "Vitis vinifera cv. Riesling developmental stages (Duchêne; Recherche Data Gouv,"
+        " doi:10.15454/GYSGNR, updated 2026-09-08; Etalab 2.0 as its page states): budbreak,"
+        " 50 % flowering and 50 % veraison dates at INRA's Bergheim collection (Haut-Rhin),"
+        " 1958-2026, not every stage every year",
+        "Opened 2026-11-03 by a strand agent (claude-sonnet-5-5) and checked by the main"
+        " session (the 1958 row: budbreak 4 May). No formulation in this catalogue is recorded"
+        " as fitted to it",
+        "read",
+    ),
+    "meteocat.xema": Dataset(
+        "Dades meteorològiques de la XEMA, the Servei Meteorològic de Catalunya's automatic"
+        " stations on the Generalitat's open-data portal (Socrata nzvn-apee; variables in"
+        " 4fb2-n3yi): generally half-hourly readings (some variables hourly, `codi_base` HO or"
+        " SH), stamped with the start of the reading interval in UTC; temperature to 0.1 °C,"
+        " humidity in whole per cent, rain to 0.1 mm, a 1-minute maximum rain; no leaf"
+        " wetness among the variables. `codi_estat` blank (not yet validated), T (in"
+        " validation) or V (valid); invalid values are not shown",
+        "The portal's metadata, read 2026-11-03 by a reading agent (claude-sonnet-5-5; 9 of 9"
+        " quotes found by scripts/verify_quotes.py) and literature/meteocat2021 (press notes:"
+        " sampling every second, a record every 30 minutes sent by GPRS). On 2026-11-03 the"
+        " 05:30 UTC half-hour first appeared 47 minutes after its start (a reading agent's"
+        " poll, once a minute; one sample). Cooptera reads it (Agrarium D58: its readings,"
+        " and scores resting on them, stay in Cooptera). The portal's metadata (read"
+        " 2026-11-03): the licence field says 'See Terms of Use'; the hourly dataset's own"
+        " description ends 'Tipus de Llicència: Propietat intel·lectual i industrial de"
+        " METEOCAT', pointing to Meteocat's legal notice; the attribution links of both go to"
+        " the Generalitat's page of open licences; both are tagged 'Dades d'Alt Valor:"
+        " Meteorologia' (an EU high-value dataset, literature/eu2023hvd). No formulation in"
+        " this catalogue is recorded as fitted to it",
+        "read",
+    ),
+    "calvet2022.altpenedes": Dataset(
+        "Alt Penedès environmental data collected between 2017 and 2021 (Calvet i Mirabent &"
+        " Estadella Valls; Zenodo, doi:10.5281/zenodo.6435640, CC BY 4.0): daily mean,"
+        " maximum and minimum temperature with their times, mean humidity, rain, maximum gust"
+        " and solar irradiation at five Meteocat XEMA stations (Font-rubí, la Granada,"
+        " Canaletes, Sant Martí Sarroca, Sant Sadurní d'Anoia), as text with units",
+        "Opened 2026-11-03 by the main session. Its description says the values were"
+        " 'extracted from the website meteo.cat' of the Servei Meteorològic de Catalunya: a"
+        " third party's CC BY 4.0 does not settle Meteocat's own terms (Agrarium D53). No"
+        " formulation is fitted to it",
+        "read",
     ),
     "colucci2026.italy": Dataset(
         (
