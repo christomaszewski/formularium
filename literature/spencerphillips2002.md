@@ -38,3 +38,17 @@ files: [vdoc.pub_advances-in-downy-mildew-research.pdf]
 
 - Mostly control and host biology; the grapevine epidemiology is in vercesi2002. For
   Cooptera: other downy mildews (pearl millet, lamb's lettuce, sunflower, lettuce).
+
+## Bearing (2026-11-03): curative windows, for Cooptera's E6
+
+- **Gisi's chapter, section 3.14** (library text l. 5928-5936, read by the main session): under
+  glasshouse conditions most compounds protected P. viticola for 10 days or more, except
+  fluazinam (8 d), famoxadone (7 d) and cymoxanil (3 d); curative activity was seen for
+  azoxystrobin (1 d), dimethomorph and fosetyl-Al (2 d), cymoxanil and iprovalicarb (3 d) and the
+  phenylamides (at least 4 d), but not for famoxadone, fluazinam, mancozeb, folpet or copper.
+  Syngenta's data; the figure itself is not in the text.
+- **Cymoxanil on grape** (l. 5764-5765): curative from 2 days at high temperature up to 4 at
+  lower, credited to Genet et al. 1997 (not held).
+- The best open comparison of curative windows by class that the 2026-11-03 pass found; no field
+  study gives them in hours. Agrarium's research note deep-research-11-03 (cooptera.md) carries
+  the table for Cooptera.
