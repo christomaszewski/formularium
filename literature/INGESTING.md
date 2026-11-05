@@ -358,8 +358,12 @@ Papers go to the library; data go to the dataset store, `/srv/papers/datasets` o
 repository. `python scripts/datastore.py add RECORD.json` (then with `--go`) copies a dataset in with its scripts
 and a record; `check` verifies the checksums. See the script's header for the layout.
 
+- **Keep what we gather, used or not** (Chris, 2026-11-05). A dataset that proves no use today may answer a later
+  question, so it is stored and documented anyway. An empty `used_by` means not yet used. A very large dataset is
+  flagged for review in `CATALOGUE.md`, over 1 GB by default, and is not dropped.
 - **File it before the pass ends.** Drops and `~/scratch-*` folders are working space. A table a research note
-  rests on, and the script that made it, belong in the store, so that it can be rebuilt and checked.
+  rests on, and the script that made it, belong in the store, so that it can be rebuilt and checked. A pass's other
+  working files go in whole as one `archive.<pass>` record. Run `catalogue` after adding.
 - **Raw and derived are separate datasets.** A derived one names what it was built from in `from`.
 - **A licence is copied from where it is stated.** If none is found, it is `unknown` and `local-only`. A derived
   dataset takes the tightest rights of its sources, and anything holding quotes from bulletins or papers is

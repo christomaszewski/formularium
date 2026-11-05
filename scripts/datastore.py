@@ -3,6 +3,7 @@
     python scripts/datastore.py add RECORD.json [--store DIR] [--go]
     python scripts/datastore.py check [--store DIR] [--quick]
     python scripts/datastore.py list [--store DIR]
+    python scripts/datastore.py catalogue [--store DIR] [--large-gb N]
 
 Data stay out of every repository, as papers do, so the store lives beside the paper library:
 DIR defaults to `$FORMULARIUM_DATASETS`, else `datasets` beside `$FORMULARIUM_LIBRARY`. Its layout:
@@ -12,6 +13,11 @@ DIR defaults to `$FORMULARIUM_DATASETS`, else `datasets` beside `$FORMULARIUM_LI
 - `<id>/dataset.json`: where it came from, its licence and where that is stated, its rights
   (`shareable`, `local-only`), which store datasets it was built from, and how to rebuild it.
 - `manifest.tsv`: one row per file: dataset, path, sha256, bytes, where it was copied from.
+- `CATALOGUE.md`: what `catalogue` writes from the records: every dataset, what has used it, and
+  those over a size flagged for review. A flag is a question for later, never a deletion.
+
+We keep what we gather, used or not: an empty `used_by` means not yet used. A record's optional
+`root` keeps each file's path under that folder, for a pass's working files kept whole.
 
 `add` copies and never moves or overwrites; without `--go` it prints the plan. It refuses:
 - a record with a field missing, or `shareable` without a stated licence: an unknown licence is
@@ -140,6 +146,8 @@ def plan(record: dict[str, object]) -> list[tuple[Path, str]]:
             root = Path(item)
             for path in files_under(root):
                 inner = path.name if root.is_file() else f"{root.name}/{path.relative_to(root)}"
+                if folder == "data" and record.get("root"):
+                    inner = str(path.relative_to(str(record["root"])))
                 pairs.append((path, f"{folder}/{inner}"))
     names = [dest for _, dest in pairs]
     clashes = sorted({n for n in names if names.count(n) > 1})
@@ -225,10 +233,51 @@ def listing(store: Path) -> int:
     return 0
 
 
+def sizes_of(store: Path) -> tuple[dict[str, int], dict[str, int]]:
+    size: dict[str, int] = {}
+    count: dict[str, int] = {}
+    for line in (store / MANIFEST).read_text(encoding="utf-8").splitlines()[1:]:
+        dataset, _, _, nbytes, _ = line.split("\t")
+        size[dataset] = size.get(dataset, 0) + int(nbytes)
+        count[dataset] = count.get(dataset, 0) + 1
+    return size, count
+
+
+def catalogue(store: Path, large_gb: float) -> int:
+    records = held(store)
+    size, count = sizes_of(store)
+    large = sorted((k for k in records if size.get(k, 0) >= large_gb * 1e9), key=lambda k: -size[k])
+    lines = [
+        "# Catalogue of the dataset store",
+        "",
+        f"{len(records)} datasets, {sum(count.values())} files, {sum(size.values()) / 1e9:.1f} GB. "
+        "Written by `scripts/datastore.py catalogue`: do not edit it by hand.",
+        "",
+        f"## For review: over {large_gb:g} GB",
+        "",
+        "Kept. Listed so that someone can decide later, not for deletion.",
+        "",
+    ]
+    lines += [f"- `{k}`: {size[k] / 1e9:.1f} GB. {records[k]['title']}" for k in large] or ["None."]
+    for kind, title in (("raw", "As gathered"), ("derived", "Assembled by us")):
+        lines += ["", f"## {title}", ""]
+        lines += ["| id | what | rights | licence | size | used by |", "|---|---|---|---|---|---|"]
+        for key, record in sorted(records.items()):
+            if record["kind"] != kind:
+                continue
+            used = "; ".join(map(str, record["used_by"])) or "not yet used"  # type: ignore[call-overload]
+            cells = [f"`{key}`", record["title"], record["rights"], record["licence"]]
+            cells += [f"{size.get(key, 0) / 1e6:.1f} MB", used]
+            lines.append("| " + " | ".join(str(c).replace("|", "/") for c in cells) + " |")
+    (store / "CATALOGUE.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"catalogue: {len(records)} datasets, {len(large)} for review")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = parser.add_subparsers(dest="command", required=True)
-    for name in ("add", "check", "list"):
+    for name in ("add", "check", "list", "catalogue"):
         p = sub.add_parser(name)
         p.add_argument("--store", type=Path, default=default_store())
         if name == "add":
@@ -236,6 +285,8 @@ def main() -> int:
             p.add_argument("--go", action="store_true")
         if name == "check":
             p.add_argument("--quick", action="store_true")
+        if name == "catalogue":
+            p.add_argument("--large-gb", type=float, default=1.0)
     args = parser.parse_args()
     if args.store is None:
         parser.error("no store: set FORMULARIUM_DATASETS or FORMULARIUM_LIBRARY, or use --store")
@@ -243,6 +294,8 @@ def main() -> int:
         return add(args.record, args.store, args.go)
     if args.command == "check":
         return check(args.store, args.quick)
+    if args.command == "catalogue":
+        return catalogue(args.store, args.large_gb)
     return listing(args.store)
 
 
