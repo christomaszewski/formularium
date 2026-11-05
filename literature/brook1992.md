@@ -86,5 +86,7 @@ Add to brook1992 (2026-10-28): Table 7 first-lesion dates, read in the page imag
 
 Reread by the main session. The vines were "cane-pruned and were trained on a low trellis", and "A
 grass/clover sward was mown between the rows of vines" (l. 121-123). So a high trunk does not explain
-the late lesions here, and ground cover may bear on them. Agrarium's note
+the late lesions here, and ground cover may bear on them. Sulphur and carbaryl were sprayed every 2 weeks, for
+powdery mildew and insects, except in 1971/72 (l. 128-133). Brook reads the first one or two lesions as "a low level
+of primary inoculum" (l. 2579-2582), and saw no primary infection before about 15 °C mean (l. 2583-2585). Agrarium's note
 `research_notes/deep-research-11-04/after-the-leaves.md` weighs both.

@@ -38,8 +38,8 @@ Reread by a reading agent for this question; 7 of 7 quotes found at their lines 
 scripts/verify_quotes.py.
 
 - Plant area index ran from 1.17 to 4.86 (l. 308). The clusters: low 1.54, high 4.66 (l. 439).
-- The dense treatment's wetness ran 3.5 h a day longer than the sparse one's, July-August 2021
-  (l. 464). Dark hours were wet on 85.8 % of days against 61.9 % (l. 463), 8.6 against 6.2 wet hours
+- The dense treatment's wetness (1/1/1) ran 3.5 h a day longer than the sparse one's (0/0/0), from 1 June
+  to 31 August (l. 460-464). Dark hours were wet on 85.8 % of days against 61.9 % (l. 463), 8.6 against 6.2 wet hours
   (l. 464).
 - **Read this with care:** "wet" is a rule on logger temperature and humidity inside the canopy (RH
   at or above 90 %, rain, or VPD under 1 hPa; l. 240), not a wetness sensor. So it measures humid

@@ -67,16 +67,13 @@ Add: first infection (Erstbefall) 1977: Bad Neuenahr (Ahr) 11 July, Deidesheim (
 
 Read by the main session in the page image of p. 160 (the text layer drops words).
 
-- The dates stand in the Discussion, as an example, not in the results: "In einem zwar feuchten, aber
-  kühlen Jahr kann somit keine schwere Plasmopara-Epidemie auftreten. Der Frühsommer 1977 mit seinen
-  kühlen Nächten ist hierfür ein gutes Beispiel." (In a wet but cool year no severe epidemic can occur;
-  early summer 1977 with its cool nights is a good example of this.) "Erstbefall" follows directly,
-  for Bad Neuenahr, Deidesheim and Oberdollendorf.
-- **So the year was chosen as an exception.** The paper prints no plot, cultivar, or word on spraying
-  for these three places. "Eine genauere Analyse ... wird an anderer Stelle vorgelegt": the analysis it
-  promises was not found.
-- `blaeser1979` shows the group's Ahr vineyard that year was commercially sprayed. Whether the 11 July
-  date is that vineyard is not printed.
-- `real_outcomes_d64.csv` holds them as `first_symptoms`, `treated: unknown`. All three are later than all
-  65 German rows of `real_outcomes_2026-11-03.csv` (11 May to 20 June). The rows are left as they are,
-  because Agrarium's pool pins that file: see the research note `deep-research-11-04/observed-dates.md`.
+- The dates stand in the Discussion, as an example: "In einem zwar feuchten, aber kühlen Jahr kann somit keine
+  schwere Plasmopara-Epidemie auftreten. Der Frühsommer 1977 mit seinen kühlen Nächten ist hierfür ein gutes
+  Beispiel. Erstbefall mit P. viticola wurde an der Ahr (Bad Neuenahr) am 11. Juli, in der Pfalz (Deidesheim)
+  am 5. August und im Siebengebirge (Oberdollendorf) am 12. August festgestellt." (In a wet but cool year no
+  severe epidemic can occur; early summer 1977 is a good example; first attack was found on these dates.)
+- So they are first attack found. The paper prints no plot, cultivar or method for these places, and "Eine
+  genauere Analyse ... wird an anderer Stelle vorgelegt": the analysis it promises was not found.
+- A late start on the Ahr is corroborated by `blaeser1979` p. 497. The Pfalz and Siebengebirge dates are not.
+- `real_outcomes_d64.csv` holds them as `first_symptoms`, `treated: unknown`, which is fair. See Agrarium's
+  `research_notes/deep-research-11-04/observed-dates.md`.

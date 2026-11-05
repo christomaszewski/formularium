@@ -74,14 +74,17 @@ Brischetto et al. 2020.
   flags; Cooptera's list keeps its trail citation until Cooptera relists it (told
   2026-10-09).
 
-## The Ahr vineyard in 1977 (2026-11-05)
+## The Ahr in 1977 (2026-11-05)
 
-Read by the main session in the page images of pp. 3, 7-9.
+Read by the main session in the page images of pp. 490, 494-497.
 
-- From 1975 to 1977 the group logged temperature and wetness in a production vineyard ("Ertragsweinberg")
-  at Walporzheim on the Ahr; "Pflanzenschutzmaßnahmen erfolgten ohne Beachtung der Messungen im
-  praxisüblichen Rahmen" (spraying was done as usual in practice, regardless of the measurements) (p. 3).
+- From 1975 to 1977 the group logged temperature and wetness in a production vineyard ("Ertragsweinberg") at
+  Walporzheim on the Ahr; "Pflanzenschutzmaßnahmen erfolgten ohne Beachtung der Messungen im praxisüblichen
+  Rahmen" (spraying was done as usual in practice, regardless of the measurements) (p. 490).
 - Abb. 6 marks five actual spray dates in 1977, the first about the second week of June (read off the
   figure, a few days either way).
-- Walporzheim lies within Bad Neuenahr-Ahrweiler (from general knowledge, not printed here), so
-  `blaeser1978`'s 11 July "Bad Neuenahr" date may come from this sprayed vineyard. The papers do not say.
+- **Disease that year was real and late, even without spraying** (p. 497): "Befall trat selbst in unbearbeiteten
+  und daher auch unbehandelten Anlagen mit sehr günstigem Mikroklima nur 1977 und 1978 auf, und zwar in beiden
+  Jahren relativ spät." So the group was watching unsprayed vineyards too, and 1975 and 1976 were no-disease years
+  there. On 14 June 1978 there was still none in the unworked plots nearby (p. 494).
+- This supports `blaeser1978`'s 11 July date for the Ahr in direction. Which plot that date is from is not printed.

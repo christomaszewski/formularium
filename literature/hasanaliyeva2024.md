@@ -49,7 +49,8 @@ Reread by a reading agent; quotes found at their lines by scripts/verify_quotes.
 - Over all heights on bare soil the samplers' area covered by splash droplets averaged 1.4 % (l. 291).
   The highest cover "was approximately 3.8% in bare soil at the lowest sampler height (data not
   shown)" (l. 296). So splash reached the sampler heights, most at 40 cm; the profile is not printed.
-- A rain simulator over bare soil, not field rain.
+- A rain simulator over bare soil, not field rain. Under horseradish covers of 30, 60 and 90 cm the figure was
+  0.3, 0.03 and 0.07 % (l. 289-292), 79-98 % fewer, where the abstract says 75-95 %.
 
 In the vineyards, at a 50 % probability of onset, downy mildew in untreated plots came 14 and 21 days
 later under spring- and fall-sown cover than under the area's traditional soil management (l.
