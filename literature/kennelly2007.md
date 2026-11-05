@@ -106,3 +106,19 @@ printed and marked.
 - The paper prints no budburst or bloom dates, only the stage at first symptoms and at the
   infection it assigns (`kennelly2007_table1.csv`). No year-by-year series for Geneva was found
   in Cornell sources; the records are the authors'.
+
+## Young shoots (2026-11-04, for Agrarium's `host.primary_after_budburst_days`)
+
+Re-read for when shoots become infectible; Table 2 (p. 516) read in the page image.
+- Whole shoots inoculated at Eichhorn-Lorenz stage 5 (bud burst, green shoot first visible), 7
+  (first leaf unfolded) and 9 (two to three leaves) sporulated: incidence 28.6-100 % of shoots
+  14 days later; Chardonnay 2005 88.6, 77.7 and 66.3 % at stages 5, 7 and 9; Riesling 2005 77.3,
+  83.3 and 60.6 % (Table 2; text l. 290-297).
+- Incidence counts sporulation on any tissue (stem, leaves, tendrils, flower clusters), not by
+  leaf; on more than half the shoots at stages 7 and 9 it was on leaves and flower clusters both
+  (l. 290-291). The 2003 and 2004 trials were single, on four to ten shoots.
+- The text puts Chardonnay at stage 5 at 28.6 % "in 2003" (l. 293); Table 2 prints it under 2004.
+- The inoculum was a suspension of sporangia (l. 149), a heavy dose beside oospore splash.
+- The authors conclude that shoots are susceptible from stage 5, so oospore germination, not the
+  host, limits the first infections, and propose stage 9 instead of stage 12 as the start of
+  monitoring (l. 439-449). It is the only experiment found on shoots younger than stage 12.

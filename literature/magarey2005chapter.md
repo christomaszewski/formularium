@@ -56,3 +56,12 @@ symbol, a year before the 2006 papers.
   by the same authors, and that hourly data are the usual input. It does not print Wd, Wf
   or p. Its 0.20 cm storage (for a standard sensor) disagrees tenfold with the 2006 papers'
   0.02 cm per leaf area for the same citation; both are recorded on the record.
+
+## Dew amounts (2026-11-05, for Agrarium's `micro.dew_rate_mm_h_per_c`)
+
+Reread by a reading agent; quotes found at their lines by scripts/verify_quotes.py.
+
+- Measured maximum dew is 0.3 to 0.6 mm a night, and theoretical maximum rates are about 0.08 mm/h,
+  citing Garratt & Segal 1988 (l. 76-78). Maximum dewfalls come on cloudless nights with wind below
+  4 m/s at 10 m (l. 74-76). Both are cited, not measured here.
+- Rain caught is given as (1 − exp(−0.5 LAI)) P, after Norman & Campbell 1983 (l. 373).

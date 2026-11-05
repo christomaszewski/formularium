@@ -10,7 +10,7 @@ regions: [Greece, Thessaly]
 processes: [epidemic structure, dispersal, oospores, season severity]
 records: []
 datasets: [rumbou2004.aghialos]
-files: []
+files: [dr1104_rumbou2004.pdf (the 2026-11-04 drop)]
 ---
 
 # Rumbou & Gessler 2004: one Greek plot, two seasons, genotyped
@@ -75,3 +75,10 @@ coastal, Mediterranean case beside the central European surveys
   - one clone at 72-92 % early;
   - new oosporic genotypes 40-80 % of each later sample;
   - spread to about 15 m within a week or two.
+
+## What its dates are (2026-11-05, for Agrarium's pool)
+
+The first sampling date was set by the authors, from when oospores were expected to germinate (l. 116), and
+2001's first sample already held 51 lesions (l. 156). The authors put that year's primary lesions earlier (l.
+441). So both pool rows are sampling dates, and 2001's is well after the first symptoms. See Agrarium's
+`research_notes/deep-research-11-04/observed-dates.md`.

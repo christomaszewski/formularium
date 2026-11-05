@@ -38,3 +38,21 @@ A data deposit (CREA, within the MISFITS project) of 77 monitored vineyards in I
 - **Sprays per season (spray.per_season):** do not use the median of 3; the records are incomplete and the figure is a lower bound.
 - **Warning-to-spray delay:** the 8.5-day onset-to-spray median is not a reaction time: growers were already on a schedule, and the first-symptom date is an observation, not a warning.
 - **Compliance:** not measured; no warning or model output is in the deposit.
+
+## MIRA v2.0 (2026-11-05, from the deposit's README)
+
+Zenodo 10.5281/zenodo.23912301 (CC BY 4.0), released 2026-11-04, replaces v1. The README, the protocol and
+the tables were read; counts by a reading agent, the main ones recounted by the main session.
+
+- 70 stations (65 farm-managed, 5 sentinel) in 9 regions, 2020-2025; 204 first-symptom onsets;
+  11,867 disease records; 24,037 phenology records; 5,391 trap captures; 421 treatments.
+- New: `weather_hourly.rds`, hourly weather for each station, 2019-2025. It is gridded, not measured
+  on site.
+- Cooptera's score is on v1, so moving changes the onsets scored and the column names. That choice
+  is Cooptera's.
+- **An onset is derived:** the first survey with `intensity_sum` above 0, on leaf or cluster; all 204 fit that
+  rule. `onset_possibly_earlier` marks the 35 (21 of downy mildew) whose first survey was already positive.
+- **Downy mildew:** 102 onsets, 15 at sentinel stations; 84 station-years are recorded as all zeros. The treatments
+  table covers 62 of 165 farm-managed station-years, so a missing row means not recorded.
+- **Against v1:** 21 onsets added, 1 removed, 6 dates changed; v2 deletes the survey rows behind AP000 2021 (16 April)
+  and BS001 2024 (31 March), with no reason given.

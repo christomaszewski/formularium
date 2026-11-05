@@ -62,3 +62,18 @@ Seven pages from Bonn, in German with an English summary: the laboratory data be
 ## Dated seasons (2026-10-28, for Agrarium D64)
 
 Add: first infection (Erstbefall) 1977: Bad Neuenahr (Ahr) 11 July, Deidesheim (Pfalz) 5 August, Oberdollendorf (Siebengebirge) 12 August (p. 160, section 4; day of the Ahr date read in the page image, the text layer is cut off). Cultivar and treatment not stated.
+
+## What the three 1977 dates are (2026-11-05)
+
+Read by the main session in the page image of p. 160 (the text layer drops words).
+
+- The dates stand in the Discussion, as an example: "In einem zwar feuchten, aber kühlen Jahr kann somit keine
+  schwere Plasmopara-Epidemie auftreten. Der Frühsommer 1977 mit seinen kühlen Nächten ist hierfür ein gutes
+  Beispiel. Erstbefall mit P. viticola wurde an der Ahr (Bad Neuenahr) am 11. Juli, in der Pfalz (Deidesheim)
+  am 5. August und im Siebengebirge (Oberdollendorf) am 12. August festgestellt." (In a wet but cool year no
+  severe epidemic can occur; early summer 1977 is a good example; first attack was found on these dates.)
+- So they are first attack found. The paper prints no plot, cultivar or method for these places, and "Eine
+  genauere Analyse ... wird an anderer Stelle vorgelegt": the analysis it promises was not found.
+- A late start on the Ahr is corroborated by `blaeser1979` p. 497. The Pfalz and Siebengebirge dates are not.
+- `real_outcomes_d64.csv` holds them as `first_symptoms`, `treated: unknown`, which is fair. See Agrarium's
+  `research_notes/deep-research-11-04/observed-dates.md`.

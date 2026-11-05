@@ -1,7 +1,7 @@
 ---
 id: kleb2026thesis
 citation: Kleb, M. 2026. Site-specific forecasting and early detection of Plasmopara viticola in Vitis vinifera. PhD thesis, Universität Hohenheim
-doi:
+doi: 10.60848/14033
 read: 2026-10-27, chapters 1-3 and 8 in the text layer and chapters 4-7 by OCR of the page images (PDF pp. 26-78), Tables 2-4 in the page images, by a reading agent (claude-sonnet-5-5); 23 of 23 quotes found at their lines by scripts/verify_quotes.py; for Agrarium and Cooptera D58
 status: read
 diseases: [downy mildew]

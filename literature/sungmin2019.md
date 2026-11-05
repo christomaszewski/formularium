@@ -35,3 +35,10 @@ Spatial correlation of rain between gauges of the WegenerNet in south-east Austr
 
 - **Station-to-vineyard rain differences (Q5):** the paper shows the form of the decay (exponential type, nugget below 1, so gauges a short distance apart already differ). It gives no number for 1 to 15 km at 1 h in text; read Figs 3 and 4 in the PDF to get one. Kind of evidence: own measurement, another climate.
 - It does not bear on a gauge's own catch (station_rain_factor); it bears on how far a station's rain stands for a vineyard away from it.
+
+## Bearing on the site against its station (2026-11-04)
+
+- Re-read for Agrarium's `weather.site_*`: the WegenerNet correlogram's nugget is 0.85-0.99 in
+  the warm season at gauge separations up to 15 km (temperate, south-east Austria); the 24 h
+  value is shown only in a figure. WegenerNet's data are open (CC BY 4.0), so the
+  site-against-station statistics could be computed from it.

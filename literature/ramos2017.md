@@ -73,3 +73,14 @@ this is its note. No disease appears anywhere in the paper.
   the Penedès dates and the 1998-2012 weather window are the region's own phenology
   reference; a truth that needs budbreak in the Penedès should not reuse these fitted Tb
   and sums (D27) but may be checked against Table 1's mean dates.
+
+## Budburst between years (2026-11-05, for Agrarium's `host.budburst_sd_days`)
+
+Reread by a reading agent; the Table 1 caption and rows checked by the main session; quotes found at
+their lines by scripts/verify_quotes.py.
+
+- Table 1 prints "Average phenological dates ± standard deviation (in days)" (l. 221) for the
+  Hostalets de Pierola vineyard, 1996-2012, at about 50 % of plants at BBCH 5 (l. 103-108).
+- Budbreak: Chardonnay 18 March ± 6, Macabeo 6 April ± 9, Parellada 9 April ± 6 (l. 227-230).
+- The SD is between years, one vineyard, and takes in any warming trend, so it runs a little above
+  the year-to-year scatter alone.

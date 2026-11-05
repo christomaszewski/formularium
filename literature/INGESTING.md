@@ -350,6 +350,40 @@ the spray advice (`penedes_phenology_2026-11-03.csv`, `penedes_advice_2026-11-03
   Asensio, Arenzana de Abajo, Aldeanueva de Ebro, Perroy: now corrected), while Nominatim's
   first hit for an ambiguous name (Klingenberg, Opfingen, Stetten) was 90-330 km off.
 
+## The 2026-11-05 search's lessons: what a date is
+
+- **A date's name is not its meaning.** Leoni's "observed primary infection" was an infection dated back. Read the
+  sentence a date stands in, and ask who dated it, on which plot, and how the plot was watched.
+- **Say which of four things a date is:** a lesion seen, an infection dated back, a sampling date (an upper bound on
+  onset), or a report date. Notice dates and reviews' round dates are often a few days after the observation.
+- **Test a date's nature when you can.** Leoni's days fall on weekends as rain does, and first spots never do: a
+  weekly round leaves a mark. An independent reviewer found that; no quote would have shown it.
+- **Read the whole paper before calling a date unsound.** Blaeser's 1977 dates looked like an artefact, until page 497
+  of the same group's next paper. That sentence was already in the held note, and the main session wrote past it.
+- **A season picked as an example is still a season.** The truth runs on that year's weather, so a real late year is
+  what it should reproduce.
+- **Pick a comparator from the same place and time.** A later date than Baden's bulletins says little about the Ahr
+  in 1977: check who the comparison rows are before drawing on them.
+- **`treated: unknown` is a lead, not a blank.** Look in the group's other papers.
+- **A strand's "not held" is not a check.** Before writing a note brief, run `ls literature/<id>.md` for every id.
+  Three of four papers sent to a note writer on 2026-11-05 were already held.
+- **An affiliation is not a site.** An Adelaide author's vines were in Sunraysia. Read the methods.
+- **A strand can be wrong about code.** One reported a circular score the pipeline does not compute. Read the tool
+  before repeating a claim about it. Quotes verified by script say nothing about this.
+- **Before calling something unexplored, search the tool's own reports.** A dose range called unrun on 2026-11-05 was
+  in `docs/M1-REPORT.md`, and the form it rested on was an open decision (D51).
+- **A parameter is not its statistic.** A generator's "summer dip" (a curve's peak) and a station's (a July-August
+  share) share a name; its interpolation and rain rule also change what it produces. Run the generator, measure as the
+  stations do, then set the value.
+- **Hold reanalysis to a test set before you trust it.** Write tolerances first, and leave published stations out. No
+  bridged value is used where the bridge failed.
+- **Read an API's terms before pulling data.** A free tier may be non-commercial only; whether a project qualifies is
+  the owner's call. Open-Meteo's free API was not used for that reason; its CC BY 4.0 data on AWS was.
+- **Data strands run under a memory cap** (`ulimit -v`). On 2026-11-04, `z['x'][i]` in a loop re-read an .npz array at
+  every step and pinned 42 GB on a 31 GB machine, which ended the pass.
+- **Have the review try to falsify conclusions, not match quotes.** On 2026-11-05 every quote matched and 15 statements
+  were still wrong.
+
 ## Judging dependence
 
 From Agrarium's decisions D27 to D29 (its PLAN section 15, and `src/formularium/stemma.py`):

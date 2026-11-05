@@ -1,6 +1,6 @@
 ---
 id: pellegrino2022
-citation: Pellegrino, Anne, Blackmore, Deidre, Clingeleffer, Peter & Walker, Rob R. 2022. Comparison of methods for determining budburst date in grapevine. OENO One 56(1):205-217
+citation: Pellegrino, Anne, Blackmore, Deidre, Clingeleffer, Peter & Walker, Rob R. 2022. Comparison of methods for determining budburst date in grapevine. OENO One 56(1):73-86
 doi: 10.20870/oeno-one.2022.56.1.4751
 read: 2026-10-13, a light reading by a reading agent (claude-haiku-5-5); 29 of 29 quotes found at their lines by scripts/verify_quotes.py; held since 2026-10-07 without a note
 status: read
@@ -45,3 +45,18 @@ date at 50 % of buds fails. A scoring method, not a model.
 - Chris's pruning item in a weak form: pruning system, not date, and the effect is on
   how budburst is scored. For Agrarium's truth, a reason to define budburst by shoots
   where final budburst is low.
+
+## Spread between vines (2026-11-05, for Agrarium's `host.vine_sd_days`)
+
+Reread by a reading agent; the quotes below found at their lines by scripts/verify_quotes.py. The
+citation's pages are corrected here: the running heads print 74 to 80 in this range, and Crossref
+gives 73-86 (the note said 205-217).
+
+- Table 3's dates are "the mean of 6 vines. Values between brackets are 95 % confidence intervals"
+  (l. 421-422), for example Chardonnay 259 (2.2) (l. 431).
+- If the bracket is a half-width, the SD between vines is about 2.2 × √6 / 2.571 = 2.1 d, and about
+  1-3 d over the table (arithmetic, not printed). If it is a full width, half that. The table does
+  not say which.
+- Budburst "was spread over a period of 3 to 4 weeks" (l. 300), but that is bud to bud on a vine,
+  not vine to vine.
+- One Sunraysia vineyard, 2004-2005. The study's authors work in Adelaide; the vines are not there.
