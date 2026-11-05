@@ -350,6 +350,21 @@ the spray advice (`penedes_phenology_2026-11-03.csv`, `penedes_advice_2026-11-03
   Asensio, Arenzana de Abajo, Aldeanueva de Ebro, Perroy: now corrected), while Nominatim's
   first hit for an ambiguous name (Klingenberg, Opfingen, Stetten) was 90-330 km off.
 
+## Storing the data a pass assembles
+
+Papers go to the library; data go to the dataset store, `/srv/papers/datasets` on `agents`, outside every
+repository. `python scripts/datastore.py add RECORD.json` (then with `--go`) copies a dataset in with its scripts
+and a record; `check` verifies the checksums. See the script's header for the layout.
+
+- **File it before the pass ends.** Drops and `~/scratch-*` folders are working space. A table a research note
+  rests on, and the script that made it, belong in the store, so that it can be rebuilt and checked.
+- **Raw and derived are separate datasets.** A derived one names what it was built from in `from`.
+- **A licence is copied from where it is stated.** If none is found, it is `unknown` and `local-only`. A derived
+  dataset takes the tightest rights of its sources, and anything holding quotes from bulletins or papers is
+  `local-only`.
+- **Never Meteocat.** Its readings, and scores resting on them, stay in Cooptera. The tool refuses them.
+- **The store is not a backup.** It shares a disk with the drops and the library.
+
 ## The 2026-11-05 search's lessons: what a date is
 
 - **A date's name is not its meaning.** Leoni's "observed primary infection" was an infection dated back. Read the
