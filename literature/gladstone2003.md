@@ -48,3 +48,20 @@ and leaf area density by system.
   (6.3 m² per m of row; LAI about 2.3 at 2.8 m rows, my calculation), packed at 10 m²/m³.
   For the viewer, a VSP wall of 0.6 m³ per m of row (for example 1.0 m tall by 0.6 m wide)
   holds about 6 m² of leaf per m at that density.
+
+## Leaf area by height (2026-11-05, for Agrarium's `host.lower_canopy_fraction`)
+
+Read by the main session in the page image of p. 127. The note above says canopy height is not
+printed; this figure gives it.
+
+- **Find it under the wrong caption:** the grid of leaf area density by cell stands above the caption
+  "Fig. 3", and the light curves above "Fig. 2". The captions read as swapped. The text's "Fig. 2"
+  (l. 197) means the grid.
+- **VSP, Parlier, m²/m³ by 30 cm band of foliage height:** 60-90 cm 2.0; 90-120 cm 12.9; 120-150 cm
+  10.3; 150-180 cm 7.4. Nothing below 60 cm. One 30 cm wide column of cells, so the bands compare
+  directly.
+- **So the lowest band holds 6 % of the leaf area, and the lowest two 46 %** (arithmetic: 2.0 and 14.9
+  of 32.6). Lyre, read the same way: 2.3 and 1.8 in its lowest band of two arms, a similar share.
+- **When:** mapped near berry softening, "(8-10 weeks following anthesis) in July and August"
+  (l. 124-125); 6 vines at Parlier (l. 116). A midsummer canopy on a cordon: it says nothing of spring,
+  when every leaf is near the cordon.

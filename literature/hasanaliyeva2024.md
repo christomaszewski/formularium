@@ -39,3 +39,14 @@ Small-scale trials and two organic Italian vineyards show that cover crops reduc
   75 % to 95 % for splash droplets; a simulator that moves oospore-borne splash inoculum from
   litter could take a cover-crop factor from this, but the splash data are from Botrytis and a
   small trial. s3: cover height changes splash and airflow near the ground. Not read in full.
+
+## How high splash reached (2026-11-05, for Agrarium's `host.lower_canopy_fraction`)
+
+Reread by a reading agent; quotes found at their lines by scripts/verify_quotes.py.
+
+- Splash samplers stood "to mimic grapevine leaves located 40 cm" (the lower leaf layer), 80 cm (the
+  bunch layer) and 140 cm (the higher leaf layer) above the ground (l. 160-161).
+- Over all heights on bare soil the samplers' area covered by splash droplets averaged 1.4 % (l. 291).
+  The highest cover "was approximately 3.8% in bare soil at the lowest sampler height (data not
+  shown)" (l. 296). So splash reached the sampler heights, most at 40 cm; the profile is not printed.
+- A rain simulator over bare soil, not field rain.
