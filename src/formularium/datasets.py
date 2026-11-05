@@ -1985,10 +1985,13 @@ DATASETS: dict[str, Dataset] = {
             "bent to the ground), with laboratory-observed oospore maturity and the dates "
             "VitiMeteo-Plasmopara gives with its 140 °C·day rule and with Leoni's GLM, 20 "
             "years 2004-2025 (2011 and 2022 not printed: no symptoms, per the paper). "
-            "'Observed primary infection' is not defined in the oospore chapter; chapter 2 "
-            "says the leaves were assessed weekly from May to June to detect the first "
-            "symptoms. Weather: the Agrometeo Campbell station at 46°23'53.4\"N 6°13'50.4\"E, "
-            "about 190 m away (arithmetic), daily. Transcribed in "
+            "FLAG (2026-11-05, Agrarium D70): 'observed primary infection' is not a symptom "
+            "date. It is the infection judged to have caused the first oil spots, a VitiMeteo "
+            "event in 2021, 2023 and 2024 (thesis pp. 66, 96, 100) and a chosen rain in 2009 "
+            "(Dubuis 2012 p. 196), 7-16 days (median 10) before the spots over 17 years; 2019 "
+            "and 2020 do not fit (literature/requests/leoni-dates-d70-answer.md). For first "
+            "symptoms use Dubuis 2019's Table 1. Weather: the Agrometeo Campbell station at "
+            "46°23'53.4\"N 6°13'50.4\"E, about 190 m away (arithmetic), daily. Transcribed in "
             "literature/leoni2026_changins_primary.csv."
         ),
         (

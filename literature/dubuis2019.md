@@ -55,3 +55,10 @@ whose oospore rule the engine runs (`vitimeteo.oospores`).
   matched to them as calibrated with VitiMeteo, in a sensitivity arm.
 - Nothing to compute here; the model papers (Viret 2005, Dubuis 2012) are not held.
 - **2026-10-13:** Viret et al. 2005 and Dubuis et al. 2012 are held and read now (`viret2005`, `dubuis2012`): Dubuis prints the oospore sum as 140 at the 8 °C threshold from 1 January and the nine Changins years (2003-2011) this paper's validation continues.
+
+## Table 1 against Leoni's dates (2026-11-05, for Agrarium D70)
+
+- Table 1 (p. 3, read in the page image) is the first-spot series for Changins, 2003-2018. Its first
+  spots equal Viret 2014's Table 12 "témoin" in 10 of 11 years; 2012 is 10 May here and 14 May there.
+- Leoni's "observed primary infection" falls 7 to 16 days before these spots in all 14 shared years
+  (`requests/leoni-dates-d70-answer.md`). Use this table, not Leoni's column, for first symptoms.

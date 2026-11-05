@@ -5033,7 +5033,9 @@ FORMULATIONS: dict[str, Formulation] = {
             "Leoni's thesis (2026, p. 171) applies the 140 °C·day rule at Changins and sets its"
             " dates beside 20 years of observed primary infections (literature/"
             "leoni2026_changins_primary.csv); it cites Siegfried et al. 2004 for the rule and does"
-            " not say where the threshold was set.",
+            " not say where the threshold was set. Those 'observed' days are infections dated back"
+            " from the first oil spots (read 2026-11-05, literature/requests/"
+            "leoni-dates-d70-answer.md), so they are not independent of VitiMeteo.",
             "Hoppmann & Wittich 1997 (Z. PflKrankh. PflSchutz 104:533-544, p. 536; read"
             " 2026-10-09) print the same form for the Geisenheim (DWD) model with 170"
             " degree-days above a daily mean of 8 °C 'during spring', not 140. Gessler et al."
@@ -5077,6 +5079,12 @@ FORMULATIONS: dict[str, Formulation] = {
             Published("mature_mtg_d", 1.5, "d", "maturity when MTG < 1.5 d", "read"),
         ),
         flags=(
+            "The 'observed primary infections' this GLM's dates were set beside are infections"
+            " dated back from the first oil spots, usually VitiMeteo events, 7-16 days (median"
+            " 10) before the spots (read 2026-11-05, literature/requests/"
+            "leoni-dates-d70-answer.md). So the reported gain, 80 % to 95 % of years, and the"
+            " choice of MTG < 1.5 d are not independent of VitiMeteo. A calibrated_with link is"
+            " not recorded: the catalogue has no VitiMeteo incubation record; for Chris.",
             "Fitted on 2004-2024 (confirmed 2026-10-27 in the paper and the thesis): the GLM's 96"
             " observations are the full dataset's before BBCH 13, 'the complete dataset (n = 96)'"
             " (paper p. 8; thesis p. 166), not the 2022-2024 series alone, which has 24 before"

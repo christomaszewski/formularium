@@ -103,3 +103,15 @@ printed; three steps are functions "f(...)" whose form is not given.
 - For a truth: the model's own validation shows two of nine years with the primary
   infection placed more than two weeks early and one year with a missed rain, which is
   the error a truth should not reproduce by sharing these rules (Agrarium decision D27).
+
+## The 2009 infection (2026-11-05, for Agrarium D70)
+
+- The model put the primary infection on 27 May 2009, "alors que la première tache était observée le
+  25 mai déjà" (while the first spot was already seen on 25 May), "vraisemblablement due à une
+  infection liée à la pluie du 14 au 15 mai 2009" (probably from the rain of 14-15 May; p. 196,
+  l. 256-258). The model computed no infection for that rain: the 3 mm/h minimum was not reached.
+- Leoni's Table 3.3 gives 15 May 2009 as the "observed" primary infection. So that date is a rain
+  the group chose, reasoning back from the spot (`requests/leoni-dates-d70-answer.md`).
+- Figure 4 calls the first spots those of "le témoin non traité", while the text names the control
+  and the outdoor laboratory as two limited areas. Dubuis 2019 labels the same dates "field
+  laboratory".

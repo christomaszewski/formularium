@@ -18,7 +18,9 @@ files: [2026-leoni-10-13097-archive-ouverte-unige-193385.pdf (supplied by Chris,
 A Geneva thesis on spore monitoring at Agroscope Changins; its oospore chapter is the
 manuscript of `leoni2026`, but its coefficients are not the paper's.
 
-**Read this first.** The oospore GLM appears twice with different numbers. The paper's Table 1
+**Read this first.** Table 3.3's "observed primary infection" is not a symptom date. It is the
+infection judged to have caused the first oil spots, about 10 days before them (see the section
+dated 2026-11-05 below). Separately, the oospore GLM appears twice with different numbers. The paper's Table 1
 (p. 11) counts rainy days "since 1 January": intercept 2.36, precipitation +0.00076, rainy days
 −0.034, degree-days −0.0046, residual deviance 40.44, AIC 307.68. The thesis's Table 3.1
 (p. 170), on the same 96 observations, counts rainy days in "the last 30 days": 2.23,
@@ -31,7 +33,7 @@ images. The engine runs the paper's (`leoni2026.oospores`; flagged there).
 - **Site:** everything at Agroscope Changins: a never-sprayed outdoor laboratory with oospore-rich
   litter laid each autumn since 2003, and Pinot noir and Chasselas plots 70 m away.
 - **First oil spots** in the outdoor laboratory: 25 May 2021, 11 May 2023, 16 May 2024.
-- **Primary infections, 2004-2025:** the observed day and the laboratory-observed oospore
+- **Primary infections, 2004-2025:** the "observed" day (an infection dated back, not a symptom) and the laboratory-observed oospore
   maturity for 20 years (Tables 3.2-3.3, pp. 182-183; no 2011 or 2022).
 - **2024 incidence and severity** per block, about 7 dates (Tables 2.7-2.8); only the untreated
   control is unsprayed.
@@ -63,7 +65,8 @@ of pp. 182-183, are in `leoni2026_changins_primary.csv`, one row per year 2004-2
   carry the opposite sign in every row: they are TDD minus GLM. Three cells of the second
   (2004, 2005, 2006) also disagree with Table 3.3's days, by 1, 5 and 2 days. Left as printed.
 - "Observed primary infection" is not defined in the oospore chapter; the outdoor laboratory's
-  leaves were assessed weekly from May to June for the first symptoms (p. 61).
+  leaves were assessed weekly from May to June for the first symptoms (p. 61). Settled by reading
+  on 2026-11-05: see the last section.
 - The plot is at 46°23'47.7"N 6°13'54.0"E (p. 158); the Agrometeo station at 46°23'53.4"N
   6°13'50.4"E (p. 160), about 190 m away (arithmetic).
 - The GLM was fitted on germination observations of 2004-2024, so only 2025 lies outside its
@@ -85,3 +88,31 @@ of pp. 182-183, are in `leoni2026_changins_primary.csv`, one row per year 2004-2
 - No stage dates for 2004-2020 or 2025, and none for BBCH 12-15.
 - Pinot noir 2023 (powdery mildew chapter, p. 129): BBCH 59 on 8 June, 63 on 12 June and 71 on
   19 June.
+
+## What "observed primary infection" marks (2026-11-05, for Agrarium D70)
+
+Read by the main session; 10 of 10 quotes found at their lines by scripts/verify_quotes.py; pp. 66,
+96, 100 and 183 also read in the page images. Full comparison:
+`requests/leoni-dates-d70-answer.md`.
+
+- **No sentence defines it.** Table 3.3 heads the column "Observed day" under "Primary infection"
+  (p. 183).
+- **Where the thesis gives both dates, the table's day is the infection, not the spot:**
+  - 2021: "The initial oil spot was detected in Changins on 25 May 2021, consequent to the primary
+    infection of 16 May, as indicated by the VitiMeteo-Plasmopara model" (p. 66, l. 3168-3169).
+    Table 3.3: 16 May.
+  - 2023: "The first oil spots were observed around 11 May in LEX", from the primary infection
+    predicted on "1 May by the VitiMeteo-Plasmopara (VM-Plasmopara) model" (p. 96, l. 4228-4230).
+    Table 3.3: 1 May.
+  - 2024: "At the LEX site, the first oil spot was observed on 16 May from the primary infection
+    predicted by VM-Plasmopara model on 6 May" (p. 100, l. 4351-4353). Table 3.3: 6 May.
+- **The method:** on the PIN and CHA plots in 2024 "the first oil spots were observed on 11 June,
+  implying a primary infection occurring around 25 May, according to VM-Plasmopara" (p. 100,
+  l. 4365-4366).
+- **Not the model's first event:** Table 3.3's VitiMeteo column gives 9 May in 2023 and 28 April in
+  2024, though the text credits 1 May and 6 May to the same model. Additional soil infections are
+  named for 9 and 15 May 2023 (p. 60). Reading the kept day as the one that fits the spot is an
+  inference.
+- **2019 and 2020 do not fit:** p. 173 says "primary infections occurred on 20 June 2019 (Julian day
+  171) and 7 June 2020 (Julian day 159)" (l. 6971), but 7 June 2020 falls after the first spots
+  Viret 2020 prints for Changins (25 May).
