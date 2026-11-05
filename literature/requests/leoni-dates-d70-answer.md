@@ -8,11 +8,13 @@ the page images. The series is `literature/changins_first_spots_2026-11-05.csv`.
 
 ## Short answer
 
-**Infections dated back, not symptoms seen.** Leoni's "observed primary infection" is the day of the
-infection judged to have caused the first oil spots at the outdoor laboratory. No sentence defines the
-column. But in five years a source names that infection, and the day is Leoni's to the day. Over 18
-years the first spots come 7 to 16 days later, median 10. So Agrarium's scores at Changins read about
-10 days too late, as the request feared. 2020 does not fit, and 2019 has no laboratory spot to check.
+**Infections dated back, not symptoms seen, for 18 of the 20 dates.** Leoni's "observed primary infection"
+is the day of the infection judged to have caused the first oil spots at the outdoor laboratory. No
+sentence defines the column. But of six years where a source names the infection, five match Leoni to the
+day. Over 18 years the first spots come 7 to 16 days later, median 10. And 7 of Leoni's 20 days fall on a
+Saturday or Sunday, where none of the 21 first spots does (one-sided hypergeometric p = 0.003): rain falls
+at weekends, but a weekly round does not find spots then. So Agrarium's scores at Changins read about 10
+days too late, as the request feared. 2020 does not fit, and 2019 has no laboratory spot to check.
 
 ## 1. What the term means
 
@@ -50,8 +52,9 @@ powdery mildew on a weekly basis" (thesis p. 61, l. 3025-3026). A weekly round f
 week, as I read it, which is part of the spread in the gaps.
 
 **It is built to be early.** Leaves are held near concentrated inoculum, and in 2023 it was infected
-when vines "dans son environnement classique" (in their usual setting) were not yet receptive. So even
-its true first spots mark the earliest possible, not a vineyard's first spots.
+when vines "dans son environnement classique" (in their usual setting) were not yet receptive. So its
+first spots are an early bound, not a vineyard's. It is not the only place, though: notice 507 also
+reports a spot on a Chasselas in a residential area at Aigle that day, from the same infection.
 
 ## 3. Whether the two Changins series are the same observations
 
@@ -63,8 +66,8 @@ its true first spots mark the earliest possible, not a vineyard's first spots.
   control and the laboratory are one series, under two labels.
 - From 2018 the notices do list the laboratory and "nos témoins non-traités" apart: those controls are
   a separate plot, first spots 7 June 2018 and 15 August 2019.
-- Leoni's dates fall before the laboratory's spots in all 18 years compared. The series file has every
-  year, with the gap. Median 10 days, range 7-16.
+- Of 19 years with both dates, Leoni's falls before the laboratory's spot in 18, by 7 to 16 days, median
+  10, and after it in 2020. The series file has every year, with the gap.
 
 ## What does not fit, or is not settled
 
@@ -89,7 +92,8 @@ its true first spots mark the earliest possible, not a vineyard's first spots.
 
 - **For Agrarium (recommended once, Chris decides):** score first symptoms at Changins against
   `changins_first_spots_2026-11-05.csv`, and keep Leoni's column only as an infection date. Leave out
-  2019, and read the plot as an early bound, not a vineyard.
+  2019. Keep 2011 and 2016 only with the file's doubts; 2003 is new to the pool. Read the plot as an early
+  bound, not a vineyard.
 - **For Cooptera and `leoni2026.oospores`:** the paper's gain, 80 % to 95 % of years and a median error
   of 8 to 4.5 days, is scored against days set by reasoning with the same model's incubation. In 6 of 20
   years Table 3.3's day equals its VitiMeteo column exactly (2004, 2008, 2010, 2012, 2014, 2021). The MTG

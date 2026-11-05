@@ -18,8 +18,8 @@ files: [2026-leoni-10-13097-archive-ouverte-unige-193385.pdf (supplied by Chris,
 A Geneva thesis on spore monitoring at Agroscope Changins; its oospore chapter is the
 manuscript of `leoni2026`, but its coefficients are not the paper's.
 
-**Read this first.** Table 3.3's "observed primary infection" is not a symptom date. It is the
-infection judged to have caused the first oil spots, about 10 days before them (see the section
+**Read this first.** Table 3.3's "observed primary infection" is not a symptom date for 18 of its 20
+years. It is the infection judged to have caused the first oil spots, about 10 days before them (see the section
 dated 2026-11-05 below). Separately, the oospore GLM appears twice with different numbers. The paper's Table 1
 (p. 11) counts rainy days "since 1 January": intercept 2.36, precipitation +0.00076, rainy days
 −0.034, degree-days −0.0046, residual deviance 40.44, AIC 307.68. The thesis's Table 3.1
