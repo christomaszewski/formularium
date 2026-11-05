@@ -115,7 +115,9 @@ need judgement and the project's history.
     or without `ANTHROPIC_DEFAULT_HAIKU_MODEL` (checked with `claude -p --model haiku`).
   - A session started before the update keeps the old alias.
   - Before a batch, ask one Haiku agent to state its model ID, and record which model read
-    each paper in the note's `read` field.
+    each paper in its reading file in the drop (Chris, 2026-11-05). Model IDs stay out of the
+    repositories: a note's `read` field says "by a reading agent and a note writer". Older
+    notes keep the IDs they were written with.
 
 - **For scale:** on 2026-10-08, four reading agents on the default model read seven papers
   (a 278-page thesis among them) for about 630,000 tokens. Their reports were good, and
@@ -393,7 +395,8 @@ and a record; `check` verifies the checksums. See the script's header for the la
 - **Hold reanalysis to a test set before you trust it.** Write tolerances first, and leave published stations out. No
   bridged value is used where the bridge failed.
 - **Read an API's terms before pulling data.** A free tier may be non-commercial only; whether a project qualifies is
-  the owner's call. Open-Meteo's free API was not used for that reason; its CC BY 4.0 data on AWS was.
+  the owner's call. Chris ruled on 2026-11-05 that Open-Meteo's free API may be used while the project is
+  non-commercial; ask again if that changes. Its CC BY 4.0 data on AWS has no such limit.
 - **Data strands run under a memory cap** (`ulimit -v`). On 2026-11-04, `z['x'][i]` in a loop re-read an .npz array at
   every step and pinned 42 GB on a 31 GB machine, which ended the pass.
 - **Have the review try to falsify conclusions, not match quotes.** On 2026-11-05 every quote matched and 15 statements
