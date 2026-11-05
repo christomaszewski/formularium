@@ -2,7 +2,7 @@
 id: martinezcasasnovas2009b
 citation: Martínez-Casasnovas, J.A. & Ramos, M.C. 2009. Soil alteration due to erosion, ploughing and levelling of vineyards in north east Spain. Soil Use and Management 25:183-192 (accepted manuscript)
 doi: 10.1111/j.1475-2743.2009.00215.x
-read: 2026-11-04, keyword-targeted passages (slope, rows, terraces, parcels), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 5 of 5 quotes found at their lines by scripts/verify_quotes.py
+read: 2026-11-04, keyword-targeted passages (slope, rows, terraces, parcels), by a reading agent and a note writer; 5 of 5 quotes found at their lines by scripts/verify_quotes.py
 status: read
 diseases: []
 crops: [grapevine]

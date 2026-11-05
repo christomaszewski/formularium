@@ -2,7 +2,7 @@
 id: terradellas1996
 citation: Terradellas Jubany, E. 1996. El viento en Barcelona durante el verano. Algunas aproximaciones para su predicción. III Simposio Nacional de Predicción, Instituto Nacional de Meteorología, Madrid, p. 509-514
 doi:
-read: "2026-11-04, in full (the text layer and the page-2 image for Table I), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 9 of 9 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, in full (the text layer and the page-2 image for Table I), by a reading agent and a note writer; 9 of 9 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: []

@@ -2,7 +2,7 @@
 id: langendoen2006
 citation: Langendoen, K., Baggio, A. & Visser, O. 2006. Murphy loves potatoes: experiences from a pilot sensor network deployment in precision agriculture. 20th IEEE International Parallel and Distributed Processing Symposium (IPDPS), workshop WPDRTS, Rhodes
 doi: 10.1109/IPDPS.2006.1639412
-read: "2026-11-04, in full, searched for yield and failure, by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 5 of 5 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, in full, searched for yield and failure, by a reading agent and a note writer; 5 of 5 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: [potato]

@@ -2,7 +2,7 @@
 id: moreno1991
 citation: Moreno García, M. del C. 1991. Notas acerca de la precipitación diaria en cuatro capitales catalanas [Notes on daily precipitation in four Catalan capitals]. Universitat de Barcelona, pp. 77-87 (also numbered (563)-(573) in the offprint); the journal is not printed in the extracted text
 doi:
-read: 2026-11-04, in full (11 pages of text, Cuadros 1 to 4), with Cuadros 3 and 4 read in the page image by the main session (p. 570), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 22 of 22 quotes found at their lines by scripts/verify_quotes.py
+read: 2026-11-04, in full (11 pages of text, Cuadros 1 to 4), with Cuadros 3 and 4 read in the page image by the main session (p. 570), by a reading agent and a note writer; 22 of 22 quotes found at their lines by scripts/verify_quotes.py
 status: read
 diseases: []
 crops: []

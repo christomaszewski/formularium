@@ -2,7 +2,7 @@
 id: mandapaka2013
 citation: Mandapaka, P. V. & Qin, X. 2013. Analysis and Characterization of Probability Distribution and Small-Scale Spatial Variability of Rainfall in Singapore Using a Dense Gauge Network. Journal of Applied Meteorology and Climatology 52:2781-2796
 doi: 10.1175/jamc-d-13-0115.1
-read: "2026-11-04, the abstract and the correlation section, by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 4 of 4 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, the abstract and the correlation section, by a reading agent and a note writer; 4 of 4 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: []

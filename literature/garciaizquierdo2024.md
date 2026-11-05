@@ -2,7 +2,7 @@
 id: garciaizquierdo2024
 citation: Garcia Izquierdo, C., Hernandez, S., Parrondo, M., Casas, A., Viola, A., Mazzola, M., Merlone, A. & Roulet, Y.-A. 2024. COAT Project: Intercomparison of Thermometer Radiation Shields in the Arctic. Atmosphere 15:841
 doi: 10.3390/atmos15070841
-read: "2026-11-04, sections 1 to 3 skimmed (text layer doubled and partly garbled), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 2 of 2 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, sections 1 to 3 skimmed (text layer doubled and partly garbled), by a reading agent and a note writer; 2 of 2 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: []

@@ -2,7 +2,7 @@
 id: schmidt2022
 citation: Schmidt, D., Kahlen, K., Bahr, C. & Friedel, M. 2022. Towards a Stochastic Model to Simulate Grapevine Architecture: A Case Study on Digitized Riesling Vines Considering Effects of Elevated CO2. Plants 11(6):801
 doi: 10.3390/plants11060801
-read: "2026-11-04, the methods and results on cardinal temperatures and internode appearance rate (Europe PMC full-text XML), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, the methods and results on cardinal temperatures and internode appearance rate (Europe PMC full-text XML), by a reading agent and a note writer; 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: [grapevine]

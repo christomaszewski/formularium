@@ -2,7 +2,7 @@
 id: lunel2024
 citation: Lunel, T., Jimenez, M. A., Cuxart, J., Martinez-Villagrasa, D., Boone, A. & Le Moigne, P. 2024. The marinada fall wind in the eastern Ebro sub-basin: physical mechanisms and role of the sea, orography and irrigation. Atmos. Chem. Phys. 24:7637-7666
 doi: 10.5194/acp-24-7637-2024
-read: "2026-11-04, the introduction only (sea-breeze background), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, the introduction only (sea-breeze background), by a reading agent and a note writer; 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: []

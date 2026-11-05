@@ -3,7 +3,7 @@
 The night pass of 2026-11-04 searched for published values of Agrarium parameters no earlier
 pass had read: the weather generator, a site against its station, terrain, dispersal and first
 lesions, leaf age, leaf wetness and the station, observers and loggers, and open hindcast
-datasets for Cooptera. Strand agents (claude-sonnet-5-5) searched with OpenAlex (about 150 calls),
+datasets for Cooptera. Strand agents searched with OpenAlex (about 150 calls),
 Crossref, Europe PMC, DataCite, Zenodo and the Wayback Machine; each strand's `search.md` and
 `LEADS.md` in the drop (`2026-11-04-deep-research/reading/<strand>/`) lists every route tried.
 

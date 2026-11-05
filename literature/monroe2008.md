@@ -2,7 +2,7 @@
 id: monroe2008
 citation: Monroe, J. W., Ritsche, M. T., Franklin, M. & Kehoe, K. E. 2008. Comparison of Meteorological Measurements from Sparse and Dense Surface Observation Networks in the U.S. Southern Great Plains. DOE/SC-ARM/TR-084 (US Department of Energy technical report, February 2008)
 doi:
-read: "2026-11-04, abstract and results text (Tables 3 and 4 are images and were not read), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, abstract and results text (Tables 3 and 4 are images and were not read), by a reading agent and a note writer; 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: []

@@ -2,7 +2,7 @@
 id: reichardt1995
 citation: Reichardt, K., Angelocci, L. R., Bacchi, O. O. S. & Pilotto, J. E. 1995. Daily rainfall variability at a local scale (1,000 ha), in Piracicaba, SP, Brazil, and its implications on soil water recharge. Scientia Agricola 52(1):43-49 (year, volume and pages from Crossref; the text prints only submission and acceptance dates)
 doi: 10.1590/s0103-90161995000100008
-read: "2026-11-04, in full, by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, in full, by a reading agent and a note writer; 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: []

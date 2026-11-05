@@ -2,7 +2,7 @@
 id: aemet2010
 citation: Agencia Estatal de Meteorología (AEMET). 2010. Valores climatológicos normales 1981-2010: Barcelona Aeropuerto (0076), Barcelona Fabra (0200E), Reus Aeropuerto (0016A). Web tables, AEMET
 doi:
-read: "2026-11-04, in full (three web tables transcribed to text by script, not PDFs), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 12 of 12 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, in full (three web tables transcribed to text by script, not PDFs), by a reading agent and a note writer; 12 of 12 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: []

@@ -2,7 +2,7 @@
 id: griesel2012
 citation: Griesel, S., Theel, M., Niemand, H. & Lanzinger, E. 2012. Acceptance test procedure for capacitive humidity sensors in saturated conditions. WMO CIMO TECO-2012, Brussels, Belgium, 16-18 October 2012
 doi:
-read: "2026-11-04, the abstract, introduction and field test section, by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 5 of 5 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, the abstract, introduction and field test section, by a reading agent and a note writer; 5 of 5 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: []

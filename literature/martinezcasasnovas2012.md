@@ -2,7 +2,7 @@
 id: martinezcasasnovas2012
 citation: Martínez-Casasnovas, J. A., Guevara Bonilla, M. & Ramos, M. C. 2012. Multi-temporal analysis of sediment yield caused by hydric erosion in a basin of the Anoia-Penedès vineyard region (NE Spain). Cuadernos de Investigación Geográfica 38(1):95-114
 doi: 10.18172/cig.1277
-read: "2026-11-04, a keyword-targeted read of the gully and terrain passages (not a full read), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, a keyword-targeted read of the gully and terrain passages (not a full read), by a reading agent and a note writer; 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: [grapevine]

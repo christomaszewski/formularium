@@ -2,7 +2,7 @@
 id: ramos2015
 citation: Ramos, M.C. & Martínez-Casasnovas, J.A. 2015. Climate change influence on runoff and soil losses in a rainfed basin with Mediterranean climate. Natural Hazards 78:1065-1089 (accepted manuscript)
 doi: 10.1007/s11069-015-1759-x
-read: 2026-11-04, keyword-targeted passages (slope, rows, terraces, parcels), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 5 of 5 quotes found at their lines by scripts/verify_quotes.py
+read: 2026-11-04, keyword-targeted passages (slope, rows, terraces, parcels), by a reading agent and a note writer; 5 of 5 quotes found at their lines by scripts/verify_quotes.py
 status: read
 diseases: []
 crops: [grapevine]

@@ -2,7 +2,7 @@
 id: martinezcasasnovas2009
 citation: Martínez-Casasnovas, J. A. & Ramos, M. C. 2009. Erosión por cárcavas y barrancos en el área de viña del Alt Penedès-Anoia (NE España) [Gully and ravine erosion in the vineyard area of Alt Penedès-Anoia (NE Spain)]. Cuadernos de Investigación Geográfica 35(2):223-238
 doi: 10.18172/cig.1220
-read: "2026-11-04, a keyword-targeted read of the gully and terrain passages (not a full read), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 5 of 5 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, a keyword-targeted read of the gully and terrain passages (not a full read), by a reading agent and a note writer; 5 of 5 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: [grapevine]

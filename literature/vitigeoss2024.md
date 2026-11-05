@@ -2,7 +2,7 @@
 id: vitigeoss2024
 citation: VitiGEOSS project (deliverable by LINKS Foundation; Oldani, F., Monopoli, T., Blanco, G., Salza, D., Cartenì, F., Otero, M., Pujol, A., Pérez-Zanón, N., Snoek, J., Basile, B. as listed in the document history). 2024. D4.7 Validation and Evaluation, Final Report. Horizon 2020 grant 869565. Zenodo
 doi: 10.5281/zenodo.10804377
-read: "2026-11-04, section 5 (disease forecast service) and the site list, by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, section 5 (disease forecast service) and the site list, by a reading agent and a note writer; 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: [downy mildew, powdery mildew]
 crops: [grapevine]

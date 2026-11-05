@@ -2,7 +2,7 @@
 id: sunilkumar2016
 citation: Sunilkumar, K., Narayana Rao, T. & Satheeshkumar, S. 2016. Assessment of small-scale variability of rainfall and multi-satellite precipitation estimates using measurements from a dense rain gauge network in southeast India. Hydrology and Earth System Sciences 20:1719-1735
 doi: 10.5194/hess-20-1719-2016
-read: "2026-11-04, the abstract and the correlation section only, by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 2 of 2 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, the abstract and the correlation section only, by a reading agent and a note writer; 2 of 2 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: []

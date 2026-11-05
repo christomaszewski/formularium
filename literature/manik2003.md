@@ -2,7 +2,7 @@
 id: manik2003
 citation: Manik, T. K. & Sidle, R. C. 2003. Rainfall Spatial Distribution in Sumber Jaya Watershed, Lampung, Indonesia. MODSIM 2003 (Modelling and Simulation Society of Australia and New Zealand) 2:A11
 doi:
-read: "2026-11-04, the abstract and the results, by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, the abstract and the results, by a reading agent and a note writer; 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: []

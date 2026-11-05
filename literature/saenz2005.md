@@ -2,7 +2,7 @@
 id: saenz2005
 citation: Sáenz Vallés, L. 2005. La vinya i la transformació del paisatge a la Serralada Prelitoral de l'Alt Penedès i al seu entorn [The vine and the transformation of the landscape in the Pre-coastal Range of the Alt Penedès and its surroundings]. Treballs de la Societat Catalana de Geografia 59:157-178
 doi:
-read: 2026-11-04, keyword-targeted passages (slope, rows, terraces, parcels), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 4 of 4 quotes found at their lines by scripts/verify_quotes.py
+read: 2026-11-04, keyword-targeted passages (slope, rows, terraces, parcels), by a reading agent and a note writer; 4 of 4 quotes found at their lines by scripts/verify_quotes.py
 status: read
 diseases: []
 crops: [grapevine]

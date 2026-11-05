@@ -2,7 +2,7 @@
 id: harrison2021
 citation: Harrison, R. G. & Burt, S. D. 2021. Quantifying uncertainties in climate data: measurement limitations of naturally ventilated thermometer screens. Environmental Research Communications 3:061005
 doi: 10.1088/2515-7620/ac0d0b
-read: "2026-11-04, the abstract and sections 4 and 5 (wind speed effects, radiation regimes), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 8 of 8 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, the abstract and sections 4 and 5 (wind speed effects, radiation regimes), by a reading agent and a note writer; 8 of 8 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: []

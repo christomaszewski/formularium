@@ -2,7 +2,7 @@
 id: leroux2017
 citation: Le Roux, R., de Rességuier, L., Katurji, M., Zawar-Reza, P., Sturman, A., Quénol, H. & van Leeuwen, C. 2017. Analyse multiscalaire de la variabilité spatiale et temporelle des températures à l'échelle des appellations viticoles de Saint-Émilion, Pomerol et leurs satellites [Multiscale analysis of the spatial and temporal variability of temperatures across the Saint-Émilion, Pomerol and satellite appellations]. Climatologie 14:1-17
 doi: 10.4267/climatologie.1243
-read: "2026-11-04, the methods and the results on spatial temperature spread (French), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, the methods and the results on spatial temperature spread (French), by a reading agent and a note writer; 3 of 3 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: [grapevine]

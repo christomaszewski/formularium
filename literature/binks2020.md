@@ -2,7 +2,7 @@
 id: binks2020
 citation: Binks, O., Finnigan, J., Coughlin, I., Disney, M., Calders, K., Burt, A., Vicari, M. B., da Costa, A. L., Mencuccini, M. & Meir, P. 2020. Canopy wetness in the Eastern Amazon. Agricultural and Forest Meteorology 297:108250
 doi: 10.1016/j.agrformet.2020.108250
-read: "2026-11-04, one discussion passage only, by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 1 of 1 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, one discussion passage only, by a reading agent and a note writer; 1 of 1 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: []
 crops: [rainforest]

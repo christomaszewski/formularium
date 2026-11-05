@@ -2,7 +2,7 @@
 id: ojwang2024
 citation: Ojwang', A. M. E., Lloyd, A. L., Bhattacharyya, S., Chatterjee, S., Gent, D. H. & Ojiambo, P. S. 2024. Identifying highly connected sites for risk-based surveillance and control of cucurbit downy mildew in the eastern United States. PeerJ 12:e17649
 doi: 10.7717/peerj.17649
-read: "2026-11-04, the methods paragraph on the dispersal kernel only (Europe PMC full-text XML), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 2 of 2 quotes found at their lines by scripts/verify_quotes.py"
+read: "2026-11-04, the methods paragraph on the dispersal kernel only (Europe PMC full-text XML), by a reading agent and a note writer; 2 of 2 quotes found at their lines by scripts/verify_quotes.py"
 status: read
 diseases: [cucurbit downy mildew]
 crops: [cucurbits]
