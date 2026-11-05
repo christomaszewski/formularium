@@ -73,3 +73,15 @@ Brischetto et al. 2020.
 - Formularium: `blaeser1979.survival` gains its calibration data, published values and
   flags; Cooptera's list keeps its trail citation until Cooptera relists it (told
   2026-10-09).
+
+## The Ahr vineyard in 1977 (2026-11-05)
+
+Read by the main session in the page images of pp. 3, 7-9.
+
+- From 1975 to 1977 the group logged temperature and wetness in a production vineyard ("Ertragsweinberg")
+  at Walporzheim on the Ahr; "Pflanzenschutzmaßnahmen erfolgten ohne Beachtung der Messungen im
+  praxisüblichen Rahmen" (spraying was done as usual in practice, regardless of the measurements) (p. 3).
+- Abb. 6 marks five actual spray dates in 1977, the first about the second week of June (read off the
+  figure, a few days either way).
+- Walporzheim lies within Bad Neuenahr-Ahrweiler (from general knowledge, not printed here), so
+  `blaeser1978`'s 11 July "Bad Neuenahr" date may come from this sprayed vineyard. The papers do not say.

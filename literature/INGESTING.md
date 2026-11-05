@@ -350,6 +350,30 @@ the spray advice (`penedes_phenology_2026-11-03.csv`, `penedes_advice_2026-11-03
   Asensio, Arenzana de Abajo, Aldeanueva de Ebro, Perroy: now corrected), while Nominatim's
   first hit for an ambiguous name (Klingenberg, Opfingen, Stetten) was 90-330 km off.
 
+## The 2026-11-05 search's lessons: what a date is
+
+- **A date's name is not its meaning.** "Observed primary infection" was an infection dated back with a
+  model's incubation; "Erstbefall" was one sentence offered as an example of a cool year. Read the sentence a
+  date stands in, and ask who dated it, on which plot, and whether the year was picked.
+- **Say which of four things a date is:** a lesion seen, an infection dated back, a sampling date (an upper
+  bound on onset), or a report date. Bulletins' notice dates and reviews' round dates are often a few days later
+  than the observation.
+- **`treated: unknown` is a lead, not a blank.** Look in the group's other papers: Blaeser's 1979 paper showed
+  the spraying its 1978 paper did not mention.
+- **A strand's "not held" is not a check.** Before writing a note brief, run `ls literature/<id>.md` for every id.
+  Three of four papers sent to a note writer on 2026-11-05 were already held.
+- **An affiliation is not a site.** An Adelaide author's vines were in Sunraysia. Read the methods.
+- **A strand can be wrong about code.** One reported a circular score that the pipeline does not compute. Before
+  repeating a claim about a tool, read the tool. Quotes verified by script say nothing about this.
+- **Compare like with like before naming a mismatch.** A generator's "summer dip" (the peak of a curve) and a
+  station's (a July-August share) share a name, not a meaning: simulate before moving a value.
+- **Hold reanalysis to a test set before you trust it.** Write tolerances first, and leave published stations
+  out. The one that failed is the result: no bridged value was used where it failed.
+- **Read an API's terms before pulling data.** A free tier may be non-commercial only; whether a project qualifies is
+  the owner's call. Open-Meteo's free API was not used for that reason; its CC BY 4.0 data on AWS was.
+- **Data strands run under a memory cap** (`ulimit -v`). On 2026-11-04, `z['x'][i]` in a loop re-read an .npz array
+  at every step and pinned 42 GB on a 31 GB machine, which ended the pass.
+
 ## Judging dependence
 
 From Agrarium's decisions D27 to D29 (its PLAN section 15, and `src/formularium/stemma.py`):
