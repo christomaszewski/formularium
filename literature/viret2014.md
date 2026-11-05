@@ -42,3 +42,11 @@ An Agroscope activity report whose Table 12 (p. 37) gives, for each year at Chan
 - **literature/oospore_maturity_2026-11-03.csv (Agrarium D67):** adds eleven Changins laboratory-test rows, 2003 to 2013, with 2011 as "not reached" (a censored year, not a date), and eleven model rows (140 C) to be kept apart from observations. Kind of evidence: observation, dated by the group's own test; the 2013 column is inferred from position.
 - **literature/real_outcomes_2026-11-03.csv:** adds eleven first-oil-spot dates in the untreated control at Changins, 2003 to 2013. Kind of evidence: field observation, in a series whose model was validated on it.
 - **Question it bears on:** the Rossi oospore model starts the season too early in Germany. Changins gives a Swiss, tested maturity date for ten years, 2011 not reached (mean about 28 April; earliest 2010-04-12, latest 2006-05-11) to compare with the model's date, and the model-minus-test gaps above show how far a temperature sum alone can be from the test.
+
+## The first-spot row against Dubuis 2019 (2026-11-05, for Agrarium D70)
+
+- Table 12's "témoin" dates equal Dubuis 2019's Table 1 "field laboratory" dates in 10 of 11 years,
+  so they are one series under two labels; the table's column is headed "Changins, laboratoire
+  extérieur". 2012 differs: 14 May here, 10 May there.
+- Leoni's "observed primary infection" is a different quantity: an infection dated back from these
+  spots (`requests/leoni-dates-d70-answer.md`).

@@ -55,3 +55,17 @@ files: [9963_Leoni_article_.pdf]
 - Used by the engine (`leoni2026.oospores`); its published coefficients are now in the
   record. The fit and its tuning were done on the same Changins data, with no hold-out: a
   truth matched to Changins germination would share its data.
+
+## "Observed primary infection" (2026-11-05, for Agrarium D70)
+
+- The paper does not define the term. The supplement's Table S1 heads the column "Observed day" under
+  "Primary infection", with no definition; its days are the thesis's. It is an infection dated back
+  from the first oil spots, about 10 days before them (`leoni2026thesis`, `agrometeo2025`,
+  `requests/leoni-dates-d70-answer.md`).
+- So the gain reported here, 80 % to 95 % of years and a median error of 8 to 4.5 days, is scored
+  against days set by reasoning with the same model's incubation. Table 3.3's day equals its VitiMeteo
+  column exactly in 6 of 20 years.
+- The paper leaves out 2011 "because no symptom was observed at the experimental site" (p. 11,
+  l. 552). Dubuis 2019's Table 1 and Viret 2014's Table 12 print first oil spots on 16 May 2011.
+- The MTG = 1 threshold was dropped as inconsistent with "field observations of primary infection
+  timing" (p. 13, l. 600), so the threshold also rests on these dates.

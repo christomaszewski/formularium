@@ -1985,10 +1985,14 @@ DATASETS: dict[str, Dataset] = {
             "bent to the ground), with laboratory-observed oospore maturity and the dates "
             "VitiMeteo-Plasmopara gives with its 140 °C·day rule and with Leoni's GLM, 20 "
             "years 2004-2025 (2011 and 2022 not printed: no symptoms, per the paper). "
-            "'Observed primary infection' is not defined in the oospore chapter; chapter 2 "
-            "says the leaves were assessed weekly from May to June to detect the first "
-            "symptoms. Weather: the Agrometeo Campbell station at 46°23'53.4\"N 6°13'50.4\"E, "
-            "about 190 m away (arithmetic), daily. Transcribed in "
+            "FLAG (2026-11-05, Agrarium D70): 'observed primary infection' is not a symptom "
+            "date. It is the infection judged to have caused the first oil spots: named to the "
+            "day in 2009, 2021, 2023, 2024 and 2025 (Dubuis 2012; thesis; Agrometeo's notices), "
+            "and 7-16 days (median 10) before the spots over 18 years. 2020 does not fit, and "
+            "2019 has no laboratory spot (literature/requests/leoni-dates-d70-answer.md). For "
+            "first symptoms use agroscope.changins_first_spots. Weather: the Agrometeo Campbell "
+            "station at 46°23'53.4\"N 6°13'50.4\"E, about 190 m away (arithmetic), daily. "
+            "Transcribed in "
             "literature/leoni2026_changins_primary.csv."
         ),
         (
@@ -1997,6 +2001,22 @@ DATASETS: dict[str, Dataset] = {
             "Cooptera (literature/requests/leoni2026-changins.md). Table 3.2's columns 3 and "
             "6 carry the sign opposite to their headers; three cells of column 6 (2004-2006) "
             "disagree with Table 3.3 (marked in the CSV)"
+        ),
+        "read",
+    ),
+    "agroscope.changins_first_spots": Dataset(
+        (
+            "First oil spots of downy mildew in Agroscope Changins's outdoor laboratory, 2003-2025,"
+            " one row a year, with the infection a source names for them and Leoni 2026's day"
+            " beside it. None in 2022; no laboratory date found for 2019. Dates only: Agrometeo"
+            " states no reuse licence. Transcribed in"
+            " literature/changins_first_spots_2026-11-05.csv."
+        ),
+        (
+            "Dubuis et al. 2019, Table 1; Viret et al. 2014, Table 12; Agroscope's 2011 report,"
+            " Tableau 10; Leoni 2026, thesis pp. 66, 96, 100; Agrometeo's notices (literature/"
+            "agrometeo2025), read 2026-11-05 for Agrarium D70. Raw notices and tables read by the"
+            " main session (literature/requests/leoni-dates-d70-answer.md)"
         ),
         "read",
     ),
