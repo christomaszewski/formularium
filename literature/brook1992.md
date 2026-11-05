@@ -81,3 +81,10 @@ seasons. The lowest count found by Agrarium's 2026-10-25 pass: a low-inoculum ca
 ## Dated seasons (2026-10-28, for Agrarium D64)
 
 Add to brook1992 (2026-10-28): Table 7 first-lesion dates, read in the page image (p. 44): 5 Dec 1971, none 1972/73, 19 Nov 1973, 3 Feb 1975, 5 Dec 1975, 28 Jan 1977, 2 Feb 1978, 4 Jan 1979, 6 Dec 1979, 23 Jan 1981, 30 Dec 1981. Vines were sprayed with sulphur and carbaryl only (l. 128), so no downy mildew fungicide. Weather: NZ Meteorological Service station 450 m away (l. 182-183).
+
+## The vineyard's floor and trellis (2026-11-05, for Agrarium's first-lesion gap)
+
+Reread by the main session. The vines were "cane-pruned and were trained on a low trellis", and "A
+grass/clover sward was mown between the rows of vines" (l. 121-123). So a high trunk does not explain
+the late lesions here, and ground cover may bear on them. Agrarium's note
+`research_notes/deep-research-11-04/after-the-leaves.md` weighs both.

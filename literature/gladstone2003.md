@@ -63,5 +63,5 @@ printed; this figure gives it.
 - **So the lowest band holds 6 % of the leaf area, and the lowest two 46 %** (arithmetic: 2.0 and 14.9
   of 32.6). Lyre, read the same way: 2.3 and 1.8 in its lowest band of two arms, a similar share.
 - **When:** mapped near berry softening, "(8-10 weeks following anthesis) in July and August"
-  (l. 124-125); 6 vines at Parlier (l. 116). A midsummer canopy on a cordon: it says nothing of spring,
+  (l. 124-125); 6 vines at Parlier (l. 116-117). A midsummer canopy on a cordon: it says nothing of spring,
   when every leaf is near the cordon.

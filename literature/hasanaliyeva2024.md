@@ -50,3 +50,8 @@ Reread by a reading agent; quotes found at their lines by scripts/verify_quotes.
   The highest cover "was approximately 3.8% in bare soil at the lowest sampler height (data not
   shown)" (l. 296). So splash reached the sampler heights, most at 40 cm; the profile is not printed.
 - A rain simulator over bare soil, not field rain.
+
+In the vineyards, at a 50 % probability of onset, downy mildew in untreated plots came 14 and 21 days
+later under spring- and fall-sown cover than under the area's traditional soil management (l.
+332-335). That traditional management itself alternates bare and naturally grassed inter-rows (l.
+216), so the contrast is not with bare ground throughout.
