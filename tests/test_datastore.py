@@ -123,3 +123,26 @@ def test_check_finds_a_changed_a_missing_and_a_stray_file(tmp_path: Path) -> Non
     assert "checksum changed" in check.stdout and "not in the manifest" in check.stdout
     held.unlink()
     assert "missing" in run("check", "--store", str(tmp_path / "store")).stdout
+
+
+def test_a_root_keeps_the_paths_under_it(tmp_path: Path) -> None:
+    for name in ("one", "two"):
+        (tmp_path / "pass" / name).mkdir(parents=True)
+        (tmp_path / "pass" / name / "rows.csv").write_text(name)
+    files = [str(tmp_path / "pass" / n / "rows.csv") for n in ("one", "two")]
+    assert add(tmp_path, data=files, root=str(tmp_path / "pass")).returncode == 0
+    home = tmp_path / "store" / "demo.table" / "data"
+    assert (home / "one" / "rows.csv").read_text() == "one"
+    assert (home / "two" / "rows.csv").read_text() == "two"
+
+
+def test_the_catalogue_documents_and_flags_the_large(tmp_path: Path) -> None:
+    assert add(tmp_path).returncode == 0
+    assert add(tmp_path, id="demo.used", used_by=["a note"]).returncode == 0
+    store = str(tmp_path / "store")
+    assert run("catalogue", "--store", store, "--large-gb", "0.000000001").returncode == 0
+    text = (tmp_path / "store" / "CATALOGUE.md").read_text()
+    assert "demo.table" in text and "demo.used" in text
+    assert "not yet used" in text
+    assert text.index("For review") < text.index("demo.table")
+    assert run("check", "--store", store).returncode == 0, "the catalogue is not a stray file"
