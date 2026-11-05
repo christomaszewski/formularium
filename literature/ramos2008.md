@@ -38,3 +38,12 @@ None recorded beyond the paper's own climate analysis; the growers' phenology is
 - **host.flowering_after_budburst_days, host.inflorescence_after_budburst_days:** no value. The 1 April to 10 May "Stage I" is the authors' averaging window; it must not be read as an observed budbreak-to-bloom interval.
 - **host.bunches_per_vine:** nothing; yields are given only as slopes per Winkler unit, with no level and no bunch count.
 - **Cultivar susceptibility:** none, as no disease is studied. The yield-against-heat slopes for Macabeo, Parellada and Xarello (and none for Chardonnay) are a heat response of production, not a susceptibility.
+
+## Vilafranca's climate tables (2026-11-04, for Agrarium's weather generator)
+
+Re-read for Tables 2 and 3 (text layer, columns checked against each other):
+Vilafranca del Penedès 1952-2006, growing-season (April-October) mean temperature 18.8 °C
+(SD 1.0), mean maximum 24.0, minimum 13.5; Winkler index 1860 degree-days; diurnal range in
+August-September 10.1 °C (SD 0.8); 12.5 frost days and 90 days above 25 °C a year; annual rain
+524.2 mm (SD 118.5), 331.4 mm in the growing season; longest dry period 41 days (l. 341-356,
+418-424). The Alt Penedès's mean annual temperature is 15 °C (l. 303).

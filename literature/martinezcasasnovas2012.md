@@ -33,3 +33,8 @@ None. Same data products as martinezcasasnovas2009.
 ## Bearing (2026-11-04)
 
 - terrain.*: confirms a 5 m DEM exists for the region, and that one Penedès basin outlet sits at 290 m. No value for terrain.slope_pct or valley depth from this paper. Kind of evidence: a mapping study; a pointer to data, not a number.
+- weather.p_wet_after_dry / p_wet_after_wet: the Meteocat station at Els Hostalets de Pierola
+  (2001-2010) recorded 562.2 ± 159.2 mm a year (329.9 mm in 2005, 785.5 mm in 2004) on 100.4
+  rainy days, 16.5 of them above 9 mm (l. 446-448): a wet share of 0.275 for the inland
+  Penedès, threshold not printed (read 2026-11-04 by a second strand; quotes found at their
+  lines).

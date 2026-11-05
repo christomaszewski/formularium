@@ -18,14 +18,15 @@ files: [dr1104_leroux2017.pdf (the 2026-11-04 drop)]
 A French network study of how much daily minimum (Tn) and maximum (Tx) temperature differ between sensors across the appellations, 2012 to 2015.
 
 **Read this first.**
-- The values are for Tn and Tx, not the daily mean, and are the hottest minus the coldest sensor (a range), or a mean SD of daily maps. Use as an upper bound for a spread of mean temperature.
+- The values are for Tn and Tx, not the daily mean, and are the hottest minus the coldest sensor (a range), or a mean SD of daily maps. Use as an loose bound for a spread of mean temperature.
 - The cited page range in the reading agent's citation was cut off; the HAL cover prints pp. 1-17.
 
 ## What it holds
 
 - **Range, hottest minus coldest sensor per day, Table 2, Tn row (l. 436):** mean 3.9, maximum 9.5, minimum 0.9, variance 3.1, median 3.8, Q1 2.4, Q3 5.0 deg C.
 - **Tn against Tx (l. 431):** the variance is 3.1 for Tn against 1 for Tx. Half the days have ranges of 2.5 to 5 deg C for Tn and 2.5 to 3.8 deg C for Tx (reading agent's reading of the sentence).
-- **Spatial SD of the daily maps (l. 350):** 1.6 to 1.9 deg C for Tn and 0.9 to 1.1 deg C for Tx over four vintages (the quote is cut off after "0,9 et"; the Tx upper bound 1.1 is from the reading agent's reading).
+- **Spread of seasonal means (l. 345-351):** the spatial variability across the network of the 1 April-30 September mean was 1.6 to 1.9 deg C for Tn and 0.9 to 1.1 deg C for Tx, by vintage (Fig. 3); seasonal means, not daily values, and not SDs.
+- **Daily range across sensors (Table 2, l. 429-437; 2012-2015):** warmest minus coolest sensor, mean 3.9 deg C for Tn (median 3.8, quartiles 2.4-5.0, maximum 9.5) and 3.2 deg C for Tx (median 3.1, quartiles 2.5-3.8, maximum 9.4); a range over the whole network, not a station-minus-vineyard difference.
 - **Network:** the same as in de Rességuier 2020, 19,233 ha at 2 to 107 m (reading agent's pointer, not checked here).
 
 ## Dependence
@@ -34,4 +35,4 @@ None stated.
 
 ## Bearing (2026-11-04)
 
-- weather.site_t_offset_sd_c: a measured spatial SD of 1.6 to 1.9 deg C (Tn) and 0.9 to 1.1 deg C (Tx) among sensors at Bordeaux-region vineyards. It is Tn and Tx, not daily mean, and a 19,233 ha area, so an upper bound for one commune.
+- weather.site_t_offset_sd_c: no SD of a site-minus-station difference. On a day the warmest and coolest of the network's sensors (19,233 ha) differ by 3.9 deg C (Tn) and 3.2 deg C (Tx) on average; the seasonal means spread by 1.6-1.9 (Tn) and 0.9-1.1 deg C (Tx) across the network, by vintage. Context for the range, not a value. (Corrected 2026-11-04 after an independent review.)
