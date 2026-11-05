@@ -111,8 +111,9 @@ Read by the main session; 10 of 10 quotes found at their lines by scripts/verify
   l. 4365-4366).
 - **Not the model's first event:** Table 3.3's VitiMeteo column gives 9 May in 2023 and 28 April in
   2024, though the text credits 1 May and 6 May to the same model. Additional soil infections are
-  named for 9 and 15 May 2023 (p. 60). Reading the kept day as the one that fits the spot is an
-  inference.
+  named for 9 and 15 May 2023 (p. 60). Agrometeo's notice 507 explains 2023: the 1 May infection was
+  not shown there, since the 140 °C·day sum had not been reached (`agrometeo2025`). So the day kept is
+  the one that fits the spot.
 - **2019 and 2020 do not fit:** p. 173 says "primary infections occurred on 20 June 2019 (Julian day
-  171) and 7 June 2020 (Julian day 159)" (l. 6971), but 7 June 2020 falls after the first spots
-  Viret 2020 prints for Changins (25 May).
+  171) and 7 June 2020 (Julian day 159)" (l. 6971). But the laboratory's first spots came on 25 May
+  2020, from the infections of 13-14 May (notice 338), and no laboratory spot is known for 2019.

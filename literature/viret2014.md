@@ -46,6 +46,7 @@ An Agroscope activity report whose Table 12 (p. 37) gives, for each year at Chan
 ## The first-spot row against Dubuis 2019 (2026-11-05, for Agrarium D70)
 
 - Table 12's "témoin" dates equal Dubuis 2019's Table 1 "field laboratory" dates in 10 of 11 years,
-  so they are one series under two labels. 2012 differs: 14 May here, 10 May there.
+  so they are one series under two labels; the table's column is headed "Changins, laboratoire
+  extérieur". 2012 differs: 14 May here, 10 May there.
 - Leoni's "observed primary infection" is a different quantity: an infection dated back from these
   spots (`requests/leoni-dates-d70-answer.md`).

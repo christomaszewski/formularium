@@ -114,4 +114,5 @@ printed; three steps are functions "f(...)" whose form is not given.
   the group chose, reasoning back from the spot (`requests/leoni-dates-d70-answer.md`).
 - Figure 4 calls the first spots those of "le témoin non traité", while the text names the control
   and the outdoor laboratory as two limited areas. Dubuis 2019 labels the same dates "field
-  laboratory".
+  laboratory", and Agrometeo's notice 238 writes "laboratoire extérieur à Changins (témoin non
+  traité)" (`agrometeo2025`).

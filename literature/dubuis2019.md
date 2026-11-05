@@ -61,4 +61,6 @@ whose oospore rule the engine runs (`vitimeteo.oospores`).
 - Table 1 (p. 3, read in the page image) is the first-spot series for Changins, 2003-2018. Its first
   spots equal Viret 2014's Table 12 "témoin" in 10 of 11 years; 2012 is 10 May here and 14 May there.
 - Leoni's "observed primary infection" falls 7 to 16 days before these spots in all 14 shared years
-  (`requests/leoni-dates-d70-answer.md`). Use this table, not Leoni's column, for first symptoms.
+  (`requests/leoni-dates-d70-answer.md`). For first symptoms use
+  `changins_first_spots_2026-11-05.csv`, which starts from this table and marks its doubts: 2016's 9 May
+  is uncorroborated and 2018's 29 May has no second source.
