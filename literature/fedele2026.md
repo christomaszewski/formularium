@@ -31,3 +31,16 @@ Research article, Italy (Università Cattolica del Sacro Cuore, Piacenza area; M
 ## Bearing (2026-10-08)
 
 - Denser canopies had more susceptible leaves and longer wetness, yet epidemics did not differ: a check for Agrarium's canopy effects. Fedele, Rossi and Caffi are flags.
+
+## Canopy density and wet hours (2026-11-05, for Agrarium's `micro.density_drying_slowdown`)
+
+Reread by a reading agent for this question; 7 of 7 quotes found at their lines by
+scripts/verify_quotes.py.
+
+- Plant area index ran from 1.17 to 4.86 (l. 308). The clusters: low 1.54, high 4.66 (l. 439).
+- The dense treatment's wetness ran 3.5 h a day longer than the sparse one's, July-August 2021
+  (l. 464). Dark hours were wet on 85.8 % of days against 61.9 % (l. 463), 8.6 against 6.2 wet hours
+  (l. 464).
+- **Read this with care:** "wet" is a rule on logger temperature and humidity inside the canopy (RH
+  at or above 90 %, rain, or VPD under 1 hPa; l. 240), not a wetness sensor. So it measures humid
+  air, not water on leaves.
