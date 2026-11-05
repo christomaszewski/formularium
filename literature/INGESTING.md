@@ -379,6 +379,8 @@ and a record; `check` verifies the checksums. See the script's header for the la
   onset), or a report date. Notice dates and reviews' round dates are often a few days after the observation.
 - **Test a date's nature when you can.** Leoni's days fall on weekends as rain does, and first spots never do: a
   weekly round leaves a mark. An independent reviewer found that; no quote would have shown it.
+  This works only inside a source with a known weekday round: elsewhere a weekend share says nothing about how a
+  date was made. Volunteers who look on any day score like inferred dates (Agrarium, hunt H1, corrected 2026-11-05).
 - **Read the whole paper before calling a date unsound.** Blaeser's 1977 dates looked like an artefact, until page 497
   of the same group's next paper. That sentence was already in the held note, and the main session wrote past it.
 - **A season picked as an example is still a season.** The truth runs on that year's weather, so a real late year is
