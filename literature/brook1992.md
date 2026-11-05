@@ -90,3 +90,7 @@ the late lesions here, and ground cover may bear on them. Sulphur and carbaryl w
 powdery mildew and insects, except in 1971/72 (l. 128-133). Brook reads the first one or two lesions as "a low level
 of primary inoculum" (l. 2579-2582), and saw no primary infection before about 15 °C mean (l. 2583-2585). Agrarium's note
 `research_notes/deep-research-11-04/after-the-leaves.md` weighs both.
+
+Table 3 (p. 40; read in the page image) was set beside ERA5 at Mt Albert, 1971-82: temperature bias +0.1 °C, r 0.99, rain within 2 %.
+In Table 3 the first leaf infection by *P. viticola* falls in Nov 1-15 or later in every season marked. Table 3's note says downy
+mildew was not found in 1972/73.
