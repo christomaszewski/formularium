@@ -117,3 +117,31 @@ Read by the main session; 10 of 10 quotes found at their lines by scripts/verify
 - **2019 and 2020 do not fit:** p. 173 says "primary infections occurred on 20 June 2019 (Julian day
   171) and 7 June 2020 (Julian day 159)" (l. 6971). But the laboratory's first spots came on 25 May
   2020, from the infections of 13-14 May (notice 338), and no laboratory spot is known for 2019.
+
+## Observed maturity against Viret's laboratory rows (2026-11-05, hunt test H2b)
+
+Table 3.3 (p. 183) was reread in the page image: 98, 131 and 115 for 2008, 2009 and 2013 are
+what it prints, so `leoni2026_changins_primary.csv` is right and the difference is between
+sources.
+
+- **Fifteen years share a laboratory test** in `oospore_maturity_2026-11-03.csv`: 2004-2010,
+  2012, 2013, 2017-2021 and 2024. Twelve agree to the day. Three do not:
+
+| Year | Leoni, Table 3.3 | Viret, germination within 24 h | Leoni minus Viret |
+|---|---|---|---|
+| 2008 | day 98, 7 April | 5 May (`viret2009`, `viret2014`) | -28 d |
+| 2009 | day 131, 11 May | 4 May (`viret2014`) | +7 d |
+| 2013 | day 115, 25 April | 30 April (`viret2013`, `viret2014`) | -5 d |
+
+- **2009 may be a different row.** Leoni's 11 May equals the "sporulation maximum" row of
+  Viret's 2003-2011 table (`viret2012`). But Leoni follows the 24 h row where the two differ in
+  2004 and 2005, so this is one year and may be chance.
+- **2008 has no such match.** Every Swiss 2008 row held is 26 April or later; the earliest is a
+  model date at Cugnasco (Ticino).
+- **Why it matters:** 2008 is the GLM's largest miss, -30 days against Table 3.3. With 5 May it
+  would be -2 days. Mean absolute error over the 20 years goes from 11.3 to 9.9 days for the
+  GLM and from 15.8 to 14.4 days for the 140 °C·day sum; with all three years changed, to 9.6
+  and 13.8 days. The MTG < 1.5 d threshold was chosen against these dates (p. 172). It was not
+  refitted here. The thesis does not say how a year's tests become one date, and the 96 GLM
+  observations are not printed by year, so whether a 7 April 2008 sample exists is for the
+  authors.

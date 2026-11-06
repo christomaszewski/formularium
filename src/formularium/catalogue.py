@@ -5085,6 +5085,11 @@ FORMULATIONS: dict[str, Formulation] = {
             "leoni-dates-d70-answer.md). So the reported gain, 80 % to 95 % of years, and the"
             " choice of MTG < 1.5 d are not independent of VitiMeteo. A calibrated_with link is"
             " not recorded: the catalogue has no VitiMeteo incubation record; for Chris.",
+            "The observed maturity dates that set MTG < 1.5 d differ from Viret's laboratory rows"
+            " in 3 of 15 shared years (read 2026-11-05 in the page image; literature/"
+            "leoni2026thesis): 2008 7 April against 5 May, 2009 11 May against 4 May, 2013 25"
+            " April against 30 April. 2008 is the GLM's largest miss, -30 days; with 5 May, -2."
+            " Which date is right is for the authors. The threshold was not refitted.",
             "Fitted on 2004-2024 (confirmed 2026-10-27 in the paper and the thesis): the GLM's 96"
             " observations are the full dataset's before BBCH 13, 'the complete dataset (n = 96)'"
             " (paper p. 8; thesis p. 166), not the 2022-2024 series alone, which has 24 before"

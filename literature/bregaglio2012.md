@@ -2,7 +2,7 @@
 id: bregaglio2012
 citation: Bregaglio, S. 2012. Definition and implementation of plant disease simulation models in interaction with crop models, aiming at forecasting the impact of climate change scenarios on crop production. PhD thesis, Scuola di Dottorato Terra, Ambiente e Biodiversita, Universita degli Studi di Milano (XXIV cycle). Chapter 3 is Bregaglio, S., Donatelli, M., Confalonieri, R., Acutis, M. & Orlandini, S. 2010. An integrated evaluation of thirteen modelling solutions for the generation of hourly values of air relative humidity. Theoretical and Applied Climatology 102:429-438
 doi: 10.13130/bregaglio-simone-ugo_phd2012-02-10 (thesis); 10.1007/s00704-010-0274-y (chapter 3 paper)
-read: 2026-10-27, lightly: chapter 3 only (abstract, introduction, methods, sites, results, conclusions; lines 1235-1970 of the extracted text; the rest of the thesis, including the leaf-wetness and climate-change chapters, not read), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 11 of 11 quotes found at their lines by scripts/verify_quotes.py
+read: 2026-10-27, lightly: chapter 3 only (abstract, introduction, methods, sites, results, conclusions; lines 1235-1970 of the extracted text; the rest of the thesis, including the leaf-wetness and climate-change chapters, not read), by a reading agent and a note writer; 11 of 11 quotes found at their lines by scripts/verify_quotes.py; Table 4 of chapter 4, 2026-11-05, by the main session
 status: read
 diseases: []
 crops: []
@@ -39,3 +39,9 @@ A PhD thesis whose chapter 3 compares 13 deterministic "modelling solutions" tha
 - **D45:** does not bear on the finding. It is a check of deterministic estimators, not of a generator, and it scores all hours together; nothing here is a check on humid hours. It does show the common premise (dew point = Tmin) is the worst of the poor methods (EF 0.02, l. 1859).
 - **D60, filling missing RH:** a ranking of ready fillers on 22 sites in Italy, Spain and Portugal in the growing season (March to October): if daily RHmax and RHmin exist, use them (EF 0.705, l. 1863); if not, a Tmax and Tmin dew point (Linacre) reaches only EF 0.32 (l. 1861), and the other 11 methods are below. The scores are whole-sample, so a filler passing here is not shown fit for hours at or above 90 % (`eccel2011` tests that, and fails it at half its sites).
 - **Not shown:** any rain-conditioned humidity, any effect on a disease or wetness model, any site north of 45.8 N (Varese) or outside Europe.
+
+## A row copied wrongly (2026-11-05)
+
+Table 4 of chapter 4 (PDF p. 72, "source: Magarey et al., 2005") prints *Phytophthora infestans* as Tmin 2.6, Topt 25, Tmax 30, Wmin 5, Wmax 16.
+Those are Magarey's *Puccinia recondita* values. His *P. infestans* row is 1, 15, 28, 6, 12. Read in the text layer of both. Do not take
+*P. infestans* parameters from this table.
