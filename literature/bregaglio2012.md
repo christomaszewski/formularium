@@ -2,7 +2,7 @@
 id: bregaglio2012
 citation: Bregaglio, S. 2012. Definition and implementation of plant disease simulation models in interaction with crop models, aiming at forecasting the impact of climate change scenarios on crop production. PhD thesis, Scuola di Dottorato Terra, Ambiente e Biodiversita, Universita degli Studi di Milano (XXIV cycle). Chapter 3 is Bregaglio, S., Donatelli, M., Confalonieri, R., Acutis, M. & Orlandini, S. 2010. An integrated evaluation of thirteen modelling solutions for the generation of hourly values of air relative humidity. Theoretical and Applied Climatology 102:429-438
 doi: 10.13130/bregaglio-simone-ugo_phd2012-02-10 (thesis); 10.1007/s00704-010-0274-y (chapter 3 paper)
-read: 2026-10-27, lightly: chapter 3 only (abstract, introduction, methods, sites, results, conclusions; lines 1235-1970 of the extracted text; the rest of the thesis, including the leaf-wetness and climate-change chapters, not read), by a reading agent (claude-sonnet-5-5) and a note writer (claude-sonnet-5-5); 11 of 11 quotes found at their lines by scripts/verify_quotes.py; Table 4 of chapter 4, 2026-11-05, by the main session
+read: 2026-10-27, lightly: chapter 3 only (abstract, introduction, methods, sites, results, conclusions; lines 1235-1970 of the extracted text; the rest of the thesis, including the leaf-wetness and climate-change chapters, not read), by a reading agent and a note writer; 11 of 11 quotes found at their lines by scripts/verify_quotes.py; Table 4 of chapter 4, 2026-11-05, by the main session
 status: read
 diseases: []
 crops: []
