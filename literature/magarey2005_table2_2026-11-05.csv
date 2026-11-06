@@ -1,0 +1,53 @@
+# Magarey, Sutton & Thayer 2005, Phytopathology 95:92-100, Table 2, whole, transcribed 2026-11-05 from the text layer; a second, separate parse agreed in all 561 fields and the rendered pages agree. Tmin, Tmax, Topt in degrees C; Wmin, Wmax in hours; ref_study and ref_cropdev are the paper's reference numbers; txt_line is the line of that extract. Values were visually estimated, and some are rules, not measurements (p. 93): Tmax = 35 where no upper limit was seen, Tmin from the host or 5 degrees under the lowest tested, not under 1. See magarey2005.
+pathogen,host,ref_study,ref_cropdev,Tmin,Tmax,Topt,Wmin,Wmax,obs,r,rms,srms,txt_line
+Albugo occidentalis,Spinach,81,…,6,28,16,3,12,12,0.87,2.8,0.9,239
+Alternaria brassicae,Oilseed rape,38,6,2.6,35,18,6,22,9,0.96,4.0,0.7,240
+Alternaria cucumerina,Muskmelon,31,…,12,25,19,8,24,6,0.98,1.6,0.2,241
+Alternaria mali,Apple,32,…,1,35,23,5,40,16,0.88,5.2,1.0,242
+Alternaria porri,Onion,80,…,1,35,23,8,24,5,1.00,0.7,0.1,243
+Alternaria sp.,Mineola tangelo,18,…,9.4,35,25,8,16,5,0.90,1.3,0.2,244
+Ascochyta rabiei,Chick pea,84,…,1,35,25,12,48,6,0.10,19.2,1.6,245
+Bipolaris oryzae,Rice,59,25,8,35,27.5,10,24,6,0.78,5.0,0.5,246
+Botryosphaeria dothidea,Apple fruit,58,…,8,35,28,8,19,6,0.95,1.6,0.2,247
+Botryosphaeria obtuse,Apple fruit,7,…,1,35,26,5,40,7,0.97,3.2,0.6,248
+Botrytis cinerea,Grape,56,57,10,35,20,4,10,11,0.94,0.8,0.2,249
+Botrytis cinerea,Strawberry flower,15,…,5,35,25,8,18,7,0.13,5.0,0.6,250
+Botrytis cinerea,Grape flower,56,57,1,34,25,1,12,6,0.99,0.6,0.6,251
+Botrytis squamosa,Onion,82,…,1,28,18,15,24,8,0.50,4.7,0.3,252
+Bremia lactucae,Lettuce,67,…,1,25,15,4,10,6,0.98,0.8,0.2,253
+Cercospora arachidicola,Peanut,93,6,13.3,35,24,24,48,5,0.72,8.9,0.4,254
+Cercospora carotae,Carrot,20,…,11,32,24,28,96,5,0.98,16.5,0.6,255
+Cercosporidium personatum,Peanut,17,6,8,35,20,16,33,6,0.33,6.0,0.4,256
+Coccomyces hiemalis,Prunus sp.,28,29,4,30,18,5,30,11,0.96,7.8,1.6,257
+Colletotrichum acutatum,Strawberry fruit,92,…,7,35,27.5,6,36,6,0.93,4.4,0.7,258
+Colletotrichum orbiculare,Watermelon,53,…,7,30,24,2,16,7,0.69,5.6,2.8,259
+Didymella arachidicola,Peanut,79,6,13.3,35,18.5,24,210,5,–0.10,55.5,2.3,260
+Diplocarpon earlianum,Strawberry,98,51,2.9,35,22.5,12,18,5,0.53,3.2,0.3,261
+Guignardia bidwellii,Grape,76,…,7,35,27,6,24,10,0.74,5.1,0.9,262
+Gymnosporangium juniperi-virginianae,Apple,4,…,1,35,21,2,24,12,0.99,1.1,0.5,264
+Leptosphaeria maculans,Oilseed rape,12,6,2.6,35,18.5,7,18,5,0.81,4.8,0.7,265
+Melampsora medusae,Poplar,50,…,12,28,20.5,5,12,10,0.96,0.7,0.1,266
+Monilinia fructicola,Prunus fruit,13,44,10,35,20,10,16,5,0.96,0.9,0.1,267
+Mycosphaerella pinodes,Pea,61,6,1.4,35,20,6,72,6,1.00,21.9,3.7,268
+Phakopsora pachyrhizi,Soybean,48,6,10,28,23,8,12,6,0.86,1.3,0.2,269
+Phytophthora cactorum,Apple fruit,36,…,1,35,25,2,5,6,0.97,0.4,0.2,270
+Phytophthora cactorum,Strawberry fruit,37,…,6,35,20.5,1,3,8,0.85,0.6,0.6,271
+Phytophthora infestans,Potato,62,19,1,28,15,6,12,6,0.53,3.2,0.5,272
+Plasmopara viticola,Grape,43,…,1,30,20,2,14,6,0.99,0.6,0.3,273
+Pseudoperonospora cubensis,Cucumber,23,1,1,28,20,2,12,6,0.98,0.7,0.4,274
+Puccinia arachidis,Peanut,16,6,5,35,25,5,25,5,0.82,5.2,1.0,275
+Puccinia menthae,Peppermint,27,…,5,35,15,6,12,5,0.87,1.6,0.3,276
+Puccinia psidii,Eucalyptus,63,52,1,30,21.5,6,24,5,0.98,3.9,0.6,277
+Puccinia recondita,Wheat,85,6,2.6,30,25,5,16,6,0.61,5.4,1.1,278
+Puccinia striiformis,Wheat,24,6,2.6,18,8.5,5,8,6,0.99,0.2,0.0,279
+Pyrenopeziza brassicae,Oilseed rape,34,6,2.6,24,16,6,24,7,0.90,3.6,0.6,280
+Pyrenophora teres,Barley,11,6,2.6,35,23,3,6,4,0.95,0.4,0.1,281
+Pyrenophora teres,Barley,72,6,2.6,35,18,5,48,4,1.00,11.9,2.4,282
+Rhynchosporium secalis,Barley,94,6,2.6,30,22.5,12,48,4,0.98,4.2,0.4,283
+Rhynchosporium secalis,Barley,65,6,2.6,30,22.5,6,19,6,0.94,2.3,0.4,284
+Sclerotinia sclerotiorum,Bean,91,…,1,30,25,48,144,5,0.88,24.0,0.5,285
+Septoria glycines,Soybean,70,6,10,35,25,6,18,4,0.83,4.2,0.7,286
+Venturia inaequalis,Apple,78,…,1,35,20,6,40.5,26,0.65,2.7,0.5,287
+Venturia pirina,Pear,77,…,1,35,22,10,25,7,0.98,1.3,0.1,288
+Venturia pirina,Pear,87,…,1,35,20,10,30,7,0.99,1.5,0.1,289
+Wilsonomyces carpophilus,Almond,71,…,5,35,25,12,48,9,0.92,6.6,0.6,290
